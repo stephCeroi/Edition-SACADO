@@ -1,5 +1,8 @@
-*.bak
-*log
-*.out
-*.dvi
-*.gz
+MANUEL_6e_V1/*.bak
+MANUEL_6e_V1/*log
+MANUEL_6e_V1/*.out
+MANUEL_6e_V1/*.dvi
+MANUEL_6e_V1/*.gz
+MANUEL_6e_V1/MANUEL_6e_V1.log
+MANUEL_6e_V1/MANUEL_6e_V1.synctex.gz
+*.log

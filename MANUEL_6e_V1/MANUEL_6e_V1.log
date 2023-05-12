@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.28)  12 MAY 2023 19:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.28)  12 MAY 2023 19:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1956,79 +1956,28 @@ Package fancyhdr Warning: \headheight is too small (20.6pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-20.70639pt}.
 
-[4]
-
-! LaTeX Error: \begin{leftbar} on input line 99 ended by \end{PageCours}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.143 \end{PageCours}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.143 \end{PageCours}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Package fancyhdr Warning: \headheight is too small (20.6pt): 
-(fancyhdr)                Make it at least 41.3064pt, for example:
-(fancyhdr)                \setlength{\headheight}{41.3064pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-20.70639pt}.
-
-[5])
-
-! LaTeX Error: \begin{pageCours} on input line 99 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.308 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(MANUEL_6e_V1.aux)
+[4]) (MANUEL_6e_V1.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `MANUEL_6e_V1.out' has not changed.
 (rerunfilecheck)             Checksum: A6B6183F609F7A5794B4B055C2883941;85.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 99 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 58431 strings out of 476331
- 1282339 string characters out of 5797571
+ 58423 strings out of 476331
+ 1282243 string characters out of 5797571
  2004713 words of memory out of 5000000
- 77834 multiletter control sequences out of 15000+600000
+ 77830 multiletter control sequences out of 15000+600000
  594429 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,14n,108p,769b,1089s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progr
-am Files/MiKTeX/fonts/type1/urw/arial/ua1b8a.pfb><C:/Program Files/MiKTeX/fonts
-/type1/urw/arial/ua1r8a.pfb>
-Output written on MANUEL_6e_V1.pdf (5 pages, 65700 bytes).
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
+X/fonts/type1/urw/arial/ua1b8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/ari
+al/ua1r8a.pfb>
+Output written on MANUEL_6e_V1.pdf (4 pages, 62845 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
+ 89 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
  134 words of extra memory for PDF output out of 10000 (max. 10000000)
 
