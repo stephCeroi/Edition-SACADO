@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.28)  12 MAY 2023 18:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.28)  12 MAY 2023 18:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1908,7 +1908,7 @@ Non-PDF special ignored!
 (CHAPITRES/gestion_de_donnees/6e_GdD_organisation_et_gestion_de_donnees.tex
 LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
 (Font)              scaled to size 23.63593pt on input line 17.
-<FIG//sacadoA1.png, id=52, 40.15pt x 40.15pt>
+<FIG//sacadoA1.png, id=44, 40.15pt x 40.15pt>
 File: FIG//sacadoA1.png Graphic file (type png)
 <use FIG//sacadoA1.png>
 Package pdftex.def Info: FIG//sacadoA1.png  used on input line 17.
@@ -1932,9 +1932,9 @@ LaTeX Font Info:    Font shape `T1/ua1/m/it' will be
 LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
 (Font)              scaled to size 16.41594pt on input line 21.
 LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 106.
+(Font)              scaled to size 23.63593pt on input line 68.
 LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 106.
+(Font)              scaled to size 13.67995pt on input line 68.
 
 
 Package fancyhdr Warning: \headheight is too small (20.6pt): 
@@ -1945,17 +1945,41 @@ Package fancyhdr Warning: \headheight is too small (20.6pt):
 (fancyhdr)                \addtolength{\topmargin}{-5.13422pt}.
 
 [3]
+LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
+(Font)              scaled to size 13.67995pt on input line 72.
+
 
 Package fancyhdr Warning: \headheight is too small (20.6pt): 
-(fancyhdr)                Make it at least 25.73422pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.73422pt}.
+(fancyhdr)                Make it at least 41.3064pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.3064pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-5.13422pt}.
+(fancyhdr)                \addtolength{\topmargin}{-20.70639pt}.
 
 [4]
-LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 110.
+
+! LaTeX Error: \begin{leftbar} on input line 100 ended by \end{PageCours}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.141 \end{PageCours}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.141 \end{PageCours}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
 Package fancyhdr Warning: \headheight is too small (20.6pt): 
@@ -1968,26 +1992,90 @@ Package fancyhdr Warning: \headheight is too small (20.6pt):
 [5]
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (53.82942pt too wide) in paragraph at lines 147--158
+Overfull \hbox (53.82942pt too wide) in paragraph at lines 182--193
 [][] [] 
  []
 
-Package pgfplots info on input line 185: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
 
-Overfull \hbox (12.17406pt too wide) in paragraph at lines 173--191
- [] 
- []
+! LaTeX Error: \begin{leftbar} on input line 170 ended by \end{PageCours}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 \end{PageCours}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.194 \end{PageCours}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
 Package fancyhdr Warning: \headheight is too small (20.6pt): 
-(fancyhdr)                Make it at least 25.73422pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.73422pt}.
+(fancyhdr)                Make it at least 41.3064pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.3064pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 
-(fancyhdr)                \addtolength{\topmargin}{-5.13422pt}.
+(fancyhdr)                \addtolength{\topmargin}{-20.70639pt}.
 
 [6]
+
+! LaTeX Error: Environment PageCours undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.213 \begin{PageCours}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package pgfplots info on input line 239: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+
+Overfull \hbox (7.67406pt too wide) in paragraph at lines 227--245
+ [] 
+ []
+
+! Extra }, or forgotten \endgroup.
+\endMakeFramed ...eight \z@ \penalty -100 \egroup 
+                                                  \begingroup \fb@put@frame ...
+l.249 \end{pageCours}
+                     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Package framed Warning: Boxa is void -- discard it.  on input line 249.
+
+
+! LaTeX Error: \begin{pageCours} on input line 170 ended by \end{leftbar}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.249 \end{pageCours}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 
 Package fancyhdr Warning: \headheight is too small (20.6pt): 
 (fancyhdr)                Make it at least 25.73422pt, for example:
@@ -2050,25 +2138,44 @@ Package fancyhdr Warning: \headheight is too small (20.6pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-24.88995pt}.
 
-[13]) (MANUEL_6e_V1.aux)
+[13])
+
+! LaTeX Error: \begin{pageCours} on input line 100 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.308 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(MANUEL_6e_V1.aux)
 Package rerunfilecheck Info: File `MANUEL_6e_V1.out' has not changed.
-(rerunfilecheck)             Checksum: 6CACD91F06CBA07C2560512012021CA1;553.
- ) 
+(rerunfilecheck)             Checksum: AC2B58446AFEBB8668749DE98A807C60;241.
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 100 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 59101 strings out of 476331
- 1299533 string characters out of 5797571
- 2006952 words of memory out of 5000000
- 78496 multiletter control sequences out of 15000+600000
- 594429 words of font info for 125 fonts, out of 8000000 for 9000
+ 59104 strings out of 476331
+ 1299909 string characters out of 5797571
+ 2005121 words of memory out of 5000000
+ 78497 multiletter control sequences out of 15000+600000
+ 596553 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,20n,108p,769b,2708s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
-X/fonts/type1/urw/arial/ua1b8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/ari
-al/ua1r8a.pfb>
-Output written on MANUEL_6e_V1.pdf (13 pages, 89564 bytes).
+ 109i,20n,108p,769b,2704s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/urw/arial/ua1b8a.pfb><C:/Program Files/MiKTeX/fonts
+/type1/urw/arial/ua1r8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/arial/ua1r
+i8a.pfb>
+Output written on MANUEL_6e_V1.pdf (13 pages, 88145 bytes).
 PDF statistics:
  143 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 22 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
