@@ -1,0 +1,193 @@
+% \documentclass[a4paper,dvipsnames]{article}
+
+% \addtolength{\hoffset}{-2.25cm}
+% \addtolength{\textwidth}{4.5cm}
+% \addtolength{\voffset}{-3.25cm}
+% \addtolength{\textheight}{5cm}
+% \setlength{\parskip}{0pt}
+% \setlength{\parindent}{0in}
+
+% \input{MISC/preambule_SACADO}
+% \input{MISC/styleCours_SACADO}
+
+% \usepackage{hyperref}
+
+% \begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+% \fancyhead[C]{}
+% \hrule\medskip % Upper rule
+% \begin{minipage}{0.295\textwidth} 
+% \raggedright
+% Classe \myClasse \hfill\\
+% \myDiscipline \hfill\\
+% \myParcours \hfill\\
+% \end{minipage}
+% \begin{minipage}{0.4\textwidth} 
+% \centering 
+% \scshape\huge
+% \textcolor{sacado_purple}{\myTitle} \\ 
+% \normalsize 
+%%\mySubTitle \\ 
+% \end{minipage}
+% \begin{minipage}{0.295\textwidth} 
+% \raggedleft
+% \href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%%\myAnnee \hfill\\
+% \end{minipage}
+% \medskip \hrule
+% \bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\chapter{La division euclidienne}
+{https://sacado.xyz/qcm/parcours_show_course/0/117123}
+
+\begin{pageCours} 
+
+\section{La division euclidienne}
+
+\begin{Def}
+Effectuer la \textbf{division euclidienne} d'un nombre entier \textcolor{blue}{a} (le \textcolor{blue}{dividende}) par un nombre entier \textcolor{red}{b} (le \textcolor{red}{diviseur}) différent de 0, c'est trouver deux nombres entiers, le \textcolor{olive}{quotient, q} et le \textcolor{OliveGreen}{reste, r}, tels que : \(\textcolor{blue}{a}=\textcolor{olive}{q}\times\textcolor{red}{b}+\textcolor{OliveGreen}{r}\) avec $0\leq \textcolor{OliveGreen}{r}<\textcolor{red}{b}$.
+\end{Def}
+
+\begin{Ex}
+On considère les nombres \textcolor{blue}{$83$} et \textcolor{red}{$12$}.
+
+\[\textcolor{blue}{83}=\textcolor{olive}{6}\times\textcolor{red}{12}+\textcolor{OliveGreen}{11}\]
+
+\textcolor{blue}{Dividende = $83$}\\
+\textcolor{red}{Diviseur = $12$}\\
+\textcolor{olive}{Quotient = $6$}\\
+\textcolor{OliveGreen}{Reste = $11$}
+\end{Ex}
+
+\section{Poser une division euclidienne}
+
+Lorsque le calcul mental ne permet pas de compléter facilement l'égalité d'une division euclidienne, on peut poser la division :
+
+\begin{Ex}
+Division euclidienne de $273$ par $17$
+\begin{equation*}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraycolsep}{2pt}
+  \begin{array}{rrrr|rrr}
+ & 2 & 7 & 3 & 1 & 7 \\
+\cline{5-7}
+ -& 1 & 7 &  & 1 & 6\\
+\cline{2-3}
+    &1 & 0 & 3 &   &   &  \\
+    -& 1 & 0 & 2 &   &   &  \\
+    \cline{2-4}
+    &&  & 1 &   &   &  \\
+  \end{array}
+\end{equation*}
+\end{Ex} 
+
+\section{Vérifier une division euclidienne}
+
+\begin{Mt}
+Pour vérifier un division euclidienne, il suffit de calculer l'opération :
+
+( quotient × diviseur ) + reste et de vérifier qu'on retrouve le dividende.
+
+\begin{Ex}
+En prenant l'exemple précédent, on peut vérifier que : $17\times16+1=273$
+\end{Ex}
+\end{Mt}
+
+\section{Multiples et diviseurs}
+
+\begin{Def}
+Soit $a$ et $b$ deux nombres entiers positifs.
+
+Lorsque le reste dans la division euclidienne de $a$ par $b$ est égal à $0$, il existe alors un entier $q$ tel que $a=b\times q$.
+
+On dit que $a$ divise $b$ : que $b$ est un diviseur de $a$ ou que $a$ est un multiple de $b$.
+\end{Def}
+
+\begin{Ex}
+\(42\div6=7\), autrement dit la division euclidienne de $42$ par $6$ a pour reste $0$ : \(42=6\times7+0\).\\
+
+\begin{itemize}
+    \item 42 est \textbf{divisible} par 6 et par 7.
+    \item 42 est un \textbf{multiple} de 6 et 7
+    \item 6 est un \textbf{diviseur} de 42.
+    \item 7 est un \textbf{diviseur} de 42.
+\end{itemize}
+\end{Ex} 
+
+\section{Critères de divisibilité}
+
+\subsection{Divisibilité par 2}
+
+\begin{Pp}
+Un nombre est divisible par \textbf{2} s'il est pair.
+\end{Pp}
+
+\begin{Ex}
+\(1024 = 512\times2\)
+\end{Ex} 
+
+\subsection{Divisibilité par 3}
+
+\begin{Pp}
+Un nombre est divisible par \textbf{3} lorsque la somme de ses chiffre est divisible par 3.
+\end{Pp}
+
+\begin{Ex}
+\(2067 \rightarrow 2+0+6+7=15\), or 15 est divisible par 3 (\(3\times5\)) donc 2067 est divisible par 3 : \(2067=3\times689\).
+\end{Ex}  
+
+\subsection{Divisibilité par 5}
+
+\begin{Pp}
+Un nombre est divisible par \textbf{5} lorsqu'on son chiffre des unités est 0 ou 5.
+\end{Pp} 
+
+\begin{Ex}
+\(325 = 65\times5\)
+\end{Ex} 
+
+\subsection{Divisibilité par 9}
+
+\begin{Pp}
+Un nombre est divisible par \textbf{9} lorsque la somme de ses chiffre est divisible par 9.
+\end{Pp}
+
+\begin{Ex}
+\(594 \rightarrow 5+4+9 = 18\), or 18 est divisible par 9 (\(9\times2\) donc 594 est divisible par 9 : \(594=66\times9\)
+\end{Ex}
+
+\subsection{Divisibilité par 10}
+
+\begin{Pp}
+Un nombre est divisible par \textbf{10} lorsque son chiffre des unités est 0.
+\end{Pp}
+
+\begin{Ex}
+$340=34\times10$
+\end{Ex}
+
+% \section{Les savoir-faire du parcours}
+
+% \begin{CpsCol}
+% \begin{itemize}
+% \item Savoir déterminer le reste et le quotient de deux nombres.
+% \item Savoir déterminer si une égalité correspond à une division euclidienne.
+% \item Savoir déterminer le reste et le quotient d'après une égalité.
+% \item Savoir poser une division euclidienne.
+% \item Savoir vérifier une division euclidienne posée.
+% \item Savoir déterminer des multiples ou des diviseurs.
+% \item Savoir utiliser les critères de divisibilité.
+% \end{itemize}
+% \end{CpsCol}
+
+% \end{document}
+
+\end{pageCours} 

@@ -1,0 +1,223 @@
+% \documentclass[a4paper,dvipsnames]{article}
+
+% \addtolength{\hoffset}{-2.25cm}
+% \addtolength{\textwidth}{4.5cm}
+% \addtolength{\voffset}{-3.25cm}
+% \addtolength{\textheight}{5cm}
+% \setlength{\parskip}{0pt}
+% \setlength{\parindent}{0in}
+
+% \input{MISC/preambule_SACADO}
+% \input{MISC/styleCours_SACADO}
+
+% \usepackage{hyperref}
+
+% \begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+% \fancyhead[C]{}
+% \hrule\medskip % Upper rule
+% \begin{minipage}{0.295\textwidth} 
+% \raggedright
+% Classe \myClasse \hfill\\
+% \myDiscipline \hfill\\
+% \myParcours \hfill\\
+% \end{minipage}
+% \begin{minipage}{0.4\textwidth} 
+% \centering 
+% \scshape\huge
+% \textcolor{sacado_purple}{\myTitle} \\ 
+% \normalsize 
+%%\mySubTitle \\ 
+% \end{minipage}
+% \begin{minipage}{0.295\textwidth} 
+% \raggedleft
+% \href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%%\myAnnee \hfill\\
+% \end{minipage}
+% \medskip \hrule
+% \bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\chapter{Calculer des durées}
+{https://sacado.xyz/qcm/parcours_show_course/0/117137}
+
+
+\begin{pageCours} 
+
+\section{Millénaires, siècles, années, mois}
+
+\begin{Def}
+\[Un\;millénaire = 1000 \;ans \hspace{1cm} Un\; siècle = 100\; ans \hspace{1cm} Une\; année = 12 \;mois\]
+\end{Def}
+
+% \begin{ExOApp}[]
+% Compléter les égalités :
+% \begin{itemize}
+% \item 2 siècles = ... années
+% \item 4 millénaires = ... mois
+% \item 6 années = ... mois
+% \end{itemize}
+% \end{ExOApp}
+
+\begin{Def}
+\begin{itemize}
+\item Une année = 365 jours (une année bissextile a 366 jours)
+\item Nombre de jours par mois :
+
+\begin{minipage}{.3\linewidth}
+\begin{itemize}
+\item[\textbf{Janvier}] : 31 jours
+\item[\textbf{Février}]  : 28 ou 29 jours
+\item[\textbf{Mars}] : 31 jours
+\item[\textbf{Avril}] : 30 jours
+\end{itemize}
+\end{minipage}
+\begin{minipage}{.3\linewidth}
+\begin{itemize}
+\item[\textbf{Mai}] : 31 jours
+\item[\textbf{Juin}]  : 30 jours
+\item[\textbf{Juillet}] : 31 jours
+\item[\textbf{Aout}] : 31 jours
+\end{itemize}
+\end{minipage}
+\begin{minipage}{.3\linewidth}
+\begin{itemize}
+\item[\textbf{Septembre}] : 30 jours
+\item[\textbf{Octobre}]  : 31 jours
+\item[\textbf{Novembre}] : 30 jours
+\item[\textbf{Décembre}] : 31 jours
+\end{itemize}
+\end{minipage}
+\end{itemize}
+\end{Def}
+
+\begin{Def}
+\[Une \;semaine = 7 \;jours \hspace{1cm} Un\; jour = 24 \;heures\]
+\end{Def}
+
+\begin{Mt}
+Transformation de 713 heures en semaines, jours et heures.
+
+Une semaine = 7 jours = 168 heures ($7\times24=168$)
+
+En effectuant des divisions euclidiennes successives, on trouve : $713=168\times4+24\times1+17$ donc 713 heures = 4 semaines, 1 jours, 17 heures.
+\end{Mt}
+
+% \begin{ExOApp}[]
+% Transformer 868 heures en semaines, jours et heures.
+% \end{ExOApp}
+
+\section{Heures, minutes, secondes}
+
+\begin{Def}
+Notre système de mesure des heures, minutes et secondes est un \textbf{système sexagésimale}.
+\[1\;heure=60\;minutes\hspace{1cm}1\;minute=60\;secondes\]
+\end{Def}
+
+\begin{Mt}
+Transformation de 451 minutes en heures et minutes.
+En effectuant une division euclidienne on trouve :
+$451=7\times60+31$ donc 451 minutes = 7 heures et 31 minutes.
+\end{Mt}
+
+% \begin{ExOApp}[]
+% Transformer 1024 secondes en heures, minutes et secondes.
+% \end{ExOApp}
+
+\begin{autoeval}
+Quel âge j'ai si je suis vieux de un million de secondes ? de un milliard de secondes ?
+\end{autoeval}
+
+\section{Opérations avec des durées}
+
+\subsection{Ajouter des durées}
+
+\begin{Mt}
+Pour ajouter des durées on ajoute les heures entre elles et les minutes entre elles puis on convertit l'excédent de minutes en heures et minutes :
+\[04h54min+07h41min=04+07h54+41min=11h95min\]
+Puis :
+\[95min=1h35min\]
+Donc :
+\[04h54min+07h41min=12h35min\]
+On peut aussi transformer toutes les données en minutes puis convertir en heures et minutes une fois le calcul effectué :
+\[04h54min+07h41min=4\times60+54+7\times60+41
+=755min\]
+Puis :
+\[755=12\times60+35\]
+Ainsi :
+\[04h54min+07h41min=12h35min\]
+\end{Mt}
+
+% \begin{ExOApp}[]
+% Effectuer les sommes suivantes :
+
+% \[03h45min+05h22min\hspace{1cm}02h50min+07h08min\hspace{1cm}04h47min+01h03min\]
+% \end{ExOApp}
+
+\subsection{Soustraire des durées}
+
+\begin{Mt}
+Pour soustraire des durées on soustrait les heures entre elles et les minutes entre elles. Si le nombre de minutes soustrait est plus petit que le nombre de minutes à soustraire on décale d'une heure :
+\[
+02h33min-00h53min
+\]
+$33<53$ donc on transforme l'opération pour pouvoir soustraire :
+\[02h33min=01h93min\]
+Ainsi :
+\[
+02h33min-00h53min=01h93min-00h53min
+=01-00h93-53min=01h40min
+\]
+\end{Mt}
+
+% \begin{ExOApp}[]
+% Effectuer les différences suivantes :
+
+% \[01h43min+01h02min\hspace{1cm}03h42min+02h00min\hspace{1cm}04h03min+02h40min\]
+% \end{ExOApp}
+
+\section{Heure en système décimal}
+
+\begin{Def}
+On peut exprimer des heures en utilisant le \textbf{système décimal}.
+\end{Def}
+
+\begin{Mt}
+Pour convertir $2,20h$ en heures et minutes on exprime la partie décimale du nombre en minutes en utilisant la \textbf{proportionnalité} :
+\begin{tabular}{c||c|c}
+Durée (h) & 1 & 0,2\\\hline
+Durée (min) & 60 & 12\\
+\end{tabular}
+\[0,20\times60=12min\]
+Donc :
+\[2,20h=2h12min\]
+\end{Mt}
+
+% \begin{ExOApp}[]
+% Convertir les heures décimales suivantes en heures et minutes :
+% \[3,20h\hspace{1cm}4,50h\hspace{1cm}7,6h\]
+% Convertir les heures et minutes suivantes en heures décimales :
+% \[3h20min\hspace{1cm}1h55min\hspace{1cm}2h13min\]
+% \end{ExOApp}
+
+% \section{Les savoir-faire du parcours}
+
+% \begin{CpsCol}
+% \begin{itemize}
+% \item Savoir convertir des durées.
+% \item Savoir effectuer des opérations avec des durées.
+% \item Savoir convertir des heures décimales.
+% \item Savoir résoudre un problème de durée. 
+% \end{itemize}
+% \end{CpsCol}
+
+% \end{document}
+
+\end{pageCours} 

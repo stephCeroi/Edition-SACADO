@@ -1,0 +1,400 @@
+% \documentclass[a4paper,dvipsnames]{article}
+
+% \addtolength{\hoffset}{-2.25cm}
+% \addtolength{\textwidth}{4.5cm}
+% \addtolength{\voffset}{-3.25cm}
+% \addtolength{\textheight}{5cm}
+% \setlength{\parskip}{0pt}
+% \setlength{\parindent}{0in}
+
+% \input{MISC/preambule_SACADO}
+% \input{MISC/styleCours_SACADO}
+
+% \usepackage{hyperref}
+% \usepackage{multido}
+% \newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+% \begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+% \fancyhead[C]{}
+% \hrule\medskip % Upper rule
+% \begin{minipage}{0.295\textwidth} 
+% \raggedright
+% Classe \myClasse \hfill\\
+% \myDiscipline \hfill\\
+% \myParcours \hfill\\
+% \end{minipage}
+% \begin{minipage}{0.4\textwidth} 
+% \centering 
+% \scshape\huge
+% \textcolor{sacado_purple}{\myTitle} \\ 
+% \normalsize 
+%%\mySubTitle \\ 
+% \end{minipage}
+% \begin{minipage}{0.295\textwidth} 
+% \raggedleft
+% \href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%%\myAnnee \hfill\\
+% \end{minipage}
+% \medskip \hrule
+% \bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\chapter{Les nombres entiers}
+{https://sacado.xyz/qcm/parcours_show_course/0/117118}
+
+\begin{pageCours} 
+
+\section{Un peu d'histoire de la numération}
+
+\subsection{La numération Babylonienne}
+
+\begin{His}
+Vers le \RNum{2}e millénaire avant J.C., les babyloniens écrivent les nombres avec seulement deux symboles :\\
+\begin{center}
+\begin{tabular}{c|c|c}
+Nom & Le "Clou vertical" & Le "Chevron" \\\hline
+Symbole & \includegraphics[width=.6cm]{clou_droit.png} & \includegraphics[width=.95cm]{chevron.png} \\\hline
+Valeur & 1 & 10 \\
+\end{tabular}
+\end{center}
+
+Ils utilisent un système sexagésimale (base $60$) et une numération de position. Suivant la place qu'occupe le symbole, celui-ci correspond soit à une unité, soit à une soixantaine ($60$), soit à une soixantaine de soixantaines ($60\times60=3\,600$). On utilise encore aujourd'hui un système sexagésimale pour les unités de temps et des mesures d'angles.\\
+
+Exemples :
+\begin{center}
+\includegraphics[width=9cm]{exemple_babylonian.png}
+\end{center}
+\end{His}
+
+\subsection{La numération Égyptienne}
+
+\begin{His}
+Au \RNum{3}e millénaire avant J.C., en Egypte, les scribes écrivent les nombres sur des papyrus sous forme de hiéroglyphes. Les égyptiens utilisent un système de numération basé sur le principe additif. Les égyptiens peuvent écrire des nombres entiers jusqu'à $1\,000\,000$. Ils écrivent aussi des nombres décimaux et des fractions.
+
+\newcommand{\egmil}[1]{\multido{\i=1+1}{#1}{\includegraphics[scale=.1]{egyptian/egypt_person.eps}\hspace{0.5mm}}}
+\newcommand{\eghuntho}[1]{\multido{\i=1+1}{#1}{\includegraphics[scale=.1]{egyptian/egypt_fish.eps}\hspace{0.5mm}}}
+\newcommand{\egtentho}[1]{\multido{\i=1+1}{#1}{\includegraphics[scale=.1]{egyptian/egypt_finger.eps}\hspace{0.5mm}}}
+\newcommand{\egtho}[1]{\multido{\i=1+1}{#1}{\includegraphics[scale=.1]{egyptian/egypt_lotus.eps}\hspace{0.5mm}}}
+\newcommand{\eghun}[1]{\multido{\i=1+1}{#1}{\includegraphics[scale=.1]{egyptian/egypt_scroll.eps}\hspace{0.5mm}}}
+\newcommand{\egten}[1]{\multido{\i=1+1}{#1}{\includegraphics[scale=.1]{egyptian/egypt_heel.eps}\hspace{0.5mm}}}
+\newcommand{\egone}[1]{\multido{\i=1+1}{#1}{\includegraphics[scale=.1]{egyptian/egypt_stroke.eps}\hspace{0.5mm}}}
+\newcommand{\egyptify}[7]{
+ \multido{\i=1+1}{#1}{\includegraphics[scale=.1]{egyptian/egypt_person.eps}\hspace{0.5mm}}
+ \multido{\i=1+1}{#2}{\includegraphics[scale=.1]{egyptian/egypt_fish.eps}\hspace{0.5mm}}
+ \multido{\i=1+1}{#3}{\includegraphics[scale=.1]{egyptian/egypt_finger.eps}\hspace{0.5mm}}
+ \multido{\i=1+1}{#4}{\includegraphics[scale=.1]{egyptian/egypt_lotus.eps}\hspace{0.5mm}}
+ \multido{\i=1+1}{#5}{\includegraphics[scale=.1]{egyptian/egypt_scroll.eps}\hspace{0.5mm}}
+ \multido{\i=1+1}{#6}{\includegraphics[scale=.1]{egyptian/egypt_heel.eps}\hspace{0.5mm}}
+ \multido{\i=1+1}{#7}{\includegraphics[scale=.1]{egyptian/egypt_stroke.eps}\hspace{0.5mm}}
+ \hspace{.5mm}
+}
+
+\begin{center}
+\begin{tabular}[t]{c|c|c|c|c|c|c}
+\egmil{1}&\eghuntho{1}&\egtentho{1}&\egtho{1}&\eghun{1}&\egten{1}&\egone{1}\\
+\hline
+1,000,000&100,000&10,000&1,000&100&10&1\\
+\end{tabular}\\
+\end{center}
+
+Exemple :
+
+\begin{center}
+\egyptify{5}{8}{6}{7}{9}{3}{4}$=5\,867\,934$
+\end{center}
+\end{His}
+
+\subsection{La numération Maya}
+
+\begin{His}
+Dans leur étude des astres, les mayas se servent des nombres pour calculer le temps. Ce sont les inventeurs du calendrier.
+
+ Leur système de numération datant du \RNum{5}e siècle après J.C. suit le principe de position dans la base vigésimale (base $20$). Celui-ci trouve ses origines avec nos $10$ doigts et $10$ orteils !  
+ 
+ Les symboles employés (les glyphes) représentent les nombres jusqu'à $19$, empilés sur différents niveaux. Chaque niveau correspond à un nombre de paquets de $20$ puis de $20\times20=400$ puis de $20\times20\times20=8\,000$...
+ 
+Les mayas utilisent le zéro qu'ils représentent par un coquillage.
+
+\begin{center}
+\includegraphics[width=8cm]{maya_numerals.png}
+\end{center}
+
+Exemple : $379=18\times20+19$
+\begin{center}
+\includegraphics[width=1cm]{maya_exemple.png}
+\end{center}
+\end{His}
+
+\subsection{La numération Romaine}
+
+\begin{His}
+Les grecs et les romains ont inventé des systèmes de numération alphabétiques très peu adaptés aux calculs.
+
+Le système romain est composé de symboles notés côte à côte selon le principe additif et combine les bases $5$ et $10$.
+
+Les plus anciens sont les signes \RNum{1}, \RNum{5}, et \RNum{10} qui dérivent directement de la pratique de l'entaille.
+
+\begin{center}
+\includegraphics[width=8cm]{roman.png}
+\end{center}
+
+\begin{center}
+\RNum{1}$=1$\hspace{.5cm}\RNum{2}$=2$\hspace{.5cm}\RNum{3}$=3$\hspace{.5cm}\RNum{4}$=4$\hspace{.5cm}\RNum{5}$=5$\\
+\RNum{6}$=6$\hspace{.5cm}\RNum{7}$=7$\hspace{.5cm}\RNum{8}$=8$\hspace{.5cm}\RNum{9}$=9$\hspace{.5cm}\RNum{10}$=10$\\
+\RNum{20}$=20$\hspace{.5cm}\RNum{50}$=50$\hspace{.5cm}\RNum{100}$=100$\hspace{.5cm}\RNum{500}$=500$\hspace{.5cm}\RNum{1000}$=1000$
+\end{center}
+
+Exemple :
+\begin{center}
+\RNum{6963}$=6\,963$
+\end{center}
+\end{His}
+
+\subsection{L'histoire de nos chiffres}
+
+\begin{His}
+Nos chiffres de "$1$" à "$9$" que nous appelons à tort "chiffres arabes", viennent en réalité des Indes. Leurs "ancêtres" les plus anciens apparaissent dans des inscriptions des grottes de Nana Ghât datant du \RNum{2}e siècle avant J.C.
+
+Au \RNum{5}e siècle de notre ère, en Inde, les savants ont l'idée ingénieuse de marier le principe de position, les neuf symboles et les zéro en tant que nombre à part entière représentant une quantité qui n'existe pas.
+
+\begin{center}
+\includegraphics[width=10cm]{indian1.png}\\
+\textbf{Numération indienne}
+\end{center}
+
+Au \RNum{8}e siècle après J.C., alors que l'islam s'étend sur une partie de l'Afrique et de l'Asie, les califes de Bagdad font traduire les œuvres majeurs des peuples sur lesquels ils règnent.
+
+Parmi elles se trouve l'œuvre de Brahmagupta, un mathématicien indien. Sa numération à dix chiffres est si ingénieuse que les marchands arabes l'adoptent immédiatement.
+
+\begin{center}
+\includegraphics[width=10cm]{indian2.png}\\
+\textbf{Numération arabe}
+\end{center}
+\end{His}
+
+\begin{His}
+Au \RNum{9}e siècle, les chiffres arabes sont décrits dans un ouvrage du mathématicien et astronome Muhammad ibn Musa el-Khwarizmi ($790-850$) qui, traduit en latin, les diffuse en Espagne.\\
+
+Gerbert d'Aurillac ($945-1003$) qui deviendra pape en $999$, est passionné par les mathématiques. Il rédige deux traités, l'un sur la multiplication, l'autre sur la division. Il initiera pour la première fois l'occident chrétien aux chiffres "indo-arabes" mais il ne retient ni la numération de position ni le zéro. 
+
+\begin{center}
+\includegraphics[width=10cm]{indian3.png}\\
+\textbf{Numération hispano-arabe}
+\end{center}
+
+Au \RNum{13}e siècle, le mathématicien italien Léonard de Pise ($1175-1250$), dit Fibonacci publia, en $1202$, le \textit{Liber Abaci} (le livre du calcul), un traité sur les calculs et la comptabilité fondée sur le calcul décimal.\\
+
+Au \RNum{15}e siècle, avec l'expansion de l'imprimerie, les chiffres ont été légèrement déformés pour donner une forme semblable à la forme actuelle. 
+
+\begin{center}
+\includegraphics[width=10cm]{indian4.png}\\
+\textbf{Numération italienne}
+\end{center}
+\end{His}
+
+\section{Nombres entiers}
+
+\begin{Def}
+Un \textbf{nombre entier} est un nombre qui peut s'écrire \textbf{sans virgule}
+\end{Def}
+
+\begin{Rqs}
+\begin{itemize}
+\item $0$, $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$ et $9$ sont les dix \textbf{chiffres} qui permettent d'écrire tous les nombres entiers.
+\item Pour pouvoir lire les grands nombres entiers facilement, on regroupe les chiffres par groupe de 3 : $345\,202$
+\end{itemize}
+\end{Rqs}
+
+\begin{Reg}
+Règles orthographiques pour l'écriture des nombres :
+\begin{itemize}
+    \item Un trait d'union entre chaque mot.
+    \item Les mots servant à écrire les nombres sont tous invariable sauf :
+    \begin{itemize}
+        \item Au pluriel million et milliard prennent un 's'.
+        \item Au pluriel cent et vingt prennent un 's' lorsqu'ils ne sont pas suivi par un autre nombre.
+    \end{itemize}
+\end{itemize}
+\end{Reg}
+
+\begin{Ex}
+\begin{itemize}
+\item $895$ s'écrit : 'huit-cent-quatre-vingt-quinze'
+\item $1\,200$ s'écrit : 'mille-deux-cents'
+\item $1\,230$ s'écrit : 'mille-deux-cent-trente'
+\item $1\,280$ s'écrit : 'mille-deux-cent-quatre-vingts'
+\item $1\,285$ s'écrit : 'mille-deux-cent-quatre-vingt-cinq'
+\end{itemize}
+\end{Ex}
+
+\section{Position d'un chiffre dans un nombre}
+
+\begin{Def}
+\begin{itemize}
+\item Notre système numérique est un \textbf{système décimal} (numération décimale).
+\item Chaque \textbf{chiffre} à une valeur en fonction de sa \textbf{position} dans le nombre (numération de position)
+\end{itemize}
+\end{Def}
+
+\begin{Ex}
+Un million = $1\,000\,000$ unités
+\end{Ex}
+
+\begin{Voc}
+Chaque position (rang) possède un nom spécifique : unité, dizaine, centaines....
+    
+\begin{center}
+    \includegraphics[width=13cm]{tableau_position.png}
+\end{center}
+\end{Voc}
+
+\begin{Mt}
+Décomposition de $437\,640\,881$ :
+\begin{itemize}
+\item Décomposition 1 : 
+\[437\,000\,000+640\,000+881\]
+\item Décomposition 2 :
+\[(437\times1\,000\,000)+(640\times 1\,000)+(881\times1)\]
+\item Décomposition 3 :
+\[400\,000\,000+30\,000\,000+7\,000\,000+600\,000+40\,000+800+80+1\]
+\item Décomposition 4 :
+\[4\times100\,000\,000+3\times10\,000\,000+7\times1\,000\,000+6\times100\,000+4\times10\,000+8\times100+8\times10+1\times1\]
+\end{itemize}
+\end{Mt}
+
+\section{Comparer des nombres entiers}
+
+\begin{Def}
+\textbf{Comparer} deux nombres, c'est trouver le \textbf{plus grand} (ou le \textbf{plus petit}) ou dire s'ils sont \textbf{égaux}.
+
+On utilise les \textbf{symboles de comparaison} :
+\begin{center}
+est supérieur à ($>$) \hspace{1cm} est inférieur à ($<$) \hspace{1cm} est égal à ($=$)
+\end{center}
+\end{Def}
+
+\begin{Ex}
+$29\,874\,492$ est plus grand que $27\,514\,420$ donc $29\,874\,492>27\,514\,420$.
+\end{Ex}
+
+% \begin{ExOApp}[]
+% Comparer les nombres suivants :
+
+% \[567 \hspace{.5cm} 455\]
+% \[91\,456\,022 \hspace{.5cm} 83\,427\,923\]
+% \end{ExOApp} 
+
+\begin{Def}
+\begin{itemize}
+\item Ranger des nombres dans \textbf{l'ordre croissant} signifie les ranger \textbf{du plus petit au plus grand}.
+\item Ranger des nombres dans \textbf{l'ordre décroissant} signifie les ranger \textbf{du plus grand au plus petit}.
+\end{itemize}
+\end{Def}
+
+% \begin{ExOApp}[]
+% \begin{enumerate}
+% \item Mettre les nombres suivants dans l'ordre croissant.
+
+% \[93\,692 \hspace{.5cm} 83\,321 \hspace{.5cm} 44\,512 \hspace{.5cm} 65\,173\]
+% \item Mettre les nombres suivants dans l'ordre décroissant.
+
+% \[7\,096 \hspace{.5cm} 8\,623 \hspace{.5cm} 56\,393 \hspace{.5cm} 13\,582\]
+% \end{enumerate}
+% \end{ExOApp}
+
+\section{Encadrer un nombre entier}
+
+\begin{Def}
+\textbf{Encadrer} un nombre, c'est trouver un nombre plus petit et un nombre plus grand.
+
+La \textbf{précision de l'encadrement} est la \textbf{différence} entre les deux nombres trouvés.
+\end{Def}
+
+\begin{Ex}
+Encadrement du nombre $56$ :
+ \begin{itemize}
+\item Encadrement à la dizaine : \(50 < 56< 60\)
+
+\item Encadrement au centième : \(0 < 56< 100\)
+ \end{itemize}
+\end{Ex}
+
+% \begin{ExOApp}[]
+% Encadrer le nombre $33\,935$ à la \textbf{centaine} près.
+% \end{ExOApp}
+
+\section{Nombres entiers et demi-droite graduée}
+
+\begin{Def}
+Une \textbf{demi-droite graduée} est une \textbf{demi-droite} sur laquelle on a reporté une \textbf{unité de longueur} régulièrement à partir de son \textbf{origine}.
+
+Sur une demi-droite graduée, \textbf{un point} est repéré par \textbf{un nombre}, son \textbf{abscisse}.
+
+Si un point $A$ a pour abscisse $6$, on note : $A(6)$.
+
+L'origine est repérée par le nombre $0$.
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+xmin=-0.1994343408245771,
+xmax=9.60761325487766,
+ymin=-0.4707007586686898,
+ymax=0.44760621908013903,
+xtick={-0.0,1.0,...,9.0},
+ytick={-0.0,1.0,...,0.0},]
+\clip(-0.1994343408245771,-0.4707007586686898) rectangle (9.60761325487766,0.44760621908013903);
+\draw [->,line width=2.pt] (0.,0.) -- (9.619386421259055,0.);
+\begin{scriptsize}
+\draw [fill=xdxdff] (6.,0.) circle (2.5pt);
+\draw[color=xdxdff] (6.087436506840482,0.21802947464293182) node {$A$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\end{Def}
+
+% \begin{ExOApp}[]
+% Sur la demi-droite ci-dessous :
+
+% \begin{enumerate}
+% \item Donner les abscisses des points A, B et C.\\
+% \[A(............)\hspace{1cm}B(............)\hspace{1cm}C(............)\]
+% \item Placer le point D(35).
+% \end{enumerate} 
+
+% \begin{center}
+    % \includegraphics[width=12cm]{demi_droite.png}
+% \end{center}
+% \end{ExOApp}
+
+% \section{Les savoir-faire du parcours}
+
+% \begin{CpsCol}
+% \begin{itemize}
+% \item Savoir écrire un nombre entier en lettres.
+% \item Savoir écrire un nombre entier en chiffres.
+% \item Savoir déterminer la valeur d'un chiffre selon sa position.
+% \item Savoir déterminer un nombre de ... dans un nombre entier.
+% \item Savoir décomposer un nombre entier.
+% \item Savoir comparer des nombres entiers.
+% \item Savoir encadrer un nombre entier.
+% \item Savoir repérer un nombre entier sur une demi-droite graduée.
+% \item Savoir placer un nombre sur une demi-droite graduée.
+% \end{itemize}
+% \end{CpsCol}
+
+% \end{document}
+
+\end{pageCours} 

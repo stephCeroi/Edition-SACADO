@@ -1,0 +1,305 @@
+\input{../../../MISC/preambule_sacado.tex}
+\input{../../../MISC/environnements_sacado.tex}
+\input{../../../MISC/macro_sacado.tex}
+\input{../../../MISC/tikz_cubic_shapes}
+
+\begin{document}
+
+
+\textbf{Savoir différencier les chiffres d'un nombre}
+
+\ExoCu{Représenter. Communiquer.}
+
+\begin{enumerate}
+\item Dans le nombre A = 428, le chiffre 2 est le chiffre des $\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+\item Dans le nombre B = 8 948, le chiffre 9 est le chiffre des $\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+\end{enumerate}
+
+
+\ExoCu{Représenter. Communiquer.}
+
+\begin{enumerate}
+\item Dans le nombre A = 518 931 248, le chiffre 2 est le chiffre des $\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+\item Dans le nombre B = 218 948, le chiffre 4 est le chiffre des $\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+\end{enumerate}
+
+
+
+\ExoCu{Représenter.}
+
+Choisis la bonne réponse :
+\begin{enumerate}
+\item Dans la décomposition du nombre A = 456, le chiffre 4 représente :
+\begin{tabular}{|c|c|c|c|}
+\hline 
+4000 & 400 & 40 & 4 \\ 
+\hline 
+\end{tabular}  
+
+\item Dans la décomposition du nombre A = 6512, le chiffre 1 représente :
+\begin{tabular}{|c|c|c|c|}
+\hline 
+1000 & 100 & 10 & 1 \\ 
+\hline 
+\end{tabular} 
+\end{enumerate}
+
+
+\ExoCd{Représenter.}
+
+Choisis la bonne réponse :
+\begin{enumerate}
+\item Dans la décomposition du nombre A = 12378456, le chiffre 8 représente :
+\begin{tabular}{|c|c|c|c|}
+\hline 
+8000 & 800 & 80 & 8 \\ 
+\hline 
+\end{tabular}  
+
+\item Dans la décomposition du nombre A = 65934172, le chiffre 1 représente :
+\begin{tabular}{|c|c|c|c|}
+\hline 
+1000 & 100 & 10 & 1 \\ 
+\hline 
+\end{tabular} 
+\end{enumerate}
+
+
+\ExoCu{Représenter. Communiquer.}
+
+\begin{enumerate}
+\item Combien de centaines contient le nombre 456 ?
+\item Quel est le nombre de dizaines 237 ?
+\end{enumerate}
+
+\ExoCu{Représenter. Communiquer.}
+
+\begin{enumerate}
+\item Combien de centaines contient le nombre 12378456 ?
+\item Quel est le nombre de milliers dans 84516237 ?
+\end{enumerate}
+
+
+\ExoCu{Représenter. Communiquer.}
+
+On donne le  nombre 1250,43. 
+\begin{description}
+\item[•] Le chiffre des milliers est : $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des centaines est : $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des dizaines est : $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des unités est : $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des dixièmes est : $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des centièmes est : $ \cdots\cdots\cdots\cdots $
+\end{description}
+
+
+\ExoCd{Représenter. Communiquer.}
+
+On donne le  nombre 1857250,43. 
+\begin{description}
+\item[•] 1 est le chiffres des $ \cdots\cdots\cdots\cdots $.
+\item[•] 3 est le chiffres des $ \cdots\cdots\cdots\cdots $.
+\item[•] 2 est le chiffres des $ \cdots\cdots\cdots\cdots $.
+
+\item[•] Le chiffre des centaines de milliers est : $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des dizaines est : $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des dixièmes est : $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des milliers est :  $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des unités est : $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des dizaines de milliers est : $ \cdots\cdots\cdots\cdots $
+\item[•] Le chiffre des centièmes est : $ \cdots\cdots\cdots\cdots $
+
+\end{description}
+
+
+
+
+
+
+
+\textbf{Utiliser des nombres décimaux ayant au plus quatre décimales.}
+
+\begin{minipage}{0.5\linewidth}
+
+\ExoCu{Représenter.}
+
+Écrire les nombres suivants sous forme décimale :
+\begin{enumerate}
+\item quatre-cent-douze unités et six-dixièmes $= \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+\item $\frac{6}{10}= \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+\item $\frac{162}{100}= \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+\item $\frac{5129}{100}= \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+\end{enumerate}
+ 
+
+\ExoCu{Représenter.}
+Complète la décomposition décimale du nombre $324,67$.
+
+$324,67 = \cdots\cdots\cdots  \times 100 + \cdots\cdots\cdots \times 10 + \cdots\cdots\cdots  + \cdots\cdots\cdots \times \dfrac{1}{10} + \cdots\cdots\cdots \times \dfrac{1}{100} $
+
+
+
+\ExoCu{Représenter.}
+
+\begin{enumerate}
+
+
+\item Mathilde a décomposé le nombre décimal  $A = 5\times 100 + 2\times 10 + 4 + 3\times \dfrac{1}{10} +  6\times \dfrac{1}{100} $. Peux-tu le retrouver ?
+$A = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+
+\item Nour a décomposé le nombre décimal  $A = 6\times 1000 + 2\times 100 + 5\times 10 + 8 + 7\times \dfrac{1}{10} +   \dfrac{1}{100} $. Peux-tu le retrouver ?
+$A = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+\end{enumerate}
+
+
+\ExoCu{Représenter.}
+
+Léon a décomposé un nombre décimal  $A = 5\times 100 + 2\times 10 + 4 + 3\times 0,1 +  6\times 0,01 $. Peux-tu le retrouver ?
+$N = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+
+
+
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+
+\ExoCd{Représenter.}
+
+Écrire les nombres suivants sous forme décimale :
+\begin{enumerate}
+\item quatre-mille-deux-cent-sept unités et six-dixièmes $= \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+\item $\frac{8619}{1000}= \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+\item $\frac{62}{100}= \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+\item $\frac{652}{10}= \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+\end{enumerate}
+ 
+
+\ExoCd{Représenter.}
+
+\begin{enumerate}
+\item Mathilde a décomposé le nombre décimal  $A = 5\times 100 + 2\times 10 + 4 + 3\times \dfrac{1}{10} +  6\times \dfrac{1}{100} $. Peux-tu le retrouver ?
+$A = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+
+\item Nour a décomposé le nombre décimal  $A = 6\times 1000 + 2\times \dfrac{1}{10} +  7\times 100 + 5\times 10 + 6\times 1000 + 8 +   \dfrac{1}{100} $. Peux-tu le retrouver ?
+$A = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+\end{enumerate}
+
+
+\ExoCd{Représenter.}
+
+\begin{enumerate}
+\item Léon a décomposé un nombre décimal  $A = 5\times 100 + 2\times 10 + 4 + 3\times 0,1 +  6\times 0,01 $. Peux-tu le retrouver ?
+$N = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+
+\item Aziz a décomposé un nombre décimal  $A = 5\times 100 + 2\times 10 + 4 + 3\times 0,1 +  6\times 0,01 $. Peux-tu le retrouver ?
+$N = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+
+\end{enumerate}
+
+\ExoCd{Représenter.}
+
+\begin{enumerate}
+\item Léon a décomposé un nombre décimal  $A = 5\times 100 + 2\times 10 + 4 + 3\times 0,1 +  6\times 0,01 $. Peux-tu le retrouver ?
+$N = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+
+\item Aziz a décomposé un nombre décimal  $A = 5\times 100 + 2\times 10 + 4 + 3\times 0,1 +  6\times 0,01 $. Peux-tu le retrouver ?
+$N = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+
+\end{enumerate}
+
+\end{minipage}
+
+
+\textbf{Représenter un nombre}
+
+
+\ExoCu{Représenter.}
+
+Écris les nombres décimaux qui sont repérés par la flèche.
+
+
+
+
+\ExoCd{Représenter.}
+
+\begin{enumerate}
+\item  Place les nombres $0,5$ , $0,8$ et $0,25$ dans les étiquettes.
+
+\definecolor{qqwwzz}{rgb}{0.,0.4,0.6}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(0.76,0.78) rectangle (11.56,5.28);
+\draw [line width=1.pt] (1.,3.)-- (11.,3.);
+\draw [line width=1.pt] (6.,3.)-- (6.,4.);
+\draw [line width=1.pt] (3.5,3.)-- (3.5,2.);
+\draw [line width=1.pt] (9.,3.)-- (9.,2.);
+\draw [line width=1.pt,color=qqwwzz] (2.6,2.)-- (4.5,2.);
+\draw [line width=1.pt,color=qqwwzz] (4.5,2.)-- (4.5,1.);
+\draw [line width=1.pt,color=qqwwzz] (4.5,1.)-- (2.6,1.);
+\draw [line width=1.pt,color=qqwwzz] (2.6,1.)-- (2.6,2.);
+\draw [line width=1.pt,color=qqwwzz] (8.,2.)-- (9.9,2.);
+\draw [line width=1.pt,color=qqwwzz] (9.9,2.)-- (9.9,1.);
+\draw [line width=1.pt,color=qqwwzz] (9.9,1.)-- (8.,1.);
+\draw [line width=1.pt,color=qqwwzz] (8.,1.)-- (8.,2.);
+\draw [line width=1.pt,color=qqwwzz] (5.,5.)-- (6.9,5.);
+\draw [line width=1.pt,color=qqwwzz] (6.9,5.)-- (6.9,4.);
+\draw [line width=1.pt,color=qqwwzz] (6.9,4.)-- (5.,4.);
+\draw [line width=1.pt,color=qqwwzz] (5.,4.)-- (5.,5.);
+\draw (0.82,3.14) node[anchor=north west] {$0$};
+\draw (10.86,3.12) node[anchor=north west] {$1$};
+\begin{scriptsize}
+\draw [color=black] (1.,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw [color=black] (11.,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\end{scriptsize}
+\end{tikzpicture}
+
+
+
+\item Place les nombres $3,2$, $3,75$ et  $3,125$  dans les étiquettes.
+
+\definecolor{qqwwzz}{rgb}{0.,0.4,0.6}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(-0.52,0.66) rectangle (10.4,5.38);
+\draw [line width=1.pt] (0.,3.)-- (10.,3.);
+\draw [line width=1.pt] (1.25,3.)-- (1.25,4);
+\draw [line width=1.pt] (2.,3.)-- (2.,2.);
+\draw [line width=1.pt] (7.5,3.)-- (7.5,2);
+\draw [line width=1.pt,color=qqwwzz] (1.,2.)-- (3,2.);
+\draw [line width=1.pt,color=qqwwzz] (3,2.)-- (3.,1.);
+\draw [line width=1.pt,color=qqwwzz] (3.,1.)-- (1.1,1.);
+\draw [line width=1.pt,color=qqwwzz] (1,1.)-- (1.,2.);
+\draw [line width=1.pt,color=qqwwzz] (6.6,2)-- (8.5,2);
+\draw [line width=1.pt,color=qqwwzz] (8.5,2)-- (8.5,1);
+\draw [line width=1.pt,color=qqwwzz] (8.5,1)-- (6.6,1);
+\draw [line width=1.pt,color=qqwwzz] (6.6,1)-- (6.6,2);
+\draw [line width=1.pt,color=qqwwzz] (0.3,5.)-- (2.3,5.);
+\draw [line width=1.pt,color=qqwwzz] (2.3,5.)-- (2.3,4.);
+\draw [line width=1.pt,color=qqwwzz] (2.3,4.)-- (0.3,4.);
+\draw [line width=1.pt,color=qqwwzz] (0.3,4.)-- (0.3,5.);
+\draw (-0.2,3.04) node[anchor=north west] {$3$};
+\draw (9.84,3.08) node[anchor=north west] {$4$};
+\begin{scriptsize}
+\draw [color=black] (0.,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw [color=black] (10.,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\end{scriptsize}
+\end{tikzpicture}
+
+
+
+\end{enumerate}
+
+
+\ExoCd{Représenter.}
+
+\begin{enumerate}
+\item Quel est le nombre décimal écrit ? $A = 9\times 1000 + 6\times 100 + 5\times 10 + 2 + 8\times \dfrac{1}{10} +  9\times \dfrac{1}{100} $.
+
+$A = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+
+\item Quel est le nombre décimal écrit ? $B = 3\times 1000 + 2\times 100 + 1\times 10 + 6 + 8\times \dfrac{1}{10} +  5\times \dfrac{1}{1000} $.
+
+$B = \cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots $
+\end{enumerate}
+
+
+\end{document}

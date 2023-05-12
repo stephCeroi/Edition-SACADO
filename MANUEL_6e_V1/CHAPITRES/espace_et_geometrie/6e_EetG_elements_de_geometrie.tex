@@ -1,0 +1,668 @@
+% \documentclass[a4paper,dvipsnames]{article}
+
+% \addtolength{\hoffset}{-2.25cm}
+% \addtolength{\textwidth}{4.5cm}
+% \addtolength{\voffset}{-3.25cm}
+% \addtolength{\textheight}{5cm}
+% \setlength{\parskip}{0pt}
+% \setlength{\parindent}{0in}
+
+% \input{MISC/preambule_SACADO}
+% \input{MISC/styleCours_SACADO}
+
+% \usepackage{hyperref}
+
+% \begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+% \fancyhead[C]{}
+% \hrule\medskip % Upper rule
+% \begin{minipage}{0.295\textwidth} 
+% \raggedright
+% Classe \myClasse \hfill\\
+% \myDiscipline \hfill\\
+% \myParcours \hfill\\
+% \end{minipage}
+% \begin{minipage}{0.4\textwidth} 
+% \centering 
+% \scshape\huge
+% \textcolor{sacado_purple}{\myTitle} \\ 
+% \normalsize 
+%%\mySubTitle \\ 
+% \end{minipage}
+% \begin{minipage}{0.295\textwidth} 
+% \raggedleft
+% \href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%%\myAnnee \hfill\\
+% \end{minipage}
+% \medskip \hrule
+% \bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------*
+
+\chapter{Éléments de géométrie}
+{https://sacado.xyz/qcm/parcours_show_course/0/117129}
+
+\begin{pageCours}
+
+\section{Illusions d'optique}
+
+Quelques fois il arrive que nos yeux nous trompent.
+
+\subsection{Les segments sont-ils de même longueur ?}
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(-6.335217913319962,-6.880345876695259) rectangle (12.328090050851376,2.7730892771864735);
+\draw [line width=1.pt] (0.,0.)-- (5.,0.);
+\draw [line width=1.pt] (0.,-3.)-- (5.,-3.);
+\draw [line width=1.pt] (5.,0.)-- (6.,1.);
+\draw [line width=1.pt] (5.,0.)-- (6.,-1.);
+\draw [line width=1.pt] (0.,0.)-- (-1.,1.);
+\draw [line width=1.pt] (0.,0.)-- (-1.,-1.);
+\draw [line width=1.pt] (0.,-3.)-- (1.,-2.);
+\draw [line width=1.pt] (0.,-3.)-- (1.,-4.);
+\draw [line width=1.pt] (5.,-3.)-- (4.,-2.);
+\draw [line width=1.pt] (5.,-3.)-- (4.,-4.);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Les droites violettes sont-elles parallèles ?}
+
+\begin{center}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-6.367032765272981,-3.2831809059084223) rectangle (7.49507762775438,3.930960866483946);
+\draw [line width=1.pt] (0.,-3.2831809059084223) -- (0.,3.930960866483946);
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.*\x)/2.});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.--0.17364817766693033*\x)/0.984807753012208});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.--0.34202014332566866*\x)/0.9396926207859083});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.--0.5*\x)/0.8660254037844386});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.--0.6427876096865391*\x)/0.766044443118978});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.--0.7660444431189779*\x)/0.6427876096865393});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.--0.8660254037844385*\x)/0.5});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.9396926207859082*\x)/-0.34202014332566877});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.9848077530122078*\x)/-0.17364817766693044});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.984807753012208*\x)/0.17364817766693033});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.9396926207859083*\x)/0.34202014332566866});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.8660254037844386*\x)/0.5});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.766044443118978*\x)/0.6427876096865391});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.6427876096865393*\x)/0.7660444431189779});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.5*\x)/0.8660254037844385});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.34202014332566877*\x)/0.9396926207859082});
+\draw [line width=1.pt,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-0.-0.17364817766693044*\x)/0.9848077530122078});
+\draw [line width=1.pt,color=sacado_violet,domain=-6.367032765272981:7.49507762775438] plot(\x,{(--1.5-0.*\x)/1.});
+\draw [line width=1.pt,color=sacado_violet,domain=-6.367032765272981:7.49507762775438] plot(\x,{(-1.5-0.*\x)/1.});
+\end{tikzpicture}
+\end{center}
+
+\section{La géométrie Euclidienne}
+
+\begin{His}
+La géométrie étudiée au collège est la \textbf{géométrie euclidienne}. Ce nom vient du savant grec \textbf{Euclide} vivant à Alexandrie au IIIe siècle avant J.C. On le surnomme le père de la géométrie. Son œuvre \textcolor{sacado_orange}{Les Éléments} (recueil de 13 livres) comprend une collection de \textcolor{sacado_orange}{définitions} et de \textcolor{sacado_orange}{postulats}, ainsi que des \textcolor{sacado_orange}{propriétés} et des \textcolor{sacado_orange}{théorèmes} et leurs démonstrations.
+\end{His}
+
+\begin{Def}
+\begin{itemize}
+\item \textcolor{sacado_orange}{Les Éléments} : Les Éléments (Euclide) vers 300 av. J.C.
+
+Les livres I à IV traitent de géométrie plane.
+
+Les livres V à X font intervenir les proportions.
+
+Les livres XI à XIII traitent de la géométrie dans l'espace.
+
+
+\item \textcolor{sacado_orange}{Définition} : Énoncé qui précise la nature d'un objet mathématique.
+\begin{Ex}
+\begin{itemize}
+\item Un triangle équilatéral est un triangle dont les trois côtés sont de même longueur.
+\item Un nombre entier est un nombre qui peut être écrit sans virgule.
+\end{itemize}
+\end{Ex}
+\item \textcolor{sacado_orange}{Postulat} : Énoncé considéré comme admis sans démonstration. Les postulats servent de base pour le monde de la géométrie.
+\begin{Ex}
+\begin{itemize}
+\item Par deux points passent une et une seule droite.
+\item Deux droites non parallèles se croisent en un point et un seul.
+\item Il existe qu'une seule droite passant par un point et parallèle à une autre droite.
+\end{itemize}
+\end{Ex}
+\item \textcolor{sacado_orange}{Propriétés} : Énoncé concernant un objet qui est démontré. On l'utilise pour prouver des affirmations.
+
+\begin{Ex}
+\begin{itemize}
+\item Les diagonales d'un rectangle sont de même longueur.
+\item La somme de deux nombres entier est un nombre entier.
+\end{itemize}
+\end{Ex}
+\item \textcolor{sacado_orange}{Théorème} : Énoncé qui est démontré par un raisonnement logique. On l'utilise pour prouver des affirmations.
+\begin{Ex}
+Le théorème de M. Pythagore dont tu as sûrement déjà entendu parler et que tu verras en quatrième.
+\end{Ex}
+\end{itemize}
+\end{Def}
+
+
+\begin{Def}
+Le monde de la géométrie est un ensemble de points, tous les éléments de géométrie sont composés de points.
+\end{Def}
+
+\section{Éléments de géométrie}
+
+\subsection{Droites}
+
+\begin{Def}
+Une droite est un ensemble de point qui sont alignés.
+\end{Def}
+
+\begin{Ex}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.3462809917355365,-0.851900826446281) rectangle (5.785950413223146,3.2142148760330564);
+\draw [line width=1.pt,domain=-2.3462809917355365:5.785950413223146] plot(\x,{(--13.382241650160516-2.760330578512396*\x)/4.958677685950416});
+\draw (-0.544628099173552,2.437355371900825) node[anchor=north west] {d};
+\begin{scriptsize}
+\draw[color=black] (-6.5942148760330594,6.115041322314047) node {$d$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Ex}
+
+\begin{Rq}
+\begin{itemize}
+\item Une droite est illimitée.
+\item Une droite n'a pas de longueur.
+\end{itemize}
+\end{Rq}
+
+\begin{Pp}
+Par \textbf{un point} donné, il passe \textbf{une infinité} de droites.
+\end{Pp}
+
+\begin{Ex}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.1809917355371895,-1.0502479338842965) rectangle (5.075206611570254,3.3629752066115697);
+\draw [line width=1.pt,domain=-2.1809917355371895:5.075206611570254] plot(\x,{(--13.382241650160516-2.760330578512396*\x)/4.958677685950416});
+\draw (-0.544628099173552,2.4373553719008263) node[anchor=north west] {d};
+\draw [line width=1.pt,domain=-2.1809917355371895:5.075206611570254] plot(\x,{(--0.5658151688996957--4.542932352179724*\x)/5.197879725633495});
+\draw [line width=1.pt,domain=-2.1809917355371895:5.075206611570254] plot(\x,{(-10.158031348004188--5.402436484411128*\x)/-0.2236078776722943});
+\draw [line width=1.pt,domain=-2.1809917355371895:5.075206611570254] plot(\x,{(-5.844775417312083-0.5314478131095313*\x)/-4.02526077023428});
+\draw [line width=1.pt,domain=-2.1809917355371895:5.075206611570254] plot(\x,{(--8.739713482677567-3.060373432944241*\x)/1.89209460166655});
+%\begin{scriptsize}
+\draw[color=black] (-6.5942148760330594,6.115041322314048) node {$d$};
+\draw [fill=xdxdff] (1.8102764198483703,1.6910315257334436) circle (2.5pt);
+\draw[color=xdxdff] (1.9181818181818215,1.9993388429752064) node {$A$};
+\draw [fill=ududff] (-3.3876033057851243,-2.8519008264462804) circle (2.5pt);
+\draw[color=ududff] (-3.271900826446281,-2.5461157024793373) node {$D$};
+\draw [fill=ududff] (2.0338842975206646,-3.711404958677684) circle (2.5pt);
+\draw[color=ududff] (2.1495867768595076,-3.405619834710742) node {$E$};
+\draw [fill=ududff] (5.8355371900826505,2.222479338842975) circle (2.5pt);
+\draw[color=ududff] (5.9512396694214935,2.5282644628099167) node {$F$};
+\draw [fill=ududff] (-0.0818181818181798,4.751404958677685) circle (2.5pt);
+\draw[color=ududff] (0.03388429752066324,5.0571900826446265) node {$G$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Ex}
+
+\begin{Pp}
+Par \textbf{deux points} distincts il ne passe qu'\textbf{une seule droite}.
+\end{Pp}
+
+\begin{Ex}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.858677685950413,0.205950413223141) rectangle (4.8272727272727325,4.668760330578511);
+\draw [line width=1.pt,domain=-2.858677685950413:4.8272727272727325] plot(\x,{(--13.382241650160516-2.760330578512396*\x)/4.958677685950416});
+\draw (-0.544628099173552,2.4373553719008263) node[anchor=north west] {d};
+%\begin{scriptsize}
+\draw [fill=ududff] (-1.5198347107438006,3.5447933884297504) circle (2.5pt);
+\draw[color=ududff] (-1.4041322314049576,3.850578512396693) node {$A$};
+\draw [fill=ududff] (3.438842975206616,0.7844628099173547) circle (2.5pt);
+\draw[color=ududff] (3.5545454545454587,1.0902479338842976) node {$B$};
+\draw[color=black] (-6.5942148760330594,6.115041322314048) node {$d$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Ex}
+
+\begin{Rq}
+On dit qu'une droite est entièrement définie par deux points distincts.
+\end{Rq}
+
+\begin{Nt}
+On peut nommer une droite :
+\begin{itemize}
+\item par une lettre : $(d),\,(d'),\,(d_1)$
+\item par deux points de cette droite : $(AB),\,(AC),\,(GH)$
+\end{itemize}
+\end{Nt}
+
+\begin{Ex}
+Dans l'exemple précédent la droite peut-être nommé $(AB)$ ou $(d)$.
+\end{Ex}
+
+\begin{DefT}{Appartenance d'un point à une droite}
+Lorsqu'une droite $(d)$ passe par un point $M$, on dit que $M$ \textit{appartient à} $(d)$ et on le note $M \in (d)$. $M \notin (d)$ signifie que le point $M$ n'appartient pas à la droite $(d)$.
+\end{DefT}
+
+\begin{Rq}
+Les affirmations suivantes sont équivalentes :
+\begin{itemize}
+\item $C\in (AB)$
+\item les points $A$, $B$ et $C$ sont alignés.
+\end{itemize}
+Dans ce cas la droite $(AB)$ peut s'appeler aussi $(AC)$ ou $(BC)$.
+\end{Rq}
+
+% \begin{ExOApp}[]
+% Enoncer les points appartenant à la droite suivante :
+% \begin{center}
+% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+% \clip(1.1827938840801815,-0.9503807246093496) rectangle (6.553184844277072,2.516910526391547);
+% \draw [line width=1.pt,domain=1.1827938840801815:6.553184844277072] plot(\x,{(-6.625462741616014--2.4958677685950406*\x)/4.049586776859507});
+% %\begin{scriptsize}
+% \draw [color=qqqqff] (1.8355371900826478,-0.5047933884297513)-- ++(-4.0pt,-4.0pt) -- ++(8.0pt,8.0pt) ++(-8.0pt,0) -- ++(8.0pt,-8.0pt);
+% \draw[color=qqqqff] (1.9257848664375183,-0.18783734797945317) node {$A$};
+% \draw [color=qqqqff] (5.885123966942155,1.991074380165289)-- ++(-4.0pt,-4.0pt) -- ++(8.0pt,8.0pt) ++(-8.0pt,0) -- ++(8.0pt,-8.0pt);
+% \draw[color=qqqqff] (5.979647945615268,2.314869118908412) node {$B$};
+% \draw [color=qqqqff] (3.621098597018986,0.5956954787024403)-- ++(-4.0pt,-4.0pt) -- ++(8.0pt,8.0pt) ++(-8.0pt,0) -- ++(8.0pt,-8.0pt);
+% \draw[color=qqqqff] (3.711570209998135,0.9201316607990289) node {$C$};
+% \draw [color=qqqqff] (3.4719008264462854,-0.05851239669421425)-- ++(-4.0pt,-4.0pt) -- ++(8.0pt,8.0pt) ++(-8.0pt,0) -- ++(8.0pt,-8.0pt);
+% \draw[color=qqqqff] (3.568185985332684,0.25535025553193963) node {$D$};
+% \draw [color=qqqqff] (3.918181818181823,1.5778512396694215)-- ++(-4.0pt,-4.0pt) -- ++(8.0pt,8.0pt) ++(-8.0pt,0) -- ++(8.0pt,-8.0pt);
+% \draw[color=qqqqff] (4.011373588844077,1.8977513744271013) node {$E$};
+% \draw [color=qqqqff] (5.3892561983471134,0.52)-- ++(-4.0pt,-4.0pt) -- ++(8.0pt,8.0pt) ++(-8.0pt,0) -- ++(8.0pt,-8.0pt);
+% \draw[color=qqqqff] (5.48432062404371,0.8419220837087831) node {$F$};
+% \draw [color=qqqqff] (5.025619834710749,1.6109090909090908)-- ++(-4.0pt,-4.0pt) -- ++(8.0pt,8.0pt) ++(-8.0pt,0) -- ++(8.0pt,-8.0pt);
+% \draw[color=qqqqff] (5.119342597622562,1.9238212334571831) node {$G$};
+% \draw [color=qqqqff] (2.7214240228394804,0.041202169718336956)-- ++(-4.0pt,-4.0pt) -- ++(8.0pt,8.0pt) ++(-8.0pt,0) -- ++(8.0pt,-8.0pt);
+% \draw[color=qqqqff] (2.8121600734603063,0.3596296916522673) node {$H$};
+% \draw [color=qqqqff] (2.0338842975206646,0.9497520661157027)-- ++(-4.0pt,-4.0pt) -- ++(8.0pt,8.0pt) ++(-8.0pt,0) -- ++(8.0pt,-8.0pt);
+% \draw[color=qqqqff] (2.1213088091631334,1.272074757705135) node {$I$};
+% \draw [color=qqqqff] (4.562809917355377,0.5695867768595045)-- ++(-4.0pt,-4.0pt) -- ++(8.0pt,8.0pt) ++(-8.0pt,0) -- ++(8.0pt,-8.0pt);
+% \draw[color=qqqqff] (4.650085135081087,0.8940618017689469) node {$J$};
+% %\end{scriptsize}
+% \end{tikzpicture}
+% \end{center}
+% \end{ExOApp}
+
+\subsection{Demi-droites}
+
+\begin{Def}
+Un point sur une droite partage cette droite en deux \textbf{demi-droites}.
+
+Ce point s'appelle l'\textbf{origine} de chacune des demi-droites.
+\end{Def}
+
+\begin{Rq}
+Une demi-droite est illimitée, elle n'a pas de longueur.
+\end{Rq}
+
+\begin{Nt}
+Pour différencier une droite et une demi-droite, on utilise une notation différente :
+
+La demi-droite d'origine $A$ passant par $B$ se note $[AB)$.
+\end{Nt}
+
+\begin{Ex}
+La demi-droite $[AB)$ :
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(2.251658104313543,-1.185009455880087) rectangle (8.87340229795437,2.8558186937826124);
+\draw [line width=1.pt,domain=2.955544298125757:8.87340229795437] plot(\x,{(-4.322472350712872--1.3556326695642604*\x)/3.506396039546028});
+%\begin{scriptsize}
+\draw [fill=ududff] (2.955544298125757,-0.09007537661664596) circle (2.5pt);
+\draw[color=ududff] (3.0467888047310443,0.1510708194116119) node {$A$};
+\draw [fill=ududff] (6.461940337671785,1.2655572929476144) circle (2.5pt);
+\draw[color=ududff] (6.553184844277072,1.5067034889758724) node {$B$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Ex}
+
+% \begin{ExOApp}[]
+% Nommer les demi-droites présentent sur cette figure.
+% \begin{center}
+% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+% \clip(2.3168327518887484,-2.358153112233774) rectangle (7.374385403724655,2.0346181343350316);
+% \draw [line width=1.pt,domain=2.955544298125757:7.374385403724655] plot(\x,{(-4.322472350712872--1.3556326695642604*\x)/3.506396039546028});
+% \draw [line width=1.pt,domain=2.3168327518887484:6.461940337671785] plot(\x,{(--9.090410710854771-1.850959991135817*\x)/-2.2680777356171333});
+% \draw [line width=1.pt,domain=2.3168327518887484:4.050478377389201] plot(\x,{(--11.435217734799942-2.9849988589443814*\x)/-0.5344321101166809});
+% %\begin{scriptsize}
+% \draw [fill=ududff] (2.955544298125757,-0.09007537661664596) circle (2.5pt);
+% \draw[color=ududff] (3.0467888047310443,0.1510708194116119) node {$A$};
+% \draw [fill=ududff] (6.461940337671785,1.2655572929476144) circle (2.5pt);
+% \draw[color=ududff] (6.553184844277072,1.5067034889758724) node {$B$};
+% \draw [fill=ududff] (4.193862602054652,-0.5854026981882027) circle (2.5pt);
+% \draw[color=ududff] (4.285107108659938,-0.3442565021599448) node {$C$};
+% \draw [fill=ududff] (4.050478377389201,1.2264525044024917) circle (2.5pt);
+% \draw[color=ududff] (4.141722883994487,1.4675987004307494) node {$D$};
+% \draw [fill=ududff] (3.51604626727252,-1.7585463545418896) circle (2.5pt);
+% \draw[color=ududff] (3.607290773877807,-1.5174001585136316) node {$E$};
+% \draw [fill=qqqqff] (3.6460415689221093,-1.03247503557223) circle (2.5pt);
+% \draw[color=qqqqff] (3.881024293693668,-1.1654570616075255) node {$H$};
+% %\end{scriptsize}
+% \end{tikzpicture}
+% \end{center}
+% \end{ExOApp}
+
+\subsection{Segments}
+
+\begin{Def}
+Une portion de droite délimitée par deux points s'appelle un \textbf{segment}.
+
+Ces points s'appellent \textbf{les extrémités} du segment.
+\end{Def}
+
+\begin{Nt}
+Le segment qui a pour extrémités les points $A$ et $B$ se note $[AB]$.
+\end{Nt}
+
+\begin{Ex}
+Le segment $[AB]$ :
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(2.1734485272232975,-0.8982410065491858) rectangle (7.426525121784819,2.3213865836659324);
+\draw [line width=1.pt] (2.955544298125757,-0.09007537661664596)-- (6.461940337671785,1.2655572929476144);
+%\begin{scriptsize}
+\draw [fill=ududff] (2.955544298125757,-0.09007537661664596) circle (2.5pt);
+\draw[color=ududff] (3.0467888047310443,0.1510708194116119) node {$A$};
+\draw [fill=ududff] (6.461940337671785,1.2655572929476144) circle (2.5pt);
+\draw[color=ududff] (6.553184844277072,1.5067034889758724) node {$B$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Ex}
+
+\begin{Def}
+La \textbf{longueur} du segment $[AB]$ est la distance entre les points $A$ et $B$, elle se note $AB$.
+\end{Def}
+
+\begin{Ex}
+Dans cet exemple $AB=3,76$ :
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(2.447182047039158,-0.41594861449267007) rectangle (6.996372447788466,1.9955133457899086);
+\draw [line width=1.pt] (2.838229932490388,0.17062321368417335)-- (6.344625972036417,1.526255883248433);
+\draw [line width=1.pt,dash pattern=on 1pt off 1pt,color=zzttqq] (2.955544298125757,-0.09007537661664596)-- (6.461940337671785,1.2655572929476144);
+\begin{scriptsize}
+\draw [fill=ududff] (2.838229932490388,0.17062321368417335) circle (2.5pt);
+\draw[color=ududff] (2.9294744390956753,0.4117694097124312) node {$A$};
+\draw [fill=ududff] (6.344625972036417,1.526255883248433) circle (2.5pt);
+\draw[color=ududff] (6.435870478641703,1.7674020792766916) node {$B$};
+\draw[color=zzttqq] (4.845609077806702,0.3596296916522673) node {$3.76$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{Ex}
+
+\begin{Att}
+Il ne faut pas confondre :
+\begin{itemize}
+\item $[AB]$ qui est un segment, un ensemble de point.
+\item $AB$ qui est un nombre, la longueur du segment $[AB]$.
+\end{itemize}
+\end{Att}
+
+\begin{Def}
+On dit qu'un point $M$ est le milieu d'un segment $[AB]$ lorsque :
+\begin{itemize}
+\item $M$ appartient à $[AB]$
+\item $M$ est à la même distance de $A$ que de $B$
+\end{itemize}
+\end{Def}
+
+\begin{Rq}
+Traduit en langage mathématique :
+
+$M$ est le milieu de $[AB]$ $\Leftrightarrow M\in(AB)$ et $MA=MB$.
+\end{Rq}
+
+\begin{Ex}
+$M$ est le milieu du segment $[AB]$ car il appartient à $[AB]$ et $AM=BM=1,88$ :
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(2.525391624129404,-0.16828495370689175) rectangle (6.748708787002687,2.0476530638500723);
+\draw [line width=1.pt] (2.838229932490388,0.17062321368417335)-- (6.344625972036417,1.526255883248433);
+\draw [line width=1.pt] (2.838229932490388,0.17062321368417335)-- (4.591427952263403,0.8484395484663032);
+\draw [line width=1.pt] (4.591427952263403,0.8484395484663032)-- (6.344625972036417,1.526255883248433);
+%\begin{scriptsize}
+\draw [fill=ududff] (2.838229932490388,0.17062321368417335) circle (2.5pt);
+\draw[color=ududff] (2.9294744390956753,0.4117694097124312) node {$A$};
+\draw [fill=ududff] (6.344625972036417,1.526255883248433) circle (2.5pt);
+\draw[color=ududff] (6.435870478641703,1.7674020792766916) node {$B$};
+\draw [fill=xdxdff] (4.591427952263403,0.8484395484663032) circle (2.5pt);
+\draw[color=xdxdff] (4.689189923626209,1.0895857444945614) node {$M$};
+\draw[color=black] (3.946198941268873,0.43783926874251317) node {$1.88$};
+\draw[color=black] (5.692879496284366,1.1156556035246434) node {$1.88$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{Ex}
+
+\begin{Nt}
+Lorsque sur une figure, deux segments ont la même longueur, on code cette propriété pour en informer les observateurs :
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(2.525391624129404,-0.16828495370689175) rectangle (6.748708787002687,2.0476530638500723);
+\draw [line width=1.pt] (2.838229932490388,0.17062321368417335)-- (6.344625972036417,1.526255883248433);
+\draw [line width=1.pt] (2.838229932490388,0.17062321368417335)-- (4.591427952263403,0.8484395484663032);
+\draw [line width=1.pt] (3.656231375675976,0.5707277600286093) -- (3.712636900737872,0.42483270001274537);
+\draw [line width=1.pt] (3.7170209840159183,0.5942300621377316) -- (3.7734265090778143,0.44833500212186767);
+\draw [line width=1.pt] (4.591427952263403,0.8484395484663032)-- (6.344625972036417,1.526255883248433);
+\draw [line width=1.pt] (5.40942939544899,1.2485440948107394) -- (5.465834920510886,1.1026490347948756);
+\draw [line width=1.pt] (5.470219003788932,1.2720463969198617) -- (5.526624528850828,1.126151336903998);
+%\begin{scriptsize}
+\draw [fill=ududff] (2.838229932490388,0.17062321368417335) circle (2.5pt);
+\draw[color=ududff] (2.9294744390956753,0.4117694097124312) node {$A$};
+\draw [fill=ududff] (6.344625972036417,1.526255883248433) circle (2.5pt);
+\draw[color=ududff] (6.435870478641703,1.7674020792766916) node {$B$};
+\draw [fill=xdxdff] (4.591427952263403,0.8484395484663032) circle (2.5pt);
+\draw[color=xdxdff] (4.689189923626209,1.0895857444945614) node {$M$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{Nt}
+
+\section{Conjecture ou affirmation}
+
+\begin{Def}
+Un \textbf{conjecture} est une impression qui n'est pas démontrée, on n'est pas certain que ce soit vrai.
+\end{Def}
+
+\begin{Rq}
+Pour énoncer une conjecture on utilise des mots qui montrent que nous ne sommes pas certains que ce qui est dit est vrai :
+\begin{itemize}
+\item Le triangle \textbf{semble} rectangle.
+\item Les droites \textbf{ont l'air} parallèles.
+\item J'\textbf{ai l'impression que} le quadrilatère est un carré.
+\end{itemize}
+\end{Rq}
+
+\begin{Reg}
+Dans un exercice de mathématiques sont considérés comme vrais :
+\begin{itemize}
+\item Les données de l'énoncé.
+\item Les propriétés codées sur la figure donnée.
+\item Les résultats qui sont démontrés.
+\end{itemize}
+\end{Reg}
+
+\begin{Mt}
+Différencier conjecture et affirmation :
+\begin{center}
+\begin{tabular}{c|c}
+\textbf{Conjecture} & \textbf{Affirmation} \\\hline
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.8256198347107437,-1.628760330578512) rectangle (3.901652892561988,2.834049586776858);
+%\draw[line width=1.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.8086387280175087,0.3563276562140491) -- (0.6623110718034596,0.6749663842315579) -- (0.34367234378595085,0.5286387280175088) -- (0.49,0.21) -- cycle; 
+\draw [line width=1.pt] (-1.84,-0.86)-- (2.82,1.28);
+\draw [line width=1.pt,domain=-2.8256198347107437:3.901652892561988] plot(\x,{(-2.7328--4.66*\x)/-2.14});
+\draw [line width=1.pt] (-1.84,-0.86)-- (0.49,0.21);
+%\draw [line width=1.pt] (-0.7539396454152754,-0.25212023753208024) -- (-0.6711642230280046,-0.43236952179594923);
+%\draw [line width=1.pt] (-0.6788357769719975,-0.21763047820405126) -- (-0.5960603545847267,-0.3978797624679203);
+%\draw [line width=1.pt] (0.49,0.21)-- (2.82,1.28);
+%\draw [line width=1.pt] (1.5760603545847258,0.8178797624679205) -- (1.6588357769719946,0.6376304782040515);
+%\draw [line width=1.pt] (1.6511642230280037,0.8523695217959495) -- (1.7339396454152725,0.6721202375320805);
+\draw (-0.7595041322314033,2.0241322314049577) node[anchor=north west] {d};
+%\begin{scriptsize}
+\draw [fill=ududff] (-1.84,-0.86) circle (2.5pt);
+\draw[color=ududff] (-1.7181818181818171,-0.5461157024793389) node {$A$};
+\draw [fill=ududff] (2.82,1.28) circle (2.5pt);
+\draw[color=ududff] (2.942975206611574,1.586115702479338) node {$B$};
+\draw[color=black] (-1.7842975206611562,5.91669421487603) node {$d$};
+\draw [fill=uuuuuu] (0.49,0.21) circle (2.0pt);
+\draw [fill=xdxdff] (-1.5477169977790624,4.647271593294594) circle (2.5pt);
+%\end{scriptsize}
+\end{tikzpicture}
+ &
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.8256198347107437,-1.628760330578512) rectangle (3.901652892561988,2.834049586776858);
+\draw[line width=1.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.8086387280175087,0.3563276562140491) -- (0.6623110718034596,0.6749663842315579) -- (0.34367234378595085,0.5286387280175088) -- (0.49,0.21) -- cycle; 
+\draw [line width=1.pt] (-1.84,-0.86)-- (2.82,1.28);
+\draw [line width=1.pt,domain=-2.8256198347107437:3.901652892561988] plot(\x,{(-2.7328--4.66*\x)/-2.14});
+\draw [line width=1.pt] (-1.84,-0.86)-- (0.49,0.21);
+\draw [line width=1.pt] (-0.7539396454152754,-0.25212023753208024) -- (-0.6711642230280046,-0.43236952179594923);
+\draw [line width=1.pt] (-0.6788357769719975,-0.21763047820405126) -- (-0.5960603545847267,-0.3978797624679203);
+\draw [line width=1.pt] (0.49,0.21)-- (2.82,1.28);
+\draw [line width=1.pt] (1.5760603545847258,0.8178797624679205) -- (1.6588357769719946,0.6376304782040515);
+\draw [line width=1.pt] (1.6511642230280037,0.8523695217959495) -- (1.7339396454152725,0.6721202375320805);
+\draw (-0.7595041322314033,2.0241322314049577) node[anchor=north west] {d};
+%\begin{scriptsize}
+\draw [fill=ududff] (-1.84,-0.86) circle (2.5pt);
+\draw[color=ududff] (-1.7181818181818171,-0.5461157024793389) node {$A$};
+\draw [fill=ududff] (2.82,1.28) circle (2.5pt);
+\draw[color=ududff] (2.942975206611574,1.586115702479338) node {$B$};
+\draw[color=black] (-1.7842975206611562,5.91669421487603) node {$d$};
+\draw [fill=uuuuuu] (0.49,0.21) circle (2.0pt);
+\draw [fill=xdxdff] (-1.5477169977790624,4.647271593294594) circle (2.5pt);
+%\end{scriptsize}
+\end{tikzpicture} 
+  \\\hline
+Je pense que la droite (d) est la médiatrice du segment [AB] & La droite (d) est la médiatrice de [AB] \\
+\end{tabular}
+\end{center}
+\end{Mt}
+
+\section{Notations en géométrie}
+
+\begin{center}
+\begin{tabular}{M{5cm}|M{2cm}|M{5cm}}
+\textbf{Définition} & \textbf{Notation} & \textbf{Représentation} \\\hline\hline
+Le \textbf{point} $A$. & $A$ &
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(1.6259814875915755,0.027238989018722733) rectangle (4.206897531569693,2.178002359000482);
+%\begin{scriptsize}
+\draw [color=ududff] (2.8903696505505523,1.1221730682821638)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (2.981614157155839,1.3633192643104217) node {$A$};
+%\end{scriptsize}
+\end{tikzpicture}
+\\\hline
+La \textbf{droite} passant par $A$ et $B$. & $(AB)$ &
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(1.4043876858358786,-0.8591362180040629) rectangle (5.002028231987193,1.9564085572447856);
+\draw [line width=1.pt,domain=1.4043876858358786:5.002028231987193] plot(\x,{(--4.9896391167547565-1.2252833744138507*\x)/1.2904580219890582});
+%\begin{scriptsize}
+\draw [color=ududff] (2.8903696505505523,1.1221730682821638)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (2.981614157155839,1.3633192643104217) node {$A$};
+\draw [color=ududff] (4.1808276725396105,-0.10311030613168692)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (4.272072179144898,0.13803588989657092) node {$B$};
+%\end{scriptsize}
+\end{tikzpicture}
+\\\hline
+La \textbf{demi-droite} d'\textbf{origine} $A$ passant par $B$. & $[AB)$ &
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(1.4043876858358786,-0.8591362180040629) rectangle (5.002028231987193,1.9564085572447856);
+\draw [line width=1.pt,domain=2.8903696505505523:5.1845172451977675] plot(\x,{(--4.9896391167547565-1.2252833744138507*\x)/1.2904580219890582});
+%\begin{scriptsize}
+\draw [color=ududff] (2.8903696505505523,1.1221730682821638)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (2.981614157155839,1.3633192643104217) node {$A$};
+\draw [color=ududff] (4.1808276725396105,-0.10311030613168692)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (4.272072179144898,0.13803588989657092) node {$B$};
+%\end{scriptsize}
+\end{tikzpicture}
+\\\hline
+Le \textbf{segment} ayant pour \textbf{extrémités} les points $A$ et $B$. & $[AB]$ &
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(1.4043876858358786,-0.8591362180040629) rectangle (5.002028231987193,1.9564085572447856);
+\draw [line width=1.pt] (2.8903696505505523,1.1221730682821638)-- (4.1808276725396105,-0.10311030613168692);
+%\begin{scriptsize}
+\draw [color=ududff] (2.8903696505505523,1.1221730682821638)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (2.981614157155839,1.3633192643104217) node {$A$};
+\draw [color=ududff] (4.1808276725396105,-0.10311030613168692)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (4.272072179144898,0.13803588989657092) node {$B$};
+%\end{scriptsize}
+\end{tikzpicture}
+\\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{M{5cm}|M{2cm}|M{5cm}}
+\textbf{Définition} & \textbf{Notation} & \textbf{Représentation} \\\hline\hline
+Le point $A$ \textbf{appartient à} la droite $(d)$ & $A\in(d)$ &
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(0.6483617739635007,-0.7418218523686942) rectangle (4.910783725381907,1.8912339096695807);
+\draw [line width=1.pt,domain=0.6483617739635007:4.910783725381907] plot(\x,{(-1.2811669811193174--1.134038867808564*\x)/3.649780264211479});
+\draw (1.3261781087456326,0.7832649008910987) node[anchor=north west] {d};
+%\begin{scriptsize}
+\draw [color=ududff] (3.5516665938001113,0.7525277641175045)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (3.64639556242293,0.9983412378892746) node {$A$};
+%\end{scriptsize}
+\end{tikzpicture}
+\\\hline
+Le point $A$ \textbf{n'appartient pas à} la droite $(d)$ & $A\notin(d)$ &
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(0.6483617739635007,-0.7418218523686942) rectangle (4.910783725381907,1.8912339096695807);
+\draw [line width=1.pt,domain=0.5962220559033368:4.637050205566045] plot(\x,{(-1.2811669811193174--1.134038867808564*\x)/3.649780264211479});
+\draw (1.3261781087456326,0.7832649008910987) node[anchor=north west] {d};
+%\begin{scriptsize}
+\draw [color=ududff] (3.489976408242438,0.23579786125937818)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (3.5812209148477248,0.47694405728763606) node {$A$};
+%\end{scriptsize}
+\end{tikzpicture}
+\\\hline
+La distance entre les points $A$ et $B$ & $AB$ &
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(0.9351302232944027,-1.4457080461809064) rectangle (4.454561192355472,1.1091381387671229);
+\draw [line width=1.pt] (3.489976408242438,0.23579786125937818)-- (1.5738417695314115,-0.32470410788738335);
+\draw (2.0952389501330515,-0.2595294603121785) node[anchor=north west] {$AB=2\,cm$};
+%\begin{scriptsize}
+\draw [color=ududff] (3.489976408242438,0.23579786125937818)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (3.5812209148477248,0.47694405728763606) node {$A$};
+\draw [color=ududff] (1.5738417695314115,-0.32470410788738335)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=ududff] (1.6650862761366985,-0.08355791185912549) node {$B$};
+%\end{scriptsize}
+\end{tikzpicture}
+\\
+\end{tabular}
+\end{center}
+
+% \section{Les savoir-faire du parcours}
+
+% \begin{CpsCol}
+% \begin{itemize}
+% \item Savoir déterminer si des points sont alignés
+% \item Savoir déterminer si des points appartiennent à une droite
+% \item Savoir construire une droite.       
+% \item Savoir déterminer une demi-droite.
+% \item Savoir construire une demi-droite.   
+% \item Savoir déterminer si des points appartiennent à une demi-droit.
+% \item Savoir construire un segment.
+% \item Savoir coder des segments de même longueurs.
+% \item Savoir déterminer si un point est le milieu d'un segment.
+% \item Savoir utiliser les notations de géométrie.
+% \item Savoir interpréter les codages d'une figure.
+% \item Savoir coder une figure.
+% \item Savoir différencier conjecture et affirmation.
+% \end{itemize}
+% \end{CpsCol}
+
+% \end{document}
+
+\end{pageCours} 

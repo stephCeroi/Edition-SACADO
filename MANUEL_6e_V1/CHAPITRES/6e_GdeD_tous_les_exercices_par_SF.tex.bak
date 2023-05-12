@@ -1,0 +1,972 @@
+\input{../MISC/preambule_sacado.tex}
+\input{../MISC/environnements_sacado.tex}
+\input{../MISC/macro_sacado.tex}
+\input{../MISC/tikz_cubic_shapes}
+
+
+
+
+\begin{document}
+
+\section{Comparer, estimer mesurer des grandeurs géométriques avec des nombres entier, décimaux : longueur, aire, volume, angle, durée.}
+
+\subsection{Connaître la formule de la longueur d'un cercle et l'utiliser.}
+
+\ExoCu{Calculer.}
+
+On considère le cercle de centre O et de rayon 50 cm. Détermine mentalement une valeur approchée de son périmètre à l'unité près.
+ 
+\begin{minipage}{0.25\linewidth}
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5928853754940714cm,y=0.5928853754940714cm]
+\clip(-0.4,1.64) rectangle (4.66,6.38);
+\draw [line width=1.pt,color=ffqqqq] (2.,4.) circle (1.3257320024702317cm);
+\draw [line width=1.pt,color=qqqqff] (2.,4.)-- (4.,3.);
+\begin{scriptsize}
+\draw [color=ududff] (2.,4.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (1.66,4.49) node {$O$};
+\end{scriptsize}
+\draw [color=ududff](2.5,4.3) node[anchor=north west] {$50 ~cm$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
+
+\ligne{6}
+
+\end{minipage}
+
+\ExoCu{Calculer.}
+
+On considère le cercle de centre O et de rayon 30 cm. Détermine son périmètre.
+
+\begin{minipage}{0.25\linewidth}
+ 
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5928853754940714cm,y=0.5928853754940714cm]
+\clip(-0.4,1.64) rectangle (4.66,6.38);
+\draw [line width=1.pt,color=ffqqqq] (2.,4.) circle (1.3257320024702317cm);
+\draw [line width=1.pt,color=qqqqff] (2.,4.)-- (4.,3.);
+\begin{scriptsize}
+\draw [color=ududff] (2.,4.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (1.66,4.49) node {$O$};
+\end{scriptsize}
+\draw [color=ududff](2.5,4.3) node[anchor=north west] {$50 ~cm$};
+\end{tikzpicture}
+
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
+
+\ligne{6}
+
+\end{minipage}
+
+
+
+
+
+\ExoCd{Calculer.}
+
+On considère le cercle de centre $\Omega$ et de rayon $20$ cm. Détermine mentalement une valeur approchée de son périmètre au dixième près.
+
+\begin{minipage}{0.25\linewidth}
+ 
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5928853754940714cm,y=0.5928853754940714cm]
+\clip(-0.4,1.64) rectangle (4.66,6.38);
+\draw [line width=1.pt,color=ffqqqq] (2.,4.) circle (1.3257320024702317cm);
+\draw [line width=1.pt,color=qqqqff] (2.,4.)-- (4.,3.);
+\draw [color=ududff](2.6,4.3) node[anchor=north west] {$20 ~cm$};
+\begin{scriptsize}
+\draw [color=ududff] (2.,4.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (1.66,4.39) node {$\Omega$};
+\draw [color=ududff] (4.,3.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\end{scriptsize}
+\end{tikzpicture}
+
+
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
+
+\ligne{6}
+
+\end{minipage}
+
+
+\ExoCu{Calculer.}
+
+On considère le cercle de centre $\Phi$ et de rayon $24,6$ cm. Détermine son périmètre.
+
+\begin{minipage}{0.25\linewidth}
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5928853754940714cm,y=0.5928853754940714cm]
+\clip(-0.4,1.64) rectangle (4.66,6.38);
+\draw [line width=1.pt,color=ffqqqq] (2.,4.) circle (1.3257320024702317cm);
+\draw [line width=1.pt,color=qqqqff] (2.,4.)-- (4.,3.);
+\begin{scriptsize}
+\draw [color=ududff] (2.,4.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (1.76,4.39) node {$\Phi$};
+\draw [color=ududff] (4.,3.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
+
+\ligne{6}
+
+\end{minipage}
+
+
+
+\ExoCu{Calculer. Représenter.}
+
+On considère le cercle de centre $A$ et de diamètre $6$ cm. Détermine son périmètre.
+ 
+
+\ExoCd{Calculer. Représenter.}
+
+On considère le cercle de centre $A$ et de diamètre $15$ cm. Détermine son périmètre.
+ 
+
+\ExoCd{Calculer.}
+
+Détermine le périmètre de la figure violette composée d'arcs de cercle.
+
+\begin{minipage}{0.25\linewidth}
+
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{wwqqcc}{rgb}{0.4,0.,0.8}
+\definecolor{aqaqaq}{rgb}{0.6274509803921569,0.6274509803921569,0.6274509803921569}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7220216606498198cm,y=0.7220216606498198cm]
+\clip(-1.68,1.6) rectangle (3.86,6.86);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.4,1.78) -- (3.48,1.78) -- (3.48,6.66) -- (-1.4,6.66) -- cycle;
+\draw [line width=1.4pt,color=cqcqcq] (1.,4.) circle (1.489676098115096cm);
+\draw [line width=1.pt,color=aqaqaq] (1.,4.)-- (2.98,3.42);
+\draw [line width=1.pt,color=aqaqaq] (1.9757503004512438,3.8392166632550544) -- (1.9082823352408018,3.6088949889159623);
+\draw [line width=1.pt,color=aqaqaq] (2.0717176647591993,3.8111050110840377) -- (2.0042496995487573,3.5807833367449455);
+\draw (1.92,4.52) node[anchor=north west] {$8$};
+\draw [shift={(1.99,3.71)},line width=1.pt,color=wwqqcc]  plot[domain=2.856635303339639:5.998227956929432,variable=\t]({1.*1.0316006979447037*cos(\t r)+0.*1.0316006979447037*sin(\t r)},{0.*1.0316006979447037*cos(\t r)+1.*1.0316006979447037*sin(\t r)});
+\draw [shift={(0.01,4.29)},line width=1.pt,color=wwqqcc]  plot[domain=-0.28495735025015456:2.856635303339639,variable=\t]({1.*1.0316006979447037*cos(\t r)+0.*1.0316006979447037*sin(\t r)},{0.*1.0316006979447037*cos(\t r)+1.*1.0316006979447037*sin(\t r)});
+\draw [line width=1.pt,color=aqaqaq] (-0.98,4.58)-- (1.,4.);
+\draw [line width=1.pt,color=aqaqaq] (-0.004249699548757347,4.419216663255054) -- (-0.07171766475919808,4.188894988915963);
+\draw [line width=1.pt,color=aqaqaq] (0.09171766475919807,4.391105011084037) -- (0.02424969954875734,4.160783336744945);
+\draw [line width=1.pt,color=eqeqeq] (-1.4,1.78)-- (3.48,1.78);
+\draw [line width=1.pt,color=eqeqeq] (3.48,1.78)-- (3.48,6.66);
+\draw [line width=1.pt,color=eqeqeq] (3.48,6.66)-- (-1.4,6.66);
+\draw [line width=1.pt,color=eqeqeq] (-1.4,6.66)-- (-1.4,1.78);
+\draw [shift={(1.,4.)},line width=1.pt,color=xfqqff]  plot[domain=-0.28495735025015456:2.856635303339639,variable=\t]({1.*2.0632013958894073*cos(\t r)+0.*2.0632013958894073*sin(\t r)},{0.*2.0632013958894073*cos(\t r)+1.*2.0632013958894073*sin(\t r)});
+\begin{scriptsize}
+\draw [fill=ududff] (1.,4.) circle (2.5pt);
+\draw[color=ududff] (1.14,4.37) node {$A$};
+\draw [fill=ududff] (2.98,3.42) circle (2.0pt);
+\draw[color=ududff] (3.12,3.75) node {$B$};
+\draw[color=wwqqcc] (1.88,3.03) node {$d$};
+\draw [fill=uuuuuu] (-0.98,4.58) circle (2.0pt);
+\draw[color=uuuuuu] (-1.26,4.85) node {$C$};
+\draw[color=wwqqcc] (0.48,5.59) node {$e$};
+\draw[color=aqaqaq] (-0.02,4.17) node {$h$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
+
+\ligne{6}
+
+\end{minipage}
+
+
+
+
+\subsection{ Réaliser des conversions nécessitant deux étapes de traitement. (Transformer des heures en semaines, jours et heures ; transformer des secondes en heures, minutes, secondes).}
+
+\ExoCu{Calculer.}
+
+Convertis 
+\begin{enumerate}
+\item $120$ minutes = $\ldots\ldots$ minutes 
+\item $3$ heures en minutes = $\ldots\ldots$ minutes 
+\item $240$ secondes en minutes = $\ldots\ldots$ minutes 
+\end{enumerate}
+
+\ExoCu{Calculer.}
+
+Convertis
+
+\begin{enumerate}
+\item $21$ h  $12$ min = $\ldots\ldots$ min
+\item $12$ min  $55$ s = $\ldots\ldots$ s
+\item $17$ min  $9$ min = $\ldots\ldots$ min
+\end{enumerate}
+
+
+
+\ExoCu{Calculer.}
+
+Convertis
+
+\begin{enumerate}
+\item $92$ minutes = $\ldots$ h  $\ldots$ min.
+\item $123$ secondes = $\ldots$ min  $\ldots$ s. 
+\item $432$ minutes = $\ldots$ h  $\ldots$ min.
+\end{enumerate}
+
+
+
+\ExoCd{Calculer.}
+
+Convertis
+
+\begin{enumerate}
+\item $888$ minutes = $\ldots$ h  $\ldots$ min.
+\item $3823$ secondes = $\ldots$ h $\ldots$ min  $\ldots$ s. 
+\item $4532$ minutes = $\ldots$ h  $\ldots$ min  $\ldots$ s. 
+\end{enumerate}
+
+
+
+\ExoCd{Calculer.}
+
+Convertis
+
+\begin{enumerate}
+\item $90$ minutes en heures = $\ldots\ldots$ h.
+\item $366$ secondes en minutes = $\ldots\ldots$ h.
+\end{enumerate}
+
+
+
+
+
+
+
+\subsection{ Utiliser les multiples et sous-multiples du m² et les relations qui les lient.}
+
+
+
+
+
+
+
+\subsection{ Calculer l’aire d’un triangle à l’aide de la formule }
+
+\ExoCu{Calculer.}
+
+
+
+
+\begin{minipage}{0.7\linewidth}
+Le triangle ABC est rectangle en A et AB = $10$ cm et AC = $6$ cm. Calcule l'aire du triangle ABC. 
+
+Ta réponse : $ {A}_{ABC}=\ldots\ldots ~ \text{cm}^2$
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6309148264984229cm,y=0.6756756756756758cm]
+\clip(-2.2,1.8) rectangle (4.14,6.24);
+\draw[line width=1.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (-0.5757359312880717,3.) -- (-0.5757359312880715,3.4242640687119286) -- (-1.,3.4242640687119286) -- (-1.,3.) -- cycle; 
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.1] (-2.,2.) -- (4.,2.) -- (4.,6.) -- (-2.,6.) -- cycle;
+\draw (0.62,3.16) node[anchor=north west] {$8$};
+\draw [line width=1.pt,color=qqqqff] (-1.,5.)-- (-1.,3.);
+\draw [line width=1.pt,color=qqqqff] (-1.,3.)-- (3.,3.);
+\draw [line width=1.pt,color=qqqqff] (3.,3.)-- (-1.,5.);
+\draw (-1.52,4.52) node[anchor=north west] {$5$};
+\draw [line width=1.pt,color=eqeqeq] (-2.,2.)-- (4.,2.);
+\draw [line width=1.pt,color=eqeqeq] (4.,2.)-- (4.,6.);
+\draw [line width=1.pt,color=eqeqeq] (4.,6.)-- (-2.,6.);
+\draw [line width=1.pt,color=eqeqeq] (-2.,6.)-- (-2.,2.);
+\begin{scriptsize}
+\draw [color=ududff] (-1.,5.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (-1.1,5.39) node {$A$};
+\draw [color=ududff] (-1.,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (-1.28,2.97) node {$B$};
+\draw [color=ududff] (3.,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (3.14,3.37) node {$C$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{minipage}
+
+\ExoCd{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+
+Calcule l'aire du triangle ABC tracé ci-contre. L'unité est le centimètre.
+
+\point{3}
+
+Ta réponse : $ {A}_{ABC}=\ldots\ldots ~ \text{cm}^2$
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6309148264984229cm,y=0.6756756756756758cm]
+\clip(-1.42,1.72) rectangle (5.22,6.34);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.2,2.) -- (4.8,2.) -- (4.8,6.) -- (-1.2,6.) -- cycle;
+\draw[line width=1.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (1.5042640687119284,3.) -- (1.5042640687119284,3.424264068711928) -- (1.08,3.424264068711928) -- (1.08,3.) -- cycle; 
+\draw [line width=1.pt,color=qqqqff] (1.08,5.22)-- (-0.2,3.);
+\draw [line width=1.pt,color=qqqqff] (-0.2,3.)-- (3.8,3.);
+\draw [line width=1.pt,color=qqqqff] (3.8,3.)-- (1.08,5.22);
+\draw (1.42,3.16) node[anchor=north west] {$8$};
+\draw (1.18,4.36) node[anchor=north west] {$5$};
+\draw [line width=1.pt,color=eqeqeq] (-1.2,2.)-- (4.8,2.);
+\draw [line width=1.pt,color=eqeqeq] (4.8,2.)-- (4.8,6.);
+\draw [line width=1.pt,color=eqeqeq] (4.8,6.)-- (-1.2,6.);
+\draw [line width=1.pt,color=eqeqeq] (-1.2,6.)-- (-1.2,2.);
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=qqqqff] (1.08,5.22)-- (1.08,3.);
+\begin{scriptsize}
+\draw [color=ududff] (1.08,5.22)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (0.98,5.61) node {$A$};
+\draw [color=ududff] (-0.2,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (-0.48,2.97) node {$B$};
+\draw [color=ududff] (3.8,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (3.94,3.37) node {$C$};
+\draw [color=qqqqff] (1.08,3.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=qqqqff] (0.88,2.69) node {$J$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}
+
+
+
+
+\ExoCd{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+Calcule l'aire du triangle ABC tracé ci-contre. L'unité est le centimètre.
+
+\point{3}
+
+Ta réponse : $ {A}_{ABC}=\ldots\ldots ~ \text{cm}^2$
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+
+
+\definecolor{qqttqq}{rgb}{0.,0.2,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6309148264984229cm,y=0.6756756756756758cm]
+\clip(-2.5554521975987314,1.5529156395832784) rectangle (4.94531164623033,6.434365125249804);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.98,1.98) -- (4.02,1.98) -- (4.02,5.98) -- (-1.98,5.98) -- cycle;
+\draw[line width=1.2pt,color=qqttqq] (-0.788641601320764,2.9097800098107687) -- (-0.8466321301047103,3.3267061186804527) -- (-1.263558238974394,3.268715589896506) -- (-1.2055677101904476,2.8517894810268225) -- cycle; 
+\draw [line width=1.pt,color=qqqqff] (-1.56,5.4)-- (-0.14,3.);
+\draw [line width=1.pt,color=qqqqff] (-0.14,3.)-- (3.4372215612276618,3.4975581176130324);
+\draw [line width=1.pt,color=qqqqff] (3.4372215612276618,3.4975581176130324)-- (-1.56,5.4);
+\draw (1.4727357926057645,3.4578715364287516) node[anchor=north west] {$12$};
+\draw (-1.7418772833209761,4.251603160114366) node[anchor=north west] {$7$};
+\draw [line width=1.pt,color=eqeqeq] (-1.98,1.98)-- (4.02,1.98);
+\draw [line width=1.pt,color=eqeqeq] (4.02,1.98)-- (4.02,5.98);
+\draw [line width=1.pt,color=eqeqeq] (4.02,5.98)-- (-1.98,5.98);
+\draw [line width=1.pt,color=eqeqeq] (-1.98,5.98)-- (-1.98,1.98);
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=qqqqff] (-1.56,5.4)-- (-1.2055677101904476,2.8517894810268225);
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=qqqqff] (-1.2055677101904476,2.8517894810268225)-- (-0.14,3.);
+\begin{scriptsize}
+\draw [color=ududff] (-1.56,5.4)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (-1.6625041209524145,5.789458181005242) node {$A$};
+\draw [color=ududff] (-0.14,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (-0.015511001804763627,2.7534347204077694) node {$B$};
+\draw [color=ududff] (3.4372215612276618,3.4975581176130324)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=uuuuuu] (-1.42438463384673,2.495471942709945) node {$L$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}
+
+
+\subsection{ Calculer l'aire d'un disque à l'aide de la formule}
+
+\ExoCu{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+Calcule l'aire du carré ABCD tracé ci-contre. L'unité est le centimètre.
+\point{3}
+
+Ta réponse : $ {A}_{ABCD}=\ldots\ldots ~ \text{cm}^2$
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+
+\definecolor{yqqqyq}{rgb}{0.5019607843137255,0.,0.5019607843137255}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6cm,y=0.6cm]
+\clip(-2.257802838716626,1.6719753831361204) rectangle (4.508759253203242,6.156559056959839);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.98,1.98) -- (4.02,1.98) -- (4.02,5.98) -- (-1.98,5.98) -- cycle;
+\fill[line width=1.pt,color=yqqqyq,fill=yqqqyq,fill opacity=0.10000000149011612] (-0.6703395913453962,2.267274100900331) -- (2.762549681094888,2.2871173914924716) -- (2.742706390502748,5.720006663932755) -- (-0.6901828819375357,5.700163373340615) -- cycle;
+\draw[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (-0.2494068633122391,2.269707238056592) -- (-0.2518400004685001,2.6906399660897495) -- (-0.6727727285016571,2.688206828933488) -- (-0.6703395913453962,2.267274100900331) -- cycle; 
+\draw[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (-0.6877497447812748,5.279230645307458) -- (-0.2668170167481177,5.281663782463719) -- (-0.2692501539043786,5.702596510496876) -- (-0.6901828819375357,5.700163373340615) -- cycle; 
+\draw[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (2.760116543938627,2.7080501195256286) -- (2.3391838159054696,2.7056169823693677) -- (2.341616953061731,2.2846842543362107) -- (2.762549681094888,2.2871173914924716) -- cycle; 
+\draw[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (-0.2494068633122391,2.269707238056592) -- (-0.2518400004685001,2.6906399660897495) -- (-0.6727727285016571,2.688206828933488) -- (-0.6703395913453962,2.267274100900331) -- cycle; 
+\draw[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (-0.6877497447812748,5.279230645307458) -- (-0.2668170167481177,5.281663782463719) -- (-0.2692501539043786,5.702596510496876) -- (-0.6901828819375357,5.700163373340615) -- cycle; 
+\draw [color=xfqqff](-1.2259517279253265,4.450036066035769) node[anchor=north west] {$9$};
+\draw [line width=1.pt,color=eqeqeq] (-1.98,1.98)-- (4.02,1.98);
+\draw [line width=1.pt,color=eqeqeq] (4.02,1.98)-- (4.02,5.98);
+\draw [line width=1.pt,color=eqeqeq] (4.02,5.98)-- (-1.98,5.98);
+\draw [line width=1.pt,color=eqeqeq] (-1.98,5.98)-- (-1.98,1.98);
+\draw [line width=1.pt,color=yqqqyq] (-0.6703395913453962,2.267274100900331)-- (2.762549681094888,2.2871173914924716);
+\draw [line width=1.pt,color=yqqqyq] (0.995809452025714,2.395966752798848) -- (0.9971858422519138,2.15785124366637);
+\draw [line width=1.pt,color=yqqqyq] (1.095024247497579,2.396540248726432) -- (1.0964006377237787,2.1584247395939538);
+\draw [line width=1.pt,color=yqqqyq] (2.762549681094888,2.2871173914924716)-- (2.742706390502748,5.720006663932755);
+\draw [line width=1.pt,color=yqqqyq] (2.63385702919637,3.95326643486358) -- (2.8719725383288495,3.95464282508978);
+\draw [line width=1.pt,color=yqqqyq] (2.633283533268788,4.052481230335446) -- (2.8713990424012668,4.0538576205616454);
+\draw [line width=1.pt,color=yqqqyq] (2.742706390502748,5.720006663932755)-- (-0.6901828819375357,5.700163373340615);
+\draw [line width=1.pt,color=yqqqyq] (1.0765573471316383,5.591314012034237) -- (1.0751809569054387,5.829429521166716);
+\draw [line width=1.pt,color=yqqqyq] (0.9773425516597734,5.590740516106655) -- (0.9759661614335737,5.828856025239133);
+\draw [line width=1.pt,color=yqqqyq] (-0.6901828819375357,5.700163373340615)-- (-0.6703395913453962,2.267274100900331);
+\draw [line width=1.pt,color=yqqqyq] (-0.5614902300390178,4.034014329969506) -- (-0.7996057391714969,4.0326379397433065);
+\draw [line width=1.pt,color=yqqqyq] (-0.5609167341114354,3.93479953449764) -- (-0.7990322432439145,3.93342314427144);
+\begin{scriptsize}
+\draw [color=xfqqff] (-0.6703395913453962,2.267274100900331)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (-1.1465785655567649,2.3764121991571026) node {$A$};
+\draw [color=xfqqff] (2.762549681094888,2.2871173914924716)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (2.9014527152398717,2.654218267447068) node {$B$};
+\draw [color=xfqqff] (2.742706390502748,5.720006663932755)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (3.0205124587927137,5.6902417280445405) node {$C$};
+\draw [color=xfqqff] (-0.6901828819375357,5.700163373340615)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (-1.1465785655567649,5.749771599820961) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}
+
+
+\ExoCd{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+L'aire du carré ABCD mesure $49$ cm$^2$. Quelle est la longueur du coté ?
+\point{3}
+
+Ta réponse : $ {A}_{ABCD}=\ldots\ldots ~ \text{cm}^2$
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+
+\definecolor{yqqqyq}{rgb}{0.5019607843137255,0.,0.5019607843137255}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6cm,y=0.6cm]
+\clip(-2.257802838716626,1.6719753831361204) rectangle (4.508759253203242,6.156559056959839);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.98,1.98) -- (4.02,1.98) -- (4.02,5.98) -- (-1.98,5.98) -- cycle;
+\fill[line width=1.pt,color=yqqqyq,fill=yqqqyq,fill opacity=0.10000000149011612] (-0.6703395913453962,2.267274100900331) -- (2.762549681094888,2.2871173914924716) -- (2.742706390502748,5.720006663932755) -- (-0.6901828819375357,5.700163373340615) -- cycle;
+\draw[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (-0.2494068633122391,2.269707238056592) -- (-0.2518400004685001,2.6906399660897495) -- (-0.6727727285016571,2.688206828933488) -- (-0.6703395913453962,2.267274100900331) -- cycle; 
+\draw[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (-0.6877497447812748,5.279230645307458) -- (-0.2668170167481177,5.281663782463719) -- (-0.2692501539043786,5.702596510496876) -- (-0.6901828819375357,5.700163373340615) -- cycle; 
+\draw[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (2.760116543938627,2.7080501195256286) -- (2.3391838159054696,2.7056169823693677) -- (2.341616953061731,2.2846842543362107) -- (2.762549681094888,2.2871173914924716) -- cycle; 
+\draw[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (-0.2494068633122391,2.269707238056592) -- (-0.2518400004685001,2.6906399660897495) -- (-0.6727727285016571,2.688206828933488) -- (-0.6703395913453962,2.267274100900331) -- cycle; 
+\draw[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (-0.6877497447812748,5.279230645307458) -- (-0.2668170167481177,5.281663782463719) -- (-0.2692501539043786,5.702596510496876) -- (-0.6901828819375357,5.700163373340615) -- cycle; 
+\draw [line width=1.pt,color=eqeqeq] (-1.98,1.98)-- (4.02,1.98);
+\draw [line width=1.pt,color=eqeqeq] (4.02,1.98)-- (4.02,5.98);
+\draw [line width=1.pt,color=eqeqeq] (4.02,5.98)-- (-1.98,5.98);
+\draw [line width=1.pt,color=eqeqeq] (-1.98,5.98)-- (-1.98,1.98);
+\draw [line width=1.pt,color=yqqqyq] (-0.6703395913453962,2.267274100900331)-- (2.762549681094888,2.2871173914924716);
+\draw [line width=1.pt,color=yqqqyq] (0.995809452025714,2.395966752798848) -- (0.9971858422519138,2.15785124366637);
+\draw [line width=1.pt,color=yqqqyq] (1.095024247497579,2.396540248726432) -- (1.0964006377237787,2.1584247395939538);
+\draw [line width=1.pt,color=yqqqyq] (2.762549681094888,2.2871173914924716)-- (2.742706390502748,5.720006663932755);
+\draw [line width=1.pt,color=yqqqyq] (2.63385702919637,3.95326643486358) -- (2.8719725383288495,3.95464282508978);
+\draw [line width=1.pt,color=yqqqyq] (2.633283533268788,4.052481230335446) -- (2.8713990424012668,4.0538576205616454);
+\draw [line width=1.pt,color=yqqqyq] (2.742706390502748,5.720006663932755)-- (-0.6901828819375357,5.700163373340615);
+\draw [line width=1.pt,color=yqqqyq] (1.0765573471316383,5.591314012034237) -- (1.0751809569054387,5.829429521166716);
+\draw [line width=1.pt,color=yqqqyq] (0.9773425516597734,5.590740516106655) -- (0.9759661614335737,5.828856025239133);
+\draw [line width=1.pt,color=yqqqyq] (-0.6901828819375357,5.700163373340615)-- (-0.6703395913453962,2.267274100900331);
+\draw [line width=1.pt,color=yqqqyq] (-0.5614902300390178,4.034014329969506) -- (-0.7996057391714969,4.0326379397433065);
+\draw [line width=1.pt,color=yqqqyq] (-0.5609167341114354,3.93479953449764) -- (-0.7990322432439145,3.93342314427144);
+\begin{scriptsize}
+\draw [color=xfqqff] (-0.6703395913453962,2.267274100900331)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (-1.1465785655567649,2.3764121991571026) node {$A$};
+\draw [color=xfqqff] (2.762549681094888,2.2871173914924716)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (2.9014527152398717,2.654218267447068) node {$B$};
+\draw [color=xfqqff] (2.742706390502748,5.720006663932755)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (3.0205124587927137,5.6902417280445405) node {$C$};
+\draw [color=xfqqff] (-0.6901828819375357,5.700163373340615)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (-1.1465785655567649,5.749771599820961) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}
+
+
+
+
+\ExoCu{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+Calcule l'aire du disque de centre A et de rayon $5$ cm tracé ci-contre. 
+
+\point{3}
+
+Ta réponse : $ {A}=\ldots\ldots ~ \text{cm}^2$
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+
+ 
+\definecolor{ffqqff}{rgb}{1.,0.,1.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5999388987165869cm,y=0.5999388987165869cm]
+\clip(-2.218116257532345,1.5529156395832784) rectangle (4.449229381426821,6.295462091104821);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.99984329059214,1.860940256447158) -- (4.000156709407859,1.860940256447158) -- (4.000156709407859,5.860940256447158) -- (-1.99984329059214,5.860940256447158) -- cycle;
+\draw [color=xfqqff](1.4727357926057645,3.715834314126576) node[anchor=north west] {$5$};
+\draw [line width=1.pt,color=eqeqeq] (-1.99984329059214,1.860940256447158)-- (4.000156709407859,1.860940256447158);
+\draw [line width=1.pt,color=eqeqeq] (4.000156709407859,1.860940256447158)-- (4.000156709407859,5.860940256447158);
+\draw [line width=1.pt,color=eqeqeq] (4.000156709407859,5.860940256447158)-- (-1.99984329059214,5.860940256447158);
+\draw [line width=1.pt,color=eqeqeq] (-1.99984329059214,5.860940256447158)-- (-1.99984329059214,1.860940256447158);
+\draw [line width=1.pt,color=ffqqff] (1.1552431431315184,3.9142672200479796) circle (1.1036170176025513cm);
+\draw [line width=1.pt,color=xfqqff] (1.1552431431315184,3.9142672200479796)-- (2.8419228434634505,3.1800654681387868);
+\begin{scriptsize}
+\draw [color=ududff] (1.1552431431315184,3.9142672200479796)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=ududff] (1.1155565619472378,4.360741258371137) node {$A$};
+\draw [color=ududff] (2.8419228434634505,3.1800654681387868)-- ++(-0.5pt,0 pt) -- ++(1.0pt,0 pt) ++(-0.5pt,-0.5pt) -- ++(0 pt,1.0pt);
+\draw[color=ududff] (3.0205124587927137,3.249516985211278) node {$B$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}
+
+
+
+
+\ExoCu{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+Calcule l'aire du disque de centre A et de diamètre $19$ cm tracé ci-contre. 
+
+\point{3}
+
+Ta réponse : $ {A}=\ldots\ldots ~ \text{cm}^2$
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+
+ 
+
+\definecolor{ubqqys}{rgb}{0.29411764705882354,0.,0.5098039215686274}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqttcc}{rgb}{0.,0.2,0.8}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6338977043043182cm,y=0.6338977043043182cm]
+\clip(-2.059369932795222,1.7315052549125414) rectangle (4.250796475505417,6.176402347551979);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.9403134188157194,1.9403134188157196) -- (4.05968658118428,1.9403134188157196) -- (4.05968658118428,5.94031341881572) -- (-1.9403134188157194,5.94031341881572) -- cycle;
+\draw [color=xfqqff](0.5004145535908862,3.894423929455839) node[anchor=north west] {$19$};
+\draw [line width=1.pt,color=eqeqeq] (-1.9403134188157194,1.9403134188157196)-- (4.05968658118428,1.9403134188157196);
+\draw [line width=1.pt,color=eqeqeq] (4.05968658118428,1.9403134188157196)-- (4.05968658118428,5.94031341881572);
+\draw [line width=1.pt,color=eqeqeq] (4.05968658118428,5.94031341881572)-- (-1.9403134188157194,5.94031341881572);
+\draw [line width=1.pt,color=eqeqeq] (-1.9403134188157194,5.94031341881572)-- (-1.9403134188157194,1.9403134188157196);
+\draw [line width=1.pt,color=qqttcc] (1.1552431431315184,3.9142672200479796) circle (1.166085905391375cm);
+\draw [line width=1.pt,color=ubqqys] (2.8419228434634505,3.1800654681387868)-- (-0.539765658736616,4.629029967823699);
+\begin{scriptsize}
+\draw [color=ududff] (1.1552431431315184,3.9142672200479796)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=ududff] (1.2147730149079397,4.301211386594716) node {$A$};
+\draw [color=ududff] (2.8419228434634505,3.1800654681387868)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (3.0205124587927137,3.3288901475798394) node {$B$};
+\draw [color=xdxdff] (-0.539765658736616,4.629029967823699)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (-1.0275188220039226,4.698077198437523) node {$C$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{minipage}
+
+\ExoCd{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+
+On a tracé un cercle de centre A et deux cercles de centre D et E dont les rayons mesures $6$ cm.
+Calcule l'aire de la partie hachurée. 
+
+\point{5}
+
+Ta réponse : $ {A}=\ldots\ldots ~ \text{cm}^2$
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+
+ 
+ 
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ffffff}{rgb}{1.,1.,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqttcc}{rgb}{0.,0.2,0.8}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-1.5236010868074321,1.7513485455046818) rectangle (4.012676988399733,6.097029185183418);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.2976493588821056,1.9007835470392984) -- (3.7023506411178944,1.9007835470392984) -- (3.7023506411178944,5.900783547039298) -- (-1.2976493588821056,5.900783547039298) -- cycle;
+\draw [line width=1.pt,color=qqttcc,fill=qqttcc,pattern=north east lines,pattern color=qqttcc] (1.1552431431315184,3.9142672200479796) circle (1.8395490273483728cm);
+\draw [line width=1.pt,color=ffffff,fill=ffffff,fill opacity=1.0] (1.9985829932974846,3.547166344093383) circle (0.9197745136741862cm);
+\draw [line width=1.pt,color=ffffff,fill=ffffff,fill opacity=1.0] (0.30773874219745123,4.271648593935839) circle (0.9197745136741864cm);
+\draw [line width=1.pt,color=eqeqeq] (-1.2976493588821056,1.9007835470392984)-- (3.7023506411178944,1.9007835470392984);
+\draw [line width=1.pt,color=eqeqeq] (3.7023506411178944,1.9007835470392984)-- (3.7023506411178944,5.900783547039298);
+\draw [line width=1.pt,color=eqeqeq] (3.7023506411178944,5.900783547039298)-- (-1.2976493588821056,5.900783547039298);
+\draw [line width=1.pt,color=eqeqeq] (-1.2976493588821056,5.900783547039298)-- (-1.2976493588821056,1.9007835470392984);
+\draw [line width=1.pt,color=xfqqff] (-0.539765658736616,4.629029967823699)-- (0.30773874219745123,4.271648593935839);
+\draw [line width=1.pt,color=xfqqff] (-0.06975240831324084,4.56004405649052) -- (-0.16227450822592343,4.3406345052690165);
+\draw [line width=1.pt,color=xfqqff] (0.30773874219745123,4.271648593935839)-- (1.1552431431315184,3.9142672200479796);
+\draw [line width=1.pt,color=xfqqff] (0.7777519926208263,4.202662682602661) -- (0.6852298927081436,3.983253131381157);
+\draw [line width=1.pt,color=xfqqff] (1.1552431431315184,3.9142672200479796)-- (1.9985829932974846,3.547166344093383);
+\draw [line width=1.pt,color=xfqqff] (1.6244322541664842,3.8398824795279385) -- (1.5293938822625186,3.6215510846134245);
+\draw [line width=1.pt,color=xfqqff] (1.9985829932974846,3.547166344093383)-- (2.8419228434634505,3.1800654681387868);
+\draw [line width=1.pt,color=xfqqff] (2.46777210433245,3.472781603573342) -- (2.3727337324284847,3.254450208658828);
+\draw [line width=1.pt,color=qqqqff] (1.3378001612497492,2.9073607448090693)-- (1.9985829932974846,3.547166344093383);
+\draw [color=xfqqff](1.611638826750747,3.4975581176130324) node[anchor=north west] {$6 ~\text{cm}$};
+\begin{scriptsize}
+\draw [color=ududff] (1.1552431431315184,3.9142672200479796)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=ududff] (1.4925790831979049,4.142465061857593) node {$A$};
+\draw [color=ududff] (2.8419228434634505,3.1800654681387868)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (3.0205124587927137,3.3288901475798394) node {$B$};
+\draw [color=xdxdff] (-0.539765658736616,4.629029967823699)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (-0.8489292066746593,4.817136941990365) node {$C$};
+\draw [color=uuuuuu] (0.30773874219745123,4.271648593935839)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=uuuuuu] (0.440884681814465,4.598860745476821) node {$D$};
+\draw [color=uuuuuu] (1.9985829932974846,3.547166344093383)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=uuuuuu] (2.1275643821463968,3.983718737120471) node {$E$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}
+
+
+
+
+\ExoCd{Calculer.}
+
+
+Calcule l'aire d'un disque de périmètre $5 \pi$ cm. 
+
+\point{3}
+
+Ta réponse : $ {A}_{ABC}=\ldots\ldots ~ \text{cm}^2$
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+\subsection{ Déterminer la mesure de l’aire d’une surface}
+
+
+
+\ExoCu{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+
+Détermine l'aire de la surface violette.
+
+\point{5}
+
+Ta réponse : $\mathcal{A}_{violette}=\ldots\ldots ~ \text{cm}^2$
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+
+\definecolor{ffffff}{rgb}{1.,1.,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8726383981332172cm,y=0.8726383981332172cm]
+\clip(-2.317332710493047,1.7910351266889624) rectangle (2.2664674162913796,6.25577550992054);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.15000000596046448] (-2.,2.) -- (2.,2.) -- (2.,6.) -- (-2.,6.) -- cycle;
+\fill[line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=0.10000000149011612] (-1.4045413432545897,2.5450801691902956) -- (1.532265664382186,2.5450801691902956) -- (1.5322656643821861,5.481887176827071) -- (-1.4045413432545895,5.481887176827072) -- cycle;
+\draw [line width=1.pt,color=ffffff,fill=ffffff,fill opacity=1.0] (0.06386216056379823,4.013483673008683) circle (1.2813852813852815cm);
+\draw [color=qqqqff](-0.9283023690432208,4.072229997745804) node[anchor=north west] {$10$ cm};
+\draw [line width=1.pt,color=eqeqeq] (-2.,2.)-- (2.,2.);
+\draw [line width=1.pt,color=eqeqeq] (2.,2.)-- (2.,6.);
+\draw [line width=1.pt,color=eqeqeq] (2.,6.)-- (-2.,6.);
+\draw [line width=1.pt,color=eqeqeq] (-2.,6.)-- (-2.,2.);
+\draw [line width=1.pt,color=xfqqff] (-1.4045413432545897,2.5450801691902956)-- (1.532265664382186,2.5450801691902956);
+\draw [line width=1.pt,color=xfqqff] (1.532265664382186,2.5450801691902956)-- (1.5322656643821861,5.481887176827071);
+\draw [line width=1.pt,color=xfqqff] (1.5322656643821861,5.481887176827071)-- (-1.4045413432545895,5.481887176827072);
+\draw [line width=1.pt,color=xfqqff] (-1.4045413432545895,5.481887176827072)-- (-1.4045413432545897,2.5450801691902956);
+\draw [line width=1.pt,color=qqqqff] (-1.4045413432545897,4.013483673008683)-- (0.06386216056379823,4.013483673008683);
+\begin{scriptsize}
+\draw [color=xfqqff] (-1.4045413432545897,2.5450801691902956)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (-1.583130958583853,2.3764121991571026) node {$A$};
+\draw [color=xfqqff] (1.532265664382186,2.5450801691902956)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (1.6314821173428875,2.316882327380682) node {$B$};
+\draw [color=xfqqff] (1.5322656643821861,5.481887176827071)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (1.6711686985271683,5.769614890413101) node {$C$};
+\draw [color=xfqqff] (-1.4045413432545895,5.481887176827072)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (-1.6625041209524145,5.6703984374524) node {$D$};
+\draw [color=uuuuuu] (0.06386216056379823,4.013483673008683)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=uuuuuu] (0.14323532293235935,4.2416815148182945) node {$O$};
+\draw[color=ffffff] (-0.6108097195689749,5.035413138503909) node {$c$};
+\end{scriptsize}
+\end{tikzpicture}
+ 
+
+\end{minipage}
+
+
+\ExoCd{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+
+Calcule la valeur exacte de l'aire de la surface coloré en bleu. 
+
+\point{5}
+
+Ta réponse : $\mathcal{A}_{bleue}=\ldots\ldots ~ \text{cm}^2$
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+
+
+\definecolor{ffffff}{rgb}{1.,1.,1.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7999388987165869cm,y=0.7999388987165869cm]
+\clip(-2.3768625822694682,1.6124455113596994) rectangle (4.290483056689697,5.243767689721383);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.15000000596046448] (-1.99984329059214,1.860940256447158) -- (4.000156709407859,1.860940256447158) -- (4.,5.) -- (-2.,5.) -- cycle;
+
+\draw [line width=1.pt,color=qqqqff] (-1.0076755314117822,2.5847667503745764)-- (2.9609825870162925,2.624453331558857);
+\draw [shift={(0.9766535278022551,2.6046100409667168)},line width=1.pt,color=ududff,fill=ududff,pattern=north east lines,pattern color=ududff]  plot[domain=0.009999666686665253:3.151592320276458,variable=\t]({1.*1.9844282731867107*cos(\t r)+0.*1.9844282731867107*sin(\t r)},{0.*1.9844282731867107*cos(\t r)+1.*1.9844282731867107*sin(\t r)});
+\draw [line width=1.pt,color=qqqqff] (0.9964968183943955,2.6046100409667168)-- (0.9971104641719741,4.588932868829451);
+\draw [shift={(0.9968036412831849,3.596771454898084)},line width=1.pt,color=ffffff,fill=ffffff,fill opacity=1.0]  plot[domain=-1.571105573732643:1.57048707985715,variable=\t]({1.*0.9921614613733869*cos(\t r)+0.*0.9921614613733869*sin(\t r)},{0.*0.9921614613733869*cos(\t r)+1.*0.9921614613733869*sin(\t r)});
+\draw [shift={(0.9968036412831849,3.596771454898084)},line width=1.pt,color=ffffff,fill=ffffff,fill opacity=1.0]  plot[domain=1.5704870798571502:4.712079733446943,variable=\t]({1.*0.9921614613733865*cos(\t r)+0.*0.9921614613733865*sin(\t r)},{0.*0.9921614613733865*cos(\t r)+1.*0.9921614613733865*sin(\t r)});
+\draw [line width=1.pt,color=eqeqeq] (-1.99984329059214,1.860940256447158)-- (4.000156709407859,1.860940256447158);
+\draw [line width=1.pt,color=eqeqeq] (4.000156709407859,1.860940256447158)-- (4.,5.);
+\draw [line width=1.pt,color=eqeqeq] (4.,5.)-- (-2.,5.);
+\draw [line width=1.pt,color=eqeqeq] (-2.,5.)-- (-1.99984329059214,1.860940256447158);
+\draw [color=qqqqff](1.0163401089865358,4.033326963600822) node[anchor=north west] {$10$ cm};
+\end{tikzpicture}
+ 
+
+\end{minipage}
+
+
+
+
+
+
+\ExoCd{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+
+Calcule la valeur exacte de l'aire de la surface violette. 
+
+\point{5}
+
+Ta réponse : $\mathcal{A}_{violette}=\ldots\ldots ~ \text{cm}^2$
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+
+
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{wwqqcc}{rgb}{0.4,0.,0.8}
+\definecolor{aqaqaq}{rgb}{0.6274509803921569,0.6274509803921569,0.6274509803921569}
+\definecolor{ffffff}{rgb}{1.,1.,1.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.743494423791822cm,y=0.743494423791822cm]
+\clip(-1.76,1.66) rectangle (3.62,6.8);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.4,1.78) -- (3.48,1.78) -- (3.48,6.66) -- (-1.4,6.66) -- cycle;
+\draw [line width=1.4pt,color=cqcqcq] (1.,4.) circle (1.5339787330032777cm);
+\draw [line width=1.pt,color=ffffff] (1.,4.)-- (2.98,3.42);
+\draw [line width=1.pt,color=ffffff] (1.9757503004512433,3.8392166632550544) -- (1.9082823352408016,3.6088949889159623);
+\draw [line width=1.pt,color=ffffff] (2.071717664759199,3.8111050110840377) -- (2.004249699548757,3.5807833367449455);
+\draw (-0.46,4.18) node[anchor=north west] {$8$ cm};
+\draw [shift={(1.99,3.71)},line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=1.0]  plot[domain=2.856635303339639:5.998227956929432,variable=\t]({1.*1.0316006979447037*cos(\t r)+0.*1.0316006979447037*sin(\t r)},{0.*1.0316006979447037*cos(\t r)+1.*1.0316006979447037*sin(\t r)});
+\draw [shift={(0.01,4.29)},line width=1.pt,color=ffffff,fill=ffffff,fill opacity=1.0]  plot[domain=-0.28495735025015456:2.856635303339639,variable=\t]({1.*1.0316006979447037*cos(\t r)+0.*1.0316006979447037*sin(\t r)},{0.*1.0316006979447037*cos(\t r)+1.*1.0316006979447037*sin(\t r)});
+\draw [line width=1.pt,color=aqaqaq] (-0.98,4.58)-- (1.,4.);
+\draw [line width=1.pt,color=aqaqaq] (-0.004249699548757347,4.419216663255054) -- (-0.07171766475919807,4.188894988915963);
+\draw [line width=1.pt,color=aqaqaq] (0.09171766475919806,4.391105011084037) -- (0.024249699548757338,4.160783336744945);
+\draw [shift={(1.,4.)},line width=1.pt,color=wwqqcc]  plot[domain=-0.28495735025015456:2.856635303339639,variable=\t]({1.*2.0632013958894073*cos(\t r)+0.*2.0632013958894073*sin(\t r)},{0.*2.0632013958894073*cos(\t r)+1.*2.0632013958894073*sin(\t r)});
+\draw [line width=1.pt,color=eqeqeq] (-1.4,1.78)-- (3.48,1.78);
+\draw [line width=1.pt,color=eqeqeq] (3.48,1.78)-- (3.48,6.66);
+\draw [line width=1.pt,color=eqeqeq] (3.48,6.66)-- (-1.4,6.66);
+\draw [line width=1.pt,color=eqeqeq] (-1.4,6.66)-- (-1.4,1.78);
+\draw [shift={(1.,4.)},line width=1.pt,color=xfqqff,fill=xfqqff,fill opacity=1.0]  plot[domain=-0.28495735025015456:2.856635303339639,variable=\t]({1.*2.0632013958894073*cos(\t r)+0.*2.0632013958894073*sin(\t r)},{0.*2.0632013958894073*cos(\t r)+1.*2.0632013958894073*sin(\t r)});
+\end{tikzpicture}
+
+\end{minipage}
+
+
+\subsection{ Calculer le volume d'un cube ou d'un pavé droit en utilisant une formule}
+
+
+
+\ExoCu{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+
+ABCDEFGH est un cube de coté 8 cm.  
+
+Calcule le volume du cube ABCDEFGH en cm$^3$ et en dm$^3$.
+
+\point{4}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+
+
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{qqttcc}{rgb}{0.,0.2,0.8}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7462686567164183cm,y=0.7462686567164183cm]
+\clip(-2.06,1.64) rectangle (3.58,7.1);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.76,1.86) -- (3.12,1.86) -- (3.12,6.74) -- (-1.76,6.74) -- cycle;
+\draw [color=qqttcc](-0.12,3.24) node[anchor=north west] {$8$};
+\draw [line width=1.pt,color=eqeqeq] (-1.76,1.86)-- (3.12,1.86);
+\draw [line width=1.pt,color=eqeqeq] (3.12,1.86)-- (3.12,6.74);
+\draw [line width=1.pt,color=eqeqeq] (3.12,6.74)-- (-1.76,6.74);
+\draw [line width=1.pt,color=eqeqeq] (-1.76,6.74)-- (-1.76,1.86);
+\draw [line width=1.pt,color=eqeqeq] (-1.,3.)-- (1.,3.);
+\draw [line width=1.pt,color=qqqqff] (-1.,3.)-- (1.,3.);
+\draw [line width=1.pt,color=qqqqff] (1.,3.)-- (1.,5.);
+\draw [line width=1.pt,color=qqqqff] (1.,5.)-- (-1.,5.);
+\draw [line width=1.pt,color=qqqqff] (-1.,5.)-- (-1.,3.);
+\draw [line width=1.pt,color=qqqqff] (-1.,5.)-- (0.32,5.64);
+\draw [line width=1.pt,color=qqqqff] (0.32,5.64)-- (2.32,5.64);
+\draw [line width=1.pt,color=qqqqff] (2.32,5.64)-- (2.32,3.64);
+\draw [line width=1.pt,color=qqqqff] (2.32,3.64)-- (1.,3.);
+\draw [line width=1.pt,color=qqqqff] (1.,5.)-- (2.32,5.64);
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=qqqqff] (-1.,3.)-- (0.32,3.64);
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=qqqqff] (0.32,3.64)-- (0.32,5.64);
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=qqqqff] (0.32,3.64)-- (2.32,3.64);
+\begin{scriptsize}
+\draw [color=qqqqff] (-1.,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (-0.9,2.83) node {$A$};
+\draw [color=qqqqff] (1.,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (0.98,2.75) node {$B$};
+\draw [color=qqqqff] (1.,5.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (1.14,5.37) node {$E$};
+\draw [color=qqqqff] (-1.,5.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (-0.86,5.37) node {$H$};
+\draw [color=ududff] (2.32,3.64)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (2.46,4.01) node {$C$};
+\draw [color=qqqqff] (2.32,5.64)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (2.46,6.01) node {$F$};
+\draw [color=qqqqff] (0.32,5.64)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (0.46,6.01) node {$G$};
+\draw [color=qqqqff] (0.32,3.64)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (0.46,4.01) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}
+
+
+\ExoCu{Représenter. Chercher.}
+
+Un pavé droit a pour longueur $15$ cm, pour largeur $10$ cm et pour hauteur $20$ cm.
+
+Calcule le volume du pavé droit en cm$^3$ et en dm$^3$.
+
+\point{3}
+
+
+\ExoCu{Calculer.}
+
+\begin{minipage}{0.7\linewidth}
+
+ABEH est un carré de coté de longueur 6 cm.  
+
+Calcule le volume du cube ABCDEFGH en cm$^3$.
+
+\point{4}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{eqeqeq}{rgb}{0.8784313725490196,0.8784313725490196,0.8784313725490196}
+\definecolor{qqttcc}{rgb}{0.,0.2,0.8}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7462686567164183cm,y=0.7462686567164183cm]
+\clip(-2.,1.52) rectangle (3.36,6.94);
+\fill[line width=1.pt,color=eqeqeq,fill=eqeqeq,fill opacity=0.10000000149011612] (-1.76,1.86) -- (3.12,1.86) -- (3.12,6.74) -- (-1.76,6.74) -- cycle;
+\draw [color=qqttcc](-0.72,3.02) node[anchor=north west] {$6\text{ cm}$};
+\draw [line width=1.pt,color=eqeqeq] (-1.76,1.86)-- (3.12,1.86);
+\draw [line width=1.pt,color=eqeqeq] (3.12,1.86)-- (3.12,6.74);
+\draw [line width=1.pt,color=eqeqeq] (3.12,6.74)-- (-1.76,6.74);
+\draw [line width=1.pt,color=eqeqeq] (-1.76,6.74)-- (-1.76,1.86);
+\draw [line width=1.pt,color=eqeqeq] (-1.14,2.9)-- (0.58,2.9);
+\draw [line width=1.pt,color=qqqqff] (-1.14,2.9)-- (0.58,2.9);
+\draw [line width=1.pt,color=qqqqff] (0.58,2.9)-- (0.58,4.62);
+\draw [line width=1.pt,color=qqqqff] (0.58,4.62)-- (-1.14,4.62);
+\draw [line width=1.pt,color=qqqqff] (-1.14,4.62)-- (-1.14,2.9);
+\draw [line width=1.pt,color=qqqqff] (-1.14,4.62)-- (0.94,5.56);
+\draw [line width=1.pt,color=qqqqff] (0.94,5.56)-- (2.66,5.56);
+\draw [line width=1.pt,color=qqqqff] (2.66,5.56)-- (2.66,3.84);
+\draw [line width=1.pt,color=qqqqff] (2.66,3.84)-- (0.58,2.9);
+\draw [line width=1.pt,color=qqqqff] (0.58,4.62)-- (2.66,5.56);
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=qqqqff] (-1.14,2.9)-- (0.94,3.84);
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=qqqqff] (0.94,3.84)-- (0.94,5.56);
+\draw [line width=1.pt,dash pattern=on 2pt off 2pt,color=qqqqff] (0.94,3.84)-- (2.66,3.84);
+\draw [color=qqttcc](1.42,3.48) node[anchor=north west] {$11 \text{ cm}$};
+\begin{scriptsize}
+\draw [color=qqqqff] (-1.14,2.9)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (-1.04,2.73) node {$A$};
+\draw [color=qqqqff] (0.58,2.9)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (0.56,2.65) node {$B$};
+\draw [color=qqqqff] (0.58,4.62)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (0.72,4.99) node {$E$};
+\draw [color=qqqqff] (-1.14,4.62)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (-1.,4.99) node {$H$};
+\draw [color=ududff] (2.66,3.84)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (2.8,4.21) node {$C$};
+\draw [color=qqqqff] (2.66,5.56)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (2.8,5.93) node {$F$};
+\draw [color=qqqqff] (0.94,5.56)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (1.08,5.93) node {$G$};
+\draw [color=qqqqff] (0.94,3.84)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (1.08,4.21) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}
+
+
+
+
+
+
+\subsection{ Utiliser les unités de volume }
+\subsection{ Relier les unités de volume et de contenance (1 L = 1 dm3)}
+\subsection{ Estimer si un angle est droit, aigu ou obtus}
+\subsection{ Utiliser un rapporteur pour mesurer un angle en degrés}
+\subsection{ Construire à l'aide du rapporteur, un angle de mesure donnée en degrés}
+\subsection{ Comparer, estimer, mesurer des longueurs et des périmètres}
+
+
+
+\end{document}

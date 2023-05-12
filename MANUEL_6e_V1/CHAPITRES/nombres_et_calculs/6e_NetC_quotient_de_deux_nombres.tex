@@ -1,0 +1,196 @@
+% \documentclass[a4paper,dvipsnames]{article}
+
+% \addtolength{\hoffset}{-2.25cm}
+% \addtolength{\textwidth}{4.5cm}
+% \addtolength{\voffset}{-3.25cm}
+% \addtolength{\textheight}{5cm}
+% \setlength{\parskip}{0pt}
+% \setlength{\parindent}{0in}
+
+% \input{MISC/preambule_SACADO}
+% \input{MISC/styleCours_SACADO}
+
+% \usepackage{hyperref}
+
+% \begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+% \fancyhead[C]{}
+% \hrule\medskip % Upper rule
+% \begin{minipage}{0.295\textwidth} 
+% \raggedright
+% Classe \myClasse \hfill\\
+% \myDiscipline \hfill\\
+% \myParcours \hfill\\
+% \end{minipage}
+% \begin{minipage}{0.4\textwidth} 
+% \centering 
+% \scshape\huge
+% \textcolor{sacado_purple}{\myTitle} \\ 
+% \normalsize 
+%%\mySubTitle \\ 
+% \end{minipage}
+% \begin{minipage}{0.295\textwidth} 
+% \raggedleft
+% \href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%%\myAnnee \hfill\\
+% \end{minipage}
+% \medskip \hrule
+% \bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\chapter{Quotient de deux nombres}
+{https://sacado.xyz/qcm/parcours_show_course/0/117126}
+
+\begin{pageCours} 
+
+\section{Calcul mental}
+
+\subsection{Diviser un nombre par 10, 100 ou 1000}
+
+\begin{Mt}
+\begin{itemize}
+\item Si on divise un nombre par 10 ; 100 ou 1000, le chiffre des unités prend une valeur 10 ; 100 ou 1000 fois plus petite et devient le chiffre des dixièmes ; centièmes ou millièmes.
+\item Diviser un nombre par 10 , 100 ou 1 000 revient à le multiplier par 0,1 , 0,01 ou 0, 001.
+\end{itemize}
+\end{Mt}
+
+\begin{Ex}
+\[4\textcolor{red}{4},66\div10=4,\textcolor{red}{4}66\]
+Le chiffre des \textbf{unités} est \textcolor{red}{$4$}, divisé par $10$ devient le chiffre des \textbf{dixièmes}.
+\end{Ex}
+
+\subsection{Diviser un nombre par 4}
+
+\begin{Mt}
+Pour diviser un nombre décimal par 4, on calcule la moitié de ce nombre puis encore la moitié du résultat.
+\end{Mt}
+
+\begin{Ex}
+\[46,8\div4=11,7\]
+On fait : $46,8\div2=23,4$ puis $23,4\div2=11,7$
+\end{Ex}
+
+\subsection{Diviser un nombre par 5}
+
+\begin{Mt}
+Pour diviser un nombre décimal par 5, on le divise d'abord par 10 puis on multiplie le résultat par 2.
+\end{Mt}
+
+\begin{Ex}
+\[445,5\div5=89,1\]
+On fait : $445,5\div10=44,55$ puis $44,55\times2=89,1$
+\end{Ex}
+
+\section{Définition du quotient de deux nombres}
+
+\begin{Def}
+Le quotient d'un nombre $a$ par un nombre $b$ ( différent de zéro ) est le nombre $q$ qui vérifie :
+\[a=q\times b\]
+\end{Def}
+
+\begin{Ex}
+Le quotient de $44$ par $5$ est le nombre qui multiplié par $5$ donne $44$.\\
+$44\div5=8,8$ donc $5\times8,8=44$ donc le quotient de $44$ par $5$ est $8,8$.
+\end{Ex}
+
+\section{Poser la division décimale de deux nombres entiers}
+
+\begin{Def}
+Effectuer la \textbf{division décimale} de deux nombres, c'est trouver la valeur exacte ou approchée du \textbf{quotient} de ces deux nombres.
+\end{Def}
+
+\begin{Ex}
+Posons la division décimale pour trouver le \textbf{quotient} de $461$ par $8$ :
+\[\opdiv[displayintermediary=all]{461}{8}\]
+\end{Ex}
+
+\begin{Rq}
+Il n'est \textbf{pas touours possibles} d'obtenir un reste égal à zéro. Dans ce cas on peut donner une valeur approchée du quotient :
+\begin{Ex}
+Posons la division décimale pour trouver le \textbf{quotient} de $281$ par $3$ :
+\[\opdiv[displayintermediary=all,maxdivstep=5]{281}{3}\]
+\begin{itemize}
+\item $281 \div 3\approx93,6$ au dixième près.
+\item $281 \div 3\approx93,66$ au centième près.
+\end{itemize}
+\end{Ex}
+\end{Rq}
+
+
+
+\section{Poser la division décimale d'un nombre décimal par un nombre entier}
+
+\begin{Mt}
+Dès que l’on abaisse le chiffre des dixièmes du dividende, on place la virgule dans le quotient.
+
+\[\opdiv[displayintermediary=all,shiftdecimalsep=divisor]{45}{8}\]
+\end{Mt}
+
+\section{Quotients égaux}
+
+\begin{Pp}
+On ne \textbf{change pas} le \textbf{quotient} de deux nombres si on les multiplie ou on les divise par un même nombre.
+\end{Pp}
+
+\begin{Ex}
+Le quotient de $4$ par $6$ est le même que celui de $20$ par $30$.
+En effet, le quotient de $4$ par $6$ est le même que celui de $4\times5$ par $6\times5$ donc le même que celui de $20$ par $30$. On peut écrire :
+\[4\div6=20\div30\]
+\end{Ex}
+
+\section{Poser la division décimale de deux nombres décimaux}
+
+\begin{Mt}
+Pour effectuer la \textbf{division décimale} d'un \textbf{nombre décimal} par un \textbf{nombre décimal}, on multiplie les deux nombres par 10 , 100 ou 1 000 , pour se ramener à la division décimale d'un \textbf{nombre décimal} par un \textbf{nombre entier}.
+
+\begin{Ex}
+Calculons le quotient de $33,74$ par $0,5$.
+
+D'après la propriété des \textbf{quotients égaux} on sait que le quotient de deux nombres ne change pas si on les multiplie ou on les divise pas le même nombre. Alors, le quotient de $33,74$ par $0,5$ est égal au quotient de $337,4$ par $5$ :
+
+\[\opdiv[displayintermediary=all,shiftdecimalsep=divisor]{337,4}{5}\]
+\end{Ex}
+\end{Mt}
+
+\section{Écriture fractionnaire d'un quotient}
+
+\begin{Def}
+L'écriture fractionnaire du quotient d'un nombre $a$ par un nombre $b$ (différent de zéro) est la fraction $\frac{a}{b}$.
+
+On a : $a\div b=\frac{a}{b}$ et $b\times\frac{a}{b}=a$.
+\end{Def}
+
+\begin{Rq}
+On peut toujours exprimer un quotient sous sa forme fractionnaire, mais un quotient n'a pas toujours une écriture décimale.
+\end{Rq}
+
+\begin{Ex}
+Déterminons le nombre par lequel il faut multiplier $9$ pour obtenir $16$ :
+
+$9\times\frac{16}{9}=16$, le quotient de $16$ par $9$ est $\frac{16}{9}$.
+
+$\frac{16}{9}\approx1,77778$ mais $\frac{16}{9}$ n'a pas d'écriture décimale.
+\end{Ex}
+
+% \section{Les savoir-faire du parcours}
+
+% \begin{CpsCol}
+% \begin{itemize}
+% \item Savoir diviser un nombre par 10 , 100 ou 1 000.
+% \item Savoir déterminer le quotient de deux nombres.
+% \item Savoir utiliser le quotient de deux nombres.
+% \item Savoir exprimer le quotient de deux nombres.
+% \item Savoir poser une division décimale.
+% \end{itemize}
+% \end{CpsCol}
+
+% \end{document}
+
+\end{pageCours} 

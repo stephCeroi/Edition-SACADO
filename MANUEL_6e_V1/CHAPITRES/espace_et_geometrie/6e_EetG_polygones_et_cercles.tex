@@ -1,0 +1,454 @@
+%\documentclass[a4paper,dvipsnames]{article}
+%
+%\addtolength{\hoffset}{-2.25cm}
+%\addtolength{\textwidth}{4.5cm}
+%\addtolength{\voffset}{-3.25cm}
+%\addtolength{\textheight}{5cm}
+%\setlength{\parskip}{0pt}
+%\setlength{\parindent}{0in}
+%
+%\input{MISC/preambule_SACADO}
+%\input{MISC/styleCours_SACADO}
+%
+%\usepackage{hyperref}
+%
+%\begin{document}
+%
+%%-------------------------------
+%%	TITLE SECTION
+%%-------------------------------
+%
+%\fancyhead[C]{}
+%\hrule\medskip % Upper rule
+%\begin{minipage}{0.295\textwidth} 
+%\raggedright
+%Classe \myClasse \hfill\\
+%\myDiscipline \hfill\\
+%\myParcours \hfill\\
+%\end{minipage}
+%\begin{minipage}{0.4\textwidth} 
+%\centering 
+%\scshape\huge
+%\textcolor{sacado_purple}{\myTitle} \\ 
+%\normalsize 
+%%\mySubTitle \\ 
+%\end{minipage}
+%\begin{minipage}{0.295\textwidth} 
+%\raggedleft
+%\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%%\myAnnee \hfill\\
+%\end{minipage}
+%\medskip \hrule
+%\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\chapter{Polygones et cercles}
+{https://sacado.xyz/qcm/parcours_show_course/0/117131}
+
+\begin{pageCours}
+
+\section{Polygones}
+
+\mini{.48\linewidth}{\begin{Def}
+Un \textbf{polygone} est une \textbf{figure} géométrique \textbf{fermée} dont les \textbf{côtés} sont des \textbf{segments} de droites.
+\end{Def}}
+{.48\linewidth}{
+\begin{Ill}
+Le polygone $ABCDE$ a $5$ sommets et $5$ côtés.
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.8cm,y=.8cm]
+\clip(-2,-2) rectangle (5,4);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-1.063311344808564,1.6089901265883788) -- (1.4923210474495676,2.7760130109143466) -- (2.1127635935469176,0.9442302557697901) -- (4.2695400633138965,0.) -- (2.467302191316832,-1.330725746587158) -- cycle;
+\draw [line width=2.pt,color=zzttqq] (-1.063311344808564,1.6089901265883788)-- (1.4923210474495676,2.7760130109143466);
+\draw [line width=2.pt,color=zzttqq] (1.4923210474495676,2.7760130109143466)-- (2.1127635935469176,0.9442302557697901);
+\draw [line width=2.pt,color=zzttqq] (2.1127635935469176,0.9442302557697901)-- (4.2695400633138965,0.);
+\draw [line width=2.pt,color=zzttqq] (4.2695400633138965,0.)-- (2.467302191316832,-1.330725746587158);
+\draw [line width=2.pt,color=zzttqq] (2.467302191316832,-1.330725746587158)-- (-1.063311344808564,1.6089901265883788);
+\draw[color=ududff] (-0.9599042537923393,1.8822802957026874) node {$A$};
+\draw[color=ududff] (1.5957281384657929,3.049303180028654) node {$B$};
+\draw[color=ududff] (2.2161706845631426,1.2175204248840987) node {$C$};
+\draw[color=xdxdff] (4.372947154330122,0.272084164164328) node {$D$};
+\draw[color=ududff] (2.570709282333057,-1.0574355774728494) node {$E$};
+\end{tikzpicture}
+\end{Ill}}
+
+\mini{.58\linewidth}{\begin{DefT}{Polygones réguliers}
+Un polygone est dit \textbf{régulier} lorsque tous ses côtés sont de \textbf{même longueur} et tous ses \textbf{angles} ont la \textbf{même} mesure.
+\end{DefT}
+\begin{Rq}
+Il existe un \textbf{cercle} qui passe par \textbf{tous les sommets} d'un polygone régulier.
+\end{Rq}}
+{.38\linewidth}{\begin{Illqr}{Appliquette poly régulier}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (2.,0.) -- (-1.,1.7320508075688772) -- (-1.,-1.7320508075688774) -- cycle;
+\draw [shift={(2.,0.)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (150.:0.5323591126142355) arc (150.:210.:0.5323591126142355) -- cycle;
+\draw [shift={(-1.,-1.7320508075688774)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (30.:0.5323591126142355) arc (30.:90.:0.5323591126142355) -- cycle;
+\draw [shift={(-1.,1.7320508075688772)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (-90.:0.5323591126142355) arc (-90.:-30.:0.5323591126142355) -- cycle;
+\draw [line width=2.pt] (0.,0.) circle (1.6cm);
+\draw [line width=2.pt,color=zzttqq] (2.,0.)-- (-1.,1.7320508075688772);
+\draw [line width=2.pt,color=zzttqq] (-1.,1.7320508075688772)-- (-1.,-1.7320508075688774);
+\draw [line width=2.pt,color=zzttqq] (-1.,-1.7320508075688774)-- (2.,0.);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (2.,0.)-- (0.,0.);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (-1.,-1.7320508075688774)-- (0.,0.);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (-1.,1.7320508075688772)-- (0.,0.);
+\draw[color=xdxdff] (2.073110611619774,0.19681571921764635) node {$A$};
+\draw[color=ududff] (-0.9293947835245144,1.9323064263400531) node {$B$};
+\draw[color=qqqqff] (-0.9293947835245144,-1.5386749879047603) node {$C$};
+\end{tikzpicture}
+\end{center}
+\end{Illqr}}
+
+\section{Triangles}
+
+\mini{.38\linewidth}{\begin{Def}
+Un \textbf{triangle} est un polygone ayant \textbf{3 côtés}.
+
+Un triangle a 3 sommets.
+\end{Def}}
+{.68\linewidth}{
+\begin{Ill}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-2.270939747312388,-0.20245361524303004) -- (-0.23732793712600822,2.12927929800732) -- (2.,-2.) -- cycle;
+\draw [shift={(2.,-2.)},line width=2.pt,color=violet,fill=violet,fill opacity=0.10000000149011612] (0,0) -- (118.44974022885543:0.47912320135281194) arc (118.44974022885543:157.1748246920994:0.47912320135281194) -- cycle;
+\draw [shift={(-2.270939747312388,-0.20245361524303004)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (-22.82517530790062:0.47912320135281194) arc (-22.82517530790062:48.9068163841034:0.47912320135281194) -- cycle;
+\draw [shift={(-0.23732793712600822,2.12927929800732)},line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-131.09318361589658:0.47912320135281194) arc (-131.09318361589658:-61.55025977114456:0.47912320135281194) -- cycle;
+\draw [line width=2.pt,color=zzttqq] (-2.270939747312388,-0.20245361524303004)-- (-0.23732793712600822,2.12927929800732);
+\draw [line width=2.pt,color=zzttqq] (-0.23732793712600822,2.12927929800732)-- (2.,-2.);
+\draw [line width=2.pt,color=zzttqq] (2.,-2.)-- (-2.270939747312388,-0.20245361524303004);
+\draw[color=ududff] (-2.196409471546395,-0.005480743575763017) node {$A$};
+\draw[color=ududff] (-0.16279766136001528,2.326252169674587) node {$B$};
+\draw[color=ududff] (2.073110611619774,-1.8048545442118777) node {$C$};
+\end{tikzpicture}
+\end{Ill}}
+
+\subsection{Triangles particuliers}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Triangle équilatéral}
+Un triangle \textbf{équilatéral} est un triangle dont les trois côtés ont la même mesure.
+\end{DefT}
+\begin{Pp}
+Dans un triangle équilatéral les \textbf{trois} angles ont la même mesure : 60°.
+\end{Pp}
+}{.48\linewidth}{
+\begin{Ill}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-1.3552820736159028,-1.5972344902923261) -- (2.04116906486292,-0.5112219005592864) -- (-0.5975709959150303,1.8871847732094331) -- cycle;
+\draw [shift={(2.04116906486292,-0.5112219005592864)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (137.73163652585896:0.5323591126142355) arc (137.73163652585896:197.731636525859:0.5323591126142355) -- cycle;
+\draw [shift={(-1.3552820736159028,-1.5972344902923261)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (17.731636525858974:0.5323591126142355) arc (17.731636525858974:77.73163652585897:0.5323591126142355) -- cycle;
+\draw [shift={(-0.5975709959150303,1.8871847732094331)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (-102.26836347414104:0.5323591126142355) arc (-102.26836347414104:-42.26836347414104:0.5323591126142355) -- cycle;
+\draw [line width=2.pt,color=zzttqq] (-1.3552820736159028,-1.5972344902923261)-- (2.04116906486292,-0.5112219005592864);
+\draw [line width=2.pt,color=zzttqq] (2.04116906486292,-0.5112219005592864)-- (-0.5975709959150303,1.8871847732094331);
+\draw [line width=2.pt,color=zzttqq] (-0.5975709959150303,1.8871847732094331)-- (-1.3552820736159028,-1.5972344902923261);
+\draw[color=ududff] (-1.674697541184444,-1.3896144363727745) node {$A$};
+\draw[color=ududff] (2.115699340628913,-0.31424902889201944) node {$B$};
+\draw[color=qqqqff] (-0.5248018579376954,2.081366977872039) node {$C$};
+\draw[color=xdxdff] (1.1787473024278583,-0.38877930465801236) node {$60\textrm{\degre}$};
+\end{tikzpicture}
+\end{Ill}
+}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Triangle isocèle}
+Un triangle \textbf{isocèle} est un triangle dont deux côtés ont la même mesure.
+\end{DefT}
+\begin{Pp}
+Un triangle isocèle posséde \textbf{deux} angles de \textbf{même mesure}.
+\end{Pp}
+}{.48\linewidth}{
+\begin{Ill}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-1.5256369896524582,-1.171347200200938) -- (1.9027556955832186,-2.35318443020454) -- (1.479155321328516,1.9816251921209547) -- cycle;
+\draw [shift={(1.9027556955832186,-2.35318443020454)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (95.58125955604939:0.31941546756854133) arc (95.58125955604939:160.97987786167886:0.31941546756854133) -- cycle;
+\draw [shift={(-1.5256369896524582,-1.171347200200938)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (-19.02012213832115:0.31941546756854133) arc (-19.02012213832115:46.378496167308306:0.31941546756854133) -- cycle;
+\draw [shift={(1.479155321328516,1.9816251921209547)},line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (-133.6215038326917:0.31941546756854133) arc (-133.6215038326917:-84.41874044395061:0.31941546756854133) -- cycle;
+\draw [line width=2.pt,color=zzttqq] (-1.5256369896524582,-1.171347200200938)-- (1.9027556955832186,-2.35318443020454);
+\draw [line width=2.pt,color=zzttqq] (1.9027556955832186,-2.35318443020454)-- (1.479155321328516,1.9816251921209547);
+\draw [line width=2.pt,color=zzttqq] (1.479155321328516,1.9816251921209547)-- (-1.5256369896524582,-1.171347200200938);
+\draw[color=ududff] (-1.8450524572209994,-0.9637271462813863) node {$A$};
+\draw[color=ududff] (1.9772859713492117,-2.156211558537273) node {$B$};
+\draw[color=xdxdff] (1.551398681257823,2.177191618142601) node {$C$};
+\end{tikzpicture}
+\end{Ill}
+}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Triangle rectangle}
+Un triangle \textbf{rectangle} est un triangle dont un \textbf{angle est droit} (sa mesure est de 90°).
+\end{DefT}
+\begin{Def}
+Dans un triangle  rectangle, le côté opposé à l'angle droite s'appelle l' \textbf{hypoténuse} du triangle.
+\end{Def}
+}{.48\linewidth}{
+\begin{Ill}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-1.5256369896524582,-1.171347200200938) -- (2.2328183454040444,-0.6496352698389876) -- (1.8498215704497243,2.109504761974792) -- cycle;
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (2.1862372898057174,-0.3140615427734898) -- (1.85066356274022,-0.3606425983718165) -- (1.8972446183385467,-0.6962163254373143) -- (2.2328183454040444,-0.6496352698389876) -- cycle; 
+\draw [line width=2.pt,color=zzttqq] (-1.5256369896524582,-1.171347200200938)-- (2.2328183454040444,-0.6496352698389876);
+\draw [line width=2.pt,color=zzttqq] (2.2328183454040444,-0.6496352698389876)-- (1.8498215704497243,2.109504761974792);
+\draw [line width=2.pt,color=zzttqq] (1.8498215704497243,2.109504761974792)-- (-1.5256369896524582,-1.171347200200938);
+\draw[color=ududff] (-1.8450524572209994,-0.9637271462813863) node {$A$};
+\draw[color=ududff] (2.307348621170038,-0.45266239817172055) node {$B$};
+\draw[color=xdxdff] (1.9240500600877881,2.3049578051700172) node {$C$};
+\draw[color=xdxdff] (1.6046345925192467,-0.2610131176305959) node {$90\textrm{\degre}$};
+\end{tikzpicture}
+\end{Ill}
+}
+
+\subsection{Construire un triangle}
+
+\begin{Mt}
+\qr{•}{Construire un triangle dont on connait la longueur des trois côtés}
+\end{Mt}
+
+\section{Quadrilatères}
+
+\mini{.38\linewidth}{\begin{Def}
+Un quadrilatère est un polygone qui a 4 côtés.
+
+$ABCD$ est un quadrilatère.
+
+Les segments $[AC]$ et $[BD]$ sont les diagonales de $ABCD$.
+\end{Def}}
+{.68\linewidth}{
+\begin{Illqr}{Quadrilatères avec une particularité}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-1.5575785364093122,-1.171347200200938) -- (-1.0997496995610698,1.4265652693565296) -- (2.3818788969360307,1.8205110126910635) -- (2.296701438917753,-0.22374797974759944) -- cycle;
+\draw [line width=2.pt,color=zzttqq] (-1.5575785364093122,-1.171347200200938)-- (-1.0997496995610698,1.4265652693565296);
+\draw [line width=2.pt,color=zzttqq] (-1.0997496995610698,1.4265652693565296)-- (2.3818788969360307,1.8205110126910635);
+\draw [line width=2.pt,color=zzttqq] (2.3818788969360307,1.8205110126910635)-- (2.296701438917753,-0.22374797974759944);
+\draw [line width=2.pt,color=zzttqq] (2.296701438917753,-0.22374797974759944)-- (-1.5575785364093122,-1.171347200200938);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (-1.5575785364093122,-1.171347200200938)-- (2.3818788969360307,1.8205110126910635);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (-1.0997496995610698,1.4265652693565296)-- (2.296701438917753,-0.22374797974759944);
+\draw[color=ududff] (-1.4830482606433193,-0.974374328533671) node {$A$};
+\draw[color=ududff] (-1.0252194237950767,1.6235381410237966) node {$B$};
+\draw[color=ududff] (2.4564091727020236,2.0174838843583305) node {$C$};
+\draw[color=ududff] (2.371231714683746,-0.026775108080332427) node {$D$};
+\end{tikzpicture}
+\end{Illqr}
+\begin{flushright}
+Scan le QR code pour les particularités qu'on peut trouver sur les quadrilatères.
+\end{flushright}
+}
+
+\subsection{Quadrilatères particuliers}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Losange}
+Un \textbf{losange} est un quadrilatère qui a ses \textbf{quatre côtés de même longueur}.
+\end{DefT}
+\begin{Pp}
+Les \textbf{diagonales} d'un losange sont \textbf{perpendiculaires}.
+\end{Pp}
+}{.48\linewidth}{
+\begin{Ill}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-1.,1.) -- (2.,2.) -- (1.,-1.) -- (-2.,-2.) -- cycle;
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0.15970773378427064,0.1597077337842706) -- (0.,0.3194154675685413) -- (-0.1597077337842706,0.15970773378427064) -- (0.,0.) -- cycle; 
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (-1.,1.)-- (1.,-1.);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (-2.,-2.)-- (2.,2.);
+\draw [line width=2.pt,color=zzttqq] (-1.,1.)-- (2.,2.);
+\draw [line width=2.pt,color=zzttqq] (0.45454638211680987,1.5521874871992187) -- (0.4949495980129798,1.430977839510711);
+\draw [line width=2.pt,color=zzttqq] (0.5050504019870204,1.569022160489289) -- (0.5454536178831904,1.4478125128007813);
+\draw [line width=2.pt,color=zzttqq] (2.,2.)-- (1.,-1.);
+\draw [line width=2.pt,color=zzttqq] (1.5690221604892896,0.5050504019870207) -- (1.4478125128007822,0.5454536178831906);
+\draw [line width=2.pt,color=zzttqq] (1.5521874871992185,0.454546382116809) -- (1.4309778395107111,0.49494959801297883);
+\draw [line width=2.pt,color=zzttqq] (1.,-1.)-- (-2.,-2.);
+\draw [line width=2.pt,color=zzttqq] (-0.45454638211680987,-1.5521874871992187) -- (-0.4949495980129798,-1.4309778395107113);
+\draw [line width=2.pt,color=zzttqq] (-0.5050504019870204,-1.5690221604892898) -- (-0.5454536178831904,-1.4478125128007824);
+\draw [line width=2.pt,color=zzttqq] (-2.,-2.)-- (-1.,1.);
+\draw [line width=2.pt,color=zzttqq] (-1.5690221604892896,-0.5050504019870207) -- (-1.4478125128007822,-0.5454536178831906);
+\draw [line width=2.pt,color=zzttqq] (-1.5521874871992185,-0.454546382116809) -- (-1.4309778395107111,-0.49494959801297883);
+\draw[color=ududff] (-0.9293947835245144,1.1976508509324084) node {$A$};
+\draw[color=ududff] (1.0722754799050112,-0.8040194124971158) node {$B$};
+\draw[color=ududff] (-1.930229915239277,-1.8048545442118777) node {$C$};
+\draw[color=ududff] (2.073110611619774,2.1984859826471705) node {$D$};
+\end{tikzpicture}
+\end{Ill}
+}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Rectangle}
+Un \textbf{rectangle} est un quadrilatère qui possède \textbf{quatre angles droits}.
+\end{DefT}
+\begin{Pp}
+Les \textbf{diagonales} d'un rectangle ont la \textbf{même longueur}.
+\end{Pp}
+}{.48\linewidth}{
+\begin{Ill}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-2.,1.) -- (2.,1.) -- (2.,-1.) -- (-2.,-1.) -- cycle;
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (1.7741391568664127,1.) -- (1.7741391568664127,0.7741391568664128) -- (2.,0.7741391568664128) -- (2.,1.) -- cycle; 
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (2.,-0.7741391568664128) -- (1.7741391568664127,-0.7741391568664127) -- (1.7741391568664127,-1.) -- (2.,-1.) -- cycle; 
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (-1.7741391568664127,-1.) -- (-1.7741391568664127,-0.7741391568664128) -- (-2.,-0.7741391568664128) -- (-2.,-1.) -- cycle; 
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (-2.,0.7741391568664128) -- (-1.7741391568664127,0.7741391568664128) -- (-1.7741391568664127,1.) -- (-2.,1.) -- cycle; 
+\draw [line width=2.pt,color=zzttqq] (-2.,1.)-- (2.,1.);
+\draw [line width=2.pt,color=zzttqq] (2.,1.)-- (2.,-1.);
+\draw [line width=2.pt,color=zzttqq] (2.,-1.)-- (-2.,-1.);
+\draw [line width=2.pt,color=zzttqq] (-2.,-1.)-- (-2.,1.);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (-2.,1.)-- (2.,-1.);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (-2.,-1.)-- (2.,1.);
+\draw[color=ududff] (-1.930229915239277,1.1976508509324084) node {$A$};
+\draw[color=ududff] (2.073110611619774,1.1976508509324084) node {$B$};
+\draw[color=ududff] (2.073110611619774,-0.8040194124971158) node {$C$};
+\draw[color=ududff] (-1.930229915239277,-0.8040194124971158) node {$D$};
+\end{tikzpicture}
+\end{Ill}
+}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Carré}
+Un \textbf{carré} est un quadrilatère qui possède \textbf{quatre angles droits} et qui a ses \textbf{quatre côtés de même longueur}.
+\end{DefT}
+\begin{Pp}
+Les \textbf{diagonales} d'un carré sont \textbf{perpendiculaires} et de \textbf{même longueur}.
+\end{Pp}
+}{.48\linewidth}{
+\begin{Ill}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-0.39703567091027886,-2.0444161448882836) -- (2.0092275181060657,-0.18115925073846062) -- (0.14597062395624327,2.2251039382778837) -- (-2.2602925650601016,0.3618470441280611) -- cycle;
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (-0.09213762139290618,2.0407280845783213) -- (0.0922382323066562,1.8026198392291717) -- (0.33034647765580566,1.9869956929287342) -- (0.14597062395624327,2.2251039382778837) -- cycle; 
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (1.8248516644065031,0.05694899461068881) -- (1.5867434190573537,-0.12742685908887366) -- (1.7711192727569163,-0.36553510443802306) -- (2.0092275181060657,-0.18115925073846062) -- cycle; 
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (-0.15892742556112943,-1.860040291188721) -- (-0.34330327926069193,-1.6219320458395716) -- (-0.5814115246098414,-1.8063078995391342) -- (-0.39703567091027886,-2.0444161448882836) -- cycle; 
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (-2.0759167113605392,0.1237387987789117) -- (-1.8378084660113896,0.30811465247847414) -- (-2.022184319710952,0.5462228978276236) -- (-2.2602925650601016,0.3618470441280611) -- cycle; 
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (-0.09228730228532271,0.3517425966530293) -- (-0.35368600224355173,0.3849878178447245) -- (-0.3869312234352469,0.12358911788649543) -- (-0.12553252347701782,0.09034389669480025) -- cycle; 
+\draw [line width=2.pt,color=zzttqq] (-0.39703567091027886,-2.0444161448882836)-- (2.0092275181060657,-0.18115925073846062);
+\draw [line width=2.pt,color=zzttqq] (0.7459379042986362,-1.0785739883852803) -- (0.8241619541614476,-1.1795947613509685);
+\draw [line width=2.pt,color=zzttqq] (0.7880298930343392,-1.0459806342757758) -- (0.8662539428971506,-1.147001407241464);
+\draw [line width=2.pt,color=zzttqq] (2.0092275181060657,-0.18115925073846062)-- (0.14597062395624327,2.2251039382778837);
+\draw [line width=2.pt,color=zzttqq] (1.0433853616030633,0.9618143244704542) -- (1.1444061345687517,1.0400383743332657);
+\draw [line width=2.pt,color=zzttqq] (1.0107920074935577,1.0039063132061572) -- (1.1118127804592461,1.0821303630689687);
+\draw [line width=2.pt,color=zzttqq] (0.14597062395624327,2.2251039382778837)-- (-2.2602925650601016,0.3618470441280611);
+\draw [line width=2.pt,color=zzttqq] (-0.9970029512526712,1.2592617817748812) -- (-1.0752270011154828,1.3602825547405692);
+\draw [line width=2.pt,color=zzttqq] (-1.0390949399883742,1.2266684276653763) -- (-1.1173189898511857,1.3276892006310645);
+\draw [line width=2.pt,color=zzttqq] (-2.2602925650601016,0.3618470441280611)-- (-0.39703567091027886,-2.0444161448882836);
+\draw [line width=2.pt,color=zzttqq] (-1.2944504085570996,-0.7811265310808538) -- (-1.395471181522788,-0.8593505809436652);
+\draw [line width=2.pt,color=zzttqq] (-1.261857054447594,-0.8232185198165568) -- (-1.3628778274132824,-0.9014425696793682);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (-2.2602925650601016,0.3618470441280611)-- (2.0092275181060657,-0.18115925073846062);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (0.14597062395624327,2.2251039382778837)-- (-0.39703567091027886,-2.0444161448882836);
+\draw[color=ududff] (-0.32250539514428594,-1.8474432732210166) node {$A$};
+\draw[color=ududff] (2.0837577938720586,0.01581362092880638) node {$B$};
+\draw[color=qqqqff] (0.2205008997222343,2.4220768099451493) node {$C$};
+\draw[color=qqqqff] (-2.18576228929411,0.5588199157953262) node {$D$};
+\end{tikzpicture}
+\end{Ill}
+}
+
+\begin{Rqs}
+\begin{itemize}
+\item Un carré est un \textbf{rectangle particulier}, c'est un rectangle qui a ses 4 côtés de même longueur.
+\item Un carré est un \textbf{losange particulier}, c'est un losange qui a  4 angles droits.
+\end{itemize}
+\end{Rqs}
+
+\section{Cercles}
+
+\mini{.58\linewidth}{\begin{Def}
+Le cercle de centre $O$ et de rayon $r$ est l'ensemble des points situés à une distance de $O$ égale à $r$.
+\end{Def}
+\begin{Nt}
+\[M\in C(O;r)\Leftrightarrow OM=r\]
+\end{Nt}
+}
+{.38\linewidth}{
+\begin{Illqr}{Animation cercle}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\draw [line width=2.pt] (0.,0.) circle (2);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt] (0.,0.)-- (2.,0.);
+\draw [color=qqqqff] (0.,0.)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=xdxdff] (0.07144034819024836,.3) node {$O$};
+\draw [color=qqqqff] (2.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt);% ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (2.2,0.19681571921764635) node {$M$};
+\draw[color=black] (-0.9719835125336532,1.5809494120146579) node {$C$};
+\draw[color=black] (1.0296867508958722,-0.06936383708947125) node {$r$};
+\end{tikzpicture}
+\end{Illqr}
+\begin{flushright}
+Scan le QR code pour voir l'animation.
+\end{flushright}
+}
+
+\begin{Voc}
+\mini{.58\linewidth}{
+\begin{itemize}
+    \item Les points $A$, $B$, $C$, $D$ et $M$ appartiennent au cercle $\mathcal{C}$ de centre $O$.
+    \item Le segment $[OM]$ est aussi appelé le \textcolor{qqqqff}{\textbf{rayon}} du cercle $\mathcal{C}$.
+    \item Le segment $[CD]$ est une \textcolor{xdxdff}{\textbf{corde}} du cercle $\mathcal{C}$.
+    \item La corde $[AB]$ est un \textcolor{qqwuqq}{\textbf{diamètre}} du cercle $\mathcal{C}$ car le centre O est le \textbf{milieu} de la corde.
+    \item Le diamètre $[AB]$ est le double du rayon $[OM]$ : $AB=2\times OM$
+    \item La portion colorée en rouge du cercle $\mathcal{C}$ est l'\textcolor{ffqqqq}{\textbf{arc de cercle}} \t{CD}
+\end{itemize}
+}{.38\linewidth}{
+\begin{Ill}
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\clip(-3,-3) rectangle (3,3);
+\draw [line width=2.pt] (0.,0.) circle (2);
+\draw [line width=2.pt,color=qqqqff] (0.,0.)-- (2.,0.);
+\draw [line width=2.pt,color=qqwuqq] (-1.5844956505091685,1.2203989239250939)-- (0.,0.);
+\draw [line width=2.pt,color=qqwuqq] (-0.7743544134251696,0.677052966073721) -- (-0.8523172720063054,0.5758304822601795);
+\draw [line width=2.pt,color=qqwuqq] (-0.7321783785028615,0.6445684416649147) -- (-0.8101412370839972,0.5433459578513732);
+\draw [line width=2.pt,color=qqwuqq] (0.,0.)-- (1.5844956505091685,-1.2203989239250939);
+\draw [line width=2.pt,color=qqwuqq] (0.8101412370839972,-0.5433459578513732) -- (0.7321783785028615,-0.6445684416649147);
+\draw [line width=2.pt,color=qqwuqq] (0.8523172720063054,-0.5758304822601795) -- (0.7743544134251696,-0.677052966073721);
+\draw [line width=2.pt,color=xdxdff] (-1.9584617055069056,0.4054969149857767)-- (-0.7472818915155957,-1.855146833706937);
+\draw [shift={(0.,0.)},line width=2.pt,color=ffqqqq]  plot[domain=2.9374287928705773:4.32945781065304,variable=\t]({1.*2.*cos(\t r)+0.*2.*sin(\t r)},{0.*2.*cos(\t r)+1.*2.*sin(\t r)});
+\draw [color=qqqqff] (0.,0.)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=qqqqff] (0.07144034819024836,0.19681571921764635) node {$O$};
+\draw [color=qqqqff] (2.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (2.073110611619774,0.19681571921764635) node {$M$};
+\draw[color=qqqqff] (1.0296867508958722,-0.06936383708947125) node {$r$};
+\draw [color=qqqqff] (-1.5844956505091685,1.2203989239250939)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=qqqqff] (-1.5149898074001733,1.4212416782303874) node {$A$};
+\draw [color=qqqqff] (1.5844956505091685,-1.2203989239250939)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=qqqqff] (1.6578705037806702,-1.0276102397950946) node {$B$};
+\draw [color=qqqqff] (-1.9584617055069056,0.4054969149857767)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (-1.8876411862301383,0.6014086448044651) node {$C$};
+\draw [color=qqqqff] (-0.7472818915155957,-1.855146833706937)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (-0.6738624094696813,-1.655793992679892) node {$D$};
+\end{tikzpicture}
+\end{Ill}
+}
+\end{Voc}
+
+%\section{Les savoir-faire du parcours}
+%
+%\begin{CpsCol}
+%\begin{itemize}
+%\item Savoir décrire un polygone.
+%\item Savoir reconnaître un polygone.
+%\item Savoir coder une figure.                  
+%\item Savoir reconnaître un polygone.
+%\item Savoir construire un polygone.
+%\item Savoir construire un cercle.
+%\item Savoir comparer des distances avec un cercle.
+%\end{itemize}
+%\end{CpsCol}
+%
+%
+%\end{document}
+
+\end{pageCours}
