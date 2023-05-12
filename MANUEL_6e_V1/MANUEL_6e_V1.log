@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.28)  12 MAY 2023 19:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.28)  12 MAY 2023 19:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1907,11 +1907,11 @@ Non-PDF special ignored!
  Files/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 (CHAPITRES/gestion_de_donnees/6e_GdD_organisation_et_gestion_de_donnees.tex
 LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
-(Font)              scaled to size 23.63593pt on input line 16.
-<FIG//sacadoA1.png, id=40, 40.15pt x 40.15pt>
+(Font)              scaled to size 23.63593pt on input line 17.
+<FIG//sacadoA1.png, id=44, 40.15pt x 40.15pt>
 File: FIG//sacadoA1.png Graphic file (type png)
 <use FIG//sacadoA1.png>
-Package pdftex.def Info: FIG//sacadoA1.png  used on input line 16.
+Package pdftex.def Info: FIG//sacadoA1.png  used on input line 17.
 (pdftex.def)             Requested size: 24.09016pt x 24.09016pt.
 
 
@@ -1923,18 +1923,18 @@ n version 0-M.>
 w_course/0/117141" in version 4-M.>
 
 LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
-(Font)              scaled to size 9.49997pt on input line 16.
+(Font)              scaled to size 9.49997pt on input line 17.
 LaTeX Font Info:    Font shape `T1/ua1/m/sl' in size <10> not available
-(Font)              Font shape `T1/ua1/m/it' tried instead on input line 16.
+(Font)              Font shape `T1/ua1/m/it' tried instead on input line 17.
 LaTeX Font Info:    Font shape `T1/ua1/m/it' will be
-(Font)              scaled to size 9.49997pt on input line 16.
+(Font)              scaled to size 9.49997pt on input line 17.
 [2 <./FIG//sacadoA1.png>]
 LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
-(Font)              scaled to size 16.41594pt on input line 20.
+(Font)              scaled to size 16.41594pt on input line 21.
 LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 67.
+(Font)              scaled to size 23.63593pt on input line 66.
 LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 67.
+(Font)              scaled to size 13.67995pt on input line 66.
 
 
 Package fancyhdr Warning: \headheight is too small (20.6pt): 
@@ -1946,7 +1946,7 @@ Package fancyhdr Warning: \headheight is too small (20.6pt):
 
 [3]
 LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 71.
+(Font)              scaled to size 13.67995pt on input line 70.
 
 
 Package fancyhdr Warning: \headheight is too small (20.6pt): 
@@ -1958,31 +1958,6 @@ Package fancyhdr Warning: \headheight is too small (20.6pt):
 
 [4]
 
-! LaTeX Error: \begin{leftbar} on input line 101 ended by \end{PageCours}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.144 \end{PageCours}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.144 \end{PageCours}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-)
-
 Package fancyhdr Warning: \headheight is too small (20.6pt): 
 (fancyhdr)                Make it at least 25.73422pt, for example:
 (fancyhdr)                \setlength{\headheight}{25.73422pt}.
@@ -1992,41 +1967,53 @@ Package fancyhdr Warning: \headheight is too small (20.6pt):
 
 [5]
 
-! LaTeX Error: \begin{pageCours} on input line 101 ended by \end{document}.
+Package fancyhdr Warning: \headheight is too small (20.6pt): 
+(fancyhdr)                Make it at least 41.3064pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.3064pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-20.70639pt}.
+
+[6] [7]
+
+! LaTeX Error: \begin{document} ended by \end{pageAD}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308 \end{document}
-                    
+l.239 \end{pageAD}
+                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-(MANUEL_6e_V1.aux)
-Package rerunfilecheck Info: File `MANUEL_6e_V1.out' has not changed.
-(rerunfilecheck)             Checksum: A6B6183F609F7A5794B4B055C2883941;85.
- )
-(\end occurred inside a group at level 1)
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.239 \end{pageAD}
+                  
+Things are pretty mixed up, but I think the worst is over.
 
-### semi simple group (level 1) entered at line 101 (\begingroup)
-### bottom level 
+) (MANUEL_6e_V1.aux)
+Package rerunfilecheck Info: File `MANUEL_6e_V1.out' has not changed.
+(rerunfilecheck)             Checksum: 7378AF9CA2E8FBE412AF1045E7C497FE;239.
+ ) 
 Here is how much of TeX's memory you used:
- 58423 strings out of 476331
- 1282216 string characters out of 5797571
- 2004713 words of memory out of 5000000
- 77829 multiletter control sequences out of 15000+600000
+ 58843 strings out of 476331
+ 1294198 string characters out of 5797571
+ 2004865 words of memory out of 5000000
+ 78243 multiletter control sequences out of 15000+600000
  594429 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,14n,108p,769b,1089s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progr
-am Files/MiKTeX/fonts/type1/urw/arial/ua1b8a.pfb><C:/Program Files/MiKTeX/fonts
-/type1/urw/arial/ua1r8a.pfb>
-Output written on MANUEL_6e_V1.pdf (5 pages, 63790 bytes).
+ 109i,20n,108p,769b,2706s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
+X/fonts/type1/urw/arial/ua1b8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/ari
+al/ua1r8a.pfb>
+Output written on MANUEL_6e_V1.pdf (7 pages, 72220 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

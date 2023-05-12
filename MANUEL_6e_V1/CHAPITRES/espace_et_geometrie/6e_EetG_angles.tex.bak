@@ -1,50 +1,3 @@
-%\documentclass[a4paper,dvipsnames]{article}
-%
-%\addtolength{\hoffset}{-2.25cm}
-%\addtolength{\textwidth}{4.5cm}
-%\addtolength{\voffset}{-3.25cm}
-%\addtolength{\textheight}{5cm}
-%\setlength{\parskip}{0pt}
-%\setlength{\parindent}{0in}
-%
-%\input{MISC/preambule_SACADO}
-%\input{MISC/styleCours_SACADO}
-%
-%\usepackage{hyperref}
-%
-%\begin{document}
-%
-%%-------------------------------
-%%	TITLE SECTION
-%%-------------------------------
-%
-%\fancyhead[C]{}
-%\hrule\medskip % Upper rule
-%\begin{minipage}{0.295\textwidth} 
-%\raggedright
-%Classe \myClasse \hfill\\
-%\myDiscipline \hfill\\
-%\myParcours \hfill\\
-%\end{minipage}
-%\begin{minipage}{0.4\textwidth} 
-%\centering 
-%\scshape\huge
-%\textcolor{sacado_purple}{\myTitle} \\ 
-%\normalsize 
-%%\mySubTitle \\ 
-%\end{minipage}
-%\begin{minipage}{0.295\textwidth} 
-%\raggedleft
-%\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
-%%\myAnnee \hfill\\
-%\end{minipage}
-%\medskip \hrule
-%\bigskip
-
-%-------------------------------
-%	CONTENTS
-%-------------------------------
-
 \chapter{Angles}
 {https://sacado.xyz/qcm/parcours_show_course/0/117130}
 {
@@ -835,8 +788,8 @@ Construis le triangle $ANC$ tel que $AN=6$ cm, $\widehat{NAC}=40$° et  $\wideha
 \ExoCt{Représenter. Calculer.}
 
 \begin{itemize}
-\item Construis le triangles $ABC$ tel que $\widehat{BAC}=40$° et  $\widehat{CBA}=42$° 
-\item Construis le triangles $DEF$ tel que $\widehat{NAC}=40$° et  $\widehat{CNA}=42$°
+\item Construis le triangle $ABC$ tel que $\widehat{BAC}=40$° et  $\widehat{CBA}=42$° 
+\item Construis le triangle $DEF$ tel que $\widehat{NAC}=40$° et  $\widehat{CNA}=42$°
 
 \definecolor{sqsqsq}{rgb}{0.12549019607843137,0.12549019607843137,0.12549019607843137}
 \definecolor{uququq}{rgb}{0.25098039215686274,0.25098039215686274,0.25098039215686274}
