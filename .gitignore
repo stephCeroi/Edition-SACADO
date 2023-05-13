@@ -17,3 +17,10 @@ MANUEL_6e_V1/CHAPITRES/gestion_de_donnees/6e_GdD_organisation_et_gestion_de_donn
 MANUEL_6e_V1/MANUEL_6e_V1.log
 *.tex
 MANUEL_6e_V1/MANUEL_6e_V1.tex
+*.bak
+*.bak
+*.gz
+*.out
+*.log
+*.aux
+*.bak

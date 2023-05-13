@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.28)  12 MAY 2023 19:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.28)  13 MAY 2023 09:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1908,7 +1908,7 @@ Non-PDF special ignored!
 (CHAPITRES/gestion_de_donnees/6e_GdD_organisation_et_gestion_de_donnees.tex
 LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
 (Font)              scaled to size 23.63593pt on input line 17.
-<FIG//sacadoA1.png, id=44, 40.15pt x 40.15pt>
+<FIG//sacadoA1.png, id=52, 40.15pt x 40.15pt>
 File: FIG//sacadoA1.png Graphic file (type png)
 <use FIG//sacadoA1.png>
 Package pdftex.def Info: FIG//sacadoA1.png  used on input line 17.
@@ -1932,9 +1932,9 @@ LaTeX Font Info:    Font shape `T1/ua1/m/it' will be
 LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
 (Font)              scaled to size 16.41594pt on input line 21.
 LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 66.
+(Font)              scaled to size 23.63593pt on input line 72.
 LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 66.
+(Font)              scaled to size 13.67995pt on input line 72.
 
 
 Package fancyhdr Warning: \headheight is too small (20.6pt): 
@@ -1946,7 +1946,7 @@ Package fancyhdr Warning: \headheight is too small (20.6pt):
 
 [3]
 LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 70.
+(Font)              scaled to size 13.67995pt on input line 79.
 
 
 Package fancyhdr Warning: \headheight is too small (20.6pt): 
@@ -1974,36 +1974,104 @@ Package fancyhdr Warning: \headheight is too small (20.6pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-20.70639pt}.
 
-[6] [7]
+[6]
+Missing character: There is no ; in font nullfont!
 
-! LaTeX Error: \begin{document} ended by \end{pageAD}.
+Package fancyhdr Warning: \headheight is too small (20.6pt): 
+(fancyhdr)                Make it at least 25.73422pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.73422pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.239 \end{pageAD}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+(fancyhdr)                \addtolength{\topmargin}{-5.13422pt}.
 
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.239 \end{pageAD}
-                  
-Things are pretty mixed up, but I think the worst is over.
+[7]
 
-) (MANUEL_6e_V1.aux)
+Package fancyhdr Warning: \headheight is too small (20.6pt): 
+(fancyhdr)                Make it at least 41.3064pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.3064pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-20.70639pt}.
+
+[8]
+Package pgfplots info on input line 271: Using 'lua backend=false' for axis: x 
+coord trafo unsupported.
+
+Overfull \hbox (12.17406pt too wide) in paragraph at lines 259--277
+ [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (20.6pt): 
+(fancyhdr)                Make it at least 25.73422pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.73422pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-5.13422pt}.
+
+[9]
+
+Package fancyhdr Warning: \headheight is too small (20.6pt): 
+(fancyhdr)                Make it at least 41.3064pt, for example:
+(fancyhdr)                \setlength{\headheight}{41.3064pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-20.70639pt}.
+
+[10]
+
+Package fancyhdr Warning: \headheight is too small (20.6pt): 
+(fancyhdr)                Make it at least 25.73422pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.73422pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-5.13422pt}.
+
+[11]
+
+Package fancyhdr Warning: \headheight is too small (20.6pt): 
+(fancyhdr)                Make it at least 25.73422pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.73422pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-5.13422pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (20.6pt): 
+(fancyhdr)                Make it at least 25.73422pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.73422pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-5.13422pt}.
+
+[13]
+
+Package fancyhdr Warning: \headheight is too small (20.6pt): 
+(fancyhdr)                Make it at least 25.73422pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.73422pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-5.13422pt}.
+
+[14]
+
+Package fancyhdr Warning: \headheight is too small (20.6pt): 
+(fancyhdr)                Make it at least 45.48996pt, for example:
+(fancyhdr)                \setlength{\headheight}{45.48996pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-24.88995pt}.
+
+[15]) (MANUEL_6e_V1.aux)
 Package rerunfilecheck Info: File `MANUEL_6e_V1.out' has not changed.
-(rerunfilecheck)             Checksum: 7378AF9CA2E8FBE412AF1045E7C497FE;239.
+(rerunfilecheck)             Checksum: 6CACD91F06CBA07C2560512012021CA1;553.
  ) 
 Here is how much of TeX's memory you used:
- 58843 strings out of 476331
- 1294198 string characters out of 5797571
- 2004865 words of memory out of 5000000
- 78243 multiletter control sequences out of 15000+600000
+ 59111 strings out of 476331
+ 1299954 string characters out of 5797571
+ 2005243 words of memory out of 5000000
+ 78501 multiletter control sequences out of 15000+600000
  594429 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  109i,20n,108p,769b,2706s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2011,9 +2079,9 @@ Here is how much of TeX's memory you used:
 m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
 X/fonts/type1/urw/arial/ua1b8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/ari
 al/ua1r8a.pfb>
-Output written on MANUEL_6e_V1.pdf (7 pages, 72220 bytes).
+Output written on MANUEL_6e_V1.pdf (15 pages, 93737 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

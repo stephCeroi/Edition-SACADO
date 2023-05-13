@@ -21,11 +21,13 @@
 \section{Tableaux}
 
 \begin{DefT}{Tableau simple}
+
 Les \textbf{tableaux}\index{Tableau} permettent d'organiser et de regrouper des données pour les lire plus facilement.
 \begin{itemize}
 \item On utilise un tableau à \textbf{une seule entrée}\index{Simple|Tableau} pour organiser des données selon \textbf{un seul critère}.
 \item On utilise un tableau à \textbf{double entrée}\index{A double entrée|Tableau} pour organiser des données selon \textbf{deux critères}, l'un qui est lu en ligne et l'autre en colonne.
 \end{itemize}
+
 \end{DefT}
 
 
@@ -47,7 +49,9 @@ La pousse de bambou mesurent $70$ cm lors de sa plantation. Au mois de février,
 
 
 \begin{Ex}{Tableau à double entrée}
-Voici les résultats d'une enquête réalisée dans un collège sur le moyen de locomotion des élèves.
+
+	Voici les résultats d'une enquête réalisée dans un collège sur le moyen de locomotion des élèves.
+
  \begin{center}
  \begin{tabular}{|c|c|c|c|c|c|c|}
   & A pied & Voiture & Bus &  Vélo & Autres & Total \\  \hline
@@ -56,14 +60,19 @@ Voici les résultats d'une enquête réalisée dans un collège sur le moyen de 
   Total & $186$ & $76$ & $315$& $94$ & $58$ & $729$ \\
  \end{tabular}
  \end{center}
- \begin{itemize}
+ 
+\begin{itemize}
  \item Dans ce collège, il y a $404$ filles et $325$ garçons.
  \item $186$ élèves viennent à pied et $94$ en vélo.
  \item $40$ filles viennent en vélo et $118$ garçons viennent en bus.
 \end{itemize}
+
 \end{Ex}
 
 \end{pageCours}
+
+
+
 
 \begin{pageAD} 
 
@@ -92,8 +101,7 @@ Voici les résultats d'une enquête réalisée dans un collège.
 
 \ExoCad{Représenter.}
 
-\end{pageAD}
-
+\end{pageAD} 
 
 
 \begin{pageCours} 
@@ -102,10 +110,12 @@ Voici les résultats d'une enquête réalisée dans un collège.
 \section{Diagrammes en bâtons}
 
 \begin{DefT}{Diagramme en bâtons}
+
 Un \textbf{diagramme en bâtons}\index{diagramme en bâtons|Diagramme} est un \textbf{graphique} où les effectifs des données représentés par des \textbf{segments} dont les \textbf{hauteurs} sont \textbf{proportionnelles} à l'\textbf{effectif} de chaque donnée.
 \end{DefT}
 
 \begin{Ex}
+
 Voici la liste des bateaux lors d'une course selon leur longueur.
 \begin{center}
 
@@ -146,6 +156,10 @@ pattern=horizontal lines dark blue,
 
 \Sf{Savoir lire un diagramme à bâtons}
 
+\ExoCad{Représenter.}
+
+Voici 
+
 
 \Sf{Savoir construire un diagramme à bâtons}
 
@@ -171,58 +185,104 @@ Voici les résultats d'une enquête réalisée dans un collège.
 
 
 
-%\begin{pageCours} 
-%
-%\section{Diagrammes circulaires}
-%
-%\begin{DefT}{diagramme circulaire}
-%
-%Un \textbf{diagramme circulaire}\index{diagramme circulaire|Diagramme} est un \textbf{graphique} où les effectifs des données sont représentés par des \textbf{secteurs angulaires} dont les \textbf{mesures des angles} sont \textbf{proportionnelles} à l'\textbf{effectif} de chaque donnée. 
-%
-%\end{DefT}
-%
-%\begin{Ex}
-%
-%Dans une recette de cuisine on lit les ingrédients suivants :
-%
-%$140\,g$ de farine, $190\,g$ de sucre, $150\,g$ de chocolat et $260\,g$ de beurre.
-%
-%\begin{tabular}{c|c|c|c}
-%Nom & Donnée ($g$) & Fréquence ($\%$) & Angle (°) \\\hline\hline
-%Farine & $140$ & $18,9$ & $68,1$ \\\hline
-%Sucre & $190$ & $25,7$ & $92,4$ \\\hline
-%Chocolat & $150$ & $20,3$ & $73$ \\\hline
-%Beurre & $260$ & $35,1$ & $126,5$ \\\hline
-%Total & $740$ & $100$ & $360$ \\
-%\end{tabular}
-%
-%\begin{tikzpicture}
-%\pie[pos={0,0}, sum=auto,radius=1.5,text=pin]{140/Farine, 190/Sucre, 150/Chocolat, 260/Beurre};
-%\end{tikzpicture}
-%
-%\end{Ex}
-%
-%\end{PageCours}
+\begin{pageCours} 
+
+\section{Diagrammes circulaires}
+\begin{DefT}{diagramme circulaire}
+
+Un \textbf{diagramme circulaire}\index{diagramme circulaire|Diagramme} est un \textbf{graphique} où les effectifs des données sont représentés par des \textbf{secteurs angulaires} dont les \textbf{mesures des angles} sont \textbf{proportionnelles} à l'\textbf{effectif} de chaque donnée. 
+
+\end{DefT}
+
+\begin{Ex}
+
+Dans une recette de cuisine on lit les ingrédients suivants :
+
+$140\,g$ de farine, $190\,g$ de sucre, $150\,g$ de chocolat et $260\,g$ de beurre.
+
+\begin{tabular}{c|c|c|c}
+Nom & Donnée ($g$) & Fréquence ($\%$) & Angle (°) \\\hline\hline
+Farine & $140$ & $18,9$ & $68,1$ \\\hline
+Sucre & $190$ & $25,7$ & $92,4$ \\\hline
+Chocolat & $150$ & $20,3$ & $73$ \\\hline
+Beurre & $260$ & $35,1$ & $126,5$ \\\hline
+Total & $740$ & $100$ & $360$ \\
+\end{tabular}
+
+\begin{tikzpicture}
+\pie[pos={0,0}, sum=auto,radius=1.5,text=pin]{140/Farine, 190/Sucre, 150/Chocolat, 260/Beurre};
+\end{tikzpicture}
+
+\end{Ex}
+
+
+\end{pageCours}
 
 
 
-%\begin{pageAD} 
-%
-%\Sf{Savoir lire un diagramme circulaire }
-%
-%\ExoCad{Représenter.}
-%
-% 
-%\Sf{Savoir lire un diagramme circulaire }
-%
-%\ExoCad{Représenter. Calculer.}
-%
-% 
-%
-%
-%\end{pageAD}
-%
-% 
+
+
+
+\begin{pageAD} 
+
+\Sf{Savoir lire un diagramme circulaire }
+
+\ExoCad{Représenter.}
+
+zzzz
+ 
+\Sf{Savoir lire un diagramme circulaire }
+
+\ExoCad{Représenter. Calculer.}
+
+zzzz
+
+
+\end{pageAD}
+
+
+\begin{pageCours}
+
+\section{Diagrammes cartésiens}
+
+\begin{Def}
+Pour \textbf{représenter} une grandeur B \textbf{en fonction d'}une grandeur A, on place :
+\begin{itemize}
+\item Sur l'axe horizontal (appelé "\textbf{axe des abscisses}") les valeurs de la grandeur A.
+\item Sur l'axe vertical (appelé "\textbf{axe des ordonnées}") les valeurs de la grandeur B.
+\end{itemize}
+\end{Def}
+
+\begin{Ex}
+Voici les données de précipitations (en $mm$) sur la ville de Tunis au cours de l'année 2021 : 
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+Mois & J & F & M & A & M & J & J & A & S & O & N & D \\\hline
+Précipitations (en $mm$) & 56 & 53 & 48 & 43 & 27 & 11 & 2 & 9 & 38 & 51 & 52 & 54 \\
+\end{tabular}
+\begin{tikzpicture}
+\begin{axis}[
+ylabel=Précipitations,
+xlabel=Mois,
+symbolic x coords={Jan,Fev,Mar,Avr,Mai,Jun,Jul,Agu,
+Sep,Oct,Nov,Dec},
+%x tick label style={rotate=45,anchor=east}
+%xtick distance=1
+]
+\addplot coordinates {
+(Jan,56) (Fev,53) (Mar,48) (Avr,43) (Mai,27) (Jun,11) (Jul,2) (Agu,9) (Sep,38) (Oct,51) (Nov,52) (Dec,54)
+};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{Ex}
+
+\end{pageCours}
+
+
+
+
+\begin{pageAD}
 
 \Sf{Savoir lire un diagramme cartésien }
 
@@ -241,76 +301,73 @@ Voici les résultats d'une enquête réalisée dans un collège.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%  Niveau 1
+%%%  Niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursu} 
+
+\ExoCu{Chercher. Communiquer.}
+
+ 
+ 
+\end{pageParcoursu}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{pageParcoursu} 
-%
-%\ExoCu{Chercher. Communiquer.}
-%
-% 
-% 
-%\end{pageParcoursu}
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%  Niveau 2
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{pageParcoursd} 
-%
-%
-%\ExoCd{Représenter. Calculer.} 
-%
-% 
-% 
-% 
-% 
-%\end{pageParcoursd}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%  Niveau 3
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{pageParcourst}
-%
-%
-%\ExoCt{Modéliser. Calculer.}
-%
-% 
-% 
-%\end{pageParcourst}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%  Brouillon
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%
-%\begin{pageBrouillon} 
-% 
-%\ligne{32}
-%
-%
-%
-%\end{pageBrouillon}
-%
-%
-%
-%\begin{pageAuto} 
-%
-%\ExoAuto
-% 
-%\ExoAuto
-% 
-%
-%
-%
-%\ExoAuto
-%
-% 
-%
-% 
-%
-%
-%
-%\end{pageAuto}
+%%%%  Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursd} 
+
+
+\ExoCd{Représenter. Calculer.} 
+
+ 
+ 
+ 
+ 
+\end{pageParcoursd}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcourst}
+
+
+\ExoCt{Modéliser. Calculer.}
+
+ 
+ 
+\end{pageParcourst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Brouillon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{pageBrouillon} 
+ 
+\ligne{32}
 
 
 
+\end{pageBrouillon}
+
+
+
+\begin{pageAuto} 
+
+\ExoAuto
+ 
+\ExoAuto
+ 
+
+
+
+\ExoAuto
+
+ 
+
+ 
+
+
+
+\end{pageAuto}
