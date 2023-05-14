@@ -359,11 +359,21 @@ title= \stepcounter{cpt} Remarques \thecpt.]}
 title= \stepcounter{cpt} Exemple \thecpt.]}
 {%
 \end{tcolorbox}\par}
+
 \newenvironment{Exs}{%
 \medskip \begin{tcolorbox}[widget,colback=sacado_yellow!15,colframe=sacado_violet!75!white,
 title= \stepcounter{cpt} Exemples \thecpt.]}
 {%
 \end{tcolorbox}\par}
+
+%%%%%%%%%%%%% EXEMPLES
+\newenvironment{ExT}[1]{%
+\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_violet!75!white,
+title= \stepcounter{cpt} Exemple \thecpt   : #1.]}
+{%
+\end{tcolorbox}\par}
+
+
 
 
 %%%%%%%%%%%%% Preuve
@@ -656,5 +666,5 @@ title=\stepcounter{exo} Exercice \theexo.]}
 
 
 %%%%%%%%%%%%% Pointillés ou ligne
-\newcommand{\point}[1]{\vspace{0.3cm}\multido{}{#1}{ \dotfill \medskip \endgraf}}
-\newcommand{\ligne}[1]{\vspace{0.3cm}\multido{}{#1}{ {\color{cqcqcq}\hrulefill} \medskip \endgraf}}
+\newcommand{\point}[1]{\vspace{0.1cm}\multido{}{#1}{ \dotfill \medskip \endgraf}}
+\newcommand{\ligne}[1]{\vspace{0.1cm}\multido{}{#1}{ {\color{cqcqcq}\hrulefill} \medskip \endgraf}}
