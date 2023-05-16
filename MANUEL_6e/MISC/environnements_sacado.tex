@@ -373,7 +373,12 @@ title= \stepcounter{cpt} Exemple \thecpt   : #1.]}
 {%
 \end{tcolorbox}\par}
 
-
+%%%%%%%%%%%%% EXEMPLES
+\newenvironment{ExCor}{%
+\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_violet!95!white,
+title= \stepcounter{cpt} Exercice corrigé \thecpt.]}
+{%
+\end{tcolorbox}\par}
 
 
 %%%%%%%%%%%%% Preuve
@@ -417,14 +422,12 @@ borderline west={2mm}{0mm}{bleu3}]
 \par}
 
 
-%%%%%%%%%%%%% Attendus
-\newenvironment{Ats}[1][]{%
-\vspace{0.4cm}
-\begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
-{black!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=sacado_green!100}, colframe=sacado_green!75!black,title=\textbf{Attendus du chapitre#1}]}
+%%%%%%%%%%%%% Attention
+\newenvironment{Att}{%
+\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_red,
+title= \stepcounter{cpt} Attention \thecpt.]}
 {%
-\end{tcolorbox}
-\par}
+\end{tcolorbox}\par}
 
 %%%%%%%%%%%%% Rituel
 \newenvironment{Rit}{%
@@ -475,18 +478,9 @@ title= \stepcounter{cptr} Méthode \thecptr. ]}{%
 \end{tcolorbox}
 \par}
 
-
-%%%%%%%%%%%%% Attention
-\newenvironment{Att}[1][]{%
-\begin{bclogo}[couleur=sacado_red!0, arrondi =0.15, noborder=true, couleurBarre=red, logo = \bcattention ]{ 
-\normalsize{{\color{red}Attention. #1}}}}
-{%
-\end{bclogo}
-\par}
-
-
  
 
+ 
 
 %%%%%%%%%%%%% Vocabulaire
 \newenvironment{Voc}[1][]{%
@@ -599,6 +593,18 @@ title=\stepcounter{exo} Exercice \theexo.]}
 } % fin de la procédure
 
 
+
+%%%%%%%%%%%%% Histoire
+\newenvironment{ExoCade}[1][]{%
+\vspace{0.4cm}\stepcounter{exo}
+\begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{brown!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=sacado_violet!100}, colframe=white!75!black,title=\textbf{\theexo. \hfill #1}]}
+{%
+\end{tcolorbox}
+\par}
+
+
+
 \newcommand{\ExoCu}[1]{ % Exercice par compétence de niveau 1
 \vspace{0.4cm}
 \stepcounter{exo}
@@ -646,7 +652,6 @@ title=\stepcounter{exo} Exercice \theexo.]}
 \stepcounter{exo}
 \tikz\node[rounded corners=2pt,draw,fill=sacado_orange]{\color{white}\textbf{ \theexo}}; \;} 
 % fin de la procédure
-
 
 
 
