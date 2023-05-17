@@ -380,7 +380,7 @@ title= \stepcounter{cpt} Exercice corrigé \thecpt.]}
 {%
 \end{tcolorbox}\par}
 
-
+ 
 %%%%%%%%%%%%% Preuve
 \newenvironment{Pv}[1][]{%
 \begin{tcolorbox}[breakable, enhanced,widget, colback=sacado_blue!10!white,boxrule=0pt,frame hidden,
@@ -410,12 +410,20 @@ borderline west={1mm}{0mm}{sacado_blue!75}]
 \end{tcolorbox}
 \par}
 
-
+%%%%%%%%%%%%% Chapitres connexes
+\newenvironment{CCon}[1][]{%
+\vspace{0.4cm}
+\begin{tcolorbox}[breakable, enhanced,widget, colback=white ,boxrule=0pt,frame hidden,
+borderline west={2mm}{0mm}{sacado_violet}]
+\textbf{#1}}
+{%
+\end{tcolorbox}
+\par}
 %%%%%%%%%%%%% Compétences Collège
 \newenvironment{CpsCol}[1][]{%
 \vspace{0.4cm}
 \begin{tcolorbox}[breakable, enhanced,widget, colback=white ,boxrule=0pt,frame hidden,
-borderline west={2mm}{0mm}{bleu3}]
+borderline west={2mm}{0mm}{sacado_violet}]
 \textbf{#1}}
 {%
 \end{tcolorbox}
