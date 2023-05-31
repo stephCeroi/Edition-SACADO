@@ -34,19 +34,23 @@
 \begin{DefT}{symétrie axiale}
 
 \begin{minipage}{0.65\linewidth}
-La \textbf{symétrie axiale}\index{symétrie axiale}  ( par rapport à une droite) est une \textbf{transformation} du plan.
+La \textbf{symétrie axiale}\index{symétrie axiale}  (par rapport à une droite) est une \textbf{transformation} du plan.
 
 Elle transforme un point $A$ en un point $A'$ appelé image de $A$ par la transformation.
 \end{minipage}
-\begin{minipage}{0.35\linewidth}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.3cm,y=0.3cm]
-\clip(0.06,-5) rectangle (17.64,4.38);
- 
-\draw [line width=1.pt,domain=0.06:17.64] plot(\x,{(--99.7788-11.16*\x)/-2.06});
-\draw[color=ududff] (7.36,1.21) node {$A$};
- 
-\draw[color=ududff] (10.86,0.59) node {$A'$};
-\end{tikzpicture} 
+\hfill
+\begin{minipage}{0.3\linewidth}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(1.52,-1.4) rectangle (6.04,2.46);
+\draw [color=ffqqqq](4.0,2.) node[anchor=north west] {$(d)$};
+\draw [line width=1.pt,color=ffqqqq,domain=1.52:6.04] plot(\x,{(-7.24--2.46*\x)/1.3});
+\begin{scriptsize}
+\draw [color=ududff] (2.1,1.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (2.24,1.37) node {$A$};
+\draw [color=ududff] (4.24426991836313,-0.1331507698666945)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (4.44,0.23) node {$A'$};
+\end{scriptsize}
+\end{tikzpicture}
 \end{minipage}
 \end{DefT}
  
@@ -55,7 +59,11 @@ Elle transforme un point $A$ en un point $A'$ appelé image de $A$ par la transf
 
 \section{Image d'un point par une symétrie axiale}
 
+ 
+
 \begin{DefT}{Image d'un point} 
+
+
 
 \begin{minipage}{0.6\linewidth}
 L'\textbf{image} \index{Image d'un point|Symétrie axiale} d'un point $A$ par la symétrie axiale d'axe $(d)$ est le point $A'$ tel que :
@@ -101,6 +109,8 @@ L'\textbf{image} \index{Image d'un point|Symétrie axiale} d'un point $A$ par la
 
 
 \ExoCad{Représenter.}
+
+
 
 \begin{minipage}{0.45\linewidth}
 
