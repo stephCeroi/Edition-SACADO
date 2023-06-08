@@ -148,7 +148,7 @@ rectangle
 \newenvironment{pageBrouillon}{
 \lhead{%
 \tikz[remember picture,overlay] {%
-\fill [sacado_gray!70]
+\fill [sacado_gray!30]
 ([yshift=0.14cm] current page header area.south west -| current page.north west)
 rectangle
 (current page.north east);
@@ -201,6 +201,25 @@ rectangle
 }{\newpage\lhead{}}
 
 
+
+
+
+\newenvironment{pageInfo}{
+\lhead{%
+\tikz[remember picture,overlay] {%
+\fill [sacado_gray!70]
+([yshift=0cm] current page header area.south west -| current page.north west)
+rectangle
+(current page.north east);
+%    \fill [fond!70]
+%    ([yshift=-45pt]current page footer area.south west)
+%    rectangle
+%    (current page footer area.north east)
+%    ;
+}
+\raisebox{0.5em}{\textcolor{texte}{\Huge \bf INFORMATIQUE}}
+\hfill \raisebox{0.5em}{\textcolor{texte}{\Large \titreChap}}}
+}{\newpage\lhead{}}
 
 
 

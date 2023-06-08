@@ -196,7 +196,7 @@ rectangle
 %    (current page footer area.north east)
 %    ;
 }
-\raisebox{0.5em}{\textcolor{texte}{\Huge \bf AUTOÉVALUATION}}
+\raisebox{0.5em}{\textcolor{texte}{\Huge \bf AUTOÉVALUATION - DTL}}
 \hfill \raisebox{0.5em}{\textcolor{texte}{\Large \titreChap}}}
 }{\newpage\lhead{}}
 
@@ -500,6 +500,12 @@ title= \stepcounter{cptr} Méthode \thecptr. ]}{%
 %\end{footnotesize}
 \par}
 
+%%%%%%%%%%%%% Vocabulaire
+\newenvironment{VocU}{%
+\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_green,
+title= \stepcounter{cpt} Vocabulaire usuel \thecpt.]}
+{%
+\end{tcolorbox}\par}
 
 %%%%%%%%%%%%% Video
 \newenvironment{Vid}[1][]{%
@@ -594,19 +600,20 @@ title=\stepcounter{exo} Exercice \theexo.]}
 
 
 
-\newcommand{\ExoCad}[1]{ % Exercice par compétence application directe
-\vspace{0.4cm}
-\stepcounter{exo}
-\tikz\node[rounded corners=2pt,draw,fill=sacado_violet]{\color{white}\textbf{ \theexo}}; \quad  {\color{sacado_violet} \hfill \textbf{#1}  } 
-} % fin de la procédure
+ 
+%
+%\newcommand{\ExoCad}[1]{ % Exercice par compétence application directe
+%\vspace{0.4cm}
+%\stepcounter{exo}
+%\tikz\node[rounded corners=2pt,draw,fill=sacado_violet]{\color{white}\textbf{ \theexo}}; \quad  {\color{sacado_violet} \hfill \textbf{#1}  } 
+%} % fin de la procédure
+%
 
-
-
-%%%%%%%%%%%%% Histoire
-\newenvironment{ExoCade}[1][]{%
-\vspace{0.4cm}\stepcounter{exo}
+ 
+\newenvironment{ExoCad}[2][]{%
+\vspace{0.2cm}\stepcounter{exo}
 \begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
-{brown!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=sacado_violet!100}, colframe=white!75!black,title=\textbf{\theexo. \hfill #1}]}
+{brown!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=sacado_violet!100}, colframe=sacado_violet!100,title=\textbf{\theexo. \hfill #1 #2}]}
 {%
 \end{tcolorbox}
 \par}
@@ -614,28 +621,28 @@ title=\stepcounter{exo} Exercice \theexo.]}
 
 
 \newcommand{\ExoCu}[1]{ % Exercice par compétence de niveau 1
-\vspace{0.4cm}
+\vspace{0.2cm}
 \stepcounter{exo}
 \tikz\node[rounded corners=2pt,draw,fill=sacado_green]{\color{white}\textbf{ \theexo}}; \quad  {\color{sacado_green} \hfill \textbf{#1}  } 
 } % fin de la procédure
 
 
 \newcommand{\ExoCd}[1]{ % Exercice par compétence de niveau 2
-\vspace{0.4cm}
+\vspace{0.2cm}
 \stepcounter{exo}
 \tikz\node[rounded corners=2pt,draw,fill=sacado_blue]{\color{white}\textbf{ \theexo}}; \quad  {\color{sacado_blue} \hfill \textbf{#1}  } 
 } % fin de la procédure
 
 
 \newcommand{\ExoCt}[1]{ % Exercice par compétence de niveau 3
-\vspace{0.4cm}
+\vspace{0.2cm}
 \stepcounter{exo}
 \tikz\node[rounded corners=2pt,draw,fill=sacado_red]{\color{white}\textbf{ \theexo}}; \quad  {\color{sacado_red} \hfill \textbf{#1}  } 
 } % fin de la procédure
 
 
 \newcommand{\Calcu}[1]{ % Exercice avec calculatrice
-\vspace{0.4cm}
+\vspace{0.2cm}
 \stepcounter{exo}
 \tikz\node[rounded corners=2pt,draw,fill=sacado_red]{\color{white}\textbf{ \theexo}}; \; 
 \includegraphics[scale=0.5]{MISC/calculator.png} 
@@ -644,7 +651,7 @@ title=\stepcounter{exo} Exercice \theexo.]}
 % fin de la procédure
 
 \newcommand{\NoCalcu}[1]{ % Exercice avec calculatrice
-\vspace{0.4cm}
+\vspace{0.2cm}
 \stepcounter{exo}
 \tikz\node[rounded corners=2pt,draw,fill=sacado_blue]{\color{white}\textbf{ \theexo}}; \;
 \includegraphics[scale=0.5]{MISC/no_calculator.png} 
@@ -656,7 +663,7 @@ title=\stepcounter{exo} Exercice \theexo.]}
 
 
 \newcommand{\ExoAuto} { % Exercice avec calculatrice
-\vspace{0.4cm}
+\vspace{0.2cm}
 \stepcounter{exo}
 \tikz\node[rounded corners=2pt,draw,fill=sacado_orange]{\color{white}\textbf{ \theexo}}; \;} 
 % fin de la procédure
@@ -668,7 +675,7 @@ title=\stepcounter{exo} Exercice \theexo.]}
 
 
 \newcommand{\Sf}[1]{ 
-{\color{fond!70}{\Large \textbf{#1}}  } 
+{\color{fond}{\Large \textbf{#1}}  } 
 } 
 
 \newcommand{\Sfe}[1]{ 
