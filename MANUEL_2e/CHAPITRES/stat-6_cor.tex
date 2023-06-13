@@ -1,0 +1,79 @@
+
+Un distributeur automatique de café propose des expressos. Une pesée sur 30 expressos a donné les masses
+suivantes (en grammes) de café utilisé :
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+81& 82& 85& 83 &83 &82 &87 &84& 85 &84\\ 
+\hline 
+84 &81 &83 &86 &84 &80& 80& 79 &87& 85\\ 
+\hline 
+81 &82 &85 &87 &79 &80& 86 &89& 83 &89\\ 
+\hline 
+\end{tabular} 
+
+\begin{enumerate}
+\item Reproduire et compléter le tableau ci-dessous par les valeurs approchées au centième des fréquences
+et par les fréquences cumulées décroissantes (FCD).
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Masse (en g) &[79 ;82[& [82 ;85[ &[85 ;88[ &[88 ;91[\\
+\hline 
+Effectif & 8 & 12 & 8 & 2 \\
+\hline 
+Fréquence& $\frac{8}{30}$& $\frac{12}{30}$ & $\frac{8}{30}$ & $\frac{2}{30}$ \\
+\hline 
+FCD& $\frac{30}{30}$ & $\frac{22}{30}$ & $\frac{10}{30}$ &$\frac{2}{30}$\\
+\hline 
+\end{tabular} 
+
+\item  Représenter la courbe des FCD.
+
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=0.2816593886462875cm]
+\begin{axis}[
+x=1.0cm,y=0.2816593886462875cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-0.6,
+xmax=9.98,
+ymin=-2.94573643410857,
+ymax=32.55813953488377,
+xtick={-0.0,1.0,...,9.0},
+ytick={-0.0,5.0,...,30.0},]
+\clip(-0.6,-2.94573643410857) rectangle (9.98,32.55813953488377);
+\draw [line width=2.pt] (0.,30.)-- (2.04,21.8604651162791);
+\draw [line width=2.pt] (2.04,21.8604651162791)-- (4.,10.);
+\draw [line width=2.pt] (4.,10.)-- (6.04,1.8604651162790482);
+\draw [line width=2.pt] (6.04,1.8604651162790482)-- (8.,0.);
+\draw (-0.46,30.6976744186047) node[anchor=north west] {1};
+\draw (-0.28,0.31007751937981054) node[anchor=north west] {$79$};
+\draw (1.68,0.31007751937981054) node[anchor=north west] {$82$};
+\draw (3.68,0.15503875968988765) node[anchor=north west] {$85$};
+\draw (5.7,0.0775193798449262) node[anchor=north west] {$88$};
+\draw (7.74,0.15503875968988765) node[anchor=north west] {$91$};
+\draw (7.88,1.4728682170542322) node[anchor=north west] {Masse de café};
+\draw (0.18,31.24031007751943) node[anchor=north west] {FCD};
+\draw [line width=2.pt,domain=-0.6:9.98] plot(\x,{(--22.5-0.*\x)/1.});
+\draw [line width=2.pt,dash pattern=on 4pt off 4pt] (1.8797142857142937,22.5)-- (1.84,0.);
+\begin{scriptsize}
+\draw [color=black] (0.,30.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw [color=black] (2.04,21.8604651162791)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw [color=black] (4.,10.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw [color=black] (6.04,1.8604651162790482)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw [color=black] (8.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (-2.46,21.976744186046535) node {$j$};
+\draw [fill=uuuuuu] (1.8797142857142937,22.5) circle (2.0pt);
+\draw [fill=xdxdff] (1.84,0.) circle (2.5pt);
+\draw[color=xdxdff] (1.98,1.4341085271317515) node {$G$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+
+
+\item  Par lecture graphique, recopier et compléter : « 75\% des expressos contiennent plus de \textbf{81 g} de
+café ».
+\end{enumerate}

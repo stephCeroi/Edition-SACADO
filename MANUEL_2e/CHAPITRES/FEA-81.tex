@@ -1,0 +1,45 @@
+
+On donne les segments $[AB]$ et $[EF]$ représentés ci-dessous.
+
+\definecolor{ttqqqq}{rgb}{0.2,0.,0.}
+\definecolor{qqzzff}{rgb}{0.,0.6,1.}
+\definecolor{qqzzcc}{rgb}{0.,0.6,0.8}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+xmin=-2.200000000000002,
+xmax=8.480000000000008,
+ymin=-0.8000000000000048,
+ymax=0.7799999999999957,
+xtick={-2.0,-1.0,...,8.0},
+ytick={-0.0,1.0,...,0.0},]
+\clip(-2.2,-0.8) rectangle (8.48,0.78);
+\draw [line width=2.pt,color=qqzzff] (-2.,0.)-- (4.,0.);
+\draw [line width=2.pt] (5.,0.)-- (8.,0.);
+\begin{scriptsize}
+\draw [color=qqzzcc] (-2.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqzzcc] (-1.86,0.37) node {$A$};
+\draw [color=qqzzcc] (4.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqzzcc] (3.96,0.37) node {$B$};
+\draw [color=ttqqqq] (5.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ttqqqq] (5.14,0.37) node {$E$};
+\draw [color=ttqqqq] (8.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ttqqqq] (8.14,0.37) node {$F$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+
+
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item Déterminer le rayon de l'intervalle $[AB]$.
+		\item Représenter $[AB]$ par une inégalité.
+	\end{enumerate}
+\item 
+	\begin{enumerate}
+		\item Déterminer le rayon de l'intervalle $[EF]$.
+		\item Représenter $[EF]$ par une inégalité.
+	\end{enumerate}
+\end{enumerate}

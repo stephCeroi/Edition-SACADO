@@ -1,70 +1,39 @@
-% \documentclass[a4paper,dvipsnames]{article}
-
-% \addtolength{\hoffset}{-2.25cm}
-% \addtolength{\textwidth}{4.5cm}
-% \addtolength{\voffset}{-3.25cm}
-% \addtolength{\textheight}{5cm}
-% \setlength{\parskip}{0pt}
-% \setlength{\parindent}{0in}
-
-% \input{MISC/preambule_SACADO}
-% \input{MISC/styleCours_SACADO}
-
-% \usepackage{hyperref}
-
-% \begin{document}
-
-%-------------------------------
-%	TITLE SECTION
-%-------------------------------
-
-% \fancyhead[C]{}
-% \hrule\medskip % Upper rule
-% \begin{minipage}{0.295\textwidth} 
-% \raggedright
-% Classe \myClasse \hfill\\
-% \myDiscipline \hfill\\
-% \myParcours \hfill\\
-% \end{minipage}
-% \begin{minipage}{0.4\textwidth} 
-% \centering 
-% \scshape\huge
-% \textcolor{sacado_purple}{\myTitle} \\ 
-% \normalsize 
-%%\mySubTitle \\ 
-% \end{minipage}
-% \begin{minipage}{0.295\textwidth} 
-% \raggedleft
-% \href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
-%%\myAnnee \hfill\\
-% \end{minipage}
-% \medskip \hrule
-% \bigskip
-
-%-------------------------------
-%	CONTENTS
-%-------------------------------
-
 \chapter{La division euclidienne}
 {https://sacado.xyz/qcm/parcours_show_course/0/117123}
+{
+
+
+\begin{CpsCol}
+\textbf{ Les savoir-faire du parcours }
+ \begin{itemize}
+ \item Savoir déterminer le reste et le quotient de deux nombres.
+ \item Savoir déterminer si une égalité correspond à une division euclidienne.
+ \item Savoir déterminer le reste et le quotient d'après une égalité.
+ \item Savoir poser une division euclidienne.
+ \item Savoir vérifier une division euclidienne posée.
+ \item Savoir déterminer des multiples ou des diviseurs.
+ \item Savoir utiliser les critères de divisibilité.
+ \end{itemize}
+\end{CpsCol}
+
+}
+
+
 
 \begin{pageCours} 
 
 \section{La division euclidienne}
 
-\begin{Def}
+\begin{DefT}{La division euclidienne}\index{La division euclidienne}
 Effectuer la \textbf{division euclidienne} d'un nombre entier \textcolor{blue}{a} (le \textcolor{blue}{dividende}) par un nombre entier \textcolor{red}{b} (le \textcolor{red}{diviseur}) différent de 0, c'est trouver deux nombres entiers, le \textcolor{olive}{quotient, q} et le \textcolor{OliveGreen}{reste, r}, tels que : \(\textcolor{blue}{a}=\textcolor{olive}{q}\times\textcolor{red}{b}+\textcolor{OliveGreen}{r}\) avec $0\leq \textcolor{OliveGreen}{r}<\textcolor{red}{b}$.
-\end{Def}
+\end{DefT}
 
 \begin{Ex}
-On considère les nombres \textcolor{blue}{$83$} et \textcolor{red}{$12$}.
-
-\[\textcolor{blue}{83}=\textcolor{olive}{6}\times\textcolor{red}{12}+\textcolor{OliveGreen}{11}\]
-
-\textcolor{blue}{Dividende = $83$}\\
-\textcolor{red}{Diviseur = $12$}\\
-\textcolor{olive}{Quotient = $6$}\\
-\textcolor{OliveGreen}{Reste = $11$}
+La division euclidienne des nombres \textcolor{blue}{$83$} et \textcolor{red}{$12$} s'écrit : $\textcolor{blue}{83}=\textcolor{olive}{6}\times\textcolor{red}{12}+\textcolor{OliveGreen}{11}$ où 
+\textcolor{blue}{$83$} est le \textcolor{blue}{\textbf{dividende}},
+\textcolor{red}{$12$} est le \textcolor{red}{\textbf{quotient}},
+\textcolor{olive}{$6$} est le \textcolor{olive}{\textbf{diviseur}},
+\textcolor{OliveGreen}{$11$} est le \textcolor{OliveGreen}{\textbf{reste}}.
 \end{Ex}
 
 \section{Poser une division euclidienne}
@@ -72,7 +41,7 @@ On considère les nombres \textcolor{blue}{$83$} et \textcolor{red}{$12$}.
 Lorsque le calcul mental ne permet pas de compléter facilement l'égalité d'une division euclidienne, on peut poser la division :
 
 \begin{Ex}
-Division euclidienne de $273$ par $17$
+Division euclidienne de $273$ par $17$. Cette pose de l'opération s'appelle une \textbf{potence}\index{potence|Division}.
 \begin{equation*}
 \renewcommand{\arraystretch}{1.2}
 \renewcommand{\arraycolsep}{2pt}
@@ -89,27 +58,22 @@ Division euclidienne de $273$ par $17$
 \end{equation*}
 \end{Ex} 
 
-\section{Vérifier une division euclidienne}
 
 \begin{Mt}
-Pour vérifier un division euclidienne, il suffit de calculer l'opération :
+Pour vérifier une division euclidienne, il suffit de calculer l'opération : ( quotient × diviseur ) + reste. On doit retrouver le dividende.
 
-( quotient × diviseur ) + reste et de vérifier qu'on retrouve le dividende.
-
-\begin{Ex}
 En prenant l'exemple précédent, on peut vérifier que : $17\times16+1=273$
-\end{Ex}
 \end{Mt}
 
 \section{Multiples et diviseurs}
 
-\begin{Def}
+\begin{DefT}{Multiples et diviseurs}\index{Multiples}\index{diviseurs}
 Soit $a$ et $b$ deux nombres entiers positifs.
 
 Lorsque le reste dans la division euclidienne de $a$ par $b$ est égal à $0$, il existe alors un entier $q$ tel que $a=b\times q$.
 
-On dit que $a$ divise $b$ : que $b$ est un diviseur de $a$ ou que $a$ est un multiple de $b$.
-\end{Def}
+On dit que $a$ divise $b$ : que $b$ est un \textbf{diviseur} de $a$ ou que $a$ est un \textbf{multiple} de $b$.
+\end{DefT}
 
 \begin{Ex}
 \(42\div6=7\), autrement dit la division euclidienne de $42$ par $6$ a pour reste $0$ : \(42=6\times7+0\).\\
@@ -121,73 +85,453 @@ On dit que $a$ divise $b$ : que $b$ est un diviseur de $a$ ou que $a$ est un mul
     \item 7 est un \textbf{diviseur} de 42.
 \end{itemize}
 \end{Ex} 
+\end{pageCours} 
 
+\begin{pageAD} 
+ 
+
+\Sf{Connaitre le vocabulaire de la division euclidienne}
+ 
+  
+\begin{ExoCad}{Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+$19 = 3 \times 5 + 4$. 
+
+Le diviseur est $\ldots\ldots\ldots\ldots\ldots\ldots$, le quotient est $\ldots\ldots\ldots\ldots\ldots\ldots$ et le reste est $\ldots\ldots\ldots\ldots\ldots\ldots$.
+ 
+\end{ExoCad}
+
+  
+\begin{ExoCad}{Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+$26 = 4 \times 6 + 2$. 
+
+Le diviseur est $\ldots\ldots\ldots\ldots\ldots\ldots$, le quotient est $\ldots\ldots\ldots\ldots\ldots\ldots$ et le reste est $\ldots\ldots\ldots\ldots\ldots\ldots$.
+
+\end{ExoCad}
+
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+On sait que $4\,769 = 251 \times 19$. 
+
+Déterminer le reste de la division de $4\,772$ par $19$. \point{3}
+
+\end{ExoCad}
+
+
+
+
+\Sf{Savoir poser une division}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Calcule 
+
+\begin{minipage}{0.3\linewidth}
+\begin{equation*}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraycolsep}{2pt}
+  \begin{array}{rrrr|rrr}
+ & 4 & 2 & 6 &  & 8 \\
+\cline{5-7}
+  &   &   &  &  & \\
+
+    &  &   &   &   &   &  \\
+     &   &   &   &   &   &  \\
+    &&  &   &   &   &  \\
+  \end{array}
+\end{equation*}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\begin{equation*}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraycolsep}{2pt}
+  \begin{array}{rrrr|rrr}
+ & 6 & 0 & 8& 2 & 3 \\
+\cline{5-7}
+  &   &   &  &  & \\
+
+    &  &   &   &   &   &  \\
+     &   &   &   &   &   &  \\
+    &&  &   &   &   &  \\
+  \end{array}
+\end{equation*}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\begin{equation*}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraycolsep}{2pt}
+  \begin{array}{rrrr|rrr}
+ & 2  & 3 & 7 & 1 & 5 \\
+\cline{5-7}
+ & &  &  &  & \\
+    & &  &  &   &   &  \\
+    &  &  &  &   &   &  \\
+    &&  &  &   &   &  \\
+  \end{array}
+\end{equation*}
+\end{minipage}
+
+
+
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Paul a effectué trois calculs sur son brouillon mais il ne se rappelle plus ses calculs. Aide-le en reliant les bons calculs. \vspace{0.1cm}
+
+\begin{minipage}{0.3\linewidth}
+\begin{itemize}
+\item $363$
+\item $353$
+\item $354$
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.2\linewidth}
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\begin{itemize}
+\item $29 \times 12 + 5 $
+\item $12 \times 28 + 18 $
+\item $14 \times 25 + 13 $
+\end{itemize}
+\end{minipage}
+\end{ExoCad}
+
+\Sf{Déterminer un diviseur, un multiple}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+\begin{minipage}{0.6\linewidth}
+Un chocolatier range $3\,582$ chocolats dans des boites. Un boite contient 69 chocolats. Combien de boites peut-on remplir ?  \point{3}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+ \vspace{2cm}
+\end{minipage}
+
+\end{ExoCad}
+
+
+ 
+
+ 
+\end{pageAD}
+
+\begin{pageCours}
 \section{Critères de divisibilité}
 
-\subsection{Divisibilité par 2}
+\subsection{Divisibilité par 2}\index{Divisibilité par 2|Critères de divisibilité}
 
+\begin{minipage}{0.5\linewidth}
 \begin{Pp}
-Un nombre est divisible par \textbf{2} s'il est pair.
+Un nombre est divisible par \textbf{2} s'il se termine par $0$, $2$, $4$, $6$ ou $8$.
 \end{Pp}
-
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
 \begin{Ex}
-\(1024 = 512\times2\)
-\end{Ex} 
+$102\color{red}{4}$ se termine par $4$ donc $1024$ est pair donc $1024$ est divisible par $2$. en effet, $1024= 512\times2$
+ \end{Ex}
+\end{minipage}
 
-\subsection{Divisibilité par 3}
+\begin{DefT}{Nombre pair. Nombre impair}
+Un nombre entier divisible par 2 est dit \textbf{nombre pair}\index{Nombre pair}.
 
+Un nombre entier qui n'est pas divisible par 2 est dit \textbf{nombre impair}\index{Nombre impair}.
+\end{DefT}
+
+
+\subsection{Divisibilité par 3}\index{Divisibilité par 3|Critères de divisibilité}
+ 
+\begin{minipage}{0.5\linewidth}
 \begin{Pp}
 Un nombre est divisible par \textbf{3} lorsque la somme de ses chiffre est divisible par 3.
 \end{Pp}
-
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
 \begin{Ex}
-\(2067 \rightarrow 2+0+6+7=15\), or 15 est divisible par 3 (\(3\times5\)) donc 2067 est divisible par 3 : \(2067=3\times689\).
-\end{Ex}  
+Les chiffres de $2067$ sont $2$, $0$, $6$ et $7$. La somme des chiffres est : $2+0+6+7=15$, or $15$ est divisible par $3$ ($3\times5$) donc $2067$ est divisible par $3$ : \(2067=3\times689\).
+ \end{Ex}
+\end{minipage}
 
 \subsection{Divisibilité par 5}
 
+\begin{minipage}{0.5\linewidth}
 \begin{Pp}
-Un nombre est divisible par \textbf{5} lorsqu'on son chiffre des unités est 0 ou 5.
+Un nombre est divisible par \textbf{5} lorsqu'on son chiffre des unités est $0$ ou $5$.
 \end{Pp} 
-
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
 \begin{Ex}
-\(325 = 65\times5\)
+$32\color{red}{5}$ se termine par un $5$ donc $325$ est divisible par $5$. En effet, $325 = 65\times5$
 \end{Ex} 
+\end{minipage}
 
 \subsection{Divisibilité par 9}
 
+ 
+\begin{minipage}{0.5\linewidth}
 \begin{Pp}
 Un nombre est divisible par \textbf{9} lorsque la somme de ses chiffre est divisible par 9.
-\end{Pp}
-
+\end{Pp} 
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
 \begin{Ex}
-\(594 \rightarrow 5+4+9 = 18\), or 18 est divisible par 9 (\(9\times2\) donc 594 est divisible par 9 : \(594=66\times9\)
-\end{Ex}
-
-\subsection{Divisibilité par 10}
+Les chiffres de $594$ sont $5$, $4$ et $9$. La somme des chiffres est : $5+4+9 = 18$, or $18$ est divisible par $9$ ($9\times2$) donc $594$ est divisible par $9$. En effet, \(594=9\times66\).
+\end{Ex} 
+\end{minipage}
 
 \begin{Pp}
-Un nombre est divisible par \textbf{10} lorsque son chiffre des unités est 0.
+Tout nombre divisible par $9$ est divisible par $3$.
 \end{Pp}
 
+ 
+\subsection{Divisibilité par 10}
+
+
+\begin{minipage}{0.5\linewidth}
+\begin{Pp}
+Un nombre est divisible par \textbf{10} lorsque son chiffre des unités est $0$.
+\end{Pp} 
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
 \begin{Ex}
-$340=34\times10$
-\end{Ex}
+$34\color{red}{0}$ se termine  par $0$ donc $340$ est divisible par$10$. En effet, $340=34\times10$
+\end{Ex} 
+\end{minipage}
 
-% \section{Les savoir-faire du parcours}
+\begin{Pp}
+Tout nombre divisible par $10$ est divisible par $5$.
+\end{Pp}
 
-% \begin{CpsCol}
-% \begin{itemize}
-% \item Savoir déterminer le reste et le quotient de deux nombres.
-% \item Savoir déterminer si une égalité correspond à une division euclidienne.
-% \item Savoir déterminer le reste et le quotient d'après une égalité.
-% \item Savoir poser une division euclidienne.
-% \item Savoir vérifier une division euclidienne posée.
-% \item Savoir déterminer des multiples ou des diviseurs.
-% \item Savoir utiliser les critères de divisibilité.
-% \end{itemize}
-% \end{CpsCol}
-
-% \end{document}
 
 \end{pageCours} 
+
+
+
+
+\begin{pageAD} 
+ 
+
+\Sf{Connaitre le vocabulaire des opérations}
+ 
+  
+\begin{ExoCad}{Communiquer.}{1234}{2}{0}{0}{0}{0}
+
+ 
+\end{ExoCad}
+
+\Sf{Connaitre les règles de priorités}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ 
+\end{ExoCad}
+
+
+\Sf{Utiliser la distributivité}
+
+\begin{ExoCad}{Représenter. Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ 
+\end{ExoCad}
+
+ 
+\end{pageAD}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursu} 
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+\end{ExoCu}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+\end{ExoCu}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCu}
+
+
+\end{pageParcoursu}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{pageParcoursd} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ Un pack contient 6 bouteilles de 1,5 L de jus d’orange. Combien de gobelets de 20 cL, pleins à 
+ras bord, peut-on espérer servir ?  
+
+ 
+\end{ExoCd}
+
+\begin{ExoCd}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Pour remplir 4 aquariums identiques, 128 dm3 d’eau ont été nécessaires. Quelle quantité d’eau 
+faudrait-il pour remplir 10 aquariums de même volume que les précédents ?
+ 
+\end{ExoCd}
+
+
+\begin{ExoCd}{Calculer.}{1234}{0}{0}{0}{0}{0}
+Myriam a dépensé 85,56 € en frais d’essence ce mois-ci. Flora a dépensé trois fois moins 
+qu’elle ; à combien lui reviennent ses dépenses ? (Réponse : 85,56 € : 3 = 28,52 €.)
+\end{ExoCd}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+ 
+\end{pageParcoursd}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcourst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+ 
+ 
+
+
+\end{ExoCt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+ 
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+
+\end{ExoCt} 
+ 
+\end{pageParcourst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Brouillon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{pageBrouillon} 
+ 
+\ligne{32}
+
+
+
+\end{pageBrouillon}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Auto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAuto} 
+
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{ExoAuto}
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+  
+
+\end{ExoAuto}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+
+\end{pageAuto}

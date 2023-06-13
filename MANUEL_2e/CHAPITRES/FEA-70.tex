@@ -1,0 +1,31 @@
+
+Au cours de ses vacances, Vincent effectue une promenade en vélo. Le graphique ci-dessous indique la distance parcourue en fonction du temps.
+
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=0.5cm]
+\draw [color=cqcqcq,, xstep=0.5cm,ystep=2.0cm] (-0.22619172798194417,-1.537877030448518) grid (14.818271111514635,23.171115311838655);
+\draw[->,color=black] (-0.22619172798194417,0.) -- (14.818271111514635,0.);
+\foreach \x in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.,4.5,5.,5.5,6.,6.5,7.,7.5,8.,8.5,9.,9.5,10.,10.5,11.,11.5,12.,12.5,13.,13.5,14.,14.5}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-1.537877030448518) -- (0.,23.171115311838655);
+\foreach \y in {,2.,4.,6.,8.,10.,12.,14.,16.,18.,20.,22.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-0.22619172798194417,-1.537877030448518) rectangle (14.818271111514635,23.171115311838655);
+\draw [color=ffqqqq] (9.,0.)-- (10.5,14.);
+\draw [color=ffqqqq] (10.5,14.)-- (11.,14.);
+\draw [color=ffqqqq] (11.,14.)-- (11.502035262490187,22.049556406661356);
+\draw [color=ffqqqq] (11.502035262490187,22.049556406661356)-- (12.535054657867978,22.00618692565458);
+\draw [color=ffqqqq] (12.535054657867978,22.00618692565458)-- (13.,14.);
+\draw [color=ffqqqq] (13.,14.)-- (13.410494823442376,18.016194673031002);
+\draw [color=ffqqqq] (13.410494823442376,18.016194673031002)-- (14.47853182544314,0.);
+\end{tikzpicture}
+
+\begin{enumerate}
+\item Sur quelles périodes de temps Vincent s'éloigne-il de sa maison ?
+\item A 10h30, à quelle distance de sa maison se trouve-t-il ?
+\item Que se passe-t-il entre 9h30 et 10h00 ?
+\item Quelle est sa vitesse moyenne entre 10h et 11h ?
+\item Quelle est sa vitesse moyenne entre 12h et 12h30 ? Et entre 14h et 14h30 ?
+\end{enumerate}

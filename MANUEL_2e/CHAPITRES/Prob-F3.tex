@@ -1,0 +1,159 @@
+\begin{titre}[Probabilités]
+
+\Titre{Notion d'événement}{6}
+\end{titre}
+
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Déterminer l'intersection de deux événements
+\item[$\square$] Déterminer la réunion de deux événements
+\item[$\square$] Utiliser la relation fondamentale
+\end{description}
+\end{CpsCol}
+
+ 
+\begin{DefT}{Événement}\index{Événement}
+On appelle \textbf{événement} un sous-ensemble de l'univers, c'est à dire un ensemble qui réunit toutes les issues favorables à une action déterminée. Un événement est une partie de l'univers.
+\end{DefT}
+
+
+\begin{Rq}
+Une issue $x_i$ réalise un événement $A$ lorsque $x_i$ est un élément de $A$.
+\end{Rq}
+
+\begin{DefT}{Événement certain, Événement impossible} \index{Événements!Certain}\index{Événements!impossible}
+Un \textbf{événement certain} est un événement qui est réalisé par toutes ses issues.
+
+Un \textbf{événement impossible} est un événement qui n'est réalisé par aucune de ses issues.
+\end{DefT}
+
+\begin{Ex}
+Lorsqu'on lance un dé cubique équilibré dont les faces sont numérotées de 1 à 6, l'événement obtenir un 7 est un événement impossible. 
+
+L'événement "obtenir un nombre compris entre 1 et 6" est un événement certain. En effet, quelque soit la face obtenue, le nombre est compris entre 1 et 6.
+\end{Ex}
+
+
+\begin{DefT}{Événements incompatibles ou disjoints} \index{Événements!Incompatibles}\index{Événements!Disjoints see Événements!Incompatibles}
+Deux événements A et B sont dits \textbf{incompatibles} ou \textbf{disjoints} lorsqu'ils ne peuvent se réaliser en même temps,
+ou encore lorsque $A \cap B = \oslash$.
+\end{DefT}
+
+\begin{Ex}
+$A = \left\lbrace 1 ; 2 \right\rbrace $ et $C = \left\lbrace  3 ; 5 \right\rbrace$ sont disjoints.
+\end{Ex}
+
+
+\begin{DefT}{Événements contraires} \index{Événements!Contraires}
+Soit $\Omega$ un univers fini, $A$ et$ B$ deux événement inclus dans $\Omega$.
+$A$ et $B$ sont deux événements \textbf{contraires} lorsque $A \cap B = \oslash$ et $A \cup B = \Omega$. On note $B=\overline{A}$ ou $A=\overline{B}$.
+\end{DefT}
+
+\begin{Ex}
+Soit $\Omega =  \left\lbrace 1, 2, 3, 4, 5, 6 \right\rbrace $. $A = \left\lbrace1 ; 2\right\rbrace $ et $B = \left\lbrace 3 ; 4 ; 5 ; 6 \right\rbrace $ sont contraires et on note $A=\overline{B}$.
+\end{Ex}
+
+
+\begin{DefT}{Événement élémentaire} \index{Événement!élémentaire}
+Un \textbf{événement élémentaire} est un événement qui ne contient qu'une seule issue.
+\end{DefT}
+
+\begin{Ex}
+Lorsqu'on lance un dé cubique équilibré dont les faces sont numérotées de 1 à 6, l'événement obtenir un nombre pair plus petit que 3 est un événement élémentaire. L'événement ne contient que l'issue favorable 2. 
+\end{Ex}
+
+\mini{
+\Fl{1}{Prob-30bis} 
+}{
+\EPC{1}{Prob-15}{Modéliser. Calculer.} 
+}
+
+
+
+\begin{DefT}{Probabilité d'un événement} \index{Probabilité d'un événement}
+Soit $\Omega$ l'univers lié à une expérience aléatoire.
+A chaque partie $B$ de $\Omega$, on fait correspondre un nombre compris entre 0 et 1, appelé \textbf{probabilité} de cet
+événement $B$ tel que :
+\begin{description}
+\item[•] La somme des probabilités des événements élémentaires qui composent $\Omega$ est égale à 1.
+\item[•] La probabilité de $B$ est la somme des probabilités des événements élémentaires qui composent $B$.
+\item[•] La probabilité de l'événement impossible est 0. On note $p(B)$ la probabilité de l'événement $B$.
+\end{description}
+\end{DefT}
+
+
+\begin{Pp}[Relation fondamentale]
+Soit $\Omega$ l'univers lié à une expérience aléatoire et $A$ et $B$ deux événements de cet univers.
+$$p(A \cup B) = p(A) + p(B) – p(A \cap B)$$
+Si $A$ et $B$ sont incompatibles alors $p(A \cup B) = p(A) + p(B)$.
+\end{Pp}
+
+\begin{Pp}
+Soit $A$ un événement de $\Omega$ et $B$ son événement contraire. $p (A)+ p (B)=1$.
+\end{Pp}
+ 
+
+\mini{
+\EPC{1}{Prob-21}{Modéliser. Calculer.} 
+}{
+\EPC{0}{Prob-14}{Chercher.}
+}
+ 
+\mini{
+\EPC{1}{Prob-7}{Modéliser. Calculer.} 
+
+
+\EPC{1}{Prob-22}{Chercher.}
+
+\EPC{0}{Prob-3}{Chercher.}
+
+\EPC{1}{Prob-38}{Modéliser. }
+}{
+\EPC{1}{Prob-37}{Modéliser. }
+
+\EPC{1}{Prob-41}{Modéliser. }
+
+\EPC{1}{Prob-40}{Modéliser. }
+
+ \EPC{1}{Prob-39}{Modéliser. }
+}
+
+\begin{Pp}[Équiprobabilité]
+Lorsque tous les événements élémentaires ont la même probabilité, on dit qu'il y a équiprobabilité des
+issues.
+Dans ce cas, si l'univers $\Omega$ est composé de $n$ éventualités $\omega_i$ : $p(\omega_i)=\frac{1}{n}$
+
+La probabilité d'un événement composé de $k$ éventualités est égale à $p(A)=\frac{k}{n}$
+\end{Pp}
+
+
+
+
+
+
+\mini{
+
+\EPC{1}{Prob-33}{Modéliser. }
+
+\EPC{1}{Prob-34}{Modéliser. }
+
+
+
+
+\EPC{1}{Prob-35}{Modéliser. }
+
+}{
+
+
+
+\EPC{1}{Prob-36}{Modéliser. }
+
+\EPC{1}{Prob-10}{Chercher.}
+%\EPC{0}{Prob-30}{Modéliser. Calculer.} 
+}
+
+
+%\EPC{1}{Prob-13}{Chercher.}
+ 
+ 

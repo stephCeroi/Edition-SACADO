@@ -1,0 +1,27 @@
+
+\begin{enumerate}
+
+\item Lors d'un lancer d'un dé, quelle est la probabilité d'obtenir une face paire ?
+
+\item Mise en œuvre
+
+\begin{list}{}{}
+		\item Dans la cellule $A1$ écrire : Face 2
+		\item Dans la cellule $A2$ écrire : Face 4
+		\item Dans la cellule $A3$ écrire : Face 6
+		\item Dans la cellule $A4$ écrire : Fréquence
+		\item Dans la cellule $B5$ écrire : ech.1
+		\item Dans la cellule $B6$ écrire : = ALEA.ENTRE.BORNES(1;6). 
+		\item Glisser copier la cellule $B6$ jusqu'à la ligne 105 pour obtenir 100 lancers.
+		\item Dans la cellule $B1$ écrire : =NB.SI($B6:B105$;2)
+		\item Dans la cellule $B2$ écrire : =NB.SI($B6:B105$;4)
+		\item Dans la cellule $B3$ écrire : =NB.SI($B6:B105$;6)
+		\item Dans la cellule $B4$ faire calculer la somme des cellules $B1+B2+B3$ divisée par 100. 
+		\item Donner la signification du résultat de la cellule $B4$.
+	\end{list}
+
+La fréquence observée est-elle égale à la probabilité de la question 1 ?De plus, on note une fluctuation des résultats.
+\item Faire 50 simulations de ces 100 lancers. On pourra copier alors 50 fois la colonne B jusqu'à la colonne AY. On obtient alors 50 fréquences.
+\item Utiliser l'assistant graphique pour illustrer la situation par un nuage de points.
+\item Dans quel intervalle se situent au moins 95\% de ces fréquences ?
+\end{enumerate}

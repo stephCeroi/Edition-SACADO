@@ -1,0 +1,44 @@
+
+$ABCD$ est un carré de coté 1 et de centre O. $I$ est le milieu de $[OD]$ et $J$ est le milieu de $[AB]$.
+\begin{enumerate}
+\item Quelle est la nature du triangle $CIJ$ ?
+\item Justifier.
+\end{enumerate}
+
+\begin{center}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(1.84,-3.08) rectangle (6.6,1.92);
+\fill[color=qqqqff] (2.22,1.34) -- (6.22,1.34) -- (6.22,-2.66) -- (2.22,-2.66) -- cycle;
+\fill[color=ffqqqq,fill=ffqqqq,fill opacity=0.16] (6.22,-2.66) -- (3.22,-1.66) -- (4.22,1.34) -- cycle;
+\draw [color=qqqqff] (2.22,1.34)-- (6.22,1.34);
+\draw [color=qqqqff] (6.22,1.34)-- (6.22,-2.66);
+\draw [color=qqqqff] (6.22,-2.66)-- (2.22,-2.66);
+\draw [color=qqqqff] (2.22,-2.66)-- (2.22,1.34);
+\draw (2.22,1.34)-- (6.22,-2.66);
+\draw (6.22,1.34)-- (2.22,-2.66);
+\draw [color=ffqqqq] (6.22,-2.66)-- (3.22,-1.66);
+\draw [color=ffqqqq] (3.22,-1.66)-- (4.22,1.34);
+\draw [color=ffqqqq] (4.22,1.34)-- (6.22,-2.66);
+\begin{scriptsize}
+\draw [color=qqqqff] (2.22,1.34)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (2.36,1.7) node {$A$};
+\draw [color=qqqqff] (6.22,1.34)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (6.36,1.7) node {$B$};
+\draw [color=qqqqff] (6.22,-2.66)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (6.36,-2.3) node {$C$};
+\draw [color=qqqqff] (2.22,-2.66)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (1.94,-2.32) node {$D$};
+\draw [fill=uuuuuu] (4.22,-0.66) circle (1.5pt);
+\draw[color=uuuuuu] (4.2,-0.3) node {$O$};
+\draw [fill=uuuuuu] (3.22,-1.66) circle (1.5pt);
+\draw[color=uuuuuu] (3.22,-1.32) node {$I$};
+\draw [fill=uuuuuu] (4.22,1.34) circle (1.5pt);
+\draw[color=uuuuuu] (4.36,1.62) node {$J$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+

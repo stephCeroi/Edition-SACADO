@@ -1,0 +1,22 @@
+
+On donne le programme en Python ci dessous. 
+ 
+\begin{lstlisting}
+def is_in(x,a,b):
+    if x > a and x < b :
+    	test = "{} is in  ]{};{}[".format(x,a,b) 
+    else :
+        test = "{} is not in ]{};{}[".format(x,a,b) 
+    return test    
+x=int(input("Entrer un nombre  :")) 
+a=int(input("Entrer la borne inf :"))
+b=int(input("Entrer la borne sup :"))    
+print(is_in(x,a,b))
+\end{lstlisting}
+ 
+
+
+\begin{enumerate}
+\item Ouvrir le logiciel PyScripter et taper ce code. Que fait ce programme ? Vous pouvez aussi ouvrir en ligne l'éditeur Python : \url{https://www.tutorialspoint.com/execute_python_online.php}
+\item Modifier ce programme pour qu'il teste si un nombre $x$ appartient à l'intervalle $[a;b]$.
+\end{enumerate}

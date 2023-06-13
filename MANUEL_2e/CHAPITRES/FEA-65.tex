@@ -1,0 +1,29 @@
+
+La courbe de la fonction $f$ est représentée ci-dessous.
+
+\begin{center}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-3.4290909090909114,-2.2490909090909104) grid (2.261818181818179,3.4236363636363665);
+\draw[->,color=black] (-3.4290909090909114,0.) -- (2.261818181818179,0.);
+\foreach \x in {-3.,-2.,-1.,1.,2.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-2.2490909090909104) -- (0.,3.4236363636363665);
+\foreach \y in {-2.,-1.,1.,2.,3.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-3.4290909090909114,-2.2490909090909104) rectangle (2.261818181818179,3.4236363636363665);
+\draw[line width=1.2pt,color=zzttqq,smooth,samples=100,domain=-3.4290909090909114:2.261818181818179] plot(\x,{cos((4.0*((\x)+0.12)+4.0)*180/pi)+0.2*((\x)+0.12)^(3.0)+0.24181818181818215});
+\begin{scriptsize}
+\draw[color=zzttqq] (-3.2472727272727293,-8.194545454545459) node {$f$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item Lire graphiquement $f(-1)$.
+\item Lire graphiquement l'image de 1 et de 2.
+\item Déterminer le nombre de solutions de l'équation $f(x)=0$.
+\item Déterminer le nombre de solutions de l'équation $f(x)=m$, à discuter selon les valeurs de $m$.
+\end{enumerate}

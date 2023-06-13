@@ -1,0 +1,87 @@
+
+
+Soit $ABCD$ un parallélogramme. Les points $M$, $N$ et $O$ sont définis par :
+$$\overrightarrow{AM}=\frac{3}{2}\overrightarrow{AC}~~,~~ \overrightarrow{DN}=\frac{4}{3}\overrightarrow{DC}~~,~~
+\overrightarrow{AO}=-3\overrightarrow{AD}$$ 
+\begin{enumerate}
+\item Construire les points $M$, $N$ et $O$ sur une figure.
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-9.570239980077838,-7.459717658536598) rectangle (10.290094772523773,2.5647250731707056);
+\draw [line width=2.pt] (-3.,-1.)-- (3.,-1.);
+\draw [line width=2.pt] (3.,-1.)-- (5.,1.);
+\draw [line width=2.pt] (5.,1.)-- (-1.,1.);
+\draw [line width=2.pt] (-1.,1.)-- (-3.,-1.);
+\draw [->,line width=2.pt] (-3.,-1.) -- (1.,0.);
+\draw [->,line width=2.pt] (1.,0.) -- (5.,1.);
+\draw [->,line width=2.pt] (5.,1.) -- (9.,2.);
+\draw [->,line width=2.pt] (5.,1.) -- (7.,1.);
+\draw [->,line width=2.pt] (-1.,1.) -- (-3.,-1.);
+\draw [->,line width=2.pt] (-3.,-1.) -- (-5.,-3.);
+\draw [->,line width=2.pt] (-5.,-3.) -- (-7.,-5.);
+\draw [->,line width=2.pt] (-7.,-5.) -- (-9.,-7.);
+\begin{scriptsize}
+\draw [color=ududff] (-3.,-1.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (-3.8823909449181997,-0.8448424390244116) node {$A$};
+\draw [color=ududff] (3.,-1.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (3.3138379448694097,-0.24777531707319306) node {$B$};
+\draw [color=ududff] (5.,1.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (4.790793219192631,1.4177277073170487) node {$C$};
+\draw [color=uuuuuu] (-1.,1.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=uuuuuu] (-1.3684245205382488,1.480576878048756) node {$D$};
+\draw [color=ududff] (9.,2.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (9.221659042162294,2.454739024390218) node {$M$};
+\draw [color=ududff] (7.,1.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ududff] (7.524731705705828,0.7892359999999763) node {$N$};
+\draw [color=ududff] (-7.,-5.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw [color=ududff] (-9.,-7.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (-9.50739081946834,-6.532692390243916) node {$O$};
+\end{scriptsize}
+\end{tikzpicture}
+
+
+\item  Démontrer que $\overrightarrow{OM}=\frac{3}{2}\overrightarrow{AB}+\frac{9}{2}\overrightarrow{AD}$.
+
+on sait que $\overrightarrow{AO}=-3\overrightarrow{AD}$ donc $\overrightarrow{OA}= 3\overrightarrow{AD}$ 
+
+$\overrightarrow{OM}= \overrightarrow{OA} + \overrightarrow{AM} = 3\overrightarrow{AD}+ \overrightarrow{AM}
+= 3\overrightarrow{AD}+ \frac{3}{2}\overrightarrow{AC}$ Or $ABCD$ est un parallélogramme donc $\overrightarrow{AC} = \overrightarrow{AB} + \overrightarrow{AD}$ (Théorème du cours)
+
+
+$\overrightarrow{OM} 
+= 3\overrightarrow{AD}+ \frac{3}{2}\overrightarrow{AB}+ \frac{3}{2}\overrightarrow{AD} 
+= \frac{3}{2}\overrightarrow{AB} + \frac{6}{2}\overrightarrow{AD}+ \frac{3}{2}\overrightarrow{AD} 
+= \frac{3}{2}\overrightarrow{AB} + \frac{9}{2}\overrightarrow{AD}
+= \frac{3}{2}\overrightarrow{AB}+\frac{9}{2}\overrightarrow{AD}$
+
+\fbox{$\overrightarrow{OM}= \frac{3}{2}\overrightarrow{AB}+\frac{9}{2}\overrightarrow{AD}$}
+
+
+\item  Exprimer de même $\overrightarrow{MN}$ en fonction de $\overrightarrow{AB}$ et $\overrightarrow{AD}$.
+
+$\overrightarrow{MN} = \overrightarrow{MC} + \overrightarrow{CN} $
+
+Or $\overrightarrow{AM}=\frac{3}{2}\overrightarrow{AC}$ donc $\overrightarrow{AC} + \overrightarrow{CM}=\frac{3}{2}\overrightarrow{AC}\Longleftrightarrow \overrightarrow{CM}=\frac{1}{2}\overrightarrow{AC}$  [1]
+
+et 
+
+$\overrightarrow{DN}=\frac{4}{3}\overrightarrow{DC}$ donc $\overrightarrow{DC} + \overrightarrow{CN}=\frac{4}{3}\overrightarrow{DC}\Longleftrightarrow \overrightarrow{CN}=\frac{1}{3}\overrightarrow{DC}$  [2]
+
+
+De [1] et [2], $\overrightarrow{MN} = -\frac{1}{2}\overrightarrow{AC} + \frac{1}{3}\overrightarrow{DC} $
+
+$\overrightarrow{MN} = \frac{1}{3}\overrightarrow{AB} -\frac{1}{2}\overrightarrow{AC} = \frac{1}{3}\overrightarrow{AB} -\frac{1}{2}\left( \overrightarrow{AB} + \overrightarrow{AD}\right)$
+ 
+\fbox{$\overrightarrow{MN} = -\frac{1}{6}\overrightarrow{AB} -\frac{1}{2}\overrightarrow{AD}$}
+ 
+\item  Que peut-on en déduire pour les points $M$, $N$ et $O$ ?
+
+$\overrightarrow{OM}= \frac{3}{2}\overrightarrow{AB}+\frac{9}{2}\overrightarrow{AD}$
+et 
+$\overrightarrow{MN} = -\frac{1}{6}\overrightarrow{AB} -\frac{1}{2}\overrightarrow{AD}$.
+Donc $-9\overrightarrow{MN} = \overrightarrow{OM} $
+
+Les points $M$, $N$ et $O$ sont alignés.
+\end{enumerate}

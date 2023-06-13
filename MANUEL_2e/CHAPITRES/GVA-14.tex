@@ -1,0 +1,35 @@
+
+$ABCD$ est un rectangle. Le point $I$ est un milieu  du segment $[AB]$, le point $J$ est le milieu du segment $[CD]$. 
+
+\vspace{0.5cm}
+Déterminer les dimensions du rectangle pour que les droites $(AC)$ et $(DI)$ soient perpendiculaires.
+
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.52,-4.58) rectangle (5.56,0.78);
+\draw [shift={(1.6666666666666667,-2.6666666666666665)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (122.00538320808353:0.6) arc (122.00538320808353:218.65980825409014:0.6) -- cycle;
+\draw [color=ffqqqq] (0.,-4.)-- (5.,-4.);
+\draw [color=ffqqqq] (5.,-4.)-- (5.,0.);
+\draw [color=ffqqqq] (5.,0.)-- (0.,0.);
+\draw [color=ffqqqq] (0.,0.)-- (0.,-4.);
+\draw (0.,0.)-- (2.5,-4.);
+\draw (2.5,0.)-- (5.,-4.);
+\draw (5.,0.)-- (0.,-4.);
+\begin{scriptsize}
+\draw [color=qqqqff] (0.,-4.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (0.14,-3.64) node {$A$};
+\draw [color=qqqqff] (5.,-4.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (5.14,-3.64) node {$B$};
+\draw [color=qqqqff] (5.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (5.14,0.36) node {$C$};
+\draw [color=qqqqff] (0.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (0.14,0.36) node {$D$};
+\draw [color=uuuuuu] (2.5,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=uuuuuu] (2.64,0.36) node {$J$};
+\draw [color=uuuuuu] (2.5,-4.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=uuuuuu] (2.36,-4.32) node {$I$};
+\end{scriptsize}
+\end{tikzpicture}

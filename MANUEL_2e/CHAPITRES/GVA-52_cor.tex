@@ -1,0 +1,39 @@
+
+Soient $A$, $B$, $C$, $D$ et $E$ cinq points distincts du plan. Construire les vecteurs
+\begin{enumerate}
+\item $\overrightarrow{AB}+\overrightarrow{BC}$ en vert
+\item $\overrightarrow{AB}+\overrightarrow{CD}+\overrightarrow{AE}$ en bleu 
+\item $\overrightarrow{AE}+\overrightarrow{CD}-\overrightarrow{AB}=\overrightarrow{BE}+\overrightarrow{CD}$ en violet
+\end{enumerate}
+
+\newrgbcolor{ududff}{0.30196078431372547 0.30196078431372547 1.}
+\newrgbcolor{wwccqq}{0.4 0.8 0.}
+\newrgbcolor{wwqqcc}{0.4 0. 0.8}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-7.527642260269146,-5.0086)(6.8962400996108215,6.42994907317069)
+\psline[linewidth=2.pt]{->}(-3.,2.)(-0.7399329144432754,4.513049365853619)
+\psline[linewidth=2.pt]{->}(-0.7399329144432754,4.513049365853619)(4.722765347009236,2.1885475121951217)
+\psline[linewidth=2.pt,linecolor=wwccqq]{->}(-3.,2.)(4.722765347009236,2.1885475121951217)
+\psline[linewidth=2.pt,linecolor=red]{->}(4.722765347009236,2.1885475121951217)(-0.8342066553575256,-0.8919793170732047)
+\psline[linewidth=2.pt,linecolor=red]{->}(-0.7399329144432754,4.513049365853619)(-6.296904916810037,1.4325225365852927)
+\psline[linewidth=2.pt]{->}(-3.,2.)(1.0512681629274363,1.0877695609755735)
+\psline[linewidth=2.pt]{->}(-6.296904916810037,1.4325225365852927)(-2.245636753882601,0.5202920975608663)
+\psline[linewidth=2.pt,linecolor=blue]{->}(-3.,2.)(-2.245636753882601,0.5202920975608663)
+\psline[linewidth=2.pt]{->}(-0.7399329144432754,4.513049365853619)(1.051268162927436,1.0877695609755733)
+\psline[linewidth=2.pt]{->}(-0.8342066553575254,-0.8919793170732047)(0.9569944220131861,-4.317259121951251)
+\psline[linewidth=2.pt,linecolor=wwqqcc]{->}(4.722765347009236,2.1885475121951217)(0.9569944220131861,-4.317259121951251)
+\begin{scriptsize}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](-3.,2.)
+\rput[bl](-3.5367205615659745,1.9990825365853284){\ududff{$A$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](-0.7399329144432754,4.513049365853619)
+\rput[bl](-0.6142345932242814,4.70159687804874){\ududff{$B$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](4.722765347009236,2.1885475121951217)
+\rput[bl](4.853642379802111,2.376177560975572){\ududff{$C$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](-0.8342066553575254,-0.8919793170732047)
+\rput[bl](-1.399849100843016,-0.8919793170732048){\ududff{$D$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](1.051268162927436,1.0877695609755735)
+\rput[bl](1.3969385462796793,0.9934958048780126){\ududff{$E$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](-6.296904916810037,1.4325225365852927)
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](-2.245636753882601,0.5202920975608663)
+\end{scriptsize}
+\end{pspicture*}

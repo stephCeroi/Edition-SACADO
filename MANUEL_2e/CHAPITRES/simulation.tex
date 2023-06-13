@@ -1,0 +1,180 @@
+\documentclass[20pt]{article}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCourslycee}
+\input{../../../latex_preambule_style/styleExercices}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_seconde}
+\input{../../../latex_preambule_style/algobox}
+
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche  -----    0 n'affiche pas
+{%condition vraie
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+
+\textbf{Expérience :} \\
+On lance 3 dés cubiques équilibrés et on calcule la somme des faces obtenues. \\
+Sur 100 lancers, combien  de fois obtient-on une somme supérieure ou égale  à 14 ?
+\vspace{0.2cm}
+\hrule
+\vspace{1cm}
+
+\textbf{Expérience :} \\
+On lance 3 dés cubiques équilibrés et on calcule la somme des faces obtenues. \\
+Sur 100 lancers, combien  de fois obtient-on une somme supérieure ou égale  à 14 ?
+\vspace{0.2cm}
+\hrule
+\vspace{1cm}
+\textbf{Expérience :} \\
+On lance 3 dés cubiques équilibrés et on calcule la somme des faces obtenues. \\
+Sur 100 lancers, combien  de fois obtient-on une somme supérieure ou égale  à 14 ?
+\vspace{0.2cm}
+\hrule
+\vspace{1cm}
+\textbf{Expérience :} \\
+On lance 3 dés cubiques équilibrés et on calcule la somme des faces obtenues. \\
+Sur 100 lancers, combien  de fois obtient-on une somme supérieure ou égale  à 14 ?
+\vspace{0.2cm}
+\hrule
+\vspace{1cm}
+\textbf{Expérience :} \\
+On lance 3 dés cubiques équilibrés et on calcule la somme des faces obtenues. \\
+Sur 100 lancers, combien  de fois obtient-on une somme supérieure ou égale  à 14 ?
+\vspace{0.2cm}
+\hrule
+\vspace{1cm}
+\textbf{Expérience :} \\
+On lance 3 dés cubiques équilibrés et on calcule la somme des faces obtenues. \\
+Sur 100 lancers, combien  de fois obtient-on une somme supérieure ou égale  à 14 ?
+\vspace{0.2cm}
+\hrule
+\vspace{1cm}
+\textbf{Expérience :} \\
+On lance 3 dés cubiques équilibrés et on calcule la somme des faces obtenues. \\
+Sur 100 lancers, combien  de fois obtient-on une somme supérieure ou égale  à 14 ?
+\vspace{0.2cm}
+\hrule
+\vspace{1cm}
+\textbf{Expérience :} \\
+On lance 3 dés cubiques équilibrés et on calcule la somme des faces obtenues. \\
+Sur 100 lancers, combien  de fois obtient-on une somme supérieure ou égale  à 14 ?
+\vspace{0.2cm}
+\hrule
+\vspace{1cm}
+\textbf{Expérience :} \\
+On lance 3 dés cubiques équilibrés et on calcule la somme des faces obtenues. \\
+Sur 100 lancers, combien  de fois obtient-on une somme supérieure ou égale à 14 ?
+\vspace{0.2cm}
+\hrule
+\vspace{1cm}
+\textbf{Expérience :} \\
+On lance 3 dés cubiques équilibrés et on calcule la somme des faces obtenues. \\
+Sur 100 lancers, combien  de fois obtient-on une somme supérieure ou égale à 14 ?
+\vspace{0.2cm}
+\hrule
+\vspace{1cm}
+
+\newpage
+
+
+\textbf{Aide 1 : Algorithme}
+
+\textbf{Que fait ce pseudo-code ?}
+
+Choisir un nombre aléatoire entre 1 et 6\\
+Choisir un nombre aléatoire entre 1 et 6\\
+Choisir un nombre aléatoire entre 1 et 6\\
+Sommer les 3 nombres\\
+compteur = 0\\
+Si la somme est supérieure à égale à 14\\
+\hspace{1cm} Ajouter 1 à compteur \\
+Afficher  compteur  \\
+\vspace{0.2cm}
+\hrule
+\vspace{0.2cm}
+
+\textbf{Aide 2 : Python}
+
+\textbf{Les commandes}
+
+\begin{description}
+\item Pour obtenir des nombres aléatoires, il est nécessaire d'importer la bibliothèque random avec : \textit{import random}
+
+\item  \textit{Choisir un nombre aléatoire entre 1 et 6} se traduit par \textit{x=random.randint(1,6)}
+ 
+\item  \textit{un test si la somme est supérieure ou égale à 14 } se traduit par \textit{if  som > 13 \textbf{:}}   \\
+ 
+\item Pour itérer 100 fois une action, on utilise la boucle \textit{for i in range(100) :} 
+\end{description}
+\hrule
+\vspace{0.2cm}
+
+\textbf{Aide 3 : Python}
+
+ 
+
+Tester ce code puis le modifier pour obtenir l'action demandée.
+
+\begin{description}
+\item  import random
+\item  x = random.randint(1,6)
+\item  compteur = 0
+\item  if x > 5 :     
+\item  \hspace{1cm}  compteur +=1 
+\item  print(compteur)
+\end{description}
+\hrule
+\vspace{0.2cm}
+
+\textbf{Aide 1 : Tableur}
+
+\begin{enumerate}
+
+\item Lors d'un lancer d'un dé, quelle est la probabilité d'obtenir une face paire ?
+
+\item Mise en œuvre
+
+\begin{list}{}{}
+		\item Dans la cellule $A1$ écrire : Face 2
+		\item Dans la cellule $A2$ écrire : Face 4
+		\item Dans la cellule $A3$ écrire : Face 6
+		\item Dans la cellule $A4$ écrire : Fréquence
+		\item Dans la cellule $B5$ écrire : ech.1
+		\item Dans la cellule $B6$ écrire : = ALEA.ENTRE.BORNES(1;6). 
+		\item Glisser copier la cellule $B6$ jusqu'à la ligne 105 pour obtenir 100 lancers.
+		\item Dans la cellule $B1$ écrire : =NB.SI($B6:B105$;2)
+		\item Dans la cellule $B2$ écrire : =NB.SI($B6:B105$;4)
+		\item Dans la cellule $B3$ écrire : =NB.SI($B6:B105$;6)
+		\item Dans la cellule $B4$ faire calculer la somme des cellules $B1+B2+B3$ divisée par 100. 
+		\item Donner la signification du résultat de la cellule $B4$.
+	\end{list}
+
+La fréquence observée est-elle égale à la probabilité de la question 1 ?De plus, on note une fluctuation des résultats.
+\item Faire 50 simulations de ces 100 lancers. On pourra copier alors 50 fois la colonne B jusqu'à la colonne AY. On obtient alors 50 fréquences.
+\item Utiliser l'assistant graphique pour illustrer la situation par un nuage de points.
+\item Dans quel intervalle se situent au moins 95\% de ces fréquences ?
+\end{enumerate}
+
+
+
+
+\end{document}

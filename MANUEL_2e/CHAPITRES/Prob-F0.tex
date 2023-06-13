@@ -1,0 +1,88 @@
+\begin{titre}[Probabilités]
+
+\Titre{Mettre en ouvre une simulation}{1}
+\end{titre}
+
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Simuler une situation avec Python
+\end{description}
+\end{CpsCol}
+
+
+
+Python requiert des bibliothèques pour chaque utilisation particulière ( tkinter, math, ...). Pour travailler sur des probabilités et simuler avec la fonction random, il est nécessaire d'appeler la fonction random en début de programme avec  $$ \text{\color{orange}import \color{black} random}$$
+
+A l'inverse de la majorité des langages de programmation, Python a une syntaxe très simple. Il n'y a pas de point virgule ou accolade pour délimiter les blocs. Python utilise le système d'indentation. Il est donc impératif de bien placer les blocs par rapport à leur indentation.
+
+
+\subsubsection*{Simulation du lancé d'un dé}
+
+\color{orange} import \color{black} random
+
+x = random.randint(1,6)
+
+\color{purple} print \color{black}(x)
+
+
+
+\subsubsection*{Afficher une simulation de 50 lancers d'un dé à 6 faces}
+
+
+\color{orange} import \color{black} random
+
+\color{orange} for \color{black} i \color{orange} in \color{purple}range\color{black}(50):
+
+\hspace{0.4cm}     x = random.randint(1,6)
+ 
+\hspace{0.4cm}   \color{purple} print \color{black}(x)
+
+
+
+\subsubsection*{Applications}
+
+La probabilité d'obtenir une face lorsque la pièce n'est pas non truquée est égale à $\frac{1}{2}$. Ce résultat semble évident. On peut le simuler de la manière suivante.
+
+
+\subsection*{$n$ Lancers d'une pièce. L'approche fréquentiste de Bayès}
+
+On souhaite connaitre la fréquence de sortie de la face "Pile" lors de $n$ lancers d'une pièce. 
+
+On note 0 la face "Face" et 1 la face "Pile".
+
+Écrire un programme pour une valeur variable $n$.
+
+\begin{enumerate}
+\item Tester le programme pour $n=10$
+\item Tester le programme pour $n=1000$
+\item Tester le programme pour $n=1000000$
+\item Conclure
+\end{enumerate}
+
+%\vspace{0.4cm}
+%On pourra tester ce programme.
+%
+%\vspace{0.4cm}
+%
+%
+%
+%\color{orange} import \color{black} random
+%
+%n = \color{purple}int\color{black}(\color{purple}input\color{black}(\color{black}"Entrer le nombre de lancer "\color{black}))
+%
+%k = 0
+%
+%\color{orange} for \color{black} i \color{orange} in \color{purple}range\color{black}(n):
+%
+%\hspace{0.4cm}     x = random.randint(0,1)
+%
+%\hspace{0.4cm}   \color{orange} if \color{black} x = 1 :
+%
+%\hspace{0.8cm}   k=k+1
+%
+%f=k/n
+%
+%\color{purple} print \color{black}(f)
+
+

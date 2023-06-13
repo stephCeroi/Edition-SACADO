@@ -1,0 +1,35 @@
+
+$SABCD$ est une pyramide à base trapèze. 
+
+\begin{center}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.9cm,y=0.9cm]
+\clip(2.46,-3.32) rectangle (10.5,2.);
+\draw [dash pattern=on 1pt off 1pt,color=ffqqqq] (3.,-2.)-- (10.,-2.);
+\draw [color=ffqqqq] (3.,-2.)-- (5.,-3.);
+\draw [color=ffqqqq] (5.,-3.)-- (8.,-3.);
+\draw [color=ffqqqq] (8.,-3.)-- (10.,-2.);
+\draw [color=ffqqqq] (3.,-2.)-- (7.,1.);
+\draw [color=ffqqqq] (7.,1.)-- (5.,-3.);
+\draw [color=ffqqqq] (7.,1.)-- (8.,-3.);
+\draw [color=ffqqqq] (7.,1.)-- (10.,-2.);
+\begin{scriptsize}
+\draw [color=qqqqff] (3.,-2.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (3.14,-1.64) node {$A$};
+\draw [color=qqqqff] (5.,-3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (5.14,-2.64) node {$B$};
+\draw [color=qqqqff] (8.,-3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (8.14,-2.64) node {$C$};
+\draw [color=qqqqff] (10.,-2.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (10.14,-1.64) node {$D$};
+\draw [color=qqqqff] (7.,1.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (7.14,1.36) node {$S$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item Déterminer la section des plans $SAC$ et $SBC$.
+\item Déterminer la section des plans $SAB$ et $SDC$.
+\end{enumerate}

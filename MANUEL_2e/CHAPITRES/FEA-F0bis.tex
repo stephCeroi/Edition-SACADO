@@ -1,0 +1,131 @@
+\begin{titre}[Fonctions et expressions algébriques]
+
+\Titre{Distance entre deux nombres réels}{4}
+\end{titre}
+
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Notation $\vert a\vert$. Distance entre deux nombres réels
+\item[$\square$] Représentation de l'intervalle $[a-r;a+r]$ puis caractérisation par la condition $\vert x-	a\vert \leq r$.
+\item[$\square$] Donner un encadrement, d’amplitude donnée, d’un nombre réel par des décimaux.
+\end{description}
+\end{CpsCol}
+
+
+\paragraphe{Distance à 0}
+
+\begin{DefT}{Valeur absolue}
+Soit $M$ un point d'abscisse $x$ sur la droite graduée d'origine $O$ d'abscisse 0 et $x$ un réel.\\
+On note $\vert x \vert$ la distance de $M$ à $O$.\\
+L'écriture $\vert x\vert$ est appelée \textbf{valeur absolue} de $x$. On peut alors écrite : $OM = d(O,M)=\vert x\vert$
+\end{DefT}
+
+
+\vspace{0.4cm}
+
+\begin{Rq}
+\begin{enumerate}
+\item La valeur absolue d'un nombre se caractérise par la distance de ce nombre à 0.
+\item La valeur absolue d'un nombre est positive.
+\end{enumerate}
+\end{Rq}
+
+
+\begin{Ex}
+Sur cet exemple, $OA_1 = OA_2 = 5$. On peut écrire que $\vert -5 \vert = \vert 5 \vert = 5$. 
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5.479999999999998,
+xmax=6.080000000000007,
+ymin=-0.499999999999991,
+ymax=0.8400000000000013,
+xtick={-5.0,-4.0,...,6.0},
+ytick={-0.0,...,0.0},]
+\clip(-5.48,-1.02) rectangle (6.08,0.84);
+\begin{scriptsize}
+\draw [color=black] (-5.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (-4.81,0.42) node {$A_2$};
+\draw [color=black] (5.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (5.19,0.42) node {$A_1$};
+\draw [color=black] (0.,0.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (0.14,0.37) node {$O$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{Ex}
+
+\EPC{1}{FEA-78}{Représenter. Chercher.}
+
+
+\paragraphe{Distance entre deux nombres}
+
+\begin{DefT}{Généralisation. Distance entre deux nombres}
+Soit $a$ et $b$ deux réels.\\
+La distance entre $a$ et $b$ est égale à $\vert b-a\vert=\vert a-b\vert$. On peut écrire $d(a,b)=\vert b-a\vert=\vert a-b\vert$.
+\end{DefT}
+
+
+\begin{minipage}{0.48\linewidth}
+\EPC{1}{FEA-110}{Représenter.}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\EPC{1}{FEA-111}{Représenter. Raisonner}
+\end{minipage}
+
+
+
+
+\paragraphe{Appartenance d'un point à un segment}
+
+\begin{Th}
+$A$ et $B$ deux points de coordonnées $(a)$ et  $(b)$ sur la droite graduée. 
+
+Alors le milieu $I$ du segment $[AB]$ a pour abscisse $i=\frac{a+b}{2}$
+\end{Th}
+
+
+\EPCG{1}{FEA-79}{Représenter. Chercher.}
+
+\begin{ThT}{Appartenance d'un point à un segment}
+Soit $[AB]$ un segment, $I$ le milieu de $[AB]$ d'abscisse $i$ et $r = IA = IB$.\\
+Le segment $[AB]$ est l'ensemble des points $M$ d'abscisse $x$ de la droite graduée tels que $\vert x- i \vert \leq r$.
+\end{ThT}
+
+
+
+
+\EPC{1}{FEA-80}{Chercher. Communiquer.}
+
+\EPC{0}{FEA-81}{Représenter. Chercher.}
+
+ 
+\EPC{1}{FEA-82}{Représenter. Chercher.}
+ 
+\EPC{0}{FEA-82bis}{Représenter. Chercher.}
+ 
+
+
+
+
+\EPC{1}{FEA-84}{Représenter. Chercher.}
+
+
+
+
+\begin{His}
+
+\begin{wrapfigure}[12]{r}{2.6cm}
+\vspace{-7mm}
+\includegraphics[scale=0.3]{image_chapitres/Cantor.jpg}
+\unnumberedcaption{\textsc{G. F. L. P. Cantor}} 
+\end{wrapfigure}
+
+\textbf{Georg Ferdinand Ludwig Philipp Cantor} (3 mars 1845, Saint-Pétersbourg – 6 janvier 1918, Halle) est un mathématicien allemand, connu pour être le créateur de la théorie des ensembles. Il établit l'importance de la bijection entre les ensembles, définit les ensembles infinis et les ensembles bien ordonnés. Il prouva également que les nombres réels sont « plus nombreux » que les entiers naturels. En fait, le théorème de Cantor implique l'existence d'une « infinité d'infinis ». Il définit les nombres cardinaux, les nombres ordinaux et leur arithmétique. Le travail de Cantor est d'un grand intérêt philosophique...\PESP{https://fr.wikipedia.org/wiki/Georg\_Cantor}
+\end{His}

@@ -1,0 +1,64 @@
+
+Soit $f$ la fonction définie par $f(x)= 2-\frac{1}{x - 1}$.
+\begin{enumerate}
+\item Déterminer l'ensemble de définition $\mathscr{D}$ de $f$ .
+\item Démontrer que $f$ est une fonction homographique.
+\item Dresser le tableau de variations de $f$ sur $\mathscr{D}$.
+\item Résoudre $f(x)=3$.
+\item Résoudre $f(x)>0$.
+\item Déterminer les coordonnées du centre de symétrie de la courbe de $f$.
+\item Laquelle de ces courbes représentent la fonction $f$ ?
+
+\begin{minipage}{0.3\linewidth}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+\draw [color=cqcqcq,, xstep=0.7cm,ystep=0.7cm] (-4.218018493909193,-1.6141256626061267) grid (2.7429054105363053,3.546239258556136);
+\draw[->,color=black] (-4.218018493909193,0.) -- (2.7429054105363053,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-1.6141256626061267) -- (0.,3.546239258556136);
+\foreach \y in {-1.,1.,2.,3.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.218018493909193,-1.6141256626061267) rectangle (2.7429054105363053,3.546239258556136);
+\draw[color=ffqqqq,smooth,samples=100,domain=-4.218018493909193:-1.001] plot(\x,{2.0-1.0/((\x)+1.0)});
+\draw[color=ffqqqq,smooth,samples=100,domain=-0.99:2.7429054105363053] plot(\x,{2.0-1.0/((\x)+1.0)});
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7069837151037939cm,y=0.7069837151037939cm]
+\draw [color=cqcqcq,, xstep=0.7069837151037939cm,ystep=0.7069837151037939cm] (-2.6773340030585895,-1.8925626187839466) grid (4.394964683858037,4.233050417128092);
+\draw[->,color=black] (-2.6773340030585895,0.) -- (4.394964683858037,0.);
+\foreach \x in {-2.,-1.,1.,2.,3.,4.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-1.8925626187839466) -- (0.,4.233050417128092);
+\foreach \y in {-1.,1.,2.,3.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-2.6773340030585895,-1.8925626187839466) rectangle (4.394964683858037,4.233050417128092);
+\draw[color=ffqqqq,smooth,samples=100,domain=-2.6773340030585895:4.394964683858037] plot(\x,{2.0-1.0/((\x)-1.0)});
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+\draw [color=cqcqcq,, xstep=0.7cm,ystep=0.7cm] (-4.218018493909193,-1.6141256626061267) grid (2.7429054105363053,3.546239258556136);
+\draw[->,color=black] (-4.218018493909193,0.) -- (2.7429054105363053,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-1.6141256626061267) -- (0.,3.546239258556136);
+\foreach \y in {-1.,1.,2.,3.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.218018493909193,-1.6141256626061267) rectangle (2.7429054105363053,3.546239258556136);
+\draw[color=ffqqqq,smooth,samples=100,domain=-4.218018493909193:2.7429054105363053] plot(\x,{2.0+1.0/((\x)+1.0)});
+\end{tikzpicture}
+\end{minipage}
+
+\end{enumerate}

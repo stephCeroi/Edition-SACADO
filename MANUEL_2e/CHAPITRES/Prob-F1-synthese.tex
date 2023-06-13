@@ -1,0 +1,218 @@
+\begin{titre}[Probabilités]
+
+\Titre{Probabilité d'un événement}{1}
+\end{titre}
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Déterminer l'intersection de deux événements
+\item[$\square$] Déterminer la réunion de deux événements
+\item[$\square$] Utiliser la relation fondamentale
+\item[$\square$] Déterminer la probabilité dans des situations équiprobables
+\end{description}
+\end{CpsCol}
+
+
+\begin{DefT}{Épreuve}\index{Épreuve}
+On appelle \textbf{épreuve} ou expérience aléatoire, une situation soumise au hasard.
+On appelle \textbf{issue} le résultat d'une épreuve, notée $\omega$. L'ensemble des issues est l'\textbf{univers} noté $\Omega$.\index{Univers} \index{Issue}
+\end{DefT}
+
+\begin{Ex}
+\textit{Trois boules indiscernables au toucher et numérotées de 1 à 3 sont dans une urne. On tire une boule après l'autre.}
+
+L'\textbf{épreuve} est : le tirage des trois boules. Les boules indiscernables au toucher, l'expérience est soumise au hasard.
+
+Une \textbf{issue} est : (3,2,1)
+
+L'univers est : $\Omega = \lbrace (1,2,3),(1,3,2),(2,3,1),(2,1,3),(3,2,1),(3,1,2)\rbrace$. Lorsque l'univers ne peut être donnée dans son ensemble, on peut données quelques issues.
+
+\end{Ex}
+
+
+\begin{DefT}{Événement}
+On appelle événement un sous-ensemble de l'univers, c'est à dire un ensemble qui réunit toutes les issues favorables à une action déterminée.
+
+\textbf{Un évènement est un ensemble.}
+\end{DefT}
+
+
+\begin{Ex}
+
+Dans l'exemple précédent, on s'intéresse à l'événement A:"Obtenir un nombre qui se termine par 2".
+
+$\Omega = \lbrace (1,3,2),(3,1,2)\rbrace$
+\end{Ex}
+
+\begin{DefT}{Événement élémentaire}
+On appelle événement élémentaire, un événement qui ne continent qu'une seule issue.
+
+\end{DefT}
+
+
+\begin{Ex}
+
+Dans l'exemple précédent, on s'intéresse à l'événement B:"Obtenir un nombre qui se termine par 2 et qui commence par 3".
+
+$B = \lbrace(3,1,2)\rbrace$
+\end{Ex}
+
+
+\begin{Att}
+
+L'événement $A$ n'est pas un événement élémentaire.
+\end{Att}
+
+
+
+\begin{DefT}{Événements incompatibles ou disjoints} \index{Événements!Incompatibles}\index{Événements!Disjoints see Événements!Incompatibles}
+Deux événements A et B sont dits \textbf{incompatibles} ou \textbf{disjoints} lorsqu'ils ne peuvent se réaliser en même temps,
+ou encore lorsque $A \cap B = \oslash$.
+\end{DefT}
+
+\begin{Ex}
+$A = \left\lbrace 1 ; 2 \right\rbrace $ et $C = \left\lbrace  3 ; 5 \right\rbrace$ sont disjoints.
+\end{Ex}
+
+
+\begin{DefT}{Événements contraires} \index{Événements!Contraires}
+Soit $\Omega$ un univers fini, $A$ et$ B$ deux événement inclus dans $\Omega$.
+$A$ et $B$ sont deux événements \textbf{contraires} lorsque $A \cap B = \oslash$ et $A \cup B = \Omega$.
+\end{DefT}
+
+\begin{Ex}
+Soit $\Omega =  \left\lbrace 1, 2, 3, 4, 5, 6 \right\rbrace $. $A = \left\lbrace1 ; 2\right\rbrace $ et $D = \left\lbrace 3 ; 4 ; 5 ; 6 \right\rbrace $ sont contraires.
+\end{Ex}
+
+
+
+\begin{DefT}{Probabilité d'un événement} \index{Probabilité d'un événement}
+Soit $\Omega$ l'univers lié à une expérience aléatoire.
+A chaque partie $B$ de $\Omega$, on fait correspondre un nombre compris entre 0 et 1, appelé \textbf{probabilité} de cet
+événement $B$ tel que :
+\begin{description}
+\item[1] La somme des probabilités des événements élémentaires qui composent $\Omega$ est égale à 1.
+\item[2] La probabilité de $B$ est la somme des probabilités des événements élémentaires qui composent $B$. On note $p(B)$ la probabilité de l'événement $B$.
+\item[3] La probabilité d'un événement impossible est 0. 
+\end{description}
+\end{DefT}
+
+\begin{Ex}
+
+\textit{On dispose d'un dé pipé dont les faces sont numérotées de 1 à 6. Une étude statistique conduit à
+l'estimation suivante :}
+\begin{description}
+\item[•]  \textit{les faces de 1 et 2 ont la même probabilité p de sortie.}
+\item[•]  \textit{les faces de 3 à 5 ont la même probabilité 0,1 de sortie.}
+\item[•]  \textit{la face 6 à une probabilité de sortie égale à 0,3.}
+\end{description}
+\textit{Déterminer la probabilité de sortie des faces 1 et 2.}
+
+Soit $p_i$ la probabilité de la face numérotée $i$. Chaque face est une issue. L'événement "obtenir la face $i$" est un événement élémentaire puisque seule la face $i$ est une issue de cet événement.
+
+\begin{description}
+\item[1] On peut donc écrire $p_1+p_2+p_3+p_4+p_5+p_6=1$
+\item[2] On s'intéresse à l'événement $B$ :" obtenir un face paire". $B=\left\lbrace 2 ; 4 ; 6 \right\rbrace $ donc $p(B)=p_2+p_4+p_6$
+\item[3] Un événement impossible est $I$:"obtenir la face 7" donc $p(I)=0$.
+\end{description}
+\end{Ex}
+
+
+\begin{Pp}[Relation fondamentale]
+Soit $\Omega$ l'univers lié à une expérience aléatoire et $A$ et $B$ deux événements de cet univers.
+$$p(A \cup B) = p(A) + p(B) – p(A \cap B)$$
+Si $A$ et $B$ sont incompatibles alors $p(A \cup B) = p(A) + p(B)$.
+\end{Pp}
+
+
+
+\begin{Ex}
+
+Les événements $A$ et $B$ sont tels que $p(A)=0,3$; $p(B)=0,5$ et $ p(A \cup B)=0,2$. Calculer $p(A \cup B)$.
+
+Or, $p(A \cup B) = p(A) + p(B) – p(A \cap B) = 0,3 + 0,5 - 0,2 = 0,6$
+\end{Ex}
+
+\begin{Ex}
+
+Les événements $A$ et $B$ sont tels que $p(A)=0,6$; $p(B)=0,7$ et $ p(A \cup B)=0,9$. Calculer $p(A \cap B)$.
+
+Or, $p(A \cup B) = p(A) + p(B) – p(A \cap B) \Longleftrightarrow 0,9 = 0,6 + 0,7 - p(A \cap B) \Longleftrightarrow 0,9 = 1,3 - p(A \cap B) \Longleftrightarrow p(A \cap B)  = 1,3 - 0,9 = 0,4  $
+\end{Ex}
+
+
+
+\begin{Pp}
+Soit $A$ un événement de $\Omega$ et $B$ son événement contraire. $p (A)+ p (B)=1$. $B$ est alors noté $\overline{A}$
+\end{Pp}
+
+\begin{Ex}
+Dans un paquet de bonbons M\&M's, il y des bonbons bleus, rouges, verts, marrons, jaunes et oranges. On intéresse à l'événement $A$:" Obtenir un bonbon bleu". On sait que $p(A)=0,2$.
+
+$\overline{A}$ est l'événement :"Obtenir un bonbon d'une autre couleur que bleu". Or $p(A)+p\left(\overline{A}\right)=1$ donc $p\left(\overline{A}\right)=0,8$.
+\end{Ex}
+
+
+
+\begin{Pp}[Équiprobabilité]
+Lorsque tous les événements élémentaires ont la même probabilité, on dit qu'il y a équiprobabilité des
+issues.
+Dans ce cas, si l'univers $\Omega$ est composé de $n$ éventualités $\omega_i$ : $p(\omega_i)=\frac{1}{n}$
+
+La probabilité d'un événement composé de $k$ éventualités est égale à $p(A)=\frac{k}{n}$
+\end{Pp}
+
+
+\begin{Ex}
+\textit{On tire une carte dans un jeu de 32 cartes. On considère l'expérience soumise au hasard et les carte neuves.}
+\begin{enumerate}
+\item \textit{Quelle est la probabilité d'obtenir un Roi ?}
+\item \textit{Quelle est la probabilité d'obtenir un Trèfle ?}
+\item \textit{Quelle est la probabilité d'obtenir le Roi de Trèfle ?}
+\item \textit{Quelle est la probabilité d'obtenir un Roi ou un Trèfle ?}
+\end{enumerate}
+
+\begin{enumerate}
+\item Il y a 4 rois sur les 32 cartes.$p(R)=\frac{4}{32}=\frac{1}{8}$
+\item Il y a 8 Trèfle sur les 32 cartes.$p(T)=\frac{8}{32}=\frac{1}{4}$
+\item Il y a un seul roi de trèfle sur les 32 cartes. $p(R \cap)=\frac{1}{32}$
+\item $p(R \cup T)=p(R)+p(T)-p(R \cap T) = \frac{4}{32} + \frac{8}{32} - \frac{1}{32} =\frac{11}{32}$
+\end{enumerate}
+\end{Ex}
+
+
+\begin{Ex}
+\textit{Trois boules indiscernables au toucher et numérotées de 1 à 3 sont dans une urne. On tire une boule après l'autre.}
+
+\textit{L'univers est : $\Omega = \lbrace (1,2,3),(1,3,2),(2,3,1),(2,1,3),(3,2,1),(3,1,2)\rbrace$.}
+
+\textit{On appelle :}
+\begin{description}
+\item $A$:"le nombre commence par 1"
+\item $B$:"le nombre est impair"
+\end{description}
+
+\begin{enumerate}
+\item \textit{Décrire par une phrase $A \cap B$}.
+
+$A \cap B$ est l'événement "Obtenir un nombre impair qui commence par 1".
+
+\item \emph{Calculer} $p(A)$ \textit{et}  $p(B)$
+
+Par dénombrement de l'univers $\Omega$, $p(A) = \frac{2}{6}= \frac{1}{3}$.
+
+Par dénombrement de l'univers $\Omega$, $p(B) = \frac{3}{6}= \frac{1}{2}$.
+\item \textit{Calculer} $p(A \cap B)$.
+
+Par dénombrement de l'univers $\Omega$, $p(A\cap B) = \frac{1}{6}$.
+
+\item \textit{En déduire }$p(A \cup B)$. 
+
+$p(A \cup B) = p(A)+p(B)-p(A\cap B) =  \frac{2}{6} +  \frac{3}{6} -  \frac{1}{6} =  \frac{4}{6}=  \frac{2}{3}$
+
+
+On peut vérifier par dénombrement.
+\end{enumerate}
+\end{Ex}
+
+

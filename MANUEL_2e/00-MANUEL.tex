@@ -1,0 +1,252 @@
+\documentclass[openany]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Pour passer du manuel au cahier :
+%%  Dans le préambule choisir styleExercices ou styleCahier
+%%  1 imprime  -----     0 n'imprime pas 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCoursLycee}
+\input{../../../latex_preambule_style/styleExercices}
+%\input{../../latex_preambule_style/styleCahier}
+%\input{../../../latex_preambule_style/groupeEEMCP}
+\input{../../../latex_preambule_style/bas_de_page_vierge}
+\input{../../../latex_preambule_style/algobox}
+
+
+\usepackage{makeidx}
+\makeindex
+
+ 
+        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Impression conditionnelle :
+%%  1 imprime  -----     0 n'imprime pas 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def \impressionEleve {1}
+\def \impressionProf {0}
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime /    -----    0 n'imprime pas 
+{%condition vraie
+#2
+}% fin condition vraie
+{}
+} % fin de la procédure
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{page_de_couverture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{codes_exercices}
+%\include{00-progression_detaillee}
+%
+
+%
+%
+%\part{Les ensembles de nombres}
+%
+%\chapter{Les ensembles de nombres}
+%%
+%%%\include{Pyt-F0}
+%%
+%
+%%\chapter{Variations de fonctions}
+%%%%\intro{fusee}{Envoyer une fusée sur la lune n'est pas une mince affaire et le cout financier est excessivement important. Les calculs, la modélisation, le raisonnement sur des \textbf{expressions littérales} avant de lancer les satellites en orbite sont des phases de recherche obligatoires. C'est lorsque que tous les calculs littéraux sont validés que la fusée est acheminée sur son pas de tir. }
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% A décommener une fois
+%\include{FEA-F0}% Ensemble de nombres 
+%\include{FEA-F1}% Intervalles de R 
+%
+%\chapter{Distance et valeur absolue}
+% 
+%\include{FEA-F0bis}% Distance entre deux réels
+%%%%%%%%%%%%%%%%%%%%%%%\include{FEA-F1Ter} %Ensemble et intervalles
+%
+%\chapter{Fractions, puissances, racines carrés}
+% 
+%\include{FEA-F2ter} % Fractions
+%\include{FEA-F1Quart} % Les puissances 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\include{FEA-histoire}
+%\include{FEA-F2bis} % Racines carrées
+%
+%\chapter{Calcul littéral}
+%
+\include{FEA-F2} % Factorisation et développement
+%
+%
+% \chapter{Résolution d'équations, d'inéquations}
+% 
+%\include{FEA-F5bis} % Balayage
+%\include{FEA-F6} % Résolution d'équations et d'inéquations
+%\include{FEA-F7} % Systèmes d'équation
+%
+% \chapter{Arithmétique}
+% 
+%\include{FEA-F8} % Multiples et diviseur
+%\include{FEA-Synthese} %  Nombres et calculs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%\part{Les fonctions}
+%%##########\include{FEA-F3} % Exression et problèmes
+%%##########\include{FEA-histoire2}
+%%##########\chapter{Situations du premier degré}
+%
+%\chapter{Fonctions et expressions algébriques}
+%\impress{\impressionEleve}{\include{FEA-F4}}% Ensemble de définition et variables, Image et antécédent
+%%##########\include{FR-F00}% La fonction Carré + rep. graphique
+%\impress{\impressionEleve}{\include{FEA-F5}}% Résolution d'équation, d'inéquation, courbes
+%%##########\impress{\impressionProf}{\include{VF-intro-prof}} 
+%\impress{\impressionEleve}{\include{VF-F0}} %  séance 1  
+%%##########\impress{\impressionEleve}{\include{VF-F1-Ter-GGB}} % séance 6
+%%##########\impress{\impressionEleve}{\include{VF-F1}}%   Auto évaluation
+%%##########\impress{\impressionEleve}{\include{VF-F-synthese}} % séance 6
+%%##########\impress{\impressionProf}{\include{VF-F0-prof}} 
+%\impress{\impressionProf}{\include{VF-F2}}% TICE %Géogébra. Des figures pour conjecturer. Geogebra tube, partager. La double fenêtre.
+%
+%
+%\chapter{Fonctions affines}
+%
+%\include{FPD-F0}% La fonction affine + rep. graphique
+%\include{FPD-F1}% Signe de ax+b et tableau de signe
+%\include{FPD-F2}% Résoudre une équation se ramenant au premier degré
+%\include{FPD-F3}% Déterminer une équation de fonction affine - TICE
+%
+%
+%\chapter{Fonctions de référence}
+% 
+%\impress{\impressionEleve}{\include{FR-F0}}% La fonction Carré + rep. graphique
+%\impress{\impressionEleve}{\include{FR-F6}}% La fonction Cube + rep. graphique
+%\impress{\impressionEleve}{\include{FR-F1}}% La fonction Inverse + rep. graphique
+%\impress{\impressionEleve}{\include{FR-F7}}% La fonction Racine Carrée + rep. graphique
+%
+% \chapter{Techniques de résolution}
+%
+%\impress{\impressionEleve}{\include{FR-F2}}% Technique de résolution
+%
+%\impress{\impressionEleve}{\include{FR-F3}}% Algorithme de dichotomie
+%%##########\impress{\impressionEleve}{\include{FR-F4}}% Les fonctions du second degré => Discriminant
+%%##########\impress{\impressionEleve}{\include{VF-F3}}% Optimisation
+%%##########\impress{\impressionEleve}{\include{FR-F5}}% Les fonctions homographiques
+%
+%
+% 
+% 
+%%%##########\include{FR-F00}% La fonction Carré + rep. graphique
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Organisation et gestion de données   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+% \part{Statistiques et probabilités}
+%%
+% \chapter{Informations chiffrées}
+% 
+% \impress{\impressionEleve}{\include{IC-F0}}% Proportion
+% \impress{\impressionEleve}{\include{IC-F1}}% Taux d'évolutions
+% \impress{\impressionEleve}{\include{IC-F2}}% Evolutions successives
+%
+%
+%%
+% \chapter{Statistiques}
+%%
+%%Il y a 3 sortes de mensonges : les mensonges, les sacrés mensonges et les statistiques.
+%%
+%%\hfill{Mark Twain}
+%%
+%\impress{\impressionEleve}{\include{Stat-F0}}% Effectifs cumulés, fréquences cumulées 
+%%##########\impress{\impressionEleve}{\include{Stat-F0_cor}}% Effectifs cumulés, fréquences cumulées 
+% \impress{\impressionEleve}{\include{Stat-F1}}% Calcul de moyenne, écart type 
+%% \impress{\impressionEleve}{\include{Stat-F1_cor}}% Calcul de moyenne, de médiane  
+%  \impress{\impressionEleve}{\include{Stat-F1_bis}}% Calcul de médiane, de quartiles 
+%%\impress{\impressionEleve}{\include{Stat-F2}}% Représentation de statistiques en histogramme
+%%\impress{\impressionEleve}{\include{Stat-F3}}% Auto évaluation
+% \impress{\impressionEleve}{\include{Stat-calculatrice}}% 
+% \impress{\impressionEleve}{\include{Stat-tableur}}% 
+%%
+% \chapter{Probabilités}
+%%
+%%  \impress{\impressionEleve}{\include{Prob-F0}}% Mettre en ouvre une simulation
+%%   \impress{\impressionEleve}{\include{Prob-F2}}% Modéliser une situation
+%  \impress{\impressionEleve}{\include{Prob-F1}}% Equiprobabilité + simulation
+%    \impress{\impressionEleve}{\include{Prob-F3}}% Equiprobabilité + simulation
+%%########## \impress{\impressionEleve}{\include{Prob-fiche_eleve0}}% Equiprobabilité + simulation
+%%########## \impress{\impressionEleve}{\include{Prob-fiche_eleve}}% Equiprobabilité + simulation
+%
+%%########## \impress{\impressionEleve}{\include{Prob-F1-synthese}}% Equiprobabilité + simulation
+%%########## \impress{\impressionEleve}{\include{Prob-histoire}% Equiprobabilité + simulation
+%
+%\chapter{Échantillon et simulation}
+%
+%\impress{\impressionEleve}{\include{ES-F0}}% Intervalle de fluctuation + Prise de decision
+%%%##########\impress{\impressionEleve}{\include{ES-F1}}%  Intervalle de confiance + Prise de decision
+%%%
+%%%
+%%%
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Espace et géométrie   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\part{Géométrie}
+%
+%%\chapter{Espace}
+%%%\intro{pavage}{Dans les arts orientaux, les formes jouent un rôle essentiel. La composition de \textbf{translation}, \textbf{rotation}, \textbf{symétrie} de ces formes illumine certains des plus beaux palais du Moyen orient. 
+%%%
+%%%Escher a produit plus de 150 dessins en couleurs, dans lesquels s'imbriquaient des créatures qui rampaient, nageaient ou planaient, emplissant tout le plan. Sans entrer dans les détails mathématiques, notons que les œuvres d'Escher présentent souvent des transformations géométriques connues, telles la translation, la rotation, la réflexion ou l'homothétie.  }
+%%%
+%%##########\impress{\impressionEleve}{\include{GE-F2}}
+%%##########\impress{\impressionEleve}{\include{GE-F0}} % Patron, solide et perspective
+%%##########\impress{\impressionEleve}{\include{GE-F1}} % Intersections droites et plans
+%
+%
+%\chapter{Géométrie euclidienne}
+%%\intro{origami}{De simples pliages se redressent pour donner forme à des êtres, des animaux, des objets. La conception de pliage utilise la géométrie plane dans tous les sens. Les \textbf{triangles} \textit{scalène}, \textit{rectangle}, \textit{isocèle}, \textit{équilatéral} sont présents dans tous les origamis et participent à la création de ces solides nés de feuilles planes. }
+%
+%\include{GVA-F0} % Transformations du collège
+%\impress{\impressionEleve}{\include{GVA-F7}} % Projection orthogonale.
+%
+%
+%\chapter{Géométrie vectorielle et analytique}
+%%\impress{\impressionEleve}{\include{GVA-F1}} % Repérage plan
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   A décommenter une fois 
+%\impress{\impressionEleve}{\include{GVA-F4}} % Vecteurs, égalité, Chasles, construction
+%\impress{\impressionEleve}{\include{GVA-F2}} % Milieu
+%\impress{\impressionEleve}{\include{GVA-F3}} % Distance et coordonnées
+%\impress{\impressionEleve}{\include{GVA-F5}} % Somme de vecteurs, Multiplication d'un vecteur par un réel
+%%%########## \impress{\impressionEleve}{\include{GVA-F5_cor}}
+%\impress{\impressionEleve}{\include{GVA-F6}} % Colinéarité
+% 
+%
+%\chapter{Équations de droite}
+%%%##########\intro{origami}{De simples pliages se redressent pour donner forme à des êtres, des animaux, des objets. La conception de pliage utilise la géométrie plane dans tous les sens. Les \textbf{triangles} \textit{scalène}, \textit{rectangle}, \textit{isocèle}, \textit{équilatéral} sont présents dans tous les origamis et participent à la création de ces solides nés de feuilles planes. }
+%
+%\impress{\impressionEleve}{\include{ED-F0}} % Caractérisation
+%\impress{\impressionEleve}{\include{ED-F1}} % Alignement, parallélisme, intersection.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+%
+%%\chapter{Trigonométrie}
+%%\intro{origami}{De simples pliages se redressent pour donner forme à des êtres, des animaux, des objets. La conception de pliage utilise la géométrie plane dans tous les sens. Les \textbf{triangles} \textit{scalène}, \textit{rectangle}, \textit{isocèle}, \textit{équilatéral} sont présents dans tous les origamis et participent à la création de ces solides nés de feuilles planes. }
+%%
+%%##########\impress{\impressionEleve}{\include{Trig-F0}} % Le cercle trigonométrique
+%%##########\impress{\impressionEleve}{\include{Trig-F1}} % Cosinus et sinus
+%
+%\part{Informatique}
+%
+%\chapter{Algorithme et Programmation}
+%
+%\input{Python}
+%
+% \printindex
+%
+
+\end{document}

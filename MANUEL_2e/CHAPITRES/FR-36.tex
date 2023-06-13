@@ -1,0 +1,23 @@
+
+\begin{minipage}{0.48\linewidth}
+Déterminer une équation de la courbe d'une fonction du second degré tracée ci-contre.
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{center}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-1.3222741496598647,-1.2428763877023667) grid (3.225529467911194,4.233050417128092);
+\draw[->,color=black] (-1.3222741496598647,0.) -- (3.225529467911194,0.);
+\foreach \x in {-1.,1.,2.,3.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-1.2428763877023667) -- (0.,4.233050417128092);
+\foreach \y in {-1.,1.,2.,3.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-1.3222741496598647,-1.2428763877023667) rectangle (3.225529467911194,4.233050417128092);
+\draw [samples=50,rotate around={-180.:(1.,4.)},xshift=1.cm,yshift=4.cm,color=ffqqqq,domain=-4.0:4.0)] plot (\x,{(\x)^2/2/0.5});
+\end{tikzpicture}
+\end{center}
+\end{minipage}

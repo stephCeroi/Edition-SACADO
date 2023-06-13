@@ -1,0 +1,86 @@
+
+\begin{enumerate}
+\item Dans un repère \Oij, placer les points $A(2;1)$, $B(5;-1)$, $C(3;4)$, $D(4;-2)$. 
+\item Placer les points $M$, $N$ et $P$ tels que :
+\begin{enumerate}
+\item $\overrightarrow{AM}=\overrightarrow{AB}+\overrightarrow{CD}$
+\item $\overrightarrow{BN}=\overrightarrow{BA}+\overrightarrow{BC}+\overrightarrow{BD}$
+\item $\overrightarrow{CP}=\overrightarrow{AB}+\overrightarrow{AC}+\overrightarrow{BD}$
+\end{enumerate}
+
+\newrgbcolor{ududff}{0.30196078431372547 0.30196078431372547 1.}
+\newrgbcolor{wwccqq}{0.4 0.8 0.}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3.0967764372994666,-7.459717658536601)(9.441631104295539,7.152714536585331)
+\multips(0,-7)(0,1.0){15}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(-3.0967764372994666,0)(9.441631104295539,0)}
+\multips(-3,0)(1.0,0){13}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,-7.459717658536601)(0,7.152714536585331)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=2.,Dy=2.,ticksize=-2pt 0,subticks=2]{->}(0,0)(-3.0967764372994666,-7.459717658536601)(9.441631104295539,7.152714536585331)
+\psline[linewidth=2.pt]{->}(2.,1.)(5.,-1.)
+\psline[linewidth=2.pt,linecolor=red]{->}(3.,4.)(4.,-2.)
+\psline[linewidth=2.pt,linecolor=red]{->}(5.,-1.)(6.,-7.)
+\psline[linewidth=2.pt,linecolor=wwccqq]{->}(5.,-1.)(2.,1.)
+\psline[linewidth=2.pt]{->}(5.,-1.)(3.,4.)
+\psline[linewidth=2.pt]{->}(2.,1.)(0.,6.)
+\psline[linewidth=2.pt]{->}(5.,-1.)(4.,-2.)
+\psline[linewidth=2.pt]{->}(0.,6.)(-1.,5.)
+\psline[linewidth=2.pt]{->}(3.,4.)(6.,2.)
+\psline[linewidth=2.pt]{->}(6.,2.)(7.,5.)
+\psline[linewidth=2.pt]{->}(7.,5.)(6.,4.)
+\begin{scriptsize}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](2.,1.)
+\rput[bl](2.119703893288931,1.182043317073144){\ududff{$A$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](5.,-1.)
+\rput[bl](5.136463602544873,-0.7977055609756339){\ududff{$B$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](3.,4.)
+\rput[bl](3.1252904630409115,4.198803512195091){\ududff{$C$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](4.,-2.)
+\rput[bl](3.5338100070026535,-2.7774544390244116){\ududff{$D$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](6.,-7.)
+\rput[bl](6.110625591992103,-6.799801365853675){\ududff{$M$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](-1.,5.)
+\rput[bl](-1.494122841757248,5.015842731707285){\ududff{$N$}}
+\psdots[dotsize=3pt 0,dotstyle=+,linecolor=ududff](6.,4.)
+\rput[bl](5.607832307116113,4.45020019512192){\ududff{$P$}}
+\end{scriptsize}
+\end{pspicture*}
+
+
+
+
+
+
+\item Avec des coordonnées
+\begin{enumerate}
+\item Calculer les coordonnées des vecteurs $\overrightarrow{AB}$, $\overrightarrow{BC}$ et $\overrightarrow{BD}$.
+
+$\overrightarrow{AB} (x_B - x_A;y_B - y_A)$ soit  $\overrightarrow{AB} (5 - 2;-1 - 1)$ soit  $\overrightarrow{AB} (3;-2)$
+
+
+$\overrightarrow{BC} (x_C - x_B;y_C - y_B)$ soit  $\overrightarrow{BC} (3 - 5;4 + 1)$  soit  $\overrightarrow{BC} (-2;5)$
+
+
+$\overrightarrow{BD} (x_D - x_B;y_D - y_B)$ soit  $\overrightarrow{BD} (4 - 5;-2 +1)$ soit  $\overrightarrow{BD} (-1;-1)$
+
+
+$\overrightarrow{CD} (x_D - x_C;y_D - y_C)$ soit  $\overrightarrow{CD} (4 - 3;-2 -4)$ soit  $\overrightarrow{CD} (1;-6)$
+
+\item En déduire les coordonnées de $\overrightarrow{AM}$ , $\overrightarrow{BN}$ et $\overrightarrow{CP}$.
+
+
+$\overrightarrow{AM}=\overrightarrow{AB}+\overrightarrow{CD}$ donc $\overrightarrow{AM}(3+1;-2-6)$ donc $\overrightarrow{AM}(4;-8)$
+
+$\overrightarrow{BN}=\overrightarrow{BA}+\overrightarrow{BC}+\overrightarrow{BD}$ donc $\overrightarrow{BN}(-3-2-1;2+5-1)$ donc $\overrightarrow{BN}(-6;6)$
+ 
+$\overrightarrow{CP}=\overrightarrow{AB}+\overrightarrow{AC}+\overrightarrow{BD}$ donc $\overrightarrow{CP}(3+1-1;-2+3-1)$ donc $\overrightarrow{CP}(3;0)$
+
+\item En déduire les coordonnées de $M$, $N$ et $P$ par le calcul.
+$\overrightarrow{AM}(4;-8) \Longleftrightarrow x_M - x_A =4$ et $y_M - y_A =-8\Longleftrightarrow x_M - 2 =4$ et $y_M - 1 =-8\Longleftrightarrow x_M  =6$ et $y_M =-7$
+
+$\overrightarrow{BN}(-6;6)\Longleftrightarrow x_N - x_B =-6$ et $y_N - y_B =6\Longleftrightarrow x_M - 5 =-6$ et $y_M +1 =6\Longleftrightarrow x_N  =-1$ et $y_N =5$
+
+
+$\overrightarrow{CP}(3;0) \Longleftrightarrow x_P - x_C =3$ et $y_P - y_C =0\Longleftrightarrow x_P - 3 =3$ et $y_P - 4 =0\Longleftrightarrow x_P  =6$ et $y_P =4$
+
+\end{enumerate}
+
+\end{enumerate}

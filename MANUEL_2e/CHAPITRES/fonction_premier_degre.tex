@@ -1,0 +1,94 @@
+\documentclass[20pt]{article}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCourslycee}
+\input{../../../latex_preambule_style/styleExercices}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_seconde}
+\input{../../../latex_preambule_style/algobox}
+
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche  -----    0 n'affiche pas
+{%condition vraie
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+
+\subsection{Dessiner la représentation graphique d'une fonction affine}
+
+\Exe
+
+Soit $f$ définie sur $\R$ par $f(x)= \frac{1}{3}x+2$.
+
+\begin{enumerate}
+\item Déterminer les variations de $f$ sur son domaine de définition.
+\item Construire la représentation graphique de la fonction de  $f$.
+ \end{enumerate}
+
+\Exe
+
+Soit $f$ définie sur $\R$ par $f(x)= -\frac{2}{5}x-1$.
+
+\begin{enumerate}
+\item Déterminer les variations de $f$ sur son domaine de définition.
+\item Construire la représentation graphique de la fonction $f$.
+\end{enumerate}
+
+
+\subsection{Déterminer une fonction affine connaissant deux points et leurs images}
+
+\Exe 
+
+Soit $f$ une fonction affine telle que $f(4)=2$ et $f(6)=-1$. 
+\begin{enumerate}
+\item Déterminer les variations de $f$ sans effectuer de calcul.
+\item Déterminer la fonction $f$
+\end{enumerate}
+
+\Exe
+
+Construire un exercice sur le modèle précédent et donner sa correction.
+
+
+\subsection{Déterminer le signe de $ax+b$}
+
+\Exe
+
+Soit $f$ la fonction définie sur $\R$ par f(x)= $-3x+2$.
+Dresser le tableau de signe de $f$ sur son domaine de définition.
+
+\Exe
+
+Soit $f$ la fonction définie sur $[3;10]$ par f(x)= $\sqrt{5}x-2$.
+Dresser le tableau de signe de $f$ sur son domaine de définition.
+
+
+
+\subsection{Pour raisonner}
+
+\EPCNA{Raisonner. Chercher}
+
+Est-il possible de déterminer une fonction affine $f$ tel que la fonction $g$ définie par $g(x)=f(f(x))$ soit décroissante ?
+
+\EPCNA{Chercher. Calculer}
+
+En fonction des valeurs de $t$, étudier le signe de $f(x)=(3t^2-t)x+1$
+
+\end{document}

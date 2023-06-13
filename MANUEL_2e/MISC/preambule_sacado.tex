@@ -8,12 +8,12 @@
 \documentclass[dvipsnames,french,10pt]{book}
 
 \usepackage[
-paperheight=24cm, %hauteur du papier
-paperwidth=18cm, %largeur du papier
-left=2cm, %marge de gauche
-right=2cm, %marge de droite
-top=2.5cm, %marge du haut
-bottom=1.6cm, %marge du bas
+paperheight=29.7cm, %hauteur du papier
+paperwidth=21cm, %largeur du papier
+left=1cm, %marge de gauche
+right=1cm, %marge de droite
+top=1.5cm, %marge du haut
+bottom=1cm, %marge du bas
 %marginparsep=0pt, %distance entre le texte et les notes de marges 
 reversemp, %inverse l'emplacement de la marge
 headheight=20.60pt %hauteur du header
@@ -43,7 +43,8 @@ headheight=20.60pt %hauteur du header
 \usepackage{graphicx, multicol} % Enhanced support for graphics
 \graphicspath{{FIG/}{FIG/NetC_fractions_decimales/}{FIG/NetC_fractions/}{FIG/NetC_les_nombres_entiers/}{FIG/NetC_nombres_decimaux}}
 \usepackage{wrapfig}
-
+\usepackage{colortbl}
+\usepackage[framemethod=tikz]{mdframed}
 %\usepackage{xsavebox}
 % Il faudrait utiliser xsavebox à l'avenir pour réduire la taille du pdf
 
@@ -120,6 +121,7 @@ headheight=20.60pt %hauteur du header
 \tcbuselibrary{skins}
 \usetikzlibrary{quotes,babel,arrows.meta,shadows,decorations.pathmorphing,decorations.markings,patterns}
 \usepackage{tikzpagenodes}
+\usetikzlibrary{plotmarks}
 
 %%%%% Pour les symboles et les ensembles
 %\newcommand{\pp}{\leq}
@@ -266,6 +268,52 @@ l color=sacado_violet,r color=sacado_blue}
 }
 }
 
-
-
 %practice/frombook/<int:ide>/ pour accéder à un exercice depuis le livre.
+
+\usepackage{pythontex}
+\begin{pycode}
+import qrcode
+def qr(data):
+     fic=r"qrcodes/qr"+data+'.png'
+     urlcourte=r"sacado.xyz/b/"+data
+     urllongue=r"https://"+urlcourte
+     qr = qrcode.QRCode(version=1,
+error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)
+     qr.add_data(urlcourte)
+     qr.make(fit=True)
+     qr_image = qr.make_image(fill_color="black", back_color="white")
+     qr_image.save(fic)
+     return r"""\parbox{3.5cm}{\begin{center}
+\includegraphics{"""+fic+r"}\\{\scriptsize\tt "+urlcourte+r"}\end{center}}"
+\end{pycode}
+
+%\renewcommand{\qr}[1]{\py{qr("#1")}} % compilation complete
+%utiliser :
+%  pdflatex --shell-escape MANUEL_6e_V1.tex ; pythontex MANUEL_6e_V1.tex --interpreter python:python3 ; pdflatex --shell-escape % %MANUEL_6e_V1.tex
+
+%  draft
+\renewcommand{\qr}[1]{
+\parbox{5cm}{\begin{center}
+       \includegraphics{qrcodes/qrDummy.png}
+       %\\{\tt dummy}
+\end{center}}
+}
+
+\renewcommand{\miniqr}[1]{
+       \includegraphics[height=1cm]{qrcodes/qrDummy.png}
+       %\\{\tt dummy}}
+}
+
+
+\usepackage[absolute]{textpos}
+\newcommand{\qrHautDroite}[1]{
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+\begin{textblock}{3.51}(12.5,1.5){\qr{#1}}
+\end{textblock}
+}
+
+ 
+
+\usepackage{makeidx}
+\makeindex

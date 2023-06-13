@@ -1,0 +1,78 @@
+
+Soit $f$ la fonction définie sur $\R$ par $f(x)=x^2-2x-3$.
+\begin{enumerate}
+\item Déterminer les réels $a$ et $b$ tels que, pour tout réel $x$, $f(x)=(x -a)^2+b$.
+\item  En déduire la forme factorisée de $f$.
+\item  En déduire le tableau de variation de $f$ sur $\R$.
+\item  Résoudre $f (x )=-4$.
+\item  Résoudre $f (x )>0$.
+\item  On a tracé 3 courbes. Laquelle représente $f$ ? Justifier.
+
+\begin{minipage}{0.3\linewidth}
+\begin{center}
+Courbe 1
+
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-3.7353944365343046,-4.305682905658387) grid (1.7962197595317204,2.413928970099667);
+\draw[->,color=black] (-3.7353944365343046,0.) -- (1.7962197595317204,0.);
+\foreach \x in {-3.,-2.,-1.,1.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-4.305682905658387) -- (0.,2.413928970099667);
+\foreach \y in {-4.,-3.,-2.,-1.,1.,2.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-3.7353944365343046,-4.305682905658387) rectangle (1.7962197595317204,2.413928970099667);
+\draw [samples=50,rotate around={0.:(-1.,-4.)},xshift=-1.cm,yshift=-4.cm,color=ffqqqq,domain=-4.0:4.0)] plot (\x,{(\x)^2/2/0.5});
+\end{tikzpicture}
+
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+\begin{center}
+Courbe 2
+
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-1.712085888308811,-4.175745659442071) grid (3.485403960343828,2.321116651373728);
+\draw[->,color=black] (-1.712085888308811,0.) -- (3.485403960343828,0.);
+\foreach \x in {-1.,1.,2.,3.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-4.175745659442071) -- (0.,2.321116651373728);
+\foreach \y in {-4.,-3.,-2.,-1.,1.,2.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-1.712085888308811,-4.175745659442071) rectangle (3.485403960343828,2.321116651373728);
+\draw [samples=50,rotate around={0.:(1.,-4.)},xshift=1.cm,yshift=-4.cm,color=ffqqqq,domain=-4.0:4.0)] plot (\x,{(\x)^2/2/0.5});
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+\begin{center}
+Courbe 3
+
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-1.3222741496598647,-1.2428763877023667) grid (3.225529467911194,4.233050417128092);
+\draw[->,color=black] (-1.3222741496598647,0.) -- (3.225529467911194,0.);
+\foreach \x in {-1.,1.,2.,3.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-1.2428763877023667) -- (0.,4.233050417128092);
+\foreach \y in {-1.,1.,2.,3.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-1.3222741496598647,-1.2428763877023667) rectangle (3.225529467911194,4.233050417128092);
+\draw [samples=50,rotate around={-180.:(1.,4.)},xshift=1.cm,yshift=4.cm,color=ffqqqq,domain=-4.0:4.0)] plot (\x,{(\x)^2/2/0.5});
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+\item A l'aide du graphique ci-dessus, illustrer les réponses aux questions 1 à 5.
+
+
+\end{enumerate}

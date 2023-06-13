@@ -1,0 +1,425 @@
+\chapter{Éléments de géométrie}
+{https://sacado.xyz/qcm/parcours_show_course/0/117129}
+{
+
+
+ \begin{CpsCol}
+\textbf{Les savoir-faire du parcours}
+ \begin{itemize}
+ \item \textbf{Utiliser des nombres pour calculer et résoudre des problèmes}
+	\item[$\square$] Représenter un intervalle de la droite numérique. 
+	\item[$\square$]  Déterminer si un nombre réel appartient à un intervalle donné.
+ \end{itemize}
+ \end{CpsCol}
+
+}
+
+\begin{pageCours}
+
+ 
+
+\begin{DefT}{Intervalle fermé. Intervalle ouvert}\index{Intervalle}
+Un \textbf{intervalle fermé} de $\R$ est un sous-ensemble borné de $\R$, c'est à dire un ensemble de nombres compris entre deux valeurs réelles.
+ 
+Un \textbf{intervalle ouvert} de $\R$ est un sous-ensemble de $\R$ dont les bornes ne sont pas incluses dans l'ensemble, c'est à dire un ensemble de nombres compris entre deux valeurs réelles non comprises.
+\end{DefT}
+
+\begin{Ex}
+\begin{enumerate}
+\item On a représenté sur la droite des nombres réels tous les nombres réels $x$ tels que $-1 \leq x \leq 3$.
+
+\begin{center}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.390839866186475,0.) -- (7.64974334956303,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.390839866186475,-0.5880295569511441) rectangle (7.64974334956303,0.5863275715079787);
+\draw [line width=2.4pt,color=ffxfqq] (-1.,0.)-- (3.,0.);
+\draw [color=ffxfqq](-1.16,0.25) node[anchor=north west] {[};
+\draw [color=ffxfqq](2.85,0.25) node[anchor=north west] {]};
+\end{tikzpicture}
+ \end{center} 
+ 
+Cet intervalle est noté $[-1;3]$. Il est fermé.
+ \item On a représenté sur la droite des nombres réels tous les nombres réels $x$ tels que $-1 < x < 3$.
+
+\begin{center}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.390839866186475,0.) -- (7.64974334956303,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.390839866186475,-0.5295569511441) rectangle (7.64974334956303,0.563275715079787);
+\draw [line width=2.4pt,color=ffxfqq] (-1.,0.)-- (3.,0.);
+\draw [color=ffxfqq](-1.16,0.25) node[anchor=north west] {]};
+\draw [color=ffxfqq](2.85,0.25) node[anchor=north west] {[};
+\end{tikzpicture}
+ \end{center}
+Cet intervalle ouvert est noté $]-1;3[$. Il est ouvert.
+
+ \item On a représenté sur la droite des nombres réels tous les nombres réels $x$ tels que $x \geq -1$.
+
+
+\begin{center}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.390839866186475,0.) -- (7.64974334956303,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.390839866186475,-0.5880295569511441) rectangle (7.64974334956303,0.53275715079787);
+\draw [line width=2.4pt,color=ffxfqq] (-1.,0.)-- (8.,0.);
+\draw [color=ffxfqq](-1.16,0.25) node[anchor=north west] {[};
+\end{tikzpicture}
+ \end{center} 
+Cet ensemble est noté $[-1 ; +\infty[$, cet intervalle est semi-ouvert.
+\end{enumerate}
+\end{Ex}
+
+\begin{Rqs}
+\begin{enumerate}
+\item  $+ \infty$ se lit "plus l’infini". L'ensemble des nombres réels $\R$ est l’intervalle $]-\infty ; +\infty[ = \R$.
+\item Un intervalle est une partie de $\R$ "sans trou", en "un seul morceau".
+\item $+\infty$ et $-\infty$ ne sont pas des nombres. Ce ne sont que des notations (ce qui explique qu'ils soient toujours exclus).
+\item Les intervalles correspondants aux quatre premières lignes du tableau sont dits bornés.
+\item  Plus généralement, les différents types d'intervalles sont donnés dans le tableau ci-dessous (où $a$ et $b$ représentent deux réels, avec $a < b$).
+\end{enumerate}
+\end{Rqs}
+
+ 
+
+
+\begin{DefT}{Intersection}\index{Ensemble!Intersection}
+L'\textbf{intersection} de deux ensembles $A$ et $B$ est l'ensemble $A \cap B$ qui contient tous les éléments communs aux deux ensembles.
+\end{DefT}
+
+\begin{Rq}\index{Ensembles disjoints}
+Deux ensembles sont disjoints lorsque $A \cap B = \oslash$. $\oslash$ est l'ensemble vide.\index{Ensemble!vide}
+\end{Rq}
+
+
+\begin{DefT}{Réunion}\index{Ensemble!Réunion}
+La réunion de deux ensembles est l'ensemble $A \cup B$ qui contient tous les éléments des deux ensembles pris une seule fois.
+\end{DefT}
+
+\end{pageCours} 
+
+\begin{pageAD} 
+ 
+
+\Sf{Opérer avec les ensembles}
+ 
+  
+\begin{ExoCad}{Modéliser.}{1234}{0}{0}{0}{0}{0}
+
+Recopier et compléter le tableau.
+
+%\begin{tabular}{|c|c|c|}
+%\hline 
+%Intervalle & Inégalité & Représentation  \vplus \\ 
+%\hline 
+%$x\in \left[ -6 ; \frac{2}{7}\right]$ & $-6  \leq x \leq  \frac{2}{7} $  &  \vplus \\ 
+%\hline 
+% & $-3 \leq x <5$ &  \vplus  \\ 
+%\hline 
+%$x\in \left[ 5 ; 8 \right[ $  &  &  \vplus  \\ 
+%\hline 
+% &  & \definecolor{ffdxqq}{rgb}{1.,0.8431372549019608,0.}
+%\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%\draw[->,color=black] (-5.174092090680384,0.) -- (2.566282833730012,0.);
+%\foreach \x in {-5.,-4.,-3.,-2.,-1.,1.,2.}
+%\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+%\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+%\clip(-5.174092090680384,-0.4115875953650586) rectangle (2.566282833730012,0.4791698364123281);
+%\draw [line width=2.4pt,color=ffxfqq] (-4.,0.)-- (1.,0.);
+%\draw [color=ffdxqq](-4.122250584071695,0.25) node[anchor=north west] {]};
+%\draw [color=ffdxqq](0.9 ,0.25) node[anchor=north west] {]};
+%\end{tikzpicture}  \vplus \\ 
+%\hline 
+%\end{tabular} 
+ 
+\end{ExoCad}
+
+
+\begin{ExoCad}{Modéliser.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-12} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Modéliser.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-14} 
+ 
+\end{ExoCad}
+
+
+\begin{ExoCad}{Modéliser.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-16} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Modéliser.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-13} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-93} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Modéliser.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-94} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter. Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-83} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-92} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter. Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-83} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter. Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-83bis} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter. Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-16B} 
+ 
+\end{ExoCad}
+
+
+\begin{ExoCad}{Représenter. Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-14B} 
+ 
+\end{ExoCad}
+
+
+\begin{ExoCad}{Représenter. Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-12B} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter. Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-13B} 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter. Communiquer..}{1234}{0}{0}{0}{0}{0}
+
+\input{CHAPITRES/FEA-108} 
+ 
+\end{ExoCad}
+
+
+ 
+\end{pageAD}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageExercices} 
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCuN}{Représenter.}{2}{0}{0}{0}{0}
+
+Démontrer que $0,\underline{1}$ est un nombre rationnel à préciser.
+ 
+\end{ExoCuN}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCuN}{Représenter.}{2}{0}{0}{0}{0}
+Je suis un nombre à trois chiffres non nuls. Je suis divisible par 94. Changez l'ordre de mes chiffres et je deviens divisible par 49.
+Qui suis-je ? 
+\end{ExoCuN}
+
+
+\begin{ExoCdN}{Chercher.communiquer.}{2}{0}{0}{0}{0}
+ 
+Dans chaque cas, trouver, lorsque cela est possible, le nombre $x$ qui remplit les critères suivants :
+\begin{enumerate}
+\item $x \in \Q$ et $x \not\in \Z$
+\item $x \in \R$ et $x \not\in \N$. 
+\end{enumerate}
+\end{ExoCdN}
+
+\begin{ExoCdN}{Représenter. Raisonner.}{2}{0}{0}{0}{0}
+
+Démontrer que $\sqrt{2}$ est un irrationnel ou encore que $\sqrt{2} \in \R\setminus\Q$
+
+\end{ExoCdN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCtN}{Représenter.}{2}{1}{0}{0}{0}
+
+\begin{enumerate}
+\item Démontrer que $0,\underline{12}$ est un nombre rationnel à préciser.
+\item Démontrer que $0,\underline{485}$ est un nombre rationnel à préciser.
+\end{enumerate}
+\end{ExoCtN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCtN}{Raisonner.}{1}{0}{0}{0}{0}
+
+\begin{enumerate}
+\item Démontrer que tout entier $n$ multiple de $9$ est aussi un multiple de $3$.
+\item Démontrer que si $m$ est un multiple de $6$ alors $m$ est aussi un multiple de $3$.
+\end{enumerate}
+\end{ExoCtN}
+
+
+\begin{ExoCtN}{Représenter.}{1}{0}{0}{0}{0}
+
+Dans un pays où le système monétaire n’est constitué que de pièces de 3 et de 5, il s’agit d’aider les habitants en créant un programme  qui donne le nombre de pièces nécessaires à tout achat d’un montant entier supérieur ou égal à 8.
+
+\hfill{{\footnotesize Source : d’après PISA, items libérés}}
+
+\end{ExoCtN}
+
+
+\end{pageExercices}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\begin{pageParcoursd} 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+%
+%
+%\end{ExoCd}
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+%
+%
+%\end{ExoCd}
+% 
+%\end{pageParcoursd}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{pageParcourst}
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ExoCt}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+% 
+%\end{ExoCt}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+%
+% 
+%
+%\end{ExoCt}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+%
+% 
+%
+%\end{ExoCt} 
+% 
+%\end{pageParcourst}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Brouillon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{pageBrouillon} 
+ 
+\ligne{32}
+
+
+
+\end{pageBrouillon}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Auto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAuto} 
+
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{ExoAuto}
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+  
+
+\end{ExoAuto}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+
+\end{pageAuto}

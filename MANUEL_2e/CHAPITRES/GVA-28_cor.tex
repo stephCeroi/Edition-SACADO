@@ -1,0 +1,62 @@
+
+$ABCD$ est un parallélogramme.
+I et J sont les milieux respectifs des cotés [AB] et [CD].
+\begin{enumerate}
+\item Faire une figure
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-5.296497058631922,-1.9918398048780688) rectangle (5.3250110843733705,3.3189151219511923);
+\draw [line width=2.pt] (-3.2853239191279613,-1.2062251707317282)-- (1.145541903841702,-0.8919793170731921);
+\draw [line width=2.pt] (1.145541903841702,-0.8919793170731921)-- (4.,2.);
+\draw [line width=2.pt] (4.,2.)-- (-0.43086582296966297,1.6857541463414643);
+\draw [line width=2.pt] (-0.43086582296966297,1.6857541463414643)-- (-3.2853239191279613,-1.2062251707317282);
+\begin{scriptsize}
+\draw [color=ududff] (-3.2853239191279613,-1.2062251707317282)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (-4.165212167660944,-1.064814536585387) node {$A$};
+\draw [color=ududff] (1.145541903841702,-0.8919793170731921)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (1.3340893856701985,-1.1905128780488015) node {$B$};
+\draw [color=ududff] (4.,2.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (4.225150773707142,2.454739024390218) node {$C$};
+\draw [color=uuuuuu] (-0.43086582296966297,1.6857541463414643)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=uuuuuu] (-0.2057150492625215,2.140493170731682) node {$D$};
+\draw [fill=uuuuuu] (-1.0698910076431296,-1.0491022439024602) circle (2.0pt);
+\draw[color=uuuuuu] (-0.8342066553575093,-0.5305965853658756) node {$I$};
+\draw [fill=uuuuuu] (1.7845670885151685,1.8428770731707322) circle (2.0pt);
+\draw[color=uuuuuu] (1.9940055720699357,2.360465268292657) node {$J$};
+\end{scriptsize}
+\end{tikzpicture}
+
+
+\item Démontrer que $\overrightarrow{AJ}=\overrightarrow{IC}$. Que peut on déduire des droites $(AJ)$ et $(IC)$ ?
+
+
+$I$ est le milieu de $[AB]$ donc $\overrightarrow{AI}=\frac{1}{2}\overrightarrow{AB}$
+$J$ est le milieu de $[CD]$ donc $\overrightarrow{JC}=\frac{1}{2}\overrightarrow{DC}$
+
+Or $ABCD$ est un parallélogramme donc $\overrightarrow{AB}=\overrightarrow{DC}$
+
+Ainsi,
+
+$\overrightarrow{JC}=\frac{1}{2}\overrightarrow{DC}=\frac{1}{2}\overrightarrow{AB}=\overrightarrow{AI}$
+
+Donc \fbox{$JCIA$ est un parallélogramme donc $(AJ)$ et $(IC)$ sont parallèles.}
+
+\item Démontrer de façon analogue que les droites $(DI)$ et $(JB)$ sont parallèles.
+
+$I$ est le milieu de $[AB]$ donc $\overrightarrow{IB}=\frac{1}{2}\overrightarrow{AB}$
+$J$ est le milieu de $[CD]$ donc $\overrightarrow{DJ}=\frac{1}{2}\overrightarrow{DC}$
+
+Or $ABCD$ est un parallélogramme donc $\overrightarrow{AB}=\overrightarrow{DC}$
+
+Ainsi,
+
+$\overrightarrow{DJ}=\frac{1}{2}\overrightarrow{DC}=\frac{1}{2}\overrightarrow{AB}=\overrightarrow{IB}$
+
+Donc \fbox{$DJBI$ est un parallélogramme donc $(DI)$ et $(JB)$ sont parallèles.}
+
+
+
+
+\end{enumerate}

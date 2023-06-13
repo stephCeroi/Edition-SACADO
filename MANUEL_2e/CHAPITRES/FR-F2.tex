@@ -1,0 +1,94 @@
+\begin{titreTice}[Fonctions de référence]
+
+\Titre{Technique de résolution}{0}
+\end{titreTice}
+
+
+\begin{CpsCol}
+\textbf{Variations de fonctions}
+\begin{description}
+\item[$\square$] Résoudre une équation ou une inéquation avec la fonction Carré
+\item[$\square$] Résoudre une équation ou une inéquation avec la fonction Inverse
+\end{description}
+\end{CpsCol}
+
+
+Le but de cette activité est de connaitre les grands principes de calcul algébrique avec la fonction Inverse et la fonction Carré. 
+\subsection*{La fonction Carré}
+
+\subsubsection*{Résolution d'équation du type $ax^2=k$,$k,a \in \R$}
+
+\subsubsection*{Un exemple : Résolution de $x^2=5$}
+$x^2=5 \Longleftrightarrow x^2-5 = 0 \Longleftrightarrow \left(x-\sqrt{5} \right)\left(x+\sqrt{5} \right) = 0 \Longleftrightarrow x=\sqrt{5}$ ou $x+\sqrt{5} =0$. \fbox{$S=\left\lbrace \sqrt{5};- \sqrt{5} \right\rbrace $}
+\subsubsection*{Applications}
+\begin{list}{•}{}
+\item $x^2-12 = 0$
+\item $x^2-16 = 0$
+\item $5x^2-10 = 0$
+\end{list}
+
+
+\subsubsection*{Cas général}
+
+$x^2=k \Longleftrightarrow x^2-k = 0 \Longleftrightarrow \left(x-\sqrt{k} \right)\left(x+\sqrt{k} \right) = 0 \Longleftrightarrow x=\sqrt{k}$ ou $x+\sqrt{k} =0$. \fbox{$S=\left\lbrace \sqrt{k};- \sqrt{k} \right\rbrace $}
+
+
+\subsection*{Résolution d'inéquation du type $ax^2\leq k$ ou $ax^2\geq k$  ,$k, a \in \R$}
+
+\subsubsection*{Un exemple}
+$x^2 \geq 10 \Longleftrightarrow x^2-10 \geq 0 \Longleftrightarrow \left(x-\sqrt{10} \right)\left(x+\sqrt{10} \right) \geq 0$. 
+
+On utilise alors un tableau de signe.
+
+\begin{tabular}{|c|ccccccc|}
+\hline 
+$x$ & $-\infty$ & & $-\sqrt{10}$ &  & $\sqrt{10}$ &  & $+\infty$ \\ 
+\hline 
+$x-\sqrt{10}$ & & $-$ &  & $-$ & 0 & + &  \\ 
+\hline 
+$x+\sqrt{10}$ &  & $-$ & 0 & + &  & + &  \\ 
+\hline 
+$(x+\sqrt{10})(x-\sqrt{10})$ &  & + &  & $-$ &  & + &  \\ 
+\hline 
+\end{tabular} 
+\fbox{$S=\left] -\infty;\sqrt{10} \right] \cup - \left[\sqrt{10};+\infty \right[ $}
+
+\subsubsection*{Applications}
+\begin{list}{•}{}
+\item $3x^2-12 > 0$
+\item $x^2-16 \leq 0$
+\item $9x^2 - 25  \geq 0$
+\end{list}
+
+\subsection*{La fonction Inverse}
+
+\subsubsection*{Résolution d'équation du type $\frac{a}{x}=b$,$a$ non nul, $x \neq 0$}
+
+\subsubsection*{Un exemple : Résolution de $\frac{3}{x}=7$ , $x \neq 0$}
+
+$\frac{3}{x}=7 \Longleftrightarrow 3=7x \Longleftrightarrow  x=\frac{3}{7}$. \fbox{$S=\left\lbrace \frac{3}{7} \right\rbrace $}
+
+\subsubsection*{Applications}
+\begin{list}{•}{}
+\item $\frac{5}{x}=7$
+\item $\frac{7}{x+2}=4$
+\item $\frac{6}{1-x}=5$
+\end{list}
+
+
+\subsubsection*{Cas général : Résolution de $\frac{a}{x}=b$ , $x \neq 0$ et $a \neq 0$ }
+
+$\frac{a}{x}=b \Longleftrightarrow a=bx $. 
+
+\begin{list}{•}{}
+\item Si $b =0$, S= $\oslash$
+\item Sinon S=$\left\lbrace \frac{a}{b} \right\rbrace $
+\end{list}
+
+\subsubsection*{Résolution d'inéquation du type $\frac{a}{x} \leq b$ ou $\frac{a}{x} \geq b$ , $x \neq 0$}
+
+$\frac{a}{x} \leq b \Longleftrightarrow \frac{a}{x} - b \leq 0 \Longleftrightarrow \frac{a-bx}{x} \leq 0  $.
+
+On utilise alors un tableau de signe dans lequel on étudie les lignes de $a-bx$ et $x$.
+
+

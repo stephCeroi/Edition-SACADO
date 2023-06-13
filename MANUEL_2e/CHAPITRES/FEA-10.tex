@@ -1,0 +1,48 @@
+
+On choisit un nombre entier naturel $A$. 
+
+Si $A$ est pair, on le divise par 2 ; 
+
+si $A$ est impair, on calcule $3n+1$ puis on recommence avec le nombre obtenu et ainsi de suite. 
+
+\vspace{0.5cm}
+
+On construit ainsi la suite $(u_n)$ telle que :
+
+$\left\lbrace \begin{tabular}{cc}
+$u_{n+1}=\frac{u_n}{2}$ & si $u_n$ est pair \\ 
+$u_{n+1}=3u_n+1$ & si $u_n$ est pair est impair\\  
+\end{tabular} \right. $
+
+\vspace{0.5cm}
+
+
+On définit alors :
+\begin{description}
+\item[Le temps de vol :] c'est le plus petit indice $n$ tel que $u_n = 1$. Il est de 17 pour la suite de Syracuse 15 et de 46 pour la suite de Syracuse 127.
+\item[l'altitude maximale  :] c'est la valeur maximale de la suite. Elle est de 160 pour la suite de Syracuse 15 et de 4372 pour la suite de Syracuse 127.
+\end{description}
+
+\vspace{0.5cm}
+
+\begin{Ex}
+Vous avez choisi le nombre : 12\\
+6.0 - 3.0 - 10.0 - 5.0 - 16.0 - 8.0 - 4.0 - 2.0 - 1.0\\
+Le temps de vol est \textbf{9} et l'altitude est \textbf{16}.
+\end{Ex}
+
+
+
+\vspace{0.5cm}
+
+Programmer : 
+\begin{enumerate}
+\item le temps de vol.
+\item l'altitude maximale.
+\end{enumerate}
+
+
+
+
+\href{https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse}{>> En savoir plus}
+

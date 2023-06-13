@@ -1,0 +1,48 @@
+
+\begin{enumerate}
+\item Lire les coordonnées dans le repère \Oij des vecteurs $\vec{u}$,  $\vec{v}$ et  $\vec{w}$.
+\item  Construire le représentant d’origine $F$ du vecteur  $\vec{u}$, puis le représentant d’origine $G$ du vecteur  $\vec{w}$ .
+\item  Construire le représentant d’extrémité $H$ du vecteur  $\vec{u}$.
+\end{enumerate}
+
+
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6430868167202571cm,y=0.6430868167202571cm]
+\draw [color=cqcqcq,, xstep=0.6430868167202571cm,ystep=0.6430868167202571cm] (-4.12,-1.6) grid (8.32,7.48);
+\draw[->,color=black] (-4.12,0.) -- (8.32,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.,8.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-1.6) -- (0.,7.48);
+\foreach \y in {-1.,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.12,-1.6) rectangle (8.32,7.48);
+\draw [->,color=qqqqff] (3.,1.) -- (2.,4.);
+\draw [->,color=qqqqff] (-2.,1.) -- (1.,2.);
+\draw [->,color=qqqqff] (4.,5.) -- (2.,4.);
+\draw [color=qqqqff](-0.94,2.18) node[anchor=north west] {$\vec u$};
+\draw [color=qqqqff](2.82,5.26) node[anchor=north west] {$\vec w$};
+\draw [color=qqqqff](2.66,3.) node[anchor=north west] {$\vec v$};
+\begin{scriptsize}
+\draw [color=ffqqqq] (3.,1.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (3.14,1.24) node {$A$};
+\draw [color=ffqqqq] (2.,4.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (2.14,4.24) node {$B$};
+\draw [color=ffqqqq] (-2.,1.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (-1.86,1.24) node {$C$};
+\draw [color=ffqqqq] (1.,2.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (1.14,2.24) node {$D$};
+\draw [color=ffqqqq] (4.,5.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (4.14,5.24) node {$E$};
+\draw [color=ffqqqq] (-2.,3.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (-1.86,3.24) node {$F$};
+\draw [color=ffqqqq] (5.,2.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (5.14,2.24) node {$G$};
+\draw [color=ffqqqq] (1.,5.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (1.14,5.24) node {$H$};
+\end{scriptsize}
+\end{tikzpicture}
+
+

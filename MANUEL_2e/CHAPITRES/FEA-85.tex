@@ -1,0 +1,65 @@
+
+
+Le balayage est une méthode pour trouver une valeur approchée particulièrement facile à implémenter. Elle consiste à  obtenir un encadrement à $10^{-n}$ près de la valeur de référence, dont on sait qu'elle est comprise entre les deux entiers $a$ et $b$. 
+
+L'algorithme suivant est incomplet. Il détermine par balayage une valeur approchée de $\sqrt{n}$, $n$ connu, avec un pas de 0,1.
+
+$p \longleftarrow 0,1$
+
+$a \longleftarrow 3$ 
+
+Tant que $\vert a- \sqrt{n} \vert > p$
+
+\hspace{1cm} $a= a+p$ 
+
+Afficher $a$
+
+
+\begin{minipage}{0.5\linewidth}
+
+
+\textbf{1.} On choisit $n= 12$. Faire fonctionner cet algorithme et compléter le tableau.
+
+
+\begin{tabular}{|c|p{2cm}|c|}
+\hline 
+Etape & a & condition \\ 
+\hline 
+Initialisation & 3 & VRAI \\ 
+\hline 
+Etape 1 &   &   \\ 
+\hline 
+Etape 2 &   &   \\ 
+\hline 
+Etape ...... &   &   \\ 
+\hline 
+Etape ...... &   &   \\ 
+\hline 
+Etape ...... &   &   \\ 
+\hline 
+Etape ...... &   &   \\ 
+\hline
+\end{tabular}
+ 
+\end{minipage} 
+\begin{minipage}{0.5\linewidth}
+
+\textbf{2.} Python est un langage de programmation qui permet d'écrire des algorithmes réalisables par des ordinateurs. L'algorithme précédent s'écrit :
+
+\begin{lstlisting}
+from math import *  
+p = 0.1 
+a = 3 
+while abs(  a- sqrt(12)) > p : 
+    a= a+p  
+print("Une valeur approchee est {}".format($a$)) 
+\end{lstlisting}
+ 
+ Tester ce code.
+ 
+\textbf{3.}  Modifier ce code pour déterminer toutes les valeurs  approchées de $\sqrt{12}$ à $10^{-2}$ près.
+  
+\textbf{4.}  Modifier ce code pour déterminer une valeur approchée de $\sqrt{31}$ à $10^{-3}$ près.
+ 
+\textbf{5.}  Modifier ce code pour déterminer une valeur approchée de $\pi$ à $10^{-10}$ près. Avec la bibliothèque \texttt {math}, $\pi$ s'écrit pi.
+\end{minipage}

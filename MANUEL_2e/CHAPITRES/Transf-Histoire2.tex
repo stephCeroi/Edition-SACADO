@@ -1,0 +1,153 @@
+
+\begin{His}
+
+{\large {\color{brown}Empilements de disques et de sphères}}
+
+\bigskip
+
+
+Comment remplir le plan avec des disques de manière
+optimale, c'est-à-dire en laissant le moins possible
+d'espace libre ? La Fig. 1 montre deux exemples 
+remplissages, celui de droite est irrégulier et ne semble pas optimum, celui de gauche est appelé {\em arrangement hexagonal}, et à l'air meilleur que le 
+précédent.
+
+Cette question,
+d'apparence simple, se trouve être extrêmement compliquée.
+C. F. \textsc{Gauss} a démontré que, parmi tous les remplissages
+réguliers (c'est-à-dire, invariants par un certaines transformations
+du plan), l'arrangement hexagonal est le plus dense, mais
+il n'a pas su prouver qu'il n'y a pas de remplissage non régulier
+meilleur.  Il a fallu attendre 1910 pour que \textsc{Thue} démontre que 
+l'arrangement hexagonal est le meilleur parmi tous les remplissages,
+réguliers ou non.
+
+\medskip
+\centerline{
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\newcommand{\disque}[1]{\draw [color=ffqqqq,fill=ffqqqq,fill opacity=1.0]#1 circle (0.5cm);}
+\begin{tikzpicture}[x=0.5cm,y=0.5cm]
+\clip(-3.93,-1.15) rectangle (8.75,6.05);
+\disque{(0.41,3.75)}
+\disque{(0.52,1.74)}
+\disque{(2.32,3.1)}
+\disque{(2.43,1.1)}
+\disque{(4.08,2.18)}
+\disque{(4.21,0.2)}
+\disque{(2.54,-0.9)}
+\disque{(0.63,-0.29)}
+\disque{(-1.13,-1.28)}
+\disque{(-1.22,0.72)}
+\disque{(-2.91,-0.35)}
+\disque{(6.13,0.86)}
+\disque{(5.73,-1.12)}
+\disque{(7.6,-0.49)}
+\disque{(8.06,1.47)}
+\disque{(6.57,2.84)}
+\disque{(4.96,3.98)}
+\disque{(8.48,3.41)}
+\disque{(7.03,4.79)}
+\disque{(9.01,5.34)}
+\disque{(5.4,5.96)}
+\disque{(3.16,4.9)}
+\disque{(1.24,5.54)}
+\disque{(-1.31,2.7)}
+\disque{(-3.02,1.67)}
+\disque{(-3.09,3.67)}
+\disque{(-1.37,4.71)}
+\disque{(-3.16,5.67)}
+\disque{(-4.75,0.55)}
+\disque{(-4.83,2.66)}
+\disque{(-0.53,6.55)}
+\disque{(3.6,6.87)}
+\disque{(7.58,6.73)}
+\disque{(9.54,0.08)}
+\end{tikzpicture}
+\hskip 2em
+\begin{tikzpicture}[x=0.5cm,y=0.5cm]
+\clip(-3.93,-1.15) rectangle (8.75,6.05);
+\disque{(-4.000,-1.000)}
+\disque{(-3.000,0.732)}
+\disque{(-4.000,2.464)}
+\disque{(-3.000,4.196)}
+\disque{(-4.000,5.928)}
+\disque{(-2.000,-1.000)}
+\disque{(-1.000,0.732)}
+\disque{(-2.000,2.464)}
+\disque{(-1.000,4.196)}
+\disque{(-2.000,5.928)}
+\disque{(0.000,-1.000)}
+\disque{(1.000,0.732)}
+\disque{(0.000,2.464)}
+\disque{(1.000,4.196)}
+\disque{(0.000,5.928)}
+\disque{(2.000,-1.000)}
+\disque{(3.000,0.732)}
+\disque{(2.000,2.464)}
+\disque{(3.000,4.196)}
+\disque{(2.000,5.928)}
+\disque{(4.000,-1.000)}
+\disque{(5.000,0.732)}
+\disque{(4.000,2.464)}
+\disque{(5.000,4.196)}
+\disque{(4.000,5.928)}
+\disque{(6.000,-1.000)}
+\disque{(7.000,0.732)}
+\disque{(6.000,2.464)}
+\disque{(7.000,4.196)}
+\disque{(6.000,5.928)}
+\disque{(8.000,-1.000)}
+\disque{(9.000,0.732)}
+\disque{(8.000,2.464)}
+\disque{(9.000,4.196)}
+\disque{(8.000,5.928)}
+\end{tikzpicture}
+}
+\centerline{Fig. 1 : Deux exemples de remplissages : un non régulier et un 
+régulier.}
+\medskip
+
+Le problème se pose aussi en dimension 3 : comment empiler des
+sphères dans l'espace de la manière la plus dense possible ?
+\textsc{Kepler} conjectura en 1611 que l'empilement optimal est régulier,
+et qu'il est obtenu par exemple en prenant un arrangement hexagonal
+dans un plan, puis, au dessus,  en plaçant une sphère dans chaque 
+creux formé par 3 sphères adjacentes du plan inférieur, et en répétant
+ainsi à l'infini (Fig. 2). Une démonstration de cette conjecture a enfin 
+été publiée en 1998 par Thomas \textsc{Hales} mais la démonstration
+était tellement difficile à vérifier que ce n'est qu'en 2014 qu'elle
+a été officiellement déclarée valide !
+
+
+\begin{center}
+\includegraphics[scale=0.1]{image_chapitres/spheres.png} 
+
+Fig. 2 : un empilement optimal de sphères
+\end{center}
+
+
+Pour les dimensions supérieures, il n'y a pour l'instant
+que des résultats partiels, sauf pour les dimensions 8 et 24, pour
+lesquels l'empilement optimal est connu, et se trouve être régulier.
+Ce résultat est très récent, il a été obtenu en Avril 2016 par l'Ukrainienne
+Maryna \textsc{Viazovska}
+
+
+\begin{center}
+\includegraphics[height=4cm]{image_chapitres/Hale.jpg} 
+\hspace{2cm}
+\includegraphics[height=4cm]{image_chapitres/Viazovska.jpg}
+
+Thomas \textsc{Hale} et Maryna \textsc{Viazovska} (Sources : Wikipedia)
+\end{center}
+
+
+Ces résultats ne sont pas que théoriques : les empilements
+de sphères sont utilisés en informatique pour obtenir de
+bons {\em codes correcteurs d'erreur} qui servent par exemple
+à obtenir des communications fiables sur internet. 
+
+\PESP{https://fr.wikipedia.org/wiki/Fraction\_\%C3\%A9gyptienne}
+\end{His}

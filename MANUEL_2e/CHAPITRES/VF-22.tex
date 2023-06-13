@@ -1,0 +1,51 @@
+
+$ABC$ est un triangle équilatéral de coté 12 cm. On construit le rectangle $MNPQ$ tel que $M$ et $N$ soient des points de $[AB]$, $Q$ un point de $[AC]$ et $P$ un point de $[BC]$. En outre, $AM=NB=x$. $I$ est le milieu de $[AB]$.
+
+\begin{center}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6775067750677506cm,y=0.6775067750677506cm]
+\clip(-3.8,-2.66) rectangle (3.58,3.9);
+\fill[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (-1.52,-2.) -- (-1.52,0.5634351952019375) -- (1.52,0.5634351952019403) -- (1.52,-2.) -- cycle;
+\draw [color=ffqqqq] (-3.,-2.)-- (3.,-2.);
+\draw [color=ffqqqq] (3.,-2.)-- (0.,3.196152422706633);
+\draw [color=ffqqqq] (0.,3.196152422706633)-- (-3.,-2.);
+\draw [color=qqwuqq] (-1.52,-2.)-- (-1.52,0.5634351952019375);
+\draw [color=qqwuqq] (-1.52,0.5634351952019375)-- (1.52,0.5634351952019403);
+\draw [color=qqwuqq] (1.52,0.5634351952019403)-- (1.52,-2.);
+\draw [color=qqwuqq] (1.52,-2.)-- (-1.52,-2.);
+\draw [dash pattern=on 2pt off 2pt,color=xfqqff] (0.,3.196152422706633)-- (0.,-2.);
+\begin{scriptsize}
+\draw [color=qqqqff] (-3.,-2.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (-3.16,-1.74) node {$A$};
+\draw [color=qqqqff] (3.,-2.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (3.14,-1.76) node {$B$};
+\draw [color=uuuuuu] (0.,3.196152422706633)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=uuuuuu] (0.14,3.44) node {$C$};
+\draw [color=uuuuuu] (0.,-2.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=uuuuuu] (0.04,-2.26) node {$I$};
+\draw [color=xdxdff] (-1.52,-2.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=xdxdff] (-1.78,-2.22) node {$M$};
+\draw [color=xdxdff] (1.52,-2.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=xdxdff] (1.7,-2.36) node {$N$};
+\draw [color=uuuuuu] (-1.52,0.5634351952019375)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=uuuuuu] (-1.98,0.82) node {$Q$};
+\draw [color=uuuuuu] (1.52,0.5634351952019403)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=uuuuuu] (1.66,0.8) node {$P$};
+\draw[color=xfqqff] (-0.26,0.76) node {$k$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item Pourquoi $x$ est-il compris entre 0 et 6 ?
+\item Montrer que $MN = 12 -2x$ et $MQ = x\sqrt{3}$.
+\item On note $A$ la fonction qui, à toute valeur de $x$, associe l'aire du rectangle $MNPQ$ Montrer que $A(x)= 12\sqrt{3}x - 2\sqrt{3}x^2$.
+\item Conjecturer le sens de variations de $A$ et la valeur $c$ telle que $A(c)$ soit maximale.
+\item Calculer $A(3)$, puis $A(3)-A(x)$. En déduire que l'aire est maximale pour $x=3$.
+\item Pour quelle valeur de $x$, $MNPQ$ est il un carré ? Calculer l'aire correspondante.
+\end{enumerate}

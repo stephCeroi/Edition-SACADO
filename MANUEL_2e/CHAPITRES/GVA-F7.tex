@@ -1,0 +1,122 @@
+\begin{titre}[Géométrie vectorielle et analytique]
+
+\Titre{Projection orthogonale}{3}
+\end{titre}
+
+\begin{CpsCol}
+\textbf{Démontrer avec les vecteurs}
+\begin{description}
+\item[$\square$] Résoudre des problèmes de géométrie plane sur des figures simples ou complexes
+(triangles, quadrilatères, cercles).
+\item[$\square$] Calculer des longueurs, des angles, des aires et des volumes.
+\item[$\square$] Traiter de problèmes d’optimisation. 
+\end{description}
+\end{CpsCol}
+
+
+
+\begin{DefT}{Projection orthogonale}\index{Projection orthogonale}
+Soit $d$ une droite du plan et $A$ un point extérieur à $d$. La projection orthogonale est l'application du plan qui  au point $A$ associe le point $A'$ de la droite $d$ tel que la droite $(AA')$ est perpendiculaire à $d$ en $A'$. 
+
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(0.831296100794201,-0.7348563902439222) rectangle (17.486323662311374,5.80145736585363);
+\draw[line width=2.pt,fill=black,fill opacity=0.10000000149011612] (9.190921775722733,1.1160512934995357) -- (9.06194825746555,1.7700717388119918) -- (8.407927812153094,1.6410982205548086) -- (8.536901330410277,0.9870777752423525) -- cycle; 
+\draw [line width=2.pt,domain=0.831296100794201:17.486323662311374] plot(\x,{(-17.201085830991378--4.87081073170731*\x)/24.699720119533016});
+\draw [line width=2.pt,dash pattern=on 3pt off 3pt,domain=0.831296100794201:17.486323662311374] plot(\x,{(-215.6669425698831--24.699720119533016*\x)/-4.87081073170731});
+\draw (2.119703893288926,1.0563449756097338) node[anchor=north west] {$d$};
+\begin{scriptsize}
+\draw [fill=ududff] (-5.453619960155669,-1.7718677073170916) circle (2.5pt);
+\draw[color=ududff] (-5.155086447260557,-1.1119514146341656) node {$A_1$};
+\draw [fill=ududff] (19.246100159377345,3.098943024390219) circle (2.5pt);
+\draw[color=ududff] (19.466072221510586,3.6802978536585105) node {$B$};
+\draw[color=black] (-13.43546335756202,-2.793166731707334) node {$f$};
+\draw [color=xdxdff] (8.536901330410277,0.9870777752423525)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (8.02752499058181,0.5378393170731492) node {$A'$};
+\draw[color=black] (6.267748493515845,10.405159121951185) node {$g$};
+\draw [color=xdxdff] (7.748641917797854,4.984315185099545)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (7.964675829972312,5.565772975609728) node {$A$};
+\end{scriptsize}
+\end{tikzpicture}
+
+
+\end{DefT}
+
+
+
+\begin{Rq}
+Tout point du plan a un unique projeté orthogonal sur une droite $d$.
+
+Tout point $M$ de la droite $d$ est le projeté orthogonal d'une infinité de point du plan qui appartiennent à la droite passant par $M$ et perpendiculaire à $M$.
+
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(2.2454022145079233,-3.468795317073187) rectangle (14.406714792445936,7.749781658536554);
+\draw[line width=2.pt,fill=black,fill opacity=0.10000000149011612] (9.190921775722733,1.1160512934995357) -- (9.06194825746555,1.7700717388119918) -- (8.407927812153094,1.6410982205548086) -- (8.536901330410277,0.9870777752423525) -- cycle; 
+\draw [line width=2.pt,domain=2.2454022145079233:14.406714792445936] plot(\x,{(-17.201085830991378--4.87081073170731*\x)/24.699720119533016});
+\draw [line width=2.pt,dash pattern=on 6pt off 6pt,domain=2.2454022145079233:14.406714792445936] plot(\x,{(-215.6669425698831--24.699720119533016*\x)/-4.87081073170731});
+\draw (2.119703893288926,1.0563449756097338) node[anchor=north west] {$d$};
+\begin{scriptsize}
+\draw [fill=ududff] (-5.453619960155669,-1.7718677073170916) circle (2.5pt);
+\draw[color=ududff] (-5.155086447260557,-1.1119514146341656) node {$A_1$};
+\draw [fill=ududff] (19.246100159377345,3.098943024390219) circle (2.5pt);
+\draw[color=ududff] (19.466072221510586,3.6802978536585105) node {$B$};
+\draw[color=black] (-13.43546335756202,-2.793166731707334) node {$f$};
+\draw [color=xdxdff] (8.536901330410277,0.9870777752423525)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (7.9332512496675625,0.5378393170731492) node {$M$};
+\draw[color=black] (6.267748493515845,10.405159121951185) node {$g$};
+\draw [color=xdxdff] (7.748641917797854,4.984315185099545)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (7.964675829972312,5.565772975609728) node {$A$};
+\draw [color=xdxdff] (9.048175607643872,-1.6055771743290161)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (9.253083622467036,-1.0333899512195315) node {$C$};
+\draw [color=xdxdff] (9.229394525056087,-2.524532310751975)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (9.441631104295533,-1.9447029268292864) node {$D$};
+\draw [color=xdxdff] (7.474252237411067,6.375736178964803)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (7.6818546072295675,6.948454731707288) node {$E$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{Rq}
+
+\EPCG{1}{GVA-63}{Représenter. Calculer.}
+
+
+\EPCG{1}{GVA-64}{Raisonner. Représenter. Calculer.}
+
+
+\EPCG{1}{GVA-59}{Représenter. Calculer.}
+
+
+
+\EPCG{1}{GVA-59}{Représenter}
+
+ 
+
+\EPCG{1}{GVA-60}{Représenter}
+
+\App{1}{GVA-13}
+ 
+
+\EPCG{1}{GVA-61}{Modéliser. Représenter. Calculer.}
+
+
+\begin{ROC}
+
+Le projeté orthogonal du point M sur une droite $\Delta$ est le point de la droite $\Delta$ le plus
+proche du point M.
+\end{ROC}
+
+
+\begin{Approfondissement}
+
+\begin{enumerate}
+\item Démontrer que les trois médiatrices d'un triangle quelconque ABC sont concourantes.
+\item Démontrer que les trois hauteurs d'un triangle quelconque ABC sont concourantes.
+\end{enumerate}
+
+\end{Approfondissement}
+
+
+ 

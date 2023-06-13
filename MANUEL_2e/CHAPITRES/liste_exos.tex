@@ -1,0 +1,48 @@
+\documentclass[20pt]{article}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCourslycee}
+\input{../../../latex_preambule_style/styleExercices}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_seconde}
+\input{../../../latex_preambule_style/algobox}
+
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche  -----    0 n'affiche pas
+{%condition vraie
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+
+\begin{titre}[Fonctions et expressions algébriques]
+
+\Titre{Liste des exercices}{4}
+\end{titre}
+
+\foreach \n in{1,...,86}  {
+ 
+\subsubsection*{Exercice \n}
+
+\input{FEA-\n}
+}
+
+
+ 
+\end{document}

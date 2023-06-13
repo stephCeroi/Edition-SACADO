@@ -1,0 +1,198 @@
+\begin{titre}[Programmation en Python]
+
+\Titre{Variables et condition}{2}
+\end{titre}
+
+
+\begin{CpsCol}
+\textbf{Python}
+\begin{description}
+\item[$\square$] Utiliser les variables
+\item[$\square$] Utiliser les instructions conditionnelles
+\end{description}
+\end{CpsCol}
+
+
+\begin{PC}
+\input{FEA-8}
+\end{PC}
+
+\mini{
+\begin{Mt}
+Pour afficher un calcul ou une action effectué par l'ordinateur, on utilise le mot clé {\color{violet}print}.
+\end{Mt}
+}{
+\begin{Cod}
+{\color{violet}print}({\color{vert}"Coucou"})
+\end{Cod}
+}
+
+\begin{DefT}{Variable}
+Une variable est un tiroir dans lequel on place une valeur qui servira lors de l'exécution du programme.
+\end{DefT}
+
+\begin{Mt}
+Pour affecter une valeur à une variable var, on utilise le mot réservé {\color{violet}input}.
+
+var={\color{violet}input}({\color{vert}"Entrer une variable"})
+\end{Mt}
+
+\begin{Rq}
+Si la variable est un entier, on écrit avant le {\color{violet}input}, un {\color{violet}int}.
+
+Si la variable est un réel, on écrit avant le {\color{violet}input}, un {\color{violet}float}.
+\end{Rq}
+
+
+\begin{minipage}[]{0.49\linewidth}
+\begin{Ex}
+n={\color{violet}int}({\color{violet}input}({\color{vert}"Entrer un nombre "}))
+
+m={\color{violet}int}({\color{violet}input}({\color{vert}"Entrer un second nombre"}))
+
+s=n+m
+
+{\color{violet}print}({\color{vert}"La somme est égale à "},s)
+\end{Ex}
+
+\begin{Cod}
+\texttt{n={\color{violet}int}({\color{violet}input}({\color{vert}"Entrer un entier "}))}
+
+\texttt{m={\color{violet}int}({\color{violet}input}({\color{vert}"Entrer un second entier "}))}
+
+\texttt{s=n+m}
+
+\texttt{{\color{violet}print}({\color{vert}"La somme est égale à "},s)}
+
+\end{Cod}
+\end{minipage} 
+\hfill
+\begin{minipage}[]{0.49\linewidth}
+\subsection*{Les opérateurs les plus courants}
+
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Opération& Signe & Exemple & Retour \\
+\hline 
+Addition & $+$ & $2+3$ & 5\\ 
+\hline 
+Soustraction & $-$ & $2-3$ & $-1$ \\ 
+\hline 
+Multiplication & * & 2*3&6 \\ 
+\hline 
+Division & / & $8/4$ & 2.0\\ 
+\hline 
+Puissance & ** & 2**3 & 8 \\ 
+\hline 
+Reste & \% & $13\%5$ & 3 \\ 
+\hline 
+Quotient \textbf{entier}  & $//$ & $12//5$ & 2 \\ 
+\hline 
+Comparaison   & $==$ & $x==5$ & {\color{orange}True}/{\color{orange}False} \\ 
+\hline 
+Affectation   & $=$ & $n=5$ &  \\ 
+\hline 
+\end{tabular} 
+\end{minipage} 
+
+\begin{DefT}{Condition}
+Une \textbf{condition} \index{condition} est une instruction qui ouvre le choix parmi deux actions suivant le résultat d'un test \index{test}.
+
+Sa structure est : \textbf{Si} test vérifié \textbf{alors} Action 1 \textbf{sinon} Action 2.
+\end{DefT}
+
+\begin{Ex}
+\textbf{Si} il fait beau \textbf{alors} je vais à la plage \textbf{sinon} je vais au cinéma.
+\begin{description}
+\item[Test :] il fait beau
+\item[Action 1 :] je vais à la plage
+\item[Action 2 :] je vais au cinéma
+\end{description}
+\end{Ex}
+
+
+\begin{Syn}
+\begin{minipage}[t]{0.49\linewidth}
+L'écriture algorithmique d'un test est :
+\begin{verbatim}
+Si {test vrai}
+Alors
+	 action 1
+Sinon
+	 action 2    	
+\end{verbatim}
+\end{minipage}
+\hfill\vrule\hfill
+\begin{minipage}[t]{0.49\linewidth}
+La programmation en Python d'un test est :
+\begin{lstlisting}
+if condition :
+   action 1 
+else :
+   action 2
+\end{lstlisting}
+\end{minipage}
+\end{Syn}
+
+
+\begin{minipage}[t]{0.49\linewidth}
+\begin{Ex}
+L'écriture algorithmique d'une condition est :
+\begin{algobox}
+\Si {$x < 3$}
+\DebutSi
+\Ligne $y \longleftarrow x+3$ 
+\FinSi
+\Sinon
+\DebutSinon
+\Ligne $y \longleftarrow x^2$ 
+\FinSinon
+\end{algobox}
+\end{Ex}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\begin{Cod}
+\begin{lstlisting}
+x = int(input("Donner un nombre entier"))
+if x < 3 :
+	y=x+3 
+else :
+	y=x**2 
+print(y)
+\end{lstlisting}
+\end{Cod}
+\end{minipage}
+
+
+\begin{Nt}
+Le test d'une égalité en Python s'emploie avec l'opérateur == (double signe égal). Cette écriture sert à différencier le test de l'affection.
+\end{Nt}
+
+
+\begin{Rq}[. Plusieurs instructions si-sinon imbriquées]
+
+\color{orange} if \color{black}  Condition :
+
+\hspace{0.4cm}    instruction 1
+    
+\color{orange} elif \color{black} :
+
+\hspace{0.4cm}     instruction 2
+
+$\cdots$
+
+\color{orange} elif \color{black} :
+
+\hspace{0.4cm}     instruction $n-2$
+
+\color{orange} elif \color{black} :
+
+\hspace{0.4cm}     instruction $n-1$
+
+\color{orange} else \color{black} :
+
+\hspace{0.4cm}     instruction $n$
+
+\end{Rq}

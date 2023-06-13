@@ -1,0 +1,77 @@
+\documentclass[10pt]{article}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCourslycee}
+\input{../../../latex_preambule_style/styleExercices}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_seconde}
+\input{../../../latex_preambule_style/algobox}
+
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche  -----    0 n'affiche pas
+{%condition vraie
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document} 
+
+
+En utilisant le lien : \url{https://www.geogebra.org/m/h8djagst}, répondre aux questions suivantes en cochant, décochant les bonnes cases  et renseigner la bonne valeur. 
+
+Il est possible de zoomer ou déplacer l'origine du repère.
+ 
+\subsection*{Lectures graphiques} 
+
+\begin{enumerate}
+\item Équations
+\begin{enumerate}
+\item Conjecturer la solution de l'équation $x^3=10$. \ligne{1}
+\item Conjecturer la solution de l'équation $\frac{1}{x}=-5$. \ligne{1} 
+\item Conjecturer la solution de l'équation $x^3=-30$. \ligne{1}  
+\item Conjecturer la solution de l'équation $\sqrt{x}=12$. \ligne{1}  
+\item Conjecturer la solution de l'équation $\sqrt{x}=25$. \ligne{1} 
+\item Conjecturer la solution de l'équation $x^2=6$. \ligne{1}
+\item Conjecturer la solution de l'équation $\frac{1}{x}=2$. \ligne{1} 
+\end{enumerate}
+\item Inéquations
+\begin{enumerate}
+\item Conjecturer la solution de l'inéquation $x^3>10$. \ligne{1} 
+\item Conjecturer la solution de l'inéquation $\frac{1}{x} \geq -5$. \ligne{1} 
+\item Conjecturer la solution de l'inéquation $x^3 \leq -30$. \ligne{1} 
+\item Conjecturer la solution de l'inéquation $\sqrt{x}>12$. \ligne{1}  
+\item Conjecturer la solution de l'inéquation $\sqrt{x}\leq 5$. \ligne{1} 
+\item Conjecturer la solution de l'inéquation $x^2<6$. \ligne{1} 
+\item Conjecturer la solution de l'inéquation $\frac{1}{x}<2$.  \ligne{1} 
+\end{enumerate} 
+\end{enumerate}
+ 
+\subsection*{Calculs algébriques} 
+
+\begin{enumerate}
+\item Soit $x$ et $a$ deux réels, démontrer que $x^3-a=(x-a)(x^2+ax+a^2)$
+\item Résoudre les inéquations sur l'ensemble de définition à expliciter. 
+\begin{enumerate}
+\item $x^3>8$. On démontrer que $x^3-8=(x-2)(x^2+2x+4)$
+\item $\frac{1}{x} \geq -5$. Il faudra penser à un tableau de signe ou une disjonction de cas.
+\item $x^3 \leq -30$.  
+\item $\sqrt{x}\leq 5$.
+\item $\frac{1}{x}<2$. Il faudra penser à un tableau de signe ou une disjonction de cas.
+\end{enumerate} 
+\end{enumerate}
+
+
+
+
+\end{document}

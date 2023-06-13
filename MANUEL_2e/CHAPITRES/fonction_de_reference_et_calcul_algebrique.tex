@@ -1,0 +1,341 @@
+\documentclass[10pt]{article}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCourslycee}
+\input{../../../latex_preambule_style/styleExercices}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_seconde}
+\input{../../../latex_preambule_style/algobox}
+
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche  -----    0 n'affiche pas
+{%condition vraie
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{titre}[Les fonctions de référence]
+
+\Titre{Calculs numériques et algébriques}{3}
+\end{titre}
+
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Si $a$ et $b$ sont des réels, $(a+b)^2=a^2+2ab+b^2$.
+\item[$\square$] Si $a$ et $b$ sont des réels, $(a-b)^2=a^2-2ab+b^2$.
+\item[$\square$] Si $a$ et $b$ sont des réels strictement positifs, $\sqrt{a \times b} = \sqrt{a} \times \sqrt{b}$.
+\item[$\square$] Étudier la position relative des courbes d’équation $y = x$, $y = x^2$, $y = x^3$, pour $x \geq 0$.
+\item[$\square$] Étudier la parité d’une fonction dans des cas simples.
+\end{description}
+\end{CpsCol}
+
+
+
+\EPCN{Calculer}
+
+\begin{enumerate}
+\item Développer $(a+b)(a+b)$ où $a$ et $b$ sont deux réels.
+\item En déduire la forme développée de $(a+b)^2$. \fbox{Encadrer la formule dans votre cours.}
+\item Dans la suite de l'exercice, $x$ est un nombre réel. Utiliser la question précédente pour factoriser les expressions suivantes : 
+\begin{enumerate}
+\item $A(x)=x^2+2x+1$.
+\item $B(x)=x^2+6x+9$.
+\item $C(x)=x^2+10x+25$.
+\item $D(x)=x^2+20x+100$.
+\end{enumerate}
+\item Factoriser $H(x)=4x^2+12x+9$ 
+\end{enumerate}
+ 
+
+\EPCN{Calculer}
+
+\begin{enumerate}
+\item Développer $(a-b)(a-b)$ où $a$ et $b$ sont deux réels.
+\item En déduire la forme développée de $(a-b)^2$. \fbox{Encadrer la formule dans votre cours.}
+\item Dans la suite de l'exercice, $x$ est un nombre réel. Utiliser la question précédente pour factoriser les expressions suivantes : 
+\begin{enumerate}
+\item $A(x)=x^2-2x+1$.
+\item $B(x)=x^2-6x+9$.
+\item $C(x)=x^2-10x+25$.
+\item $D(x)=x^2-20x+100$.
+\end{enumerate}
+\item Factoriser $H(x)=4x^2-12x+9$ 
+\end{enumerate}
+
+
+\begin{Rq}
+
+$(a+b)^2$ est une forme factorisée puisque $(a+b)^2=(a+b)(a+b)$.
+
+$(a-b)^2$ est une forme factorisée puisque $(a-b)^2=(a-b)(a-b)$.
+\end{Rq}
+
+ 
+\begin{minipage}{0.55\linewidth}
+\EPC{1}{FEA-26}{Raisonner. Calculer. }
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\EPC{1}{FEA-86}{Représenter. Calculer. }
+\end{minipage}
+
+
+
+
+\EPCN{Calculer.}
+
+On pose $x = \sqrt{3}$ et $y=\sqrt{2}$. Calculer
+
+\begin{enumerate}
+\begin{minipage}{0.25\linewidth}
+\item $A = x^4-y$
+\end{minipage}
+\begin{minipage}{0.25\linewidth}
+\item $B = 2x^2+2x+3$
+\end{minipage}
+\begin{minipage}{0.25\linewidth}
+\item $C = (x+2)(x-4)$
+\end{minipage}
+\begin{minipage}{0.25\linewidth}
+\item $D = x^3 \times y^3$
+\end{minipage}
+\end{enumerate}
+
+
+
+\EPCN{Calculer.}
+
+Le but de cet exercice est de simplifier les écritures numériques.
+
+\begin{Ex}
+$\sqrt{12} = \sqrt{4 \times 3} = \sqrt{4} \times \sqrt{3}= 2 \sqrt{3}$
+
+Remarque : $\sqrt{12} = \sqrt{6 \times 2}$ mais ce produit n'aboutit pas.
+\end{Ex}
+ 
+
+\begin{enumerate}
+\item Écrire sous la forme $a\sqrt{b}$ les nombres suivants :
+
+$A = \sqrt{8}$ , $B=\sqrt{27}$ , $C=\sqrt{20}$  , $D=\sqrt{18}$  , $E=\sqrt{12}$  , $F=\sqrt{72}$
+\item Simplifie les écritures :
+
+$A=\frac{\sqrt{20}}{4}$ , $B = \frac{2-\sqrt{8}}{4}$ , $C=\frac{3-\sqrt{27}}{3}$ , $D=\sqrt{18}\sqrt{2}$  , $E=\sqrt{12}+\sqrt{45}$  , $F=\sqrt{18} -\sqrt{72} +\sqrt{32}$
+
+\end{enumerate}
+
+
+\EPC{1}{FEA-51}{Calculer.}
+
+\begin{minipage}{0.45\linewidth}
+\EPCN{Calculer}
+
+Soit $x \in \R-\left\lbrace 0;-1\right\rbrace $.  Calculer $\frac{1}{x+1}-\frac{1}{x}$
+
+ \end{minipage}
+\begin{minipage}{0.55\linewidth}
+
+\EPCN{Raisonner. Calculer.}
+
+Soit $a$ et $b$ deux réels non nuls. Est-il vrai que $\frac{1}{\frac{1}{a}+\frac{1}{b}}=a+b$ ?
+ \end{minipage}
+
+
+
+\EPCN{Calculer.} 
+
+On donne $E = \frac{2}{3}+\frac{17}{2} \times \frac{4}{3}$ et $F = \frac{\sqrt 6 \times \sqrt 3\times \sqrt{16} }{\sqrt 2}  $ 
+ 
+Démontrer que les nombres E et F sont égaux.
+
+
+
+\EPCN{Représenter. Calculer.}
+
+Soit $x \geq 0$.
+\begin{enumerate}
+\item Étudier le signe de $x^3-x^2$.
+\item Étudier le signe de $x^2-x$.
+\item En déduire la position relative des courbes d’équation $y = x$, $y = x^2$, $y = x^3$, pour $x \geq 0$.
+\end{enumerate}
+\textit{Aide : Penser à factoriser. On pourra utiliser sa calculatrice ou Geogebra pour visualiser les courbes.}
+
+
+\EPCN{Représenter. Calculer.}
+
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item Soit $f$ la fonction Carré. Calculer $f(-x)$. Comparer $f(-x)$ et $f(x)$. On dit que la fonction est paire.
+\item Soit $g$ la fonction Cube. Calculer $g(-x)$. Comparer $g(-x)$ et $g(x)$. On dit que la fonction est impaire.
+\item Soit $i$ la fonction Inverse. Calculer $i(-x)$. Comparer $i(-x)$ et $i(x)$. Que dire de la fonction inverse ?
+\item La fonction Racine carrée est-elle paire ? impaire ? justifier.
+\end{enumerate}
+\item La fonction $h$ définie sur $\R$ par $h(x)=x^2+2$ est-elle paire ? impaire ? justifier.
+\item La fonction $k$ définie sur $\R$ par $k(x)=x^3+x-2$ est-elle paire ? impaire ? justifier.
+\item La fonction $u$ définie sur $\R$ par $u(x)=x^3+x^2-2$ est-elle paire ? impaire ? justifier.
+\end{enumerate}
+ 
+\newpage
+
+\begin{titre}[Les fonctions de référence]
+
+\Titre{Calculs algébriques}{1}
+\end{titre}
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Résoudre algébriquement une équation ou une inéquation du type $f(x) = k$, $f(x) < k$.
+\end{description}
+\end{CpsCol}
+
+
+ 
+\begin{minipage}{0.55\linewidth}
+\EPCN{Calculer }
+
+Résoudre les équations suivantes dans $\R$.
+
+\begin{enumerate}
+\item $(x+3)(x-7)=0$
+\item $x^3-x=0$
+\item $\left( x-\sqrt{3} \right)(5-2x)=0$
+\end{enumerate}
+
+ \end{minipage}
+\begin{minipage}{0.55\linewidth}
+\EPCN{Calculer }
+
+Résoudre les inéquations suivantes dans $\R$.
+
+\begin{enumerate}
+\item $2x+1>3$
+\item $-5x + \frac{1}{2} \geq \frac{5}{2}$
+\end{enumerate}
+ \end{minipage}
+
+\EPCN{Représenter. Raisonner. Calculer }
+
+On considère un triangle $ABC$ et un nombre réel $x$. On a $AB=x+1$, $BC=4$ et $CA=15$.
+
+\begin{enumerate}
+\item Montrer que $x+1 \leq 19$ et $ x+5 > 15$
+\item Donner le plus grand intervalle de $\R$ auquel appartient $x$.
+\end{enumerate}
+
+
+
+
+\EPCN{ Représenter. Calculer. }
+
+On souhaite démontrer que $x^3-8=0$ n'admet qu'une unique solution $x=2$ sur $\R$.
+
+\begin{enumerate}
+\item Démontrer que pour tout réel $x$, $x^3-8=(x-2)(x^2+2x+4)$.
+\item
+\begin{enumerate}
+\item Démontrer que pour tout réel $x$, $x+2x+4=(x+1)^2+3$.
+\item En déduire que pour tout réel $x$, $x+2x+4>0$.
+\end{enumerate}
+\item En déduire que $x^3-8=0$ n'admet qu'une unique solution $x=2$ sur $\R$. 
+\end{enumerate}
+
+
+
+\EPCN{ Représenter. Calculer. }
+
+\begin{enumerate}
+\item Résoudre, $\sqrt{x^2-3}=1$.
+\item Résoudre, $\sqrt{x-3}=x+1$. 
+\item Résoudre, $\frac{3}{x}=4$. 
+\item Résoudre, $\frac{-1}{x}=x+2$. 
+\item Résoudre, $\sqrt{x}-x=0$. 
+\end{enumerate}
+
+
+
+
+\EPCN{ Raisonner. Calculer. }
+
+Soit $k$ un nombre réel. On considère l'équation suivante d'inconnue $x$ : $k^2x+7=x-2k$.
+
+
+\begin{enumerate}
+\item Résoudre cette équation dans $\R$ en fonction de $k$.
+\item Pour quelles valeurs de $k$ n'existe-t-il pas de solution ?
+\item A quel plus petit ensemble de nombres appartient $k$ lorsque 0 est une solution de l'équation ?
+\end{enumerate}
+%
+%
+%
+%
+%
+%\begin{minipage}{0.56\linewidth}
+%
+%
+%\EPC{1}{FR-45}{Chercher.}
+%
+%\input{FR-52} 
+%
+%Justifier votre démarche dans chaque cas.
+%
+%\EPC{1}{FR-47}{Représenter.}
+%\end{minipage}
+%\hfill
+%\begin{minipage}{0.42\linewidth}
+%
+%\EPC{1}{FR-57}{Représenter.} 
+%\end{minipage}
+%
+%
+%\EPC{1}{FPD-0}{Chercher. Représenter.}
+%
+%\EPC{1}{FPD-2}{Chercher. Représenter.}
+%
+%\EPC{1}{FR-56}{Calculer}
+%
+%\EPC{1}{FR-51}{Chercher.}
+%
+%\EPC{1}{FR-54}{Calculer.}
+% 
+%\EPC{1}{FR-6}{Raisonner. Communiquer.}
+%
+%\begin{minipage}{0.49\linewidth}
+%\EPC{1}{FR-55}{Représenter.} 
+%\end{minipage}
+%\hfill
+%\begin{minipage}{0.49\linewidth}
+%\EPC{1}{FR-62}{Représenter.} 
+%\end{minipage}
+%
+%\EPC{1}{FR-63}{Représenter.} 
+%
+%\EPC{1}{FR-61}{Chercher. Raisonner.}
+% 
+%
+%\EPCC{1}{FR-58}{Raisonner. Communiquer.}
+%
+%\EPCC{1}{FR-59}{Raisonner. Communiquer.}
+%
+%\EPCC{1}{FR-60}{Raisonner. Communiquer.}
+
+
+%\EPC{1}{stat-35}{Chercher. Modéliser.}
+%
+%\ligne{30}
+% 
+%\multido{\i=0+1}{87}{ \AD{1}{FEA-\i} }
+\end{document}

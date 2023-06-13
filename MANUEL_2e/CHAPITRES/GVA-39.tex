@@ -1,0 +1,75 @@
+
+
+\begin{minipage}{0.48\linewidth}
+Dans un carré de coté 8 cm, on découpe deux triangles et deux trapèzes (fig.1).
+
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{ffffqq}{rgb}{1.,1.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(-1.0489090909090897,-0.5981818181818146) rectangle (8.17109090909091,8.341818181818175);
+\fill[color=ffqqqq,fill=ffqqqq,fill opacity=0.74] (0.,0.) -- (5.,0.) -- (3.,5.) -- (0.,5.) -- cycle;
+\fill[color=qqqqff,fill=qqqqff,fill opacity=0.74] (3.,5.) -- (8.,5.) -- (8.,0.) -- (5.,0.) -- cycle;
+\fill[color=ffffqq,fill=ffffqq,fill opacity=0.74] (0.,5.) -- (8.,8.) -- (0.,8.) -- cycle;
+\fill[color=qqwuqq,fill=qqwuqq,fill opacity=0.74] (0.,5.) -- (8.,8.) -- (8.,5.) -- cycle;
+\draw [color=ffqqqq] (0.,5.)-- (0.,0.);
+\draw [color=qqqqff] (3.,5.)-- (8.,5.);
+\draw [color=qqqqff] (8.,5.)-- (8.,0.);
+\draw [color=qqqqff] (8.,0.)-- (5.,0.);
+\draw [color=ffffqq] (0.,5.)-- (8.,8.);
+\draw [color=ffffqq] (8.,8.)-- (0.,8.);
+\draw [color=ffffqq] (0.,8.)-- (0.,5.);
+\draw [color=qqwuqq] (0.,5.)-- (8.,8.);
+\draw [color=qqwuqq] (8.,8.)-- (8.,5.);
+\draw [color=qqwuqq] (8.,5.)-- (0.,5.);
+\draw (-0.38890909090908965,6.681818181818176) node[anchor=north west] {3};
+\draw (-0.4689090909090896,2.5418181818181815) node[anchor=north west] {5};
+\draw (2.0710909090909104,-0.25818181818181496) node[anchor=north west] {5};
+\draw (6.51109090909091,-0.17818181818181508) node[anchor=north west] {3};
+\end{tikzpicture}
+
+(fig.1)
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+A l'aide des quatre pièces ainsi obtenues, on reconstitue un rectangle (fig.2).
+
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{ffffqq}{rgb}{1.,1.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(-0.40890909090908983,0.14181818181818454) rectangle (13.35109090909091,6.561818181818177);
+\fill[color=qqwuqq,fill=qqwuqq,fill opacity=0.74] (0.,1.) -- (8.,4.) -- (8.,1.) -- cycle;
+\fill[color=qqqqff,fill=qqqqff,fill opacity=0.74] (0.,1.) -- (0.,6.) -- (5.,6.) -- (5.,3.) -- cycle;
+\fill[color=ffqqqq,fill=ffqqqq,fill opacity=0.74]  (8.,1.) -- (13.,1.) -- (13.,6.) -- (8.,4.) -- cycle;
+\fill[color=ffffqq,fill=ffffqq,fill opacity=0.74]  (5.,6.) -- (13.,6.) -- (5.,3.) -- cycle;
+\draw [color=qqwuqq] (0.,1.)-- (8.,4.);
+\draw [color=qqwuqq] (8.,4.)-- (8.,1.);
+\draw [color=qqwuqq] (8.,1.)-- (0.,1.);
+\draw [color=qqwuqq] (0.,1.)-- (0.,6.);
+\draw [color=qqwuqq] (0.,6.)-- (5.,6.);
+\draw [color=qqwuqq] (5.,6.)-- (5.,3.);
+\draw [color=qqwuqq] (5.,3.)-- (0.,1.);
+\draw [color=qqqqff] (8.,1.)-- (13.,1.);
+\draw [color=qqqqff] (13.,1.)-- (13.,6.);
+\draw [color=qqqqff] (13.,6.)-- (8.,4.);
+\draw [color=qqqqff] (5.,6.)-- (13.,6.);
+\draw [color=qqqqff] (13.,6.)-- (5.,3.);
+\draw [color=qqqqff] (5.,3.)-- (5.,6.);
+\end{tikzpicture}
+fig.2
+\end{center}
+\end{minipage}
+
+
+\begin{enumerate}
+\item Calculer l'aire du carré.
+\item Calculer l'aire du rectangle.
+\item Conclure. On donnera une démonstration de ce paradoxe.
+\end{enumerate}
+

@@ -1,0 +1,96 @@
+
+\vspace{0.2cm}
+
+\begin{minipage}{0.63\linewidth}
+Un gardien est chargé de la surveillance d'une propriété rectangulaire de 5 hm sur 4 hm. Il dispose d'un talkie-walkie pour communiquer avec un autre gardien situé à l'intérieur de la propriété. La qualité de la communication dépend de la distance entre les deux gardiens.
+
+Le schéma ci-dessous illustre cette situation : On note G la position du premier gardien qui se déplace à partir du point $A$ en direction du point $B$ jusqu'à compléter le tour de la propriété.
+
+Le point $O$ symbolise le deuxième gardien. Le point $O$ est fixe.(1 unité = 100m)
+
+\end{minipage}
+\begin{minipage}{0.33\linewidth}
+\begin{center}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\draw [color=cqcqcq,, xstep=0.8cm,ystep=0.8cm] (-2.56,-1.3) grid (3.54,3.62);
+\clip(-2.56,-1.3) rectangle (3.54,3.62);
+\draw (-2.,3.)-- (3.,3.);
+\draw (3.,3.)-- (3.,-1.);
+\draw (3.,-1.)-- (-2.,-1.);
+\draw (-2.,-1.)-- (-2.,3.);
+\draw [color=ffqqqq] (-0.36,3.)-- (1.,2.);
+\begin{scriptsize}
+\draw [color=qqqqff] (-2.,3.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=qqqqff] (-2.28,3.18) node {$A$};
+\draw [color=qqqqff] (3.,3.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=qqqqff] (3.22,3.14) node {$B$};
+\draw [color=qqqqff] (3.,-1.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=qqqqff] (3.2,-0.78) node {$C$};
+\draw [color=qqqqff] (-2.,-1.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=qqqqff] (-2.3,-0.8) node {$D$};
+\draw [color=qqqqff] (1.,2.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=qqqqff] (1.14,2.28) node {$O$};
+\draw [color=xdxdff] (-0.36,3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (-0.22,3.36) node {$G$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+\begin{enumerate}
+\item Laquelle de ces courbes décrit la distance OG selon la distance parcourue par le gardien G sur $[AB]$? Justifier.
+
+\begin{minipage}{0.33\linewidth}
+\begin{center}
+\textbf{ Courbe 1}
+ \end{center} 
+
+\input{VF-0-Ncourbe1}
+
+\end{minipage}
+\begin{minipage}{0.33\linewidth}
+\begin{center}
+\textbf{ Courbe 2}
+ \end{center} 
+ 
+\input{VF-0-Ncourbe2} 
+
+\end{minipage}
+\begin{minipage}{0.33\linewidth}
+\begin{center}
+\textbf{ Courbe 3}
+ \end{center} 
+
+\input{VF-0-Ncourbe3}
+
+\end{minipage}
+
+\item Décrire l'évolution de la distance OG selon la distance parcourue par le gardien G sur $[AB]$.
+%\item Soit $x$ la distance $AG$. Exprimer OG en fonction de $x$ lorsque $G$ décrit $[AB]$.
+%\item Le gardien G continue sa ronde. Le talkie-walkie ne fonctionne pas lorsque la distance est supérieure à 300 mètres. Sur quelle portion du périmètre de la propriété les 2 gardiens ne pourront plus communiquer ? Utiliser un argument géométrique.
+%\item \textbf{Pour aller beaucoup plus loin :} Soit $x$ la distance $AG$. Déterminer la distance $OG$ quelque soit la position du gardien sur sa ronde.
+\item Arrivé en B, le gardien $G$ continue sa ronde jusqu'au point $C$. Compléter à main levée la courbe qui représente la distance $OG$ en fonction de la distance parcourue par le gardien $G$.
+\item Compléter à main levée la courbe sur l'intervalle $[0;18]$.
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.8cm,y=0.8cm]
+\begin{axis}[
+x=0.8cm,y=0.8cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-0.7683400000000034,
+xmax=20.403433333333343,
+ymin=-0.48380000000000695,
+ymax=7.2005066666666675,
+xtick={-0.0,1.0,...,20.0},
+ytick={-0.0,1.0,...,7.0},]
+\clip(-0.76834,-0.4838) rectangle (20.403433333333343,7.2005066666666675);
+\end{axis}
+\end{tikzpicture}
+
+
+\end{enumerate}

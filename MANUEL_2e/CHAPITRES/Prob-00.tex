@@ -1,0 +1,21 @@
+
+On jette une pièce équilibrée 40 fois.
+
+ 
+
+\begin{center}
+\begin{lstlisting}
+import random
+n=int(input("Quel est le nombre de lancers ? "))
+piece=["pile","face"]
+proba_piece=[0]*2
+for i in range (n) :
+    alea = random.randint(0,1)
+    proba_piece[alea]=proba_piece[alea]+1
+    
+for j in range (2) :
+    print("On a alors p(",piece[j],") = ",proba_piece[j]/n)
+\end{lstlisting}
+\end{center}
+ 
+ 

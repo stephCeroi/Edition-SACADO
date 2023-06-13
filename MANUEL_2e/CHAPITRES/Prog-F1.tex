@@ -1,0 +1,141 @@
+\begin{titre}[Programmation]
+
+\Titre{Moyenne pondérée et tableau}{2}
+\end{titre}
+
+
+\begin{CpsCol}
+\textbf{Python}
+\begin{description}
+\item[$\square$] Utiliser des tableaux
+\end{description}
+\end{CpsCol}
+
+
+\begin{PC}
+\input{Prog-10}
+\end{PC}
+
+\begin{DefT}{Tableau}
+Un \index{Tableau}tableau est un ensemble ordonné d'éléments portant le même nom de variable. Les éléments sont repérés par rapport à leur position dans le tableau par un \index{tableau!Indice}indice.
+
+L'indice d'un tableau commence toujours à 0.
+\end{DefT}
+
+
+\begin{Ex}
+Soit tab un tableau de fruits tel que tab=['fraise','cerise','Myrtille','goyave','coco']. tab[0]='fraise', tab[4]='coco'.
+\end{Ex}
+
+
+\begin{minipage}[t]{0.49\linewidth}
+\begin{Syn}
+\begin{description}[leftmargin=*]
+\item[tab=['1','a']] déclaration du tableau par extension.
+\item[tab=[]] Le tableau peut être déclaré vide.  
+\item[tab.append(a)] Ajout de l'élément a à la fin du tableau. On peut aussi utiliser Tab=Tab+[a]
+\item[tab.sort()] Tri le tableau selon l'ordre croissant ou alphabétique.
+\item[tab.reverse()] Changement d'ordre des éléments
+\end{description}
+\end{Syn}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\begin{Cod}
+\begin{description}[leftmargin=*]
+\item \texttt{tab=[]}
+\item \texttt{{\color{orange}for} i {\color{orange}in}  {\color{violet}range}(10):}
+\item \hspace{0,4cm}\texttt{tab.append(i)}
+\item \hspace{0,4cm}\texttt{{\color{violet}print}(tab)}
+\item \texttt{tab.sort()}
+\item \texttt{tab.reverse()}
+\end{description}
+
+\end{Cod}
+\end{minipage}
+
+
+
+\mini{
+\AD{1}{AP-50}
+}{
+\AD{1}{AP-51}
+}
+
+\begin{DefT}{Chaine de caractère}
+Une \index{Chaine de caractère}chaine de caractère est une liste ordonnée de caractères. Chaque caractère est repéré par un indice.
+
+L'indice d'une chaine commence toujours à 0.
+\end{DefT}
+
+
+\begin{DefT}{Longueur de chaine, de tableau} \index{Chaine de caractère!Longueur}\index{Tableau!Longueur}
+Pour déterminer la longueur d'une chaine ou d'un tableau, on utilise mot anglais "length", qui est diminué en Python par {\color{violet}len}
+\end{DefT}
+
+\begin{DefT}{Concaténation}
+On appelle \index{Concaténation}concaténation l'opération consistant à mettre bout à bout des éléments de deux tableaux ou deux chaines.
+\end{DefT}
+
+\begin{Ex}
+\begin{minipage}[t]{0.49\linewidth}
+\textbf{Avec une chaine}
+
+scr1 ="Bon" et scr2 ="jour"\\
+scr = scr1 + scr2\\
+scr ="Bonjour"
+\end{minipage}
+\hfill\vrule\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\textbf{Avec un tableau}
+
+tab1=['1','a'] et tab2=['b']\\
+tab = tab1 + tab2\\
+tab = ['1','a','b']
+\end{minipage}
+\end{Ex}
+
+\begin{Mt}[ pour lire les termes d'une chaine par rapport à leur indice]
+\begin{description}
+\item[•] Pour lire la chaine \texttt{str} du $i^{ième}$ terme jusqu'au $p^{ième}$ non inclus, on écrit \texttt{str[i:p]}
+\item[•] Pour lire la chaine \texttt{str} jusqu'au $i^{ième}$ terme non inclus, on écrit \texttt{str[:i]}
+\item[•] Pour lire la chaine \texttt{str} du $i^{ième}$ terme jusqu'au dernier, on écrit \texttt{str[i:]}
+\end{description}
+\end{Mt}
+
+
+\begin{minipage}{0.48\linewidth}
+\begin{Ex}
+Le mot \textbf{rase} est une chaine de caractère contenant 4 caractères. 
+
+On appelle \texttt{mot} la chaine de caractère "rase" donc mot[0]=r, mot[1]=a, mot[2]=s et mot[3]=e. On veut remplacer la lettre s par la lettre m.
+\end{Ex}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{Cod}
+\begin{description}[leftmargin=*]
+\item \texttt{mot={\color{vert}"rase"}}
+\item \texttt{{\color{orange}for} i {\color{orange}in}  {\color{violet}range}({\color{violet}len}(mot)):}
+\item \hspace{0,5cm}\texttt{{\color{orange}if} mot[i] == "s" : }
+\item \hspace{1cm}\texttt{mot = mot[:i] + {\color{vert}'m'} + mot[i+1:]}
+\item \hspace{0,5cm}\texttt{{\color{violet}print}(mot)}
+\end{description}
+\end{Cod}
+\end{minipage}
+
+\mini{
+\AD{1}{AP-57}
+}{
+\AD{1}{Prog-11}
+}
+
+\AD{1}{AP-64}
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+
+On donne le programme suivant :
+
+\begin{lstlisting}
+from math import *
+n = int(input("Entrer un nombre"))
+racine = int(sqrt(n)+1)
+for i in range(2,racine,1) :
+	if n%i == 0 :
+		print(n," n'est pas premier")
+		break
+	else :
+		print(n," est premier")
+\end{lstlisting}
+
+\begin{enumerate}
+\item Quelle est l'utilité de ce code ?
+\item Pourquoi rendre le nombre \texttt{sqrt(n)+1} entier avec \texttt{int} ?
+\end{enumerate}

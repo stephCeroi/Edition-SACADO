@@ -1,0 +1,52 @@
+
+Soit $h$ la fonction définie par $h(x)=\frac{1}{x-\alpha}$ pour tout nombre réel différent de $\alpha$ et $\mathscr{H}$ sa courbe représentative dans un repère orthonormé.
+
+On donne :
+\begin{description}
+\item[•] deux réels $a$ et $b$ strictement inférieurs $\alpha$;
+\item[•] deux réels $c$ et $d$ strictement supérieurs $\alpha$;
+\end{description}
+
+On considère $A$, $B$, $C$ et $D$ les points de $\mathscr{H}$ d'abscisses respectives $a$, $b$, $c$ et $d$.
+
+
+\begin{center}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-2.2318348731740776,-2.7093110235722184) grid (4.543464393819541,3.434864476085008);
+\draw[->,color=black] (-2.2318348731740776,0.) -- (4.543464393819541,0.);
+\foreach \x in {-2.,-1.,1.,2.,3.,4.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-2.7093110235722184) -- (0.,3.434864476085008);
+\foreach \y in {-2.,-1.,1.,2.,3.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-2.2318348731740776,-2.7093110235722184) rectangle (4.543464393819541,3.434864476085008);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (-1.2665867584243018,-0.3421626396949615) -- (1.2022209196857017,-2.203715515724912) -- (2.,2.906976744186046) -- (3.6895910615408933,0.4917409497474283) -- cycle;
+\draw[color=ffqqqq,smooth,samples=100,domain=-2.2318348731740776:4.543464393819541] plot(\x,{1.0/((\x)-1.656)});
+\draw [color=zzttqq] (-1.2665867584243018,-0.3421626396949615)-- (1.2022209196857017,-2.203715515724912);
+\draw [color=zzttqq] (1.2022209196857017,-2.203715515724912)-- (2.,2.906976744186046);
+\draw [color=zzttqq] (2.,2.906976744186046)-- (3.6895910615408933,0.4917409497474283);
+\draw [color=zzttqq] (3.6895910615408933,0.4917409497474283)-- (-1.2665867584243018,-0.3421626396949615);
+\begin{scriptsize}
+\draw [color=xdxdff] (-1.2665867584243018,-0.3421626396949615)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (-1.1366495122079858,8.086832252288956E-4) node {$A$};
+\draw [color=xdxdff] (1.2022209196857017,-2.203715515724912)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (1.3321581659020176,-1.8740001550387588) node {$B$};
+\draw [color=xdxdff] (2.,2.906976744186046)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (2.1303441069451017,3.249239838633128) node {$C$};
+\draw [color=xdxdff] (3.6895910615408933,0.4917409497474283)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (3.819528307757209,0.8175570880135007) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+
+
+\begin{enumerate}
+\item Le quadrilatère $ABDC$ peut-il être un parallélogramme ?
+\item Le quadrilatère $ABDC$ peut-il être un losange ?
+\end{enumerate}

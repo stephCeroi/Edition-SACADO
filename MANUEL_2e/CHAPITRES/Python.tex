@@ -1,0 +1,903 @@
+ 
+
+\begin{titre}[Algorithmique et Python]
+
+\Titre{Affectation de variables}{4}
+\end{titre}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Corps du document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Une variable (zone mémoire étiquetée) sert à stocker une information qui peut être sous la forme d’un nombre, une phrase,
+une liste de nombres, une liste de mots...
+
+L'affectation des variables dans Python se fait avec le symbole =, dont le nouvel usage, non symétrique, doit être explicité
+aux élèves. Ainsi \texttt{a=1} correspond à l'instruction stocker la valeur 1 dans la variable $a$. Autrement dit, la variable
+a prend la valeur 1, ce que l'on écrit de façon synthétique $a \longleftarrow 1$.
+
+Le nom d'une variable ne peut ni être un nombre, ni certains mots réservés (commandes Python, qui prennent une coloration
+différente quand on les écrit, comme \texttt{def}, \texttt{pass}, \texttt{lambda}, etc). Il est fortement recommandé de donner des noms explicites à tous les objets que l'on crée.
+
+Il est possible de s'entrainer en ligne sur \texttt{https://repl.it/} après une inscription gratuite.
+ 
+\begin{DefT}{L'affectation}
+Pour créer une variable, il suffit de l'écrire. Python gère son type dynamiquement. Pour affecter une valeur à cette variable ($x \longleftarrow a$), on écrit $x=a$. 
+\end{DefT} 
+ 
+ 
+\begin{DefT}{La fonction input}
+Il est souvent pratique de donner des valeurs  à calculer, des chaines de caractères à comparer à un programme.
+
+La fonction de  \texttt{ \textbf{input}} permet d'assigner  à une variable une valeur entrée par l'utilisateur.
+\end{DefT}
+ 
+
+\begin{minipage}{0.3\linewidth}
+
+\begin{Cod}
+\begin{description}
+\item[] \texttt{x= input("Entrer un nombre entier") }
+\item[] \texttt{print(x+2)}
+\end{description}
+\end{Cod}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+ 
+\begin{Cod}
+\begin{description}
+\item[] \texttt{x=int(input("Entrer un nombre entier"))}
+\item[] \texttt{print(x+2)}
+\end{description}
+\end{Cod}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+ 
+\begin{Cod}
+\begin{description}
+\item[] \texttt{x= input("Entrer un nombre entier") }
+\item[] \texttt{print(x+" 2")}
+\end{description}
+\end{Cod}
+\end{minipage}
+ 
+
+\begin{Rq}
+La fonction \texttt{print} peut parfois avoir une utilisation délicate lorsque qu'on souhaite afficher du texte et des variables dans le même message. Il pratique d'utiliser la fonction \texttt{format}.
+\end{Rq}
+
+\begin{Ex}
+
+Il faut écrire la chaine de caractères comme on voudrait la voir afficher et remplacer les variables par \texttt{$\lbrace\rbrace$}. Les variables sont écrites comme paramètres de la fonction \texttt{format}.
+\begin{description}
+\item[] \texttt{x= int(input("Entrer un nombre entier")) }
+\item[] \texttt{y= int(input("Entrer un nombre entier")) }
+\item[] \texttt{somme = x + y }
+\item[] \texttt{print("$\lbrace\rbrace$ + $\lbrace\rbrace$ = $\lbrace\rbrace$".format(x,y,somme))}
+\end{description}
+\end{Ex}
+
+\begin{Rq}
+Par défaut, la fonction \texttt{input} renvoie une chaine de caractères (\texttt{str}). Pour "forcer" le typage entier à la fonction \texttt{input}, on attribue la fonction \texttt{int} à la fonction input. On peut aussi forcer avec \texttt{float} pour les réels.
+\end{Rq}
+
+\begin{ExC}{Simuler la somme obtenue par lancer de 3 dés.}
+
+\texttt{import random}
+ 
+\texttt{de1 = random.randint(1,6)}
+
+\texttt{de2 = random.randint(1,6)}
+
+\texttt{de3 = random.randint(1,6)}
+
+\texttt{somme = de1 + de2 + de3}
+ 
+\texttt{print(somme)}
+
+\end{ExC}
+
+\begin{Rq}
+La bibliothèque \texttt{\textbf{random}} propose de la création de nombres aléatoires.
+\end{Rq}
+
+
+
+
+
+
+\begin{Rq}
+La bibliothèque NumPy (http://www.numpy.org/) permet d’effectuer des calculs numériques avec Python. Elle introduit une gestion facilitée des tableaux de nombres.
+
+Il faut au départ importer le package numpy avec l’instruction suivante : \texttt{import numpy as np}
+
+Les fonctions \texttt{fct} numpy seront appelées par \texttt{np.fct}
+\end{Rq}
+
+
+\begin{Cod}
+ \lstinputlisting{statistiques.py}
+\end{Cod}
+
+
+ {\Large Les types de variable} 
+
+
+\paragraphe {Les entiers : le type  \texttt{int}}
+
+
+Ils supportent les opérations usuelles (+, $-$,$ \times$, **(exponentiation), \texttt{abs()}(valeur absolue)...), mais aussi // (quotient entier de la division euclidienne), \% (reste de la division euclidienne).
+Les priorités opératoires sont conformes aux standards mathématiques.
+
+\paragraphe{Les nombres flottants : le type \texttt{float}}
+
+Ils supportent la plupart des opérations usuelles (y compris la division euclidienne qui demande à être étudiée). Il faut
+savoir que l'on peut convertir des nombres (ou autres objets) d'un type à un autre.
+
+\paragraphe{ Les nombres flottants : le type \texttt{bool}}
+
+Ils ne peuvent prendre que deux valeurs : \texttt{False} ou \texttt{True}
+\texttt{False} a pour valeur 0 et \texttt{True} a pour valeur 1. On peut donc faire des calculs avec les booléens : \texttt{False} * \texttt{True} donne 0.
+Ils sont générés par les opérateurs dits booléens, comme la comparaison (<, >, <=, >=;) le test d’égalité (==), le test
+de différence (! =)  qui peuvent être combinés avec les opérateurs logiques \texttt{not}, \texttt{or} et \texttt{and}. Par exemple, \texttt{A or B} est vraie si au moins une des deux propriétés est vraie.
+
+\paragraphe{Les n-uplets : le type \texttt{tuple}}
+
+Le mot "tuple" vient des suffixes anglais, comme n-uplet vient des suffixes français des mots triplet, quadruplet, etc.
+Les tuple contiennent des éléments qui peuvent être de type quelconque, éventuellement de types différents. Ils sont
+délimités par des parenthèses ( ) et les éléments sont séparés par une virgule.
+
+Chaque élément possède un indice : le premier élément porte l’indice 0, le deuxième porte l’indice 1 ...
+
+On peut repérer un élément en commençant par la fin : le dernier porte l’indice $-1$, l’avant dernier porte l’indice $-2$...
+
+Un tuple est un objet non mutable : on ne peut ni modifier la valeur d’un élément, ni ajouter ou supprimer des éléments.
+En revanche, on peut concaténer 2 tuple (mettre bout-à-bout les contenus), compter les occurrences d’un élément, ou le
+nombre d’éléments du tuple, tester l’appartenance d’un élément au tuple ...
+
+ \paragraphe{Les chaînes de caractères : le type \texttt{string}}
+
+Une chaîne de caractère est donnée entre guillemets (’simples’, "doubles" ou ”’triples”’). Les caractères peuvent être des
+lettres, des nombres, un espace...
+
+Pour définir une chaîne de caractères, on utilise :
+\begin{description}
+\item[•] soit les apostrophes : ’Il a dit : "bonjour"’
+\item[•] soit les guillemets : "SNT, c’est génial!"
+\item[•] soit des triples guillemets qui permettent de mettre tout ce qu’on veut dans la chaîne de caractères par exemple
+”’SNT, c’est pour tous ;)”’.
+\end{description}
+  
+Toutes les opérations vues sur les tuple sont aussi valables sur les chaînes de caractères (y compris le tri, qui renvoie là
+encore une liste de caractères dans l’ordre alphabétique, les signes de ponctuation en premier).
+
+
+
+\begin{Rq}
+Il est possible de forcer le typage d'une variable, d'une expression avec \texttt{str()} ,  \texttt{int()} 
+\end{Rq}
+
+
+
+\begin{ExD}
+
+Créer un programme qui demande votre nom, votre prénom et votre age et qui affiche les valeurs renseignées.
+\end{ExD}
+
+\begin{ExD}
+
+Déterminer de l’aire d’un triangle avec la formule $A =\frac12 ab \sin \widehat{C}$.
+\end{ExD}
+
+\begin{Rqs}
+\begin{description}
+\item[•] La fonction \texttt{sinus} s'obtient avec la bibliothèque \texttt{numpy}. Elle prend comme paramètre un réel en radian. Il conviendra de convertir la valeur de l'angle de degré en radian.
+\item[•] Pour accéder au sinus et à la valeur de $\pi$, on écrit :
+
+\begin{lstlisting}
+import numpy as np
+....  
+np.pi
+pn.sin()
+\end{lstlisting}
+\end{description}
+
+Mais ce n'est pas la seule façon évidement. La bibliothèque \texttt{math} convient aussi.
+
+\end{Rqs}
+
+\begin{ExD}
+
+Calculer les coordonnées d'un vecteur  connaissant les coordonnées de deux points.
+\end{ExD}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%        Nouvelle page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\begin{titre}[Algorithmique et Python]
+
+\Titre{Les fonctions 1}{4}
+\end{titre}
+
+\begin{DefT}{Syntaxe}
+Pour définir une fonction, on utilise le mot clé \texttt{\textbf{def}} suivi du nom à la fonction. On peut lui passer des paramètres mais ce n'est pas obligatoire. 
+Dans le cas où une variable est renvoyée, ce code se nomme une fonction et on renvoie la variable avec l'instruction \texttt{\textbf{return}}. Dans le cas où une variable n'est est pas renvoyée, ce code se nomme une procédure.
+
+Il suffit ensuite d'appeler la fonction par son nom dans le script : \texttt{nomdelafonction()}.
+\end{DefT}
+
+Le bloc d’instructions (suivi ou non de l’instruction return) s’appelle le corps de la fonction. Il doit être obligatoirement
+indenté (c’est à dire "décalé", d’une tabulation, souvent égale à 4 espaces) et la borne de l’indentation marque la borne
+de la définition de fonction. L’instruction \texttt{\textbf{return}} (ou \texttt{\textbf{return if ...}}) qui veut dire renvoyer (ou renvoyer si...) est une instruction de sortie de la fonction. Toutes les instructions écrites après ne sont pas prises en compte. Certaines fonctions ne renvoient pas de résultat, servent seulement à effectuer une partie du programme.
+
+
+
+
+\begin{ExC}{Écrire une fonction qui calcule la somme de deux nombres}
+ 
+\begin{lstlisting}
+def somme(x,y):
+    s=x+y
+    return s
+ 
+a=int(input('entre un nombre :'))
+b=int(input('entre un nombre :'))    
+print(a,'+',b,'=', somme(a,b))
+\end{lstlisting}
+\end{ExC}
+
+\begin{ExC}{Écrire une fonction qui calcule la moyenne de deux nombres}
+ 
+\begin{lstlisting}
+def moyenne(a,b):
+    m=(a+b)/2
+    return m
+ 
+a=int(input('entre un nombre :'))
+b=int(input('entre un nombre :'))    
+print(a,'et',b,' ont pour moyenne', moyenne(a,b))
+\end{lstlisting}
+\end{ExC}
+
+\begin{DefT}{Variable globale et locale}
+  Une variable locale est définie dans la fonction. 
+    Une variable globale est définie en dehors de toute fonction. Dans l'exemple précédent, s, x et y sont locales, a et  b sont globales.
+  \begin{description}
+  
+  \item[• Règle 1 :]   Une variable locale n'existe que dans la fonction.
+  
+   \item[• Règle 2 :] Une variable globale peut être utilisée mais ne peut pas être modifiée directement à l'intérieur d'une fonction.
+  
+   \item[• Règle 3 :] pour pouvoir modifier une variable globale $x$ dans une fonction il suffit d'écrire : global $x$.
+\end{description}
+\end{DefT}
+
+\begin{ExD} 
+
+Créer une fonction qui calcule l'aire d'un disque et le périmètre du cercle périmètre associé au rayon $r$. Coder ensuite un programme qui propose l'aire et le rayon connaissance $r$.
+\end{ExD}
+
+
+
+\begin{ExD} 
+
+Créer un programme qui demande 2 nombres et une opération (addition, soustraction, multiplication et division)  à un utilisateur puis qui renvoie le résultat de l'opération. 
+\end{ExD}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%        Nouvelle page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\begin{titre}[Algorithmique et Python]
+
+\Titre{Le test}{4}
+\end{titre}
+
+ 
+
+
+\begin{DefT}{Test conditionnel}
+Un  \textbf{test}   est une instruction qui ouvre le choix parmi deux actions suivant le résultat d'un test.
+
+Sa structure est : \textbf{Si} test vérifié \textbf{alors} Action 1 \textbf{sinon} Action 2.
+\end{DefT}
+
+
+
+\begin{minipage}[t]{0.31\linewidth}
+\begin{Ex}
+\begin{description}
+\item Donner $x$
+\item[Test :] $x<12$
+\item[Action 1 :] Bonjour
+\item[Action 2 :] Bon après midi
+\end{description}
+\end{Ex}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.31\linewidth}
+\begin{Syn}
+\texttt{ Donner $x$}
+
+\texttt{ \textbf{Si} $x<12$ \textbf{Alors}}
+
+\texttt{ \hspace{0.5cm}	 Bonjour }
+
+\texttt{ \textbf{Sinon}}
+
+\texttt{\hspace{0.5cm}	Bon après midi }
+   	
+\texttt{\textbf{FinSi}}
+
+\end{Syn}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.31\linewidth}
+
+\begin{Cod}
+\begin{description}
+\item[] $x$=int(input("nombre ?"))
+\item[] if  $x<12$ :
+\item[] \hspace{0.5cm} print("Bonjour")
+\item[] else :
+\item[] \hspace{0.5cm} print("Bon après midi")
+\end{description}
+\end{Cod}
+\end{minipage}
+
+
+\begin{Rq}
+Pour signifier le bloc de test, Python utilise l'indentation. Si l'indentation n'est pas conforme, Python renvoie une erreur. 
+Pour chainer plusieurs tests, Python utilise la syntaxe : \texttt{if} ...  \texttt{elif} ... \texttt{else}
+\end{Rq}
+
+\begin{minipage}{0.5\linewidth}
+\begin{DefT}{le ==}
+Pour tester la véracité d'une égalité, on utilise le "==". 
+\end{DefT}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{Cod}
+\texttt{ x = input("Taper oui ou non ? ")} 
+
+\texttt{ if x == "oui":}
+
+ \hspace{0.5cm} \texttt{print("vous avez tapé oui")}
+  
+\texttt{ else :}  \texttt{ print("vous avez tapé non") } 
+\end{Cod}
+\end{minipage}
+
+
+\begin{ExC}{Soit $I=[a;b]$ un intervalle donné. Le réel $x_0$ appartient-il à $I$ ?}
+
+ 
+
+\begin{minipage}{0.42\linewidth}
+
+ 
+\textbf{Algorithme }
+
+\texttt{ Entrer $a$ et $b$  } 
+
+\texttt{ Entrer $x_0$  }
+
+\texttt{ Si $a<= x_0 $ et $x_0 <= b$}
+
+$ \quad \quad $  Afficher $x_0$ appartient à l'intervalle $I$ 
+
+\texttt{ Sinon}
+
+$ \quad \quad $   Afficher $x_0$ n'appartient pas à l'intervalle $I$ 
+ 
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
+ 
+\textbf{Python}
+
+ 
+\texttt{ a = float(input("Entrer la borne inférieure"))}
+ 
+\texttt{ b = float(input("Entrer la borne supérieure"))}
+ 
+\texttt{ x = float(input("Entrer le nombre"))} 
+
+\texttt{ if a <= x and x <=b :  } 
+
+\hspace{0.4cm}	\texttt{ print(x," appartient à [",a,";",b,"]" ) } 
+
+\texttt{ else :} 
+
+\hspace{0.4cm}	\texttt{ print(x," n'appartient pas à [",a,";",b,"]" ) } 
+\end{minipage}
+
+\end{ExC}
+
+
+\begin{ExD}
+
+Déterminer la nature d'un triangle connaissant les longueurs des 3 cotés.
+\end{ExD}
+
+\begin{ExD}
+
+Déterminer l'alignement de 3 points dont on connait les coordonnées.
+\end{ExD}
+
+\begin{ExD}
+
+Déterminer une équation de droite passant par deux points dont on connait les coordonnées.
+\end{ExD}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%        Nouvelle page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\begin{titre}[Algorithmique et Python]
+
+\Titre{Les boucles}{4}
+\end{titre}
+ 
+
+\begin{DefT}{Boucle finie}
+Une boucle finie est une itération dont on connait le nombre de répétition \textit{a priori}. 
+\end{DefT}
+
+\begin{ExC}{Calculer la somme des n+1 premiers entiers}
+\begin{lstlisting}
+def somme(n):
+	S= 0
+	for i in range (n):
+	S += i
+	return(S)
+\end{lstlisting}
+\end{ExC}
+
+
+
+ 
+\begin{minipage}[t]{0.49\linewidth}
+L'écriture algorithmique  de $n+1$ itérations
+\begin{algobox}
+\Pour{$i$}{0}{$n$}
+\DebutPour
+\Ligne Action
+\FinPour
+\end{algobox}
+
+\end{minipage}
+\hfill\vrule\hfill
+\begin{minipage}[t]{0.49\linewidth}
+La programmation en Python de $n$ itérations. $i$ varie de 0 à $n$ inclus.
+\begin{lstlisting}
+for i in range(n+1) :
+	action
+\end{lstlisting}
+\end{minipage}
+
+
+\begin{minipage}{0.25\linewidth}
+\begin{Cod}
+\begin{lstlisting}
+for i in range (10) : 
+    print(3*i)
+\end{lstlisting}
+\end{Cod}
+\end{minipage}
+\begin{minipage}{0.28\linewidth}
+\begin{Cod}
+\begin{lstlisting}
+mot="salut"
+for caractere in mot : 
+   print(caractere)
+\end{lstlisting}
+\end{Cod}
+\end{minipage}
+\begin{minipage}{0.25\linewidth}
+\begin{Cod}
+\begin{lstlisting}
+x = 2 
+while x < 10 : 
+	x = x + 2
+	print(x)
+\end{lstlisting}
+\end{Cod}
+\end{minipage}
+\begin{minipage}{0.25\linewidth}
+\begin{Cod}
+\begin{lstlisting}
+x = 2
+while x < 10 :
+	x = x + 2
+print(x)
+\end{lstlisting}
+\end{Cod}
+\end{minipage}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+\begin{ExC}{Simuler toutes les possibilités de faces obtenues lors d'un lancer de 3 dés.}
+ 
+\begin{lstlisting}
+for i in range (1,7):
+    for j in range (1,7):
+        for k in range (1,7):
+            print(i,'+',j,'+',k,'=',i+j+k)
+\end{lstlisting}                
+\end{ExC}     
+    
+
+ 
+
+
+
+\begin{ExD}
+
+Construire un tableau de valeurs connaissant une fonction dans un intervalle donné.
+\end{ExD}
+
+\begin{ExD}
+
+Simuler 100 lancés d'un dé équilibré cubique et calculer la fréquence d'apparition d'un nombre pair. 
+\end{ExD}
+
+
+ 
+
+
+\begin{ExD}
+
+On lance deux dés équilibrés cubiques et on s'intéresse à la fréquence d'obtenir une somme supérieure à 10. 
+
+Simuler $N$ échantillons de taille $n$ et calculer dans chacun des cas la proportion où l'écart entre $p$ et $f$ est inférieur ou égal à $\frac{1}{n}$.    
+\end{ExD}
+
+
+\begin{ExD}
+
+Enrichir le programme de devinette, de manière à ce que :
+\begin{description}
+\item[•] le joueur propose des nombres jusqu’à ce qu’il trouve ; le nombre d’essais sera affiché en fin de partie
+\item[•] le joueur a un nombre de tentatives limité ; le nombre d’essais sera affiché en fin de partie
+\item[•] la durée de la partie est limitée dans le temps.
+\end{description}
+
+Les programmes attendus comporteront une fonction (au moins ), par exemple correspondant au jeu "simple" précédemment
+programmé. Dans la dernière option, on pourra utiliser la fonction time.time().
+\end{ExD}
+
+\begin{Rq}
+La fonction \texttt{time.time()} renvoie la durée écoulée, en secondes, depuis une date référence prise comme origine des
+temps (appelée "The Epoch"). Trouverez-vous la date de "The Epoch", en n’utilisant que Python ?
+\end{Rq}
+
+\newpage
+
+\paragraphe{Boucle avec arrêt}
+
+
+\begin{minipage}{0.5\linewidth}
+\begin{DefT}{Boucle à condition d'arrêt}
+Une boucle à condition d'arrêt est une itération qui va s'arrêter dès que la condition n'est plus vraie (\color{orange}True\color{black} passe à \color{orange}False\color{black}). 
+
+On utilise un booléen (voir ci-contre).
+\end{DefT}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{DefT}{Booléen}
+Un booléen est une variable qui ne prend que 2 valeurs : 
+\begin{description}
+\item[•] \color{orange}True\color{black} \quad ou \quad \color{orange}False \color{black}.
+\item[•] 1 ou 0.
+\end{description}
+\end{DefT}
+\end{minipage}
+
+\begin{Syn}
+\begin{minipage}[t]{0.49\linewidth}
+\begin{algobox}
+\Tantque{b-a<4}
+\DebutTantQue
+\Ligne action
+\FinTantQue
+\end{algobox}
+
+\end{minipage}
+\hfill\vrule\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\begin{lstlisting}
+While b-a<4:
+	action
+\end{lstlisting}
+\end{minipage}
+\end{Syn}
+
+\begin{Att}
+La boucle peut devenir infinie et faire "planter" le programme si la condition d'arrêt n'est jamais validée.
+\end{Att}
+
+
+\begin{ExC}{Créer un tableau de valeurs}
+ \lstinputlisting{liste.py}
+\end{ExC}
+
+
+
+\begin{ExC}{Déterminer par balayage un encadrement de $\sqrt{2}$ d’amplitude inférieure ou égale à $10^{-n}$. }
+
+\vspace{0.4cm}
+
+\textbf{Résolution mathématique et algorithmique}
+
+$\sqrt{2}$ est une solution de l'équation $x^2-2=0$. 
+
+\vspace{0.4cm}
+
+\begin{minipage}{0.3\linewidth}
+
+\begin{tabular}{|l|}
+\hline 
+Algorithme \\ 
+\hline 
+Entrer le pas  \\ 
+$x \leftarrow 0$ \\
+Affecter $f(x) \leftarrow x*x-2 $ \\
+Tant que $f(x)$ < 0 \\
+$ \quad \quad	x \leftarrow x +step $ \\
+Afficher  $x ,"< x_0 < ",x + $pas\\
+\hline 
+\end{tabular} 
+  
+ 
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{tabular}{|c|}
+\hline 
+Python \\ 
+\hline 
+\begin{lstlisting}
+step = round(float(input("Entrer le pas")),2)
+print(step)
+x = 0
+f = x*x - 2
+while f < 0 : # Parcours de boucle
+    f = x*x - 2
+    x += step
+print(f, round(x-2*step,2),"< x_0 < ",round(x-step,2) ) 
+\end{lstlisting}\\
+\hline 
+\end{tabular} 
+\end{minipage}
+
+\end{ExC}
+
+
+
+ 
+ 
+ 
+\begin{ExD} 
+
+Calculer la moyenne arithmétique de $n$ valeurs pondérées données par l'utilisateur.
+\end{ExD}
+
+
+
+
+\begin{ExD}
+
+Déterminer la première puissance d’un nombre positif donné supérieure ou inférieure à une valeur donnée.
+\end{ExD}
+
+
+
+\begin{ExD}
+
+Déterminer les nombres premiers inférieur à 100. 
+\end{ExD}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%        Nouvelle page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\begin{titre}[Algorithmique et Python]
+
+\Titre{Les listes}{4}
+\end{titre}
+
+
+\begin{DefT}{Les listes}
+Le type liste est un type composé. C'est une suite ordonnée d'objets qui n'ont pas forcément le même type, elle est donc hétérogène. 
+
+Une liste constituée des éléments $e_1$,$e_2$,....,$e_n$  s'écrit [$e_1$,$e_2$,....,$e_n$]. Les $e_i$ peuvent  être des listes eux mêmes ce qui permet par exemple de créer une matrice.
+
+Une liste vide est une liste ne contenant aucun objet, on la note [ ].
+\end{DefT}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+ ALGORITHMIE & PYTHON & Les méthodes existantes des listes \vplus \\ 
+\hline 
+Longueur(A) & len(A) & Renvoie le nombre d'éléments \vplus\\ 
+\hline 
+A[i] & A[i] & Renvoie le i-ème élément de la liste. \vplus\\ 
+\hline 
+A[i] $\longleftarrow$ k & A[i]=k & Le i-ème élément de A prend la valeur k \vplus\\ 
+\hline 
+Tranche (x,y) & A[x:y] & Tranche de la liste qui commence à l'index x et s'arrête avant l'index y. \vplus\\ 
+\hline 
+Supprime(k) & del(A[k]) & Supprime la valeur de la liste à l'index k. \vplus \\ 
+\hline 
+Tri(A) & A.sort() & trie une liste \vplus\\ 
+\hline 
+Inverse(A) & A.reverse()  & Inverse l'ordre des éléments dans une liste. \vplus\\ 
+\hline 
+Index(x)& A.index(x) & Donne l'index de x dans la liste.\vplus\\ 
+\hline 
+Ajouter (k,A) & A.append(k) & Ajoute la valeur k à la fin de la liste A. \vplus\\ 
+\hline 
+Supprime(k,A) & A.remove(k) & Recherche la 1ere valeur de k dans la liste A et la supprime. \vplus \\ 
+\hline 
+\end{tabular} 
+
+\begin{ExC}{Créer une liste vide et insérer la suite 10 premiers nombres pairs.}
+\begin{description}
+\item  \texttt{nbre\_pairs = []} 
+\item  \texttt{for i in range(10):}
+\item  $\quad \quad $ \texttt{nbre\_pairs.append(2*i)}
+\item  \texttt{print(nbre\_pairs)}
+\end{description}
+\end{ExC}
+
+\begin{ExC}{Construire une liste qui simule un paquet de bonbons M\&M's. Il y a environ 42 bonbons dans un paquet.}
+
+\begin{lstlisting}
+import random
+n=int(input("Quel est le nombre de bonbons dans le paquet ? "))
+couleur=["jaune","bleu","rouge","orange","vert","marron"]
+proba_couleur=[0]*6
+for i in range (n) :
+    alea = random.randint(0,5)
+    proba_couleur[alea]=proba_couleur[alea]+1
+    
+for j in range (6) :
+    print("On a alors p(",couleur[j],") = ",proba_couleur[j]/n)
+\end{lstlisting}
+ \end{ExC}
+ 
+
+\begin{Rq}
+Il est possible de déclarer une liste en utilisant [0]*6 plutot que [0,0,0,0,0,0].
+\end{Rq}
+
+
+\paragraphe{Remarques sur la copie de listes}  
+
+Pour copier une liste, on ne peut pas simplement écrire $L2=L1$, sinon toute modification de l’une
+entraîne une modification de l’autre. Les listes $L1$ et $L2$ sont liées car elles pointent vers la même zone mémoire.
+ 
+
+Une première solution pour effectuer une copie peut être d'utiliser le \textit{slicing} (en indiquant [:]), qui renvoie une nouvelle liste :
+
+\begin{Cod}
+\begin{description}
+\item[] L1=[1, 2, 3]
+\item[] L2=L1[:] 
+\item[] L2[3][0]=0
+\item[] \texttt{print}(L1 , L2)
+\end{description}
+\end{Cod}
+
+\begin{Rq} 
+On peut aussi définir une nouvelle liste "en compréhension" en remplaçant L2=L1[:] par L2 = [i for i in L1].
+\end{Rq}
+
+Ces solutions ne sont satisfaisantes que si l’on ne manipule que des listes de premier niveau ne comportant aucune
+sous-liste. Pour contourner cette difficultés des listes imbriquées, il faut utiliser une méthode qui n’est pas dans la bibliothèque standard. On importe le module \texttt{copy}, puis on utilise la méthode \texttt{deepcopy}() :
+
+
+\begin{Cod}
+\begin{description}
+\item[] \texttt{import copy}
+\item[] L1=[1,2,3,[4,5,6]] 
+\item[] L2=\texttt{copy.deepcopy}(L1)
+\item[] L2[3][1] = 0
+\item[] \texttt{print}(L1 , L2)
+\end{description}
+\end{Cod}
+
+
+
+\begin{ExD} 
+
+Écrire un programme qui demande 4 nombres à un utilisateur et qui les insère dans une liste de 4 nombres puis qui ajoute à la liste le nombre impair suivant du dernier nombre entré et enfin qui classe les nombres par ordre croissant.
+\end{ExD}
+
+\begin{ExD} 
+
+Calculer la moyenne arithmétique de $n$ valeurs pondérées données par l'utilisateur.
+\end{ExD}
+
+\begin{ExD} 
+
+Calculer la médiane de $n$ valeurs données par l'utilisateur.
+\end{ExD}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%        Nouvelle page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{titre}[Algorithmique et Python]
+
+\Titre{Les fonctions 2}{4}
+\end{titre}
+ 
+ 
+\begin{ExD} 
+
+Expliquer la fonction \texttt{creaListe} suivante.
+
+\begin{lstlisting}
+from random import *
+n=int(input("Entrer la longueur de la liste "))
+m=int(input("la valeur maximale stricte des nombres de la liste "))
+def creaListe(n,m):
+    listeAleatoire=[ ]
+    for i in range(n):
+        listeAleatoire.append(randint(0,m))
+    return listeAleatoire
+    
+print(creaListe(n,m))
+
+\end{lstlisting}
+
+\end{ExD}
+
+\begin{ExD} 
+
+Créer un programme qui demande à l'utilisateur 10 nombres et qui va lui donner la médiane, la moyenne, l'écart inter quartile et l'écart type.
+
+\end{ExD} 
+
+
+\paragraphe{Sans numpy}
+
+Il faut revenir à la définition de l'écart type. A savoir : $\sigma = \sqrt{\frac{1}{n}\sum(x-\overline{x})^2} = \sqrt{\overline{x^2}-\overline{x}^2}$.
+
+Ce n'est pas aussi rapide qu'avec numpy. Mais pédagogiquement cela peut valoir le détour.
+
+D'autant que "Lire et comprendre une fonction écrite en Python renvoyant la moyenne m, l’écart type (...)" est explicitement mentionné dans le programme en page 13.
+  
+ \begin{Cod}
+ \lstinputlisting{ecart-type-brut.py}
+ \end{Cod}
+
+ 

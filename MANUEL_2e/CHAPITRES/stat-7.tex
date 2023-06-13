@@ -1,0 +1,47 @@
+
+On a demandé à des familles le nombres d'heures de connexion quotidienne à Internet.
+Voici la courbe des fréquences cumulées croissantes de cette série.
+
+\begin{center}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.9979660306529559cm,y=0.08596519726453995cm]
+\draw [color=cqcqcq,, xstep=0.9979660306529559cm,ystep=1.719303945290799cm] (-0.5559332953365586,-7.200172163981221) grid (7.460371623144191,109.12597281335289);
+\draw[->,color=black] (0.,0.) -- (7.460371623144191,0.);
+\foreach \x in {,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,0.) -- (0.,109.12597281335289);
+\foreach \y in {,20.,40.,60.,80.,100.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-0.5559332953365586,-7.200172163981221) rectangle (7.460371623144191,109.12597281335289);
+\draw (0.,0.)-- (1.,9.);
+\draw (1.,9.)-- (2.,24.);
+\draw (2.,24.)-- (3.,43.);
+\draw (3.,43.)-- (4.,69.);
+\draw (4.,69.)-- (5.,83.);
+\draw (5.,83.)-- (6.,93.);
+\draw (6.,93.)-- (7.,100.);
+\draw [dash pattern=on 4pt off 4pt,color=ffqqqq] (0.,100.)-- (7.,100.);
+\draw [dash pattern=on 4pt off 4pt,color=ffqqqq] (6.,93.)-- (0.,93.);
+\draw [dash pattern=on 4pt off 4pt,color=ffqqqq] (0.,83.)-- (5.,83.);
+\draw [dash pattern=on 4pt off 4pt,color=ffqqqq] (4.,69.)-- (0.,69.);
+\draw [dash pattern=on 4pt off 4pt,color=ffqqqq] (0.,43.)-- (3.,43.);
+\draw [dash pattern=on 4pt off 4pt,color=ffqqqq] (2.,24.)-- (0.,24.);
+\draw [dash pattern=on 4pt off 4pt,color=ffqqqq] (0.,9.)-- (1.,9.);
+\draw [color=ffqqqq](-0.2753626231897323,94.82185372029915) node[anchor=north west] {93};
+\draw [color=ffqqqq](-0.22192059039986065,85.35589255577828) node[anchor=north west] {83};
+\draw [color=ffqqqq](-0.2486416067947965,70.63106407763472) node[anchor=north west] {69};
+\draw [color=ffqqqq](-0.2486416067947965,45.598855664790676) node[anchor=north west] {43};
+\draw [color=ffqqqq](-0.2486416067947965,26.246223950659147) node[anchor=north west] {24};
+\draw [color=ffqqqq](-0.19519957400492483,11.31104077997068) node[anchor=north west] {9};
+\draw (5.189085229574646,4.5796906185336255) node[anchor=north west] {Durée en heures};
+\draw (0.08537109814190144,105.97065242517927) node[anchor=north west] {FCC en \%};
+\end{tikzpicture}
+\end{center}
+
+
+\begin{enumerate}
+\item  Quel pourcentage de ces familles se connectent entre 4 et 5 h par jour ?
+\item Lire graphiquement la médiane et les quartiles $Q_1$ et $Q_3$ de cette série.
+\end{enumerate}

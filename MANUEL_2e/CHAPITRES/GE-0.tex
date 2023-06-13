@@ -1,0 +1,60 @@
+
+ABCDEFGH est un cube de coté 6 cm représenté en perspective cavalière.
+
+
+On coupe le cube par le plan (IJK). I est le milieu de [BC], GJ = 1,5 cm et DK = 1,5 cm.
+
+\begin{center}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqqqcc}{rgb}{0.,0.,0.8}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.84,-0.24) rectangle (8.56,6.38);
+\draw [color=qqqqcc] (0.,0.)-- (5.,0.);
+\draw [color=qqqqcc] (5.,0.)-- (8.,1.);
+\draw [dash pattern=on 3pt off 3pt,color=qqqqcc] (8.,1.)-- (3.,1.);
+\draw [dash pattern=on 3pt off 3pt,color=qqqqcc] (3.,1.)-- (0.,0.);
+\draw [color=qqqqcc] (0.,5.)-- (5.,5.);
+\draw [color=qqqqcc] (5.,5.)-- (8.,6.);
+\draw [color=qqqqcc] (8.,6.)-- (3.,6.);
+\draw [color=qqqqcc] (3.,6.)-- (0.,5.);
+\draw [color=qqqqff] (0.,5.)-- (0.,0.);
+\draw [color=qqqqff] (5.,5.)-- (5.,0.);
+\draw [color=qqqqff] (8.,6.)-- (8.,1.);
+\draw [dash pattern=on 3pt off 3pt,color=qqqqff] (3.,6.)-- (3.,1.);
+\draw [dash pattern=on 3pt off 3pt,color=ffqqqq] (6.65,0.55)-- (8.,4.76);
+\draw [dash pattern=on 3pt off 3pt,color=ffqqqq] (8.,4.76)-- (4.42,1.);
+\draw [dash pattern=on 3pt off 3pt,color=ffqqqq] (4.42,1.)-- (6.65,0.55);
+\begin{scriptsize}
+\draw [color=qqqqff] (0.,0.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (0.14,0.24) node {$A$};
+\draw [color=qqqqff] (5.,0.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (5.14,0.24) node {$B$};
+\draw [color=qqqqff] (8.,1.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (8.14,1.24) node {$C$};
+\draw [color=qqqqff] (3.,1.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (3.14,1.24) node {$D$};
+\draw [color=qqqqff] (0.,5.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (-0.2,5.3) node {$E$};
+\draw [color=qqqqff] (5.,5.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (5.14,5.24) node {$F$};
+\draw [color=qqqqff] (8.,6.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (8.14,6.24) node {$G$};
+\draw [color=qqqqff] (3.,6.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (3.14,6.24) node {$H$};
+\draw [color=ffqqqq] (6.65,0.55)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (6.9,0.28) node {$I$};
+\draw [color=ffqqqq] (8.,4.76)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (8.14,5.) node {$J$};
+\draw [color=ffqqqq] (4.42,1.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=ffqqqq] (4.22,1.32) node {$K$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+
+\begin{enumerate}
+\item Construire la pyramide KICJ. On pensera à placer les languettes pour que le solide soit fermé. La face de section doit être en papier. 
+\item Construire le cube tronqué. La face de section doit être en papier. 
+\item Rassembler les 2 solides. Le cube ABCDEFGH doit être reconstruit.
+\end{enumerate}

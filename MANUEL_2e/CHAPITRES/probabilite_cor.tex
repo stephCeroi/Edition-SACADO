@@ -1,0 +1,533 @@
+\documentclass[openany]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Pour passer du manuel au cahier :
+%%  Dans le préambule choisir styleExercices ou styleCahier
+%%  1 imprime  -----     0 n'imprime pas %%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{../../../latex_preambule_style/preambule}
+
+%\input{../../../latex_preambule_style/accessibilite}
+%\input{../../../latex_preambule_style/styleExercices_access}
+
+\input{../../../latex_preambule_style/styleCoursLycee}
+\input{../../../latex_preambule_style/styleExercices}
+
+%\input{../../latex_preambule_style/styleCahier}
+%\input{../../../latex_preambule_style/groupeEEMCP}
+\input{../../../latex_preambule_style/bas_de_page_vierge}
+\input{../../../latex_preambule_style/algobox}
+
+
+ 
+
+ 
+        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Impression conditionnelle :
+%%  1 imprime  -----     0 n'imprime pas 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\subsection{Exercice 6}
+
+ \begin{minipage}{0.5\linewidth}
+
+
+\begin{enumerate}
+\item Calculer $p(A \cup B)$.
+
+$A$ et $B$ sont \textbf{incompatibles} donc d'après la relation fondamentale, propriété 1, $p(A \cup B)=p(A)+p(B)$.
+
+D'après l'énoncé, \fbox{$p(A \cup B)=0,4+0,5 = 0,9$}
+
+\item $\overline{A}$ et $\overline{B}$ sont-ils incompatibles ?
+
+Supposons que $\overline{A}$ et $\overline{B}$ soient incompatibles. Alors $p(\overline{A} \cup \overline{B})=p(\overline{A})+p(\overline{B})$.
+
+Or, $p(\overline{A})= 1-p(A)=1-0,4=0,6$ 
+
+et $p(\overline{B})= 1-p(B)=0,5$ 
+
+On aurait alors : $p(\overline{A} \cup \overline{B})=0,6+0,5 = 1,1$ Or par définition de la probabilité, définition 10, $0\leq p \leq 1$ donc la supposition initiale n'est pas possible donc \fbox{$\overline{A}$ et $\overline{B}$ ne sont pas incompatibles}.
+
+\end{enumerate}
+
+\end{minipage}
+
+\newpage
+
+ \begin{minipage}{0.5\linewidth}
+
+\subsection{Exercice 7}
+ 
+ 
+
+ $p(A \cap B) = 0,1$ donc $A \cap B$ n'est pas l'ensemble vide. Les événements $A$ et $B$ ne sont pas incompatibles.
+ 
+ 
+\definecolor{fffteu}{rgb}{1.,0.9529411764705882,0.8941176470588236}
+\definecolor{qqwwzz}{rgb}{0.,0.4,0.6}
+\definecolor{ffdxqq}{rgb}{1.,0.8431372549019608,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-1.14,-0.56) rectangle (12.58,7.1);
+\draw [rotate around={-2.726310993906266:(5.13,3.33)},line width=2.pt,color=fffteu,fill=fffteu,fill opacity=1.0] (5.13,3.33) ellipse (5.80158019894905cm and 3.2057031685478448cm);
+\draw [line width=2.pt,color=ffdxqq,fill=ffdxqq,fill opacity=0.5] (3.5,3.66) circle (1.1497825881443848cm);
+\draw [line width=2.pt,color=qqwwzz,fill=qqwwzz,fill opacity=0.6499999761581421] (5.5,3.56) circle (1.6100931650062982cm);
+\draw (2.88,4.28) node[anchor=north west] {A};
+\draw (5.88,3.88) node[anchor=north west] {B};
+
+\draw (9.52,4.66) node[anchor=north west] {$\Omega$};
+\end{tikzpicture}
+
+	$A$ et $B$ sont deux événements tels que :
+ $ p(A)=0,2$,  $p(B)=0,5$ , $p(A \cap B) = 0,1$.
+\begin{enumerate}
+\item Déterminer les probabilités des événements suivants :
+ 
+
+ 
+
+	\begin{enumerate}
+	\item $p(A \cup B)$	; d'après la relation fondamentale,  $ p(A \cup B)=p(A)+p(B)-p(A \cap B)=0,2+0,5- 0,1=0,6$
+	\item $p(A \cap \overline{B})$
+	
+	D'après le diagramme de Venn, $A \cap \overline{B}$ est la partie entièrement jaune sans superposition.
+	
+	\fbox{$p(A \cap \overline{B}) = 0,1$}.
+	
+	\textbf{Par le calcul}. \textbf{Niveau 2}
+	
+	$A = (A \cap \overline{B}) \cup (A \cap B)$ avec  $A \cap \overline{B}$ et $A \cap B $ \textbf{incompatibles} donc $p(A) = p(A \cap \overline{B}) + p(A \cap B)$, d'après la relation fondamentale. 
+	
+	donc \fbox{ $p(A \cap \overline{B}) =  p(A)- p(A \cap B) =  0,2-0,1=0,1 $}
+	
+	\item $p(\overline{A} \cap B)$
+	
+		D'après le diagramme de Venn, $B \cap \overline{A}$ est la partie entièrement bleue sans superposition.
+	
+	\fbox{$p(B \cap \overline{A}) = 0,5-0,1=0,4$}.
+	
+	\textbf{Par le calcul}. \textbf{Niveau 2} Même idée de démonstration. 
+
+$B = (B \cap \overline{A}) \cup (B \cap A)$ avec  $B \cap \overline{A}$ et $B \cap A $ \textbf{incompatibles} donc $p(B) = p(B \cap \overline{A}) + p(B \cap A)$, d'après la relation fondamentale. Or $A \cap B = B \cap A$ donc $p(A \cap B)=p(B \cap A)=0,1$
+	
+	donc \fbox{$p(\overline{A} \cap B) =  p(B)- p(A \cap B) =  0,5-0,1=0,4 $}
+	
+	
+	\item $p(\overline{A} \cup B)$
+	
+$p(\overline{A} \cup B) = p(\overline{A})+p(B)-p(\overline{A} \cap B)$
+
+D'après ce qui précède, $p(\overline{A} \cup B) = 1- p(A)+p(B)-p(\overline{A} \cap B) = 0,8+0,5-0,4=0,9$
+	
+	
+	\item $p(\overline{A} \cap \overline{B})$
+	
+	$\overline{A} \cap \overline{B} = \Omega \setminus (A \cup B)$  donc 
+	
+	
+	$p(\overline{A} \cap \overline{B}) = 1- p(A \cup B)$ et d'après les résultats précédents, \fbox{$p(\overline{A} \cap \overline{B}) = 1- 0,6=0,4$} 
+	
+	\end{enumerate}
+	
+\item Identifier parmi les événements étudiés dans la question 1, l'événement contraire de $A \cup B$
+
+
+\fbox{$\overline{A \cup B } = \overline{A} \cap \overline{B}$ }
+
+\end{enumerate}
+
+\end{minipage}
+
+\newpage
+
+ \begin{minipage}{0.5\linewidth}
+
+\subsection{Exercice 8}
+ 
+On lance un dé à 12 faces numérotées de 1 à 12. On considère les événements :
+
+\begin{description}
+\item[A] On obtient un diviseur de 12 ;
+\item[B] On obtient un multiple de 3 ;
+\item[C] On obtient un nombre premier.
+\end{description}
+
+Avant de commencer l'exercice, définissons le cadre de notre expérience.
+
+on s'intéresse à un lancer d'un dé à 12 faces, non truqué, on regarde à la face obtenue.
+Une issue est le numéro d'une face. Par exemple, le 2. Il y a donc 12 issues possibles. L'univers est donc l'ensemble de ces douze issues possibles.
+On écrit $$ \Omega = \lbrace 1;2;3;4;5;6;7;8;9;10;11;12\rbrace$$
+
+
+Chaque issue a une probabilité égale à $\frac{1}{12}$.
+\begin{enumerate}
+\item Déterminer $p(A)$, $p(B)$, $p(C)$. 
+
+$A$ est l'événement, :"Obtenir un diviseur de 12". 
+Parmi les 12 faces, on a les diviseurs de 12 suivants : $  1;2;3;4;6;12$  qui sont les issues favorables à $A$
+
+Donc \fbox{$ A = \lbrace 1;2;3;4;6;12\rbrace$}
+
+
+  et \fbox{$p(A)=\frac{1}{12}+\frac{1}{12}+\frac{1}{12}+\frac{1}{12}+\frac{1}{12}+\frac{1}{12}=\frac{6}{12}=\frac{1}{2}=0,5$}
+
+
+Avec un raisonnement analogue,  \fbox{$ B = \lbrace 3;6;9;12\rbrace$ } 
+
+et \fbox{$p(B)=\frac{1}{12}+\frac{1}{12}+\frac{1}{12}+\frac{1}{12}=\frac{4}{12}=\frac{1}{3}$}
+
+et avec ce même raisonnement analogue, ,  \fbox{$C = \lbrace 2;3;5;7;11 \rbrace$} 
+
+et \fbox{$p(C)=\frac{1}{12}+\frac{1}{12}+\frac{1}{12}+\frac{1}{12}+\frac{1}{12}=\frac{5}{12}$}
+
+\item Donner l'écriture ensembliste de $A \cap B$ et en déduire sa probabilité. 
+
+$A \cap B = \lbrace 1;2;3;4;6;12\rbrace \cap \lbrace 3;6;9;12\rbrace =  \lbrace 3;6;12\rbrace$ 
+
+
+\fbox{$p(A \cap B )=\frac{1}{12}+\frac{1}{12}+\frac{1}{12}=\frac{3}{12}=\frac{1}{4}$}
+
+\item Donner l'écriture ensembliste de $B \cap C$ et en déduire sa probabilité.
+
+$B \cap C = \lbrace 1;2;3;4;6;12\rbrace \cap \lbrace 2;3;5;7;11 \rbrace =  \lbrace 2;3\rbrace$ 
+
+\fbox{$p(B \cap C)=\frac{1}{12}+\frac{1}{12}=\frac{2}{12}=\frac{1}{6}$}
+
+\end{enumerate}
+
+\end{minipage}
+
+\newpage
+
+ \begin{minipage}{0.5\linewidth}
+ 
+
+\subsection{Exercice 9}
+
+Dans le mot BOSTON, il y 6 lettres. L'expérience consiste à tirer une lettre.
+Les issues sont B, O, S, T, O, N.
+
+L'univers est donc $\Omega = \lbrace  B; O; S; T; O; N \rbrace$. Chaque issue a la même probabilité et un événement élémentaire $\omega_i$ est composé d'une lettre. Par exemple : $\omega = \lbrace  N \rbrace$
+\begin{enumerate}
+\item On considère l'évènement A : "tirer une voyelle".
+
+$A = \lbrace  O;  O  \rbrace$
+
+\fbox{$p(A)=\frac{1}{6}+\frac{1}{6}=\frac{2}{6}=\frac{1}{3}$}
+
+\item On considère l'évènement B : "tirer une lettre du mot PROBABILITES".
+
+Les lettres de probabilités sont $\lbrace  P;R;O;B;A;B;I;L;I;T;E;S \rbrace$. Pour tirer une lettre de ce mot, il faut donc choisir les lettres dans l'ensemble $\lbrace  B; O; S; T; O; N \rbrace \cap \lbrace  P;R;O;B;A;B;I;L;I;T;E;S \rbrace = \lbrace  B; O; S; T; O; N \rbrace$.
+
+Donc quelque soit la lettre tirée dans BOSTON, cette lettre appartient à PROBABILITES. Donc \fbox{$p(B) = 1$}
+
+\item On considère l'évènement C : "tirer une lettre du mot MILIEU ".
+
+Les lettres de probabilités sont $\lbrace  M;I;L;I;E;U \rbrace$. Pour tirer une lettre de ce mot, il faut donc choisir les lettres dans l'ensemble $\lbrace  B; O; S; T; O; N \rbrace \cap \lbrace M;I;L;I;E;U \rbrace = \lbrace  \rbrace$, l'ensemble vide.
+
+Donc quelque soit la lettre tirée dans BOSTON, cette lettre ne peut pas appartient à MILIEU. Donc \fbox{$p(C) = 0$}
+
+
+\end{enumerate}
+
+
+\end{minipage}
+
+\newpage
+
+ \begin{minipage}{0.5\linewidth}
+ 
+ 
+ \subsection{Exercice 10}
+
+On appelle :
+\begin{description}
+\item R, l'événement : "la personne a un tarif réduit", avec $p(R)=0,47$
+\item A, l'événement : "la personne a un abonnement", avec $p(A)=0,32$
+\item N, l'événement : "la personne a un tarif normal".
+\end{description}
+Un client ne peut bénéficier d’un tarif réduit s’il possède un abonnement, c'est à dire que R et A sont incompatibles ou encore :  $A \cap R = \oslash $.
+
+Or d'après la formule des probabilités, R, A et N sont les seuls trois événements possibles et ils sont disjoints. On dit qu'ils \textbf{forment une partition de l'univers}.
+
+Donc $p(R) + p(A)+ p(N)=1 \Longleftrightarrow p(N)=1 -p(R) -p(A) \Longleftrightarrow p(N)=1 - 0,47 - 0,32 =0,21$
+
+\fbox{$p(N)=0,21$}
+ 
+ 
+ \end{minipage}
+
+\newpage
+
+ \begin{minipage}{0.5\linewidth}
+ 
+ 
+ \subsection{Exercice 11}
+ 
+On sait que $p(A)=0,6$ et $p(B) = 0,8$. De plus, il y a toujours au moins une des deux boulangeries ouvertes.
+ 
+ \begin{enumerate}
+\item $D = A \cup B$. Or, l'énoncé nous dit qu'il y a toujours une boulangerie d'ouverte donc $D = A \cup B$ est un événement \textbf{certain} donc $p(D)=1$.
+\item $D$ et $E$ sont deux événements \textbf{contraires}. Donc $p(D)+p(E) =1$. Comme $p(D) = 1$ alors $p(E)=0$. \\
+Note : On retrouve : $\overline{A} \cap \overline{B} = \overline{A \cup B}$ 
+\item On s'intéresse à l'événement $F = A \cap B$.
+
+D'après la relation fondamentale des probabilités, $p(A \cup B) = p(A) + p(B) - p(A \cap B)$  
+
+$p(A \cap B) = p(A) + p(B) - p(A \cup B) = 0,6 + 0,8 - 1 = 0,4$ 
+
+\fbox{$p(F) = 0,4$ }
+\end{enumerate}
+
+\end{minipage}
+
+
+\newpage
+
+\begin{minipage}{0.5\linewidth}
+ 
+\subsection{Exercice 13}
+ 
+Le jeu d'échecs est composé de 16 pièces blanches et de 16 pièces noires réparties comme suit : un roi, une dame, deux fous, deux cavaliers, deux tours et huit pions.
+
+Les pièces mineurs sont le fou et le cavalier, les pièces lourdes sont la tour et la dame. On choisit une pièce au hasard.
+
+
+\textbf{On considère l'expérience, tirer une pièce au hasard. On suppose qu'on ne peut pas toucher la pièce. Chaque pièce à la même probabilité d'être choisie et l'expérience est soumise au hasard. Les issues sont équiprobables.}  
+
+Quelle est la probabilité que ce soit
+\begin{enumerate}
+\item un pion ?
+
+Il y a 32 pièces sur le plateau dont 16 pièces sont des pions. Donc $p = \frac{16}{32}= \frac{1}{2}$
+
+
+\item une pièce mineure ?
+
+Chaque couleur possède deux fous et deux cavaliers. Il y a donc 8 pièces mineures.
+
+Donc $p = \frac{8}{32}= \frac{1}{4}$
+
+\item un roi ?
+
+Chaque couleur possède UN seul roi. Il y a donc 2 rois.
+
+Donc $p = \frac{2}{32}= \frac{1}{16}$
+
+\end{enumerate} 
+ 
+ 
+\end{minipage}
+
+
+\newpage
+
+\begin{minipage}{0.5\linewidth}
+ 
+ 
+\subsection{Exercice 14}
+ 
+On suppose qu'un couple attend un enfant, il est aussi probable qu'il s'agisse d'une fille ou d'un garçon. 
+
+\begin{enumerate}
+\item Représenter, à l'aide d'un arbre, les possibilités pour une famille de 3 enfants.
+
+
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-6.2033910390798,-5.588114617475448) rectangle (2.6714450001398293,4.830172845618551);
+\draw [line width=2.pt] (-5.,0.)-- (-4.,2.);
+\draw [line width=2.pt] (-5.,0.)-- (-4.,-3.);
+\draw [line width=2.pt] (-3.,-3.)-- (-1.0424809510553414,-1.5124419756632121);
+\draw [line width=2.pt] (-3.,-3.)-- (-1.0183645487748534,-4.430527121576114);
+\draw [line width=2.pt] (0.,-4.3822943092469755)-- (1.5138576906763994,-3.4658708749933367);
+\draw [line width=2.pt] (0.,-4.3822943092469755)-- (1.5138576906763994,-5.009320869525781);
+\draw [line width=2.pt] (0.,-1.4159763510049344)-- (1.63443970207884,-2.115352129777448);
+\draw [line width=2.pt] (0.,-1.4159763510049344)-- (1.5862068975178638,-0.7648333845615595);
+\draw [line width=2.pt] (-3.140607949457808,2.0326697305284958)-- (-0.9942481464943652,3.57611972506094);
+\draw [line width=2.pt] (-3.140607949457808,2.0326697305284958)-- (-0.9942481464943652,0.4651033298314821);
+\draw [line width=2.pt] (0.,3.7449345682129263)-- (1.5620904952373758,4.44431034698544);
+\draw [line width=2.pt] (0.,3.7449345682129263)-- (1.6585561043593282,2.9973259771112732);
+\draw [line width=2.pt] (0.,0.513336142160621)-- (1.6585561043593282,1.3574103579205514);
+\draw [line width=2.pt] (0.,0.513336142160621)-- (1.6585561043593282,0.15159004969207934);
+\draw (-3.743518006470011,2.3461830106678985) node[anchor=north west] {F};
+\draw (-0.6083857100065553,3.8655165990357734) node[anchor=north west] {F};
+\draw (1.8032545180422568,4.661358002466565) node[anchor=north west] {F};
+\draw (1.8514873226032331,1.5744580134016763) node[anchor=north west] {F};
+\draw (-0.5842693077260671,-1.2712779140175177) node[anchor=north west] {F};
+\draw (1.8514873226032331,-0.5477857290804344) node[anchor=north west] {F};
+\draw (1.8032545180422568,-3.200590407183073) node[anchor=north west] {F};
+\draw (-3.6952852019090345,-2.8870771270436704) node[anchor=north west] {G};
+\draw (-0.6807349168480196,0.7062673914771765) node[anchor=north west] {G};
+\draw (-0.7289677214089958,-4.165246653765851) node[anchor=north west] {G};
+\draw (1.8756037248837212,0.3204048928440654) node[anchor=north west] {G};
+\draw (1.827370920322745,3.14202441409869) node[anchor=north west] {G};
+\draw (1.7309053112007924,-1.994770098954601) node[anchor=north west] {G};
+\draw (1.6826725066398163,-4.912855244867504) node[anchor=north west] {G};
+\draw (-5.55224817750662,0.7786166099708848) node[anchor=north west] {$\Omega$};
+\end{tikzpicture}
+
+
+\item Quelle est la probabilité de n'avoir que des garçons ?
+
+
+D'après l'arbre, il y a 1 seule façon d'obtenir que des garçons sur les 8 possibilités. 
+
+Donc $p = \frac{1}{8}$
+
+
+\item Quelle est la probabilité d'avoir au moins une fille ?
+
+D'après l'arbre, l'événement $\overline{G_3}$ :"avoir au moins une fille" est l'événement contraire de l'événement $G_3$ : "n'avoir que des garçons".
+
+Soit $G_3$ avoir 3 garçons, et  $\overline{G_3}$  l'événement contraire.
+
+Donc $p(G_3)+ p(\overline{G_3})= 1$. Donc $p(G_3)+ p(\overline{G_3})= 1$. Donc $p(\overline{G_3})= 1 - p(G_3) = \frac{7}{8} $;
+
+\textbf{On peut aussi dénombrer les branches de l'arbre.}
+
+\end{enumerate}
+ 
+ 
+\end{minipage}
+
+
+\newpage
+
+\begin{minipage}{0.5\linewidth}
+ 
+ 
+\subsection{Exercice 15}
+ 
+ Dans le population mondiale, les groupes sanguins sont répartis comme l'indique le tableau :
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+  & O & A & B & AB \\ 
+\hline 
+Rhésus + & 38 \% & 34 \% & 9 \% & 3 \% \\ 
+\hline 
+Rhésus - & 7\% & 6 \% & 2 \% & 1 \% \\ 
+\hline 
+\end{tabular} 
+
+On appelle $Rh^-$ et $Rh^+$, le groupe sanguin est respectivement de Rhésus$+$ ou de Rhésus$-$
+
+
+On choisit une personne au hasard dans cette population. Quelle est la probabilité qu'elle soit :
+\begin{enumerate}
+\item donneur universel, c'est à dire du groupe O et de rhésus $-$ ?
+
+En lisant le tableau à double entrée, $p(O \cap Rh^-)=0,07$
+
+\item du groupe AB ?
+
+En lisant le tableau à double entrée, $p(AB)=p(AB \cap Rh^+)+p(AB \cap Rh^-) = 0,03+0,01 = 0,04$
+
+\item de rhésus + ?
+
+En lisant le tableau à double entrée, $$ p(Rh^+)= p(A \cap Rh^+)+p(B \cap Rh^+)+p(AB \cap Rh^+)+p(O \cap Rh^+) = 0,38+0,34 +0,09+0,03 = 0,83 $$
+
+
+\end{enumerate}
+ 
+ 
+ 
+ 
+ 
+\end{minipage}
+
+
+
+
+\newpage
+
+\begin{minipage}{0.5\linewidth}
+ 
+ 
+\subsection{Exercice 16}
+ 
+\textbf{L'expérience consiste à un tirage d'un nom parmi 30 noms}. et non un jour parmi 31 car les jours sont redondants ! Il n'y a que 7 jours...
+
+On peut dire que l'expérience s'apparente à un tirage d'un nombre parmi les nombres de 1 à 30. C'est le même modèle.
+
+Une issue est le 7. Et au 7 novembre on associe Karine. Rassurez-vous, je ne connais pas les noms sur un calendrier.... J'ai regardé sur Internet mais j'ai bien choisi le 7 au hasard.
+
+$$\Omega = \lbrace 1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30\rbrace$$
+ 
+L'énoncé nous dit que l'expérience est équiprobable. En appelant E un événement quelconque, $p(E)= \frac{\text{Card} E}{\text{card}\Omega}$
+ 
+\begin{enumerate}
+\item Soit I :"Tomber sur un jour impair".
+ 
+ $$I = \lbrace 1;3;5;7;9;11;13;15;17;19;21;23;25;27;29\rbrace$$
+ 
+On peut écrire : Card I = 15. Donc $p(E)= \frac{\text{Card} E}{\text{card}\Omega}= \frac{15}{30}= \frac{1}{2}$
+ 
+\item Soit U :"Tomber sur une date comportant un 1". Il suffit de ne garder que les dates qui contiennent un 1.
+
+$$I = \lbrace 1;11;13;15;17;19;21\rbrace$$
+ 
+  $p(I)= \frac{\text{Card} I}{\text{card}\Omega}= \frac{7}{30}$
+ 
+  
+\end{enumerate} 
+ 
+\end{minipage}
+
+
+
+\newpage
+
+\begin{minipage}{0.5\linewidth}
+ 
+ 
+\subsection{Exercice 17}
+ 
+L'expérience consiste à choisir une suite de 3 réponses de façon aléatoire. Une issue est (2,3,1). Ce qui signifie que j'ai choisi, la réponse 2 puis la réponse 3 puis la réponse 1. 
+
+Pour dénombrer le nombre d'issues possibles, on peut dire que pour la première question il y 3 réponses possibles, puis pour la seconde réponse encore 3 réponses possible, et encore 3 réponses possibles pour la question 3.
+Soit $3\times 3\times 3 = 27$. En construisant un arbre, on voit bien la situation.
+
+
+$$\Omega = \lbrace (1;1;1); (1;1;2); (1;1;3); (1;2;1).......(3;3;2);(3;3;3)\rbrace$$
+ 
+ 
+  
+\begin{enumerate}
+\item Soit J :"Répondre juste à toutes les questions".
+ 
+Parmi tous ces 27 triplets de réponses, un seul est tout juste.
+ 
+On peut écrire : Card J = 1. Donc $p(J)= \frac{\text{Card} J}{\text{card}\Omega}= \frac{1}{27}$
+ 
+\item Soit J :"Répondre juste à toutes les questions".
+
+Quelque soit le nombres de questions, il n'y a qu'une seule possibilité de répondre juste à toutes les questions puisqu'il n'y a qu'une seule réponse juste par question. 
+
+
+Le cardinal de $\Omega$ est $3^n$. Alors  $p(J)= \frac{\text{Card} J}{\text{card}\Omega}= \frac{1}{3^n}$ et on souhaite que $p(J)= \frac{1}{3^n} \leq \frac{1}{1000}$
+
+$ \frac{1}{3^n} \leq \frac{1}{1000} \Longleftrightarrow 3^n \geq 1000$.
+
+Avec la calculatrice, on trouve, $n \geq 10$. Donc à partir de 10 questions, l'élève à une chance sur 1000 de réponse tout juste !
+ 
+  
+\end{enumerate}
+ 
+ 
+ 
+\end{minipage}
+ 
+
+
+
+
+
+
+\end{document}

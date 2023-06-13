@@ -1,0 +1,114 @@
+\documentclass[openany]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Pour passer du manuel au cahier :
+%%  Dans le préambule choisir styleExercices ou styleCahier
+%%  1 imprime / affiche le manuel  -----    0 affiche le cahier élève 
+%%	Choisir le fihier ND-F1  ou ND-C1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCoursLycee}
+\input{../../../latex_preambule_style/styleExercices}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_Seconde}
+\input{../../../latex_preambule_style/algobox}
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche sur livre  -----    0 affiche sur cahier 
+{%condition vraie
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{titre}[Fonctions et expressions algébriques]
+
+\Titre{Calculs littéraux}{4}
+
+\end{titre}
+
+
+\begin{CpsCol}
+\textbf{Utiliser des nombres pour calculer et résoudre des problèmes}
+\begin{description}
+\item[$\square$] Développer des expressions polynomiales simples
+\item[$\square$] Factoriser des expressions polynomiales simples
+\end{description}
+\end{CpsCol}
+
+
+\begin{ThT}{Les identités remarquables\index{Identités remarquables}}
+Pour tous nombres $a$ et $b$, 
+\begin{description}
+\item $(a+b)^2=a^2+2ab+b^2$
+\item $(a-b)^2=a^2-2ab+b^2$
+\item $(a-b)(a+b)=a^2-b^2$
+\end{description}
+\end{ThT}
+
+
+\begin{Rq}
+Dans la propriété ci dessus, le membre de gauche est la forme factorisée\index{identités remarquables!forme factorisée} et dans celui de droite est la forme développée\index{identités remarquables!forme développée}.
+\end{Rq}
+
+
+\subsubsection{Niveau 1}
+
+\AD{1}{FEA-18}
+
+\AD{1}{FEA-19}
+
+
+\begin{minipage}{0.49\linewidth}
+\AD{1}{FEA-20}
+
+\AD{1}{FEA-51}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\AD{1}{FEA-22}
+\end{minipage}
+\subsubsection{Niveau 2}
+\begin{minipage}{0.49\linewidth}
+\Exo{1}{FEA-21}
+
+\AD{1}{FEA-24}
+
+\Exo{1}{FEA-25}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\Exo{1}{FEA-23}
+
+\AD{1}{FEA-26}
+
+\Exo{1}{FEA-27}
+
+\Exo{1}{FEA-28}
+\end{minipage}
+
+\subsubsection{Niveau 3}
+\begin{minipage}{0.49\linewidth}
+\PO{1}{FEA-29}
+
+\PO{1}{FEA-63}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\PO{1}{FEA-17}
+
+\PO{1}{FEA-30}
+\end{minipage}
+
+
+\end{document}

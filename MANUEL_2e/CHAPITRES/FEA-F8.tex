@@ -1,0 +1,158 @@
+\begin{titre}[Arithmétique]
+
+\Titre{Multiples, diviseurs, nombres premiers}{4}
+\end{titre}
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Modéliser et résoudre des problèmes mobilisant les notions de multiple, de diviseur,
+de nombre pair, de nombre impair, de nombre premier.
+\item[$\square$] Pour des entiers a et b donnés, déterminer le plus grand multiple de a inférieur ou
+égal à b.
+\item[$\square$] Déterminer si un entier naturel est premier.
+\end{description}
+\end{CpsCol}
+
+\begin{DefT}{Diviseur}\index{Diviseur}
+Soient $a$ et $b$ deux nombres relatifs. $a$ est un diviseur de $b$ lorsqu'il existe un entier $k$ tel que $b = k  \times a$. Les 3 assertions sont équivalentes :
+\begin{description}
+\item[•] $b$ est un multiple de $a$.
+\item[•] $a$ est un diviseur de $b$.
+\item[•] $b$ est un divisible par $a$.
+\end{description}
+\end{DefT}
+
+\begin{Ex}
+3 est un diviseur de 36. En effet, $36 = 3 \times 12$ et $12 \in \Z$.
+\end{Ex}
+
+\EPC{1}{FEA-17}{Raisonner. Calculer. } 
+
+\begin{DefT}{Fraction irréductible}\index{Fraction irréductible}
+Une fraction est irréductible lorsqu'il n'est pas possible de la simplifier, autrement dit lorsque le numérateur et le dénominateur n'ont pas de diviseur commun.
+\end{DefT}
+
+\begin{ROC}
+
+Démontrer que $\frac{1}{3}$ n'est pas décimal.
+\end{ROC}
+
+
+
+
+
+\begin{DefT}{Nombre pair et impair}\index{Nombre pair et impair}
+Soit $a$ un entier. 
+\begin{description}
+\item[•] $a$ est pair lorsqu'il existe un entier $n$ tel que $a = 2\times n$.
+\item[•]  $a$ est impair lorsqu'il existe un entier $n$ tel que $a = 2\times n +1$.
+\end{description}
+\end{DefT}
+
+
+\begin{Th}
+ 
+Soit $a$ un entier ($a \in \Z)$. $a^2$ est impair si et seulement si $a$ est impair.
+\end{Th}
+
+\EPCN{Raisonner. }
+
+Démontrer ce résultat.
+
+\begin{Th} 
+
+Soit $a$ un entier ($a \in \Z)$. Si $b$ et $b'$ sont deux multiples de $a$ alors $b+b'$ est un multiple de $a$.
+\end{Th}
+
+\EPCN{Raisonner. }
+
+Démontrer ce résultat.
+
+
+
+\begin{DefT}{Nombre premier}
+Un entier naturel est dit nombre premier lorsqu'il possède exactement deux diviseurs : 1 et lui-même.
+\end{DefT}
+
+
+\begin{Rq} 
+Un nombre premier est supérieur ou égal à 2. 1 n'est pas premier, il ne possède qu'un seul diviseur.
+\end{Rq}
+
+
+\mini{
+\EPCN{Raisonner.}
+
+Soit $a$ un entier impair. Démontrer que $a^3$ est un nombre impair.
+
+
+\EPCN{Raisonner.}
+
+Une crèche dispose de 60 dalles carrées en mousse. Elle souhaite les placer de manière à former un rectangle.
+
+\begin{enumerate}
+\item Quelles sont les dimensions possibles de ce rectangle ?
+\item Quel est celui qui le plus grand périmètre ?
+\end{enumerate}
+
+
+\EPCN{Chercher.}
+
+La conjecture de Goldbach affirme que "tout nombre pair supérieur ou égal à 4 est la somme de deux nombres premiers".
+
+\begin{enumerate}
+\item Vérifier cette conjecture pour tout nombre pairs de l'intervalle [10;20].
+\item Trouver tous les nombres premiers $p$ et $p'$ tels que $p+p'=100$.
+\item Déterminer une algorithme pour déterminer $p$ et $p'$.
+\end{enumerate}
+
+
+\EPCP{1}{FEA-102}{Modéliser. Calculer.}
+
+\begin{ROC}
+
+On cherche à démontrer que $\sqrt2$ n'est pas rationnel.
+On raisonne par l'absurde. On suppose $\sqrt{2}$ s'écrit sous forme d'une fraction irréductible $\frac{a}{b}$, $a$ et $b$ deux entiers naturels non nuls.
+
+\begin{enumerate}
+\item Démontrer que $2b^2=a^2$.
+\item En déduire que $a^2$ est pair donc $a$ est pair.
+\item Démontrer alors que $b^2$ est pair. Conclure.
+\end{enumerate}
+
+
+
+\end{ROC}
+
+
+
+
+}{
+
+\EPCN{Chercher.}
+
+On considère un nombre premier $p \geq 6$. 
+\begin{enumerate}
+\item Démontrer que $p=6q+1$ ou $p=6q+5$, avec $q$ un entier naturel non nul.
+\item On suppose que $p=6q+1$.
+  \begin{enumerate}
+  \item Justifier que $p^2=12q(3q+1)+1$. 
+  \item Quelle est la parité de $q(3q+1)$ ?
+  \item En déduire qu'il existe un entier naturel $k$ tel que $p^2 = 24k +1$.
+  \end{enumerate}
+\item On suppose que $p=6q+5$. Démontrer qu'il existe un entier naturel $k$ tel que $p^2 = 24k +1$.
+ \end{enumerate}
+
+\EPCN{Chercher.}
+
+On considère un entier naturel $n$.
+  \begin{enumerate}
+  \item Démontrer que $n^2+n$ est pair. 
+  \item Démontrer que le chiffre des unités de $n^2+n$ n'est jamais égal à 4 ou 8.
+  \end{enumerate}
+ 
+\EPCP{1}{FEA-101}{Modéliser. Calculer.}
+}
+
+
+

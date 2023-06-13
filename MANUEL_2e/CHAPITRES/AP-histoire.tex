@@ -1,0 +1,61 @@
+
+\begin{His}
+
+{\color{brown}{\Large Représentation des nombres en informatique}}
+
+\bigskip
+
+
+Un ordinateur ne peut pas stocker ou traiter des nombres
+ayant un nombre infini de chiffres. De nos
+jours, les microprocesseurs traitent des nombres qui occupent
+8 octets, soit 64 bits, et qui sont codés comme en notation
+scientifique, mais en base 2 au lieu notre base 10 familière.
+
+Par exemple, pour coder le nombre 11,2, on commence par l'écrire
+en notation scientifique base 2 : $11,2=1,4\times 2^3$, 
+puis on code la {\em mantisse} : 1,4, et l'{\em exposant } :  3, 
+le tout en binaire.
+
+Mais le codage en binaire de la mantisse peut réserver 
+de mauvaises surprises : certains nombres simples, par exemple
+1,4, ont une infinité de chiffres en binaire, de la même manière que, en base 10, certains nombres comme 1/7, ont une infinité de chiffres. 
+Voici l'écriture en binaire de 1,3 :
+\[ 1,4=\underline{1,0110~0110~0110~0110~0110~...}_2 \]
+ 
+Du fait que le microprocesseur ne stocke qu'un certain nombre de chiffres
+binaires, ce n'est pas réellement le nombre 1,4 qui est stocké, mais
+un nombre proche, obtenu en coupant l'écriture 
+$\underline{1,0110~0110~0110~0110~0110~...}_2$ à un certain nombre de chiffres.
+De ce fait, au lieu de stocker et de calculer avec le nombre 1,4,
+le processeur utilise le nombre
+
+\[ \nombre{1,399999999999999911182158029987476766109466552734375} \]
+
+et les calculs utilisant 1,4 seront donc (légèrement) faux, par exemple :
+
+\begin{verbatim}
+>>> 3 * 1.4 - 4.2
+-8.881784197001252e-16
+\end{verbatim}
+(Le résultat est donné en  écriture scientifique, 
+c'est $\nombre{-8,881784197001252}\times 10^{-16}$)
+
+\medskip
+
+Ces petites erreurs peuvent avoir de graves conséquences lorsqu'elles
+s'accumulent. Ainsi, le 25 Février 1991, pendant la guerre du Golfe, un 
+missile Patriot a échoué à intercepter un missile Scud, provoquant
+la mort de 28 soldats. L'ordinateur du Patriot comptait les $10^e$ de 
+seconde, or $1/10$ est aussi un nombre infini en binaire, et donc
+ce n'était réellement 1/10 qui etait stocké. Après 100h de fonctionnement,
+l'accumulation de cette petite erreur avait provoqué une erreur de 0,34s
+entre la valeur calculée et la valeur réelle. C'était suffisant
+pour que le Patriot râte sa cible.
+
+\end{His}
+
+
+
+
+

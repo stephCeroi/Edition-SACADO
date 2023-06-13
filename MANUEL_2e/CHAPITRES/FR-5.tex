@@ -1,0 +1,24 @@
+
+Le programme ci-dessous, écrit en Python, renvoie une valeur $y$ pour tout entier naturel $n$.
+
+\begin{lstlisting}
+def Carre(n):
+	i=n
+	y=0
+	if i == 0:
+		return y
+	else :
+		while i>0:
+			y=y+n
+			i=i-1
+		return y
+
+print(Carre(3))
+\end{lstlisting}
+
+\begin{enumerate}
+\item Dans Edupython, taper le code et regarder le résultat.
+\item Expliquer pourquoi cet algorithme donne, sans effectuer une multiplication, le carré de l'entier $n$. On pourra rajouter dans la boucle \texttt{while} la ligne \texttt{print(y)}.
+\item A quoi sert le test \texttt{if} dans ce programme ?
+\item Modifier ce programme pour qu'il renvoie le cube d'un entier $n$ sans calculer de produit.
+\end{enumerate}

@@ -1,0 +1,193 @@
+\begin{titre}[Géométrie vectorielle et analytique]
+
+\Titre{Opérations de vecteur}{4}
+\end{titre}
+
+\begin{CpsCol}
+\textbf{Calculer avec les vecteurs}
+\begin{description}
+\item[$\square$] Calculer les coordonnées d’une somme de vecteurs, d’un produit d’un vecteur par un
+nombre réel.
+\item[$\square$] Multiplier un vecteur par un réel
+\end{description}
+\end{CpsCol}
+
+
+
+
+\begin{DefT}{Somme de deux vecteurs}\index{Vecteurs!Somme}
+\begin{minipage}{0.48\linewidth}
+Soit $\overrightarrow{u}$ et $\overrightarrow{v}$ deux vecteurs quelconques.
+
+On appelle somme de vecteurs $\overrightarrow{u}$ et $\overrightarrow{v}$, notée $\overrightarrow{u}+\overrightarrow{v}$, le vecteurs $\overrightarrow{w}$ qui résulte de la translation suivant $\overrightarrow{u}$ puis de la translation suivant $\overrightarrow{v}$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.08,-1.32) rectangle (4.12,2.3);
+\draw [->,color=ffqqqq] (-2.,-1.) -- (1.,2.);
+\draw [->,color=qqqqff] (1.,2.) -- (4.,0.);
+\draw [->] (-2.,-1.) -- (4.,0.);
+\draw [color=ffqqqq](-0.82,1.26) node[anchor=north west] {$\vec{u}$};
+\draw [color=qqqqff](2.64,1.76) node[anchor=north west] {$\vec{v}$};
+\draw (0.96,-0.36) node[anchor=north west] {$\vec{w}$};
+\end{tikzpicture}
+\end{minipage}
+\end{DefT}
+
+
+\begin{Nt}
+$\overrightarrow{w}=\overrightarrow{u}+\overrightarrow{v}$
+\end{Nt}
+
+
+
+
+
+\begin{DefT}{Relation de Chasles}\index{Relation de Chasles}
+Soit $A$, $B$ et $C$trois points quelconques.
+
+$\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC}$
+\end{DefT}
+
+\mini{
+\AD{1}{GVA-22}
+}{
+\EPC{0}{GVA-50}{Raisonner. Calculer}
+}
+
+\begin{Th}
+Soit $A$, $B$ et $C$trois points quelconques.\\
+Le quadrilatère $ABDC$ est un parallélogramme si et seulement si $\overrightarrow{AD}=\overrightarrow{AB}+\overrightarrow{AC}$.
+\end{Th}
+
+\ROC
+
+\begin{Th}
+
+Soit $\overrightarrow{u}$ de coordonnées $(x,y)$ et $\overrightarrow{v}$ de coordonnées $(x',y')$.
+
+Le vecteur  $\overrightarrow{u}+\overrightarrow{v}$ a pour coordonnées $(x+x',y+y')$.
+\end{Th}
+
+
+\mini{
+\EPC{1}{GVA-31}{Raisonner. Calculer}
+
+\EPC{1}{GVA-47}{Raisonner. Calculer}
+}{
+\EPC{1}{GVA-49}{Calculer}
+}
+
+
+\begin{DefT}{Différence de deux vecteurs}\index{Vecteurs!Différence}
+\begin{minipage}{0.48\linewidth}
+Soit $\overrightarrow{u}$ et $\overrightarrow{v}$ deux vecteurs quelconques.
+
+On appelle \textbf{différence de vecteurs} $\overrightarrow{u}$ et $\overrightarrow{v}$, notée $\overrightarrow{u}-\overrightarrow{v}$, le vecteurs $\overrightarrow{w}$ qui résulte de la translation suivant $\overrightarrow{u}$ puis de la translation suivant $-\overrightarrow{v}$.
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.3,-2.3) rectangle (6.24,2.2);
+\draw [->,color=ffqqqq] (-2.,-1.) -- (1.,2.);
+\draw [color=ffqqqq](0.42,0.94) node[anchor=north west] {$\vec{u}$};
+\draw [->,color=qqwuqq] (6.,1.) -- (4.,2.);
+\draw [color=qqwuqq](5.06,2.18) node[anchor=north west] {$\vec{v}$};
+\draw [->,color=ffqqqq] (-1.,-2.) -- (2.,1.);
+\draw [->,color=qqwuqq] (2.,1.) -- (4.,0.);
+\draw [color=qqwuqq](2.64,1.26) node[anchor=north west] {$-\vec{v}$};
+\draw [->,color=qqqqff] (-1.,-2.) -- (4.,0.);
+\draw [color=qqqqff](1.52,-0.78) node[anchor=north west] {$\vec{u}-\vec{v}$};
+\end{tikzpicture}
+\end{minipage}
+\end{DefT}
+
+\begin{Th}
+
+Soit $\overrightarrow{u}$ de coordonnées $(x,y)$ et $\overrightarrow{v}$ de coordonnées $(x',y')$.
+
+Le vecteur  $\overrightarrow{u}-\overrightarrow{v}$ a pour coordonnées $(x-x',y-y')$.
+\end{Th}
+
+\mini{
+\AD{1}{GVA-38}
+}{
+\Exo{1}{GVA-52}
+
+\PO{1}{GVA-41}
+}
+
+\begin{DefT}{Produit d'un vecteur par un réel}\index{Vecteurs!Produit d'un vecteur par un réel}
+\begin{minipage}{0.48\linewidth}
+Soit $\overrightarrow{u}$ un vecteur quelconque et $k$ un réel non nul.
+
+On appelle \textbf{produit du vecteur} $\overrightarrow{u}$ par le réel $k$, le vecteur $k\overrightarrow{u}$ :
+\begin{description}
+\item[•] de même direction que $\overrightarrow{u}$
+\item[•] 
+\begin{description}
+\item[•] de même sens que $\overrightarrow{u}$ si $k$ est positif
+\item[•] de sens opposé à $\overrightarrow{u}$ si $k$ est négatif
+\end{description}
+\item[•] de norme
+\begin{description}
+\item[•] $k \times \Vert \overrightarrow{u} \Vert$ si $k$ est positif
+\item[•] $-k \times \Vert \overrightarrow{u} \Vert$ si $k$ est négatif
+\end{description}
+
+\end{description}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.1,-1.26) rectangle (4.52,2.16);
+\draw [->,color=ffqqqq] (-2.,-1.) -- (1.,2.);
+\draw [color=ffqqqq](0.08,1.24) node[anchor=north west] {$\vec{u}$};
+\draw [->,color=qqqqff] (1.,0.) -- (2.,1.);
+\draw [->,color=ffxfqq] (4.,1.) -- (2.,-1.);
+\draw [color=qqqqff](0.34,0.24) node[anchor=north west] {$k>0$};
+\draw [color=ffxfqq](2.64,-0.38) node[anchor=north west] {$k<0$};
+\draw (2.46,1.7) node[anchor=north west] {$k\vec{u}$};
+\end{tikzpicture}
+
+\end{minipage}
+\end{DefT}
+
+
+\begin{Rq}
+$k=0$ ou $\vec{u}=\vec{0}$ si et seulement $k\vec{u}=\vec{0}$
+\end{Rq}
+
+\mini{
+\AD{1}{GVA-23}
+
+\Exo{1}{GVA-48}
+}{
+\Exo{1}{GVA-24}
+}
+
+\begin{Th}
+Soit $\overrightarrow{AB}$ de coordonnées $(x,y)$ et $k$ un réel.
+
+Le vecteur  $k\overrightarrow{AB}$ a pour coordonnées $(kx,ky)$.
+\end{Th}
+
+
+\mini{
+\AD{1}{GVA-25}
+}{
+\AD{1}{GVA-38}
+}
+

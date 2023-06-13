@@ -1,0 +1,155 @@
+\begin{titre}[Programmation en Python]
+
+\Titre{Itérations}{2}
+\end{titre}
+
+
+\begin{CpsCol}
+\textbf{Python}
+\begin{description}
+\item[$\square$] Utiliser une boucle
+\item[$\square$] Connaitre la différence d'utilisation des deux types de boucle
+\end{description}
+\end{CpsCol}
+
+\begin{PC}
+\input{Prog-61}
+\end{PC}
+
+
+\begin{DefT}{Itération. Boucle}
+Une \index{Itération}itération est un procédé qui répète une même action. Une boucle\index{boucle} est une itération. 
+\end{DefT}
+
+\begin{Rq}
+Il existe deux types de boucles :
+\begin{description}
+\item[•] Lorsque le nombre d'itérations est \textit{a priori} connue
+\item[•] Lorsque le nombre d'itérations est inconnue
+\end{description}
+\end{Rq}
+
+\subsection*{La boucle Pour}
+
+\begin{Syn}
+\begin{minipage}[t]{0.49\linewidth}
+L'écriture algorithmique  de $n+1$ itérations
+\begin{algobox}
+\Pour{$i$}{0}{$n$}
+\DebutPour
+\Ligne Action
+\FinPour
+\end{algobox}
+
+\end{minipage}
+\hfill\vrule\hfill
+\begin{minipage}[t]{0.49\linewidth}
+La programmation en Python de $n$ itérations. $i$ varie de 0 à $n$ inclus.
+\begin{lstlisting}
+for i in range(n+1) :
+	action
+\end{lstlisting}
+\end{minipage}
+\end{Syn}
+
+
+\begin{minipage}{0.48\linewidth}
+\begin{Ex}
+Calculer la somme des 5 premiers nombres entiers naturels non nuls.
+\begin{lstlisting}
+somme = 0
+for i in range(1,6) :
+	somme = somme + i
+print(somme)
+\end{lstlisting}
+\end{Ex}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{Cod}
+\begin{lstlisting}
+somme = 0
+for i in range(1,6) :
+	somme = somme + i
+print(somme)
+\end{lstlisting}
+\end{Cod}
+Que se passe-t-il si \texttt{\textbf{print}(somme)} est dans la boucle ?
+\end{minipage}
+
+\begin{Rq}
+L'instruction \texttt{for i in range(1,6)} calcule de 1 jusqu'à 5 inclus. 
+\end{Rq}
+
+\AD{1}{Prog-6}
+
+\AD{1}{Prog-9}
+
+\AD{1}{Prog-7}
+
+\subsection*{La boucle Tant que}
+
+\begin{Syn}
+\begin{minipage}[t]{0.49\linewidth}
+L'écriture algorithmique de la boucle "TANT QUE"
+\begin{algobox}
+\Tantque{condition}
+\DebutTantQue
+\Ligne action1
+\FinTantQue
+\end{algobox}
+\end{minipage}
+\hfill\vrule\hfill
+\begin{minipage}[t]{0.49\linewidth}
+La programmation en Python
+\begin{lstlisting}
+while condition :
+     action 
+\end{lstlisting}
+\end{minipage}
+\end{Syn}
+
+\begin{minipage}{0.68\linewidth}
+\begin{Ex}
+Déterminer l'entier naturel $n_0$ à partir duquel la somme des premiers entiers naturels inférieur ou égal à $n_0$ est strictement supérieure à 15.
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Etapes & somme  & i &  condition \\ 
+\hline 
+0 & 0 & 1 & Vraie \\ 
+\hline 
+1 & 1 & 2 & Vraie \\ 
+\hline 
+2 & 3 & 3 & Vraie \\ 
+\hline 
+4 & 6 & 4 & Vraie \\ 
+\hline 
+5 & 10 & 5 & Vraie \\ 
+\hline
+6 & 15 & 6 & Faux \\ 
+\hline
+\end{tabular} 
+\end{Ex}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+\begin{Cod}
+\begin{lstlisting}
+somme = 0
+i=1
+while somme < 15 :	
+  somme = somme + i
+  i=i+1
+print(i)
+\end{lstlisting}
+\end{Cod}
+\end{minipage}
+
+\begin{Att}
+Il faut être vigilant dans la position des lignes de code dans la boucle. 
+\end{Att}
+
+\AD{1}{Prog-8}
+
+

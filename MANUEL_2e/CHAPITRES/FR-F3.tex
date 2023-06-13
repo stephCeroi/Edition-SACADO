@@ -1,0 +1,89 @@
+\begin{titreTice}[Fonctions de référence]
+
+\Titre{Algorithme de dichotomie}{0}
+\end{titreTice}
+
+
+\begin{CpsCol}
+\textbf{Variations de fonctions}
+\begin{description}
+\item[$\square$] Connaitre un algorithme de dichotomie
+\end{description}
+\end{CpsCol}
+
+\begin{Ety}\index{Algorithme de dichotomie}
+\textbf{Dichotomie} : Du grec ancien dikhotomia : « division en deux parties »
+\end{Ety}
+
+
+On souhaite résoudre l'équation $x^2=x+1$ avec $x>0$. On considère l'algorithme suivant.
+
+
+\begin{algobox}
+\Variables
+\Ligne a EST\_DU\_TYPE NOMBRE
+\Ligne b EST\_DU\_TYPE NOMBRE
+\Ligne m EST\_DU\_TYPE NOMBRE
+\DebutAlgo
+\Ligne a PREND\_LA\_VALEUR 1
+\Ligne b PREND\_LA\_VALEUR 2
+\Tantque{(b-a>0.01)}
+\DebutTantQue
+\Ligne m PREND\_LA\_VALEUR (a+b)/2
+\Si{(m*m<m+1)}
+\DebutSi
+\Ligne a PREND\_LA\_VALEUR m
+\FinSi
+\Sinon
+\DebutSinon
+\Ligne b PREND\_LA\_VALEUR m
+\FinSinon
+\FinTantQue
+\Ligne AFFICHER a
+\Ligne AFFICHER b
+\FinAlgo
+
+\end{algobox}
+
+On décide maintenant de créer ce tableau à l'aide d'un tableur.
+
+\begin{enumerate}
+\item  Compléter les 2 premières lignes à la mains. 
+
+\item  Créer le tableau ci-dessous dans un tableur.
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+\rowcolor{gray} & A & B & C & D & E & F & G\\ 
+\hline 
+\cellcolor{gray} 1 & $a$ & $b$ & $b-a$ & $m=\frac{a+b}{2}$ & $m^2$ & $m+1$ & Condition $m^2<m+1$\\ 
+\hline 
+\cellcolor{gray}2 & 0 & 10 &  &  &  & &  \\ 
+\hline 
+\cellcolor{gray}3 &  &  &  &  &  & &  \\
+\hline 
+\cellcolor{gray}4 &  &  &  &  &  & &  \\
+\hline 
+\cellcolor{gray}5 &  &  &  &  &  & &  \\
+\hline 
+\end{tabular} 
+
+
+\item  Que faut-il écrire dans la cellule $C2$ ? Justifier.
+\item  Compléter de même les cellule $D2$, $E2$ et $F2$.
+\item  Quelles valeurs faut-il écrire dans les cellule $A3$ et $B3$ ? Justifier.
+
+Dans la cellule $A3$ et la cellule $B3$, on doit inscrire une formule contenant un $SI$.
+
+\textit{Dans un module d'aide de Open office, on a relevé :
+La formule $=SI(A2=’3’ ;A3 ;A4)$ signifie : si la valeur de la cellule $A2$ est égale à 3 alors
+choisir la cellule $A3$ sinon choisir la cellule $A4$.}
+
+En transformant cette formule donnée, écrire la formule adéquate dans la cellule $A3$ puis une
+formule dans la cellule $B3$.
+
+\item  Compléter le tableau en tirant les cellule vers le bas jusqu'à ce que $b – a < 0,01$.
+\item  Retrouver la valeur solution.
+\item  Programmer cet algorithme en Python.
+\end{enumerate}
+

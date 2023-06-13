@@ -1,0 +1,57 @@
+
+\begin{minipage}{8cm}
+
+
+$ABCDEFGH$ est un cube. $I$ est le milieu de $[AD]$ et $J$ est le centre de la face $BCGF$.
+\begin{enumerate}
+\item Reproduire la figure et construire la droite $d$, intersection des plans $(HIJ)$ et $(BCG)$. En déduire la trace de la section du cube par le plan $(HIJ)$.
+\item On note $M$ et $N$ les points d'intersection respectifs de la droite $d$ avec les arêtes $[BC]$ et $[FG]$. Quelle est la nature du quadrilatère $HIMN$ ?
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}{8cm}
+
+\begin{center}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(4.54,-5.34) rectangle (9.58,-0.44);
+\draw [color=qqqqff] (5.,-5.)-- (8.,-5.);
+\draw [color=qqqqff] (8.,-5.)-- (9.,-4.);
+\draw [dash pattern=on 1pt off 1pt,color=qqqqff] (9.,-4.)-- (6.,-4.);
+\draw [dash pattern=on 1pt off 1pt,color=qqqqff] (6.,-4.)-- (5.,-5.);
+\draw [color=qqqqff] (5.,-2.)-- (8.,-2.);
+\draw [color=qqqqff] (8.,-2.)-- (9.,-1.);
+\draw [color=qqqqff] (9.,-1.)-- (6.,-1.);
+\draw [color=qqqqff] (6.,-1.)-- (5.,-2.);
+\draw [color=qqqqff] (5.,-2.)-- (5.,-5.);
+\draw [color=qqqqff] (8.,-2.)-- (8.,-5.);
+\draw [color=qqqqff] (9.,-1.)-- (9.,-4.);
+\draw [dash pattern=on 1pt off 1pt,color=qqqqff] (6.,-1.)-- (6.,-4.);
+\begin{scriptsize}
+\draw [color=qqqqff] (5.,-5.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (4.6,-4.9) node {$A$};
+\draw [color=qqqqff] (8.,-5.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (8.14,-4.76) node {$B$};
+\draw [color=qqqqff] (9.,-4.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (9.14,-3.76) node {$C$};
+\draw [color=qqqqff] (6.,-4.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (6.14,-3.76) node {$D$};
+\draw [color=qqqqff] (5.,-2.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (4.86,-1.74) node {$E$};
+\draw [color=qqqqff] (8.,-2.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (8.3,-1.96) node {$F$};
+\draw [color=qqqqff] (9.,-1.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (9.14,-0.76) node {$G$};
+\draw [color=qqqqff] (6.,-1.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (6.14,-0.76) node {$H$};
+\draw [fill=uuuuuu] (5.5,-4.5) circle (1.5pt);
+\draw[color=uuuuuu] (5.44,-4.2) node {$I$};
+\draw [fill=uuuuuu] (8.5,-3.) circle (1.5pt);
+\draw[color=uuuuuu] (8.64,-2.72) node {$J$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+

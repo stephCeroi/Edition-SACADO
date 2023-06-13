@@ -1,0 +1,49 @@
+
+Dans un paquet pris au hasard, on souhaite déterminer la probabilité de tirer successivement un
+bonbon bleu puis un bonbon rouge.
+
+\begin{enumerate}
+\item Modélisation du paquet de M\&M's.
+\begin{enumerate}
+\item  Lancer le programme ci dessous qui modélise un paquet de 10 bonbons M\&M's. 
+
+\begin{center}
+\begin{lstlisting}
+import random
+couleur=["jaune","bleu","rouge","orange","vert","marron"]
+proba_couleur=[0]*6
+for i in range (10) :
+    alea = random.randint(0,5)
+    proba_couleur[alea]=proba_couleur[alea]+1
+    
+for j in range (6) :
+    print("On a alors p(",couleur[j],") = ",proba_couleur[j]/n)
+\end{lstlisting}
+\end{center}
+
+Quel est le rôle de l'instruction \texttt{for j in range (6)} ?
+
+\item Quel est le rôle de la variable couleur ? Quel est le rôle de la variable proba\_couleur ?
+\end{enumerate}
+\item Compléter alors le tableau suivant
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+Couleur& Jaune& Bleu& Rouge &Orange& Vert& Marron&Somme\\ 
+\hline 
+Fréquence&&&&&&&\\ 
+\hline 
+Effectif&&&&&&&\\ 
+\hline 
+\end{tabular} 
+
+\item On assimile les probabilités aux fréquences observées.
+On désigne par
+\begin{description}
+\item[B] "l'événement le bonbon est bleu".
+\item[R] "l'événement le bonbon est rouge".
+\item[A] "l'événement le bonbon est orange, vert, jaune ou marron".
+\end{description}
+\item A l'aide des résultats du tableau, construire une arbre de probabilité.
+\item Répondre à la question en préambule pour le paquet généré.
+\end{enumerate}

@@ -1,0 +1,111 @@
+\documentclass[20pt]{article}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCourslycee}
+\input{../../../latex_preambule_style/styleExercices}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_seconde}
+\input{../../../latex_preambule_style/algobox}
+
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche  -----    0 n'affiche pas
+{%condition vraie
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+Soit A(3;-2) et B(-1;5); Les coordonnées du vecteur $\overrightarrow{AB}$ sont
+
+\vspace{0.4cm}
+
+$\overrightarrow{AB}(x_B-x_A;y_B-y_A)$, $\overrightarrow{AB}(-1-3;(5-(-2))$, $\overrightarrow{AB}(-4;7)$
+
+\vspace{1cm}
+\hrule 
+\vspace{0.4cm}
+
+A, B et C sont trois points distincts et non alignés du plan.
+
+On donne les vecteurs $\overrightarrow{AB}(3;2)$ et $\overrightarrow{DC}(6;4)$. Que dire ? 
+\vspace{0.4cm}
+
+$dét\left(\overrightarrow{AB},\overrightarrow{DC}\right)= 3 \times 4 - 6 \times 2  =0$
+
+Les vecteurs sont colinéaires ou les droites $(AB)$ et $(CD)$ sont paralèles.
+
+\vspace{1cm}
+\hrule 
+\vspace{0.4cm} 
+
+Les vecteurs $\overrightarrow{AB}(k;2)$ et $\overrightarrow{DC}(5;-3)$ sont colinéaires pour $k=$
+
+\vspace{0.4cm}
+
+Les vecteurs $\overrightarrow{AB}(k;2)$ et $\overrightarrow{DC}(5;-3)$ sont colinéaires donc 
+$dét(\overrightarrow{AB},\overrightarrow{DC})=$ \begin{tabular}{|c c|}
+$k$ & $5$ \\ 
+$2$ & $-3$ \\
+\end{tabular} $ -3k-10 =0 \Longleftrightarrow  k = -\frac{10}{3} $
+
+\vspace{1cm}
+\hrule 
+\vspace{0.4cm}
+
+On a : 
+$\overrightarrow{AB}= \overrightarrow{AC} - \overrightarrow{\ldots C}$.
+
+$\overrightarrow{AB}= \overrightarrow{AC} + \overrightarrow{ C\ldots}= \overrightarrow{AC} + \overrightarrow{ CB}$.
+
+Le point est donc \textbf{B}.
+
+ 
+
+
+\vspace{1cm}
+\hrule 
+\vspace{0.4cm}
+
+$\overrightarrow{AB}= 2\overrightarrow{u} - 3\overrightarrow{v}$ et $\overrightarrow{DC}= -6\overrightarrow{u} + k\overrightarrow{v}$  
+
+$\overrightarrow{AB}$ et $\overrightarrow{DC}$ sont colinéaires lorsque $k =$
+
+\vspace{0.4cm}
+
+Considérons la base $(\vec u ; \vec v)$. Dans cette base, $\overrightarrow{AB}(2; - 3)$ et $\overrightarrow{DC}(-6;k)$.
+
+$dét(\overrightarrow{AB},\overrightarrow{DC}) = 2k-18 = 0$ donc $k = 9$
+
+\vspace{1cm}
+\hrule 
+\vspace{0.4cm} 
+
+On donne : $\overrightarrow{OC}= \frac{1}{2}\overrightarrow{OA}+ \frac{1}{4}\overrightarrow{OB}$ et $\overrightarrow{OD}= 2\overrightarrow{OA}+ k\overrightarrow{OB}$.
+
+$O$,$C$ et $D$ sont alignés lorsque $k$ = 
+
+\vspace{0.4cm}
+
+Considérons la base $(\overrightarrow{OA} ; \overrightarrow{OB})$. Dans cette base, $\overrightarrow{OC}\left(\frac{1}{2}; \frac{1}{4}\right)$ et $\overrightarrow{DC}\left(2;k\right)$.
+
+$dét\left(\overrightarrow{OC},\overrightarrow{OD}\right) = \frac{1}{2}k- \frac{1}{4}\times 2 = \frac{1}{2}k-\frac{1}{2} =0$ 
+
+$\Longleftrightarrow   k = 1$
+
+
+\end{document}

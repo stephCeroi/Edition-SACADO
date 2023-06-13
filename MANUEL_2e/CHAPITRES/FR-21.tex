@@ -1,0 +1,34 @@
+
+Sur la représentation graphique de $g$ telle que $g(x)=\frac{1}{x}$, on a placé les points $A$ et $B$ d'abscisses respectives $2$ et $\frac{1}{2}$.
+
+\begin{center}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=0.5cm,ystep=0.5cm] (-0.863846865692171,-0.41690888822012473) grid (3.1454552355878582,2.599705433175666);
+\draw[->,color=black] (-0.863846865692171,0.) -- (3.1454552355878582,0.);
+\foreach \x in {-0.5,0.5,1.,1.5,2.,2.5,3.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-0.41690888822012473) -- (0.,2.599705433175666);
+\foreach \y in {,0.5,1.,1.5,2.,2.5}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-0.863846865692171,-0.41690888822012473) rectangle (3.1454552355878582,2.599705433175666);
+\draw[line width=1.2pt,color=qqwuqq,smooth,samples=100,domain=-0.863846865692171:3.1454552355878582] plot(\x,{1.0/(\x)});
+\draw [color=ffqqqq,domain=-0.863846865692171:3.1454552355878582] plot(\x,{(--3.75-1.5*\x)/1.5});
+\begin{scriptsize}
+\draw[color=qqwuqq] (-5.14300583917374,-0.25306721581204666) node {$f$};
+\draw [color=ffqqqq] (2.,0.5)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ffqqqq] (2.066027746781696,0.6721563460218062) node {$A$};
+\draw [color=ffqqqq] (0.5,2.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=ffqqqq] (0.5721772042374548,2.175644634001817) node {$B$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item Déterminer la fonction $f$ affine représentée par la droite $(AB)$.
+\item La droite $(AB)$ coupent les axes en $M$ et $N$. Montrer que les segments $[AB]$ et $[MN]$ ont même milieu.
+\item Soit $P$ et $Q$ deux points quelconques non confondus de l'hyperbole. La droite $(AB)$ coupent les axes en $M$ et $N$. Démontrer que les segments $[PQ]$ et $[MN]$ ont même milieu.
+\end{enumerate}

@@ -1,0 +1,67 @@
+
+$ABCD$ est un parallélogramme.
+$E$ et $F$ sont les points tels que : $ \overrightarrow{BE}=\frac{1}{2}\overrightarrow{AB}$ et $\overrightarrow{AF}=3\overrightarrow{AD}$.
+\begin{enumerate}
+\item  Faire une figure
+
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-5.2022233177176735,-1.897566048780508) rectangle (6.739117198087093,8.378273365853625);
+\draw [line width=2.pt] (-3.2853239191279613,-1.2062251707317282)-- (1.145541903841702,-0.8919793170731921);
+\draw [line width=2.pt] (1.145541903841702,-0.8919793170731921)-- (4.,2.);
+\draw [line width=2.pt] (4.,2.)-- (-0.43086582296966297,1.6857541463414643);
+\draw [line width=2.pt] (-0.43086582296966297,1.6857541463414643)-- (-3.2853239191279613,-1.2062251707317282);
+\draw [->,line width=2.pt] (-3.2853239191279613,-1.2062251707317282) -- (-1.0698910076431298,-1.0491022439024602);
+\draw [->,line width=2.pt] (1.145541903841702,-0.8919793170731921) -- (3.3609748153265335,-0.7348563902439241);
+\draw [->,line width=2.pt] (-3.2853239191279613,-1.2062251707317282) -- (-0.4308658229696629,1.6857541463414645);
+\draw [->,line width=2.pt] (-0.43086582296966297,1.6857541463414643) -- (2.4235922731886355,4.577733463414657);
+\draw [->,line width=2.pt] (2.4235922731886355,4.577733463414657) -- (5.278050369346934,7.469712780487849);
+\begin{scriptsize}
+\draw [color=ududff] (-3.2853239191279613,-1.2062251707317282)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (-4.165212167660944,-1.064814536585387) node {$A$};
+\draw [color=ududff] (1.145541903841702,-0.8919793170731921)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (1.3340893856701985,-1.1905128780488015) node {$B$};
+\draw [color=ududff] (4.,2.)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (4.225150773707142,2.454739024390218) node {$C$};
+\draw [color=uuuuuu] (-0.43086582296966297,1.6857541463414643)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=uuuuuu] (-0.8027820750527599,2.1719177560975353) node {$D$};
+\draw [color=uuuuuu] (-1.0698910076431296,-1.0491022439024602)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=uuuuuu] (-0.8342066553575093,-0.5305965853658756) node {$I$};
+\draw [color=uuuuuu] (1.7845670885151685,1.8428770731707322)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=uuuuuu] (1.9940055720699357,2.360465268292657) node {$J$};
+\draw [color=ududff] (3.3609748153265335,-0.7348563902439241)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (3.596659167612154,-0.27919990243904663) node {$E$};
+\draw [color=uuuuuu] (2.4235922731886355,4.577733463414657)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw [color=uuuuuu] (5.278050369346934,7.469712780487849)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=uuuuuu] (5.513558566201867,7.922616878048747) node {$F$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\item Démontrer que : $ \overrightarrow{CE}=\frac{1}{2}\overrightarrow{AB} + \overrightarrow{DA}$  et que $\overrightarrow{EF}= \frac{3}{2}\overrightarrow{BA} + 3\overrightarrow{AD}$ .
+
+
+
+$ \overrightarrow{CE}=\overrightarrow{CB}+\overrightarrow{BE} =\overrightarrow{DA}+\overrightarrow{BE} = \overrightarrow{DA} + \frac{1}{2}\overrightarrow{AB} $ [1].
+
+et
+
+$\overrightarrow{EF} =  \overrightarrow{EA} + \overrightarrow{AF} = \overrightarrow{EB} + \overrightarrow{BA} + \overrightarrow{AF}= \frac{1}{2}\overrightarrow{BA} + \overrightarrow{BA} + \overrightarrow{AF}  =\frac{3}{2}\overrightarrow{BA} + 3\overrightarrow{AD}$ [2].
+
+
+
+
+\item En déduire que les points $C$, $E$ et $F$ sont alignés.
+
+
+De [1] et [2], on a $ \overrightarrow{CE}=\frac{1}{2}\overrightarrow{AB}+\overrightarrow{DA} $ et $\overrightarrow{EF} =\frac{3}{2}\overrightarrow{BA} + 3\overrightarrow{AD}$
+
+Donc $ \overrightarrow{EF} = 3 \left( \frac{1}{2}\overrightarrow{BA} + \overrightarrow{AD}  \right) = -3 \left( \frac{1}{2}\overrightarrow{AB} + \overrightarrow{DA}  \right) = -3\overrightarrow{CE}= 3\overrightarrow{EC} $ 
+
+Donc $ \overrightarrow{EF}$  et $\overrightarrow{CE}$ sont colinéaires, donc  les points $C$, $E$ et $F$ sont alignés.
+\end{enumerate}
+
+
+
+

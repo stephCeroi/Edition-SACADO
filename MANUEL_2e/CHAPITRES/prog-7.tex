@@ -1,0 +1,24 @@
+
+\begin{center}
+\begin{tabularx}{0.7\linewidth}{|m{2.2cm}X|}\hline
+Variables :& $i$ et $n$ sont des entiers naturels\\
+&$u$ est un réel\\
+Entrée :& Saisir $n$\\
+Initialisation :& Affecter à $u$ la valeur $0,6931$\\
+Traitement :& Pour $i$ variant de 1 à $n$\\
+&\hspace{0.4cm}$|$Affecter à $u$ la valeur $\frac{1}{i}-u$\\
+&Fin de Pour\\
+Sortie :& Afficher $u$\\ \hline
+\end{tabularx}
+\end{center}
+
+A l'aide de cet algorithme, on a obtenu le tableau de valeurs suivant.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|*{8}{>{\centering \arraybackslash \footnotesize}X|}}\hline
+$n$	 & 0 		&1 			&2 			&3 			&4 			&5 			&10 		 &100\\ \hline
+$u_n$&\np{0,6931}&\np{0,3069}&\np{0,1931}&\np{0,1402}&\np{0,1098}&\np{0,0902}&\np{0,0475} &\np{0,0050}\\ \hline
+\end{tabularx}
+\end{center}
+
+Programmer avec Python cet algorithme et retrouver ces résultats.

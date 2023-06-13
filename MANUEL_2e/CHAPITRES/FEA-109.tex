@@ -1,0 +1,60 @@
+
+Voici un script Python qui à tout entier $x \in [-3;4]$ calcule son image par la fonction $f$ définie par $f(x)=\frac{5x^3+x^2+2}{x-6}$ en arrondissant le résultat au centième.
+
+\begin{lstlisting}
+def maFonction(x):
+    return round((5*x**3+x**2+2)/(x-6),2)
+
+for x in range(-3,5) :
+    y = maFonction(x)
+    print(x,y)
+ \end{lstlisting}   
+    
+\begin{enumerate}
+\item Ouvrir le logiciel EduPython ou Pyscripter.
+\item Taper ce code. Recopier les résultats dans le tableau ci dessous :
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+$x$ & $-3$ & $-2$ & $-1$ & 0 & 1 & 2 & 3 & 4 \\ 
+\hline 
+$f(x)$ &   &   &   &   &   &   &   &  \\ 
+\hline 
+\end{tabular} 
+
+\item Quelle est l'utilité de ce code ?
+
+\item Quelle erreur renvoie le code suivant ? Justifier.
+
+\begin{lstlisting}
+def maFonction(x):
+    return round((5*x**3+x**2+2)/(x-6),2)
+
+for x in range(-3,7) :
+    y = maFonction(x)
+    print(x,y)
+ \end{lstlisting}
+
+\item Modifier le script pour qu'il calcule les images de $x \in [-5;10]$ par la fonction $f$ définie par $f(x)= x^2 +5x - 3 $ en arrondissant le résultat au dixième.
+
+\item  
+
+\begin{enumerate}
+\item 
+Taper le code suivant et analyser.
+\begin{lstlisting}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-5, 5, 100)
+image_de_x = x**2 +5*x - 3
+plt.plot(x,image_de_x)
+plt.show()
+\end{lstlisting}
+\item Quel est le domaine de définition de $f$ ?
+\item Comment se nomme $f(x)$ dans ce script ?
+\item  Quelle est l'utilité de ce code ?
+\end{enumerate}  
+
+
+ \end{enumerate}

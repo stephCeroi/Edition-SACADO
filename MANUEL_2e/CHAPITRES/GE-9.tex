@@ -1,0 +1,47 @@
+
+\begin{minipage}{8cm}
+
+$ABCD$ est un tétraèdre régulier de coté 4. $I$ et $J$ sont les milieux respectifs de $[AB]$ et $ [CD]$.
+\begin{enumerate}
+\item Montrer que $AJ= 2\sqrt{3}$.
+\item Quelle est la nature du triangle $AJB$ ?
+\item En déduire la longueur $IJ$.
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}{8cm}
+
+\definecolor{ffdxqq}{rgb}{1.,0.8431372549019608,0.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+\clip(3.86,-4.18) rectangle (10.74,1.7);
+\fill[color=ffdxqq,fill=ffdxqq,fill opacity=0.1] (6.96,-1.58) -- (9.03,-1.23) -- (4.32,-3.84) -- cycle;
+\draw [dash pattern=on 2pt off 2pt,color=qqqqff] (6.96,-1.58)-- (10.12,-3.4);
+\draw [dash pattern=on 2pt off 2pt,color=qqqqff] (6.96,-1.58)-- (4.32,-3.84);
+\draw [dash pattern=on 2pt off 2pt,color=qqqqff] (7.94,0.94)-- (6.96,-1.58);
+\draw [color=qqqqff] (7.94,0.94)-- (4.32,-3.84);
+\draw [color=qqqqff] (4.32,-3.84)-- (10.12,-3.4);
+\draw [color=qqqqff] (10.12,-3.4)-- (7.94,0.94);
+\draw [dash pattern=on 2pt off 2pt,color=ffqqqq] (5.64,-2.71)-- (9.03,-1.23);
+\draw [color=ffdxqq] (6.96,-1.58)-- (9.03,-1.23);
+\draw [color=ffdxqq] (9.03,-1.23)-- (4.32,-3.84);
+\draw [color=ffdxqq] (4.32,-3.84)-- (6.96,-1.58);
+\begin{scriptsize}
+\draw [color=qqqqff] (4.32,-3.84)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (4.04,-3.7) node {$A$};
+\draw [color=qqqqff] (6.96,-1.58)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (6.72,-1.26) node {$B$};
+\draw [color=qqqqff] (10.12,-3.4)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (10.26,-3.16) node {$C$};
+\draw [color=qqqqff] (7.94,0.94)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=qqqqff] (8.08,1.18) node {$D$};
+\draw [color=uuuuuu] (9.03,-1.23)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=uuuuuu] (9.16,-0.94) node {$J$};
+\draw [color=uuuuuu] (5.64,-2.71)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=uuuuuu] (5.78,-2.42) node {$I$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{minipage}

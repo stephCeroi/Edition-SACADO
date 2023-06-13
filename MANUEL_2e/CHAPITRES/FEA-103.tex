@@ -1,0 +1,32 @@
+
+La racine carrée du nombre $a$, notée $\sqrt a$ est le nombre positif qui est solution de l'équation $x^2 = a$ ou aussi, $x^2-a=0$. On cherche donc à résoudre l'équation $x^2-a=0$ à l'aide d'un algorithme pour déterminer une valeur approchée de $\sqrt a$ avec la précision $n$ souhaitée.
+
+Soit $f(x)=x^2-a$. 
+
+$f(0)=-a$ avec $a$ positif donc $f(0) \leq 0$. On calcule $f(0+kn)$ où $n$ est la précision et $k$ un entier naturel. 
+
+A la main, on a alors 
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+$f(0)$ & $f(0+0,1)$ & $f(0+2\times 0,1)$ & $f(0+3\times0,1)$ & $f(0+4\times0,1)$ & $f(0,5)$ & $f(0,6)$ & $f(0,7)$ \\ 
+\hline 
+ &  &  &  &  &  &  &  \\
+\hline 
+\end{tabular} 
+
+
+\begin{verbatim}
+p = int(input("Quelle précision ?"))
+a = int(input("De quel nombre souhaitez vous la racine carrée ?"))
+precision = 10**(-p)
+v = -a
+i=0
+while v < 0 :
+    v= i**2 - a
+    if v >0:
+        print(i-precision ,"<= a <=", i)
+        break
+    i=i+precision
+\end{verbatim}
+

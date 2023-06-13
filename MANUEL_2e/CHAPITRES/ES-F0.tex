@@ -1,0 +1,91 @@
+\begin{titre}[Probabilités]
+
+\Titre{Intervalle de fluctuation}{4}
+\end{titre}
+
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Mettre en œuvre une simulation
+\item[$\square$] Exploiter et faire une analyse critique d'un résultat d'échatillonnage
+\end{description}
+\end{CpsCol}
+
+
+\Rec{1}{ES-0}
+
+\begin{DefT}{Échantillon}\index{Échantillon}
+Lorsqu'on répète $n$ fois, de façon identique et indépendante, une même expérience aléatoire, on obtient une série
+de $n$ résultats que l'on appelle \textbf{échantillon de taille $n$}.
+\end{DefT}
+
+\begin{Rq}
+\begin{enumerate}
+\item Pour obtenir un échantillon à l'aide d'un tirage, celui ci doit s'effectuer avec remise pour que la
+proportion du caractère ne change pas.
+\item Si la taille de l'échantillon est négligeable devant l'effectif total, on peut assimiler un tirage sans
+remise à un tirage avec remise.
+\end{enumerate}
+\end{Rq}
+
+
+
+\begin{Ex}
+\begin{enumerate}
+\item  On lance 5 fois un même dé et on note les 5 faces obtenues. On dit que l'on a un échantillon de
+taille 5.
+\item On choisit 10 élèves dans le lycée. On dit que l'on a un échantillon de taille 10 des élèves du lycée, car le nombre de
+lycéen choisi par rapport au nombre total de lycéen est négligeable. Par contre, si on choisit 10 élèves
+dans la classe, on n'a plus un échantillon de la classe.
+\end{enumerate}
+\end{Ex}
+
+\begin{DefT}{Fluctuation d'échantillonnage}\index{Fluctuation d'échantillonnage}
+Lorsqu'on effectue plusieurs échantillons de même taille, la fréquence observée $f$ du caractère
+varie : on l'appelle la \textbf{fluctuation d'échantillonnage}.
+\end{DefT}
+
+
+\begin{DefT}{Intervalle de fluctuation}\index{Intervalle de fluctuation}
+Pour un grand nombre de tirages d'échantillon, l'intervalle centré en $p$, qui contient au moins
+95\% des fréquences observées, $f$ est appelé \textbf{intervalle de fluctuation} de la fréquence $f$ au seuil de 95\%
+des échantillons.
+
+$$I_f=\left[ p - \frac{1}{\sqrt{n}}; p + \frac{1}{\sqrt{n}} \right]$$
+\end{DefT}
+
+\begin{Ex}
+On jette une pièce de monnaie équilibrée, $p=0,5$ et on réalise 200 échantillons de taille 100 et pour chaque
+échantillon, on note la fréquence d'apparition du coté pile.
+Au moins 190 fréquences observées appartiennent à l'intervalle de fluctuation $[0,4 ; 0,6]$.
+\end{Ex}
+
+\mini{
+\EPC{1}{ES-2}{Modéliser.}
+
+\EPC{1}{ES-4}{Modéliser.}
+
+\EPC{1}{ES-5}{Modéliser.}
+}{
+\EPC{1}{ES-8}{Modéliser.}
+
+\CR{1}{ES-3}{Communiquer.}
+}
+
+\mini{
+\EPC{1}{ES-9}{Modéliser.}
+
+\EPC{1}{ES-6}{Modéliser.}
+
+\EPC{1}{ES-10}{Modéliser.}
+
+\EPC{1}{ES-13}{Modéliser.}
+}{
+\EPC{1}{ES-7}{Modéliser.}
+
+\CR{1}{ES-11}{Communiquer.}
+
+\EPCP{1}{ES-14}{Représenter.}
+}
+
+

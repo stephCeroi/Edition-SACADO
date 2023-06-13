@@ -1,0 +1,120 @@
+\begin{titre}[Fonctions et expressions algébriques]
+
+\Titre{Notion de fonction}{4}
+\end{titre}
+
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Relier représentation graphique et tableau de variations.
+\end{description}
+\end{CpsCol}
+
+
+
+\begin{DefT}{Fonction} \index{Fonction!Antécédent}\index{Fonction!}\index{Fonction!Ensemble de définition}
+
+\begin{minipage}{0.48\linewidth}
+Définir une fonction $f$ d'un ensemble D de réels dans $\R$, c'est associer à chaque réel $x$ de D un
+unique réel noté $f(x)$.
+\begin{description}
+\item On dit que D est l'\textbf{ensemble de définition} de $f$. 
+\item $f(x)$ est l'\textbf{image} de $x$ par $f$.
+\item $x$ est un \textbf{antécédent} de $f(x)$ par $f$.
+\end{description}
+\end{minipage}
+\begin{minipage}{0.48\linewidth}
+\begin{center}
+\definecolor{sqsqsq}{rgb}{0.12549019607843137,0.12549019607843137,0.12549019607843137}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(1.84,4.9) rectangle (9.52,7.);
+\draw [color=ffqqqq] (4.,6.62)-- (7.,6.62);
+\draw [color=ffqqqq] (7.,6.62)-- (7.,5.32);
+\draw [color=ffqqqq] (7.,5.32)-- (4.,5.32);
+\draw [color=ffqqqq] (4.,5.32)-- (4.,6.62);
+\draw [->] (2.62,6.) -- (4.,6.);
+\draw [->] (7.,5.98) -- (8.3,6.);
+\draw [color=sqsqsq](2.44,6.25) node[anchor=north west] {|};
+\draw [color=sqsqsq](4.58,6.2) node[anchor=north west] {fonction};
+\draw [color=sqsqsq](6.34,6.2) node[anchor=north west] {$f$};
+\draw [color=sqsqsq](2.06,6.2) node[anchor=north west] {$x$};
+\draw [color=sqsqsq](8.36,6.2) node[anchor=north west] {$f(x)$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\end{DefT}
+ 
+\begin{Nt}
+$f : D \longrightarrow \R$
+
+$x \mapsto f(x)$
+
+Ce qui se lit : la fonction $f$ qui à $x$ associe $f(x)$.
+\end{Nt}
+
+\begin{Mt}[Déterminer algébriquement une image, un antécédent par $f$]
+Soit $f$ la fonction suivante :
+
+$f$ : $[-4 ; 5] \longrightarrow \R$
+
+$x \mapsto 2x^2 - 6x + 3$.
+
+\begin{description}
+\item Pour déterminer l'image d'un nombre $x$ par $f$, il faut que ce nombre soit dans l'ensemble de définition de $f$. Dans ce cas, on remplace $x$ par ce nombre dans l'expression de $f(x)$.
+
+Image de -2 : $f(-2) = 2 \times (-2)^2 -6 \times (-2) + 3 = 2 \times 4 + 12 + 3 = 8 + 12 + 3 = 23$
+
+Image de 6 : Impossible car 6 n'appartient pas à $[-4 ; 5]$.
+
+\item  Pour déterminer le (ou les) antécédent(s) d'un nombre $a$ par $f$, il faut et il suffit de résoudre l'équation $f(x) = 3$.
+
+$2x^2 - 6x + 3 = 3$
+
+$2x^2 - 6x = 0$
+
+$2x (x - 3) = 0$
+
+$2x = 0$ ou $x - 3 = 0$ , $x = 0$ ou  $x = 3$. $\mathscr{S}=\left\lbrace 0;3\right\rbrace $. Les antécédents de 3 par $f$ sont 0 et 3.
+\end{description}
+\end{Mt}
+
+
+
+
+\EPC{1}{FEA-60}{Calculer. Communiquer}
+
+\mini{
+\EPC{0}{FEA-60bis}{Calculer. Communiquer}
+}{
+\EPC{1}{FEA-46}{Chercher. Calculer.}
+}
+
+
+\EPC{1}{FEA-107}{Calculer. Communiquer}
+
+\mini{
+\EPC{1}{FEA-48}{Raisonner. Communiquer}
+}{
+
+\EPC{1}{FEA-50}{Modéliser. Calculer}
+
+\EPC{1}{FEA-61}{Raisonner. Communiquer}
+
+\EPC{0}{FEA-45}{Raisonner. Calculer}
+}
+
+
+ 
+\EPC{0}{FEA-53}{Calculer}
+ 
+
+\begin{Rqs}
+\begin{description}
+\item[•] Une fonction peut être donnée, sur un ensemble de définition $D$, par une \textbf{formule algébrique}, un \textbf{tableau de valeurs}, une \textbf{courbe}. 
+\item[•] Le seul mode de définition qui permet le calcul d'images et d'antécédents est la formule algébrique. La courbe est imité par la précision et le tableau de valeur par le nombre de valeurs proposées.
+\end{description}
+\end{Rqs}
+
+
+\EPCP{1}{FEA-109}{Calculer}

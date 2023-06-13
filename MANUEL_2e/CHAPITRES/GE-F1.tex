@@ -1,0 +1,96 @@
+\begin{titre}[Géométrie dans l'espace]
+
+\Titre{Parallélisme}{4}
+\end{titre}
+
+
+\begin{CpsCol}
+\textbf{Parallélisme}
+\begin{description}
+\item[$\square$] Déterminer l'intersection d'une droite et d'un plan
+\item[$\square$] Déterminer l'intersection de deux plans
+\end{description}
+\end{CpsCol}
+
+
+\begin{Reg}[Parallélisme entre droites]
+\begin{description}
+\item[P1] Deux droites parallèles à une même droite sont parallèles entre elles.
+	$$ \text{ Si } d// d' \text{ et } d'// d" \text{ alors } d// d''$$
+\item[P2]   Si deux droites sont parallèles, alors tout plan qui coupe l'une, coupe l'autre.
+\end{description}
+\end{Reg}
+
+
+\begin{Reg}[Parallélisme entre plans]
+\begin{description}
+\item[P3]   Deux plans parallèles à un même plan sont parallèles entre eux.
+	$$\text{ Si } \mathscr{P} // \mathscr{P}' \text{ et }  \mathscr{P}'// \mathscr{Q} \text{ alors } \mathscr{P} //\mathscr{Q}$$
+
+\item[P4]  Si deux droites sécantes $d$ et $d'$ d'un plan $\mathscr{P}$   sont parallèles à deux droites sécantes $\Delta$ et $\Delta '$ d'un plan $\mathscr{Q}$ alors $\mathscr{P}$  et $\mathscr{Q}$ sont parallèles.
+
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(4.28,-2.3) rectangle (15.16,3.98);
+\fill[color=qqwuqq,fill=qqwuqq,fill opacity=0.11] (5.,1.) -- (11.,1.) -- (15.,3.) -- (9.,3.) -- cycle;
+\fill[color=qqwuqq,fill=qqwuqq,fill opacity=0.11] (9.,0.) -- (15.,0.) -- (11.,-2.) -- (5.,-2.) -- cycle;
+\draw [color=qqqqff] (6.12,1.26)-- (13.22,2.62);
+\draw [color=qqqqff] (6.2,-1.72)-- (13.18,-0.34);
+\draw [color=ffqqqq] (8.46,2.5)-- (12.,2.);
+\draw [color=ffqqqq] (8.78,-0.44)-- (12.,-1.);
+\end{tikzpicture}
+
+
+\item[P5]  Si deux plans $\mathscr{P}$  et $\mathscr{P}'$ sont parallèles alors tout plan qui coupe $\mathscr{P}$  coupe $\mathscr{P'}$ et les droites d'intersection $d$ et $d'$ sont parallèles.
+
+\AV{https://www.geogebra.org/m/Hj7trpR8}{Visualisation}
+\end{description}
+\end{Reg}
+
+
+\AD{1}{GE-6}
+
+\Exo{1}{GE-13}
+
+
+
+\begin{Reg}[Parallélisme entre droite et plan]
+\begin{description}
+\item[P6] Si deux plans $\mathscr{P}$ et $\mathscr{P}'$ sont parallèles et si une droite $d$ est parallèle à $\mathscr{P}$ alors $d$ est parallèle à $\mathscr{P}'$.
+\item[P7]  Si deux droites $d$ et $d'$ sont parallèles et si $d$ est contenue dans un plan $\mathscr{P}$, alors $d'$ est parallèle à $\mathscr{P}$.
+\item[P8]  Si deux plans $\mathscr{P}$ et $\mathscr{P}'$ sont sécants selon une droite $\Delta$ et si une droite $d$ est parallèle à $\mathscr{P}$ et à $\mathscr{P}'$ alors d est parallèle à $\Delta$.
+
+\AV{https://www.geogebra.org/m/yCxHKp2T}{Visualisation}
+
+\end{description}
+\end{Reg}
+
+
+
+\AD{1}{GE-14}
+
+\Exo{1}{GE-15}
+
+
+
+\begin{ThT}{Théorème du toit}
+Si 
+$ \left\lbrace  \begin{tabular}{l}
+$d$ et $d'$ sont des droites parallèles \\ 
+ $\mathscr{P}$  est un plan qui contient $d$ et  $\mathscr{P}'$ un plan qui contient $d'$ \\ 
+ $\mathscr{P}$  et  $\mathscr{P}'$ sont sécants selon une droite $\Delta$ \\ 
+\end{tabular} 
+ \right\rbrace  $
+alors $\Delta$  est parallèle à $d$ et à $d'$.
+
+\AV{https://www.geogebra.org/m/KQJzHRS3}{Visualisation}
+\end{ThT}
+
+
+\AD{1}{GE-18}
+
+
+
+

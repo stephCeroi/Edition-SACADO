@@ -1,0 +1,35 @@
+
+On donne :
+\begin{description}
+\item un triangle $ABC$ rectangle en $A$.
+\item le point $H$ projeté orthogonal de $A$ sur le segment $[BC]$.
+\item le point $I$, le milieu du segment $[AH]$.
+\item le point $J$, le milieu du segment $[BH]$.
+\end{description}
+
+Démontrer que les droites$(CI)$ et $(AJ)$ sont perpendiculaires.
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.9546539379474942cm,y=0.9546539379474942cm]
+\clip(-0.58,-3.56) rectangle (7.8,1.82);
+\draw [color=ffqqqq] (0.,-3.)-- (0.,1.);
+\draw [color=ffqqqq] (0.,1.)-- (7.,-3.);
+\draw [color=ffqqqq] (7.,-3.)-- (0.,-3.);
+\draw [domain=-0.58:7.8] plot(\x,{(-12.--7.*\x)/4.});
+\begin{scriptsize}
+\draw [color=qqqqff] (0.,-3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (-0.26,-2.78) node {$A$};
+\draw [color=qqqqff] (0.,1.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (0.14,1.36) node {$B$};
+\draw [color=qqqqff] (7.,-3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=qqqqff] (7.14,-2.64) node {$C$};
+\draw [color=uuuuuu] (1.7230769230769232,0.015384615384615385)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=uuuuuu] (2.02,0.34) node {$H$};
+\draw [color=uuuuuu] (0.8615384615384616,0.5076923076923077)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=uuuuuu] (1.,0.86) node {$J$};
+\draw [color=uuuuuu] (0.8615384615384616,-1.4923076923076923)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=uuuuuu] (1.02,-1.5) node {$I$};
+\end{scriptsize}
+\end{tikzpicture}

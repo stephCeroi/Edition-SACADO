@@ -1,0 +1,31 @@
+ 
+Écrire un algorithme en langage naturel qui teste si trois points $A(x_A;y_A)$, $B(x_B;y_B)$, $C(x_C;y_C)$ sont alignés. Coder cet algorithme avec Python.
+
+\begin{verbatim}
+def determinant(a,b,c,d): # premier vecteur(a,b), second vecteur(c,d)
+    det = a*d-b*c
+    if det == 0 :
+        return "Les points A, B et C sont alignés."
+    else :
+        return "Les points A, B et C ne sont pas alignés."  
+
+
+a = float(input("Quelle est l'abscisse du point A ?"))
+b = float(input("Quelle est l'ordonnée du point A ?"))
+
+c = float(input("Quelle est l'abscisse du point B ?"))
+d = float(input("Quelle est l'ordonnée du point B ?"))
+
+e = float(input("Quelle est l'abscisse du point C ?"))
+f = float(input("Quelle est l'ordonnée du point C ?"))
+
+# Coordonnées du premier vecteur
+abs1 = c-a #abscisse
+ord1 = d-b #ordonnée
+
+# Coordonnées du second vecteur
+abs2 = e-a #abscisse
+ord2 = f-b #ordonnée
+
+print(determinant(abs1,ord1,abs2,ord2))
+\end{verbatim}

@@ -1,0 +1,112 @@
+\begin{titre}[Géométrie vectorielle et analytique]
+
+\Titre{Notions de vecteur}{4}
+\end{titre}
+
+\begin{CpsCol}
+\textbf{Connaitre la notion de vecteur}
+\begin{description}
+\item[$\square$] Représenter géométriquement des vecteurs.
+\item[$\square$] Représenter un vecteur dont on connaît les coordonnées. Lire les coordonnées d’un
+vecteur.
+\end{description}
+\end{CpsCol}
+
+
+
+\begin{DefT}{Vecteur}\index{Vecteurs}
+On dit que le vecteur $\overrightarrow{AB}$ est le représentant du déplacement de A vers B. Le vecteur $\overrightarrow{AB}$ possède donc une \textbf{direction}, un \textbf{sens}, une longueur appelée \textbf{norme}. 
+Ces 3 données caractérisent un vecteur.
+
+La translation de vecteur $\overrightarrow{AB}$ est le déplacement de A vers B.
+\end{DefT}
+
+
+ 
+ 
+\begin{ThT}{Vecteurs égaux} \index{Vecteurs!Égaux} 
+\begin{minipage}{0.48\linewidth}
+Deux vecteurs $\overrightarrow{AB}$ et $\overrightarrow{CD}$ sont égaux lorsque ils ont la même direction (leurs supports sont parallèles), le même sens, la même norme $(AB=CD)$.
+
+On écrit $\overrightarrow{AB}=\overrightarrow{CD}$. 
+
+Le quadrilatère $ABDC$ est donc un parallélogramme.
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.46,-0.22) rectangle (4.58,2.42);
+\draw [->,color=ffqqqq] (-2.,0.) -- (1.,2.);
+\draw [color=ffqqqq](-0.82,1.46) node[anchor=north west] {$\vec{u}$};
+\draw [->,color=ffqqqq] (1.,0.) -- (4.,2.);
+\draw [color=ffqqqq](2.06,1.38) node[anchor=north west] {$\vec{v}$};
+\begin{scriptsize}
+\draw [fill=qqqqff] (-2.,0.) circle (0.5pt);
+\draw[color=qqqqff] (-2.24,0.) node {$A$};
+\draw [fill=qqqqff] (1.,2.) circle (0.5pt);
+\draw[color=qqqqff] (1.14,2.2) node {$B$};
+\draw [fill=qqqqff] (1.,0.) circle (0.5pt);
+\draw[color=qqqqff] (0.7,-0) node {$C$};
+\draw [fill=qqqqff] (4.,2.) circle (0.5pt);
+\draw[color=qqqqff] (4.14,2.2) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{minipage}
+\end{ThT}
+
+
+\begin{DefT}{Vecteur nul}\index{Vecteurs!Nul}
+On dit que le vecteur $\overrightarrow{AB}$ est nul lorsque $A$ et $B$ sont confondus. On note $\overrightarrow{AB}=\overrightarrow{0}$
+\end{DefT}
+
+
+
+
+\mini{
+
+\EPC{1}{GVA-32}{Représenter. Raisonner.}
+
+\EPC{1}{GVA-33}{Représenter. Raisonner.}
+
+\EPC{1}{GVA-35}{Représenter. Raisonner.}
+}{
+\EPC{1}{GVA-34}{Représenter. Calculer.}
+
+\begin{DefT}{Vecteurs opposés}\index{Vecteurs!Opposés}
+Deux vecteurs sont dits opposés lorsqu'ils ont la même direction, la même norme et sont de sens opposés. $\overrightarrow{AB}$ et  $\overrightarrow{BA}$ sont opposés. On écrit : $\overrightarrow{AB} = -\overrightarrow{BA}$.
+\end{DefT}
+}
+
+
+\EPC{1}{GVA-40}{Représenter}
+
+\begin{DefT}{Base et repère du plan}\index{Base du plan}\index{Repère du plan}
+Deux vecteurs non colinéaires forment une \textbf{base} du plan. On le note $\left(\vec{u};\vec{v}\right)$.  \\ 
+Deux vecteurs non colinéaires et un point du plan forment un \textbf{repère} du plan. On la note \Oij. Un repère permet de repérer des points dans le plan. Les coordonnées des points sont dépendantes de l'origine $O$.
+\end{DefT}
+
+
+
+
+\begin{ThT}{Coordonnées de vecteurs}\index{Vecteurs!Coordonnées}
+
+Deux vecteurs égaux ont des coordonnées égales.
+$\overrightarrow{AB}(x,y)$ et $\overrightarrow{CD}(x',y')$.
+
+$\overrightarrow{AB}=\overrightarrow{CD} \Longleftrightarrow x=x'$ et $y=y'$.
+
+Dans un repère on donne deux points $A(x_A; y_A)$ et $B(x_B;y_B)$. Les coordonnées du vecteur $\overrightarrow{AB}$ sont $(x_B – x_A; y_B – y_A)$.
+\end{ThT}
+
+
+\mini{
+\EPC{1}{GVA-37}{Représenter}
+
+\EPC{0}{GVA-46}{Représenter. Calculer}
+}{
+\EPC{1}{GVA-44}{Représenter}
+
+\EPC{0}{GVA-36}{Représenter. Calculer}
+}

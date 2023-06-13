@@ -1,0 +1,144 @@
+\documentclass[10pt]{article}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCourslycee}
+\input{../../../latex_preambule_style/styleExercices}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_seconde}
+\input{../../../latex_preambule_style/algobox}
+
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche  -----    0 n'affiche pas
+{%condition vraie
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{titre}[Informations chiffrées]
+
+\Titre{Évolutions successives}{4}
+\end{titre}
+
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Exploiter la relation entre deux valeurs successives et leur taux d'évolution.
+\item[$\square$] Calculer le taux d'évolution global à partir des taux d'évolution successifs. 
+\item[$\square$] Calculer un taux d'évolution réciproque.
+\end{description}
+\end{CpsCol}
+
+
+
+\begin{Sit}
+Le prix d'un produit augmente de $5$\% chaque année pendant 3 années. 
+
+Puis ce même prix d'un produit augmente de 3\% chaque année pendant 2 années. 
+
+Quelle est la hausse globale sur les 3 premières années ?
+
+Quelle est la hausse globale sur les 2 années suivantes ?
+
+Vous devez étudier cette situation.
+\end{Sit}
+
+
+
+\begin{Sit}
+Une quantité augmente de 8\% la première année puis diminue de 8\% la seconde année. 
+
+Comment varie cette quantité sur ces deux années ?
+
+Vous devez faire une explication claire de votre étude et démontrer votre résultat. 
+\end{Sit}
+
+
+
+\begin{Sit}
+Le prix d'un produit augmente de 2\% la première année, diminue de 5\% la deuxième année, augmente de 2\% la troisième année, augmente de 5\% la quatrième année, diminue de 2\% la cinquième année. Quelle est la hausse globale sur ces 5 années ?
+
+Vous devez étudier cette situation. 
+\end{Sit}
+
+
+
+\begin{Sit}
+Une quantité $q_1$ augmente de 12\%. On obtient une nouvelle quantité $q_2$. Quel doit être le taux de pourcentage $t'$ qu'il faut appliquer à la quantité $q_2$ pour retrouver $q_1$ ?
+
+Vous devez étudier cette situation et l'étayer avec des exemples et essayer de déterminer une formule générale. 
+\end{Sit}
+
+
+\begin{Sit}
+Le prix d'un produit augmente de 12\% chaque année pendant 2 années. Quelle est le taux moyen d'augmentation par année ?
+
+Le prix d'un produit augmente de 9\% chaque année pendant 3 années. Quelle est le taux moyen d'augmentation par année ?
+
+Vous devez étudier cette situation et essayer de déterminer une formule générale pour $n$ années.  
+\end{Sit}
+
+\begin{Rap}
+
+Un taux d'évolution de $t$, exprimé en pourcentage, est associé au coefficient multiplicateur, noté $CM$ égal à : $$CM=1+\frac{t}{100}$$
+
+\end{Rap}
+
+\mini{
+\EPC{1}{IC-34}{Chercher. Calculer.}
+
+%\EPC{1}{IC-16}{Chercher.}
+\EPC{1}{IC-36}{Chercher. Calculer.}
+
+
+\EPC{0}{IC-5}{Chercher. Calculer.}
+}{
+\EPC{1}{IC-33}{Chercher. Calculer.}
+
+\EPC{1}{IC-3}{Chercher. Calculer.}
+}
+
+
+\EPC{0}{IC-9}{Chercher. Communiquer.}
+
+
+
+  
+ 
+
+
+\mini{
+\EPC{1}{IC-39}{Chercher. Calculer.}
+
+\EPC{1}{IC-7}{Chercher. Représenter.}
+
+\EPCP{1}{IC-40bis}{Chercher. Communiquer.}
+}{
+\EPC{1}{IC-35}{Chercher. Calculer.}
+
+\EPC{0}{IC-37}{Chercher. Calculer.}
+ 
+\EPC{1}{IC-38}{Chercher. Calculer.} 
+
+\EPCP{1}{IC-40}{Chercher. Communiquer.}
+}
+ 
+ 
+%\EPC{1}{stat-35}{Chercher. Modéliser.}
+%
+%\ligne{30}
+% 
+%\multido{\i=0+1}{87}{ \AD{1}{FEA-\i} }
+\end{document}

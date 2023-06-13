@@ -1,0 +1,24 @@
+
+L'algorithme de Héron permet de déterminer des valeurs approchées de racines carrées d'entiers.
+
+Pour déterminer une valeur approchée de  $\sqrt{a}$, où $a$ est un entier naturel, aussi écrit $a \in \N$, on doit calculer les valeurs successives de $u_1$, $u_2$, $u_3$, $u_4$, ...... avec $u_0=a$ et $u_1=\frac{1}{2}\left(u_0+\frac{a}{u_0} \right)$,  $u_2=\frac{1}{2}\left(u_1+\frac{a}{u_1} \right)$, $u_3=\frac{1}{2}\left(u_2+\frac{a}{u_2} \right)$, .....
+
+\begin{enumerate}
+\item Cas pour $a=2$
+	\begin{enumerate}
+		\item Dans une même colonne d'une feuille de calcul, saisir la valeur $u_0$ puis la formule permettant de calculer $u_1$. Copier cette formule vers le bas afin de calculer $u_2$, $u_3$, .....
+		\item A partir de quel terme de la suite $u_0$, $u_1$, $u_2$, $u_3$, .... obtient-on une valeur approchée de $\sqrt{2}$ à $10^{-7}$ près ? Utiliser l'éditeur de formule pour déterminer $\sqrt{2}$.	
+	\end{enumerate}
+\item Autres cas
+	\begin{enumerate}
+		\item Compléter plusieurs autres colonnes de la feuille de calcul pour déterminer des valeurs approchées de  $\sqrt{3}$, $\sqrt{5}$, $\sqrt{6}$, $\sqrt{7}$. 
+	\end{enumerate}	
+\end{enumerate}
+
+\vspace{0,4cm}
+
+Dans cette activité on a créé pour chaque valeur de $a$ une suite de nombres qui apparaissent dans les cellules du tableur. Cette suite de nombre peut s'écrire :
+$$\left\lbrace \begin{tabular}{c}
+$u_0=a$ \\ 
+$u_{n+1}=\frac{1}{2}\left(u_n+\frac{a}{u_n} \right)$ \\ 
+\end{tabular} \right. $$ 

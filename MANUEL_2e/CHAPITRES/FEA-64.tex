@@ -1,0 +1,28 @@
+
+La courbe de la fonction $f$ est représentée ci-dessous.
+
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-2.283636363636364,-3.303636363636365) grid (2.9890909090909084,4.750909090909094);
+\draw[->,color=black] (-2.283636363636364,0.) -- (2.9890909090909084,0.);
+\foreach \x in {-2.,-1.,1.,2.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-3.303636363636365) -- (0.,4.750909090909094);
+\foreach \y in {-3.,-2.,-1.,1.,2.,3.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-2.283636363636364,-3.303636363636365) rectangle (2.9890909090909084,4.750909090909094);
+\draw[line width=1.2pt,color=qqwuqq,smooth,samples=100,domain=-2.283636363636364:2.9890909090909084] plot(\x,{10.0*sin(((\x)-0.10181818181818177)*180/pi)^(2.0)-2.0*((\x)-0.10181818181818177)-3.0-(((\x)-0.10181818181818177)^(2.0)-5.56)+((\x)-1.1818181818181817)^(3.0)-3.181818181818182});
+\begin{scriptsize}
+\draw[color=qqwuqq] (-1.2472727272727278,-8.412727272727276) node {$f$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item Lire graphiquement $f(2)$.
+\item Lire graphiquement l'image de 0.
+\item Lire graphiquement les antécédents de $-2$ par $f$.
+\end{enumerate}

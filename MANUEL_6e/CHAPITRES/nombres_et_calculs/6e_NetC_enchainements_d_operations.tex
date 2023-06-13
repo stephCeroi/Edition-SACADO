@@ -1,126 +1,373 @@
-% \documentclass[a4paper,dvipsnames]{article}
-
-% \addtolength{\hoffset}{-2.25cm}
-% \addtolength{\textwidth}{4.5cm}
-% \addtolength{\voffset}{-3.25cm}
-% \addtolength{\textheight}{5cm}
-% \setlength{\parskip}{0pt}
-% \setlength{\parindent}{0in}
-
-% \input{MISC/preambule_SACADO}
-% \input{MISC/styleCours_SACADO}
-
-% \usepackage{hyperref}
-
-% \begin{document}
-
-%-------------------------------
-%	TITLE SECTION
-%-------------------------------
-
-% \fancyhead[C]{}
-% \hrule\medskip % Upper rule
-% \begin{minipage}{0.295\textwidth} 
-% \raggedright
-% Classe \myClasse \hfill\\
-% \myDiscipline \hfill\\
-% \myParcours \hfill\\
-% \end{minipage}
-% \begin{minipage}{0.4\textwidth} 
-% \centering 
-% \scshape\huge
-% \textcolor{sacado_purple}{\myTitle} \\ 
-% \normalsize 
-%%\mySubTitle \\ 
-% \end{minipage}
-% \begin{minipage}{0.295\textwidth} 
-% \raggedleft
-% \href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
-%%\myAnnee \hfill\\
-% \end{minipage}
-% \medskip \hrule
-% \bigskip
-
-%-------------------------------
-%	CONTENTS
-%-------------------------------
-
 \chapter{Enchainements d'opérations}
 {https://sacado.xyz/qcm/parcours_show_course/0/117122}
+{
+
+ \begin{CpsCol}
+\textbf{Les savoir-faire du parcours}
+ \begin{itemize}
+ \item Savoir utiliser le vocabulaire des opérations.
+ \item Savoir traduire une expression numérique par une phrase.
+ \item Savoir calculer en respectant les règles de priorités.
+ \item Savoir calculer en utilisant la simple distributivité.
+ \item Savoir résoudre un problème numérique.
+ \end{itemize}
+ \end{CpsCol}
+}
 
 \begin{pageCours} 
 
 \section{Vocabulaire des opérations}
 
-\begin{Def}
-\begin{itemize}
-\item La somme de deux nombres est le résultat de l'addition de ces nombres.
-\item La différence de deux nombres est le résultat de la soustraction de ces nombres.
-\item Le produit de deux nombres est le résultat de la multiplication de ces nombres.
-\item Le quotient de deux nombres est le résultat de la division de ces nombres.
+\begin{DefT}{Somme. Différence. Produit. Quotient}
+\begin{itemize}[leftmargin=*]
+\item La \textbf{somme}\index{Somme} de deux nombres, appelés \textbf{termes}\index{Termes}, est le résultat de l'addition de ces nombres.
+\item La \textbf{différence}\index{Différence} de deux nombres, appelés \textbf{termes}\index{Termes}, est le résultat de la soustraction de ces nombres.
+\item Le \textbf{produit}\index{Produit} de deux nombres, appelés \textbf{facteurs}\index{Facteurs}, est le résultat de la multiplication de ces nombres.
+\item Le \textbf{quotient}\index{Quotient} de deux nombres est le résultat de la division de ces nombres.
 \end{itemize}
-\end{Def}
+\end{DefT}
 
 \begin{Ex}
-Calculer "la somme de $13$ et $8$" revient à faire l'opération : $13+8=21$.
-\end{Ex}
 
-\begin{Mt}
-La phrase : "$A$ est le quotient de $340$ par la somme de $12$ et de $5$" revient à faire l'opération :
-\[A=\frac{340}{12+5}=20\]
-\end{Mt}
+\begin{itemize}[leftmargin=*]
+\item Calculer "la somme de $13$ et $8$" revient à faire l'opération : $13+8=21$. $13$ et $8$ sont les termes et la somme est $21$.
+\item Calculer "le produit de $5$ et $7$" revient à faire l'opération : $5 \times 78=35$. $5$ et $7$ sont les facteurs et le produit est $35$.
+\item La phrase : "$A$ est le quotient de $340$ par la somme de $12$ et de $5$" revient à faire l'opération : $A=340\div(12+5)=20$
+\end{itemize}
+\end{Ex}
 
 \section{Règles de priorité}
 
-\begin{Def}
-Pour effectuer un calcul avec plusieurs opérations, on suit les régles de priorité des opérations.
-\begin{itemize}
+\begin{Reg}
+Pour effectuer un calcul avec plusieurs opérations, on suit les règles de priorité des opérations.
+\begin{enumerate}[leftmargin=*]
+\item Les opérations s'effectuent de gauche à droite.
 \item Les opérations entre parenthèses sont prioritaires.
-\item En l’absence de parenthèses, La multiplication est prioritaire sur l'addition et la soustraction.
-\end{itemize}
-\end{Def}
+\item En l'absence de parenthèses, La multiplication est prioritaire sur l'addition et la soustraction.
+\end{enumerate}
+\end{Reg}
 
 \begin{Ex}
-$14\times5+2=72$ alors que $14\times(5+2)=98$
-\end{Ex} 
 
-\begin{Rq}
-Cela vaut pour tous les types d'opérations.
+\begin{enumerate}[leftmargin=*]
+\begin{minipage}{0.5\linewidth}
 
-\[A=14-\textcolor{red}{(}2,5+3,5\textcolor{red}{)}=14-\textcolor{red}{6}=8\]
-\end{Rq}
+\item $10-5+2=5+2=7$ 
+\item $10\times5+2=52$
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\item $10\times(5+2)=70$
+\item $A=14-\textcolor{red}{(}2,5+3,5\textcolor{red}{)}=14-\textcolor{red}{6}=8$
+\end{minipage}
+\end{enumerate}
+
+\end{Ex}
 
 \section{Distributivité}
 
-\begin{Def}
-L'égalité $\textcolor{red}{3}\times(\textcolor{blue}{10}+\textcolor{brown}{11})=\textcolor{red}{3}\times\textcolor{blue}{10}+\textcolor{red}{3}\times\textcolor{brown}{11}$ s'appelle :
-
-La \textbf{distributivité} de la multiplication par rapport à l'addition.
-\end{Def}
+\begin{DefT}{distributivité}
+L'égalité $\textcolor{red}{3}\times(\textcolor{sacado_blue}{10}+\textcolor{orange}{11})=\textcolor{red}{3}\times\textcolor{sacado_blue}{10}+\textcolor{red}{3}\times\textcolor{orange}{11}$ s'appelle la \textbf{distributivité}\index{Distributivité} de la multiplication par rapport à l'addition.
+\end{DefT}
 
 \begin{Mt}
 On peut utiliser la \textbf{distributivité} pour calculer astucieusement des produits en décomposant un des facteurs :
-\begin{Ex}
-\[A=25\times29\]
-or $29=30-1$ donc :
-\[A=25\times(30-1)\]
-on utilise la distributivité :
-\[A=25\times30-25\times1=750-25=725\]
-\end{Ex}
+ 
+$A=25\times\textcolor{sacado_blue}{19} = 25 \times \textcolor{sacado_blue}{(20-1)} $
+ 
+on utilise la distributivité : $A=25\times20-25\times1=500-25=475$
 \end{Mt}
 
-% \section{Les savoir-faire du parcours}
+\begin{Mt}
+On peut utiliser la \textbf{distributivité} pour calculer astucieusement des produits en décomposant un des facteurs :
+ 
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ffqqff}{rgb}{1.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.64,-0.08) rectangle (10.46,1.54);
+\draw (-0.16,0.6) node[anchor=north west] {$15 \times {\color{sacado_red}12} = 15 \times ({\color{sacado_red}10+2 }) =   {\color{ffqqff} 15 \times10 }  + {\color{xfqqff} 15 \times 2 }={\color{ffqqff}150}+{\color{xfqqff}30}=180 $};
 
-% \begin{CpsCol}
-% \begin{itemize}
-% \item Savoir utiliser le vocabulaire des opérations.
-% \item Savoir traduire une expression numérique par une phrase.
-% \item Savoir calculer en respectant les règles de priorités.
-% \item Savoir calculer en utilisant la simple distributivité.
-% \item Savoir résoudre un problème numérique.
-% \end{itemize}
-% \end{CpsCol}
+\draw [shift={(2.3,0.57)},line width=1.pt,color=ffqqff]  plot[domain=0.:3.141592653589793,variable=\t]({1.*0.37*cos(\t r)+0.*0.37*sin(\t r)},{0.*0.37*cos(\t r)+1.*0.37*sin(\t r)});
+\draw [shift={(2.7,0.57)},line width=1.pt,color=xfqqff]  plot[domain=0.0:3.141592653589793,variable=\t]({1.*0.7011419257183239*cos(\t r)+0.*0.7011419257183239*sin(\t r)},{0.*0.7011419257183239*cos(\t r)+1.*0.7011419257183239*sin(\t r)});
 
-% \end{document}
+\end{tikzpicture}
+
+\end{Mt}
 
 \end{pageCours} 
+
+
+\begin{pageAD} 
+ 
+
+\Sf{Connaitre le vocabulaire des opérations}
+ 
+  
+\begin{ExoCad}{Communiquer.}{1234}{2}{0}{0}{0}{0}
+
+Écrire avec des nombres et des opérations les phrases proposées.
+
+\begin{itemize}[leftmargin=*]
+\item La somme de $5$ et $6$ égale à $11$ : \point{1}
+\item $42$ est le produit des facteurs $6$ et $7$ : \point{1}
+\item $102$ est la somme du produit de $9$ par $11$ et du quotient de $6$ par $2$ : \point{1}
+\end{itemize}
+ 
+\end{ExoCad}
+
+\Sf{Connaitre les règles de priorités}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ Calcule les opérations suivantes :
+ 
+\begin{itemize}[leftmargin=*]
+\item $6 -2+4=$ \point{1}
+\item $23 - 6 - 2 \times 5=$   \point{1}
+\item $12 \times 2 -  11 \times 2 =$   \point{1}
+\item $12 + 15 \div 3=$   \point{1}
+\end{itemize}
+ 
+\end{ExoCad}
+
+
+\Sf{Utiliser la distributivité}
+
+\begin{ExoCad}{Représenter. Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Calcule les expressions suivantes en utilisant la distributivité.
+
+\begin{itemize}[leftmargin=*]
+\item $32 \times 9= (\ldots \ldots + \ldots \ldots) \times 9  = \ldots \ldots \times 9 + \ldots \ldots \times 9 = \ldots \ldots   + \ldots \ldots  = \ldots \ldots $ \vspace{0.1cm}
+\item  $14 \times 9 = 14 \times (\ldots \ldots - \ldots \ldots)= 14\times \ldots \ldots - 14 \times \ldots \ldots = \ldots \ldots   - \ldots \ldots  = \ldots \ldots $ \vspace{0.1cm}
+\item $31 \times 80 = (\ldots \ldots + \ldots \ldots) \times 80  = \ldots \ldots \times 80 + \ldots \ldots \times 80 = \ldots \ldots   + \ldots \ldots  = \ldots \ldots $ \vspace{0.1cm}
+\item  $15 \times 18 = 15 \times (\ldots \ldots - \ldots \ldots)= 15\times \ldots \ldots - 15 \times \ldots \ldots = \ldots \ldots   - \ldots \ldots  = \ldots \ldots $ \vspace{0.1cm}
+\end{itemize}
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Calcule les expressions suivantes en utilisant la distributivité.
+
+\begin{itemize}[leftmargin=*]
+\item  $3 \times 6 + 3 \times 4=3 \times (\ldots \ldots + \ldots \ldots)=$ \point{1}
+\item $32 \times 9 + 9 \times 8=9 \times (\ldots \ldots + \ldots \ldots)=$ \point{1}
+\item  $26 \times 17 - 26 \times 7=26 \times (\ldots \ldots - \ldots \ldots)=$ \point{1}
+\item  $5 \times 101 - 5=5 \times (\ldots \ldots - \ldots \ldots)=$ \point{1}
+\end{itemize}
+ 
+\end{ExoCad}
+
+
+\Sf{Résoudre un problème}
+
+\begin{ExoCad}{Calculer.}{1234}{1}{0}{0}{0}{0}
+
+Apolline possède des poules qui pondent $1\,224$ œufs par jour. 
+Les œufs sont réparties dans des boites de 6. 
+
+Combien de boites sont-elles remplies chaque jour ? 
+\point{3}
+\end{ExoCad}
+
+\end{pageAD}
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursu} 
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Calculer.}{1234}{1}{0}{0}{0}{0}
+
+ Dans une bibliothèque, il y a $5600$ livres. $3267$ sont des romans, $1234$ sont des BD et les autres sont des documentaires.
+ Quel est le nombre de livres documentaires ? \point{3}
+\end{ExoCu}
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+Clara a dans sa tirelire 124,17 euros. Elle achète un cadeau à sa mère pour une valeur de 51,30 euros.
+
+Quelle somme reste-elle à Clara après avoir acheté le cadeau ? \point{3}
+
+\end{ExoCu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+\end{ExoCu}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+\end{ExoCu}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCu}
+
+
+\end{pageParcoursu}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{pageParcoursd} 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+ 
+\end{ExoCd}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Chercher.communiquer.}{1234}{2}{0}{0}{0}{0}
+
+
+
+\end{ExoCd}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+ 
+\end{pageParcoursd}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcourst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+ 
+ Quel est le nombre à quatre chiffres inférieur à 5000 qui est divisible par 2, par 3, par 4, … par 10 ? 
+
+
+\end{ExoCt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+ 
+Le maître apporte un sac de gommettes à un groupe de 3 élèves. Chacun en prend une poignée. Le sac est vide et les élèves comptent leurs gommettes.
+\begin{itemize}
+\item Gilles : j’en ai 11
+\item Nadia : j’en ai 9
+\item Soledad : j’en ai 17
+\end{itemize}
+Le maître : Voici encore un autre sac, il contient 50 gommettes. 
+Vous devez vous les partager de façon à ce que chacun ait finalement le même nombre de gommettes. 
+ 
+ \point{5}
+ 
+\hfill{\tiny D'après IREM Lyon} 
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Chercher. Représenter.}{1234}{2}{0}{0}{0}{0}
+
+Combien de pièces de 2 € et de billets de 5 € au minimum faut-il combiner pour obtenir la somme de 23 € ? de 54 € ? de 81 € ?
+
+\end{ExoCt}
+
+\begin{ExoCt}{Chercher. Représenter.}{1234}{2}{0}{0}{0}{0}
+
+Un fermier a des poules et des lapins. En regardant tous les animaux, il voit 5 têtes et 16 pattes. Combien le fermier a-t-il de lapins et de poules ?
+
+\end{ExoCt}
+
+ 
+
+\end{pageParcourst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Brouillon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{pageBrouillon} 
+ 
+\ligne{32}
+
+
+
+\end{pageBrouillon}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Auto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAuto} 
+
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{ExoAuto}
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+  
+
+\end{ExoAuto}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+
+\end{pageAuto}
+
+
+

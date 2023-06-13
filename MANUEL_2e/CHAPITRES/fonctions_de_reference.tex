@@ -1,0 +1,85 @@
+\documentclass[10pt]{article}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCourslycee}
+\input{../../../latex_preambule_style/styleExercices}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_seconde}
+\input{../../../latex_preambule_style/algobox}
+
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche  -----    0 n'affiche pas
+{%condition vraie
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{minipage}{0.56\linewidth}
+
+
+\EPC{1}{FR-45}{Chercher.}
+
+\input{FR-52} 
+
+Justifier votre démarche dans chaque cas.
+
+\EPC{1}{FR-47}{Représenter.}
+\end{minipage}
+\hfill
+\begin{minipage}{0.42\linewidth}
+
+\EPC{1}{FR-57}{Représenter.} 
+\end{minipage}
+
+
+\EPC{1}{FPD-0}{Chercher. Représenter.}
+
+\EPC{1}{FPD-2}{Chercher. Représenter.}
+
+\EPC{1}{FR-56}{Calculer}
+
+\EPC{1}{FR-51}{Chercher.}
+
+\EPC{1}{FR-54}{Calculer.}
+ 
+\EPC{1}{FR-6}{Raisonner. Communiquer.}
+
+\begin{minipage}{0.49\linewidth}
+\EPC{1}{FR-55}{Représenter.} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\EPC{1}{FR-62}{Représenter.} 
+\end{minipage}
+
+\EPC{1}{FR-63}{Représenter.} 
+
+\EPC{1}{FR-61}{Chercher. Raisonner.}
+ 
+
+\EPCC{1}{FR-58}{Raisonner. Communiquer.}
+
+\EPCC{1}{FR-59}{Raisonner. Communiquer.}
+
+\EPCC{1}{FR-60}{Raisonner. Communiquer.}
+
+
+%\EPC{1}{stat-35}{Chercher. Modéliser.}
+%
+%\ligne{30}
+% 
+%\multido{\i=0+1}{87}{ \AD{1}{FEA-\i} }
+\end{document}

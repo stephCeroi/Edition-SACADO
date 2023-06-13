@@ -1,0 +1,167 @@
+\begin{titre}[Nombres et calculs]
+
+\Titre{Ensembles de nombres}{3}
+\end{titre}
+
+
+\begin{CpsCol}
+\begin{description}
+\item[$\square$] Associer à chaque point de la droite graduée un unique nombre réel et
+réciproquement.
+\end{description}
+\end{CpsCol}
+
+
+
+
+\begin{DefT}{Ensemble des réels}
+L'ensemble de tous les nombres connus en Seconde est appelé ensemble des nombres réels, noté $\R$.
+\end{DefT}
+
+\begin{DefT}{Ensemble de nombres}\index{Ensemble de nombres!Réels $\R$}
+Les autres ensembles de nombres, inclus dans $\R$.
+\begin{enumerate}
+\item On appelle \textbf{entiers naturels} les nombres : 0 ; 1 ; 2 ; 3 . . . Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\N$}
+On a donc : $\N = \lbrace 0 ; 1 ; 2 ; 3 \cdots \rbrace $
+\item  On appelle \textbf{entiers relatifs} les nombres entiers naturels et leurs symétriques par rapport à 0. Leur ensemble est noté $\Z$.\index{Ensemble de nombres! Entiers $\Z$}
+On a donc : $\Z = \lbrace \cdots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots \rbrace $
+\item  On appelle \textbf{nombres rationnels} les nombres de la forme $\frac{a}{b}$, $a$ et $b$ entiers et $b$ non nuls.  Leur ensemble est noté $\Q$. \index{Ensemble de nombres! Rationnels $\Q$}
+On a donc : $\Q = \lbrace \cdots \frac{5}{3} ; -\frac{5}{7} ; -\frac{13}{22} \cdots \rbrace$
+\item Par construction, $\N$ est inclus dans $\Z$  est inclus dans $\D$  est inclus dans $\Q$  est inclus dans $\R$. Ces ensembles sont dits "emboités".
+\item  On peut représenter l'ensemble des réels sur une droite graduée.
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.36,0.) -- (10.66,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.36,-0.5) rectangle (10.66,0.5);
+\end{tikzpicture}
+ \end{center} 
+\end{enumerate}
+\end{DefT}
+
+
+\EPC{1}{FEA-2}{Représenter.}
+
+\begin{DefT}{Appartenance}\index{Ensemble!Appartenance}
+Pour symboliser l'appartenance d'un nombre à un ensemble, on utilise le symbole $\in$. On écrit que :
+\begin{description}
+\item[•] $-2 \in \Z$, $\frac{5}{3} \in \Q$
+\item[•] $-5 \not \in \N$, $\pi \not\in \Q$
+\end{description}
+\end{DefT}
+
+\begin{Nt}
+ $ \not\in$ signifie n'appartient pas.
+\end{Nt}
+
+
+
+\begin{DefT}{Nombres décimaux}
+Les \textbf{nombres décimaux} sont des nombres rationnels dont le dénominateur est une puissance de 2, de 5 ou de 10 ou un produit de puissances de ces nombres.
+\end{DefT}
+
+\begin{Ex}
+\begin{description}
+\item[•] $A=\frac{3}{25}$ est un nombre décimal car $25 = 5^2$, 25 est donc une puissance de 5.
+\item[•] $B=\frac{13}{20}$ est un nombre décimal car $20 = 2^2 \times 5$, 20 est donc un produit d'une puissance de 2 et de 5.
+\end{description}
+On écrit $A=\frac{3}{25} \in \D$, $B=\frac{13}{20} \in \D$
+\end{Ex}
+
+
+
+\begin{Att}
+$A=\frac{7}{15}$ n'est pas un nombre décimal. $15=3 \times 5$ n'est pas une puissance de 5 mais un multiple de 5 !
+
+$A=\frac{7}{15} \not \in \D$
+\end{Att}
+
+  
+\begin{Log}
+Un nombre $x$ est décimal s'il existe un nombre $a \in \Z$ et $n \in \N$ tel que $x = \frac{a}{10^n}$
+\end{Log}
+
+
+ 
+\begin{minipage}{0.47\linewidth}
+
+\EPC{1}{FEA-88}{Représenter. Chercher.}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47\linewidth}
+
+\EPC{0}{FEA-88bis}{Représenter. Chercher}
+\end{minipage}
+
+ 
+ 
+ 
+ 
+ 
+\EPC{1}{FEA-89}{Communiquer. Chercher.}
+ 
+
+\begin{DefT}{Inclusion}\index{Ensemble!Inclusion}
+Un ensemble $A$ est inclus dans un ensemble $B$ lorsque tous les éléments de $A$ sont contenus dans $B$. On note $A \subset B$.
+\end{DefT}
+
+
+\begin{Rq}
+\begin{description}
+\item[•] Un ensemble  $A$ \textbf{est inclus dans} un ensemble $B$  se note : $A \subset B$.
+\item[•] Un élément $x$ \textbf{appartient à} un ensemble $B$ se note  $x \in B$.
+\end{description}
+\end{Rq}
+
+\EPC{1}{FEA-15}{Représenter.}
+ 
+
+\begin{DefT}{Complémentaire}\index{Ensemble!Complémentaire}
+Soit $\Omega$ un ensemble contenant un ensemble $A$. On appelle complémentaire de $A$ dans $\Omega$, tous les éléments de $\Omega$ qui n'appartiennent pas à $A$. On note le complémentaire de $A$, $\Omega \ A$ ou $\overline{A}$.
+\end{DefT}
+
+
+
+ 
+\EPC{1}{FEA-90}{Représenter. Chercher.}
+
+\EPC{0}{FEA-104}{Représenter. Chercher.}
+  
+\EPCC{1}{FEA-91}{Modéliser. Calculer. Chercher.}  
+  
+
+
+
+
+
+
+  
+\begin{Approfondissement}
+
+
+\begin{DefT}{Nombre décimal périodique}
+Le nombre $a_0,\underline{a_1a_2a_3}$ est un nombre décimal périodique de période $a_1a_2a_3$. Les chiffres $a_1$, $a_2$, $a_3$ se répètent indéfiniment.
+\end{DefT}
+
+
+On démontre que 
+\begin{description}
+\item[•] $0,\underline{12}$ est un nombre rationnel.
+\item[•] $0,\underline{9}=1$.
+\end{description}
+
+\EPC{1}{FEA-4}{Chercher.}
+
+\end{Approfondissement}
+
+
+
+%
+%\begin{Log}\index{Démonstration par l'absurde}\index{Contraposée}
+%\begin{description}[leftmargin=*]
+%\item[•] La \textbf{contraposée} d'une implication "si A alors B" est l'implication : "si non(B) alors non(A)". Pour démontrer que "si A alors B" , on peut démonter que : "si non(B) alors non(A)".  En langage symbolique, on écrit  : $A \Longrightarrow B \Longleftrightarrow \rceil B \Longrightarrow \rceil A$ 
+%\item[•] Une démonstration est appelée \textbf{démonstration par l'absurde} lorsqu'on démontre que la supposition posée \textit{a priori} mène à une absurdité.
+%\end{description}
+%\end{Log}

@@ -1,0 +1,555 @@
+\chapter{Éléments de géométrie}
+{https://sacado.xyz/qcm/parcours_show_course/0/117129}
+{
+
+
+ \begin{CpsCol}
+\textbf{Les savoir-faire du parcours}
+ \begin{itemize}
+ \item \textbf{Utiliser des nombres pour calculer et résoudre des problèmes}
+ \item Connaitre les ensembles de nombres
+ \item  Identifier l'ensemble d'un nombre
+ \end{itemize}
+ \end{CpsCol}
+
+}
+
+\begin{pageCours}
+
+\section{Ensembles de nombres}
+
+\begin{DefT}{Ensemble des réels}
+L'ensemble de tous les nombres connus en Seconde est appelé ensemble des nombres réels, noté $\R$.
+\end{DefT}
+
+\begin{DefT}{Ensemble de nombres}\index{Ensemble de nombres!Réels $\R$}
+Les autres ensembles de nombres, inclus dans $\R$.
+\begin{enumerate}
+\item On appelle \textbf{entiers naturels} les nombres : 0 ; 1 ; 2 ; 3 . . . Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\N$}
+On a donc : $\N =  \lbrace 0 ; 1 ; 2 ; 3 \cdots \rbrace $
+\item  On appelle \textbf{entiers relatifs} les nombres entiers naturels et leurs symétriques par rapport à 0. Leur ensemble est noté $\Z$.\index{Ensemble de nombres! Entiers $\Z$}
+On a donc : $\Z = \lbrace \cdots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
+\item  On appelle \textbf{nombres rationnels} les nombres de la forme $\frac{a}{b}$, $a$ et $b$ entiers et $b$ non nuls.  Leur ensemble est noté $\Q$. \index{Ensemble de nombres! Rationnels $\Q$}
+On a donc : $\Q = \lbrace \cdots \frac{5}{3} ; -\frac{5}{7} ; -\frac{13}{22} \cdots   \rbrace$. Les réels non rationnels sont dit \textbf{irrationnels} : $\sqrt{2}$
+\item Par construction, $\N$ est inclus dans $\Z$  est inclus dans $\D$  est inclus dans $\Q$  est inclus dans $\R$. Ces ensembles sont dits "emboités".
+\item  On peut représenter l'ensemble des réels sur une droite graduée.
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.36,0.) -- (10.66,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.36,-0.5) rectangle (10.66,0.5);
+\end{tikzpicture}
+ \end{center} 
+\end{enumerate}
+\end{DefT}
+
+
+%\begin{Nt}
+%
+%Soit $M$ un point d'abscisse $a$, sur la droite graduée.\\
+%On note $\vert a\vert$ la distance de $M$ à $O$.
+%
+%Ainsi, on peut établir que $\vert -a \vert = \vert a \vert$. En effet, deux nombres opposés sont à la même distance de l'origine.
+%\end{Nt}
+
+ 
+
+\begin{DefT}{Appartenance}\index{Ensemble!Appartenance}
+Pour symboliser l'appartenance d'un nombre à un ensemble, on utilise le symbole $\in$ : 
+$-2 \in \Z \quad \quad \frac{5}{3} \in \Q $ 
+ 
+ $ \not\in $ signifie n'appartient pas : $-5 \not \in \N \quad \quad \pi \not\in \Q$
+\end{DefT}
+
+
+\begin{Nt}
+
+\begin{description}[leftmargin=*]
+\item  On appelle $\R^+$ l'ensemble des réels positifs, $\R^-$ l'ensemble des réels négatifs.
+\item  On utilise une étoile pour enlever 0 d'un ensemble. $\R^*$ l'ensemble des réels non nuls.
+\end{description}
+
+\end{Nt}
+
+\begin{DefT}{Nombres décimaux}
+Les \textbf{nombres décimaux} sont des nombres rationnels dont le dénominateur est une puissance de 2, de 5 ou de 10 ou un produit de puissances de ces nombres.
+\end{DefT}
+
+\begin{Ex}
+\begin{description}[leftmargin=*]
+\item  $A=\frac{3}{25}$ est un nombre décimal car $25 = 5^2$, 25 est donc une puissance de $5$.
+\item  $B=\frac{13}{20}$ est un nombre décimal car $20 = 2^2 \times 5$, $20$ est donc un produit d'une puissance de $2$ et de $5$.
+\end{description}
+\end{Ex}
+
+\begin{Att}
+
+$A=\frac{7}{15}$ n'est pas un nombre décimal. $15=3 \times 5$ n'est pas une puissance de $5$ mais un multiple de $5$ !
+
+\end{Att}
+
+
+
+\begin{DefT}{Nombre décimal périodique}
+Le nombre $a_0,\underline{a_1a_2a_3}$ est un nombre décimal périodique de période $a_1a_2a_3$. Les chiffres $a_1$, $a_2$, $a_3$ se répètent indéfiniment.
+\end{DefT}
+
+
+
+
+%%\PESP{https://fr.wikipedia.org/wiki/D\%C3\%A9veloppement\_d\%C3\%A9cimal\_p\%C3\%A9riodique}
+%%
+%%\AV{https://www.youtube.com/watch?v=N_cDA6tF-40}{Conjecture de Cantor}
+
+\end{pageCours} 
+
+\begin{pageAD} 
+ 
+
+\Sf{Connaitre les ensembles de nombres}
+ 
+  
+\begin{ExoCad}{Représenter.}{1234}{2}{0}{0}{0}{0}
+ 
+ \begin{minipage}{0.48\linewidth}
+Placer, dans le plus petit ensemble, les nombres suivants :
+$$ -4 ~~ ;~~  \sqrt{36}~~  ; ~~ \frac{5}{7} ~~  ;~~  -\sqrt{28}~~ ;~~  \frac{72}{6} ~~  ; ~~ 2,3 ~~  ; ~~ 0 ;~~ -1,785 $$
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6782617187500004cm,y=0.6782617187500004cm]
+\clip(-6.0955652959673365,-0.7955347642346219) rectangle (5.699291731705649,4.717946580732306);
+\draw [rotate around={0.:(-2.,2.)},color=ffqqqq] (-2.,2.) ellipse (0.8410791202168588cm and 0.4973682009769633cm);
+\draw [rotate around={-0.20389871046679844:(-1.6955307407221418,2.00727956851319)},color=xfqqff] (-1.6955307407221418,2.00727956851319) ellipse (1.661680538260386cm and 0.7868931785368128cm);
+\draw [rotate around={-0.7690246825780399:(-0.8815627427186662,1.9688848516262334)},color=qqwuqq] (-0.8815627427186662,1.9688848516262334) ellipse (2.664297761397899cm and 1.2951216094501943cm);
+\draw [rotate around={-0.002358769768743201:(-0.14948545367760763,1.9998003125678991)},color=qqqqff] (-0.14948545367760763,1.9998003125678991) ellipse (3.765828366589848cm and 1.832457538495793cm);
+\draw [color=ffqqqq](-1.242473081456056,2.3296214542697094) node[anchor=north west] {$\mathbb{N}$};
+\draw [color=xfqqff](0.26259982051263214,2.3142635675149267) node[anchor=north west] {$\mathbb{Z}$};
+\draw [color=qqwuqq](2.6123564939943598,2.1989056807601443) node[anchor=north west] {$\mathbb{Q}$};
+\draw [color=qqqqff](4.946755280721304,2.3142635675149267) node[anchor=north west] {$\mathbb{R}$};
+\end{tikzpicture}
+\end{minipage}
+
+\end{ExoCad}
+
+
+  
+\begin{ExoCad}{Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+Complète par  $\in$ ou $\notin$.
+
+\begin{enumerate}
+\begin{minipage}{0.32\linewidth}
+\item $\pi \ldots \ldots \R$
+\item $-5 \ldots \ldots \Z$
+\item $\dfrac{1}{2} \ldots \ldots \D$
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\linewidth}
+\item $-9 \ldots \ldots \N$
+\item $\dfrac{1}{2}  \ldots \ldots \R$
+\item $\dfrac{7}{3}  \ldots \ldots \Q$
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\linewidth}
+\item $\sqrt{4} \ldots \ldots \N$
+\item $-1,5 \ldots \ldots \Z$
+\item $\dfrac{12}{4}  \ldots \ldots \N$
+\end{minipage}
+\end{enumerate}
+ 
+\end{ExoCad}
+ 
+ 
+ 
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+
+Dans chaque cas, trouver, lorsque cela est possible, un nombre $x$ qui remplit les critères suivants :
+ 
+\begin{enumerate}[leftmargin=*]
+\item $x \not\in D$ et $x \in \R$  \point{1}
+\item $x \in \Q$ et $x \not\in \Z$  \point{1}
+\item $x \not\in \N$ et $x \in \Z$  \point{1}
+\end{enumerate}
+ 
+ \end{ExoCad}
+ 
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Les affirmations sont-elles vraies ou fausses ?
+\begin{enumerate}[leftmargin=*]
+\item La différence de deux nombres entiers naturels est un entier naturel. \point{1}
+\item Le quotient de deux nombres décimal est un nombre décimal. \point{1}
+\item Le quotient de deux nombres premiers distincts peut être un entier relatif. \point{1}
+\item Le quotient de deux nombres premiers distincts peut être un nombre décimal. \point{1}
+\end{enumerate} 
+ 
+ \end{ExoCad}
+
+
+ 
+\begin{ExoCad}{Raisonner. Représenter.Calculer.}{1234}{0}{0}{0}{0}{0}
+
+On pose $a=4\times \left(\frac{3}{5}\right)^3 \times \frac{20}{3}$. Montrer que $\sqrt{a}$ est un nombre décimal. \point{4}
+ 
+\end{ExoCad}
+
+ 
+ 
+
+   
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ 
+Démontrer que $0,\underline{9}=1$.   \point{5}
+ 
+\end{ExoCad}
+
+
+ 
+\end{pageAD}
+ 
+ \begin{pageCours}
+ 
+ 
+\section{Opérations d'ensembles de nombres}
+ 
+ 
+
+\begin{DefT}{Inclusion}\index{Ensemble!Inclusion}
+Un ensemble $A$ est inclus dans un ensemble $B$ lorsque tous les éléments de $A$ sont contenus dans $B$. On note $A \subset B$.
+\end{DefT}
+
+
+\begin{Rq}
+\begin{description}
+\item[•] Un ensemble \textbf{est inclus dans} un ensemble. $A$ et $B$ deux ensembles : $A \subset B$.
+\item[•] Un élément \textbf{appartient à} un ensemble. $x$ un élément et $A$ un ensemble : $x \in B$.
+\end{description}
+\end{Rq}
+
+
+\begin{DefT}{Complémentaire}\index{Ensemble!Complémentaire}
+Soit $\Omega$ un ensemble contenant un ensemble $A$. On appelle complémentaire de $A$ dans $\Omega$, tous les éléments de $\Omega$ qui n'appartiennent pas à $A$.
+\end{DefT}
+
+
+
+\begin{Log}\index{Démonstration par l'absurde}\index{Contraposée}
+\begin{description}[leftmargin=*]
+\item La \textbf{contraposée} d'une implication "si A alors B" est l'implication : "si non(B) alors non(A)". Pour démontrer que "si A alors B" , on peut démonter que : "si non(B) alors non(A)".  En langage symbolique, on écrit  : $A \Longrightarrow B \Longleftrightarrow \rceil B \Longrightarrow \rceil A$ 
+\item Une démonstration est appelée \textbf{démonstration par l'absurde} lorsqu'on démontre que la supposition posée \textit{a priori} mène à une absurdité.
+\end{description}
+\end{Log}
+
+\section{Multiples et diviseurs}
+
+\begin{DefT}{Multiple}\index{Multiple!Nombres}
+
+Soit $a$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $a$ s'il existe un entier $k \in \Z$ tel que $m=ka$.
+\end{DefT}
+
+\begin{Ex} 
+
+$5 \times 7 = 35$ donc $35$ est un multiple de $5$ et aussi,  $35$ est un multiple de $7$.
+\end{Ex}
+
+\begin{DefT}{Diviseur}\index{Diviseur!Nombres}
+
+Soit $n$ un nombre entier. Le nombre $q$ est dit \textbf{diviseur} de $n$ s'il existe un entier $k \in \Z$ tel que $n=dq$.
+\end{DefT}
+
+\begin{Ex} 
+
+$48 = 6 \times 8$ donc $8$ est un diviseur de $48$ et aussi,  $6$ est diviseur de $48$.
+\end{Ex}
+
+\begin{DefT}{Nombre premier}\index{Nombre premier}
+
+Un \textbf{nombre premier} est un nombre entier supérieur à 2 avec exactement 2 diviseurs : 1 et lui-même. 
+
+\end{DefT}
+
+
+
+
+
+\end{pageCours} 
+\begin{pageAD} 
+ 
+
+\Sf{Opérer avec les ensembles}
+ 
+  
+\begin{ExoCad}{Communiquer.}{1234}{2}{0}{0}{0}{0}
+
+Recopie et complète par $\subset$, $\in$, $\not\subset$ ou $\notin$.
+
+\begin{enumerate}
+\begin{minipage}{0.32\linewidth}
+\item $\N \ldots \ldots \R$
+\item $-5 \ldots \ldots \Z$
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\linewidth}
+\item $\left\lbrace 0;1;2 \right\rbrace \ldots \ldots \N$
+\item $]-\infty;1] \ldots \ldots \R$
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\linewidth}
+\item $\sqrt{3} \ldots \ldots \N$
+\item $-1,5 \ldots \ldots \Z$
+\end{minipage}
+\end{enumerate}
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Déterminer les complémentaires des ensembles suivants. On écrira : $\Omega \setminus A$ ou $\overline{A}$ puis on décrira l'ensemble clairement, par les éléments de cet ensemble ou une phrase.
+\begin{enumerate}
+\item $\Omega = \lbrace 1;2;3;4;5;6\rbrace$ et $A = \lbrace 1;2 \rbrace$. $\Omega \setminus A = $\point{1}
+\item $\Omega = \lbrace -4;-2;-1;0;1;2;\rbrace$ et $A = \lbrace -2;1;2 \rbrace$.  $\Omega \setminus A = $\point{1}
+\item $\Omega = \R$ et $A = \Q$. $\Omega \setminus A = $\point{1}
+\item $\Omega = \R$ et $A = \R^-$. $\Omega \setminus A = $\point{1}
+\end{enumerate} 
+ \end{ExoCad}
+
+
+
+\Sf{Utiliser les multiples et les diviseurs}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Donner la liste des 30 premiers nombres premiers : 
+
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|X|X|X|}
+\hline 
+ &   &   &   &   & &  &   &   &   \\  
+\hline 
+ &   &   &   &   & &  &   &   &   \\  
+\hline 
+ &   &   &   &   & &  &   &   &   \\  
+\hline 
+\end{tabularx} 
+
+\end{ExoCad}
+
+
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+
+\begin{enumerate}
+\item  51 est-il un nombre premier ? Justifier. \point{2}
+\item  Décomposer 24 en produit de facteurs premiers.\point{2}
+\end{enumerate}
+
+\end{ExoCad}
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+Vrai ou faux : Quel que soit l'entier $n$, $2n-1$ est un nombre premier. Justifier.\point{2}
+\end{ExoCad}
+
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+
+ 
+\end{ExoCad}
+
+
+
+ 
+\end{pageAD}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageExercices} 
+
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCuN}{Représenter.}{2}{0}{0}{0}{0}
+
+Démontrer que $0,\underline{1}$ est un nombre rationnel à préciser.
+ 
+\end{ExoCuN}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCuN}{Représenter.}{2}{0}{0}{0}{0}
+Je suis un nombre à trois chiffres non nuls. Je suis divisible par 94. Changez l'ordre de mes chiffres et je deviens divisible par 49.
+Qui suis-je ? 
+\end{ExoCuN}
+
+
+\begin{ExoCdN}{Chercher.communiquer.}{2}{0}{0}{0}{0}
+ 
+Dans chaque cas, trouver, lorsque cela est possible, le nombre $x$ qui remplit les critères suivants :
+\begin{enumerate}
+\item $x \in \Q$ et $x \not\in \Z$
+\item $x \in \R$ et $x \not\in \N$. 
+\end{enumerate}
+\end{ExoCdN}
+
+\begin{ExoCdN}{Représenter. Raisonner.}{2}{0}{0}{0}{0}
+
+Démontrer que $\sqrt{2}$ est un irrationnel ou encore que $\sqrt{2} \in \R\setminus\Q$
+
+\end{ExoCdN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCtN}{Représenter.}{2}{1}{0}{0}{0}
+
+\begin{enumerate}
+\item Démontrer que $0,\underline{12}$ est un nombre rationnel à préciser.
+\item Démontrer que $0,\underline{485}$ est un nombre rationnel à préciser.
+\end{enumerate}
+\end{ExoCtN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCtN}{Raisonner.}{1}{0}{0}{0}{0}
+
+\begin{enumerate}
+\item Démontrer que tout entier $n$ multiple de $9$ est aussi un multiple de $3$.
+\item Démontrer que si $m$ est un multiple de $6$ alors $m$ est aussi un multiple de $3$.
+\end{enumerate}
+\end{ExoCtN}
+
+
+\begin{ExoCtN}{Représenter.}{1}{0}{0}{0}{0}
+
+Dans un pays où le système monétaire n’est constitué que de pièces de 3 et de 5, il s’agit d’aider les habitants en créant un programme  qui donne le nombre de pièces nécessaires à tout achat d’un montant entier supérieur ou égal à 8.
+
+\hfill{{\footnotesize Source : d’après PISA, items libérés}}
+
+\end{ExoCtN}
+
+
+\end{pageExercices}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\begin{pageParcoursd} 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+%
+%
+%\end{ExoCd}
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+%
+%
+%\end{ExoCd}
+% 
+%\end{pageParcoursd}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{pageParcourst}
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ExoCt}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+% 
+%\end{ExoCt}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+%
+% 
+%
+%\end{ExoCt}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+%
+% 
+%
+%\end{ExoCt} 
+% 
+%\end{pageParcourst}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Brouillon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{pageBrouillon} 
+ 
+\ligne{32}
+
+
+
+\end{pageBrouillon}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Auto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAuto} 
+
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{ExoAuto}
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+  
+
+\end{ExoAuto}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+
+\end{pageAuto}

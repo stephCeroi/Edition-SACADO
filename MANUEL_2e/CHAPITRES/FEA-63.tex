@@ -1,0 +1,28 @@
+
+\begin{minipage}{0.48\linewidth}
+On considère la figure ci-dessous. Comment choisir le point $E$ pour que l'aire du secteur $AEF$ soit égale à la moitié de l'aire du secteur $ABC$ ?
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{center}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.802139037433155cm,y=0.802139037433155cm]
+\clip(3.534,-2.256) rectangle (7.428,1.484);
+\draw [shift={(4.,1.)}] (0,0) --  plot[domain=-1.5707963267948966:0.,variable=\t]({1.*3.*cos(\t r)+0.*3.*sin(\t r)},{0.*3.*cos(\t r)+1.*3.*sin(\t r)}) -- cycle ;
+\draw [shift={(4.,1.)},color=xdxdff,fill=xdxdff,fill opacity=0.46]  (0,0) --  plot[domain=-1.5707963267948966:0.,variable=\t]({1.*2.*cos(\t r)+0.*2.*sin(\t r)},{0.*2.*cos(\t r)+1.*2.*sin(\t r)}) -- cycle ;
+\begin{scriptsize}
+\draw [fill=qqqqff] (4.,1.) circle (0.5pt);
+\draw[color=qqqqff] (3.7914,1.2838) node {$A$};
+\draw [fill=qqqqff] (4.,-2.) circle (0.5pt);
+\draw[color=qqqqff] (3.6462,-1.838) node {$B$};
+\draw [fill=qqqqff] (7.,1.) circle (0.5pt);
+\draw[color=qqqqff] (7.1794,1.2354) node {$C$};
+\draw [fill=qqqqff] (4.,-1.) circle (0.5pt);
+\draw[color=qqqqff] (3.6704,-0.7006) node {$E$};
+\draw [fill=qqqqff] (6.,1.) circle (0.5pt);
+\draw[color=qqqqff] (6.163,1.2354) node {$F$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{minipage}

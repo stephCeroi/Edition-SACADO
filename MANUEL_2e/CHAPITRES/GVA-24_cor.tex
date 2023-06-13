@@ -1,0 +1,43 @@
+
+$ABCD$ est un parallélogramme de centre $O$. Les points $M$, $N$, $P$ et $Q$ sont tels que : $$ \overrightarrow{AM}=\frac{3}{2}\overrightarrow{AB}, \overrightarrow{BN}=\frac{3}{2}\overrightarrow{BC}, \overrightarrow{CP}=\frac{3}{2}\overrightarrow{CD}, \overrightarrow{DQ}=\frac{3}{2}\overrightarrow{DA} $$
+\begin{enumerate}
+\item Prouver que $O$ est le milieu de $[MP]$.
+
+
+$ \overrightarrow{MO}= \overrightarrow{MD} + \overrightarrow{DP}= $
+
+
+
+
+\item En écrivant que $\overrightarrow{MN} = \overrightarrow{MA}+\overrightarrow{AB}+\overrightarrow{BN}$, démontrer que $\overrightarrow{MN} = \overrightarrow{QP}$.
+\item En déduire la nature de $MNPQ$.
+\end{enumerate}
+
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(3.1,-7.28) rectangle (21.8,2.58);
+\draw [line width=2.pt,domain=3.1:21.8] plot(\x,{(-19.942-0.*\x)/5.9});
+\draw [line width=2.pt,domain=3.1:21.8] plot(\x,{(-44.85--2.86*\x)/1.22});
+\draw [line width=2.pt,domain=3.1:21.8] plot(\x,{(-3.068-0.*\x)/5.9});
+\draw [line width=2.pt,domain=3.1:21.8] plot(\x,{(-27.976--2.86*\x)/1.22});
+\draw [line width=2.pt] (9.56,-0.52)-- (14.24,-3.38);
+\draw [line width=2.pt] (8.34,-3.38)-- (15.46,-0.52);
+\begin{scriptsize}
+\draw [color=ududff] (8.34,-3.38)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (7.86,-3.67) node {$A$};
+\draw [color=ududff] (14.24,-3.38)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (14.48,-3.65) node {$B$};
+\draw[color=black] (1.78,-2.99) node {$f$};
+\draw [color=ududff] (15.46,-0.52)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=ududff] (15.9,-0.11) node {$C$};
+\draw[color=black] (18.08,6.31) node {$g$};
+\draw[color=black] (1.78,-0.61) node {$h$};
+\draw[color=black] (12.66,6.31) node {$i$};
+\draw [color=uuuuuu] (9.56,-0.52)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=uuuuuu] (9.98,-0.13) node {$D$};
+\draw [fill=uuuuuu] (11.9,-1.95) circle (2.0pt);
+\draw[color=uuuuuu] (12.06,-1.57) node {$O$};
+\end{scriptsize}
+\end{tikzpicture}

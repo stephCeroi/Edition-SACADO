@@ -1,0 +1,34 @@
+
+Paul a obtenu les notes 6, 10 et 12 lors de ses trois premiers contrôles de maths. 
+
+ Il crée un petit programme Python pour connaitre sa moyenne avec une note supplémentaire. Voici le début de son programme où \texttt{m} est la moyenne voulue, \texttt{Snote} est la somme de ses notes et \texttt{compteur} la variable compteur.
+ 
+\begin{lstlisting} 
+
+def MoyenneVoulue(Snote,c):
+	note = .........
+	if note > 20 :
+		return "impossible"
+	else :
+		return note
+
+somme = 0
+compteur = 0
+ok = True
+while ok :
+	note = float(input("quel est la note ?"))
+	somme = somme + note
+	compteur +=1
+	suite = input("une autre note ? O/N ")
+	if suite == "N" :
+		ok = False
+		
+print(MoyenneVoulue(somme,compteur))		
+\end{lstlisting} 
+
+
+\begin{enumerate}
+\item Quel est le rôle de compteur.
+\item \textbf{Compléter} la ligne 2 de la fonction \texttt{MoyenneVoulue}.
+\item Écrire un programme en Python qui renvoie le même résultat avec une fonction supplémentaire.
+\end{enumerate} 

@@ -1,0 +1,153 @@
+\begin{titre}[Fonctions et expressions algébriques]
+
+\Titre{Ensembles de nombres}{4}
+\end{titre}
+
+
+\begin{CpsCol}
+\textbf{Utiliser des nombres pour calculer et résoudre des problèmes}
+\begin{description}
+\item[$\square$] Connaitre les ensembles de nombres
+\item[$\square$] Identifier l'ensemble d'un nombre
+\end{description}
+\end{CpsCol}
+
+
+
+
+\begin{DefT}{Ensemble des réels}
+L'ensemble de tous les nombres connus en Seconde est appelé ensemble des nombres réels, noté $\R$.
+\end{DefT}
+
+\begin{DefT}{Ensemble de nombres}\index{Ensemble de nombres!Réels $\R$}
+Les autres ensembles de nombres, inclus dans $\R$.
+\begin{enumerate}
+\item On appelle \textbf{entiers naturels} les nombres : 0 ; 1 ; 2 ; 3 . . . Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\N$}
+On a donc : $\N =  \lbrace 0 ; 1 ; 2 ; 3 \cdots \rbrace $
+\item  On appelle \textbf{entiers relatifs} les nombres entiers naturels et leurs symétriques par rapport à 0. Leur ensemble est noté $\Z$.\index{Ensemble de nombres! Entiers $\Z$}
+On a donc : $\Z = \lbrace \cdots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
+\item  On appelle \textbf{nombres rationnels} les nombres de la forme $\frac{a}{b}$, $a$ et $b$ entiers et $b$ non nuls.  Leur ensemble est noté $\Q$. \index{Ensemble de nombres! Rationnels $\Q$}
+On a donc : $\Q = \lbrace \cdots \frac{5}{3} ; -\frac{5}{7} ; -\frac{13}{22} \cdots   \rbrace$
+\item Par construction, $\N$ est inclus dans $\Z$  est inclus dans $\D$  est inclus dans $\Q$  est inclus dans $\R$. Ces ensembles sont dits "emboités".
+\item  On peut représenter l'ensemble des réels sur une droite graduée.
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.36,0.) -- (10.66,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.36,-0.5) rectangle (10.66,0.5);
+\end{tikzpicture}
+ \end{center} 
+\end{enumerate}
+\end{DefT}
+
+
+\Exo{1}{FEA-2}
+
+
+
+\begin{Nt}
+Soit $M$ un point d'abscisse $a$, sur la droite graduée.\\
+On note $\vert a\vert$ la distance de $M$ à $O$.
+
+Ainsi, on peut établir que $\vert -a \vert = \vert a \vert$. En effet, deux nombres opposés sont à la même distance de l'origine.
+\end{Nt}
+
+
+
+
+
+
+\begin{Nt}
+\begin{description}
+\item[•] On appelle $\R^+$ l'ensemble des réels positifs, $\R^-$ l'ensemble des réels négatifs.
+\item[•] On utilise une étoile pour enlever 0 d'un ensemble. $\R^*$ l'ensemble des réels non nuls.
+\end{description}
+\end{Nt}
+
+
+
+
+
+\begin{DefT}{Nombres décimaux}
+Les \textbf{nombres décimaux} sont des nombres rationnels dont le dénominateur est une puissance de 2, de 5 ou de 10 ou un produit de puissances de ces nombres.
+\end{DefT}
+
+\begin{Ex}
+\begin{description}
+\item[•] $A=\frac{3}{25}$ est un nombre décimal car $25 = 5^2$, 25 est donc une puissance de 5.
+\item[•] $B=\frac{13}{20}$ est un nombre décimal car $20 = 2^2 \times 5$, 20 est donc un produit d'une puissance de 2 et de 5.
+\end{description}
+\end{Ex}
+
+\begin{Att}
+$A=\frac{7}{15}$ n'est pas un nombre décimal. $15=3 \times 5$ n'est pas une puissance de 5 mais un multiple de 5 !
+\end{Att}
+
+
+
+\begin{DefT}{Nombre décimal périodique}
+Le nombre $a_0,\underline{a_1a_2a_3}$ est un nombre décimal périodique de période $a_1a_2a_3$. Les chiffres $a_1$, $a_2$, $a_3$ se répètent indéfiniment.
+\end{DefT}
+\begin{Dem}
+
+On démontre que 
+\begin{description}
+\item[•] $0,\underline{12}$ est un nombre rationnel.
+\item[•] $0,\underline{9}=1$.
+\end{description}
+\end{Dem}
+
+\PESP{https://fr.wikipedia.org/wiki/D\%C3\%A9veloppement\_d\%C3\%A9cimal\_p\%C3\%A9riodique}
+
+\AV{https://www.youtube.com/watch?v=N_cDA6tF-40}{Conjecture de Cantor}
+
+%
+%
+%
+%\mini{
+%\AD{1}{FEA-3}
+%
+%\AD{1}{FEA-4}
+%
+%\AD{1}{FEA-6}
+%
+%\PO{1}{FEA-7}
+%}{
+%\PO{1}{FEA-8}
+%
+%
+%\begin{DTL}
+%
+%\input{FEA-1}
+%
+%\end{DTL}
+%}
+
+\begin{DefT}{Inclusion}\index{Ensemble!Inclusion}
+Un ensemble $A$ est inclus dans un ensemble $B$ lorsque tous les éléments de $A$ sont contenus dans $B$. On note $A \subset B$.
+\end{DefT}
+
+\AD{1}{FEA-15}
+
+\begin{Rq}
+\begin{description}
+\item[•] Un ensemble \textbf{est inclus dans} un ensemble. $A$ et $B$ deux ensembles : $A \subset B$.
+\item[•] Un élément \textbf{appartient à} un ensemble. $x$ un élément et $A$ un ensemble : $x \in B$.
+\end{description}
+\end{Rq}
+
+
+\begin{DefT}{Complémentaire}\index{Ensemble!Complémentaire}
+Soit $\Omega$ un ensemble contenant un ensemble $A$. On appelle complémentaire de $A$ dans $\Omega$, tous les éléments de $\Omega$ qui n'appartiennent pas à $A$.
+\end{DefT}
+
+
+%
+%\begin{Log}\index{Démonstration par l'absurde}\index{Contraposée}
+%\begin{description}[leftmargin=*]
+%\item[•] La \textbf{contraposée} d'une implication "si A alors B" est l'implication : "si non(B) alors non(A)". Pour démontrer que "si A alors B" , on peut démonter que : "si non(B) alors non(A)".  En langage symbolique, on écrit  : $A \Longrightarrow B \Longleftrightarrow \rceil B \Longrightarrow \rceil A$ 
+%\item[•] Une démonstration est appelée \textbf{démonstration par l'absurde} lorsqu'on démontre que la supposition posée \textit{a priori} mène à une absurdité.
+%\end{description}
+%\end{Log}
