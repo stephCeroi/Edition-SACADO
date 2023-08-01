@@ -1,0 +1,19 @@
+
+On a dessiné un cercle $\mathscr{C}$ de centre $A$ et son image $\mathscr{C'}$ de centre $C$ tangents en $B$ par une homothétie de centre O. Déterminer le centre et le rapport d'homothétie.
+
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3.24,-2.52)(7.16,4.18)
+\multips(0,-2)(0,1.0){7}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(-3.24,0)(7.16,0)}
+\multips(-3,0)(1.0,0){11}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,-2.52)(0,4.18)}
+\pscircle[linewidth=2.pt](1.,1.){1.}
+\pscircle[linewidth=2.pt](4.,1.){2.}
+\begin{scriptsize}
+\psdots[dotstyle=+](1.,1.)
+\rput[bl](1.08,1.2){$A$}
+\psdots[dotstyle=+](2.,1.)
+\rput[bl](2.08,1.2){$B$}
+\psdots[dotstyle=+](4.,1.)
+\rput[bl](4.08,1.2){$C$}
+\end{scriptsize}
+\end{pspicture*}
+

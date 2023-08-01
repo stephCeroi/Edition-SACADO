@@ -1,0 +1,365 @@
+\documentclass[10pt]{article}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styles}
+\input{../../../latex_preambule_style/bas_de_page_quatrieme} 
+
+%%%%%%%%%%%   Marges de pages  %%%%%%%%%%%%%%%% 
+ \usepackage{geometry}
+ \geometry{top=2cm, bottom=0cm, left=2cm , right=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Titre encadré
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{encadrementombre}{Thème 1 Nombres relatifs}
+{\LARGE Puissance d'un nombre relatif }\\
+
+%% Laisse la ligne vide ci-dessus
+{\Large Algèbre}
+\end{encadrementombre}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Corps du document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% \renewcommand{\arraystretch}{1.8}
+\definecolor{shadecolor}{gray}{0.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%   Hauteur de ligne  %%%%%%%%%%%%%%%%
+{\setlength{\baselineskip}{1.5\baselineskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Notions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cours}
+\subsection{Puissances de 10}
+
+\begin{Def} 
+$n$ désigne un nombre entier positif supérieur ou égal à $2$.	 L'écriture $10^n$ désigne le produit de $n$ facteurs TOUS ÉGAUX à $10$.
+\end{Def}
+	   
+\begin{Ex} 	
+\begin{itemize}
+\item $10^2= 10\times 10=100$
+\item $10^5= 10\times 10\times 10\times 10\times 10= 100 000$		   
+\end{itemize}
+\end{Ex}
+
+\begin{Rq}
+\begin{itemize}
+\item l'écriture décimale de $10^n$ est un $1$ suivi de $10$ \og zéros \fg{} à droite.
+\item $10^n$ se lit $10$ \og exposant \fg{} $n$ ou encore $10$ \og puissance \fg{} $n$
+\item Par convention : $10^0= 1$ et 		$10^1=10$
+\end{itemize}	 
+\end{Rq}
+ 
+\begin{Def}
+L'écriture $10^{-n}$ désigne l'inverse de $10^n$.
+\end{Def}
+
+	   
+\begin{Ex}
+\begin{itemize}
+\item	$10^{-1}=\frac{1}{10^1} = 0,1$		
+\item $10^{-2}=\frac{1}{10^2}  = 0,01$
+\item $10^{-5}=\frac{1}{10^5} =  0,000 01$
+\end{itemize}
+\end{Ex}
+
+\begin{Rq}
+\begin{itemize}
+\item l'écriture décimale de $10^{-n}$ est un $1$ précédé de $10$ \og zéros \fg{} à gauche (et de la virgule).
+\item $10^{-n}$ se lit $10$ \og exposant moins \fg{} $n$ ou encore $10$ \og puissance moins \fg{} $n$
+\end{itemize}	 
+\end{Rq}
+
+\begin{shaded}	 
+\begin{Pps}
+$n$ et $m$ désignent des nombres entiers relatifs.
+\begin{enumerate}
+\item \textbf{(Produit)}  
+$10^n\times 10^m= 10^{n+m}$
+\item \textbf{(Quotient)}$\frac{10^n}{10^m}= 10^{n–m}$	   
+\item \textbf{(Puissance de puissance)}
+ $\left(10^n\right)^m= 10^{n\times m}$
+\end{enumerate}
+\end{Pps}
+\end{shaded}
+	   
+\begin{Ex}	   
+\begin{itemize}
+\item $10^3\times 10^8= 10^{3+8}= 10^{11}$
+\item $\frac{10^7}{10^4}=  10^{7–4}= 10^3$
+\item $\left(10^3\right)^2= 10^{3\times 2}= 10^6$	   
+\item $10^{-3}\times 10^8= 10^{-3 + 8}= 10^5$
+\item $\frac{10^{-7}}{10^4}		= 10^{-7 – 4}= 10^{-11}$
+\item $\left(10^{-3}\right)^2= 10^{-3 \times 2}= 10^{-6}$	   
+\item $10{-3}\times 10^{-8}= 10^{-3 + (-8)}= 10^{-11}$
+\item $\frac{10^{-7}}{10^{-4}}= 10^{-7 – \left(-4\right)}= 10^{-3}$		\item ${\left(10^{-3}\right)}^{-2}= 10^{-3} \times \left(-2\right)= 10^6$
+\end{itemize}
+\end{Ex}
+	   
+\begin{Rq}
+\begin{itemize}	
+\item Pour multiplier les puissances de $10$, on additionne les exposants.	\item Pour divise les puissances de $10$, on soustrait les exposants.		\item Pour calculer une puissance d'une puissance, on multiplie les exposants.
+\item \textbf{ATTENTION}, il n'existe pas de propriété pour la somme et la différence de deux puissances de dix.
+Il est alors indispensable d'écrire les nombres sous forme décimale.
+\end{itemize}
+\end{Rq}		
+
+\begin{Ex}
+\begin{itemize}
+\item	$10^3–10^2 = 1 000–100= 900$	
+\item $10^{-2}+10^{-1} = 0,01+0,1= 0,11$
+\end{itemize}
+\end{Ex}
+	   
+\begin{Ex}	Calculer l'expression $A =\frac{2\times \left(10^3\right)^5\times 45 \times 10^{-3}}{3\times 10^{-7}\times 6\times 10^{-2}} $.	   
+\\$A=\frac{2\times 45 \times \left(10^3\right)^5 \times 10^{-3}}{3\times 6\times 10^{-7}\times  10^{-2}} $ 	(les multiplications permettent de \og rapprocher \fg{}
+les puissances de dix au numérateur et au dénominateur. 	   
+\\$A =\frac{2\times 45}{3\times 6}\times \frac{\left(10^3\right)^5 \times 10^{-3}}{10^{-7}\times  10^{-2}} $ 	(on applique la propriété du calcul fractionnaire : $\frac{ab}{cd}=\frac{a}{c}\times \frac{b}{d}$)	\\$A =\frac{90}{18}\times \frac{10^{12}}{10^{-9}}$ 	(on effectue les multiplications par paires en appliquant
+les 1ère et 3ème propriétés des puissances de dix.	   
+\\$A =5\times 10^{21}$ 	(on effectue les divisions en appliquant
+la 2ème propriété des puissances de dix)
+\end{Ex}
+
+\subsection{Multiplier et diviser par une puissance de 10}
+
+
+
+
+
+ 
+	
+
+
+
+\section{Quelques exercices}
+\begin{Exo}
+Calculer les puissances de nombres  suivantes.
+\begin{Ex}
+\begin{tabular}{p{0.46\linewidth}|p{0.46\linewidth}}
+$10^4=10\times10\times10\times10=10\,000$
+&
+$10^{-4}={1\over10^4}={1\over10\,000\mathstrut}=0,000\,1$\\
+$2^3=2\times2\times2=8$
+&
+$2^{-3}={1\over2^3}={\mathstrut1\over8\mathstrut}=0,125$\\
+$(-3)^3=(-3)\times(-3)\times(-3)=-27$
+&
+$(-3)^{-3}={1\over(-3)^3}={\mathstrut-1\over27}$\\
+$(-3)^4=(-3)\times(-3)\times(-3)\times(-3)=+81$
+&
+$(-3)^{-4}={1\over(-3)^4}={\mathstrut1\over81}$\\
+\end{tabular}
+\end{Ex}
+\begin{tabular}{p{0.46\linewidth}p{0.46\linewidth}}
+$10^5=$ & $10^{-5}=$\\
+$10^2=$ & $10^{-2}=$\\
+$2^4=$ & $2^{-4}=$\\
+$(-2)^2=$ & $(-2)^{-2}=$\\
+\end{tabular}
+%\correction{$10^5=100\,000$ ; $10^{-5}=0,000\,01$ ; 
+%$10^2=100$ ; $10^{-2}=0,01$ ;
+%$2^4=16$ ; $2^{-4}=0,0625$ ;
+%$(-2)^2=4$ ; $(-2)^{-2}=0,25$}
+\end{Exo}
+
+\begin{Exo}
+Ecrire les nombres suivants en notation scientifique.
+\begin{Ex}
+$18\,421,2=1,84212\times10^4$\\
+$0,000\,023\,5=2,35\times10^{-5}$
+\end{Ex}
+$1\,235,5=$\\
+$0,002\,5=$
+%\correction{$1,2355\times10^3$ ; $2,5\times10^{-3}$}
+\end{Exo}
+
+\begin{Exo}
+Calculer les produits de puissances de 10 suivants.
+\begin{Ex}
+$10^5\times10^3=10^{5+3}=10^8$\\
+$10^{-6}\times10^2=10^{-6+2}=10^{-4}$
+\end{Ex}
+\def\ecrp#1#2{$10^{#1}\times10^{#2}=$}
+\ecrp45\\
+\ecrp4{-1}\\
+\ecrp{-4}4\\
+\ecrp{-2}{3}
+%\correction{$10^9$ ; $10^3$ ; $10^0=1$ ; $10^1=10$}
+\end{Exo}
+
+\begin{Exo}
+
+\def\ecrp#1#2{$10^{#1}\div10^{#2}=$}
+
+Calculer les quotients de puissances de 10 suivants.
+\begin{Ex}
+$10^3\div10^5=10^{3-5}=10^{-2}$\\
+$10^5\div10^{-2}=10^{5-(-2)}=10^{5+(+2)}=10^7$\\
+\end{Ex}
+
+\ecrp49\\
+\ecrp94\\
+\ecrp83\\
+\ecrp44
+%\correction{$10^{-5}$ ; $10^5$ ; $10^5$ ; $10^0=1$}
+\end{Exo}
+
+\begin{Exo}
+\def\ecrp#1#2{$\left(10^{#1}\right)^{#2}=$}
+Calculer les puissances de puissances de 10 suivantes.
+\begin{Ex}
+$\left(10^5\right)^3=10^{5\times3}=10^{15}$\\
+$\left(10^{-3}\right)^2=10^{-3\times2}=10^{-6}$
+\end{Ex}
+\ecrp24\\
+\ecrp{-5}2\\
+\ecrp{-4}{-3}
+%\correction{$10^8$ ; $10^{-10}$ ; $10^{12}$}
+\end{Exo}
+
+\begin{Exo}
+\fbox{Loi de Newton}La force exercée par un corps de masse $M$ (en kg) sur un autre corps
+de masse $m$ (en kg) dont les centres sont situés à une distance $d$ (en mètre)
+l'un de l'autre est donnée par la formule suivante (formule de Newton) :
+$$P={M\over d^2}\times G\times m$$
+Avec $G=6,67\times10^{-11}$. Cette force s'appelle le poids.\par
+Pour un corps donné ${M\over d^2}\times G$ est appelé le coefficient de gravité.
+\begin{enumerate}
+\item
+\begin{enumerate}
+La terre a un rayon d'environ 6~378~km et une masse d'environ
+$5,98\times10^{24}$~kg.
+\item Exprimer en notation scientifique la distance entre le centre de la terre
+et une personne se trouvant à la surface de la terre (en m).
+\item Trouver le coefficient de gravité à la surface de la terre.
+\item Même question au sommet du mont Everest (8~848~m).
+\item Quel est le poids d'une personne de 70~kg à la surface de la terre ?
+\end{enumerate}
+\item Reprendre les questions précédentes pour la lune sachant que le rayon de
+la lune est d'environ 1~740~km et sa masse d'environ $7,34\times10^{22}$~kg
+\end{enumerate}
+\end{Exo}
+
+\begin{Exo}
+\begin{enumerate}
+\item Donner l'écriture scientifique des nombres suivants :
+
+\bigskip
+
+\begin{multicols}{3}
+
+$D=768~000~000$
+
+\columnbreak
+
+$E=0,000~201~4$
+
+\columnbreak
+
+$F=3141,59$
+
+\end{multicols}
+
+\item Donner l'écriture décimale des nombres suivants :
+
+\begin{multicols}{2}
+
+$G=10^{-3} \times 10^{7}\times 500$
+
+
+\columnbreak
+
+$H=\frac{16~000 \times 10^3 \times 10^{-7}}{4 \times 10^5}$ 
+
+\end{multicols}
+\end{enumerate}
+
+\end{Exo}
+
+\begin{Exo}
+\par
+  \begin{tabular}{ll}
+    Alpha du centaure&: 40,7 trillions de km\\
+&(1 trillion$=10^{12}$)\\
+Sirius&: 8,26 années-lumière\\
+Neptune&: 4,5 milliards de km\\
+Mars&: 228 millions de km\\
+Proxima du Centaure&: $404\times10^11$~km\\
+Jupiter&: $7\,776\times10^5$~km\\
+Uranus&: 2,87 milliards de km\\
+Procyon&: 106,1 trillions de km\\
+Nébuleuse d'Andromède&: 2 millions d'années-lumière\\
+Saturne&: 1\,428\,000\,000~km\\
+Vénus&: $10\,810\times10^4$~km\\
+Pluton&: $5,92\times10^{-4}$ années-lumière\\
+Mercure&: 57\,850\,000~km\\
+La Terre&: 149,5 millions de km\\
+  \end{tabular}\\
+Voici, ci-dessus, les distances du Soleil à quelques planètes, étoiles ou nébuleuses. \'Ecris en écriture scientifique les nombres qui mesurent ces distances en kilomètres, et range ces astres depuis le plus proche jusqu'au plus éloigné du Soleil (1 année-lumière vaut environ $10^{13}$~km).
+\end{Exo}
+
+
+\begin{Exo}
+\'Ecris les expressions suivantes sous la forme d'une seule puissance.\\
+$A=7^2\times7^3\\
+B=\frac{3^4}{3^2}\\
+C=8^2+6^2\\
+D=\frac{4^3\times4}{4^5}\\
+E=\big((-3)^2\big)^3\times(-3)^4\\
+F=5^8\times2^5\times5^{-3}$\\
+\end{Exo}
+
+\begin{Exo}
+Pour chaque question, entoure la (ou les) bonne(s) réponses.
+\renewcommand{\arraystretch}{2.1}
+\[\begin{tabular}{|l|p{4cm}|>{\centering}p{2.5cm}|>{\centering}p{2.5cm}|>{\centering}p{2.5cm}|>{\centering}p{2.5cm}|}
+  \cline{3-6}  \multicolumn{2}{c|}{} & réponse a & réponse b & réponse c & réponse d \tabularnewline
+  \hline \ding{172} & $5^3=$ & $3\times3\times3\times3\times3$ & $5\times3$ & $5\times5\times5$ & $5+5+5$ \tabularnewline
+  \hline \ding{173} & $3^2=$ & $6$ & $32$ & $\dfrac{1}{9}$ & $9$ \tabularnewline
+  \hline \ding{174} & $4^0=$ & $1$ & $0$ & 4 & $\dfrac{1}{4}$ \tabularnewline
+  \hline \ding{175} & $10^{-3}=$ & $0,001$ & $-\nombre{1000}$ & $\dfrac{-1}{3}$ & $\nombre{1000}$ \tabularnewline
+  \hline \ding{176} & $(-2)^2=$ & $-2$ & $4$ & $2$ & $-4$ \tabularnewline
+  \hline \ding{177} & $10^5=$ & $\nombre{0,00001}$ & $50$ & $-50$ & $\nombre{100000}$ \tabularnewline
+  \hline \ding{178} & $-4^2=$ & $-16$ & $16$ & $-8$ & $8$ \tabularnewline
+  \hline \ding{179} & $6^{-3}=$ & $216$ & $\dfrac{1}{18}$ & $\dfrac{1}{216}$ & $\dfrac{1}{6^3}$ \tabularnewline
+  \hline \ding{180} & $16=$ & $4^2$ & $8^2$ & $8^{-2}$ & $4^{-2}$ \tabularnewline
+  \hline \ding{181} & $5-2^2=$ & $9$ & $1$ & $3$ & $-3$ \tabularnewline
+  \hline      
+\end{tabular}\]
+\renewcommand{\arraystretch}{1}
+\end{Exo}
+
+\begin{Exo}
+Une population de bactéries double toutes les heures.
+\par Par quel nombre la population de bactéries est-elle multipliée au bout de 3~h ? de 5~h ? de 9~h ? de $n$~h ?
+\end{Exo}
+
+\begin{Exo}
+Le mécanisme d'un cadenas est formé de quatre rouleaux qui portent
+chacun les dix chiffres 0, 1, 2, 3, 4, 5, 6, 7, 8 et 9. Combien de
+combinaisons peut-on obtenir ? \par Il faut une seconde pour former
+une combinaison. Combien de temps faut-il pour les former toutes ?
+\end{Exo}
+
+\begin{Exo}
+Le nombre 8\,833 possède une propriété particulière. Si on élève chacune des deux tranches de deux chiffres de ce nombre au carré, la somme des deux carrés obtenue n'est autre que le nombre 8\,833 lui-même.
+\\On a bien en effet :
+\[88^2+33^2=7\,744+1\,089=8\,833\]
+\par Montre qu'il en est de même du nombre 1\,233.
+\end{Exo}
+
+\end{document}

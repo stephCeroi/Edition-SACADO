@@ -74,6 +74,29 @@ headheight=20.60pt %hauteur du header
 \usepackage{float}
 
 
+
+% Python style for highlighting
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{white},   
+    commentstyle=\color{sacado_green},
+    keywordstyle=\color{sacado_red},
+    numberstyle=\tiny\color{sacado_orange},
+    stringstyle=\color{sacado_blue},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=false,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=4
+}
+
+\lstset{style=mystyle}
+
 %----------------------------------------------------------------------------------------
 %		Headers and footers
 %----------------------------------------------------------------------------------------
@@ -123,16 +146,7 @@ headheight=20.60pt %hauteur du header
 \usepackage{tikzpagenodes}
 \usetikzlibrary{plotmarks}
 
-%%%%% Pour les symboles et les ensembles
-%\newcommand{\pp}{\leq}
-%\newcommand{\pg}{\geq}
-%%\newcommand{\euro}{\eurologo{}}
-%\newcommand{\R}{\mathbb{R}}
-%\newcommand{\N}{\mathbb{N}}
-%\newcommand{\D}{\mathbb{D}}
-%\newcommand{\Z}{\mathbb{Z}}
-%\newcommand{\Q}{\mathbb{Q}}
-%\newcommand{\C}{\mathbb{C}}
+
 
 %%%%% Pour une double minipage
 \newcommand{\mini}[4]{
@@ -145,15 +159,6 @@ headheight=20.60pt %hauteur du header
 \end{minipage}
 }
 
-
-%\newcommand\hole[1]{\texttt{\_}}
-%\newcommand{\PROP}[1]{\textbf{\underline{#1}}}
-%\newcommand{\exercice}{\textcolor{OliveGreen}{Exercice : }}
-%\newcommand{\correction}{\textcolor{BurntOrange}{Correction : }}
-%\newcommand{\propriete}{\textbf{\underline{Propriété}} : }
-%\newcommand{\prop}{\textbf{\underline{Propriété}} : }
-%\newcommand{\vocabulaire}{\textbf{\underline{Vocabulaire}} : }
-%\newcommand{\voca}{\textbf{\underline{Vocabulaire}} : }
 
 \usepackage{enumitem}
 \newlist{todolist}{itemize}{2} %Pour faire des QCM
@@ -190,17 +195,17 @@ headheight=20.60pt %hauteur du header
 
 %SACADO
 
-\definecolor{fond}{HTML}{6818A2}  %couleur des entetes etc.  violet sacado
-\definecolor{sacado_purple}{RGB}{94,68,145} %% Violet foncé Sacado
-\definecolor{sacado_violet}{RGB}{153,117,224} %% Violet clair Sacado
+\definecolor{fond}{HTML}{5D4391}  %couleur des entetes etc.  violet sacado
+\definecolor{sacado_purple}{HTML}{5D4391} %% Violet foncé Sacado
+\definecolor{sacado_violet}{HTML}{9274C7} %% Violet clair Sacado
 \definecolor{texte}{HTML}{FFFFFF} % couleur du texte des entetes etc.
-\definecolor{sacado_blue}{RGB}{0,129,159} %% Bleu Sacado
-\definecolor{sacado_green}{RGB}{59, 157, 38} %% Vert Sacado
-\definecolor{sacado_yellow}{RGB}{255,180,0} %% Jaune Sacado
-\definecolor{sacado_purple}{RGB}{94,68,145} %% Violet foncé Sacado
-\definecolor{sacado_violet}{RGB}{153,117,224} %% Violet clair Sacado
+\definecolor{sacado_blue_light}{HTML}{0093CA} %% Bleu Sacado
+\definecolor{sacado_blue}{HTML}{0960B5} %% Bleu Sacado
+\definecolor{sacado_green}{HTML}{00B999} %% Vert Sacado
+\definecolor{sacado_green_dark}{HTML}{4D8075} %% Vert Sacado foncé
+\definecolor{sacado_yellow}{HTML}{F9F871} %% Jaune Sacado
 \definecolor{sacado_orange}{HTML}{FF8B69} %% Orange Sacado
-\definecolor{sacado_red}{HTML}{A11915} %% Rouge Sacado
+\definecolor{sacado_red}{HTML}{9F1E17} %% Rouge Sacado
 \definecolor{sacado_gray}{HTML}{7B7485} %% Gris Sacado
 %BOITES 
 
@@ -275,7 +280,7 @@ l color=sacado_violet,r color=sacado_blue}
 import qrcode
 def qr(data):
      fic=r"qrcodes/qr"+data+'.png'
-     urlcourte=r"sacado.xyz/b/"+data
+     urlcourte=r"sacado.xyz/"+data
      urllongue=r"https://"+urlcourte
      qr = qrcode.QRCode(version=1,
 error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)
@@ -314,6 +319,11 @@ error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)
 }
 
  
+
+
+
+
+
 
 \usepackage{makeidx}
 \makeindex

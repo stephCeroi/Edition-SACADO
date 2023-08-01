@@ -1,0 +1,35 @@
+
+Les notes d'une classe de Seconde sont représentées par le diagramme à bâtons ci-dessous.
+
+\begin{center}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-0.76,-1.1175) grid (11.64,7.2625);
+\draw[->,color=black] (-0.76,0.) -- (11.64,0.);
+\foreach \x in {,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-1.1175) -- (0.,7.2625);
+\foreach \y in {-1.,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-0.76,-1.1175) rectangle (11.64,7.2625);
+\draw [line width=2.pt,color=ffqqqq] (1.,0.)-- (1.,2.);
+\draw [line width=1.2pt,color=ffqqqq] (2.,0.)-- (2.,3.);
+\draw [line width=1.2pt,color=ffqqqq] (3.,0.)-- (3.,2.);
+\draw [line width=1.2pt,color=ffqqqq] (4.,0.)-- (4.,4.);
+\draw [line width=1.2pt,color=ffqqqq] (5.,0.)-- (5.,6.);
+\draw [line width=1.2pt,color=ffqqqq] (6.,0.)-- (6.,5.);
+\draw [line width=1.2pt,color=ffqqqq] (7.,0.)-- (7.,5.);
+\draw [line width=1.2pt,color=ffqqqq] (8.,0.)-- (8.,4.);
+\draw [line width=1.2pt,color=ffqqqq] (9.,0.)-- (9.,2.);
+\draw [line width=1.2pt,color=ffqqqq] (10.,0.)-- (10.,1.);
+\draw (10.08,-0.4975) node[anchor=north west] {note sur 10};
+\draw (0.12,6.5425) node[anchor=north west] {Effectif};
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item Quelle est la note plus plus souvent obtenue ? Cette valeur s'appelle \textbf{le mode}.
+\item Combien d'élèves composent cette classe ?
+\end{enumerate}

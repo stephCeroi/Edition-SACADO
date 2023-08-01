@@ -1,0 +1,491 @@
+\chapter{Arithmétique}
+{https://sacado.xyz/qcm/parcours_show_course/0/117129}
+{
+ \begin{CpsCol}
+\textbf{Les savoir-faire du parcours}
+ \begin{itemize}
+ \item Utiliser et écrire en ligne la division euclidienne de a par b, deux nombres entiers.
+ \item Utiliser la définition de multiple ou un diviseur
+ \item Déterminer des multiples ou des diviseurs d’un nombre donné
+ \item Déterminer si un entier est un multiple ou un diviseur d’un autre entier
+ \item Utiliser les critères de divisibilité par 2, 3, 5, 9, 10
+ \item Modéliser et résoudre des problèmes mettant en jeu la divisibilité
+ \item Savoir tester si un nombre est premier ou ne l'est pas en utilisant la calculatrice ou un logiciel
+ \item Donner la liste des nombres premiers inférieurs à un entier donné (crible d'Eratosthène)
+ \item Décomposer un nombre entier en produit de facteurs premiers (à la main ou à l'aide d'un logiciel)
+ \item Simplifier une fraction pour la rendre irréductible
+ \end{itemize}
+ 
+ \end{CpsCol}
+ 
+ \begin{His}
+ zzzz
+ \end{His}
+
+\begin{ExoDec}{Chercher.}{1234}{1}{0}{0}{0}
+
+ On souhaite ranger 142 bonbons dans des boites de 12 bonbons. Les boites doivent être complétées entièrement avant
+d'utiliser d'une nouvelle boite.
+\begin{enumerate}
+\item Combien de bonbons ne sont-ils pas rangés dans une boite complète?
+\item Combien de boites sont-elles entièrement remplies?
+\item Quel est le nombre minimal de boites nécessaires pour ranger tous les 142 bonbons? Combien de bonbons faudrait-il
+rajouter pour remplir la boite incomplète?
+\end{enumerate}
+
+\end{ExoDec}
+ 
+ 
+\begin{ExoDec}{Chercher.}{1234}{1}{0}{0}{0}
+
+Trois bateaux partent de Marseille, l'un tous les 7 jours, le second tous les 12 jours, le troisième tous les 14 jours. Ils partent
+tous les trois le 1er mars. À quelle prochaine date partiront-ils encore tous les trois ensemble du port de Marseille ?
+
+
+
+\end{ExoDec} 
+ 
+ 
+}
+
+
+\begin{pageCours}
+
+
+
+
+\section{La division Euclidienne}
+
+
+
+\begin{DefT}{Division euclidienne}
+
+Écrire la division euclidienne\index{Division euclidienne} d'un nombre entier naturel $a$ par un entier naturel $b$, tous deux non nuls, c'est déterminer les nombres entiers $q$ et $r$ tels que $a = b \times q + r$ avec $0 \leq r <  b$.
+
+$q$ est appelé le quotient de la division euclidienne de $a$ par $b$.
+
+$r$ est appelé le reste de la division euclidienne de $a$ par $b$.
+\end{DefT}
+
+
+\begin{ExQr}{1234}
+L'égalité de la division euclidienne de $254$ par $7$ s'écrit : $254 = 36 \times 7 +2$. $36$ est le quotient et $2$ est le reste.
+\end{ExQr}
+
+
+\begin{Att}
+
+$22 = 3 \times 5 +7$ mais cette égalité n'est pas l'écriture de la division euclidienne de $22$ par $5$ ou par $3$. En effet, $7 > 3$ et $7 > 5$.
+
+L'égalité de la division euclidienne de $22$ par $3$ s’écrit : $22 = 3 \times 7 +1$
+
+L'égalité de la division euclidienne de $22$ par $5$ s’écrit : $22 = 4 \times 5 +2$.
+\end{Att}
+
+\section{Multiples et diviseurs}
+
+ 
+  
+
+\begin{DefT}{Multiples et diviseurs}\index{Multiple}\index{Diviseur}
+ Soit $a$ et $b$ deux nombres entiers positifs. 
+ 
+ On dit que $a$ est un \textbf{multiple} de $b$ s'il existe un nombre entier $k$ tel que $a = k \times b$.
+ 
+ On dit alors que $b$ est un \textbf{diviseur} de $a$. 
+\end{DefT}
+
+\begin{Rq}
+
+Le reste de la division euclidienne de $a$ par $b$ est alors égal à $0$. 
+\end{Rq}
+
+
+\begin{minipage}{0.6\linewidth}
+
+\begin{ExQr}{1234}
+Soit $a=56$ et $b=7$, on a $56 = 7 \times 8+0 = 7 \times 8$. 
+
+Donc $56$ est un multiple de $7$.
+
+\end{ExQr}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+\begin{OuQr}{1234}
+
+ Calculateur de multiples et de diviseurs
+\end{OuQr}
+\end{minipage}
+ 
+ 
+ 
+ 
+ 
+\section{Critère de divisibilité}
+
+
+
+\begin{minipage}{0.6\linewidth}
+
+\begin{ThT}{Critères de divisibilité}\index{Critères de divisibilité}
+ 
+Un nombre entier est divisible  :
+ 
+\begin{itemize}
+ \item par 2, si son chiffre des unités est pair ;
+ \item par 3, si la somme de ses chiffres est un multiple de $3$ ;
+ \item par 5, si  son chiffre des unités est $0$ ou $5$ ;
+ \item par 9, si la somme de ses chiffres est un multiple de $9$ ;
+ \item par 10, si  son chiffre des unités est $0$.
+\end{itemize}
+ 
+\end{ThT}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+\begin{MeQr}{1234}
+
+Utiliser les critères de divisibilité
+\end{MeQr}
+\end{minipage}
+
+
+
+
+
+
+\end{pageCours} 
+\begin{pageAD} 
+ 
+
+\Sf{Utiliser et écrire en ligne la division euclidienne de $a$ par $b$, deux nombres entiers.}
+ 
+  
+\begin{ExoCad}{Communiquer.}{1234}{2}{0}{0}{0}{0}
+
+\begin{enumerate}
+
+\item Effectue les divisions euclidiennes suivantes :
+
+
+\begin{minipage}{0.3\linewidth}
+\begin{equation*}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraycolsep}{2pt}
+  \begin{array}{rrrr|rrr}
+ & 2  & 9 & 7 & & 9 \\
+\cline{5-7}
+ & &  &  &  & \\
+    & &  &  &   &   &  \\
+    &  &  &  &   &   &  \\
+    &&  &  &   &   &  \\
+  \end{array}
+\end{equation*}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\begin{equation*}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraycolsep}{2pt}
+  \begin{array}{rrrr|rrr}
+ & 3  & 5 & 7 &  1 & 2 \\
+\cline{5-7}
+ & &  &  &  & \\
+    & &  &  &   &   &  \\
+    &  &  &  &   &   &  \\
+    &&  &  &   &   &  \\
+  \end{array}
+\end{equation*}
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\begin{equation*}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraycolsep}{2pt}
+  \begin{array}{rrrr|rrr}
+1 & 6  & 8 & 3 & 9 & 5 \\
+\cline{5-7}
+ & &  &  &  & \\
+    & &  &  &   &   &  \\
+    &  &  &  &   &   &  \\
+    &&  &  &   &   &  \\
+  \end{array}
+\end{equation*}
+\end{minipage}
+
+
+\item Traduis chacune de ces divisions par une égalité. 
+
+\begin{enumerate}
+\item $279 = $ \point{1}
+\item $357 = $ \point{1}
+\item $\np{1683} = $ \point{1}
+\end{enumerate}
+\end{enumerate}
+\end{ExoCad}
+
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ Dans la division de $85$ par $6$, le reste est égal à $1$ et le quotient est égal à $14$. Écrire ce résultat par une égalité.
+ 
+ \point{1}
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ Cédric attend le bus qui peut contenir 53 personnes. Il passe un bus toutes les 17 minutes. Il y a 164 personnes devant
+Cédric. Dans combien de temps Cédric pourra monter dans un bus sachant qu'il vient d'en voir un partir ?\point{5}
+\end{ExoCad}
+
+
+\Sf{Utiliser la distributivité}
+
+\begin{ExoCad}{Représenter. Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ 
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ 
+\end{ExoCad}
+
+ 
+\end{pageAD}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursu} 
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+\end{ExoCu}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+\end{ExoCu}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+  
+ 
+
+\begin{enumerate}
+
+\item Effectue les divisions euclidiennes suivantes :
+
+
+\begin{minipage}{0.3\linewidth}
+\opidiv{279}{9}  
+\begin{equation*}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraycolsep}{2pt}
+  \begin{array}{rrrr|rrr}
+ & 2  & 9 & 7 & & 9 \\
+\cline{5-7}
+ & &  &  &  & \\
+    & &  &  &   &   &  \\
+    &  &  &  &   &   &  \\
+    &&  &  &   &   &  \\
+  \end{array}
+\end{equation*}
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\item \opidiv{357}{5}
+\begin{equation*}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraycolsep}{2pt}
+  \begin{array}{rrrr|rrr}
+ & 3  & 5 & 7 &  1 & 2 \\
+\cline{5-7}
+ & &  &  &  & \\
+    & &  &  &   &   &  \\
+    &  &  &  &   &   &  \\
+    &&  &  &   &   &  \\
+  \end{array}
+\end{equation*}
+
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\begin{equation*}
+\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraycolsep}{2pt}
+  \begin{array}{rrrr|rrr}
+1 & 6  & 8 & 3 & 9 & 5 \\
+\cline{5-7}
+ & &  &  &  & \\
+    & &  &  &   &   &  \\
+    &  &  &  &   &   &  \\
+    &&  &  &   &   &  \\
+  \end{array}
+\end{equation*}
+\end{minipage}
+
+
+\item Traduis chacune de ces divisions par une égalité.
+\end{enumerate}
+\end{ExoCu}
+
+ 
+
+
+\end{pageParcoursu}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{pageParcoursd} 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+ 
+\end{ExoCd}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Chercher.communiquer.}{1234}{2}{0}{0}{0}{0}
+
+
+
+\end{ExoCd}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+ 
+\end{pageParcoursd}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcourst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+Montrer que la somme de trois entiers consécutifs est toujours un multiple de 3. \point{6}
+ 
+
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+ 
+ 
+
+
+\end{ExoCt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+ 
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+
+\end{ExoCt} 
+ 
+\end{pageParcourst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Brouillon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{pageBrouillon} 
+ 
+\ligne{32}
+
+
+
+\end{pageBrouillon}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Auto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAuto} 
+
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{ExoAuto}
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+  
+
+\end{ExoAuto}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+
+\end{pageAuto}

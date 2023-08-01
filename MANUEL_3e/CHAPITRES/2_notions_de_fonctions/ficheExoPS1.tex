@@ -1,0 +1,147 @@
+\documentclass[openany]{book}
+
+
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCoursCycle4}
+\input{../../../latex_preambule_style/styleExercices}
+\input{../../../latex_preambule_style/styleExercicesAideCompetences}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_cycle4}
+\input{../../../latex_preambule_style/algobox}
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche sur livre  -----    0 affiche sur cahier 
+{%condition vraieé
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%   Marges de pages  %%%%%%%%%%%%%%%% 
+ \usepackage{geometry}
+ \geometry{top=1cm, bottom=0cm, left=2cm , right=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{seance}[Notions de fonction.]
+
+\section{Préparer le DNB}
+
+
+\end{seance}
+
+\Exe
+
+Un condensateur est un composant électronique qui permet de stocker de l'énergie électrique pour la restituer plus tard.
+
+Le graphique suivant montre l'évolution de la tension mesurée aux bornes d'un condensateur en fonction du
+temps lorsqu'il est en charge.
+
+\begin{center}
+\psset{xunit=14cm,yunit=0.8cm,comma=true}
+\begin{pspicture}(-0.1,-1)(0.6,6)
+\multido{\n=0.00+0.01}{61}{\psline[linewidth=0.1pt](\n,0)(\n,6)}
+\multido{\n=0.0+0.1}{7}{\psline[linewidth=1pt](\n,0)(\n,6)}
+\multido{\n=0.0+0.2}{31}{\psline[linewidth=0.1pt](0,\n)(0.6,\n)}
+\multido{\n=0+1}{7}{\psline[linewidth=1pt](0,\n)(0.6,\n)}
+\psaxes[linewidth=1.25pt,Dx=0.1]{->}(0,0)(0,0)(0.6,6)
+\psaxes[linewidth=1.25pt,Dx=0.1](0,0)(0,0)(0.61,6)
+\uput[d](0.55,-0.6){Temps (s)}
+\rput{90}(-0.075,3){Tension (V)}
+\psplot[plotpoints=3000,linewidth=1.25pt,linecolor=blue]{0}{0.6}{5 5 2.71828 x 10 mul  exp div sub}
+\end{pspicture}
+\end{center}
+
+
+\begin{enumerate}
+\item S'agit-il d'une situation de proportionnalité ? Justifier.
+\item Quelle est la tension mesurée au bout de $0,2$~s ?
+\item Au bout de combien de temps la tension aux bornes du condensateur aura-t-elle atteint 60\,\% de la tension maximale qui est estimée à 5 V ?
+\end{enumerate}
+
+\Exe
+
+
+Le jardinier d'un club de football décide de semer à nouveau du gazon sur l'aire de
+jeu. Pour que celui-ci pousse correctement, il installe un système d'arrosage
+automatique qui se déclenche le matin et le soir, à chaque fois, pendant 15 minutes.
+
+\setlength\parindent{9mm}
+\begin{itemize}
+\item[$\bullet~~$] Le système d'arrosage est constitué de 12 circuits indépendants.
+\item[$\bullet~~$] Chaque circuit est composé de 4 arroseurs.
+\item[$\bullet~~$] Chaque arroseur a un débit de 0,4 m$^3$ d'eau par heure.
+\end{itemize}
+\setlength\parindent{0mm}
+
+Combien de litres d'eau auront été consommés si on arrose le gazon pendant tout le
+mois de juillet ?
+
+On rappelle que 1 m$^3 = \np{1000}$~litres et que le mois de juillet compte $31$~jours.
+
+\Exe
+
+Le 17 juillet 2016, une spectatrice regarde l'étape \og Bourg-en-Bresse
+/ Culoz \fg{} du Tour de France.
+
+Elle note, toutes les demi-heures, la distance parcourue par le
+cycliste français Thomas Vœckler qui a mis 4~h 30~min pour
+parcourir cette étape de 160~km ; elle oublie seulement de noter la
+distance parcourue par celui-ci au bout de 1~h de course.
+
+Elle obtient le tableau suivant : 
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|*{10}{>{\centering \arraybackslash}X|}}\hline
+Temps en heure &0 &0,5&1 		&1,5 	&2 	&2,5 	&3 	&3,5 &4 	&4,5\\ \hline
+Distance en km &0 &15 &\ldots 	&55 	&70 &80 	&100&110 &135 	&160\\ \hline
+\end{tabularx}
+\end{center}
+
+\medskip
+
+\begin{enumerate}
+\item Quelle distance a-t-il parcourue au bout de 2~h 30~min de course?
+\item Montrer qu'il a parcouru 30 km lors de la troisième heure de course.
+\item A-t-il été plus rapide lors de la troisième ou bien lors de la quatrième heure de
+course ?
+\item Répondre aux questions qui suivent sur la feuille ANNEXE , qui est
+à rendre avec la copie.
+	\begin{enumerate}
+		\item Placer les 9 points du tableau dans le repère. On ne peut pas placer le
+point d'abscisse 1 puisque l'on ne connaît pas son ordonnée.
+		\item En utilisant votre règle, relier les points consécutifs entre eux.
+ 	\end{enumerate}
+\item En considérant que la vitesse du cycliste est constante entre deux relevés,
+déterminer, par lecture graphique, le temps qu'il a mis pour parcourir 75~km.
+\item On considère que la vitesse du cycliste est constante entre le premier relevé
+effectué au bout de 0,5~h de course et le relevé effectué au bout de 1,5~h de
+course ; déterminer par lecture graphique la distance parcourue au bout de 1~h
+de course.
+\item Soit $f$ la fonction, qui au temps de parcours du cycliste Thomas Vœckler,
+associe la distance parcourue. La fonction $f$ est-elle linéaire ?
+\end{enumerate}
+
+
+
+
+
+\psset{xunit=1.7cm,yunit=0.1cm}
+\begin{pspicture}(-0.5,-10)(5.5,200)
+\uput[u](5,0){Temps en $h$}
+\uput[r](0,192.50){Distance en km}
+\multido{\n=0.0+0.5}{12}{\psline[linewidth=0.2pt](\n,0)(\n,190)}
+\multido{\n=0+5}{39}{\psline[linewidth=0.2pt](0,\n)(5.5,\n)}
+\psaxes[linewidth=1.25pt,Dy=20]{->}(0,0)(0,0)(5.5,190)
+\psaxes[linewidth=1.25pt,Dy=20](0,0)(0,0)(5.5,190)
+\end{pspicture}
+
+
+\end{document}

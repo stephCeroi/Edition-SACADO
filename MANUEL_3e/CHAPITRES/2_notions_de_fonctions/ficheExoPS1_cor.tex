@@ -1,0 +1,144 @@
+\documentclass[openany]{book}
+
+
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCoursCycle4}
+\input{../../../latex_preambule_style/styleExercices}
+\input{../../../latex_preambule_style/styleExercicesAideCompetences}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_cycle4}
+\input{../../../latex_preambule_style/algobox}
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche sur livre  -----    0 affiche sur cahier 
+{%condition vraieé
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%   Marges de pages  %%%%%%%%%%%%%%%% 
+ \usepackage{geometry}
+ \geometry{top=1cm, bottom=0cm, left=2cm , right=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{seance}[Notions de fonction.]
+
+\section{Préparer le DNB}
+
+
+\end{seance}
+
+\Exe
+
+\begin{enumerate}
+\item Ce n'est pas une situation de proportionnalité car le graphique montrant
+l'évolution de la tension en fonction du temps n'est pas une droite.
+\item La tension mesurée au bout de 0,2 s, la tension mesurée est de 4,4 V.
+\item Je calcule 60\,\% de la tension maximale : $\dfrac{60}{100} \times 5 = 0,6 \times 5 = 3$.
+
+60\,\% de la tension maximale correspond à 3~V.
+
+Par lecture graphique, on détermine que cette tension est atteinte au bout
+d'environ $0,09$~s.
+\end{enumerate}
+
+\Exe
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|*{10}{>{\centering \arraybackslash}X|}}\hline
+Temps en heure &0 &0,5&1 		&1,5 	&2 	&2,5 	&3 	&3,5 &4 	&4,5\\ \hline
+Distance en km &0 &15 &\ldots 	&55 	&70 &80 	&100&110 &135 	&160\\ \hline
+\end{tabularx}
+\end{center}
+
+\medskip
+
+\begin{enumerate}
+\item %Quelle distance a-t-il parcourue au bout de 2~h 30~min de course?
+2~h 30~min ou 2,5~h : la distance parcourue est égale à 80 km.
+\item %Montrer qu'il a parcouru 30 km lors de la troisième heure de course.
+De la 2\up{e} à la 3\up{e} heure il a parcouru $100 - 70 = 30$~km.
+\item %A-t-il été plus rapide lors de la troisième ou bien lors de la quatrième heure de
+%course ?
+De la 3\up{e} à la 4\up{e} heure il a parcouru $135 - 100 = 35$~km, soit plus que pendant la 3\up{e} heure.
+\item %Répondre aux questions qui suivent sur la feuille ANNEXE , qui est à rendre avec la copie.
+	\begin{enumerate}
+		\item Placer les 9 points du tableau dans le repère. On ne peut pas placer le
+point d'abscisse 1 puisque l'on ne connaît pas son ordonnée.
+		\item En utilisant votre règle, relier les points consécutifs entre eux.
+ 	\end{enumerate}
+\item %En considérant que la vitesse du cycliste est constante entre deux relevés,
+%déterminer, par lecture graphique, le temps qu'il a mis pour parcourir 75~km.
+On lit environ 2,25~h soit 2~h 15~min.
+\item %On considère que la vitesse du cycliste est constante entre le premier relevé
+%effectué au bout de 0,5~h de course et le relevé effectué au bout de 1,5~h de
+%course ; déterminer par lecture graphique la distance parcourue au bout de 1~h
+%de course.
+Si la vitesse est constante pendant cette heure, la représentation sur cet intervalle est affine ; on trace donc la verticale ($x = 1$) qui coupe la représentation en un point dont l'ordonnée est environ 35~(km).
+\item %Soit $f$ la fonction, qui au temps de parcours du cycliste Thomas Vœckler,
+%associe la distance parcourue. La fonction $f$ est-elle linéaire ?
+La fonction n'est pas linéaire puisque les points ne sont pas alignés.
+
+Plus mathématique on a vu qu'il faisait 30 km en une heure et plus tard 35~km en une heure. La fonction n'est pas linéaire.
+\end{enumerate}
+
+\vspace{0,5cm}
+
+\Exe
+
+\medskip
+
+%Le jardinier d'un club de football décide de semer à nouveau du gazon sur l'aire de
+%jeu. Pour que celui-ci pousse correctement, il installe un système d'arrosage
+%automatique qui se déclenche le matin et le soir, à chaque fois, pendant 15 minutes.
+%
+%\setlength\parindent{9mm}
+%\begin{itemize}
+%\item[$\bullet~~$] Le système d'arrosage est constitué de 12 circuits indépendants.
+%\item[$\bullet~~$] Chaque circuit est composé de 4 arroseurs.
+%\item[$\bullet~~$] Chaque arroseur a un débit de 0,4 m$^3$ d'eau par heure.
+%\end{itemize}
+%\setlength\parindent{0mm}
+%
+%Combien de litres d'eau auront été consommés si on arrose le gazon pendant tout le
+%mois de juillet ?
+
+%On rappelle que 1 m$^3 = \np{1000}$~litres et que le mois de juillet compte $31$~jours.
+Chaque jour l'arrosage fonctionne pendant $2 \times 15 = 30$~min soit 0,5~h. Un arroseur débite donc pendant cette demi-heure 0,2~m$^3$.
+
+Pendant le mois de juillet on aura donc déversé :
+
+$31 \times 12 \times 4 \times 0,2 = 297,6$~m$^3$, soit \np{297600}~litres d'eau.
+\vspace{0,5cm}
+\begin{center}
+\begin{flushleft}
+\textbf{Exercice 2 question 4}
+\end{flushleft}
+\bigskip
+
+\psset{xunit=1.7cm,yunit=0.1cm,arrowsize=2pt 5}
+\begin{pspicture}(-0.5,-10)(5.5,200)
+\uput[u](5,0){Temps en $h$}
+\uput[r](0,192.5){Distance en km}
+\multido{\n=0.0+0.5}{12}{\psline[linewidth=0.2pt](\n,0)(\n,190)}
+\multido{\n=0+5}{39}{\psline[linewidth=0.2pt](0,\n)(5.5,\n)}
+\psaxes[linewidth=1.25pt,Dy=20]{->}(0,0)(0,0)(5.5,190)
+\psaxes[linewidth=1.25pt,Dy=20](0,0)(0,0)(5.5,190)
+\psdots(0,0)(0.5,15)(1.5,55)(2,70)(2.5,80)(3,100)(3.5,110)(4,135)(4.5,160)
+\psline[linewidth=1pt](0,0)(0.5,15)(1.5,55)(2,70)(2.5,80)(3,100)(3.5,110)(4,135)(4.5,160)
+\psline[linewidth=1pt,linecolor=blue,ArrowInside=->](0,75)(2.25,75)(2.25,0)
+\psline[linewidth=1pt,linecolor=red,ArrowInside=->](1,0)(1,35)(0,35)
+\end{pspicture}
+\end{center}
+
+
+\end{document}

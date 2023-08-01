@@ -1,0 +1,52 @@
+
+Le débit moyen de téléchargement est de 0,85 Mo/s.
+\begin{enumerate}
+\item Complète ce tableau
+
+ 
+
+
+\begin{tabular}{|c|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|}
+\hline 
+$d$ en Mo & 1 & 2 & 10 & 12 \\
+\hline 
+temps $t$ en $s$ &  &  &  &    \\ 
+\hline 
+\end{tabular} 
+
+
+
+
+
+ 
+\item Déterminer une formule donnant le débit moyen $d$ en fonction du temps $t$.
+
+\item Représentation graphique dans un repère.
+\begin{enumerate}
+ 
+\item Recopier et complète les axes du repère par les données qu'ils représentent.
+\item Tracer dans le repère ci-dessous les points dont l'abscisse est le débit moyen de téléchargement et l'ordonnée le temps correspondant.
+
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.883779264214047cm,y=0.497340425531907cm]
+\draw [color=cqcqcq,, xstep=0.883779264214047cm,ystep=0.994680851063814cm] (-0.666982024597919,-1.5294117647059702) grid (16.30558183538316,20.58823529411791);
+\draw[->,color=black] (-0.666982024597919,0.) -- (16.30558183538316,0.);
+\foreach \x in {,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.,12.,13.,14.,15.,16.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-1.5294117647059702) -- (0.,20.58823529411791);
+\foreach \y in {,2.,4.,6.,8.,10.,12.,14.,16.,18.,20.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-0.666982024597919,-1.5294117647059702) rectangle (16.30558183538316,20.58823529411791);
+\end{tikzpicture}
+
+\item Quel est la forme de cette représentation graphique ?
+
+
+\item Quel est le temps nécessaire pour télécharger 9 Mo ?
+
+
+\end{enumerate}
+
+
+\end{enumerate}

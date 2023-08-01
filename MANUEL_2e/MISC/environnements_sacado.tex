@@ -30,7 +30,6 @@
 \newpage
 }
 
-
 \renewenvironment{leftbar}[1][\hsize]
 {%
     \def\FrameCommand
@@ -42,8 +41,6 @@
     \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
 }
 {\endMakeFramed}
-
-
 
 
 \newcommand{\headerGeneral}[3]{ % intitulé, couleur, qrcode
@@ -60,65 +57,59 @@
 
 \newenvironment{pageCours}{\lhead{%
 \pagecolor{white!100}
-\headerGeneral{COURS}{fond!70}{1234}
+\headerGeneral{COURS}{fond!70}{p/1234}
 }\begin{leftbar}}{\end{leftbar}\newpage}
 
 \newenvironment{pageAD}{\lhead{%
 \pagecolor{sacado_violet!6}
-\headerGeneral{APPLICATIONS DIRECTES}{sacado_violet!70}{1234}
+\headerGeneral{APPLICATIONS DIRECTES}{sacado_violet!70}{p/1234}
 } }{ \newpage}
 
 \newenvironment{pageParcoursu}{\lhead{%
 \pagecolor{sacado_green!6} 
-\headerGeneral{PARCOURS 1}{sacado_green!70}{1234}
+\headerGeneral{PARCOURS 1}{sacado_green}{p/1234}
 } }{ \newpage}
 
 
 \newenvironment{pageParcoursd}{\lhead{%
 \pagecolor{sacado_blue!6}
-\headerGeneral{PARCOURS 2}{sacado_blue!70}{1234}
+\headerGeneral{PARCOURS 2}{sacado_blue_light}{p/1234}
 } }{ \newpage}
 
 \newenvironment{pageParcourst}{\lhead{%
 \pagecolor{sacado_red!6}
-\headerGeneral{PARCOURS 3}{sacado_red!70}{1234}
+\headerGeneral{PARCOURS 3}{sacado_red}{p/1234}
 } }{ \newpage}
 
 \newenvironment{pageBrouillon}{\lhead{%
 \pagecolor{sacado_gray!6}
-\headerGeneral{BROUILLON}{sacado_gray!70}{1234}
+\headerGeneral{BROUILLON}{sacado_gray}{p/1234}
 } }{ \newpage}
 
 \newenvironment{pageRituels}{\lhead{%
 \pagecolor{fond!6}
-\headerGeneral{RITUELS}{fond!70}{1234}
+\headerGeneral{RITUELS}{fond!70}{p/1234}
 } }{ \newpage}
 
 \newenvironment{pageAuto}{\lhead{%
 \pagecolor{sacado_orange!6}
-\headerGeneral{AUTOÉVALUATION}{sacado_orange!70}{1234}
+\headerGeneral{AUTOÉVALUATION}{sacado_orange}{p/1234}
 } }{ \newpage}
 
 \newenvironment{pageHistoire}{\lhead{%
 \pagecolor{olive!6}
-\headerGeneral{HISTOIRE}{olive!70}{1234}
+\headerGeneral{HISTOIRE}{olive}{p/1234}
 } }{ \newpage}
 
 
 
 \newenvironment{pageExercices}{\lhead{%
 \pagecolor{white!100}
-\headerGeneral{ACTIVITÉS}{fond!70}{1234}
+\headerGeneral{ACTIVITÉS}{fond}{p/1234}
 }\begin{leftbar}}{\end{leftbar}\newpage}
 
 
 
- 
-
-
- 
-
- 
 \fancyfoot[L]{\colorbox{fond!70}{\color{texte}\thepage}}
 \fancyfoot[C]{}
 
@@ -203,7 +194,7 @@ title= \stepcounter{cpt} Propriétés \thecpt.]}
 
 %%%%%%%%%%%%% Conséquence
 \newenvironment{Cq}{%
-\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_blue!75!black,
+\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_blue,
 title= \stepcounter{cpt} Conséquence \thecpt.]}
 {%
 \end{tcolorbox}\par}
@@ -226,7 +217,7 @@ title= \stepcounter{cpt} Théorème \thecpt.]}
 
 %%%%%%%%%%%%% Règles
 \newenvironment{Reg}{%
-\medskip \begin{tcolorbox}[widget,colback=sacado_blue!15,colframe=sacado_blue!75!black,
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!15,colframe=sacado_blue,
 title= \stepcounter{cpt} Règle \thecpt.]}
 {%
 \end{tcolorbox}\par}
@@ -241,13 +232,13 @@ title= \stepcounter{cpt} Représentation \thecpt.]}
  
 %%%%%%%%%%%%% REMARQUES
 \newenvironment{Rq}{%
-\medskip \begin{tcolorbox}[widget,colback=sacado_orange!15,colframe=sacado_orange!75!black,
+\medskip \begin{tcolorbox}[widget,colback=sacado_orange!15,colframe=sacado_orange,
 title= \stepcounter{cpt} Remarque \thecpt.]}
 {%
 \end{tcolorbox}\par}
 
 \newenvironment{Rqs}{%
-\medskip \begin{tcolorbox}[widget,colback=sacado_orange!15,colframe=sacado_orange!75!black,
+\medskip \begin{tcolorbox}[widget,colback=sacado_orange!15,colframe=sacado_orange,
 title= \stepcounter{cpt} Remarques \thecpt.]}
 {%
 \end{tcolorbox}\par}
@@ -255,27 +246,27 @@ title= \stepcounter{cpt} Remarques \thecpt.]}
 
 %%%%%%%%%%%%% EXEMPLES
 \newenvironment{Ex}{%
-\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_blue!95!black,
+\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_blue_light,
 title= \stepcounter{cpt} Exemple \thecpt.]}
 {%
 \end{tcolorbox}\par}
 
 \newenvironment{Exs}{%
-\medskip \begin{tcolorbox}[widget,colback=white!15,colframe=sacado_blue!95!black,
+\medskip \begin{tcolorbox}[widget,colback=white!15,colframe=sacado_blue_light,
 title= \stepcounter{cpt} Exemples \thecpt.]}
 {%
 \end{tcolorbox}\par}
 
  
 \newenvironment{ExT}[1]{%
-\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_blue!95!black,
+\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_blue_light,
 title= \stepcounter{cpt} Exemple \thecpt   : #1.]}
 {%
 \end{tcolorbox}\par}
 
  
 \newenvironment{ExCor}{%
-\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_blue!95!black,
+\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_blue_light ,
 title= \stepcounter{cpt} Exercice corrigé \thecpt.]}
 {%
 \end{tcolorbox}\par}
@@ -283,11 +274,16 @@ title= \stepcounter{cpt} Exercice corrigé \thecpt.]}
 
 %%%%%%%%%%%%% Logique
 \newenvironment{Log}{%
-\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_red!95!black,
-title= \stepcounter{cpt} Exercice corrigé \thecpt.]}
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!10,colframe=sacado_blue,
+title= \stepcounter{cpt} Logique mathématique \thecpt.]}
 {%
 \end{tcolorbox}\par}
-
+%%%%%%%%%%%%% Logique avec paramètre
+\newenvironment{LogT}[1]{%
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!10,colframe=sacado_blue,
+title= \stepcounter{cpt} Logique mathématique \thecpt. #1]}
+{%
+\end{tcolorbox}\par}
 
 %%%%%%%%%%%%% Preuve
 \newenvironment{Pv}[1][]{%
@@ -307,6 +303,17 @@ borderline west={1mm}{0mm}{sacado_blue!75}]
 {%
 \end{tcolorbox}
 \par}
+
+
+%%%%%%%%%%%%% DemoExigible
+\newenvironment{DemoE}{%
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!10,colframe=sacado_blue,
+title= \stepcounter{cpt} Démonstration exigible \thecpt. ]}
+{%
+\end{tcolorbox}\par}
+
+
+
 
 
 %%%%%%%%%%%%% Compétences
@@ -382,14 +389,15 @@ title= \stepcounter{cpt} Étymologie \thecpt. #1 ]}{%
 
 %%%%%%%%%%%%% His
 \newenvironment{His}[1]{%
-\medskip \begin{tcolorbox}[widget,colback=white!15,colframe=sacado_violet!75,
-title= \stepcounter{cpt} Histoire des maths \thecpt. #1 ]}{%
+\begin{tcolorbox}[right=5mm, enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{sacado_green_dark!90!white}, attach boxed title to top left={xshift=0.3cm, yshift*=-2mm}, coltitle=sacado_green_dark, colback=sacado_green!10!white, boxed title style={colback=white}, colframe=sacado_green_dark,title= Les mathématiciennes et mathématiciens ]
+}{%
 \end{tcolorbox}\par}
 
 
 %%%%%%%%%%%%% Attention
 \newenvironment{Att}[1]{%
-\medskip \begin{tcolorbox}[widget,colback=sacado_red!5,colframe=sacado_red!75,
+\medskip \begin{tcolorbox}[widget,colback=sacado_red!5,colframe=sacado_red!95!white,
 title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 \end{tcolorbox}\par}
 
@@ -659,7 +667,44 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 
  
 
+%%%%%%%%%%%%% ExoDec 7 paramètres : compétences , qrcode , calculatrice, python, scratch, tableur, annales
+ 
+\newenvironment{ExoDec}[6]{% code avant
+\tcbset{top=-0.2cm }
+\stepcounter{exo}
 
+\begin{tcolorbox}[right=-5mm, enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{black!60!white}, attach boxed title to top right={xshift=-0.3cm, yshift*=-2mm}, coltitle=sacado_violet!85!black, colback=white!100!white, boxed title style={colback=white}, colframe=sacado_violet!100!black,title= {\footnotesize  #1}  ]
+ 
+\hspace{-1.3cm} 
+\begin{minipage}[t]{1cm}
+
+ \begin{tikzpicture}
+ 	\node[fill=sacado_violet,minimum width=0.7cm]{\textcolor{white}{\bf {\Large \theexo}}};
+ \end{tikzpicture}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% Condition pour la calculatrice
+ \ifthenelse{\equal{#3}{1}}{
+ \begin{tikzpicture}
+ 	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{MISC/calculator.png} };
+ \end{tikzpicture} 
+ }{
+ \ifthenelse{\equal{#3}{2}}{
+ \begin{tikzpicture}
+ 	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{MISC/no_calculator.png} };
+ \end{tikzpicture} 
+ }{}
+ }
+
+\end{minipage}
+\begin{minipage}[t]{17.3cm}
+} 
+{ 
+\end{minipage}
+\end{tcolorbox}
+\par
+}  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%  Exercices sans qrcode                                %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -724,12 +769,12 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% Condition pour la calculatrice
- \ifthenelse{\equal{#3}{1}}{
+ \ifthenelse{\equal{#2}{1}}{
  \begin{tikzpicture}
  	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{MISC/calculator.png} };
  \end{tikzpicture} 
  }{
- \ifthenelse{\equal{#3}{2}}{
+ \ifthenelse{\equal{#2}{2}}{
  \begin{tikzpicture}
  	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{MISC/no_calculator.png} };
  \end{tikzpicture} 
@@ -763,12 +808,12 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% Condition pour la calculatrice
- \ifthenelse{\equal{#3}{1}}{
+ \ifthenelse{\equal{#2}{1}}{
  \begin{tikzpicture}
  	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{MISC/calculator.png} };
  \end{tikzpicture} 
  }{
- \ifthenelse{\equal{#3}{2}}{
+ \ifthenelse{\equal{#2}{2}}{
  \begin{tikzpicture}
  	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{MISC/no_calculator.png} };
  \end{tikzpicture} 
@@ -802,12 +847,12 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% Condition pour la calculatrice
- \ifthenelse{\equal{#3}{1}}{
+ \ifthenelse{\equal{#2}{1}}{
  \begin{tikzpicture}
  	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{MISC/calculator.png} };
  \end{tikzpicture} 
  }{
- \ifthenelse{\equal{#3}{2}}{
+ \ifthenelse{\equal{#2}{2}}{
  \begin{tikzpicture}
  	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{MISC/no_calculator.png} };
  \end{tikzpicture} 
@@ -832,11 +877,11 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 \tcbset{top=-0.2cm }
 \stepcounter{exo}
 
-\begin{tcolorbox}[right=-5mm, enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+\begin{tcolorbox}[right=5mm, enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
 {black!60!white}, attach boxed title to top right={xshift=-0.3cm, yshift*=-2mm}, coltitle=sacado_orange!85!black, colback=white!100!white, boxed title style={colback=white}, colframe=sacado_orange!100!black,title= {\footnotesize  #1}  ]
  
-\hspace{-1.3cm} 
-\begin{minipage}[t]{1cm}
+\hspace{-1.4cm} 
+\begin{minipage}[t]{0.7cm}
 
  \begin{tikzpicture}
  	\node[fill=sacado_orange,minimum width=0.7cm]{\textcolor{white}{\bf {\Large \theexo}}};
@@ -844,12 +889,12 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%% Condition pour la calculatrice
- \ifthenelse{\equal{#3}{1}}{
+ \ifthenelse{\equal{#2}{1}}{
  \begin{tikzpicture}
  	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{MISC/calculator.png} };
  \end{tikzpicture} 
  }{
- \ifthenelse{\equal{#3}{2}}{
+ \ifthenelse{\equal{#2}{2}}{
  \begin{tikzpicture}
  	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{MISC/no_calculator.png} };
  \end{tikzpicture} 

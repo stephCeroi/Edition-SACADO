@@ -1,0 +1,29 @@
+
+Effectue la division euclidienne de 434 par 126.\\
+$434=126\times\ldots+\ldots$
+\par Soit $d$ le $PGCD(434;126)$ donc $434=d\times n$ et $126=d\times m$ avec $n$ et $m$ deux nombres entiers.
+\par Est-ce que $d$ divise 56 ?
+\par$56=434-3\times126=\ldots\ldots-\ldots\ldots\ldots=\ldots\ldots-\ldots\ldots=\ldots\times\ldots\ldots$ donc
+\dotfill\par\dotfill.
+$d$ divise $56$ et 
+$d$ divise $126$, donc
+ $d$ est un diviseur commun de 126 et 56.\\
+Est-ce le plus grand ?
+Soit $\ell$ le $PGCD(126;56)$. Alors $d\leqslant\ell$ et $126=\ell\times n$ et $56=\ell\times m$.
+\\On obtient\\
+$434=126\times3+56=\ell\times n\times3+\ell\times m=\ell\times(3n+m)$
+$\ell$ est donc un diviseur commun à 434 et 126 donc $\ell\leqslant d$.
+\\$d$ est donc le $PGCD(126;56)$.\\
+\textbf{Bilan}
+Soit $(q;r)$ le couple obtenu par la division euclidienne de $a$ par $b$.
+\[a=b\times q+r\]
+\par Soit $d$ le $PGCD(a;b)$ donc $a=d\times n$ et $b=d\times m$ avec $n$ et $m$ deux nombres entiers.
+\par$r=a-b\times q=\ldots\ldots\ldots-\ldots\ldots\ldots\ldots=\ldots\times\ldots\ldots\ldots$ donc $d$ divise $r$.
+$d$ divise $r$ et 
+$d$ divise $b$, donc $d$ est un diviseur commun à $b$ et $r$.\\
+Est-ce le plus grand ?
+Soit $\ell$ le $PGCD(b;r)$. Alors $d\leqslant\ell$ et $b=\ell\times b_1$ et $r=\ell\times r_1$.
+\\On obtient alors que \\
+$a=b\times q+r=\ell\times b_1\times q+\ell\times r_1=\ell\times(b_1\times q+r_1)$
+$\ell$ est donc un diviseur commun de $a$ et $b$ et $\ell\leqslant d$.
+Donc $d$ est le $PGCD(b;r)$.

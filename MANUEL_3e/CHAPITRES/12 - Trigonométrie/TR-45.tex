@@ -1,0 +1,21 @@
+
+
+Dans un triangle rectangle, le carré du côté le plus long est égal à la somme des carrés des côtés de l'angle droit.
+
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4.42,-0.28) rectangle (2.6,3.48);
+\draw[color=qqqqff,fill=qqqqff,fill opacity=0.2] (-2.3,2.7) -- (-2.,2.4) -- (-1.7,2.7) -- (-2.,3.) -- cycle; 
+\draw [color=qqqqff] (-2.,3.)-- (-4.,1.);
+\draw [color=qqqqff] (-4.,1.)-- (1.,0.);
+\draw [color=qqqqff] (1.,0.)-- (-2.,3.);
+\draw (-0.84,2.62) node[anchor=north west] {$AB^2+AC^2=BC^2$};
+\begin{scriptsize}
+\draw [fill=black] (-2.,3.) circle (1.0pt);
+\draw[color=black] (-1.86,3.24) node {$A$};
+\draw [fill=black] (-4.,1.) circle (1.0pt);
+\draw[color=black] (-4.2,1.22) node {$B$};
+\draw [fill=black] (1.,0.) circle (1.0pt);
+\draw[color=black] (1.14,0.24) node {$C$};
+\end{scriptsize}
+\end{tikzpicture}

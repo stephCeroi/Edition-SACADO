@@ -1,0 +1,48 @@
+
+On souhaite trace la représentation de la fonction $f$ définie par $f(x)=0,5x+1$.
+
+\begin{enumerate}
+\item Complète le tableau suivant en écrivant les calculs ci dessous.
+
+\begin{minipage}{10cm}
+
+
+\Point{6}
+
+\end{minipage}
+\begin{minipage}{6cm}
+\begin{center}
+\begin{tabular}{|c|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|}
+\hline 
+$x$ & 0 & 2 \vplus \\ 
+\hline 
+$f(x)$ &  &  \vplus \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{minipage}
+
+\item En déduire les coordonnées de 2 points de la représentation de la fonction $f$
+
+
+\Point{1}
+
+\item Place les points dans le repère ci dessous.
+
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-5.76,-4.44) grid (6.24,5.32);
+\draw[->,color=black] (-5.76,0.) -- (6.24,0.);
+\foreach \x in {-5.,-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-4.44) -- (0.,5.32);
+\foreach \y in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-5.76,-4.44) rectangle (6.24,5.32);
+\end{tikzpicture}
+
+\item Trace alors la représentation graphique de $f$.
+
+
+\end{enumerate}

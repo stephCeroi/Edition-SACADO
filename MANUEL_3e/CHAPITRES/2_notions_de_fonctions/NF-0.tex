@@ -1,0 +1,51 @@
+
+La voiture de Marcel consomme 4,5 litres pour 100 km.
+
+\begin{enumerate}
+\item Complète le tableau ci dessous
+
+\begin{tabular}{|c|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|}
+\hline 
+Volume d'essence $v$ en L & 4,5 & 2,25 & 10 & 18 \vplus \\ 
+\hline 
+Distance $d$ en km & 100 &  &  &  \vplus   \\ 
+\hline 
+\end{tabular} 
+
+\item Détermine une formule qui lie le volume $v$ à la distance $d$.
+
+\Point{1}
+\item 
+\begin{enumerate} 
+\item Nomme les axes du repère par les données qu'ils représentent.
+\item Trace dans le repère ci dessous les points dont l'abscisse est le volume d'essence et l'ordonnée la distance correspondante.
+
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.655603448275862cm,y=0.02758620689655112cm]
+\draw [color=cqcqcq,, xstep=0.655603448275862cm,ystep=1.3879310344827556cm] (-1.222879684418147,-24.223602484473055) grid (21.65680473372781,516.1490683229815);
+\draw[->,color=black] (-1.222879684418147,0.) -- (21.65680473372781,0.);
+\foreach \x in {-1.,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.,12.,13.,14.,15.,16.,17.,18.,19.,20.,21.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-24.223602484473055) -- (0.,516.1490683229815);
+\foreach \y in {,50.,100.,150.,200.,250.,300.,350.,400.,450.,500.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-1.222879684418147,-24.223602484473055) rectangle (21.65680473372781,516.1490683229815);
+\end{tikzpicture}
+
+\item Quel est le type de représentation graphique ?
+
+\Point{1}
+\end{enumerate}
+
+\item Avec Géogébra
+\begin{enumerate}
+\item Trace les points ci dessus. 
+\item Dans la fenêtre \textbf{algèbre}, recopie la relation entre $x$ et $y$.
+
+\Point{1}
+\item Compare la avec la formule entre $v$ et $d$.
+
+\Point{1}
+\end{enumerate}
+\end{enumerate}

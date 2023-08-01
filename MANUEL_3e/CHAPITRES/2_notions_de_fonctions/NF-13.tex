@@ -1,0 +1,35 @@
+
+\begin{minipage}{10cm}
+Un cylindre a pour base un disque de rayon 2 cm et une hauteur 10 cm. On verse l'eau dans le cylindre et on appelle $h$ la hauteur du niveau d'eau.
+
+\begin{enumerate}
+\item Déterminer la plus petite et la plus grande valeur de $h$.
+\item Déterminer le volume d'eau $\mathscr V$ pour une hauteur de 8 cm.
+\item Déterminer le volume d'eau $\mathscr V$ en fonction de la hauteur du liquide versé $h$.
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}{6cm}
+\begin{center}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(1.44,-1.94) rectangle (5.4,3.78);
+\fill[color=qqqqff,fill=qqqqff,fill opacity=0.8] (2.,-1.) -- (4.,-1.) -- (3.98,1.44) -- (1.98,1.44) -- cycle;
+\draw [rotate around={0.:(3.,-1.)},color=qqqqff,fill=qqqqff,fill opacity=0.95] (3.,-1.) ellipse (1.0239954795548605cm and 0.22037863360314666cm);
+\draw [rotate around={0.:(3.,3.)}] (3.,3.) ellipse (1.0239954795549004cm and 0.2203786336031553cm);
+\draw [color=qqqqff] (2.,-1.)-- (4.,-1.);
+\draw [color=qqqqff] (4.,-1.)-- (3.98,1.44);
+\draw [color=qqqqff] (3.98,1.44)-- (1.98,1.44);
+\draw [color=qqqqff] (1.98,1.44)-- (2.,-1.);
+\draw [rotate around={0.:(2.98,1.44)},color=qqqqff,fill=qqqqff,fill opacity=0.95] (2.98,1.44) ellipse (1.0103393736440567cm and 0.1441722925379235cm);
+\draw (1.98,1.44)-- (2.,3.);
+\draw (3.98,1.44)-- (4.,3.);
+\draw (4.46,1.4)-- (4.46,-0.98);
+\draw (4.56,0.6) node[anchor=north west] {$h$};
+\begin{scriptsize}
+\draw [fill=qqqqff,shift={(4.46,1.4)}] (0,0) ++(0 pt,2.25pt) -- ++(1.9485571585149868pt,-3.375pt)--++(-3.8971143170299736pt,0 pt) -- ++(1.9485571585149868pt,3.375pt);
+\draw [fill=qqqqff,shift={(4.46,-0.98)},rotate=180] (0,0) ++(0 pt,2.25pt) -- ++(1.9485571585149868pt,-3.375pt)--++(-3.8971143170299736pt,0 pt) -- ++(1.9485571585149868pt,3.375pt);
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{minipage}

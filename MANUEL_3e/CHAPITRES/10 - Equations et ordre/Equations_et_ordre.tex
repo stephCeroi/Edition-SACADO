@@ -1,0 +1,667 @@
+\documentclass[10pt]{article}
+
+\input{../preambule}
+\input{../styles}
+\input{../bas_de_page_quatrieme} 
+
+%%%%%%%%%%%   Marges de pages  %%%%%%%%%%%%%%%% 
+ \usepackage{geometry}
+ \geometry{top=2cm, bottom=1cm, left=2cm , right=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \usepackage{eurosym}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Titre encadré
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{encadrementombre}{Thème 8 Calcul littéral}
+{\LARGE Equations et ordre }\\
+
+%% Laisse la ligne vide ci-dessus
+{\Large Algèbre}
+\end{encadrementombre}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Corps du document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% \renewcommand{\arraystretch}{1.8}
+\definecolor{shadecolor}{gray}{0.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%   Hauteur de ligne  %%%%%%%%%%%%%%%%
+{\setlength{\baselineskip}{1.5\baselineskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+\subsection{Trois programmes de calcul(voir Sesamath)}
+\begin{shaded}
+Cécile et Mathieu saisissent le même nombre de départ sur leurs calculatrices puis effectuent les programmes de calcul suivants:
+\begin{itemize}
+\item Cécile multiplie le nombre de départ par $8$ puis ajoute au résultat obtenu
+\item Mathieu multiplie le nombre de départ par $6$ puis ajoute $13$ au résultat obtenu 
+\end{itemize}
+Ils s'aperçoivent alors que leurs calculatrices affichent le même résultat.\\
+\end{shaded}
+
+\begin{enumerate}
+\item \textbf{En calculant}
+\begin{enumerate}
+\item Le nombre $1$ est-il le nombre de départ? Et $2$?
+\item En poursuivant les essais, détermines le nombre qu'ont saisi Cécile et Mathieu sur leur calculatrice.
+\item Vincent effectue, avec le même nombre de départ, le programme de calcul suivant: il multiplie le nombre par $3$ puis ajoute $30$. Vincent trouve-il le même résultat que Cécile et Mathieu?
+\end{enumerate}
+\item \textbf{Avec un tableur}
+\begin{enumerate}
+\item A l'aide d'un tableur, construis le tableau ci-dessous. Programme la cellule B2 en fonction de la cellule B1 pour pour obtenir le résultat de la suite de calculs de Cécile. Copie alors cette formule dans les cellules C2 à L2.\\
+Procède de la même façon pour les programmes de calculs de Mathieu et Vincent.
+
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}b{#1}}
+	\newcolumntype{L}[1]{>{\raggedright\arraybackslash}b{#1}}
+	\newcolumntype{C}[1]{>{\centering\arraybackslash}b{#1}}
+\begin{tabular}{|L{0.3cm}||C{3cm}|C{0.3cm}|C{0.3cm}|C{0.3cm}|C{0.3cm}|C{0.3cm}|C{0.3cm}|C{0.3cm}|C{0.3cm}|C{0.3cm}|C{0.3cm}|C{0.3cm}|}
+	\hline &A&B&C&D&E&F&G&H&I&J&K&L\\
+	\hline 1&Nombre de départ&0&1&2&3&4&5&6&7&8&9&10\\
+	\hline 2&Cécile&&&&&&&&&&&\\
+	\hline 3&Mathieu&&&&&&&&&&&\\
+	\hline 4&Vincent&&&&&&&&&&&\\
+	\hline
+\end{tabular}
+
+\item retrouve la valeur solution de la question b) de la partie 1
+\item A l'aide du tableur, aide Cécile et Vincent à déterminer le nombre qu'il faut choisir au départ pour obtenir le même résultat.
+\end{enumerate}
+\end{enumerate}
+
+\subsection{A la ferme}
+\begin{shaded}
+Dans son champ un fermier compte $83$ têtes et $236$ pattes. Sachant qu'il n'a que des vaches et des poules, peux-tu retrouver le nombre de poules et le nombre de vaches dans le champ du fermier?
+\end{shaded}
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Notions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cours}
+\subsection{Equations}
+\subsubsection{Effet de l'addition et de la soustraction sur une égalité}
+\begin{shaded}
+\begin{Pp}
+Si on additionne ou si on soustrait un même nombre aux deux membres d'une égalité
+alors on obtient une nouvelle égalité.
+\\Autrement dit : ($a$, $b$ et $c$ désignent des nombres relatifs)\hspace{1cm} Si     $a = b$ 	alors 	$a + c = b + c$		et 	 $a – c = b – c$
+\end{Pp}
+\end{shaded}
+
+\begin{Ex}
+\begin{multicols}{2}
+$x – 3=–2,3$\\
+Donc $x – 3 + 3=–2,3 + 3$\\
+Donc $x=0,7$\\
+
+
+$6,1 + t=–1,4$\\
+Donc $6,1 + t – 6,1=–1,4 – 6,1$\\
+Donc $t=–7,5$
+\end{multicols}
+\end{Ex}
+\subsubsection{Effet de la multiplication et de la division sur une égalité}
+\begin{shaded}
+\begin{Pp}
+Si on multiplie ou si on divise par un même nombre \textbf{non nul} les deux membres d'une égalité
+alors on obtient une nouvelle égalité.
+\\Autrement dit : ($a$, $b$ et $c$ désignent des nombres relatifs, $c \neq 0$.)Si     $a = b$ 	alors 	$a \times c = b \times c$		et 	$a \div c = b \div c$ ou encore $\frac{a}{c}=\frac{b}{c}$
+\end{Pp}
+\end{shaded}
+
+\begin{Ex}
+\begin{multicols}{2}
+$–4n=3$\\
+Donc $–4n \div \left(–4\right)=3 \div \left(–4\right)$\\
+Donc $n=–0,75$\\
+
+$\frac{n}{5}=–2,1$\\
+Donc $\frac{n}{5} \times 5=–2,1 \times 5$\\
+Donc $n=–10,5$
+
+\end{multicols}
+\end{Ex}
+
+\subsection{Résolution d'équations}
+
+\begin{Df}
+Une \textbf{équation} est une égalité dans laquelle intervient un (ou plusieurs)
+nombre(s) inconnu(s). Ce nombre est désigné le plus souvent par une lettre.
+\end{Df}
+
+
+\begin{Ex}
+L'égalité $5x + 2y – 3 = x – 3y + 7$ est une \textbf{équation}.\\
+Les \textbf{inconnues} sont désignées par $x$ et $y$ .\\$5x + 2y – 3$ est le \textbf{membre de gauche} de l'équation.
+$x – 3y + 7$ est le \textbf{membre de droite} de l'équation.
+\end{Ex}
+ 		 
+\begin{Df} \textbf{Résoudre une équation}, c'est trouver TOUTES les valeurs possibles de l'inconnue 
+telles que le membre de gauche soit égal au membre de droite.
+\end{Df}
+
+
+\begin{Rq}
+Chacune de ces valeurs est appelée \textbf{\og  solution de l'équation \fg{}}.
+\end{Rq}
+
+\begin{Df} \textbf{\og Tester une égalité \fg{}},
+c'est :
+\begin{enumerate}
+\item 	calculer son membre de gauche ;
+\item   calculer son membre de droite ;
+\item   comparer les résultats.
+\end{enumerate}
+Ce test permet de savoir si un nombre donné EST ou N'EST PAS une solution d'une équation.
+\end{Df}
+
+
+\begin{Ex}
+$–1$ est-il une solution de l'équation $2x^2 – 6 = x + 10$ ?
+\begin{enumerate}
+\item Pour $x = –1$, on calcule le membre de gauche : 	$2x^2 – 6 = 2 \times \left(–1\right)^2 – 6 = –4$
+\item Pour $x = –1$, on calcule le membre de droite : 	$x + 10 = –1 + 10 = 9$
+\item On compare :  $–4 \neq 9$	 donc $–1$ N'EST PAS une solution de l'équation.
+\end{enumerate}
+\end{Ex}		
+		
+\begin{Ex} \textbf{(RESOLUTION D UNE EQUATION)}
+Résolvons l'équation $5x – 3 = x + 7$.\\
+Donc $5x – 3 – x=x + 7 – x$ (on soustrait $x$ de part et d'autre)\\
+Soit $4x – 3=7$ (on réduit les deux membres)\\
+Donc $4x – 3 + 3=7 + 3$ (on ajoute $3$ de part et d'autre),\\
+Soit $4x=10$ (on réduit les deux membres)
+Donc $\frac{4x}{4}=\frac{10}{4}$ (on divise par $4$ de part et d'autre) et donc 
+$x=2,5$ (on réduit les deux membres une dernière fois \ldots{})\\
+
+\textbf{Vérification:}
+\begin{enumerate}
+\item 	Pour $x = 2,5$ , on calcule le membre de gauche : $5x – 3 = 5 \times 2,5 – 3 = 9,5$
+\item Pour $x = 2,5$ , on calcule le membre de droite :    $x + 7 = 2,5 + 7 = 9,5$
+\item On compare :  $9,5 = 9,5$
+\end{enumerate}
+Conclusion :	$2,5$ est LA solution de l'équation $5x – 3 = x + 7$. Elle est unique.
+\end{Ex}
+
+\subsection{Mathématisation et résolution d'un problème}
+\begin{shaded}
+Alfred passe un examen comportant trois épreuves notées chacune sur $20$ : les mathématiques coefficient $4$, le français coefficient $3$ et l'anglais coefficient $2$.\\
+Il a obtenu $12$ en mathématiques et $9$ en français.\\
+Avec quelle note en anglais la moyenne d'Alfred sera-t-elle égale à $10$ ?
+\end{shaded}
+
+On peut résoudre un tel problème en suivant les étapes ci-dessous.
+\begin{enumerate}
+\item \textbf{Choix de l'inconnue}
+L'inconnue est la note d'anglais. 
+Désignons cette inconnue par $x$ par exemple.
+\begin{Rq}
+C'est la question du problème
+qui permet de choisir l'inconnue.
+\end{Rq}
+\item \textbf{Mise en équation du problème}
+On doit avoir :  $\frac{12 \times 4+9 \times 3 +x \times 2}{4+3+2}= 10$
+\begin{Rq}
+Ce sont les informations relevées
+dans le texte et dans la question qui permettent de mettre le problème en équation.
+\end{Rq} 
+\item \textbf{Résolution de cette équation}
+$\frac{12 \times 4+9 \times 3 +x \times 2}{4+3+2} \times 9  =10 \times 9$\\
+Soit $\frac{72+2x}{9} \times 9  =90$ ou encore $72+2x=90$ (on réduit le membre de gauche puis on \og  neutralise \fg{} le dénominateur)\\
+Donc $75 + 2x – 75=90 – 75$ (Puis on \og  neutralise \fg{} la constante du membre de gauche)\\
+Donc $2x=90$ et $\frac{2x}{2}=\frac{90}{2}$ (on réduit les deux membres, puis on \og  neutralise \fg{} le coefficient de $x$)\\
+Finalement $x=7,5$ (on réduit les deux membres
+une dernière fois)
+\item \textbf{Conclusion}
+Avec 7,5 en anglais, 
+la moyenne d'Alfred sera égale à $10$ (on rédige la réponse à la question posée).
+\end{enumerate}
+
+
+\subsection{Ordre}
+
+\begin{Df}
+$a \leqslant b$ signifie $a<b$ ou $a=b$\\
+De même, $a \geqslant b$ signifie $a>b$ ou $a=b$
+\end{Df}
+ 
+\begin{Ex} 	
+$7,8 \geqslant 7,09$ et $–5,4 \leqslant 3,2$\\
+On peut aussi écrire :	$–6,1 \geqslant –6,1$		et	$–6,1 \leqslant –6,1$
+\end{Ex}
+
+\begin{shaded}
+\textbf{Lecture}
+\begin{itemize}
+\item $a<b$ se lit $a$ (est \textbf{strictement}) inférieur à $b$.
+\item $a>b$ se lit$a$ (est \textbf{strictement}) supérieur à $b$.
+\item $a \leqslant b$ se lit $a$ (est) inférieur \textbf{ou égal} à $b$.
+\item $a \geqslant b$ se lit $a$ (est) supérieur
+\textbf{ou égal} à $b$.
+\end{itemize}
+\end{shaded}
+
+\begin{Rq} \textbf{Cas particuliers}
+\begin{itemize}
+\item $x<0$ se lit $x$ (est strictement)
+négatif.
+\item $x>0$ se lit $x$ (est strictement)
+positif.
+\item $x \leqslant 0$ se lit $x$ (est) négatif
+ou nul.
+\item $x \geqslant 0$ se lit $x$ (est) positif
+ou nul.
+\end{itemize}
+\end{Rq}
+
+
+\subsection{Signe de la différence}
+\begin{shaded}
+\begin{Pp}
+On peut comparer deux nombres à l'aide du \textbf{signe de leur différence}.
+Plus précisément: 
+\begin{itemize}
+\item Si $a-b<0$, alors $a<b$
+\item Si $a-b>0$, alors $a>b$
+\item Si $a-b\leqslant 0$, alors $a\leqslant b$
+\item Si $a-b\geqslant 0$, alors $a\geqslant b$
+\end{itemize}
+\end{Pp}
+\end{shaded}
+
+
+\begin{Ex}
+Comparons $S = 3\pi + 0,4$ et $T = \pi^2$ à l'aide de la calculatrice.\\
+$S – T = 3\pi + 0,4 – \pi^2 \approx –0,04$ et comme $–0,04 < 0$\hspace{0.5cm} DONC \hspace{0.5cm}$S < T$
+\end{Ex}
+		
+\begin{Rq}
+On aurait pu étudier le signe de $T – S$.
+\end{Rq}
+				
+\subsection{Inégalités et Opérations}
+\subsubsection{Effet de l'addition et de la soustraction}
+\begin{shaded}
+\begin{Pp}
+Si on additionne ou si on soustrait un même nombre aux deux membres d'une inégalité, alors on obtient une inégalité de même sens.
+Autrement dit : ($a$, $b$ et $c$ désignent des nombres relatifs.)
+\begin{itemize}
+\item Si $a<b$, alors $a+c<b+c$ et $a-c<b-c$    	
+\item Si $a>b$, alors $a+c>b+c$ et $a-c>b-c$
+\item Si $a\leqslant b$, alors $a+c\leqslant b+c$ et $a-c\leqslant b-c$
+\item Si $a\geqslant b$, alors $a+c\geqslant b+c$ et $a-c\geqslant b-c$
+\end{itemize}
+\end{Pp}
+\end{shaded}
+
+
+\begin{Ex}
+\begin{multicols}{2}	
+$x\leqslant –3,4$\\
+Donc,$x + 3,4\leqslant –3,4 + 3,4$, soit $x + 3,4\leqslant 0$\\ 
+
+$t +\frac{7}{9} \geqslant \frac{-5}{6}$\\
+Donc $t +\frac{7}{9} –\frac{7}{9}\geqslant \frac{-5}{6}–\frac{7}{9}$, soit $t\geqslant \frac{-15}{18}–\frac{14}{18}= \frac{-29}{18}$
+\end{multicols}
+\end{Ex}
+
+
+\subsubsection{Effet de la multiplication et de la division par un nombre strictement POSITIF} 
+\begin{shaded}
+\begin{Pp}
+Si 	on multiplie ou si on divise par un même nombre \textbf{strictement positif} les deux membres d'une inégalité, alors 	on obtient une inégalité de même sens. Autrement dit : ($a$, $b$ et $c$ désignent des nombres relatifs; $c > 0$).
+\begin{itemize}
+\item Si $a<b$, alors $ac<bc$ et $\frac{a}{c} < \frac{b}{c}$    	
+\item Si $a>b$, alors $ac>bc$ et $\frac{a}{c} > \frac{b}{c}$ 
+\item Si $a\leqslant b$, alors $ac\leqslant bc$ et $\frac{a}{c}\leqslant \frac{b}{c}$
+\item Si $a\geqslant b$, alors $ac\geqslant bc$ et $\frac{a}{c}\geqslant \frac{b}{c}$     	
+\end{itemize}
+\end{Pp}
+\end{shaded}
+
+
+\begin{Ex}	
+\begin{multicols}{2}
+
+$4x\geqslant –3$\\
+Donc $\frac{4x}{4}\geqslant \frac{-3}{4}$\\
+Donc $x\geqslant \frac{-3}{4}$\\
+
+$\pi<3,15$\\
+Donc $3 \pi<3 \times 3,15$\\
+Et donc $3 \pi< 9,45$
+\end{multicols}
+\end{Ex}
+
+
+\subsubsection{Effet de la multiplication et de la division par un nombre strictement NEGATIF}
+\begin{shaded}
+\begin{Pp}
+Si 	on multiplie ou si on divise par un même nombre \textbf{strictement négatif} les deux membres d'une inégalité, alors on obtient une inégalité de sens contraire. Autrement dit : ($a$, $b$ et $c$ désignent des nombres relatifs ; $c < 0$).
+\begin{itemize}
+\item Si $a<b$, alors $ac>bc$ et $\frac{a}{c} > \frac{b}{c}$    	
+\item Si $a>b$, alors $ac<bc$ et $\frac{a}{c} < \frac{b}{c}$ 
+\item Si $a\leqslant b$, alors $ac\geqslant bc$ et $\frac{a}{c}\geqslant \frac{b}{c}$
+\item Si $a\geqslant b$, alors $ac\leqslant bc$ et $\frac{a}{c}\leqslant \frac{b}{c}$
+\end{itemize}	
+\end{Pp}
+\end{shaded}
+
+\begin{Ex}
+\begin{multicols}{2}
+$–4x>–5$\\
+Donc $\frac{-4x}{-4}<\frac{-5}{-4}$\\
+Soit $x<\frac{5}{4}$\\
+
+$p<7$\\
+Donc $-3 \times p>-3 \times 7$\\
+Soit $-3p>-21$
+\end{multicols}
+\end{Ex}
+
+
+\subsubsection{Troncature, arrondi et encadrement}
+\begin{shaded}
+\begin{Ex}
+$\frac{355}{17}= 355 \div 17 = 20,8823529411 \ldots{}$
+\end{Ex}
+\end{shaded}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}b{#1}}
+	\newcolumntype{L}[1]{>{\raggedright\arraybackslash}b{#1}}
+	\newcolumntype{C}[1]{>{\centering\arraybackslash}b{#1}}
+\begin{tabular}{|L{3cm}||C{3cm}|C{3cm}|C{3cm}|}
+	\hline &Troncature&Arrondi&Encadrement\\
+	\hline à l'unité&$20$&$21$&$20<\frac{355}{17}<21$\\
+	\hline au dixième&$20,8$&$20,9$&$20,8<\frac{355}{17}<20,9$\\
+	\hline au centième&$20,88$&$20,88$&$20,88<\frac{355}{17}<20,89$\\
+	\hline
+\end{tabular}
+
+
+
+
+
+
+
+\newpage
+
+\section{Quelques exercices}
+\begin{Exo}
+Résoudre les équations suivantes :
+\begin{multicols}{3}
+\begin{enumerate}
+\item $7x=5$
+\item $2x+7=3$
+\item $3x-2=6x+8$
+\end{enumerate}
+\end{multicols}
+\end{Exo}
+
+\begin{Exo}
+Résous les équations suivantes :
+$
+3x+5=6x-3\kern2cm-4x+5=2x-7\kern2cm2(x-5)=3x+6
+$
+\end{Exo}
+
+\begin{Exo}
+Résous les équations suivantes :
+$
+4x+3=2(x+3)-1\kern2cm (2x+1)(x-2)=2x^2+3\kern2cm \frac{x+1}3=\frac{-3x+2}2
+$
+\end{Exo}
+
+\begin{Exo}
+En additionnant la moitié et le triple d'un nombre, on trouve 98.
+\par Quel est ce nombre ?
+\end{Exo}
+
+\begin{Exo}
+Dans une assemblée, les $\dfrac34$ des participants sont des
+femmes, les $\dfrac23$ des hommes portent des lunettes et l'on
+compte 10 hommes qui ne portent pas de lunettes.
+\par Combien y-a-t-il de participants au total ?
+\end{Exo}
+
+\begin{Exo}
+Jean a obtenu 18 ; 09 ; 12 en Devoir Maison (coefficient 1) et 08 en
+Devoir Surveillé (coefficient 3). Combien doit-il obtenir au prochain
+Devoir Surveillé pour avoir 10 de moyenne ?  De quel pourcentage
+a-t-il réduit ou augmenté sa note de Devoir Surveillé ?
+\end{Exo}
+
+
+\begin{Exo}
+Un chevalier voulait se rendre au château d'une princesse. Il
+devait arriver à 17h00 exactement. Habile en mathématiques, il
+calcula s'il voyageait 15 kilomètres par heure, il arriverait une
+heure trop tôt.
+
+S' il voyageait 10 kilomètres par heure, il arriverait une heure
+trop tard.\\
+\begin{enumerate}
+    \item Quelle est l' heure de son départ?
+    \item Quelle distance voyagea-t-il?
+    \item \`A quelle vitesse voyageait-il?
+\end{enumerate}
+\end{Exo}
+
+\begin{Exo}
+\begin{leftbar}
+Le nouveau gérant d'un restaurant s'aperçoit qu'il possède des
+carafes, des petites et des grandes, dont les contenances ne sont pas
+indiquées.
+\\\og Bof, ce n'est pas grave, je vais attendre ce soir lors du 1\ier\
+service.\fg
+\\En effet, lors de ce service, il s'aperçoit que les 1\,000~cL de vin
+qu'il avait préparé ont été vendus à l'aide de 5 petites carafes et 10
+grandes.
+\\Fier, le restaurateur en conclue qu'une petite carafe contient 50~cL
+et une grande 75~cL.
+\\Mais, son fils, bon en calcul mental, lui fait remarquer que si la
+petite contient 30~cL et la grande 85~cL alors l'expérience serait
+vraie aussi.
+\\Le gérant, perplexe, fait alors une nouvelle expérience et il
+s'aperçoit que deux petites carafes remplissent une grande.
+\\\og Alors, là, j'ai trouvé !\fg.
+\end{leftbar}
+Peux-tu expliquer pourquoi ?
+\end{Exo}
+
+\begin{Exo}
+\begin{center}
+  \psset{unit=5mm}
+  \begin{pspicture}(0,-1)(9,6)
+    \psline(0,0)(9,0)(9,6)(4,6)(4,0)
+    \psline(0,0)(4,4)
+    \pcline[offset=-5pt]{<->}(0,0)(4,0)
+    \Bput{4 cm}
+    \pcline[offset=-5pt]{<->}(4,0)(9,0)
+    \Bput{5 cm}
+    \pcline[offset=-5pt]{<->}(4,0)(4,4)
+    \Bput{$x$}
+    \pcline[offset=5pt]{<->}(4,4)(4,6)
+    \Aput{2 cm}
+    \psline(8.6,0)(8.6,0.4)(9,0.4)
+    \psline(8.6,6)(8.6,5.6)(9,5.6)
+    \psline(4,5.6)(4.4,5.6)(4.4,6)
+    \psline(3.6,0)(3.6,0.4)(4,.4)
+  \end{pspicture}
+\end{center}
+La figure ci-dessus est composée d'un rectangle et d'un triangle
+rectangle. $x$ désigne une mesure exprimée en centimètres.
+
+%\begin{enumerate}
+%  \item Exprimer les dimensions (largeur et longueur) du
+%  rectangle, en fonction de $x$.
+%  \item Exprimer l'aire du rectangle en fonction de $x$.
+%  \item Exprimer l'aire du triangle en fonction de $x$.
+%  \item Exprimer l'aire de la figure en fonction de $x$.
+%  \item \'Ecrire une équation qui traduit la phrase : <<~l'aire de la
+%  figure vaut $26,1\,\mathrm{cm}^2$.~>>
+%  \item
+ Quelle valeur doit-on donner à $x$ pour que l'aire de la
+  figure soit égale à $26,1\,\mathrm{cm}^2$ ?
+%\end{enumerate}
+\end{Exo}
+
+
+\begin{Exo}
+%Exercice qui peut être repris en posant x=nb pièces de 20 c. On arrive
+%alors au calcul : (-11.1/-0.3)
+Renaud a mis dans une boîte des pièces de 20 centimes et des pièces de
+50 centimes. Il y a 100 pièces en tout.
+%\begin{enumerate}
+%  \item S'il y avait 30 pièces de 50 centimes, combien y aurait-il de
+%  pièces de 20 centimes ? Combien d'argent cela ferait-il en tout dans
+%  la boîte ?
+%  \item Il n'y a pas 30 pièces de 50 centimes dans la boîte. Nous
+%  désignerons le nombre de pièces de 50 centimes par la lettre $x$.\\
+%  Exprimer, en fonction de $x$, le nombre de pièces de 20 centimes.
+%  \item Exprimer, en fonction de $x$ la somme d'argent dans la boîte.
+%  \item 
+
+Il y a 38,90\euro{} dans la boîte. Trouver le nombre de pièces
+  de 50 centimes.
+%\end{enumerate}
+\end{Exo}
+
+\begin{Exo}
+\begin{center}
+  \psset{unit=5mm}
+  \begin{pspicture}(4,4)
+    \psline(0,0)(4,0)(4,4)(0,4)(0,0)
+    \psline(0,0)(2.7,4)
+    \pcline[offset=5pt]{<->}(0,4)(2.7,4)\Aput{$x$}
+    \pcline[offset=-5pt]{<->}(4,0)(4,4)\Bput{10 cm}
+    \uput[ul](0,4)A\uput[dl](0,0)B\uput[dr](4,0)C\uput[ur](4,4)D
+    \uput[ur](2.7,4)E
+  \end{pspicture}
+\end{center}
+ABCD est un carré et E est un point sur le segment [AD].
+%On note $x$, la longueur AE, exprimée en centimètres.
+%\begin{enumerate}
+%  \item Exprimer, en fonction de $x$, l'aire du triangle ABE.
+%  \item 
+
+Quelle valeur faut-il donner à $x$ pour que l'aire du triangle
+  soit égale au quart de l'aire du carré ?
+%\end{enumerate}
+\end{Exo}
+
+\begin{Exo}
+Nadège dit : <<~Dans 11 ans, mon âge sera égal au double de l'âge que
+j'avais il y a 13 ans.~>>\\
+%On désignera par $x$, l'âge de Nadège aujourd'hui.
+%\begin{enumerate}
+%  \item Exprimer en fonction de $x$, l'âge qu'aura Nadège dans 11 ans.
+%  \item Exprimer en fonction de $x$, l'âge qu'avais Nadège il y a 13
+%  ans.
+%  \item \'Ecrire une équation qui correspond à l'affirmation de
+%  Nadège.
+%  \item
+
+ Quel âge a Nadège ?
+%\end{enumerate}
+\end{Exo}
+
+\begin{Exo}
+\begin{center}
+  \psset{unit=5mm}
+  \begin{pspicture}(12,3.5)
+    \psline(0,0)(10,0)(10,1)
+    \psline(0,1)(11,1)(11,4)(6,4)(6,1)(0,1)(0,0)
+    \pcline[offset=-5pt]{<->}(10,1)(11,1)\bput[2pt]{:U}(.8){1 cm}
+    \pcline[offset=-5pt]{<->}(11,1)(11,4)\Bput{3 cm}
+    \pcline[offset=5pt]{<->}(0,1)(6,1)\Aput{6 cm}
+    \pcline[offset=5pt]{<->}(0,0)(0,1)\Aput{1 cm}
+    \pcline[offset=5pt]{<->}(6,1)(10,1)\Aput{$x$}
+  \end{pspicture}
+\end{center}
+La figure ci-dessus est composée de deux rectangles. Les dimensions
+sont indiquées sur la figure. L'une d'elle est notée $x$ et est exprimée en centimètres.\\
+Quelle valeur peut-on donner à $x$ pour les deux rectangles aient la
+même aire ?
+\end{Exo}
+
+\begin{Exo}
+Dans une boulangerie, un pain au chocolat coûte 0,30\euro\ de plus
+qu'un croissant.\\
+On paye le même prix pour 10 croissants et 4 pains au chocolat que
+pour 4 croissants et 8 pains au chocolat.\\
+Quel est le prix d'un croissant ?
+\end{Exo}
+
+\begin{Exo}
+\begin{center}
+  \begin{pspicture}(-.25,-.25)(5,2.25)
+\psline(0,0)(3,0)%@3= segment [AB]
+\psline(3,0)(3,2)%@5= segment [BC]
+\psline(2.925,0.9)(3.075,0.9)%Marqueur : 2 traits
+\psline(2.925,1)(3.075,1)%Marqueur : 2 traits
+\psline(3,2)(0,2)%@7= segment [CD]
+\psline(0,2)(0,0)%@8= segment [DA]
+\psline(3,2)(4.732051,1)%@13= segment [CE]
+\psline(3.816923,1.614952)(3.741923,1.485048)%Marqueur : 2 traits
+\psline(3.903525,1.564952)(3.828525,1.435048)%Marqueur : 2 traits
+\psline(4.732051,1)(3,0)%@14= segment [EB]
+\psline(3.990128,0.485048)(3.915128,0.614952)%Marqueur : 2 traits
+\psline(3.903525,0.435048)(3.828525,0.564952)%Marqueur : 2 traits
+%\psdots(0,0)%Point A
+\uput{-3pt}[u](-0.175,-0.175){A}
+%\psdots(3,0)%Point B
+\uput{-3pt}[u](3,-0.25){B}
+%\psdots(3,2)%Point C
+\uput{-3pt}[u](3.1,2.25){C}
+%\psdots(0,2)%Point D
+\uput{-3pt}[u](-0.175,2.175){D}
+%\psdots(4.732051,1)%Point E
+\uput{-3pt}[u](4.975,1){E}
+\pcline[offset=5pt]{<->}(0,2)(3,2)\Aput{8 cm}
+\end{pspicture}
+\end{center}
+ABCD est un rectangle.\\
+Quelle doit-être la longueur du côté du triangle équilatéral pour que
+le rectangle et le triangle aient le même périmètre ?
+\end{Exo}
+
+\begin{Exo}
+Au magasin, on achète des packs de bouteilles de jus d'orange.
+
+On achète 10 packs à moitié prix et encore 7 packs avec 7 bons de
+réduction de 2\euro. On paye en tout 55,60\euro.
+
+Quel est le prix d'un pack (sans réduction) ?
+\end{Exo}
+
+\begin{Exo}
+{\em Toutes les valeurs sont en centimètres.}\\
+Soit $ABC$ un triangle rectangle en $A$. On suppose que $3<AB<5$ et 
+$4<AC<6$.
+\begin{enumerate}
+\item Donne un encadrement de $BC$.
+\item Donne un encadrement du périmètre du triangle.
+\item Donne un encadrement de l'aire du triangle.
+\end{enumerate}
+\end{Exo}
+
+\begin{Exo}
+La mesure du rayon d'un disque est de 3,5~cm. Sachant que
+$3,14<\pi<3,15$, trouve un encadrement au centième du périmètre et de
+l'aire de ce cercle.
+\end{Exo}
+
+\end{document}

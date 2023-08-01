@@ -1,0 +1,483 @@
+\chapter{Arithmétique}
+{https://sacado.xyz/qcm/parcours_show_course/0/117129}
+{
+ \begin{CpsCol}
+\textbf{Les savoir-faire du parcours}
+ \begin{itemize}
+ \item Utiliser les notations et le vocabulaire fonctionnels.
+ \item Passer d'un mode de représentation d'une fonction à un autre.
+ \item Déterminer, à partir de tous les modes de représentation, l'image d'un nombre.
+ \item Déterminer un antécédent à partir d'une représentation graphique ou d'un tableau de valeurs d'une fonction.
+ \item Déterminer de manière algébrique l'antécédent par une fonction, dans des cas se ramenant à la résolution d'une équation du premier degré.
+ \end{itemize}
+ 
+ \end{CpsCol}
+ 
+ \begin{His}
+ 
+\begin{wrapfigure}[15]{r}{3.6cm}
+\vspace{-7mm}
+\includegraphics[scale=0.5]{FIG//liebniz.jpg}
+\begin{center}
+ G. W. \textsc{Leibniz}
+ \end{center} 
+\end{wrapfigure}
+
+\textbf{\textsc{Gottfried Wilhelm Leibniz}},  dans  deux  textes  en  latin  des  « \textit{Acta  cruditorum}  »  de  $1673$  et  $1692$,  use  du vocable  «  \textit{functio, functiones} », mot  forgé  à  partir  du  participe  passé  du  verbe \textit{fungor}   (accomplir,   remplir   une  charge).  Puis  il  francise  le  mot.  Dans  le  « \textit{Journal des sçavans} » de $1694$, il écrit (en   français)   :   «   entre   deux  fonctions   quelconques de la ligne AC... ». Et plus  loin  suit  une  définition  en  lien  avec  la  question    étudiée    alors    :  " J'appelle fonction  toutes  les  portions  de  lignes qu'on  fait  en  menant... ".  Ailleurs  il  désigne,  toujours  en  français,  l'abscisse,  l'ordonnée,  la  corde  comme  fonctions  d'une courbe.
+
+\vspace{0.4cm}
+Le terme fut alors repris par d'autres. En juillet $1698$,  Leibniz écrit à  Jean Bernoulli :   «   J'ai   plaisir   à   vous   voir   
+employer  le  terme  fonction  dans  mon  sens  ».  Et  Bernoulli  de  lui  répondre  de  Groningen  au  mois  d'aout  «  Pour  noter  
+une   fonction   d'une   certaine   quantité indéterminée $x$, j'aime  utiliser  la majuscule  correspondante  $X$  ou  la lettre  grecque $\zeta$. On peut voir immédiatement de quelle indéterminée dépend la fonction. » 
+
+\vspace{0.4cm}
+
+Le  concept  perd  alors,  petit  à  petit,  son  caractère géométrique immédiat. Dans  les  « \textit{ Mémoires  de  l'Académie  des 
+Sciences} », en $1718$, Bernoulli écrit : 
+
+« DÉFINITION  :    On  appelle  ici FONCTION  d'une  grandeur  variable, une   quantité   composée   de   quelque   manière  que  ce  soit  de  cette  grandeur  variable et de constantes. » 
+
+\vspace{0.4cm}
+
+Euler prend la suite et, dans une note de l’Académie de Saint Petersbourg ($1734$), il  introduit  la  notation  $f\left(x \right)$ pour : « un fonction arbitraire de $x$».
+ \end{His}
+
+}
+
+
+
+
+\begin{pageCours}
+
+
+
+
+\section{Notion de fonction}
+
+
+\begin{DefT}{En fonction de\index{En fonction de}}
+Lorsqu'une relation associe deux quantités, on dit que l'on peut exprimer une quantité \textbf{en fonction de} l'autre. \\ En général, on peut alors établir une formule qui lie ces deux quantités.
+\end{DefT}
+
+\begin{Ex}
+1 pain au chocolat coûtent 1,45 \euro{} donc $n$ pains au chocolats coûtent $1,45n$. On peut dire que le prix $p$ de $n$ pains au chocolat s'obtient par la formule $p=1,45n$. Le prix est \textbf{en fonction du} nombre de pains au chocolats.
+\end{Ex}
+
+
+\begin{DefT}{Fonction}
+Une \textbf{fonction} \index{Fonction} est un procédé qui à un nombre donné associe un unique nombre. La fonction est explicitée par une expression littérale en fonction de la variable.
+ 
+On écrit $f : x \longmapsto f(x)$ et on lit $f$ est la fonction qui à $x$ associe le nombre $f(x)$. $x$ est appelée la \textit{variable} \index{variable} de la fonction.
+\end{DefT}
+
+
+\begin{Ex}
+Un carré a pour coté $x$. Son périmètre est $\mathscr P = 4x$. On préfère écrire $\mathscr{P}(x) = 4x$. $x$ est la variable car pour chaque valeur de $x$ positive, on obtient une valeur du périmètre. Le périmètre est en fonction de $x$.
+\end{Ex}
+
+
+\begin{Rq} 
+Une fonction peut être définie de 4 façons : Une expression, un graphique, un algorithme ou un tableau.
+\end{Rq}
+
+
+ 
+\section{Image, antécédent}
+
+
+\begin{DefT}{Image et antécédent}
+L'\textbf{image} \index{Image} d'un nombre par $f$ est l'unique nombre obtenu après le procédé calculatoire de la fonction.\\ Lorsque $f : a \longmapsto b$, on dit que $b$ est l'image de $a$ par $f$. On note alors $f(a)=b$. \\
+$a$ est appelé un \index{Antécédent} \textbf{antécédent} de $b$ par $f$.
+\end{DefT}
+
+\begin{Ex}
+Un triangle équilatéral de coté 4 cm a un périmètre égal à 12 cm.
+
+On peut alors dire que 12 est l'\textbf{image} de 4 par la fonction $f$, ou $f : 4 \mapsto 12$ ou encore l'\textbf{image} de 4 par la fonction $f$ est $12$. 
+
+Mais aussi : $4$ est un antécédent de 12 par $f$.
+
+Plus généralement, $f : x \mapsto 3x$. L'expression de la fonction est ou $f(x)=3x$. 
+
+$f(x)$ est l'image de $x$ par la fonction $f$.\\
+La fonction $f$ est la fonction qui a une longueur du coté d'un triangle équilatéral associe son périmètre.
+\end{Ex}
+
+\begin{Ety}
+\textbf{Antécédent} est composé de anté - cédent : qui vient avant le procédé. \\Un antécédent vient donc avant la flèche qui symbolise  le procédé. Antécédent $\mapsto$  image.
+\end{Ety}
+ 
+
+
+
+
+
+\end{pageCours} 
+\begin{pageAD} 
+ 
+
+\Sf{Utiliser les notations et le vocabulaire fonctionnels.}
+ 
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+\begin{enumerate}[leftmargin=*]
+\item Exprimer le périmètre $\mathscr P$ d'un carré \textbf{en fonction de} la longueur d'un coté $c$. \point{1}
+\item La largeur d'un rectangle est 3 cm. Exprimer le périmètre $\mathscr P$ de ce rectangle \textbf{en fonction de} sa longueur $L$.\point{2}
+\end{enumerate}
+\end{ExoCad}
+
+ 
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+Un rectangle a pour dimension $x$ cm de longueur sur $x-5$ cm de largeur. 
+\begin{enumerate}[leftmargin=*]
+\item Quelle est la valeur la plus petite pour $x$ ? \point{2}
+\item Déterminer l'aire $\mathcal{A}$ de ce rectangle en fonction de $x$.  \point{1}
+\item Déterminer \textbf{l'image} de 7 par $\mathcal{A}$.  \point{1}
+\end{enumerate}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-18}
+\end{ExoCad}
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Traduire les phrases suivantes par une expression mathématique et les expression mathématiques par une phrase.
+
+\begin{enumerate}[leftmargin=*]
+\item $5$ est l'image de $2$ par la fonction $f$. \point{1}
+\item L'image de $-3$ par la fonction $g$ est égale à $6$.\point{1}
+\item $6$ est un antécédent de $0$ par $h$. \point{1}
+\item $f(3)=5$. \point{1}
+\item $f(-6)=1$.\point{1}
+\end{enumerate}
+
+\end{ExoCad}
+
+
+
+\end{pageAD}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursu} 
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+
+\begin{ExoCu}{Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+Traduire chaque expression mathématique par une phrase contenant le mot \textbf{image}.
+
+\begin{enumerate}[leftmargin=*]
+\item $f(3)=5$. \point{1}
+\item $f(-6)=1$.\point{1}
+\item $f(a)=b$. \point{1}
+\end{enumerate}
+\end{ExoCu}
+
+
+\begin{ExoCu}{Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+Traduire chaque expression mathématique par une phrase contenant le mot \textbf{antécédent}.
+
+\begin{enumerate}[leftmargin=*]
+\item $f(3)=5$. \point{1}
+\item $f(-6)=1$.\point{1}
+\item $f(a)=b$. \point{1}
+\end{enumerate}
+\end{ExoCu}
+
+
+ \begin{ExoCu}{Modéliser. Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-24}
+\end{ExoCu}
+
+
+
+ 
+\end{pageParcoursu}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{pageParcoursd} 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{ExoCd}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ Soit $f$ la fonction définie par $f(x)=\dfrac{x+5}{x^2}$
+\begin{enumerate}
+\item Calculer l'image de $4$ par $f$ \point{1}
+\item Calculer $f \left(   \dfrac{1}{2}  \right) $ \point{1}
+\item Calculer $f \left( \dfrac{2}{3}  \right)$ \point{1}
+\end{enumerate} 
+\end{ExoCd}
+ 
+
+\begin{ExoCd}{Modéliser. Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Voici un algorithme. 
+
+\begin{tabular}{|l|}
+\hline 
+Choisir un nombre \\ 
+Ajouter $5$ \\ 
+Calculer le carré de la somme obtenue \\ 
+\hline  
+\end{tabular} 
+
+  
+
+\begin{enumerate}
+\item Complète le tableau
+
+\begin{tabular}{|c|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|}
+\hline 
+$x$ & $-1$ & $0$ & $\dfrac{1}{3}$ & $3$ & $a$ \\ 
+\hline 
+$f(x)$ &  &  &   & &   \\ 
+\hline 
+\end{tabular} 
+
+\vspace{0.2cm}
+\item Donner l'image de $0$ par $f$ \point{1}
+\item Donner un antécédent de $64$ par $f$ \point{1}
+\item Exprimer $f(x)$ en fonction de $x$. \point{1}
+\end{enumerate} 
+\end{ExoCd}
+ 
+ 
+\begin{ExoCd}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+
+Monsieur Philibert voyage un mois à travers Costa Rica. A l'arrivée à l'aéroport, il reçoit un sms sur son smartphone. 
+
+\begin{center}
+\begin{description}
+\item  0,85 \euro{} par sms
+\item  1,95 \euro{} par appel
+\end{description}
+\end{center}
+
+Pour bénéficier de ces tarifs, il paie un abonnement mensuel de 9,90 \euro{} à son opérateur français.
+
+\begin{enumerate}[leftmargin=*]
+\item Quel est le prix que M. Philibert va payer pour 10 appels passés durant son voyage ? \point{3}
+\item 
+\begin{enumerate}
+\item Exprimer $f(n)$ qui détermine le coût de $n$ appels dans le mois durant lequel il visite au Costa Rica. \point{2}
+\item Calculer alors l'image de 10 par $f$. \point{1}
+\end{enumerate}
+\end{enumerate}
+
+\end{ExoCd}
+
+ \begin{ExoCd}{Calculer.}{1234}{0}{0}{0}{0}{0}
+Le volume d'une boule s'exprime en fonction de son rayon par $\mathcal{V}(r) = \dfrac{4}{3} \pi\times r^3$. 
+
+Calculer le volume d'une boule de rayon $5$ cm. 
+
+\point{3}
+\end{ExoCd}
+ 
+
+\begin{ExoCd}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-19}
+\end{ExoCd}
+ 
+ 
+ 
+\begin{ExoCd}{DNB 2022 - Représenter.}{1234}{0}{0}{0}{0}{0}
+
+\begin{minipage}{0.3\linewidth}
+
+Voici un extrait de feuille de calcul sur un tableur.
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+  & \texttt{A} & \texttt{B} & \texttt{C} \\ 
+\hline 
+1 & $x$ & $-2$ & $-1$ \\ 
+\hline 
+2 & $f(x)$ &   &   \\ 
+\hline 
+\end{tabular} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.65\linewidth}
+Dans cette feuille de calcul extraite d’un tableur, entourer la formule à saisir dans la cellule \texttt{B2} avant de l'étirer vers la droite.
+
+\begin{tabular}{ c c c }
+\texttt{=2*A1+3} & \texttt{=2*B1+3} &  \texttt{=2*(-2)+3}  \\ 
+\end{tabular}
+\end{minipage}
+\end{ExoCd}
+ 
+
+ 
+ 
+ 
+ 
+ \begin{ExoCd}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+\begin{minipage}{0.5\linewidth}
+On considère le programme de calcul ci-contre :
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+
+\begin{tabular}{c}
+ 
+Nombre de départ \\ 
+ $\Downarrow$ \\ 
+Soustraire 7 \\ 
+Multiplier par 5. \\ 
+Soustraire le double du nombre de départ\\  
+$\Downarrow$ \\ 
+Résultat\\ 
+ 
+\end{tabular} 
+
+
+\end{minipage}
+
+\begin{enumerate}
+\item Montrer que si le nombre de départ est $10$, le résultat obtenu est $-5$. \point{3}
+\item On note $x$ le nombre de départ auquel on applique ce programme de calcul. 
+Parmi les expressions suivantes, quelle est celle qui correspond au résultat du programme de calcul ? 
+
+
+\begin{tabular}{cc}
+
+Expression A : $x-7 \times 5-2x$ &Expression C : $5(x-7)-2x$ \\
+Expression B : $5(x -7)- x^2$& Expression D : $5x-7-2x$\\
+\end{tabular} 
+
+\end{enumerate}
+
+\end{ExoCd} 
+ 
+ 
+ 
+\end{pageParcoursd}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcourst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ \input{CHAPITRES/notions_de_fonctions/NF-4}
+ 
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Modéliser. Calculer.}{1234}{2}{0}{0}{0}{0}
+ 
+ 
+ \input{CHAPITRES/notions_de_fonctions/NF-10}
+ 
+
+\end{ExoCt}
+ 
+
+ 
+\end{pageParcourst}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Auto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAuto} 
+
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+  \input{CHAPITRES/notions_de_fonctions/NF-7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{ExoAuto}
+
+
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ Une boutique en ligne vend des photos et affiche les tarifs suivants :
+
+ \begin{tabular}{|c|c|}
+ \hline 
+ Nombre de photos commandées & Prix à payer \\ 
+ \hline 
+De 1 à 100 photos & 0,17 \euro{} par photo \\ 
+ \hline 
+Plus de 100 photos & Plus de 100 photos 17 \euro{} pour l’ensemble des 100 premières photos
+\\  
+  & et 0,13 \euro{} par photo supplémentaire  \\ 
+ \hline 
+ \end{tabular} 
+
+\begin{enumerate}
+\item 
+
+\begin{enumerate}
+\item Quel est le prix à payer pour $35$ photos ?\point{2}
+\item  Vérifier que le prix à payer pour $150$ photos est $23,50$ \euro{}. \point{2}
+\item  On dispose d'un budget de $10$ \euro{}. Combien de photos peut-on commander au maximum ? \point{3}
+\end{enumerate}
+
+\item  On a commencé à construire un programme qui doit permettre de calculer le prix à payer en
+fonction du nombre de photos commandées :
+
+\includegraphics[scale=1]{FIG/scratch_fonction_cours.jpg} 
+
+Par quelles valeurs peut-on compléter les instructions des lignes 4, 5 et 8 pour que
+le programme permette de calculer le prix à payer en fonction du nombre de photos
+commandées ?
+
+\end{enumerate}
+
+
+\end{ExoAuto}
+
+  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \begin{ExoAuto}{Chercher.}{1234}{2}{0}{0}{0}{0}
+ 
+  \input{CHAPITRES/notions_de_fonctions/NF-51bis}
+ 
+ \end{ExoAuto}
+ 
+ 
+\end{pageAuto}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Brouillon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{pageBrouillon} 
+ 
+\ligne{32}
+
+
+
+\end{pageBrouillon}

@@ -1,0 +1,49 @@
+
+On donne la fonction $f$ définie par le programme de calcul suivant, ainsi que sa  représentation $\mathscr{C}_f$ dans un repère orthogonal 
+\begin{description}
+\item[•] Choisir un nombre.
+\item[•]  L’élever au cube.
+\item[•]  Lui soustraire le double du carré du nombre de départ.
+\item[•]  Ajouter 3.
+\item[•]  Donner le résultat.
+\end{description}
+
+
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-3.4,-0.74) grid (3.24,4.28);
+\draw[->,color=black] (-3.4,0.) -- (3.24,0.);
+\foreach \x in {-3.,-2.,-1.,1.,2.,3.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-0.74) -- (0.,4.28);
+\foreach \y in {,1.,2.,3.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-3.4,-0.74) rectangle (3.24,4.28);
+\draw[line width=2.pt,color=qqwuqq,smooth,samples=100,domain=-3.4:3.24] plot(\x,{(\x)^(3.0)-2.0*(\x)^(2.0)+3.0});
+\begin{scriptsize}
+\draw[color=qqwuqq] (-1.26,-4.73) node {$f$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+
+\begin{enumerate}
+\item  Recopie et complète le tableau suivant.
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+$x$ & $-3$ & $-2$ & 0 & 1 & 2 & 3 & 10 \\ 
+\hline 
+$f(x)$ & 0 &  &  &  &  &  &  \\ 
+\hline 
+\end{tabular} 
+\item  1 a-t-il des antécédents par $f$ ? Lesquels éventuellement ? Justifie ta réponse.
+\item  Donner l'expression algébrique de $f(x)$.
+\item  Placer dans le repère ci-dessus le point M( 0,5 ; 2,5 ). Ce point semble-t-il appartenir à la courbe $\mathscr{C}_f$ ?
+\item Calculer $f\left( \frac{1}{2} \right)$. Que peut-on conclure quant à la question précédente ?
+\item Déterminer graphiquement un antécédent par $f$ de 4 avec la précision permise par le graphique.
+\item Peut-on répondre à la question précédente autrement que graphiquement ?
+\end{enumerate}

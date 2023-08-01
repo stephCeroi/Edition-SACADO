@@ -1,0 +1,35 @@
+
+\begin{enumerate}
+\item Complète le tableau de proportionnalité.
+
+\begin{center}
+\begin{tabular}{|c|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|}
+\hline 
+1 & 2 & 3 & 6 & 8 \vplus \\ 
+\hline 
+0,5 &  &  &  &  \vplus \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\item Place dans un repère les points dont l'abscisse est donnée par la première ligne et dont l'ordonnée correspond au  nombre sur la seconde ligne et même colonne.
+
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=0.5cm] (-1.04,-0.5) grid (8.78,7.24);
+\draw[->,color=black] (0.,0.) -- (8.78,0.);
+\foreach \x in {,1.,2.,3.,4.,5.,6.,7.,8.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,0.) -- (0.,7.24);
+\foreach \y in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.,4.5,5.,5.5,6.,6.5,7.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-1.04,-0.5) rectangle (8.78,7.24);
+\end{tikzpicture}
+
+\item Que dire de cette représentation graphique ?
+
+\Point{3}
+
+
+\end{enumerate}

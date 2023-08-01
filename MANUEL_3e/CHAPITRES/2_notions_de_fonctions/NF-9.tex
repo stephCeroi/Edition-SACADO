@@ -1,0 +1,21 @@
+
+La tension $U$ et l'intensité électrique $I$ d'un circuit électrique sont liées par la formule $P=UI$ où $P$ est la puissance électrique. Le graphique suivant représente la tension (volts) en fonction de l'intensité (ampères).
+
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.18070626908289394cm,y=0.18070626908289394cm]
+\draw [color=cqcqcq,, xstep=0.9035313454144698cm,ystep=0.9035313454144698cm] (-5.624853702204097,-5.383969657868255) grid (70.8304766128248,51.98251348046706);
+\draw[->,color=black] (-5.624853702204097,0.) -- (70.8304766128248,0.);
+\foreach \x in {-5.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.}
+\draw[->,color=black] (0.,-5.383969657868255) -- (0.,51.98251348046706);
+\foreach \y in {-5.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.}
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-5.624853702204097,-5.383969657868255) rectangle (70.8304766128248,51.98251348046706);
+\draw[line width=1.2pt,color=qqwuqq,smooth,samples=100,domain=-5.624853702204097:70.8304766128248] plot(\x,{220.0/(\x)});
+\begin{scriptsize}
+\draw[color=qqwuqq] (-35.3075113539212,-6.88309378169235) node {$f$};
+\draw (65.3075113539212,-0.68309378169235) node {$Intensité$};
+\draw (-5.3075113539212,50.68309378169235) node {$Tension$};
+\end{scriptsize}
+\end{tikzpicture}
+

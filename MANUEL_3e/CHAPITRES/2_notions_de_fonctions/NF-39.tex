@@ -1,0 +1,58 @@
+
+\begin{enumerate}
+\item Le bar et le P.S.I. (Pound per Square Inch ou livre par pouce carré) sont deux unités utilisées pour mesurer la pression.
+
+Le graphique ci-dessous donne la correspondance entre ces 2 unités.
+
+\begin{center}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.12018145248085119cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=0.600907262404256cm,ystep=0.5cm] (-7.163161855367556,-0.8000959580153534) grid (92.68585604456163,6.322648135186206);
+\draw[->,color=black] (-7.163161855367556,0.) -- (92.68585604456163,0.);
+\foreach \x in {-5.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,85.,90.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-0.8000959580153534) -- (0.,6.322648135186206);
+\foreach \y in {-0.5,0.5,1.,1.5,2.,2.5,3.,3.5,4.,4.5,5.,5.5,6.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-7.163161855367556,-0.8000959580153534) rectangle (92.68585604456163,6.322648135186206);
+\draw [color=qqqqff] (0.,0.)-- (80.,5.5);
+\draw (61.71036753036502,0.47744782282915044) node[anchor=north west] {Pression en P.S.I.};
+\draw (0.6980416690687056,-45.8116384831122) node[anchor=north west] {Distance parcourue (en km)};
+\draw (1.0500358567300305,5.465118748044002) node[anchor=north west] {Pression en bar};
+\end{tikzpicture}
+\end{center}
+
+Avant de prendre la route, Léa vérifie la pression des pneus de sa voiture. La pression conseillée sur le manuel du véhicule est de 36 P.S.I.
+
+Déterminer à l'aide du graphique la pression conseillée en bar. Aucune justification n'est attendue.
+\item Léa se rend à Brest en prenant la route N 12 qui passe par Morlaix. Alors qu'elle se trouve à 123 km de Brest, elle voit le panneau-ci-dessous 
+
+\begin{center}
+\definecolor{qqqqcc}{rgb}{0.,0.,0.8}
+\definecolor{ffffff}{rgb}{1.,1.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(20.899845319334595,0.7846838684243624) rectangle (24.103270085004592,3.263512463010264);
+\fill[color=ffqqqq,fill=ffqqqq,fill opacity=1.0] (22.,3.) -- (22.,2.5) -- (22.8,2.5) -- (22.8,3.) -- cycle;
+\fill[color=qqqqcc,fill=qqqqcc,fill opacity=0.9] (21.,2.) -- (21.,1.) -- (24.,1.) -- (24.,2.) -- cycle;
+\draw [color=ffqqqq] (22.,3.)-- (22.,2.5);
+\draw [color=ffqqqq] (22.,2.5)-- (22.8,2.5);
+\draw [color=ffqqqq] (22.8,2.5)-- (22.8,3.);
+\draw [color=ffqqqq] (22.8,3.)-- (22.,3.);
+\draw [color=ffffff](22,3) node[anchor=north west] {\textbf{N2}};
+\draw [color=qqqqcc] (21.,2.)-- (21.,1.);
+\draw [color=qqqqcc] (21.,1.)-- (24.,1.);
+\draw [color=qqqqcc] (24.,1.)-- (24.,2.);
+\draw [color=qqqqcc] (24.,2.)-- (21.,2.);
+\draw [color=ffffff](21.,1.8) node[anchor=north west] {\textbf{Brest}};
+\draw [color=ffffff](21.,1.4) node[anchor=north west] {\textbf{Morlaix}};
+\draw [color=ffffff](23.,1.8) node[anchor=north west] {\textbf{123}};
+\draw [color=ffffff](23.,1.4) node[anchor=north west] {\textbf{64}};
+\end{tikzpicture}
+\end{center}
+
+Dans combien de kilomètres la distance qui la sépare de Morlaix sera la même que celle de Morlaix à
+ Brest?
+\end{enumerate}

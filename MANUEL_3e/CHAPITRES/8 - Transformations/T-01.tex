@@ -1,0 +1,65 @@
+
+
+\begin{minipage}{0.48\linewidth}
+
+
+On donne $OM =2,8$, $ON = 5,4$, $OS = 2,7$. 
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.54,-0.34) rectangle (3.64,4.54);
+\draw [line width=2.pt] (-2.,4.)-- (3.,0.);
+\draw [line width=2.pt] (-1.,1.)-- (3.,0.);
+\draw [line width=2.pt] (-0.15384615384615385,3.5384615384615383)-- (-1.,1.);
+\draw [line width=2.pt] (-2.,4.)-- (-0.15384615384615385,3.5384615384615383);
+\begin{scriptsize}
+\draw [color=black] (-2.,4.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=black] (-1.86,4.33) node {$S$};
+\draw [color=black] (3.,0.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=black] (3.14,0.33) node {$N$};
+\draw [color=black] (-1.,1.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=black] (-1.34,1.11) node {$M$};
+\draw [color=black] (-0.15384615384615385,3.5384615384615383)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=black] (-0.02,3.87) node {$T$};
+\draw [color=black] (-0.4210526315789474,2.736842105263158)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=black] (-0.18,2.91) node {$O$};
+\end{scriptsize}
+\end{tikzpicture}
+
+
+\begin{enumerate}
+\item Calculer $OT$.
+\item Par quel coefficient transforme-t-on le triangle $OMN$ en le triangle $OST$ ?
+\end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+
+
+On donne $OM =2,8$, $ON = 5,4$, $OS = 2,7$. 
+
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.6pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-1.86,-0.52)(3.5,3.82)
+\psline[linewidth=2.pt](-1.,1.)(3.,0.)
+\psline[linewidth=2.pt](0.9439024390243902,1.644878048780488)(-0.656,2.032)
+\psline[linewidth=2.pt](-1.,1.)(-0.4210526315789474,2.736842105263158)
+\psline[linewidth=2.pt](-0.4210526315789474,2.736842105263158)(3.,0.)
+\begin{scriptsize}
+\psdots[dotsize=4pt 0,dotstyle=+](3.,0.)
+\rput[bl](3.08,0.16){$N$}
+\psdots[dotsize=4pt 0,dotstyle=+](-1.,1.)
+\rput[bl](-1.4,0.94){$M$}
+\psdots[dotsize=4pt 0,dotstyle=+](-0.4210526315789474,2.736842105263158)
+\rput[bl](-0.56,2.9){$O$}
+\psdots[dotstyle=+](0.9439024390243902,1.644878048780488)
+\rput[bl](1.02,1.84){$S$}
+\psdots[dotstyle=+](-0.656,2.032)
+\rput[bl](-1.06,2.24){$T$}
+\end{scriptsize}
+\end{pspicture*}
+
+\begin{enumerate}
+\item Calculer $OT$.
+\item Par quel coefficient transforme-t-on le triangle $OMN$ en le triangle $OST$ ?
+\end{enumerate}
+\end{minipage}
+

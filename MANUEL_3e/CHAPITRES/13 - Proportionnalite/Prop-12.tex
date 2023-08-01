@@ -1,0 +1,19 @@
+
+Détermine le coefficient de proportionnalité.
+
+\begin{center}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-0.82,-0.64) grid (9.52,6.88);
+\draw[->,color=black] (0.,0.) -- (9.52,0.);
+\foreach \x in {,1.,2.,3.,4.,5.,6.,7.,8.,9.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,0.) -- (0.,6.88);
+\foreach \y in {,1.,2.,3.,4.,5.,6.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-0.82,-0.64) rectangle (9.52,6.88);
+\draw [color=qqqqff] (0.,0.04)-- (9.,6.);
+\end{tikzpicture}
+\end{center}

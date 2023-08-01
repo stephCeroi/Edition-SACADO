@@ -1,0 +1,102 @@
+\documentclass[10pt]{article}
+
+\input{../preambule}
+\input{../styles}
+\input{../bas_de_page_quatrieme} 
+ 
+%%%%%%%%%%%   Marges de pages  %%%%%%%%%%%%%%%% 
+ \usepackage{geometry}
+ \geometry{top=2cm, bottom=0cm, left=2cm , right=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Titre encadré
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{encadrementombre} {Thème 4 Proportionnalité}
+{\LARGE DTL5: Proportionnalité}\\
+
+%% Laisse la ligne vide ci-dessus
+{\Large Géométrie}
+\end{encadrementombre}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Corps du document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% \renewcommand{\arraystretch}{1.8}
+\definecolor{shadecolor}{gray}{0.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%   Hauteur de ligne  %%%%%%%%%%%%%%%%
+{\setlength{\baselineskip}{1.5\baselineskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{Exo} \textbf{(voir sesamath)}\\
+
+\includegraphics[scale=0.45]{DTL5_cor.eps}\\
+\includegraphics[scale=0.45]{DTL5_cor2.eps}   
+\end{Exo}
+
+\newpage 
+%\begin{shaded}
+\begin{Exo}\textbf{voir sesamath}
+%Dans un jardin, deux escargots partent au même instant: le premier  depuis le parc à salades vers le parc à courgettes, le second du parc à courgettes vers le parc à salades.\\
+%Chacun avance à une vitesse constante.\\
+%Lorsqu'ils se rencontrent, le premier a parcouru $2$ m de plus que le second.\\
+%Ils reprennent leur chemin un peu découragés de voir leur objectif certainement déjà bien mangé par l'autre escargot... Du coup, ils se pressent moins et diminuent leur vitesse de moitié.\\
+%Après leur rencontre, il faut $8$ minutes au premier pour arriver aux courgettes et $18$ minutes au second pour atteindre les salades.\\
+%\vspace{0.3cm}\\
+%Quelle distance y-a-t-il entre les courgettes et les salades?
+%\end{shaded}
+Ce problème est certes amusant mais pas forcément très simple si on ne le prend pas par le bon bout \ldots{} Voici une solution mais d'autres pistes sont envisageables.\\
+Notons $d$ la distance parcourue par le deuxième escargot pendant le temps $t$, exprimé en minute, avant la rencontre. D'après l'énoncé, le premier escargot a parcouru dans le même temps $t$ la distance $d+2$.\\
+Notons également $v$ et $v'$ les vitesses respectives du premier et du second escargot avant le rencontre.\\ 
+Appelons également \og Partie 1 \fg{} le parcours du premier escargot avant la rencontre (de longueur $d+2$) et \og partie 2 \fg{} le parcours restant après le rencontre (de longueur $d$).\\
+D'après l'énoncé, on peut schématiser la situation par le tableau suivant:\\
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+• & Escargot 1 (partie 1) & Escargot 2 (partie 1) & Escargot 1 (partie 2) & Escargot 2 (partie 2) \\ 
+\hline 
+Distance parcourue (en $m$) & $d+2$ & $d+2$ & $d$ & $d$ \\ 
+\hline 
+Temps écoulé (en $min$) & $t$ & $18$ & $8$ & $t$ \\ 
+\hline 
+Vitesse moyenne (en $m/min$) & $v$ & $\frac{v'}{2}$ & $\frac{v}{2}$ & $v'$ \\ 
+\hline 
+\end{tabular} \\
+En comparant les deux premières colonnes, on peut remarquer:
+\begin{itemize}
+\item que la distance est la même sur la \og Partie 1 \fg{}, donc on déduit que $v\times t=\frac{v'}{2}\times 18$, soit $vt=9v'$\\
+\item que la distance est la même sur la \og Partie 2 \fg{}, donc on déduit que $v'\times t=\frac{v}{2}\times 8$, soit $v't=4v$\\
+\end{itemize}
+D'après ces deux derniers résultats, on déduit d'après la règle du produit en croix que $t=\frac{9v'}{v}$ et que $t=\frac{4v}{v'}$.\\ D'après ces deux dernières égalités, on déduit que $\frac{4v}{v'}=\frac{9v'}{v}$ et donc d'après la règle du produit en croix que $4v^2=9{v'}^2$. On déduit finalement la relation suivante car $v$ et $v'$ sont positifs: $2v=3v'$ ou encore (c'est équivalent): $v'=\frac{2}{3}v$.
+On peut de nouveau refaire la tableau schématisant la situation avec cette nouvelle information:\\
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+• & Escargot 1 (partie 1) & Escargot 2 (partie 1) & Escargot 1 (partie 2) & Escargot 2 (partie 2) \\ 
+\hline 
+Distance parcourue (en $m$) & $d+2$ & $d+2$ & $d$ & $d$ \\ 
+\hline 
+Temps écoulé (en $min$) & $t$ & $18$ & $8$ & $t$ \\ 
+\hline 
+Vitesse moyenne (en $m/min$) & $v$ & $\frac{v'}{2}=\frac{1}{3}v$ & $\frac{v}{2}$ & $v'=\frac{2}{3}v$ \\ 
+\hline 
+\end{tabular} \\
+D'après la première colonne, on peut déduire que $\frac{1}{3}v=\frac{d+2}{18}$, soit $v=\frac{d+2}{6}$.\\
+D'après la troisième colonne, on peut déduire que $\frac{v}{2}=\frac{d}{8}$, soit $v=\frac{d}{4}$.\\
+En comparant ces deux derniers résultats, on obtient l'équation d'inconnue $d$:\\
+$\frac{d+2}{6}=\frac{d}{4}$, soit d'après la formule du produit en croix encore: $4\left(d+2\right)=6d$, soit $4d+8=6d$, soit $8=2d$, soit $d=4$.\\
+\vspace{0.5cm}\\
+Conclusion: La distance parcourue par le deuxième escargot sur la \og partie 2 \fg{} et $d=4 m$ et donc la distance entre le parc à salade et le parc à courgette est $d+(d+2)=10 m$.
+
+\end{Exo}
+\end{document}

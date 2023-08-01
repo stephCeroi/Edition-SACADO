@@ -1,0 +1,34 @@
+\documentclass[openany]{book}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCoursCycle4}
+\input{../../../latex_preambule_style/styleExercices}
+\input{../../../latex_preambule_style/styleExercicesAideCompetences}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_cycle4}
+\input{../../../latex_preambule_style/algobox}
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche sur livre  -----    0 affiche sur cahier 
+{%condition vraieé
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+ \usepackage{geometry}
+ \geometry{top=1.5cm, bottom=0cm, left=2cm , right=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\include{RepE-F1}
+
+\include{RepE-F2}
+
+ 
+
+\end{document}

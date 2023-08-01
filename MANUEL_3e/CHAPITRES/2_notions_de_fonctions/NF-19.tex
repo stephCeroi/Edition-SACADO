@@ -1,0 +1,34 @@
+
+Ce graphique représente le niveau sonore en fonction de la distance à laquelle se trouve une personne de la source émettrice du son. Le niveau sonore est exprimé en (dB) et la distance en mètre.
+
+\begin{minipage}{7cm}
+\begin{enumerate}
+\item Complète le graphique en notant sur chaque axe la légende.
+\item Comment se nomme la variable ? Quelle est son unité ?
+\item Quel est le niveau sonore pour une personne situés à 300 mètres de la source sonore ?
+\item Quel est le niveau sonore pour une personne situés à 600 mètres de la source sonore ?
+\item Une personne perçoit un son à un niveau de  40 dB. A Quelle distance de la source se trouve-t-il ?
+
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{9cm}
+\begin{center}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.007174400979366021cm,y=0.07955814622432517cm]
+\draw [color=cqcqcq,, xstep=0.717440097936602cm,ystep=1.5911629244865033cm] (-57.6948075297355,-11.76791192653425) grid (1336.1497836438775,113.92631895465824);
+\draw[->,color=black] (-57.6948075297355,0.) -- (1336.1497836438775,0.);
+\foreach \x in {,100.,200.,300.,400.,500.,600.,700.,800.,900.,1000.,1100.,1200.,1300.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-11.76791192653425) -- (0.,113.92631895465824);
+\foreach \y in {,20.,40.,60.,80.,100.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-57.6948075297355,-11.76791192653425) rectangle (1336.1497836438775,113.92631895465824);
+\draw [color=qqqqff] (59.68157909541087,107.80845815955595)-- (155.86500702435026,65.8176863386266);
+\draw [color=qqqqff] (155.86500702435026,65.8176863386266)-- (351.49231806626085,31.335198220777333);
+\draw [color=qqqqff] (351.49231806626085,31.335198220777333)-- (600.,20.);
+\draw [color=qqqqff] (600.,20.)-- (1324.7381904997662,13.537784998661582);
+\end{tikzpicture}
+\end{center}
+\end{minipage}

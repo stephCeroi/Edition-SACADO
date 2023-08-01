@@ -1,0 +1,63 @@
+
+\begin{minipage}{0.39\linewidth}
+Lors d'une étape cycliste, les distances parcourues par un cycliste ont été relevées
+chaque heure après le départ.
+
+Ces données sont précisées dans le graphique ci-contre.
+
+Par lecture graphique, répondre aux questions suivantes.
+
+\emph{Aucune justification n'est demandée.}
+
+\medskip
+
+\begin{enumerate}
+\item Écris la légende sur chaque axe.
+
+\item 
+	\begin{enumerate}
+		\item Quelle est la distance totale de cette étape ?
+		\item En combien de temps le cycliste a-t-il parcouru les cent premiers kilomètres ?
+		\item Quelle est la distance parcourue lors de la dernière heure de course ?
+	\end{enumerate}
+\item  Y-a-t-il proportionnalité entre la distance parcourue et la durée de parcours de cette
+étape ?
+	
+Justifier votre réponse et proposer une explication.	
+\end{enumerate}
+
+
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
+
+\begin{center}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.7919580419580414cm,y=0.07243684992570579cm]
+\draw [color=cqcqcq,, xstep=0.8959790209790207cm,ystep=0.7243684992570578cm] (-0.3317073170731706,-10.153846153846155) grid (5.24878048780488,196.92307692307693);
+\draw[->,color=black] (0.,0.) -- (5.24878048780488,0.);
+\foreach \x in {,0.5,1.,1.5,2.,2.5,3.,3.5,4.,4.5,5.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,0.) -- (0.,196.92307692307693);
+\foreach \y in {,10.,20.,30.,40.,50.,60.,70.,80.,90.,100.,110.,120.,130.,140.,150.,160.,170.,180.,190.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-0.3317073170731706,-10.153846153846155) rectangle (5.24878048780488,196.92307692307693);
+\draw (0.,0.)-- (1.,40.);
+\draw (1.,40.)-- (1.9902439024390255,70.46153846153847);
+\draw (1.9902439024390255,70.46153846153847)-- (3.004878048780487,129.53846153846155);
+\draw (3.004878048780487,129.53846153846155)-- (3.9902439024390253,149.84615384615387);
+\draw (3.9902439024390253,149.84615384615387)-- (5.,180.);
+\begin{scriptsize}
+\draw [fill=xdxdff] (0.,0.) circle (2.5pt);
+\draw [fill=qqqqff] (1.,40.) circle (2.5pt);
+\draw [fill=qqqqff] (1.9902439024390255,70.46153846153847) circle (2.5pt);
+\draw [fill=qqqqff] (3.004878048780487,129.53846153846155) circle (2.5pt);
+\draw [fill=qqqqff] (3.9902439024390253,149.84615384615387) circle (2.5pt);
+\draw [fill=qqqqff] (5.,180.) circle (2.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+

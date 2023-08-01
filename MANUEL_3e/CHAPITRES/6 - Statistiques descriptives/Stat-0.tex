@@ -1,0 +1,75 @@
+
+Le travail de statistiques est souvent fastidieux, on a toujours recours à un tableur lorsque les données sont trop importantes. Une feuille de calcul d'un tableur se présente comme cela, en cellules. La cellule rouge est la cellule C3.
+
+L'intérêt d'un tableur est le calcul automatique des caractéristiques demandées : moyenne, fréquence, effectif cumulés,... Pour cela, il faut utiliser des formules mathématiques.
+
+\vspace{0.4cm}
+
+\begin{tabular}{|c|m{2cm}|m{2cm}|m{2cm}|m{2cm}|m{2cm}|}
+\hline 
+\rowcolor{gray} & A & B & C & D &...\\ 
+\hline 
+\cellcolor{gray}1 & &4 &  & &  \\ 
+\hline 
+\cellcolor{gray}2 & & & 5 & &   \\ 
+\hline 
+\cellcolor{gray}3 & & & \cellcolor{red} & &  \\ 
+\hline 
+\cellcolor{gray}... & & &  & & \\ 
+\hline 
+\end{tabular} 
+
+\subsubsection*{Quelques formules : Utilisation du signe = avant toute formule}
+
+\begin{description}
+\item[=a+b] calcule la somme de  $a$ et de $b$. 
+\item[=SOMME(plage)] calcule la somme des cellules dans une plage rectangulaire.
+\item[=NB.SI(plage;critère] renvoie parmi les cellules de la plage celle qui vérifie le critères.
+\item[=a/b] calcule le quotient de  $a$ par $b$. $b$ doit être non nul.
+\end{description}
+
+\subsubsection*{Utilisations}
+\begin{description}[leftmargin=*]
+\item Pour calculer 4+5 dans la cellule D3, on tapera dans la cellule D3, \textbf{=B1+C2}. Lorsque une des valeurs des cellules B1 ou C2 change, la somme change alors. 
+\item Pour calculer 4/5 dans la cellule B3, on tapera dans la cellule DB3, \textbf{=B1/C2}. 
+\end{description}
+
+\subsection*{Application concrète}
+
+Voici les notes obtenues à un contrôle sur 10 par une classe de quatrième :\\
+0 -- 1 -- 2 -- 2 -- 3 -- 3 -- 3 -- 3 -- 4 -- 4 -- 5 -- 5 -- 5 -- 6 -- 6 -- 6 -- 7 -- 7 -- 8 -- 8 -- 8 -- 9 -- 9 -- 10 -- 10.
+
+\begin{enumerate}
+\item Créer un tableau sur une feuille de calcul et complète le tableau ci-dessous avec les formules adéquates.
+\item Combien d'élèves ont obtenu moins de 5 ?
+\item Quel est le pourcentage d'élèves qui ont obtenu 8 ?
+\item Quel est le pourcentage d'élèves qui ont obtenu au moins 8 ?
+\item Change un 3 et par un 8 dans la série statistique. Remarque le changement de résultats.
+\end{enumerate}
+
+\begin{tabular}{|p{4.2cm}*{11}{|p{5mm}}|p{8mm}|}
+\hline
+Note&0 & 1 & 2& 3 & 4 & 5 & 6&7 &8 &9 &10&Total \\
+\hline
+Effectifs&1 & 1 & 2& &&&& & &&& \\
+\hline
+Effectifs cumulés&1 & 2 & 4& &  & & & && & & \\
+\hline
+Fréquences &0,04 & 0,04 & 0,08 & &  & & & & & & & \\
+\hline
+Fréquences cumulées &0,04  & 0,08  & 0,16  &  &  & & & & & & & \\
+\hline
+\end{tabular}
+
+
+
+
+\subsubsection*{Effectifs -- Effectifs cumulés}
+	Pour chaque note, {\em l'effectif} est le nombre d'élèves ayant eu cette note.	Par exemple (dans le tableau), 1 élève a eu 0 ;	2 élèves ont eu 1\dots\\ 
+	Pour chaque note, {\em l'effectif cumulé} est le nombre d'élèves ayant eu cette note ou une note inférieure. Pour le calculer, il suffit à chaque fois de cumuler les effectifs.\\
+	Par exemple (dans le tableau), 1 élève a eu 0 ;	$1+2=3$ élèves ont eu 1 au plus ; $3+4=7$ élèves ont eu 2 au plus\dots
+	
+\subsubsection*{Fréquences -- Fréquences cumulées}
+	Pour chaque note, {\em la fréquence} exprime la proportion d'élèves. Par exemple, sur les 20 élèves, 4 élèves ont eu une note de 2.
+	La proportion est de 4 sur 20 ou $4\over20$ que l'on exprime en \%\ par le calcul $100\times{4\over20}=20$.\\
+	Comme pour les effectifs cumulés, les {\em fréquences cumulées}	sont obtenues en cumulant les fréquences.

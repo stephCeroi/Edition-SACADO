@@ -1,0 +1,451 @@
+\chapter{Arithmétique}
+{https://sacado.xyz/qcm/parcours_show_course/0/117129}
+{
+ \begin{CpsCol}
+\textbf{Les savoir-faire du parcours}
+ \begin{itemize}
+ \item Utiliser les notations et le vocabulaire fonctionnels.
+ \item Passer d'un mode de représentation d'une fonction à un autre.
+ \item Déterminer, à partir de tous les modes de représentation, l'image d'un nombre.
+ \item Déterminer un antécédent à partir d'une représentation graphique ou d'un tableau de valeurs d'une fonction.
+ \item Déterminer de manière algébrique l'antécédent par une fonction, dans des cas se ramenant à la résolution d'une équation du premier degré.
+ \end{itemize}
+ 
+ \end{CpsCol}
+ 
+ \begin{His}
+ zzzz
+ \end{His}
+
+\begin{ExoDec}{Chercher.}{1234}{1}{0}{0}{0}
+
+ On souhaite ranger 142 bonbons dans des boites de 12 bonbons. Les boites doivent être complétées entièrement avant
+d'utiliser d'une nouvelle boite.
+\begin{enumerate}
+\item Combien de bonbons ne sont-ils pas rangés dans une boite complète?
+\item Combien de boites sont-elles entièrement remplies?
+\item Quel est le nombre minimal de boites nécessaires pour ranger tous les 142 bonbons? Combien de bonbons faudrait-il
+rajouter pour remplir la boite incomplète?
+\end{enumerate}
+
+\end{ExoDec}
+ 
+ 
+\begin{ExoDec}{Chercher.}{1234}{1}{0}{0}{0}
+
+Trois bateaux partent de Marseille, l'un tous les 7 jours, le second tous les 12 jours, le troisième tous les 14 jours. Ils partent
+tous les trois le 1er mars. À quelle prochaine date partiront-ils encore tous les trois ensemble du port de Marseille ?
+
+
+
+\end{ExoDec} 
+ 
+ 
+}
+
+
+\begin{pageCours}
+
+
+
+
+\section{Notion de fonction}
+
+
+\begin{DefT}{En fonction de\index{En fonction de}}
+Lorsqu'une relation associe deux quantités, on dit que l'on peut exprimer une quantité \textbf{en fonction de} l'autre. \\ En général, on peut alors établir une formule qui lie ces deux quantités.
+\end{DefT}
+
+\begin{Ex}
+1 pain au chocolat coûtent 1,45 \euro{} donc $n$ pains au chocolats coûtent $1,45n$. On peut dire que le prix $p$ de $n$ pains au chocolat s'obtient par la formule $p=1,45n$. Le prix est \textbf{en fonction du} nombre de pains au chocolats.
+\end{Ex}
+
+
+
+
+\begin{ExQr}{1234}
+L'égalité de la division euclidienne de $254$ par $7$ s'écrit : $254 = 36 \times 7 +2$. $36$ est le quotient et $2$ est le reste.
+\end{ExQr}
+
+
+\begin{Att}
+
+$22 = 3 \times 5 +7$ mais cette égalité n'est pas l'écriture de la division euclidienne de $22$ par $5$ ou par $3$. En effet, $7 > 3$ et $7 > 5$.
+
+L'égalité de la division euclidienne de $22$ par $3$ s’écrit : $22 = 3 \times 7 +1$
+
+L'égalité de la division euclidienne de $22$ par $5$ s’écrit : $22 = 4 \times 5 +2$.
+\end{Att}
+
+\section{Multiples et diviseurs}
+
+ 
+  
+
+\begin{DefT}{Multiples et diviseurs}\index{Multiple}\index{Diviseur}
+ Soit $a$ et $b$ deux nombres entiers positifs. 
+ 
+ On dit que $a$ est un \textbf{multiple} de $b$ s'il existe un nombre entier $k$ tel que $a = k \times b$.
+ 
+ On dit alors que $b$ est un \textbf{diviseur} de $a$. 
+\end{DefT}
+
+\begin{Rq}
+
+Le reste de la division euclidienne de $a$ par $b$ est alors égal à $0$. 
+\end{Rq}
+
+
+\begin{minipage}{0.6\linewidth}
+
+\begin{ExQr}{1234}
+Soit $a=56$ et $b=7$, on a $56 = 7 \times 8+0 = 7 \times 8$. 
+
+Donc $56$ est un multiple de $7$.
+
+\end{ExQr}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+\begin{OuQr}{1234}
+
+ Calculateur de multiples et de diviseurs
+\end{OuQr}
+\end{minipage}
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+ 
+\begin{DefT}{Variable}
+Une variable \index{Variable} mathématique désigne une valeur arbitraire, pas totalement précisée, ou même inconnue - appartenant à un ensemble. Les valeurs de la variable varie durant l'exercice. Comme ces valeurs ne sont pas fixes, on note la variable par une lettre.
+\end{DefT}
+
+\begin{Ex}
+Un carré a pour coté $x$. Son périmètre est $\mathscr P = 4x$. On préfère écrire $\mathscr{P}(x) = 4x$. $x$ est la variable car pour chaque valeur de $x$ positive, on obtient une valeur du périmètre. Le périmètre est en fonction de $x$.
+\end{Ex}
+
+\begin{DefT}{Fonction}
+Une \textbf{fonction} \index{Fonction} est un procédé qui à un nombre donné associe un unique nombre. La fonction est explicitée par une expression littérale en fonction de la variable.
+\end{DefT}
+
+\begin{Nt}
+On écrit $f : x \longmapsto f(x)$ et on lit $f$ est la fonction qui à $x$ associe le nombre $f(x)$.
+\end{Nt}
+
+ 
+\section{Image, antécédent}
+
+
+\begin{DefT}{Image, antécédent}
+L'\textbf{image} \index{Image} d'un nombre par $f$ est l'unique nombre obtenu après le procédé calculatoire de la fonction.\\ Lorsque $f : a \longmapsto b$, on dit que $b$ est l'image de $a$ par $f$. On note alors $f(a)=b$. \\
+$a$ est appelé un \index{Antécédent} \textbf{antécédent} de $b$ par $f$.
+\end{DefT}
+
+\begin{Ex}
+Un triangle équilatéral de coté 4 cm a un périmètre égal à 12 cm. \\
+On peut alors dire que 12 est l'image de 4 par la fonction $f$, où $f : 4 \mapsto 12$. $4$ est un antécédent de 12 par $f$.\\Plus généralement, $f : x \mapsto 3x$ ou $f(x)=3x$. $f(x)$ est l'image de $x$ par la fonction $f$.\\
+La fonction $f$ est la fonction qui a une longueur du coté d'un triangle équilatéral associe son périmètre.
+\end{Ex}
+
+\begin{Ety}
+\textbf{Antécédent} est composé de anté - cédent : qui vient avant le procédé. \\Un antécédent vient donc avant la flèche qui symbolise  le procédé. Antécédent $\mapsto$  image.
+\end{Ety}
+ 
+
+
+
+
+
+\end{pageCours} 
+\begin{pageAD} 
+ 
+
+\Sf{Utiliser et écrire en ligne la division euclidienne de $a$ par $b$, deux nombres entiers.}
+ 
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-3}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-6}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-2}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-5}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-11}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-24}
+\end{ExoCad}
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-18}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-19}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-4}
+\end{ExoCad}
+
+ 
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-15}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-14}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+ \input{CHAPITRES/notions_de_fonctions/NF-10}
+\end{ExoCad}
+
+
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ \input{CHAPITRES/notions_de_fonctions/NF-3}
+
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+
+\input{CHAPITRES/notions_de_fonctions/NF-6}
+
+\end{ExoCad}
+
+
+\Sf{Utiliser la distributivité}
+
+\begin{ExoCad}{Représenter. Calculer.}{1234}{0}{0}{0}{0}{0}
+
+ 
+ \input{CHAPITRES/notions_de_fonctions/NF-2}
+
+
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+  
+ \input{CHAPITRES/notions_de_fonctions/NF-5}
+
+\end{ExoCad}
+
+ 
+\end{pageAD}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursu} 
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+ \input{CHAPITRES/notions_de_fonctions/NF-11}
+ 
+
+\end{ExoCu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+ \input{CHAPITRES/notions_de_fonctions/NF-24}
+
+
+\end{ExoCu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+\input{CHAPITRES/notions_de_fonctions/NF-18}
+
+\end{ExoCu}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ \input{CHAPITRES/notions_de_fonctions/NF-19}
+
+ 
+
+\end{ExoCu}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+  
+  \input{CHAPITRES/notions_de_fonctions/NF-4}
+
+
+\end{ExoCu}
+
+ 
+
+
+\end{pageParcoursu}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{pageParcoursd} 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+ 
+\end{ExoCd}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Chercher.communiquer.}{1234}{2}{0}{0}{0}{0}
+
+
+
+\end{ExoCd}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCd}
+ 
+\end{pageParcoursd}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcourst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter. Raisonner.}{1234}{2}{0}{0}{0}{0}
+ 
+ 
+
+
+\end{ExoCt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+ 
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+
+\end{ExoCt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+ 
+
+\end{ExoCt} 
+ 
+\end{pageParcourst}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Brouillon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{pageBrouillon} 
+ 
+\ligne{32}
+
+
+
+\end{pageBrouillon}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Auto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAuto} 
+
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+  \input{CHAPITRES/notions_de_fonctions/NF-7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{ExoAuto}
+
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+  
+
+\end{ExoAuto}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+   \input{CHAPITRES/notions_de_fonctions/NF-8}
+ 
+
+\end{ExoAuto}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAuto}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+
+ 
+ 
+
+\end{ExoAuto}
+
+
+\end{pageAuto}

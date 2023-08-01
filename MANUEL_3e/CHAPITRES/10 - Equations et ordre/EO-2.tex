@@ -1,0 +1,40 @@
+
+
+On dispose d'une plaque de carton carrée de 10 cm de côté. Dans chaque coin de la plaque, on découpe un carré comme indiqué sur le dessin. On obtient alors le patron d'une boîte parallélépipédique, sans couvercle. Quelle doit-être la mesure du côté du carré que l'on découpe dans chaque coin pour que le volume de la boîte soit 72 cm$^3$ ?
+
+\begin{center}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(2.86,-2.12) rectangle (8.18,3.12);
+\fill[color=ffxfqq] (3.,3.) -- (4.,3.) -- (4.,2.) -- (3.,2.) -- cycle;
+\fill[color=ffxfqq] (3.,-1.) -- (4.,-1.) -- (4.,-2.) -- (3.,-2.) -- cycle;
+\fill[color=ffxfqq] (7.,-1.) -- (8.,-1.) -- (8.,-2.) -- (7.,-2.) -- cycle;
+\fill[color=ffxfqq] (7.,2.) -- (7.,3.) -- (8.,3.) -- (8.,2.) -- cycle;
+\draw [color=ffqqqq] (3.,-2.)-- (8.,-2.);
+\draw [color=ffqqqq] (8.,-2.)-- (8.,3.);
+\draw [color=ffqqqq] (8.,3.)-- (3.,3.);
+\draw [color=ffqqqq] (3.,3.)-- (3.,-2.);
+\draw [dash pattern=on 1pt off 1pt,color=ffxfqq] (4.,3.)-- (4.,-2.);
+\draw [dash pattern=on 1pt off 1pt,color=ffxfqq] (7.,3.)-- (7.,-2.);
+\draw [dash pattern=on 1pt off 1pt,color=ffxfqq] (3.,2.)-- (8.,2.);
+\draw [dash pattern=on 1pt off 1pt,color=ffxfqq] (3.,-1.)-- (8.,-1.);
+\draw [color=ffxfqq] (3.,3.)-- (4.,3.);
+\draw [color=ffxfqq] (4.,3.)-- (4.,2.);
+\draw [color=ffxfqq] (4.,2.)-- (3.,2.);
+\draw [color=ffxfqq] (3.,2.)-- (3.,3.);
+\draw [color=ffxfqq] (3.,-1.)-- (4.,-1.);
+\draw [color=ffxfqq] (4.,-1.)-- (4.,-2.);
+\draw [color=ffxfqq] (4.,-2.)-- (3.,-2.);
+\draw [color=ffxfqq] (3.,-2.)-- (3.,-1.);
+\draw [color=ffxfqq] (7.,-1.)-- (8.,-1.);
+\draw [color=ffxfqq] (8.,-1.)-- (8.,-2.);
+\draw [color=ffxfqq] (8.,-2.)-- (7.,-2.);
+\draw [color=ffxfqq] (7.,-2.)-- (7.,-1.);
+\draw [color=ffxfqq] (7.,2.)-- (7.,3.);
+\draw [color=ffxfqq] (7.,3.)-- (8.,3.);
+\draw [color=ffxfqq] (8.,3.)-- (8.,2.);
+\draw [color=ffxfqq] (8.,2.)-- (7.,2.);
+\end{tikzpicture}
+\end{center}

@@ -1,0 +1,36 @@
+
+\begin{multicols}{2}
+Les droites (AB) et (CD) se coupent en un point O. A, O, B et C,O, D sont alignés dans cet ordre.\\
+\textbf{Si} les droites (AC) et (BD) sont parallèles \\
+\textbf{alors} on a :
+$\frac{OA}{OB}=\frac{OC}{OD}=\frac{AC}{BD}$\\
+
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.19083969465648856cm,y=0.25cm]
+\clip(-17.,-9.2) rectangle (9.2,6.8);
+\draw [color=zzttqq] (-5.68,-2.4)-- (8.04,-3.68);
+\draw [color=ffqqqq] (8.04,-3.68)-- (2.54,5.66);
+\draw [color=zzttqq] (2.54,5.66)-- (-5.68,-2.4);
+\draw [domain=-17.:9.2] plot(\x,{(-40.1984-1.28*\x)/13.72});
+\draw [domain=-17.:9.2] plot(\x,{(-26.0528-8.06*\x)/-8.22});
+\draw [color=ffqqqq] (-16.082387584181635,-1.429514860950984)-- (-11.912334252330398,-8.511023609949271);
+\begin{scriptsize}
+\draw [color=qqqqff] (-5.68,-2.4)-- ++(-1.5pt,-1.5pt) -- ++(3.0pt,3.0pt) ++(-3.0pt,0) -- ++(3.0pt,-3.0pt);
+\draw[color=qqqqff] (-5.323766655339601,-2.9578357737149825) node {$O$};
+\draw [color=qqqqff] (8.04,-3.68)-- ++(-1.5pt,-1.5pt) -- ++(3.0pt,3.0pt) ++(-3.0pt,0) -- ++(3.0pt,-3.0pt);
+\draw[color=qqqqff] (8.985740384819085,-3.241895466819869) node {$B$};
+\draw [color=qqqqff] (2.54,5.66)-- ++(-1.5pt,-1.5pt) -- ++(3.0pt,3.0pt) ++(-3.0pt,0) -- ++(3.0pt,-3.0pt);
+\draw[color=qqqqff] (1.848740595558797,6.416134098746276) node {$D$};
+\draw[color=black] (-27.90651225717812,0.2733432353531029) node {$g$};
+\draw[color=black] (-14.768751451077094,-11.586148951775913) node {$h$};
+\draw [color=xdxdff] (-16.082387584181635,-1.429514860950984)-- ++(-1.5pt,-1.5pt) -- ++(3.0pt,3.0pt) ++(-3.0pt,0) -- ++(3.0pt,-3.0pt);
+\draw[color=xdxdff] (-16.721661841173194,-1.7860895396573249) node {$A$};
+\draw [color=uuuuuu] (-11.912334252330398,-8.511023609949271)-- ++(-1.5pt,-1.5pt) -- ++(3.0pt,3.0pt) ++(-3.0pt,0) -- ++(3.0pt,-3.0pt);
+\draw[color=uuuuuu] (-11.004960517437341,-8.816566944003268) node {$C$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{multicols}

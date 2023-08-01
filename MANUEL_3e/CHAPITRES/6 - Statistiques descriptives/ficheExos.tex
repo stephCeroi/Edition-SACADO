@@ -1,0 +1,274 @@
+\documentclass[openany]{book}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCoursCycle4}
+\input{../../../latex_preambule_style/styleExercices}
+\input{../../../latex_preambule_style/styleExercicesAideCompetences}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_cycle4}
+\input{../../../latex_preambule_style/algobox}
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche sur livre  -----    0 affiche sur cahier 
+{%condition vraieé
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+ \usepackage{geometry}
+ \geometry{top=1.5cm, bottom=0cm, left=2cm , right=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{seance}[Statistiques]
+
+\begin{description}
+\item[$\square$]  Calculer et interpréter des caractéristiques de position ou de dispersion d’une série statistique - Indicateurs : moyenne, médiane, étendue.
+\item[$\square$] Calculer des effectifs, des fréquences.
+\item[$\square$] Lire des données sous forme de données brutes, de tableau, de graphique.
+\end{description}
+\end{seance}
+
+
+\Exe
+
+\input{Stat-1}
+
+\Exe
+
+\input{Stat-3}
+
+\Exe
+
+\input{Stat-18}
+
+
+\begin{seance}[Statistiques]
+
+\begin{description}
+\item[$\square$]  Calculer et interpréter des caractéristiques de position ou de dispersion d’une série statistique - Indicateurs : moyenne, médiane, étendue.
+\item[$\square$] Calculer des effectifs, des fréquences.
+\item[$\square$] Lire des données sous forme de données brutes, de tableau, de graphique.
+\end{description}
+\end{seance}
+
+\Exe
+
+\input{Stat-13}
+
+
+\Exe
+
+\input{Stat-15}
+
+\Exe
+
+\input{Stat-7                                                                                                                } 
+
+
+
+
+
+\begin{seance}[Statistiques]
+
+\begin{description}
+\item[$\square$]  Calculer et interpréter des caractéristiques de position ou de dispersion d’une série statistique - Indicateurs : moyenne, médiane, étendue.
+\item[$\square$] Calculer des effectifs, des fréquences.
+\item[$\square$] Lire des données sous forme de données brutes, de tableau, de graphique.
+\end{description}
+\end{seance}
+
+
+
+
+\Dnb
+
+Une entreprise de fabrication de bonbons souhaite vérifier la qualité de sa nouvelle
+machine de conditionnement. Cette machine est configurée pour emballer environ $60$
+bonbons par paquet. Pour vérifier sa bonne configuration, on a étudié $500$~paquets à
+la sortie de cette machine.
+
+\medskip
+
+\textbf{Document 1 : Résultats de l'étude}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|m{2cm}|*{9}{>{\centering \arraybackslash}X|}}\hline
+Nombre de bonbons	&56 &57 &58 &59 &60 	&61 &62 &63 &64\\ \hline
+Effectifs 			&4 	&36 &53 &79 &145 	&82 &56 &38 &7\\ \hline
+\end{tabularx}
+\end{center}
+
+\textbf{Document 2 : Critères de qualité}
+
+\medskip
+
+Pour être validée par l'entreprise, la machine doit respecter trois critères de qualité:
+
+\setlength\parindent{8mm}
+\begin{itemize}
+\item[$\bullet~~$] Le nombre moyen de bonbons dans un paquet doit être compris entre 59,9 et
+60,1.
+\item[$\bullet~~$] L'étendue de la série doit être inférieure ou égale à $10$.
+\item[$\bullet~~$] La médiane doit être comprise entre 59 et 61.
+\end{itemize}
+\setlength\parindent{0mm} 
+ 
+La nouvelle machine respecte-t-elle les critères de qualité ?
+ 
+\emph{Il est rappelé que les réponses doivent être justifiées.}
+
+\Dnb
+
+On lance deux dés tétraédriques, équilibrés et non truqués, dont les faces sont
+numérotées de 1 à 4. On calcule la somme des nombres lus sur chacune des faces sur
+lesquelles reposent les dés.
+
+\smallskip
+
+\np{1000} lancers sont simulés avec un tableur. Le graphique suivant représente la
+fréquence d'apparition de chaque somme obtenue :
+
+\begin{center}
+\psset{xunit=1cm,yunit=0.2cm}
+\begin{pspicture}(-1,-5)(9,25)
+\psaxes[linewidth=1.25pt,Dx=10,Dy=5](0,0)(9,25)
+\multido{\n=1+1}{8}{\uput[d](\n,0){\n}}
+\psframe[fillstyle=solid,fillcolor=lightgray](1.5,0)(2.5,7)
+\psframe[fillstyle=solid,fillcolor=lightgray](2.5,0)(3.5,15)
+\psframe[fillstyle=solid,fillcolor=lightgray](3.5,0)(4.5,19)
+\psframe[fillstyle=solid,fillcolor=lightgray](4.5,0)(5.5,23)
+\psframe[fillstyle=solid,fillcolor=lightgray](5.5,0)(6.5,17)
+\psframe[fillstyle=solid,fillcolor=lightgray](6.5,0)(7.5,13)
+\psframe[fillstyle=solid,fillcolor=lightgray](7.5,0)(8.5,6)
+\rput(4.5,-4){somme des nombres inscrits sur les deux dés} \rput{90}(-1,12.5){fréquence en \,\%}
+\end{pspicture}
+\end{center}
+
+\begin{enumerate}
+\item Par lecture graphique donner la fréquence d'apparition de la somme 3.
+\item Lire la fréquence d'apparition de la somme 1 ? Justifier cette fréquence.
+\item  
+	\begin{enumerate}
+		\item Décrire les lancers de dés qui permettent d'obtenir une somme égale à 3.
+		\item En déduire la probabilité d'obtenir la somme 3 en lançant les dés. On exprimera
+cette probabilité en pourcentage. Expliquer pourquoi ce résultat est différent de celui obtenu à la question 1.
+	\end{enumerate} 
+ \end{enumerate}
+
+
+\begin{seance}[Statistiques]
+
+\begin{description}
+\item[$\square$]  Calculer et interpréter des caractéristiques de position ou de dispersion d’une série statistique - Indicateurs : moyenne, médiane, étendue.
+\item[$\square$] Calculer des effectifs, des fréquences.
+\item[$\square$] Lire des données sous forme de données brutes, de tableau, de graphique.
+\end{description}
+\end{seance}
+
+\Dnb
+
+Une association cycliste organise une journée de randonnée à  vélo.
+
+Les participants ont le choix entre trois circuits de longueurs différentes: 42 km, 35 km et 27 km.
+
+À l'arrivée, les organisateurs relèvent les temps de parcours des participants et calculent leurs vitesses moyennes. Ils regroupent les informations dans un tableau dont voici un extrait:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|l|*{5}{>{\centering \arraybackslash}X|}}\hline
+Nom du sportif				& Alix 	&David 	&Gwenn 		&Yassin 	&Zoé\\ \hline
+Distance parcourue (en km)	& 35 	&42 	&27 		&35 		&42\\ \hline
+Durée de la randonnée 		&2 h 	&3 h 	&1 h 30 min &1 h 45 min &1 h 36 min\\ \hline
+Vitesse moyenne (en km/h) 	&17,5	&		&			&			&\\ \hline
+\end{tabularx}
+\end{center}
+
+
+\begin{enumerate}
+\item Quelle distance David a-t-il parcourue ?
+\item Calculer les vitesses moyennes de David et de Gwenn.
+\item Afin d'automatiser les calculs, l'un des organisateurs décide d'utiliser la feuille de tableur ci-dessous :
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|l|*{5}{>{\centering \arraybackslash}X|}}\hline
+&A &B &C &D& E &F\\ \hline
+1 &Nom du sportif 				&Alix 	&David 	&\footnotesize Gwenn 	&Yassin &Zoé\\ \hline
+2 &Distance parcourue (en km)	& 35	& 42	&27 	&35 	&42\\ \hline
+3 &Durée de la randonnée (en h)	& 2 	&3 		&1,5	&		&\\ \hline
+4 &Vitesse moyenne (en km/h)	& 17,5	&		&		&		&\\ \hline
+\end{tabularx}
+\end{center}
+
+	\begin{enumerate}
+		\item Quel nombre doit-il saisir dans la cellule E3 pour renseigner le temps de Yassin ?
+		\item Expliquer pourquoi il doit saisir 1,6 dans la cellule F3 pour renseigner le temps de Zoé.
+		\item Quelle formule de tableur peut-il saisir dans la cellule B4 avant de l'étirer sur la ligne 4 ?
+	\end{enumerate}
+\item Les organisateurs ont oublié de noter la performance de Stefan.
+	
+Sa montre GPS indique qu'il a fait le circuit de 35 km à  la vitesse moyenne de 25 km/h.
+	
+Combien de temps a-t-il mis pour faire sa randonnée? On exprimera la durée de la randonnée en
+heures et minutes.
+\end{enumerate}
+
+
+
+\begin{seance}[Statistiques]
+
+\begin{description}
+\item[$\square$]  Calculer et interpréter des caractéristiques de position ou de dispersion d’une série statistique - Indicateurs : moyenne, médiane, étendue.
+\item[$\square$] Calculer des effectifs, des fréquences.
+\item[$\square$] Lire des données sous forme de données brutes, de tableau, de graphique.
+\end{description}
+\end{seance}
+
+
+\Dnb
+
+Une coopérative collecte le lait dans différentes exploitations agricoles.
+
+Le détail, de la collecte du jour ont été saisis dans une feuille de calcul d'un tableur.
+
+\begin{center}
+\begin{tabularx}{0.7\linewidth}{|c|*{2}{>{\centering \arraybackslash}X|}}\hline
+&A&B \\ \hline
+1&Exploitation agricole& Quantité de lait collecté (en L)\\ \hline
+2& Beausejour& \np{1250}\\ \hline
+3&Le Verger& \np{2130}\\ \hline 
+4&La  Fourragère& \np{1070}\\ \hline
+5& Petit pas& \np{2260}\\ \hline
+6&La  Chausse Pierre& \np{1600}\\ \hline
+7& Le Palet& \np{1740}\\ \hline
+8&Quantité totale de lait collecté&\\ \hline
+\end{tabularx}
+\end{center}
+
+\begin{enumerate}
+\item Une formule doit être saisie dans la cellule B8 pour obtenir la quantité totale de lait collecté. Parmi les quatre propositions ci-dessous, recopier celle qui convient.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|*{4}{>{\centering \arraybackslash}X|}}\hline
+SOMME(B2~:~B7)&SOMME(B2~:~B8)&=SOMME(B2~:~B7)&=SOMME(B2~:~B8)\\ \hline
+\end{tabularx}
+\end{center}
+\medskip
+\item  
+\begin{enumerate}
+\item  \textit{Calculer la différence entre la quantités de lait collecté la plus importante et celle la moins importante.}
+\item \textit{Que représente pour la série statistique cette différence ?}
+\end{enumerate}
+\item  Calculer la moyenne des quantités de lait collecté dans ces exploitations.
+\item  \textit{Calculer la médiane des quantités de lait collecté dans ces exploitations.}
+\item  Quel pourcentage de la collecte provient de l'exploitation \og Petit Pas \fg{} ? On arrondira le résultat à l'unité.
+\end{enumerate}
+
+
+
+\end{document}

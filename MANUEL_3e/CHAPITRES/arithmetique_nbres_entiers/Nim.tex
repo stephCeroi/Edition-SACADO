@@ -1,0 +1,103 @@
+\begin{titre}[Arithmétique]
+
+\Titre{Le jeu de Nim}{1}
+\end{titre}
+ 
+
+\begin{CpsCol}
+\textbf{ Utiliser les nombres}
+\end{CpsCol}
+
+
+ 
+ \vspace{0.4cm}
+
+\textbf{ Partie A}
+\vspace{0.4cm}
+
+On dispose au départ de 13 allumettes; chaque joueur, à tour de rôle,
+en enlève 1, 2 ou 3. Celui qui prend la dernière allumette
+a gagné.
+
+\medskip
+
+Exemple de partie : le joueur A commence.
+
+\centerline{\begin{tabular}{|c|c|c|}
+\hline
+A prend ... allumettes & 
+B prend ... allumettes &
+allumettes restantes\\
+\hline
+1   & & 12  \\\hline 
+   & 1 & 11\\\hline 
+ 2 &  & 9\\\hline 
+   & 1  & 8\\\hline
+ 3 &    & 5\\\hline  
+   & 2  & 3\\\hline
+ 2 &    & 1\\\hline
+%   & 1  & 0\\\hline
+\end{tabular}
+}
+Dans cette partie, B a perdu.
+
+ 
+\begin{enumerate}
+\item Jouez !
+\item Expliquer pourquoi, s'il reste 1, 2 ou 3 allumettes, le joueur
+dont c'est le tour peut gagner. Comment doit-il procéder ?
+
+{\em On dira que 1, 2 et 3 sont des « positions gagnantes »}
+
+\item Montrer que s'il reste 4 allumettes, le joueur dont c'est le tour
+est sûr de perdre, si l'autre joueur joue correctement.
+
+{\em On dira que 4 est une « position perdante »}
+
+\item Déterminer toutes les positions gagnantes et perdantes.
+\end{enumerate}
+
+\vspace{0.4cm}
+\textbf{ Partie B. Vers le codage}
+ \vspace{0.4cm}
+
+L'objectif est d'écrire un programme pour jouer contre l'ordinateur
+à ce jeu. 
+On suppose que le joueur humain commence.
+%L'ordinateur sera le joueur « 1 ».
+
+Convenons des variables suivantes :
+\begin{itemize}
+\item \verb!joueur! : un entier qui vaut 0 si c'est à l'humain de jouer,
+1 si c'est à l'ordinateur.
+\item \verb!position! : le nombre d'allumettes restantes.
+\end{itemize}
+
+\begin{enumerate}
+\item Écrire un algorithme qui demande au joueur le nombre d'allumettes
+qu'il veut prendre. On fera attention au fait que, par exemple, s'il reste
+deux allumettes, le joueur ne peut pas en prendre trois !
+
+
+ 
+\item Écrire un algorithme qui, étant donné le nombre d'allumettes
+restantes, donne le nombre d'allumettes qu'il faut prendre pour mettre
+l'adversaire sur une position perdante (si c'est possible).
+
+
+\item Traduire avec Scratch les algorithmes précédents. Coder le jeu.
+\end{enumerate}
+ \vspace{0.4cm}
+ {\bf Partie C. Compléments }
+ \vspace{0.4cm}
+ 
+Modifier le programme précédent pour que :
+\begin{enumerate}
+\item l'ordinateur commence à jouer;
+\item l'utilisateur décide qui commence à jouer;
+\item le nombre d'allumettes au départ soit choisi au hasard,
+entre 13 et 50;
+\item le gagnant soit le joueur qui prend la dernière allumette. 
+\end{enumerate}
+ 
+

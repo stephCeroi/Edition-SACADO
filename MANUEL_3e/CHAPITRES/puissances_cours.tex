@@ -1,0 +1,408 @@
+\chapter{Puissance d'un nombre}
+{https://sacado.xyz/qcm/parcours_show_course/0/117120}
+{ 
+
+ \begin{CpsCol}
+ \textbf{Les savoir-faire du parcours} 
+ \begin{itemize}
+\item Écrire un nombre avec une puissance de base 10
+\item Calculer avec des nombres écrits en puissance de 10
+\item Écrire un nombre en écriture scientifique
+\item Calculer avec des puissances de base quelconque et exposant entier
+ \end{itemize}
+ \end{CpsCol}
+}
+%
+%
+%\begin{pageHistoire} 
+% 
+%En 1585, dans son ouvrage \textbf{La Disme}, Simon Stevin (1548 - 1620) ingénieur et mathématicien flamand, propose une écriture des nombres qui permet de simplifier les calculs (quelquefois très lourds en écriture fractionnaire).\\
+%
+%Il est considéré comme un précurseur de l'écriture décimale.
+% 
+%
+%\end{pageHistoire} 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%        Cours             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageCours} 
+
+\section{Puissance de base 10}
+
+
+\begin{DefT}{Puissance de base 10}\index{Puissance!de base 10}
+Soit $n$ un nombre entier. Le produit $\underbrace{10 \times 10 \times 10 \times \cdots \times 10 \times 10}_n$ se note $10^n$ et se lit "10 exposant $n$". 
+\end{DefT}
+
+\begin{Ex}
+$10^1 = 10$.  $100 = 10^2$ donc 100 est une puissance de 10 et $\np{10000} = 10^4$ donc 10000 est aussi une puissance de 10. 
+\end{Ex}
+
+\begin{Rq}
+Le nombre de zéros est égal à l'exposant. $10^n= 1\underbrace{0000 \cdots 000}_{n \text{zéros}}$
+\end{Rq}
+
+\begin{Def}
+Par convention, $10^0=1$.
+\end{Def}
+
+
+
+
+\begin{DefT}{Puissance de base 10 d'exposant négatif}\index{Puissance!de base d'exposant négatif}
+L'écriture $10^{-n}$ désigne l'inverse de $10^n$, c'est à dire : $10^{-n}= \frac{1}{10^n}$. 
+\end{DefT}
+
+
+\begin{Rq}
+L'exposant correspond au nombre de chiffres après la virgule. $10^{-n}= 0,\underbrace{0000 \cdots 001}_{n \text{chiffres}}$
+\end{Rq}
+
+
+\section{Écriture scientifique}
+
+\begin{DefT}{Écriture scientifique}\index{Écriture scientifique}
+L'écriture scientifique d'un nombre est le produit d'un nombre décimal dont la partie entière comporte un seul chiffre différent de zéro par une puissance de 10.
+
+L'écriture scientifique est de la forme $a\times 10^n$, où $1 \leq a < 10$ et $n$ est un entier relatif.
+
+L'écriture scientifique d'un nombre est unique.
+\end{DefT}
+
+
+
+\end{pageCours} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%   Application directe    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAD} 
+
+\Sf{Représenter avec les puissances de 10.}
+
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}
+
+Écrire les nombres suivants avec une puissance de $10$.
+
+\begin{enumerate}
+\begin{minipage}{0.3\linewidth}
+\item 
+\item
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\item 
+\item
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\item 
+\item
+\end{minipage}
+\end{enumerate}
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}
+
+Le nombre $10^{-6}$ est égal à l'un des nombre suivant. Lequel ?
+$$ -60 \quad ;  \quad -10^6 \quad ; \quad \np{0,000 0001}  \quad ; \quad \text{un millionième}$$
+
+\end{ExoCad}
+
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}
+\begin{enumerate}
+\item Écris 1 millième sous forme décimale
+\item Écris sous forme de fraction 1 millième
+\item Déduis en l'écriture de 1 millième sous forme d'une puissance de 10.
+\end{enumerate}
+\end{ExoCad}
+
+
+\Sf{Calculer avec les puissances de 10.}
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}
+
+Durant les inondations dans la région parisienne de Juin 2016, la région Ile de France a fait un stock de bouteilles d'eau pour la population. Chaque habitant bénéficie de 2 litres d'eau par jour. La région Ile de France compte \np{10 000000} habitants.
+
+Quel est le nombre de litres d'eau stockés pour les 5 jours d'inondations ?
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}
+Le tardigrade mesure est 1 mm. La longueur d'un stage de rugby est 100 m environ. Combien de tardigrades peut-on mettre bout à bout sur la longueur d'un stade de rugby ?
+\end{ExoCad}
+
+
+\Sf{Écrire en notation scientifique}
+
+
+\begin{enumerate}
+\item Écrire en notation scientifique le nombre intervenant dans la phrase suivante :
+« La masse du Soleil est environ égale à 1 989 000 000 000 000 000 000 000 000 000 kg ».
+
+\item Le proton et le neutron sont deux particules composant le noyau des atomes. Leur taille est environ égale à $10^{-15}$ m. Exprimer cette taille en millimètre (mm), puis en micromètre ($\mu$m).
+\end{enumerate}
+
+
+
+
+\end{pageAD}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%        Cours             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageCours} 
+
+
+
+\section{Puissance de base $a$}
+
+
+\Dec{1}{Puis-2}
+
+\begin{DefT}{Puissance de base a}\index{Puissance!de base a}
+Le produit $\underbrace{a \times a \times a \times \cdots \times a \times a}_n$ se note $a^n$ et se lit "a exposant $n$".  
+La puissance du nombre $a$, $a^n$, est un produit de $n$ fois le même nombre $a$.
+\end{DefT}
+ 
+\begin{minipage}[t]{0.49\linewidth}
+\begin{Prop}[Produit de puissances]\index{Puissances!Produit}
+Soit $n$ et $m$ deux nombres entiers et $a$ un nombre.\\
+$a^n \times a^m = a^{n+m}$.
+\end{Prop}
+ \begin{Ex}
+ \begin{description}
+ \item[•] $10^3 \times 10^4 = 10^{3+4}=10^7$
+ \item[•] $2^2 \times 2^3 = 2^{2+3}=2^5$ 
+  \end{description}
+ \end{Ex}
+\end{minipage}
+ \hfill
+\begin{minipage}[t]{0.49\linewidth}
+\begin{Prop}[Quotient de puissances]\index{Puissances!Quotient}
+Soit $n$ et $m$ deux nombres entiers et $a$ un nombre.\\
+$\frac{a^n}{a^m} = a^{n-m}$.
+\end{Prop}
+ \begin{Ex}
+$\frac{10^8}{10^2} = 10^6$ et $\frac{5^9}{5^3} = 5^6$
+ \end{Ex}
+\end{minipage}
+ 
+
+\begin{minipage}{0.48\linewidth}
+\Exo{1}{Puis-13}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+
+\Exo{1}{Puis-20}
+
+\end{minipage}
+
+ Ariane affirme que $2^{40}$ est le double de $2^{39}$. A-t-elle raison ? \point{3}
+ 
+ 
+\Exo{1}{Puis-21}
+
+ 
+
+\Exo{1}{Puis-22}
+
+
+ 
+\begin{minipage}{0.48\linewidth}
+\Exo{1}{DNP-56}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+
+\Fl{1}{Puis-12}
+
+\end{minipage}
+
+%\PO{1}{Puis-23}
+
+%\App{1}{Puis-24}
+
+\App{1}{Puis-14}
+
+\App{1}{Puis-15}
+
+%\PO{1}{Puis-18}
+
+
+
+%\PO{1}{Puis-19}
+%\begin{autoeval}
+%\begin{tabular}{p{12cm}p{0.5cm}p{0.5cm}p{0.5cm}p{1cm}}
+%\textbf{Compétences visées} &  M I & MF & MS  & TBM \vcomp \\ 
+%Calculer avec des puissances de base quelconque et exposant entier & $\square$ & $\square$  & $\square$ & $\square$ \vcomp \\  
+%\end{tabular}
+%{\footnotesize MI : maitrise insuffisante ; MF = Maitrise fragile ; MS = Maitrise satisfaisante ; TBM = Très bonne maitrise}
+% 
+%\end{autoeval}
+
+
+ 
+\end{pageCours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%   Application directe    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAD} 
+
+\Sf{Repérer un nombre décimal sur la droite graduée.}
+
+\ExoCad{Représenter.}
+
+\ExoCad{Représenter.}
+
+\ExoCad{Représenter.}
+
+\end{pageAD}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%        Cours             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageCours}
+
+\section{Encadrer un nombre décimal}
+
+ 
+
+
+
+\section{Ranger, classer des nombres décimaux}
+
+
+\end{pageCours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%   Application directe    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAD} 
+
+\Sf{ }
+
+\ExoCad{Représenter. Communiquer.}
+
+ 
+\ExoCad{Représenter. Communiquer.}
+
+ 
+\Sf{ }
+
+
+\ExoCad{Représenter. Communiquer.}
+
+ 
+\end{pageAD} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%        Parcours 1    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursu} 
+
+
+
+\begin{ExoCu}{Modéliser. Calculer.}{1234}{1}{0}{0}{0}
+
+\begin{minipage}{0.48\linewidth}
+
+\begin{enumerate}
+\item En informatique, l'information est codée à partir de bits, qui ne prennent que deux valeurs : 0 et 1. Un octet est un regroupement de 8 bits. Combien d'informations différentes peuvent être codées sur un octet ?
+\item Les capacités de stockage des mémoires informatiques (disques durs, clé USB, ...) utilisent un grand nombre d'octets. Cela conduit à utiliser des multiples de l'octet, dont voici les principaux ci-contre.
+\end{enumerate}
+
+À l'aide des unités précédentes, donner un ordre de grandeur de la taille d'un fichier relatif aux données suivantes :
+\begin{description}
+\item[•] une photographie numérique ;
+\item[•] l’ensemble des données circulant sur le web en 2015 ;
+\item[•] un texte de dix lignes sur un traitement de textes ;
+\item[•] l’ensemble des données générées chaque année à travers le monde ;
+\item[•] la capacité d’un disque dur vendu en 2015 ;
+\item[•] un DVD
+\end{description}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+NOM & SYMBOLE & NOMBRE D'OCTETS \\ 
+\hline 
+Kilooctet & Ko & $10^{3}$ \\ 
+\hline 
+Megaoctet & Mo & $10^{6}$  \\ 
+\hline 
+Gigaoctet& Go & $10^{9}$  \\ 
+\hline 
+Teraoctet & To & $10^{12}$  \\ 
+\hline 
+Petaoctet & Po & $10^{15}$  \\ 
+\hline 
+Exaoctet & Eo & $10^{18}$  \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\end{minipage}
+\end{ExoCu}
+
+\begin{ExoCu}{Modéliser. Calculer.}{1234}{1}{0}{0}{0}
+
+
+\end{ExoCu}
+ 
+ 
+ 
+
+\end{pageParcoursu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%        Parcours 2    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursd} 
+
+\begin{ExoCd}{Modéliser. Calculer.}{1234}{1}{0}{0}{0}
+
+
+\end{ExoCd}
+
+ 
+
+\begin{ExoCd}{Modéliser. Calculer.}{1234}{1}{0}{0}{0}
+
+
+\end{ExoCd}
+
+
+\end{pageParcoursd}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%        Parcours 3    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcourst}
+
+\begin{ExoCt}{Modéliser. Calculer.}{1234}{1}{0}{0}{0}
+
+
+\end{ExoCt}
+
+
+ 
+
+
+\end{pageParcourst}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%   Auto-evaluation    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAuto} 
+
+\begin{ExoAuto}{Modéliser. Calculer.}{1234}{1}{0}{0}{0}
+
+
+\end{ExoAuto}
+
+  
+\end{pageAuto}
+ 

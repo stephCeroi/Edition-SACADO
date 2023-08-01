@@ -1,0 +1,31 @@
+Étant donné un repère $\left(O;I\right)$ de la droite $d$, tout point $M$ peut être repéré par un nombre relatif $x$, appelé \textbf{abscisse du point M} qui donne sa position sur la droite $d$.
+
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=0.14601238469314765cm]
+\draw[->,color=black] (-5.251480021069936,0.) -- (5.114801204716395,0.);
+\foreach \x in {-5,-4,-3,-2,-1,0,1,2,3,4,5}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\clip(-5.251480021069936,-2.904596567977349) rectangle (5.114801204716395,7.368504601846877);
+\draw [domain=-5.251480021069936:5.114801204716395] plot(\x,{(-0.-0.*\x)/1.});
+\begin{scriptsize}
+\draw [color=red] (-0.1,0.) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+
+\draw[color=red] (-0.09163442216730192,1.) node {$O$};
+
+\draw [color=red] (0.9,0.)-- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw [color=blue] (2.9,0.)-- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw [color=blue] (3.9,0.)-- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw [color=blue] (-2.6,0.)-- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw [color=blue] (0.4,0.)-- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+
+\draw[color=red] (0.9682887144018623,1.) node {$I$};
+
+\draw[color=blue] (2.971659917587535,1.) node {$A$};
+
+\draw[color=blue] (3.9384029981945754,1.) node {$B$};
+
+\draw[color=blue] (-2.6307909471351896,1.) node {$C$};
+
+\draw[color=blue] (0.39756087163385084,1.) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}

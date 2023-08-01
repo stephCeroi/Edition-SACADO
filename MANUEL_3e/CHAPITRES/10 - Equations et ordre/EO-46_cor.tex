@@ -1,0 +1,61 @@
+\documentclass[10pt]{article}
+
+\input{../preambule}
+\input{../styles}
+\input{../bas_de_page_quatrieme} 
+ 
+%%%%%%%%%%%   Marges de pages  %%%%%%%%%%%%%%%% 
+ \usepackage{geometry}
+ \geometry{top=2cm, bottom=0cm, left=2cm , right=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Titre encadré
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{encadrementombre} {Thème 6 Calcul littéral}
+{\LARGE DTL13: Equations}\\
+
+%% Laisse la ligne vide ci-dessus
+{\Large Calcul littéral}
+\end{encadrementombre}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Corps du document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% \renewcommand{\arraystretch}{1.8}
+\definecolor{shadecolor}{gray}{0.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%   Hauteur de ligne  %%%%%%%%%%%%%%%%
+{\setlength{\baselineskip}{1.5\baselineskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multicols}{2}
+\begin{exo} \textbf{1}(voir sesamath)\\
+\includegraphics[scale=0.3]{DTL13_equations_cor.eps}  
+\end{exo}
+
+
+\begin{shaded}
+\begin{exo} \textbf{2}(voir sesamath)\\
+Soit $s$ le nombre de jour de soleil, c'est-à-dire la nombre de jours de vacances où il a fait soleil toute la journée. On cherche le nombre de vacances $j$ tel que $j=s+11$.\\
+Appelons maintenant $p$ le nombre de matinée de pluie.\\ D'après l'énoncé, on sait que le nombre d'après-midi de pluie est $11-p$.\\
+Par ailleurs, comme il y eu $12$ après-midi sans pluie, et que le nombre d'après-midi sans pluie est la somme du nombre de jours où il a plus le matin ($p$) et le nombre de jour de soleil ($s$), on déduit que $12=p+s$.\\
+De même, comme  il y eu $9$ matinée sans pluie, et que le nombre de matinée sans pluie est la somme du nombre de jours où il a plus l'après-midi ($11-p$) et le nombre de jour de soleil ($s$), on déduit que $9=11-p+s$.\\ 
+\vspace{0.1cm}\\
+Comme $12=p+s$, on déduit que $s=12-p$ , et comme $9=11-p+s$, on déduit que $9=11-p+12-p$, soit en réduisant:$9=23-2p$, donc $9-23=23-2p-23$, soit $-14=-2p$, donc $\frac{-14}{-2}=\frac{-2p}{-2}$, soit finalement $p=7$.\\
+Comme $s=12-p$, on déduit que $s=12-7=5$ et donc $j=5+11=16$.\\
+Ce garçon a eu $16$ jours de vacances, dont $5$ de beau temps toute la journée. 
+\end{exo}
+\end{shaded}
+\end{multicols}
+
+\end{document}

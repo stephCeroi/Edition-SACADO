@@ -1,0 +1,51 @@
+
+Le club de golf de Trifouilli-les-oies propose 3 formules 
+\begin{description}
+\item[Formule A :] abonnement annuel : 2300 \euro{} et la gratuite de tous les parcours du 1\ier janvier au 31 Décembre.
+\item[Formule B :] abonnement annuel : 1600 \euro{} et 25 \euro{} le parcours.
+\item[Formule C :] 65  \euro{} le parcours.
+\end{description}
+
+\begin{enumerate}
+\begin{multicols}{2}
+\item Complète le tableau.
+
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}p{1cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|>{\centering\arraybackslash}p{0.8cm}|}
+\hline 
+$x$ & 5 & 10 & 25 & 30 & 40 \vplus \\ 
+\hline 
+Formule A &  &  &  &  &  \\ 
+\hline 
+Formule B &  &  &  &  &  \\ 
+\hline 
+Formule C &  &  &  &  &  \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\item Quelle est la meilleure formule pour Patrick qui joue 27 fois par an ?
+\Point{1}
+\item Détermine trois fonctions qui formalisent les 3 formules.
+\Point{3}
+\end{multicols}
+
+\item Représente dans le repère ci dessous les trois fonctions.
+
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.07511687434985508cm,y=0.0035360821101843637cm]
+\draw [color=cqcqcq,, xstep=0.7511687434985508cm,ystep=0.7072164220368727cm] (-8.432814152603989,-147.75375795330476) grid (124.69306583842486,2680.2348713827437);
+\draw[->,color=black] (-8.432814152603989,0.) -- (124.69306583842486,0.);
+\foreach \x in {,10.,20.,30.,40.,50.,60.,70.,80.,90.,100.,110.,120.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-147.75375795330476) -- (0.,2680.2348713827437);
+\foreach \y in {,200.,400.,600.,800.,1000.,1200.,1400.,1600.,1800.,2000.,2200.,2400.,2600.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-8.432814152603989,-147.75375795330476) rectangle (124.69306583842486,2680.2348713827437);
+\end{tikzpicture}
+
+
+\item Quelle est la formule la plus adaptée selon le nombre de parcours joués. Une conclusion rédigée est attendue.
+\Point{5}
+\end{enumerate}

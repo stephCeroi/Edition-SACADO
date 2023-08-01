@@ -1,0 +1,132 @@
+\documentclass[openany]{book}
+
+
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCoursCycle4}
+\input{../../../latex_preambule_style/styleExercices}
+\input{../../../latex_preambule_style/styleExercicesAideCompetences}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_cycle4}
+\input{../../../latex_preambule_style/algobox}
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche sur livre  -----    0 affiche sur cahier 
+{%condition vraieé
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{seance}[Notions de fonction.]
+
+\section{Méthodes et notions importantes}
+
+
+\end{seance}
+
+
+\EPCN{Communiquer}
+
+Écrire à l'aide d'une égalité les deux phrases suivante;
+\begin{enumerate}
+\item L'image de $-1$ par la fonction $f$ est 2.
+\item L'antécédent de 4 par la fonction $g$ est 0.
+\end{enumerate}
+
+
+\EPCN{Représenter. Raisonner.}
+
+\begin{minipage}{0.5\linewidth}
+On donne l'algorithme suivant qui représente l'expression $h(x)$ de la fonction $h$.
+
+\begin{description}
+\item On choisit un nombre $x$
+\item On le multiplie par 2
+\item On ajoute 5 au résultat
+\item On élève le résultat obtenu au carré 
+\end{description}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{enumerate}
+\item Exprimer $h(x)$ en fonction de $x$.
+\item Calculer l'image de $\frac{1}{3}$ par $h$.
+\item $-1$ a-t-il un antécédent par $h$ ? Préciser.
+\item Chercher un antécédent de 25 par $h$.
+\end{enumerate}
+\end{minipage}
+
+\EPCN{Représenter. Communiquer.}
+
+\begin{minipage}{0.5\linewidth}
+La courbe de la fonction $f$ est représentée ci-contre.
+
+Déterminer graphiquement avec la précision permise :
+\begin{enumerate}
+\item $f(-1)$.
+\item l'image de 1 par $f$.
+\item le nombre de solutions de l'équation $f(x)=0$.
+\item une solution de l'équation $f(x)=0$.
+\item un nombre qui a pour antécédent 2 par $f$.
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+
+\begin{center}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-3.4290909090909114,-2.2490909090909104) grid (2.261818181818179,3.4236363636363665);
+\draw[->,color=black] (-3.4290909090909114,0.) -- (2.261818181818179,0.);
+\foreach \x in {-3.,-2.,-1.,1.,2.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-2.2490909090909104) -- (0.,3.4236363636363665);
+\foreach \y in {-2.,-1.,1.,2.,3.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-3.4290909090909114,-2.2490909090909104) rectangle (2.261818181818179,3.4236363636363665);
+\draw[line width=1.2pt,color=zzttqq,smooth,samples=100,domain=-3.4290909090909114:2.261818181818179] plot(\x,{cos((4.0*((\x)+0.12)+4.0)*180/pi)+0.2*((\x)+0.12)^(3.0)+0.24181818181818215});
+\begin{scriptsize}
+\draw[color=zzttqq] (-3.2472727272727293,-8.194545454545459) node {$f$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+
+
+
+\DNBS{Asie 2019}
+
+Nina et Claire ont chacune un programme de calcul.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}\hline
+\textbf{Programme de Nina}&\textbf{Programme de Claire}\\
+Choisir un nombre de départ&Choisir un nombre de départ\\
+Soustraire 1.&Multiplier ce nombre par $- \dfrac{1}{2}$\\
+Multiplier le résultat par $-2$&Ajouter 1 au résultat\\
+Ajouter 2.&\\ \hline
+\end{tabularx}
+\end{center}
+\smallskip
+
+\begin{enumerate}
+\item Montrer que si les deux filles choisissent 1 comme nombre de départ, Nina
+obtiendra un résultat final 4 fois plus grand que celui de Claire.
+\item  Quel nombre de départ Nina doit-elle choisir pour obtenir $0$ à la fin ?
+\item  Nina dit à Claire: \og Si on choisit le même nombre de départ, mon résultat sera
+toujours quatre fois plus grand que le tien \fg.
+
+A-t-elle raison ?
+\end{enumerate}
+
+\end{document}

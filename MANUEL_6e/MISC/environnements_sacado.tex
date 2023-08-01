@@ -387,6 +387,8 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 \tcbset{top=-0.2cm }
 \stepcounter{exo}
 
+\def\myVariable{#2}
+ 
 \begin{tcolorbox}[right=-5mm, enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
 {black!60!white}, attach boxed title to top right={xshift=-0.3cm, yshift*=-2mm}, coltitle=sacado_violet!85!black, colback=white!100!white, boxed title style={colback=white}, colframe=sacado_violet!100!black,title= {\footnotesize  #1}  ]
  
@@ -396,7 +398,6 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
  \begin{tikzpicture}
  	\node[fill=sacado_violet,minimum width=0.7cm]{\textcolor{white}{\bf {\Large \theexo}}};
  \end{tikzpicture}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%% Condition pour la calculatrice
  \ifthenelse{\equal{#3}{1}}{
@@ -422,7 +423,7 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 
 \begin{center}
 \colorbox{sacado_violet}{\includegraphics[height=1cm]{qrcodes/qrDummy.png}}
-\colorbox{white}{ {\footnotesize /b/ABCD} }
+\colorbox{white}{ {\footnotesize  \myVariable } }
 \end{center}
 
 \end{minipage}
@@ -436,6 +437,7 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 \newenvironment{ExoCu}[7]{% code avant
 \tcbset{top=-0.2cm }
 \stepcounter{exo}
+\def\myVariable{#2}
 
 \begin{tcolorbox}[right=-5mm, enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
 {black!60!white}, attach boxed title to top right={xshift=-0.3cm, yshift*=-2mm}, coltitle=sacado_green!85!black, colback=white!100!white, boxed title style={colback=white}, colframe=sacado_green!100!black,title= {\footnotesize  #1}  ]
@@ -473,7 +475,7 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
  
 \begin{center}
 \colorbox{sacado_green}{\includegraphics[height=1cm]{qrcodes/qrDummy.png}}
-\colorbox{white}{ {\footnotesize /b/ABCD}  }
+\colorbox{white}{ {\footnotesize \myVariable}  }
 \end{center}
  
 
@@ -488,7 +490,7 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 \newenvironment{ExoCd}[7]{% code avant
 \tcbset{top=-0.2cm }
 \stepcounter{exo}
-
+\def\myVariable{#2}
 \begin{tcolorbox}[right=-5mm, enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
 {black!60!white}, attach boxed title to top right={xshift=-0.3cm, yshift*=-2mm}, coltitle=sacado_blue!85!black, colback=white!100!white, boxed title style={colback=white}, colframe=sacado_blue!100!black,title= {\footnotesize  #1}  ]
  
@@ -524,7 +526,7 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 
 \begin{center}
 \colorbox{sacado_blue}{\includegraphics[height=1cm]{qrcodes/qrDummy.png}}
-\colorbox{white}{ {\footnotesize /b/ABCD} }
+\colorbox{white}{ {\footnotesize \myVariable} }
 \end{center}
 
 \end{minipage}
@@ -538,7 +540,7 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 \newenvironment{ExoCt}[7]{% code avant
 \tcbset{top=-0.2cm }
 \stepcounter{exo}
-
+\def\myVariable{#2}
 \begin{tcolorbox}[right=-5mm, enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
 {black!60!white}, attach boxed title to top right={xshift=-0.3cm, yshift*=-2mm}, coltitle=sacado_red!85!black, colback=white!100!white, boxed title style={colback=white}, colframe=sacado_red!100!black,title= {\footnotesize  #1}  ]
  
@@ -574,7 +576,7 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 
 \begin{center}
 \colorbox{sacado_red}{\includegraphics[height=1cm]{qrcodes/qrDummy.png}}
-\colorbox{white}{ {\footnotesize /b/ABCD} }
+\colorbox{white}{ {\footnotesize \myVariable} }
 \end{center}
 
 \end{minipage}
@@ -591,7 +593,7 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 \newenvironment{ExoAuto}[7]{% code avant
 \tcbset{top=-0.2cm }
 \stepcounter{exo}
-
+\def\myVariable{#2}
 \begin{tcolorbox}[right=-5mm, enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
 {black!60!white}, attach boxed title to top right={xshift=-0.3cm, yshift*=-2mm}, coltitle=sacado_orange!85!black, colback=white!100!white, boxed title style={colback=white}, colframe=sacado_orange!100!black,title= {\footnotesize  #1}  ]
  
@@ -627,7 +629,7 @@ title= \stepcounter{cpt} Notation \thecpt. #1 ]}{%
 
 \begin{center}
 \colorbox{sacado_orange}{\includegraphics[height=1cm]{qrcodes/qrDummy.png}}
-\colorbox{white}{  {\footnotesize /b/ABCD}  }
+\colorbox{white}{  {\footnotesize \myVariable}  }
 \end{center}
 
 \end{minipage}

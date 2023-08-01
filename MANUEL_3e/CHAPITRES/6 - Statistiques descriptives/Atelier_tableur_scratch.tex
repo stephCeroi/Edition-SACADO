@@ -1,0 +1,105 @@
+\documentclass[openany]{book}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCoursCycle4}
+\input{../../../latex_preambule_style/styleExercices}
+\input{../../../latex_preambule_style/styleExercicesAideCompetences}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_cycle4}
+\input{../../../latex_preambule_style/algobox}
+
+
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+\newcommand{\impress}[2]{
+\ifthenelse{\equal{#1}{1}}  %   1 imprime / affiche sur livre  -----    0 affiche sur cahier 
+{%condition vraieé
+#2
+}% fin condition vraie
+{%condition fausse
+}% fin condition fausse
+} % fin de la procédure
+%%%%%%%%%%%%%%%  Affichage ou impression  %%%%%%%%%%%%%%%%%%
+ \usepackage{geometry}
+ \geometry{top=1.5cm, bottom=0cm, left=2cm , right=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{seance}[Statistiques]
+
+\begin{description}
+\item[$\square$] Calculer et interpréter des caractéristiques de position ou de dispersion d’une série statistique - Indicateurs : moyenne.
+\item[$\square$] Calculer des effectifs, des fréquences.
+\item[$\square$] Lire des données sous forme de données brutes, de tableau, de graphique.
+\end{description}
+\end{seance}
+
+
+\Exe
+
+
+Pierre, Jean et Alain ont passé un examen comportant quatre
+disciplines. Pour être reçu, il faut atteindre 10 de moyenne.
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+\cline{2-5}
+\multicolumn{1}{c|}{}&Français&Mathématiques&Anglais&Technologie\\
+\hline
+Pierre&15&9&11&7\\
+\hline
+Jean&10&11&12&9\\
+\hline
+Alain&7&14&13&8\\
+\hline
+  \end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item En utilisant un tableur, calculer la moyenne, sans coefficient, des trois candidats et la moyenne par matière. On doit construire le tableau suivant :
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+\hline  
+{\cellcolor{gray}}&{\cellcolor{gray}}&{\cellcolor{gray}A}&{\cellcolor{gray}B}&{\cellcolor{gray}C}&{\cellcolor{gray}D}&{\cellcolor{gray}E} \\
+\hline
+{\cellcolor{gray}1}&Prénom&Français&Mathématiques&Anglais&Technologie&Moyenne\\
+\hline
+{\cellcolor{gray}2}&Pierre&15&9&11&7&\\
+\hline
+{\cellcolor{gray}3}&Jean&10&11&12&9&\\
+\hline
+{\cellcolor{gray}4}&Alain&7&14&13&8&\\
+\hline
+{\cellcolor{gray}5}&Moyenne&&&&&\\
+\hline
+  \end{tabular}
+\end{center}
+
+\begin{Rappel}
+Pour utiliser une fonction sur un tableur, on utiliser le signe =. \par
+La fonction =SOMME(A1:A5) permet le calcul des valeurs dans les cellules de A1 à A5.
+\end{Rappel}
+
+
+\item Pour cet examen, le français, les mathématiques, l'anglais et la
+technologie ont respectivement pour coefficient 6; 4; 2 et 5.\par
+A l'aide de Scratch, créer un programme qui permet de calculer la moyenne pondérée de ces 4 matières et qui dit si un candidat est reçu ou non.
+
+\vspace{0.4cm}
+On  créera donc 2 listes une appelé notes et une appelée coefficient.
+
+\begin{Rappel}
+Pour créer une liste, on utilise la séquence \fcolorbox{orange}{orange}{Données} puis \fcolorbox{gray}{gray}{Créer une liste}
+\end{Rappel}
+
+
+
+\end{enumerate}
+
+
+
+
+
+\end{document}

@@ -1,0 +1,24 @@
+
+A l'aide du logiciel Geogebra,
+\begin{enumerate}
+\item trace la courbe d'équation $y=x^2+4x-1$
+\item trace la courbe d'équation $y=-4$.
+\item Reproduire ci dessus le graphique
+
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-8.467724121812658,-5.731812007282444) grid (7.8205078537954895,8.788550888046286);
+\draw[->,color=black] (-8.467724121812658,0.) -- (7.8205078537954895,0.);
+\foreach \x in {-8.,-7.,-6.,-5.,-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-5.731812007282444) -- (0.,8.788550888046286);
+\foreach \y in {-5.,-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.,8.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-8.467724121812658,-5.731812007282444) rectangle (7.8205078537954895,8.788550888046286);
+\end{tikzpicture}
+
+\item Résoudre graphiquement $x^2+4x-1 > -4$. Les traits de construction doivent apparaitre sur le graphique.
+
+\Point{1}
+\end{enumerate}

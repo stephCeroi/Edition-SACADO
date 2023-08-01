@@ -1,0 +1,51 @@
+
+On donne la droite ci dessous.
+
+\begin{center}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-0.44,-0.48) grid (10.6,7.72);
+\draw[->,color=black] (0.,0.) -- (10.6,0.);
+\foreach \x in {,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,0.) -- (0.,7.72);
+\foreach \y in {,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-0.44,-0.48) rectangle (10.6,7.72);
+\draw [color=qqqqff] (0.,2.)-- (10.,7.);
+\begin{scriptsize}
+\draw [color=xdxdff] (4.,4.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (4.14,4.36) node {$A$};
+\draw [color=xdxdff] (8.,6.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xdxdff] (8.14,6.36) node {$B$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item Cette droite représente-t-elle une situation de proportionnalité ?
+
+\Point{2}
+\item 
+\begin{enumerate}
+\item Place dans le tableau des coordonnées des points A et B de la droite.
+
+\begin{tabular}{|c|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|}
+\hline 
+ & A & B  \vplus  \\ 
+\hline 
+abscisse &  &  \vplus \\ 
+\hline 
+ordonnée &  &   \vplus  \\ 
+\hline 
+\end{tabular} 
+
+\item Confirme la réponse dans la question 1.
+
+\Point{2}
+\end{enumerate}
+
+\end{enumerate}

@@ -1,0 +1,18 @@
+Sur une droite $d$, on peut repérer tous les points à partir de deux points distincts O et I appartenant à la droite $d$.\\
+Ainsi, un tel couple $\left(O;I\right)$ est appelé \textbf{repère} de la droite $d$.
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-5.5,0.) -- (2.505759637776914,0.);
+\foreach \x in {-5,-4,-3,-2,-1,0,1,2}
+\clip(-5.5,-0.5) rectangle (2.505759637776914,0.5);
+\draw [domain=-5.5:2.505759637776914] plot(\x,{(-0.-0.*\x)/1.});
+\begin{scriptsize}
+\draw [fill=black] (-2.,0.) -- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=red] (-1.9202930204239919,0.20528779975855618) node {$O$};
+\draw [fill=black] (-1.,0.) -- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=red] (-0.9186074188311553,0.20528779975855618) node {$I$};
+\draw[color=black] (-5.228185007079405,0.19364029276329062) node {$d$};
+\end{scriptsize}
+\end{tikzpicture}
+
+Le point O est appelé \og Origine du repère \fg{}.

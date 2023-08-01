@@ -1,0 +1,33 @@
+
+La figure ci dessous représente un terrain à l'échelle 1/\np{1000}, aussi écrite 1:\np{1000}.
+
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(0.62,-0.46) rectangle (7.4,6.78);
+\fill[color=qqwuqq,fill=qqwuqq,fill opacity=0.2] (2.,5.5) -- (5.,5.5) -- (7.,0.5) -- (2.,0.5) -- cycle;
+\draw [color=qqwuqq] (2.,5.5)-- (5.,5.5);
+\draw [color=qqwuqq] (5.,5.5)-- (7.,0.5);
+\draw [color=qqwuqq] (7.,0.5)-- (2.,0.5);
+\draw [color=qqwuqq] (2.,0.5)-- (2.,5.5);
+\draw (2.14,6.)-- (4.84,6.);
+\draw (1.68,0.52)-- (1.68,5.44);
+\draw (5.1,0.18)-- (6.92,0.18);
+\draw (3.06,6.36) node[anchor=north west] {3cm};
+\draw (5.58,-0.06) node[anchor=north west] {2cm};
+\draw (0.8,3.28) node[anchor=north west] {5cm};
+\begin{scriptsize}
+\draw [fill=black,shift={(2.14,6.)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=black,shift={(4.84,6.)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=black,shift={(1.68,0.52)},rotate=180] (0,0) ++(0 pt,2.25pt) -- ++(1.9485571585149868pt,-3.375pt)--++(-3.8971143170299736pt,0 pt) -- ++(1.9485571585149868pt,3.375pt);
+\draw [fill=black,shift={(1.68,5.44)}] (0,0) ++(0 pt,2.25pt) -- ++(1.9485571585149868pt,-3.375pt)--++(-3.8971143170299736pt,0 pt) -- ++(1.9485571585149868pt,3.375pt);
+\draw [fill=black,shift={(5.1,0.18)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=black,shift={(6.92,0.18)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item Quelle est le périmètre réel de ce terrain ?
+\item On souhaite clôturer ce terrain avec un petit muret de briques (dimension : hauteur : 20cm, longueur : 50cm et largeur 20cm). Combien de briques doit on acheter pour encercler le terrain sur une hauteur de 1 mètre ?
+\end{enumerate}

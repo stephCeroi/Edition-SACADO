@@ -1,8 +1,8 @@
-=>PYTHONTEX#py#default#default#0#code#####274#
+=>PYTHONTEX#py#default#default#0#code#####279#
 import qrcode
 def qr(data):
      fic=r"qrcodes/qr"+data+'.png'
-     urlcourte=r"sacado.xyz/b/"+data
+     urlcourte=r"sacado.xyz/"+data
      urllongue=r"https://"+urlcourte
      qr = qrcode.QRCode(version=1,
 error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)

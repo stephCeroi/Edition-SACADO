@@ -1,0 +1,112 @@
+\documentclass[10pt]{article}
+
+\input{../../../latex_preambule_style/preambule}
+\input{../../../latex_preambule_style/styleCoursCycle4}
+\input{../../../latex_preambule_style/styleExercices}
+\input{../../../latex_preambule_style/styleExercicesAideCompetences}
+%\input{../../latex_preambule_style/styleCahier}
+\input{../../../latex_preambule_style/bas_de_page_cycle4}
+\input{../../../latex_preambule_style/algobox}
+%%%%%%%%%%%   Marges de pages  %%%%%%%%%%%%%%%% 
+ \usepackage{geometry}
+ \geometry{top=2cm, bottom=1cm, left=2cm , right=2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\parindent=0pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Titre encadré
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%		 Corps du document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% \renewcommand{\arraystretch}{1.8}
+%\definecolor{shadecolor}{gray}{0.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Exe
+%%%%%%%%%%%   Hauteur de ligne  %%%%%%%%%%%%%%%%
+{\setlength{\baselineskip}{1.5\baselineskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Notions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\emph{Pour illustrer l'exercice, la figure ci-dessous a été faite à main levée.}
+
+\begin{center}
+\psset{unit=1cm}
+\begin{pspicture}(8,5)
+%\psgrid
+\pslineByHand(0.5,2.5)(7.5,4)
+\pslineByHand(2,0.5)(6,4.8)
+\pslineByHand(2,0.5)(0.5,2.5)
+\pslineByHand(6,4.8)(7.5,4)
+\pslineByHand(3,3)(4,2.6)
+\uput[ul](4.75,3.4){A}\uput[r](7.5,4){B}\uput[u](6,4.8){C}
+\uput[l](0.5,2.5){D} \uput[d](2,0.5){E}\uput[ul](3,3){F}\uput[dr](3.8,2.6){G}
+\rput{-50}(1.2,1.2){8,1 cm}\rput{-27}(3.3,2.6){3 cm}
+\rput{46}(3.2,1.4){6,8 cm}\rput{45}(4.4,2.78){4 cm}
+\rput{15}(3.6,3.4){5 cm}\rput{45}(5.2,4.3){5 cm}
+\rput{15}(6,3.4){6,25 cm}
+\end{pspicture}
+\end{center}
+
+Les points D, F, A et B sont alignés, ainsi que les points E, G, A et C.
+
+De plus, les droites (DE) et (FG) sont parallèles.
+
+\medskip
+
+\begin{enumerate}
+\item Montrer que le triangle AFG est un triangle rectangle.
+\item  Calculer la longueur du segment [AD]. En déduire la longueur du segment [FD].
+\item  Les droites (FG) et (BC) sont-elles parallèles ? Justifier.
+\end{enumerate}
+
+
+\Exe
+
+Voici deux programmes de calcul :
+
+\medskip
+
+
+\begin{tabularx}{\linewidth}{|X|p{0.4cm}|X|}\cline{1-1}\cline{3-3}
+\multicolumn{1}{|c|}{\textbf{Programme A}}&~&\multicolumn{1}{|c|}{\textbf{Programme B}}\\
+Choisir un nombre de départ&&Choisir un nombre de départ\\
+Multiplier ce nombre par - 3&&Multiplier ce nombre par 2\\
+Soustraire 12 au résultat&&Ajouter 5 au résultat\\
+&&Multiplier le tout par 3\\
+Écrire le résultat.&&Écrire le résultat.\\\cline{1-1}\cline{3-3} 
+\end{tabularx}
+
+\medskip
+
+\begin{enumerate}
+\item On choisit $- 8$ comme nombre de départ.
+	\begin{enumerate}
+		\item Prouver par le calcul que le résultat obtenu avec le programme A est $12$.
+		\item Calculer le résultat final avec le programme B.
+	\end{enumerate}
+\item Sandro affirme : \og Si on choisit le même nombre de départ pour les deux programmes, le résultat du programme A est toujours supérieur à celui du programme B. \fg
+	
+Prouver qu'il se trompe.
+\item Anne affirme: \og Avec le programme B j'ai trouvé un résultat égal à mon nombre de départ \fg.
+	
+Quel était son nombre de départ ?
+\end{enumerate}
+
+
+
+\end{document}
