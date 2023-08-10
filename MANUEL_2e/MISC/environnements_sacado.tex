@@ -345,7 +345,11 @@ borderline west={2mm}{0mm}{sacado_violet}]
 \par}
 
 
- 
+%%%%%%%%%%%%% Illustration
+\newenvironment{Ill}{%
+\medskip \begin{tcolorbox}[widget,colback=white!15,colframe=sacado_violet!75!black,
+title= \stepcounter{cpt} Illustration \thecpt. ]}{%
+\end{tcolorbox}\par}
 
 %%%%%%%%%%%%% Rituel
 \newenvironment{Rit}{%
