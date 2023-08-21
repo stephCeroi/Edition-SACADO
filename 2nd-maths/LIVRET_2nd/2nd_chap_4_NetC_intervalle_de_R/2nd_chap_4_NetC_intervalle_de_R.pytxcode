@@ -14,7 +14,7 @@ error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)
 \includegraphics{"""+fic+r"}\\{\scriptsize\tt "+urlcourte+r"}\end{center}}"
 =>PYTHONTEX:SETTINGS#
 version=0.18
-outputdir=pythontex-files-2nd_chap_4_intervalle_de_R
+outputdir=pythontex-files-2nd_chap_4_NetC_intervalle_de_R
 workingdir=.
 workingdirset=false
 gobble=none
