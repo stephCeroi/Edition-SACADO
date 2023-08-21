@@ -1,0 +1,443 @@
+\input{../MISC/preambule_sacado.tex}
+\input{../MISC/environnements_sacado.tex}
+\input{../MISC/macro_sacado.tex}
+
+\title{Mathématiques 2nde  : le livre sacado}
+\author{L'équipe SACADO}
+
+\begin{document}
+
+%\maketitle
+
+\chapter{Probabilités}{17}
+{URL du parcours}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+ 		\item Savoir déterminer si un nombre peut être ou non la probabilité d'un évènement. 
+		\item Savoir estimer la probabilité d'un évènement. 
+		\item Savoir déterminer des évènements certains ou impossibles. 
+		\item Savoir faire le lien entre fréquence observée et fréquence théorique. 
+		\item Savoir calculer des probabilités par dénombrement. 
+		\item Savoir calculer une probabilité avec un arbre.  
+		\item Savoir utiliser le vocabulaire des ensembles.
+		\item Savoir calculer la probabilité d'un évènement contraire.
+		\item Savoir calculer la probabilité d'une union d'évènements.
+		\item Savoir présenter des ensembles dans un tableau pour calculer une probabilité.
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
+\end{His}
+
+\begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
+% Un exercice de découverte/d'accroche
+\end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Expériences aléatoires.}
+
+\begin{Def}
+Une expérience est aléatoire lorsqu'elle a plusieurs résultats ou issues possibles et que l'on ne peut pas prévoir, à priori, quel résultat se produira.
+\end{Def}
+
+\begin{Def}
+\begin{itemize}
+\item Un résultat possible d'une expérience aléatoire s'appelle une issue.
+\item L'ensemble de toutes les issues possibles d'une expérience aléatoire s'appelle l'univers. On le note $\Omega$
+\end{itemize}
+\end{Def}
+
+\begin{Def}
+On peut schématiser une expérience aléatoire sous la forme d'un arbre.
+
+L'arbre des possibles permet de visualiser les issues d'une expérience aléatoire.
+\end{Def}
+
+\section{Évènements d'une expérience aléatoire}
+
+\begin{DefT}{Évènements}
+\begin{itemize}
+\item Un évènement est une partie (ou sous-ensemble) de l'univers.
+\item Un évènement élémentaire est un événement composé d'une seule issue.
+\item Lorsque le résultat d'une expérience aléatoire appartient à un évènement, on dit que l'événement est réalisé.
+\end{itemize}
+\end{DefT}
+
+\begin{DefT}{Évènements contraires}
+Soit $A$ et $B$ deux évènements.
+
+On dit que $A$ et $B$ sont complémentaires lorsque $A$ est composé de toutes les issues de l'univers n'appartenant pas à $B$.
+
+On dit aussi que $B$ est l'évènement contraire de $A$ et on le note $\overline{A}$.
+\end{DefT}
+
+\begin{DefT}{Réunion et intersection d'évènements}
+Soit $A$ et $B$ deux évènements.
+\begin{itemize}
+\item L'intersection de $A$ et de $B$, notée $A\cap B$ est l'évènement constitué des issues appartenant \textit{à la fois à $A$ et à $B$}.
+\item La réunion de $A$ et de $B$, notée $A\cup B$ est  l'évènement constitué des issues appartenant \textit{à $A$ ou à $B$}.
+\end{itemize}
+\end{DefT}
+
+\begin{DefT}{Évènements incompatibles.}
+Soit $A$ et $B$ deux évènements.
+
+On dit que $A$ et $B$ sont incompatibles (ou disjoints) lorsqu'ils n'ont aucune issue en commun ($A\cap B=\varnothing$).
+
+Ils ne peuvent pas se réaliser simultanément.
+\end{DefT}
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Probabilité d'un évènement.}
+
+\begin{Def}
+Les fréquences obtenues d'un événement $E$ se rapprochent d'une valeur théorique lorsque le nombre d'expérience augmente (Loi des grands nombres).
+
+Cette valeur s'appelle la probabilité de l'événement $E$ et se note $p(E)$.
+\end{Def}
+
+\begin{Pp}
+La probabilité d'un événement est une fréquence théorique donc pour tout événement $E$, on a $0\leq p(E)\leq1$
+\end{Pp}
+
+\begin{Def}
+\begin{itemize}
+\item On dit qu'un événement est impossible lorsque sa probabilité est égale à $0$.
+\item On dit qu'un événement est certain lorsque sa probabilité est égale à $1$.
+\end{itemize}
+\end{Def}
+
+\section{Calculs de probabilités}
+
+\begin{Pp}
+La probabilité d'un évènement est la somme des probabilités des évènements élémentaires qui le constituent.
+\end{Pp}
+
+\begin{Def}
+Lorsque tous les évènements élémentaires ont la même probabilité de se réaliser on dit qu'on est en situation d'équiprobabilité.
+\end{Def}
+
+\begin{Pp}
+En situation d'équiprobabilité sur un univers $\Omega$, la probabilité d'un évènement $A$ est :
+
+\[p(A)=\frac{\text{nombre d'issues réalisant }A}{\text{nombre total d'issues de }\Omega}\]
+\end{Pp}
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 3
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Loi de probabilité.}
+
+\begin{Def}
+On considère une expérience aléatoire dont l'univers $\Omega$ est fini et formé de n issues $\Omega=\{e_1;e_2;\ldots;e_n\}$
+
+Définir une loi de probabilité sur $\Omega$
+c'est associer à chaque évènement élémentaire $e_i$ sa probabilité. 
+
+On peut représenter une loi de probabilité
+sous la forme d'un tableau.
+
+\begin{tabular}{c|c|c|c|c|c}
+Issue & $e_1$ & $e_2$ & $e_3$ & $\ldots$ & $e_n$ \\
+$p(e_i)$ & $p_1$ & $p_2$ & $p_3$ & $\ldots$ & $p_n$
+\end{tabular}
+\end{Def}
+
+\begin{Pp}
+La somme des probabilités des évènements élémentaires est égale à $1$.
+\end{Pp}
+
+\section{Formules avec des probabilités.}
+
+\begin{PpT}{Probabilité d'un évènement contraire.}
+Soit $A$ un évènement et $\overline{A}$ son évènement contraire.
+
+Alors $p(A)+p(\overline{A})=1$ ou $p(A)=1-p(\overline{A})$.
+\end{PpT}
+
+\begin{PpT}{Probabilité d'une réunion d'événements.}
+Soit $A$ et $B$ deux évènements alors $p(A\cup B)=p(A)+p(B)-p(A\cap B)$.
+\end{PpT}
+
+\begin{Pp}
+Soit $A$ et $B$ deux évènements incompatibles alors $p(A\cup B)=p(A)+p(B)$ 
+\end{Pp}
+
+\end{pageCours} % Fin page de cours 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 3
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
+  
+\end{ExoCu}
+
+%Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Quatrième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Cinquième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Sixième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+%Premier exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Deuxième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Troisième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Quatrième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Cinquième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Sixième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Sixième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Page algorithmique
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAlgo} % Début de la page d'exos d'algorithmique
+
+%Exercice d'algorithmique
+\begin{ExoAlgoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgoN}
+
+%Exercice d'algorithmique
+\begin{ExoAlgo}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgo}
+
+\end{pageAlgo} % Fin de la page d'exos d'algorithmique
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}
