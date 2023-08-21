@@ -1,0 +1,662 @@
+\input{MISC/preambule_sacado.tex}
+\input{MISC/environnements_sacado.tex}
+\input{MISC/macro_sacado.tex}
+
+\title{Mathématiques 2nde  : le livre sacado}
+\author{L'équipe SACADO}
+
+\parindent=0pt
+\begin{document}
+
+%\maketitle
+
+\chapter{Calculs numériques}
+{https://sacado.xyz/qcm/parcours_show/31121/142936}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+ 
+		\item Effectuer des calculs numériques mettant en jeu des puissances, des racines carrées, des écritures fractionnaires.
+		\item Calculs avec les relatifs, avec les rationnels.
+		\item Calculs avec les puissances.
+		\item Calculs avec les racines carrées.
+		\item Règles de calcul sur les puissances entières relatives, sur les racines carrées. $\sqrt {a^2} = |a|$ 
+ 
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+François Viète (1540-1603) est un mathématicien français. En 1591, il publie \textit{In artem analyticem isagoge} qui représente une avancée considérable pour l'algèbre.
+
+Le calcul littéral trouve ses bases dans le but de résoudre tout problème.
+
+Les grandeurs cherchées sont désignées par des voyelles et les grandeurs connues par des consonnes.
+
+Les symboles d'opérations sont officialisés.
+\end{His}
+
+\begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
+% Un exercice de découverte/d'accroche
+\end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Calculs avec les relatifs}
+
+%\begin{minipage}{0.5\linewidth}
+%\begin{DefT}{Addition de relatifs}
+%Un nombre relatif est défini par un signe ($+$ ou $-$) et d'une valeur numérique entière. Le signe est dit prédicatif. 
+%\end{DefT}
+%\end{minipage}
+%\begin{minipage}{0.5\linewidth}
+%\begin{Ex}
+%$-25$ est composé du $-$ prédicatif et de la valeur numérique $25$.
+%\end{Ex}
+%\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{ThT}{Addition de relatifs}\index{Addition de relatifs}
+Pour additionner deux nombres relatifs \textbf{de même signe}, on additionne leur partie numérique et on conserve le signe, on soustrait leur partie numérique et on conserve le signe de la plus grande partie numérique.
+
+Pour additionner deux nombres relatifs \textbf{de signes différents}, on soustrait leur partie numérique et on conserve le signe de la plus grande partie numérique.
+\end{ThT}
+
+
+\begin{ThT}{Soustraction de relatifs}\index{Soustraction de relatifs}
+Pour soustraire deux nombres relatifs, on soustrait leur partie numérique et on conserve le signe de la plus grande partie numérique.
+\end{ThT}
+
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+
+\begin{Rq} 
+
+ 
+On peut aussi imaginer la droite graduée numérique qui représente $-4+2=-2$
+ 
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+xmin=-5.28,
+xmax=2.5600000000000005,
+ymin=-0.0399999999999998,
+ymax=0.0599999999999999,
+xtick={-5.0,-4.0,...,2.0},
+ytick={0.0,...,0.0},]
+\clip(-4.28,-1.04) rectangle (6.56,0.96);
+\draw [line width=5.2pt,color=ffqqqq] (0.,0.)-- (-4.,0.);
+\draw [line width=2.pt,color=qqqqff] (-4.,0.)-- (-2.,0.);
+\draw [color=ffqqqq](-1.48,0.34) node[anchor=north west] {$-4$};
+\draw (-3.04,-0.44) node[anchor=north west] {$+2$};
+\end{axis}
+\end{tikzpicture}
+
+
+\end{Rq}
+
+
+\begin{ThT}{Produit de plusieurs nombres relatifs}
+Le produit de plusieurs nombres relatifs est positif s'il comporte un nombre pair de facteurs négatifs.
+
+Le produit de plusieurs nombres relatifs est négatifs s'il comporte un nombre impair de facteurs négatifs.
+\end{ThT}
+\end{minipage}
+
+\section{Calculs avec les rationnels}
+
+\begin{minipage}[t]{0.5\linewidth}
+\begin{DefT}{Addition ou soustraction de deux nombres rationnels}
+Pour additionner ou soustraire deux nombres rationnels, il faut les réduire au même dénominateur puis ajouter ou soustraire leur numérateur.
+
+
+Soit $a$, $b$, $c$ et $d$ 4 nombres tels que $b$ et $d$ sont non nuls, $\dfrac{a}{b}+\dfrac{c}{d} = \dfrac{ad+bc}{bd}$ et $\dfrac{a}{b}-\dfrac{c}{d} = \dfrac{ad-bc}{bd}$
+\end{DefT}
+
+\begin{Ex}
+ $\dfrac{3}{5}+\dfrac{2}{7} = \dfrac{3 \times 7 }{5 \times 7} + \dfrac{2 \times 5 }{5 \times 7} = \dfrac{3 \times 7+2 \times 5 }{5 \times 7} = \dfrac{31 }{35}$ 
+\end{Ex}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+\begin{DefT}{Multiplication de deux nombres rationnels}
+Pour multiplier deux nombres rationnels, on multiplie les dénominateurs entre eux et les numérateurs entre eux. Mais dans tous les cas, il faut penser à la simplification avant de conclure le résultat.
+
+Soit $a$, $b$, $c$ et $d$ 4 nombres tels que $b$ et $d$ sont non nuls, $\dfrac{a}{b}\times \dfrac{c}{d} = \dfrac{a\times c}{b\times d}$
+\end{DefT}
+
+\begin{Ex}
+ $\dfrac{2}{5}\times \dfrac{3}{4} = \dfrac{2 \times 3 }{5 \times 4}  = \dfrac{2 \times 3 }{5 \times 2 \times 2}= \dfrac{3}{5 \times 2}= \dfrac{3}{10}$ 
+\end{Ex}
+\end{minipage}
+
+
+\begin{minipage}[t]{0.6\linewidth}
+\begin{DefT}{Division de deux nombres rationnels}
+Pour diviser deux nombres rationnels, on multiplie le premier nombres rationnel par l'inverse du second nombre rationnel.
+
+Soit $a$, $b$, $c$ et $d$ 4 nombres tels que $b$ et $d$ sont non nuls, $\dfrac{\dfrac{a}{b}}{ \dfrac{c}{d}} = \dfrac{a}{b}\times \dfrac{d}{c}=\dfrac{ad}{bc}$
+\end{DefT}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\begin{Ex}
+ $\dfrac{\dfrac{3}{7}}{\dfrac{5}{2}} =\dfrac{3}{7} \times \dfrac{2}{5}=\dfrac{6}{35}$ 
+\end{Ex}
+\end{minipage}
+
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Effectuer des calculs numériques avec les relatifs}
+
+\begin{ExoCad}{Calculer.}{14}{0}{0}{0}{0}{0}
+Calculer les nombres suivants :
+$A = 11 - (-6) = $ \point{1}
+$B = 20 - (-4) + (-2) = $ \point{1}
+\end{ExoCad}
+
+ 
+
+\begin{ExoCad}{Compétence.}{15}{0}{0}{0}{0}{0}
+Parmi ces 4 résultats lesquels sont égaux à 26 ?
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+$13 \times 2 $  & $13 \times -2 $ & $(-13) \times (-2) $ & $-13 \times 2 $ \\ 
+\hline 
+\end{tabular} 
+
+\end{ExoCad}
+
+ 
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+Détermine le signe des calculs suivants :
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Calculs avec les puissances}
+
+\begin{DefT}{Puissance du nombre}\index{Puissance d'un nombre}
+Soit $a$ un nombre réel et $n$ un entier, on appelle \textbf{puissance du nombre} $a$, le nombre $a^n$ où $a$ est la base et $n$ est l'exposant. La puissance est donc un résultat. On lit "$a$ \textit{exposant} $n$" ou abusivement "$a$ \textit{puissance} $n$".
+\end{DefT}
+
+
+\begin{DefT}{Inverse d'un nombre}\index{Inverse d'un nombre}
+Soit $a$ un nombre réel non nul, on appelle \textbf{inverse du nombre} $a$, le nombre $b$ tel que $ab=1$. On l'écrit $b=\dfrac{1}{a}=a^{-1}$
+\end{DefT}
+
+
+
+
+
+\begin{ThT}{Règles opératoires}
+Soit $a$ et $b$ deux nombres réels, $n$ et $m$ deux entiers relatifs.
+
+
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $a^n \times a^m = a^{n+m}$ 
+\item $\left(a^n \right)^m =a^{n\times m}$ 
+
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $a \neq 0$, $\dfrac{a^n}{a^m} = a^{n-m} $ 
+\item $a^0=1 $
+ 
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $a^n \times b^n = (ab)^n$ 
+\item $b \neq 0$, $\dfrac{a^n}{b^n} = \left( \dfrac{a}{b} \right)^n $ 
+\end{itemize}
+\end{minipage}
+
+\end{ThT}
+ 
+
+ 
+ 
+\begin{Ex}
+
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $3^2 \times 3^5 = 3^{7}=2187$ 
+\item $\left(4^2 \right)^3 =4^6=4096$ 
+
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $\dfrac{2^3}{2^4} =  2^{3-4} =  2^{-1}$ 
+\item $a^0=1 $
+ 
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $5^3 \times 2^3 = 10^3=1000$ 
+\item $\dfrac{5^3}{2^3} = \left( \dfrac{5}{2} \right)^3 $ 
+\end{itemize}
+\end{minipage}
+
+\end{Ex}
+ 
+ 
+ 
+
+\section{Calculs avec les racines carrées}
+
+\begin{DefT}{Puissance du nombre}\index{Puissance d'un nombre}
+Soit $a$ un nombre réel positif, on appelle \textbf{la racine du nombre} $a$, le nombre $\sqrt a$ tel que $\left( \sqrt a \right)^2=a$.
+\end{DefT}
+
+
+
+
+\begin{ThT}{Règles opératoires}
+Soit $a$ et $b$ deux nombres réels positifs.
+
+
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $\sqrt a  \times \sqrt b = \sqrt{a\times b}$ 
+\item $\sqrt a^2 = a$ 
+
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $\sqrt{a ^2} = |a|$
+\item $\sqrt{0} = 0$
+ 
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $b \neq 0$, $\dfrac{\sqrt{a}}{\sqrt{b}} = \sqrt{  \dfrac{a}{b} } $ 
+\end{itemize}
+\end{minipage}
+
+\end{ThT}
+ 
+
+ 
+ 
+\begin{Ex}
+
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $\sqrt 3  \times \sqrt 5 = \sqrt{15}$ 
+\item $\sqrt 7^2 = 7$ 
+
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.33\linewidth}
+\begin{itemize}
+\item $\sqrt{(-2)^2} = |2|=2$
+\item $\dfrac{\sqrt{75}}{\sqrt{3}} = \sqrt{  \dfrac{75}{3} } = \sqrt{ 25 } = 5$ 
+\end{itemize}
+\end{minipage}
+
+\end{Ex}
+ 
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Savoir calculer avec des puissances}
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+ 
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Savoir calculer avec des racines carrées}
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+ 
+Écrire sous la forme $a\sqrt{b}$, $a\in\R$ et $b \in \R^+$ les nombres suivants : \vspace{0.4cm}
+
+\begin{minipage}{0.5\linewidth}
+$A = \sqrt{8}=$ \point{1} 
+
+$B=\sqrt{27}=$  \point{1}
+ 
+$C=\sqrt{20}=$  \point{1} 
+\end{minipage}
+\vrule
+\begin{minipage}{0.5\linewidth}
+$D=\sqrt{18}=$   \point{1} 
+
+$E=\sqrt{12}=$  \point{1} 
+
+$F=\sqrt{72}=$ \point{1} 
+\end{minipage}
+ 
+\end{ExoCad}
+
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+ 
+
+Simplifie les écritures : \vspace{0.4cm}
+
+$A=\dfrac{\sqrt{20}}{4}=$ \point{2} 
+
+$B = \dfrac{2-\sqrt{8}}{4}=$\point{2} 
+
+$C=\left( 3-\sqrt{5}\right)^2=$ \point{2} 
+
+$D=\sqrt{18}\sqrt{2}=$  \point{2} 
+
+ $E=\sqrt{12}+\sqrt{45}=$ \point{2} 
+ 
+ $F=\sqrt{18} -\sqrt{72} +\sqrt{32}=$\point{2} 
+\end{ExoCad}
+ 
+ 
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
+  
+\end{ExoCu}
+
+
+%Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Quatrième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Cinquième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Sixième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+\begin{ExoCdN}{Chercher.}{2}{0}{0}{0}{0}
+
+On pose $x = \sqrt{3}$ et $y=\sqrt{2}$. Calculer
+
+\begin{enumerate}
+\begin{minipage}{0.5\linewidth}
+\item $x^4-y$
+\item $2x^2+2x+3$
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\item $(x+2)(x-4)$
+\item $x^3 \times y^3$
+\end{minipage}
+\end{enumerate}
+\end{ExoCdN}
+
+
+
+ 
+\begin{ExoCdN}{Représenter. Chercher.}{2}{0}{0}{0}{0}
+On pose $a=4\times \left(\frac{3}{5}\right)^3 \times \frac{20}{3}$. Montrer que $\sqrt{a}$ est un nombre décimal.
+\end{ExoCdN}
+
+
+
+ \begin{ExoCdN}{Calculer.}{2}{0}{0}{0}{0}
+Calculer les expressions suivantes sous la forme $a\sqrt{b}$, $a\in \R$ et $b \in \R^+$ ou sans racine carré au dénominateur.
+\begin{enumerate}
+\item $A=2\sqrt{12} \quad B= 6\sqrt{8} + 3\sqrt{2} + 5\sqrt{50}$
+\item $C=\frac{2}{\sqrt{2}} \quad D= \frac{5}{4 - \sqrt{3}} \quad E= \frac{2+\sqrt{3}}{2 - \sqrt{5}} $
+\end{enumerate}
+\end{ExoCdN}
+
+
+
+
+
+
+
+
+ 
+
+
+\begin{ExoCdN}{Calculer.}{2}{0}{0}{0}{0}
+
+ 
+On donne le cube $ABCDEFGH$ suivant de coté de longueur $a$. I est le milieu de $[AB]$. Calculer la longueur $IH$ en fonction de $a$.
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.48,-3.68) rectangle (5.76,2.52);
+\draw [line width=2.pt] (0.,-3.)-- (4.,-3.);
+\draw [line width=2.pt] (4.,-3.)-- (5.,-2.);
+\draw [line width=2.pt,dash pattern=on 3pt off 3pt] (5.,-2.)-- (1.,-2.);
+\draw [line width=2.pt,dash pattern=on 3pt off 3pt] (1.,-2.)-- (0.,-3.);
+\draw [line width=2.pt] (0.,1.)-- (4.,1.);
+\draw [line width=2.pt] (4.,1.)-- (5.,2.);
+\draw [line width=2.pt] (5.,2.)-- (1.,2.);
+\draw [line width=2.pt] (1.,2.)-- (0.,1.);
+\draw [line width=2.pt] (0.,1.)-- (0.,-3.);
+\draw [line width=2.pt,dash pattern=on 3pt off 3pt] (1.,-2.)-- (1.,2.);
+\draw [line width=2.pt] (4.,1.)-- (4.,-3.);
+\draw [line width=2.pt] (5.,-2.)-- (5.,2.);
+\draw [line width=2.pt,dash pattern=on 3pt off 3pt] (1.,2.)-- (2.,-3.);
+\draw [line width=2.pt] (0.,-3.)-- (2.,-3.);
+\draw [line width=2.pt] (1.,-2.88) -- (1.,-3.12);
+\draw [line width=2.pt] (2.,-3.)-- (4.,-3.);
+\draw [line width=2.pt] (3.,-2.88) -- (3.,-3.12);
+\begin{scriptsize}
+\draw [color=black] (0.,-3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (-0.3,-2.69) node {$A$};
+\draw [color=black] (4.,-3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (4.18,-3.11) node {$B$};
+\draw [color=black] (5.,-2.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (5.14,-1.63) node {$C$};
+\draw [color=black] (1.,-2.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (0.72,-1.73) node {$D$};
+\draw [color=black] (0.,1.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (-0.16,1.27) node {$E$};
+\draw [color=black] (4.,1.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (3.84,1.37) node {$F$};
+\draw [color=black] (5.,2.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (5.14,2.37) node {$G$};
+\draw [color=black] (1.,2.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (1.14,2.37) node {$H$};
+\draw [color=black] (2.,-3.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=black] (2.26,-3.21) node {$I$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{ExoCdN}
+
+ 
+\begin{ExoCdN}{Raisonner. Représenter. Calculer }{2}{0}{0}{0}{0}
+ 
+On donne la pyramide à base carrée $ABCD$ de coté de longueur $a$ et de sommet $S$ dont la hauteur est 10 cm.
+Pour quelles valeurs de $a$, on a $15 < SA < 20$ ?
+\end{ExoCdN}
+
+
+
+\begin{ExoCdN}{Calculer.}{2}{0}{0}{0}{0}
+ 
+On donne $E = \frac{2}{3}+\frac{17}{2} \times \frac{4}{3}$ et $F = \frac{\sqrt 6 \times \sqrt 3\times \sqrt{16} }{\sqrt 2}  $ 
+ 
+Démontrer que les nombres E et F sont égaux
+\end{ExoCdN}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+ 
+
+%Sixième exo du parcours 2
+\begin{ExoCtN}{Compétence.}{2}{0}{0}{0}{0}
+On considère un entier naturel $n$ non nul. 
+
+\begin{enumerate}
+\item On suppose $S_n = 1+2+3+...+(n-2)+(n-1)+n$ 
+\begin{enumerate}
+\item En remarquant que $S_n = n + (n-1)+ (n-2)+ ...+3+2+1$, déterminer une expression de $2S_n$ en fonction de $n$.
+\item En déduire une expression de $S_n$ en fonction de $n$.
+\item Calculer $1+2+3+...+1031$.
+\end{enumerate}
+ \item En déduire des questions précédentes que $n(n+1)$ est un nombre pair pour tout entier entier naturel $n$ non nul.
+\end{enumerate}
+\end{ExoCtN}
+
+
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Exercice d'algorithmique
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}

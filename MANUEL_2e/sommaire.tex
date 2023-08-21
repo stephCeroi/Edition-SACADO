@@ -7,7 +7,15 @@
 \usepackage{amssymb}
 \usepackage{lmodern}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+
+ 
+
 \begin{document}
+
+
+\fbox{ {\Huge Contenus détaillés} }
+ 
 
 
 \section*{Remarque}
@@ -23,6 +31,7 @@ Dans les chapitres, on propose des exercices de lecture ou modification d'algori
 
 Dans la partie \textbf{Algorithmique et programmation}, on propose des exercices de  lecture, de  modification et de création.
 
+
 \section{Algorithmique et programmation}
 
 \textbf{Contenus}
@@ -35,7 +44,34 @@ instruction conditionnelle.
 \item Programmer, dans des cas simples, une boucle bornée, une boucle non bornée.
 \item Dans des cas plus complexes : lire, comprendre, modifier ou compléter un algorithme 
 ou un programme.
+\item Fonctions à un ou plusieurs arguments.
+\item Fonction renvoyant un nombre aléatoire. Série statistique obtenue par la répétition de 
+l’appel d’une telle fonction.
+
 \end{enumerate}
+
+
+\textbf{Capacités attendues}
+
+\begin{enumerate}
+\item Choisir ou déterminer le type d’une variable (entier, flottant ou chaîne de caractères).
+\item  Concevoir et écrire une instruction d’affectation, une séquence d’instructions, une 
+instruction conditionnelle.
+\item  Écrire une formule permettant un calcul combinant des variables.
+\item  Programmer, dans des cas simples, une boucle bornée, une boucle non bornée.
+\item  Dans des cas plus complexes : lire, comprendre, modifier ou compléter un algorithme 
+ou un programme.
+
+\item Écrire des fonctions simples ; lire, comprendre, modifier, compléter des fonctions plus 
+complexes. Appeler une fonction.
+\item  Lire et comprendre une fonction renvoyant une moyenne, un écart type. Aucune 
+connaissance sur les listes n’est exigée.
+\item Écrire des fonctions renvoyant le résultat numérique d’une expérience aléatoire, 
+d’une répétition d’expériences aléatoires indépendantes.
+
+\end{enumerate}
+
+
 
 
 \section{Arithmétique}
@@ -45,6 +81,7 @@ ou un programme.
 \begin{enumerate}
 \item Notations $\mathbb{N}$ et $\mathbb{Z}$
 \item Définition des notions de multiple, de diviseur, de nombre pair, de nombre impair.
+\item Nombres premiers. Décomposition en facteurs premiers.
 \end{enumerate}
 
 \textbf{Capacités attendues}
@@ -70,7 +107,9 @@ de nombre pair, de nombre impair, de nombre premier.
 \item *Déterminer si un entier naturel $n$ est premier.
  \end{enumerate}
 
-\section{Ensembles de nombres et calculs numériques}
+
+\section{Ensembles de nombres}
+
 \textbf{Contenus}
 
 \begin{enumerate}
@@ -82,9 +121,8 @@ de nombre pair, de nombre impair, de nombre premier.
 \textbf{Capacités attendues}
 
 \begin{enumerate}
-\item Associer à chaque point de la droite graduée un unique nombre réel et 
-réciproquement.
-\item Développer la pratique du calcul numérique (relatifs, rationnels, puissances)
+\item Associer à chaque point de la droite graduée un unique nombre réel et réciproquement.
+\item Connaitre quelques idées ensemblistes et logiques
 \end{enumerate}
 
 
@@ -101,8 +139,74 @@ réciproquement.
 
 \begin{enumerate}
 \item Développement décimal illimité d'un nombre réel.
-\item  Observation, sur des exemples, de la périodicité du développement décimal de nombres rationnels, du fait qu'un développement décimal périodique correspond à un rationnel.
+\item Observation, sur des exemples, de la périodicité du développement décimal de nombres rationnels, du fait qu'un développement décimal périodique correspond à un rationnel.
+\item Vocabulaire ensembliste et logique
 \end{enumerate}
+
+
+
+
+\section{Intervalles de $\mathbb{R}$}
+
+\textbf{Contenus}
+
+\begin{enumerate}
+\item Intervalles de  $\mathbb{R}$. Notations $\infty$.
+\item Intersection, réunion d'intervalles.
+\item Notation $|a|$. Distance entre deux nombres réels.
+\item Représentation de l'intervalle $[a - r , a + r]$ puis caractérisation par la condition $|x - a| \leq r$.
+\item Encadrement décimal d'un nombre réel à $10^{-n}$ près.
+\end{enumerate}
+
+\textbf{Capacités attendues}
+
+\begin{enumerate}
+\item Représenter un intervalle de la droite numérique. Déterminer si un nombre réel 
+appartient à un intervalle donné.
+\item Donner un encadrement, d’amplitude donnée, d’un nombre réel par des décimaux.
+\item Dans le cadre de la résolution de problèmes, arrondir en donnant le nombre de 
+chiffres significatifs adapté à la situation étudiée
+
+\end{enumerate}
+
+
+
+
+\textbf{Algorithmique}
+
+\begin{enumerate}
+\item Déterminer par balayage un encadrement de $\sqrt 2$ d’amplitude inférieure ou égale à $10^{-n}$.
+
+\end{enumerate}
+
+
+
+
+\section{Calculs numériques}
+
+\textbf{Contenus}
+
+\begin{enumerate}
+\item Effectuer des calculs numériques mettant en jeu des puissances, des racines carrées, des écritures fractionnaires.
+\item Calculs avec les relatifs, avec les rationnels.
+\item Calculs avec les puissances.
+\item Calculs avec les racines carrées.
+\item Règles de calcul sur les puissances entières relatives, sur les racines carrées. $\sqrt {a^2} = |a|$ 
+\end{enumerate}
+
+\textbf{Capacités attendues}
+
+\begin{enumerate}
+\item Développer la pratique du calcul numérique (relatifs, rationnels, puissances)
+\end{enumerate}
+
+
+\textbf{Démo}
+
+\begin{enumerate}
+\item   Quels que soient les réels positifs $a$ et $b$, on a $\sqrt{ab} = \sqrt a  \sqrt b$.
+\end{enumerate}
+
 
 
 \textbf{Algorithmique}
@@ -112,62 +216,29 @@ réciproquement.
 \end{enumerate}
 
 
-\section{Intervalles et valeur absolue}
 
-\textbf{Contenus}
-\begin{enumerate}
-\item Intervalles de  $\mathbb{R}$. Notations $\infty$.
-\item Notation $|a|$. Distance entre deux nombres réels.
-\item Règles de calcul sur les puissances entières relatives, sur les racines carrées. $\sqrt {a^2} = |a|$ 
-\item Représentation de l'intervalle $[a - r , a + r]$ puis caractérisation par la condition $|x - a| \leq r$.
-\item  Encadrement décimal d'un nombre réel à $10^{-n}$ près.
-\end{enumerate}
-
-\textbf{Capacités attendues}
-
-\begin{enumerate}
-\item Représenter un intervalle de la droite numérique. Déterminer si un nombre réel appartient à un intervalle donné.
-\item  Donner un encadrement, d'amplitude donnée, d’un nombre réel par des décimaux.
-\item  Dans le cadre de la résolution de problèmes, arrondir en donnant le nombre de chiffres significatifs adapté à la situation étudiée.
-\end{enumerate}
-
-\textbf{Algorithmique}
-
-\begin{enumerate}
-\item *Déterminer par balayage un encadrement de $\sqrt 2$ d'amplitude inférieure ou égale à $10^{-n}$.
-\end{enumerate} 
- 
-
-\section{Calcul littéral , identités remarquables et équations}
+\section{Calcul littéral, identités remarquables}
 
 \textbf{Contenus}
 
 \begin{enumerate}
+\item Effectuer des calculs littéraux mettant en jeu des puissances, des racines carrées, des écritures fractionnaires.
 \item Identités $a^2-b^2=(a-b)(a+b)$, $(a + b)^2= a^2+ 2ab + b^2$ et $(a - b)^2= a^2- 2ab + b^2$, à savoir utiliser dans les deux sens.
 \item Exemples simples de calcul sur des expressions algébriques, en particulier sur des expressions fractionnaires.
-\item Ensemble des solutions d'une équation (équation du premier degré, équation du second degré simple, équation-produit, équation-quotient).
 \end{enumerate}
 
 
 \textbf{Capacités attendues}
 
 \begin{enumerate}
-\item Effectuer des calculs numériques ou littéraux mettant en jeu des puissances, des 
-racines carrées, des écritures fractionnaires.
-\item Sur des cas simples de relations entre variables (par exemple $U = RI$, $d = vt$, $S = \pi r^2$, $V = abc$, $V = \pi r^2h$), exprimer une variable en fonction des autres. Cas d’une relation du premier degré $ax + by = c$.
-\item Choisir la forme la plus adaptée (factorisée, développée réduite) d'une expression en 
-vue de la résolution d'un problème.
-\item  Comparer deux quantités en utilisant leur différence, ou leur quotient dans le cas 
-positif
-
+\item  Comparer deux quantités en utilisant leur différence, ou leur quotient dans le cas positif
 \end{enumerate}
 
 \textbf{Démo}
 
 \begin{enumerate}
-\item   Quels que soient les réels positifs $a$ et $b$, on a $\sqrt{ab} = \sqrt a  \sqrt b$.
-\item   Si $a$ et $b$ sont des réels strictement positifs, $\sqrt{a+b} < \sqrt{a}\sqrt{b}$ .
-\item   Pour $a$ et $b$ réels positifs, illustration géométrique de l'égalité $(a + b)^2= a^2+ 2ab + b^2$
+\item Si $a$ et $b$ sont des réels strictement positifs, $\sqrt{a+b} < \sqrt{a}\sqrt{b}$.
+\item Pour $a$ et $b$ réels positifs, illustration géométrique de l'égalité $(a + b)^2= a^2+ 2ab + b^2$
 \end{enumerate}
 
 
@@ -179,44 +250,127 @@ positif
 \item Inégalité entre moyennes géométrique et arithmétique de deux réels strictement positifs.
 \end{enumerate}
 
-\section{Généralités sur les fonctions, fonctions de référence}
+
+
+
+\section{Équations et inéquations}
+
+\textbf{Contenus}
+
+\begin{enumerate}
+\item Ensemble des solutions d'une équation (équation du premier degré, équation du second degré simple, équation-produit, équation-quotient).
+\item  Résoudre un système de deux équations linéaires à deux inconnues.
+\item  Modéliser un problème par une inéquation.
+\item  Résoudre une inéquation du premier degré.
+\end{enumerate}
+
+
+\textbf{Capacités attendues}
+
+\begin{enumerate}
+\item Choisir la forme la plus adaptée (factorisée, développée réduite) d'une expression en vue de la résolution d'un problème.
+\item  Comparer deux quantités en utilisant leur différence, ou leur quotient dans le cas positif
+\end{enumerate}
+
+\textbf{Démo}
+
+\begin{enumerate}
+\item Si $a$ et $b$ sont des réels strictement positifs, $\sqrt{a+b} < \sqrt{a}\sqrt{b}$ .
+\item Pour $a$ et $b$ réels positifs, illustration géométrique de l'égalité $(a + b)^2= a^2+ 2ab + b^2$
+\end{enumerate}
+
+
+\textbf{Approfondissement}
+
+\begin{enumerate}
+\item Développement de $(a + b + c)^2$.
+\item Développement de $(a + b)^3$
+\item Inégalité entre moyennes géométrique et arithmétique de deux réels strictement positifs.
+\end{enumerate}
+
+
+
+\section{Généralités sur les fonctions}
 
 \textbf{Contenus}
 
 \begin{enumerate}
 \item Fonction à valeurs réelles (4 représentations : expression, algo, courbe, tableau)
-\item Courbe représentative : la courbe d'équation $y = f(x)$ est l'ensemble des points du 
-plan dont les coordonnées $(x,y)$ vérifient $y = f(x)$.
-\item Fonctions carré, inverse, racine carrée, cube : définitions et courbes représentatives.
-\item Fonction paire, impaire. Traduction géométrique.
-\item Croissance, décroissance, monotonie d'une fonction définie sur un intervalle. Tableau 
-de variations.
+\item Courbe représentative : la courbe d'équation $y = f(x)$ est l'ensemble des points du plan dont les coordonnées $(x,y)$ vérifient $y = f(x)$.
+\item Signes d'une fonction , tableau de signes.
+\item Croissance, décroissance, monotonie d'une fonction définie sur un intervalle. Tableau de variations.
 \item Maximum, minimum d'une fonction sur un intervalle.
-\item Pour une fonction affine, interprétation du coefficient directeur comme taux 
-d'accroissement, variations selon son signe.
+\end{enumerate}
+
+\textbf{Capacités attendues}
+
+\begin{enumerate}
+\item Sur des cas simples de relations entre variables (par exemple $U = RI$, $d = vt$, $S = \pi r^2$, $V = abc$, $V = \pi r^2h$), exprimer une variable en fonction des autres. Cas d’une relation du premier degré $ax + by = c$. 
+\item Exploiter l'équation $y = f(x$) d'une courbe : appartenance, calcul de coordonnées.
+\item Modéliser par des fonctions des situations issues des mathématiques, des autres disciplines.
+\item Relier représentation graphique et tableau de variations.
+\item Déterminer graphiquement les extremums d'une fonction sur un intervalle.
+\item Exploiter un logiciel de géométrie dynamique ou de calcul formel, la calculatrice ou Python pour décrire les variations d'une fonction donnée par une formule.
+\item  Résoudre une équation du type $f(x) = k$ ou une inéquation du type $f(x) < k$, en choisissant une méthode adaptée : graphique, algébrique, logicielle.
+\item  Résoudre, graphiquement ou à l'aide d'un outil numérique une inéquation du type $f(x) < g(x)$.
+
+\end{enumerate}
+ 
+ 
+ 
+\textbf{Algorithmique}
+
+\begin{enumerate}
+\item *Pour une fonction dont le tableau de variations est donné, algorithmes d'approximation numérique d'un extremum (balayage, dichotomie).
+\item *Algorithme de calcul approché de longueur d'une portion de courbe représentative de fonction.
+\end{enumerate}
+
+
+\section{Fonctions affines}
+
+\textbf{Contenus}
+
+\begin{enumerate}
+\item Pour une fonction affine, interprétation du coefficient directeur comme taux d'accroissement, variations
+selon son signe.
+\end{enumerate}
+
+\textbf{Capacités attendues}
+
+\begin{enumerate}
+\item Somme d'inégalités. Produit d'une inégalité par un réel positif, négatif, en liaison avec le sens de variation d'une fonction affine.
+\item  Relier sens de variation, signe et droite représentative d'une fonction affine.
+\item  Pour les fonctions affines, résoudre graphiquement ou algébriquement une équation du type $f(x) = k$ ou une inéquation du type $f(x) < k$. 
+\item Pour deux nombres $a$ et $b$ donnés et une fonction de référence $f$, comparer $f(a)$ et $f(b)$ numériquement ou graphiquement.
+\item Résoudre une équation, une inéquation produit ou quotient, à l'aide d'un tableau de signes. 
+\end{enumerate}
+ 
+
+
+
+\section{Fonctions de référence}
+
+\textbf{Contenus}
+
+\begin{enumerate}
+\item Fonction paire, impaire. Traduction géométrique.
+\item Fonctions carré, inverse, racine carrée, cube : définitions et courbes représentatives.
 \item Variations des fonctions carré, inverse, racine carrée, cube.
 \end{enumerate}
 
 \textbf{Capacités attendues}
 
 \begin{enumerate}
-\item Exploiter l'équation $y = f(x$) d'une courbe : appartenance, calcul de coordonnées.
-\item Modéliser par des fonctions des situations issues des mathématiques, des autres 
-disciplines.
-\item  Résoudre une équation ou une inéquation du type $f(x) = k$ en choisissant une méthode adaptée : graphique, algébrique, logicielle.
-\item Relier représentation graphique et tableau de variations.
-\item  Déterminer graphiquement les extremums d'une fonction sur un intervalle.
-\item  Exploiter un logiciel de géométrie dynamique ou de calcul formel, la calculatrice ou 
-Python pour décrire les variations d'une fonction donnée par une formule.
-\item  Relier sens de variation, signe et droite représentative d'une fonction affine.
-\item  Pour les fonctions affines, carré, inverse, racine carrée et cube, résoudre 
-graphiquement ou algébriquement une équation du type $f(x) = k$.
+\item Somme d'inégalités. Produit d'une inégalité par un réel positif, négatif, en liaison avec le sens de variation d'une fonction affine.
+\item  Pour les fonctions carré, inverse, racine carrée et cube, résoudre graphiquement ou algébriquement une équation du type $f(x) = k$ ou une inéquation du type $f(x) < k$. 
+\item Pour deux nombres $a$ et $b$ donnés et une fonction de référence $f$, comparer $f(a)$ et $f(b)$ numériquement ou graphiquement.
 \end{enumerate}
  
 \textbf{Démo}
 
 \begin{enumerate}
 \item Variations des fonctions Carré, Inverse, Racine carrée.
+\item Étudier la position relative des courbes d'équation $y = x, y = x^2, y = x^3$, pour $x \geq 0$
 \end{enumerate}
  
 \textbf{Algorithmique}
@@ -234,27 +388,9 @@ graphiquement ou algébriquement une équation du type $f(x) = k$.
 \end{enumerate}
 
 
-\section{Signe de fonction et inéquations}
 
-\textbf{Contenus}
 
-\begin{enumerate}
-\item Somme d'inégalités. Produit d'une inégalité par un réel positif, négatif, en liaison avec le sens de variation d'une fonction affine.
-\item Pour deux nombres $a$ et $b$ donnés et une fonction de référence $f$, comparer $f(a)$ et $f(b)$ numériquement ou graphiquement.
-\item  Pour les fonctions affines, carré, inverse, racine carrée et cube, résoudre 
-graphiquement ou algébriquement une inéquation du type $f(x) < k$. 
-\item Résoudre, graphiquement ou à l'aide d'un outil numérique, une inéquation du type $f(x) < g(x)$.
-\end{enumerate}
-
-\textbf{Capacités attendues}
-
-\begin{enumerate}
-\item  Résoudre une inéquation du type $f(x) < k$, en choisissant une méthode adaptée : graphique, algébrique, logicielle.
-\item  Résoudre une équation, une inéquation produit ou quotient, à l'aide d'un tableau de 
-signes.
-\item  Résoudre, graphiquement ou à l'aide d'un outil numérique une inéquation du type $f(x) < g(x)$.
-\end{enumerate}
-
+ 
  
  
 
@@ -263,6 +399,7 @@ signes.
 \textbf{Contenus}
 
 \begin{enumerate}
+\item Les configurations de cycle 4.
 \item Projeté orthogonal d’un point sur une droite.
 \end{enumerate}
 
@@ -283,6 +420,15 @@ signes.
 \end{enumerate}
 
 
+\textbf{Approfondissement}
+
+\begin{enumerate}
+\item Démontrer que les hauteurs d'un triangle sont concourantes.
+\item Expression de l'aire d’un triangle : $\dfrac12 ab sin\widehat C$.
+\item Formule d'Al-Kashi.
+\item Le point de concours des médiatrices est le centre du cercle circonscrit.
+\end{enumerate}
+
 \section{Géométrie vectorielle}
 
 \textbf{Contenus}
@@ -300,24 +446,14 @@ signes.
 \item Construire géométriquement la somme de deux vecteurs
 \end{enumerate}
 
-\textbf{Démo}
- 
-\begin{enumerate}
-\item Le projeté orthogonal du point M sur une droite $\Delta$ est le point de la droite $\Delta$ le plus proche du point M.
-\item Relation trigonométrique $cos^2a + sin^2 a = 1$ dans un triangle rectangle
-\end{enumerate}
 
 
 
 \textbf{Approfondissement}
 
-\begin{enumerate}
-\item Démontrer que les hauteurs d’un triangle sont concourantes.
-\item Expression de l’aire d’un triangle : $\dfrac12 ab sin\widehat C$.
-\item Formule d’Al-Kashi.
-\item Le point de concours des médiatrices est le centre du cercle circonscrit.
-\item Définition vectorielle des homothéties.
-\end{enumerate}
+
+Définition vectorielle des homothéties.
+
 
 \section{Géométrie analytique}
 
@@ -355,7 +491,7 @@ Application à alignement, au parallélisme
 
  
 
-\section{Équations de droite et systèmes d'équations}
+\section{Équations de droite}
 
 \textbf{Contenus}
 
@@ -375,8 +511,7 @@ une représentation graphique.
 \item  Tracer une droite connaissant son équation cartésienne ou réduite.
 \item  Établir que trois points sont alignés ou non.
 \item  Déterminer si deux droites sont parallèles ou sécantes.
-\item  Résoudre un système de deux équations linéaires à deux inconnues, déterminer le 
-point d’intersection de deux droites sécantes
+\item  Déterminer le point d'intersection de deux droites sécantes
 \end{enumerate}
 
 \textbf{Démo}

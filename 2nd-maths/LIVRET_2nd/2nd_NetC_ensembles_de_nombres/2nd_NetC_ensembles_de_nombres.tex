@@ -1,0 +1,383 @@
+\input{MISC/preambule_sacado.tex}
+\input{MISC/environnements_sacado.tex}
+\input{MISC/macro_sacado.tex}
+
+\title{Mathématiques 2nde  : le livre sacado}
+\author{L'équipe SACADO}
+
+\begin{document}
+
+%\maketitle
+
+\chapter{Ensembles de nombres}
+{https://sacado.xyz/qcm/parcours_show/31120/142933}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+ 		\item Savoir placer un nombre dans un ensemble.
+		\item Savoir déterminer si un nombre appartient à un ensemble donné.
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
+\end{His}
+
+\begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
+% Un exercice de découverte/d'accroche
+\end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{L'ensemble des nombres entiers naturels $\mathbb{N}$}
+
+\begin{Def}
+Un nombre entier naturel est un nombre dont la partie décimale est nulle et qui est positif.
+
+L'ensemble des nombres entiers naturels est noté $\mathbb{N}$.
+\end{Def}
+
+\begin{Rq}
+L'ensemble des nombres entiers naturels a un plus petit élément, 0
+
+mais n'a pas de plus grand élément.
+
+\[\mathbb{N} = \{0;1;2;3;4;.........\}\]
+\end{Rq}
+
+\section{L'ensemble des nombres entiers relatifs $\mathbb{Z}$}
+
+\begin{Def}
+Un nombre entier relatif est un nombre entier positif ou négatif.
+
+L'ensemble des nombres entiers relatifs est noté $\mathbb{Z}$.
+\end{Def}
+
+\begin{Rqs}
+\begin{itemize}
+\item L'ensemble des nombres entiers relatifs n'a ni plus petit, ni plus grand élément.
+\item Tout nombre entier naturel est aussi un nombre entier relatif, on dit que $\mathbb{N}$
+est inclus dans $\mathbb{Z}$ et on note : $\mathbb{N}\subset\mathbb{Z}$
+\end{itemize}
+\end{Rqs}
+
+\section{L'ensemble des nombres décimaux $\mathbb{D}$}
+
+\mini{.48\linewidth}{
+\begin{Def}
+Un nombre décimal est un nombre qui peut s'écrire avec une partie décimale finie. 
+
+L'ensemble des nombres décimaux est noté $\mathbb{D}$.
+\end{Def}
+
+\begin{Pp}
+Un nombre décimal est un nombre de la forme $\frac{a}{10^p}$ avec $a$ appartenant à $\mathbb{Z}$ et $p$ appartenant à $\mathbb{N}$.
+\end{Pp}
+
+\begin{Rq}
+$\mathbb{N}\subset\mathbb{Z}\subset\mathbb{D}$
+\end{Rq}
+}{.48\linewidth}{
+\begin{Pp}
+\textcolor{red}{Démonstration exigible}
+
+$\frac{1}{3}$ n'est pas un nombre décimal.
+\end{Pp}
+
+\begin{Pv}
+\underline{Par l'absurde} :
+
+On suppose que $\frac{1}{3}$ est un nombre décimal, alors par propriété :
+
+\[\exists a\in\mathbb{Z}\,et\,p\in\mathbb{N}\text{ tels que }\frac{1}{3}=\frac{a}{10^p}\]
+
+Donc $10^p=a\times3$ (produit en croix) donc $3$ est une diviseur de $10^p$ or $10^p=2^p\times5^p$ (décomposition en facteurs premiers). Donc $3$ ne peut pas diviser $10^p$ (l'hypothèse est donc absurde). Ainsi, on peut affirmer que $\frac{1}{3}$ n'est pas un nombre décimal.
+\end{Pv}
+}
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{L'ensemble des nombres rationnels $\mathbb{Q}$}
+
+\mini{.38\linewidth}{
+\begin{Def}
+Un nombre rationnel est un nombre qui peut s'écrire sous la forme $\frac{p}{q}$ avec $p$ appartenant à $\mathbb{Z}$ et $q$ appartenant à $\mathbb{N}^{\ast}$.
+
+L'ensemble des nombres rationnels est noté $\mathbb{Q}$.
+\end{Def}
+
+\begin{Rq}
+$\mathbb{N}\subset\mathbb{Z}\subset\mathbb{D}\subset\mathbb{Q}$
+\end{Rq}
+
+\begin{Pp}
+\textcolor{red}{Démonstration exigible}
+
+$\sqrt{2}$ n'est pas rationnel.
+\end{Pp}
+}{.58\linewidth}{
+\begin{Pv}
+\underline{Par l'absurde} :
+
+On suppose que $\sqrt{2}$ est un nombre rationnel, alors par définition : 
+
+\[\exists p\in\mathbb{Z}\,et\,q\in\mathbb{N}^{\ast}\text{ tels que }\sqrt{2}=\frac{p}{q}\]
+
+On suppose que $\frac{p}{q}$ est une fraction irréductible.
+
+$\sqrt{2}=\frac{p}{q}$ donc $\sqrt{2}\times q=p$ donc $(\sqrt{2}\times q)^2=p^2$ donc $2\times q^2=p^2$ ($p^2$ est donc un nombre pair).
+
+Si le carré d'un nombre est pair alors on peut affirmer que ce nombre est pair donc $p$ est un nombre pair : $\exists p_1\in\mathbb{N}\text{ tels que }p=2\times p_1$ donc $2\times q^2=p^2=(2\times p_1)^2=4\times p_1^2$. Donc $q^2=2p_1^2$ ($q^2$ est donc un nombre pair). Si le carré d'un nombre est pair alors on peut affirmer que ce nombre est pair donc $q$ est un nombre pair.
+
+Si $p$ est un nombre pair et que $q$ est un nombre pair alors la fraction $\frac{p}{q}$ n'est pas irréductible, l'hypothèse est donc absurde.
+
+Ainsi, on peut affirmer que $\sqrt{2}$ n'est pas un nombre rationnel.
+\end{Pv}
+}
+
+\section{L'ensemble des nombres réels $\mathbb{R}$}
+
+\begin{Def}
+L'ensemble des nombres réels est l'ensemble de tous les nombres que vous connaissez en seconde.
+
+L'ensemble des nombres entiers réels est noté $\mathbb{R}$.
+\end{Def}
+
+\begin{Rq}
+$\mathbb{N}\subset\mathbb{Z}\subset\mathbb{D}\subset\mathbb{Q}\subset\mathbb{R}$
+\end{Rq}
+
+\begin{center}
+\includegraphics[width=.4\linewidth]{FIG/ensemble_de_nmbres.png} 
+\end{center}
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
+  
+\end{ExoCu}
+
+%Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Quatrième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Cinquième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Sixième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+%Premier exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Deuxième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Troisième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Quatrième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Cinquième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Sixième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Sixième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Exercice d'algorithmique
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}

@@ -525,7 +525,42 @@ segment $[FH]$ en $J$.\par Calculer les longueurs $HJ$ et $JK$.
 
 \begin{ExoCu}{Communiquer.}{1234}{0}{0}{0}{0}{0}
 
+\begin{minipage}{0.5\linewidth}
+On donne les deux triangles $ABC$ et $EFG$ ci-contre. Les droites $(BC)$ et $(EF)$ sont parallèles.
+Expliquer pourquoi le théorème de Thalès ne s'applique pas.
 
+\point{5}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+
+
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7874015748031495cm,y=0.7874015748031495cm]
+\clip(-1.98,0.38) rectangle (8.18,5.);
+\draw [line width=2.pt,color=xfqqff] (-1.,1.)-- (3.98,3.5);
+\draw [line width=1.2pt,color=xfqqff] (3.98,3.5)-- (5.24,0.98);
+\draw [line width=1.2pt,color=xfqqff] (5.24,0.98)-- (-1.,1.);
+\draw [line width=1.2pt,color=xfqqff] (0.3748792930203797,1.6902004483034034)-- (7.673900481540933,0.9721990369181381);
+\draw [line width=1.2pt,color=xfqqff] (7.673900481540933,0.9721990369181381)-- (5.92,4.48);
+\draw [line width=1.2pt,color=xfqqff] (5.92,4.48)-- (0.3748792930203797,1.6902004483034034);
+\begin{scriptsize}
+\draw [color=xfqqff] (-1.,1.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (-0.86,1.37) node {$A$};
+\draw [color=xfqqff] (3.98,3.5)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (4.12,3.87) node {$B$};
+\draw [color=xfqqff] (5.24,0.98)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (5.38,1.35) node {$C$};
+\draw [color=xfqqff] (0.3748792930203797,1.6902004483034034)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (0.52,2.07) node {$D$};
+\draw [color=xfqqff] (5.92,4.48)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (6.06,4.85) node {$E$};
+\draw [color=xfqqff] (7.673900481540933,0.9721990369181381)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
+\draw[color=xfqqff] (7.82,1.35) node {$F$};
+\end{scriptsize}
+\end{tikzpicture}
+
+
+\end{minipage}
 \end{ExoCu}
 
  
@@ -542,13 +577,13 @@ Calculer la hauteur BC de la Gyrotour.
 \definecolor{qqqqcc}{rgb}{0.,0.,0.8}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 \clip(-4.2,-3.7) rectangle (7.56,2.56);
-\draw[line width=2.pt,color=qqqqcc] (-0.5757359312880717,-3.) -- (-0.5757359312880715,-2.5757359312880714) -- (-1.,-2.5757359312880714) -- (-1.,-3.) -- cycle; 
-\draw[line width=2.pt,color=qqqqcc] (7.,-2.5757359312880714) -- (6.575735931288071,-2.5757359312880714) -- (6.575735931288071,-3.) -- (7.,-3.) -- cycle; 
-\draw [line width=2.pt,color=qqqqcc] (-4.,-3.)-- (7.,2.);
-\draw [line width=2.pt,color=qqqqcc] (7.,2.)-- (7.,-3.);
-\draw [line width=2.pt,color=qqqqcc] (7.,-3.)-- (-1.,-3.);
-\draw [line width=2.pt,color=qqqqcc] (-4.,-3.)-- (-1.,-3.);
-\draw [line width=2.pt,color=qqqqff] (-1.,-1.6363636363636365)-- (-1.,-3.);
+\draw[line width=1.2pt,color=qqqqcc] (-0.5757359312880717,-3.) -- (-0.5757359312880715,-2.5757359312880714) -- (-1.,-2.5757359312880714) -- (-1.,-3.) -- cycle; 
+\draw[line width=1.2pt,color=qqqqcc] (7.,-2.5757359312880714) -- (6.575735931288071,-2.5757359312880714) -- (6.575735931288071,-3.) -- (7.,-3.) -- cycle; 
+\draw [line width=1.2pt,color=qqqqcc] (-4.,-3.)-- (7.,2.);
+\draw [line width=1.2pt,color=qqqqcc] (7.,2.)-- (7.,-3.);
+\draw [line width=1.2pt,color=qqqqcc] (7.,-3.)-- (-1.,-3.);
+\draw [line width=1.2pt,color=qqqqcc] (-4.,-3.)-- (-1.,-3.);
+\draw [line width=1.2pt,color=qqqqff] (-1.,-1.6363636363636365)-- (-1.,-3.);
 \draw (-0.84,-1.66) node[anchor=north west] {$160 \;cm$};
 \draw (2.06,-2.82) node[anchor=north west] {$54,25\;m$};
 \draw (-2.94,-2.82) node[anchor=north west] {$2\;m$};
@@ -624,13 +659,13 @@ La figure n'est pas à l'échelle.
 \draw (1.06,2.18) node[anchor=north west] {$Romane$};
 \draw (-3.42,1.14) node[anchor=north west] {$Maël$};
 \draw (6.32,2.98) node[anchor=north west] {$Tour$};
-\draw [line width=2.pt] (-3.,1.)-- (6.,1.);
-\draw [line width=2.pt] (-3.,1.)-- (6.,4.);
-\draw [line width=2.pt] (6.,4.)-- (6.,1.);
-\draw [line width=2.pt] (6.,1.)-- (7.48,1.);
-\draw [line width=2.pt] (7.48,1.)-- (7.48,3.98);
-\draw [line width=2.pt] (7.48,3.98)-- (6.,4.);
-\draw [line width=2.pt] (1.,1.)-- (0.996,2.332);
+\draw [line width=1.2pt] (-3.,1.)-- (6.,1.);
+\draw [line width=1.2pt] (-3.,1.)-- (6.,4.);
+\draw [line width=1.2pt] (6.,4.)-- (6.,1.);
+\draw [line width=1.2pt] (6.,1.)-- (7.48,1.);
+\draw [line width=1.2pt] (7.48,1.)-- (7.48,3.98);
+\draw [line width=1.2pt] (7.48,3.98)-- (6.,4.);
+\draw [line width=1.2pt] (1.,1.)-- (0.996,2.332);
 \begin{scriptsize}
 \draw [color=ttttff] (-3.,1.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
 \draw[color=ttttff] (-3.38,1.17) node {$M$};
@@ -692,14 +727,14 @@ $DA=600$~m; $DE=200$~m; $IG=90$~m; $DI=315$~m; $IA=390$~m.
 \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 \clip(-2.66,-2.48) rectangle (5.48,4.76);
-\draw [line width=2.pt,color=qqqqff] (-2.,4.)-- (5.,4.);
-\draw [line width=2.pt,color=qqqqff] (5.,4.)-- (0.,-2.);
-\draw [line width=2.pt,color=qqqqff] (0.,-2.)-- (-2.,4.);
-\draw [line width=2.pt,color=dcrutc] (5.,4.)-- (1.31,-0.428);
-\draw [line width=2.pt,color=dcrutc] (1.31,-0.428)-- (-0.524,-0.428);
-\draw [line width=2.pt,color=dcrutc] (-0.524,-0.428)-- (-1.4285714285714286,2.2857142857142856);
-\draw [line width=2.pt,color=dcrutc] (-1.4285714285714286,2.2857142857142856)-- (0.,4.);
-\draw [line width=2.pt,color=dcrutc] (0.,4.)-- (-2.,4.);
+\draw [line width=1.2pt,color=qqqqff] (-2.,4.)-- (5.,4.);
+\draw [line width=1.2pt,color=qqqqff] (5.,4.)-- (0.,-2.);
+\draw [line width=1.2pt,color=qqqqff] (0.,-2.)-- (-2.,4.);
+\draw [line width=1.2pt,color=dcrutc] (5.,4.)-- (1.31,-0.428);
+\draw [line width=1.2pt,color=dcrutc] (1.31,-0.428)-- (-0.524,-0.428);
+\draw [line width=1.2pt,color=dcrutc] (-0.524,-0.428)-- (-1.4285714285714286,2.2857142857142856);
+\draw [line width=1.2pt,color=dcrutc] (-1.4285714285714286,2.2857142857142856)-- (0.,4.);
+\draw [line width=1.2pt,color=dcrutc] (0.,4.)-- (-2.,4.);
 \begin{scriptsize}
 \draw [color=xdxdff] (-2.,4.)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
 \draw[color=xdxdff] (-1.86,4.37) node {$D$};
@@ -715,7 +750,7 @@ $DA=600$~m; $DE=200$~m; $IG=90$~m; $DI=315$~m; $IA=390$~m.
 \draw [color=xdxdff] (-1.4285714285714286,2.2857142857142856)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
 \draw[color=xdxdff] (-1.76,2.35) node {$F$};
 \draw [color=xdxdff] (-0.524,-0.428)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
-\draw[color=xdxdff] (-0.96,-0.45) node {$C$};
+\draw[color=xdxdff] (-0.96,-1.05) node {$C$};
 \draw [color=xdxdff] (1.31,-0.428)-- ++(-2.5pt,0 pt) -- ++(5.0pt,0 pt) ++(-2.5pt,-2.5pt) -- ++(0 pt,5.0pt);
 \draw[color=xdxdff] (1.62,-0.51) node {$H$};
 \end{scriptsize}

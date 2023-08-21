@@ -1,0 +1,460 @@
+\input{MISC/preambule_sacado.tex}
+\input{MISC/environnements_sacado.tex}
+\input{MISC/macro_sacado.tex}
+
+\title{Mathématiques 2nde  : le livre sacado}
+\author{L'équipe SACADO}
+
+\begin{document}
+
+%\maketitle
+
+\chapter{Géométrie analytique}
+{https://sacado.xyz/qcm/parcours_show/0/142945}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+ 		\item Savoir représenter un vecteur dont on connaît les coordonnées. Lire les coordonnées d'un
+vecteur.
+		\item Savoir calculer les coordonnées d'une somme de vecteurs, d'un produit d'un vecteur par un
+nombre réel.
+		\item Savoir calculer la distance entre deux points. Calculer les coordonnées du milieu d'un
+segment.
+		\item Savoir caractériser alignement et parallélisme par la colinéarité de vecteurs.
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
+\end{His}
+
+\begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
+% Un exercice de découverte/d'accroche
+\end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Bases de vecteurs, repère du plan.}
+
+\begin{PpT}{Exprimer un vecteur en fonction de deux vecteurs non colinéaires.}
+Soient $\vec{u}$ et $\vec{v}$ deux vecteurs non colinéaires.
+
+Tout vecteur $\vec{w}$ peut s'exprimer en fonction de $\vec{u}$ et de $\vec{v}$.
+\end{PpT}
+
+\begin{DefT}{Base de vecteurs}
+On dit que deux vecteurs non colinéaires $\vec{i}$ et $\vec{j}$ forment une base des vecteurs du plan.
+
+On note cette base $(\vec{i};\vec{j})$
+\end{DefT}
+
+\begin{DefT}{Repère du plan}
+Soit $O$ est un point et $\vec{i}$ et $\vec{j}$ deux vecteurs non colinéaires.
+
+On dit que le triplet $(O;\vec{i},\vec{j})$ est un repère du plan.
+
+Le point $O$ s'appelle l'origine du repère $(O;\vec{i},\vec{j})$.
+\end{DefT}
+
+\begin{Def}
+On dit que le repère $(O;\vec{i},\vec{j})$ est :
+\begin{itemize}
+\item orthogonal si les vecteurs $\vec{i}$ et $\vec{j}$ ont des directions perpendiculaires.
+\item orthonormé s'il est orthogonal et si les vecteurs $\vec{i}$ et $\vec{j}$ ont la même longueur.
+\end{itemize}
+\end{Def}
+
+\section{Coordonnées d'un point, d'un vecteur dans un repère.}
+
+\begin{DefT}{Coordonnées d'un point du plan.}
+Soit $(O;\vec{i},\vec{j})$ un repère et $M$ un point.
+
+On appelle coordonnées du point $M$ dans le repère $(O;\vec{i},\vec{j})$ l'unique couple de nombres $(x_M;y_M)$ tel que $\vec{OM}=x_M\vec{i}+y_M\vec{j}$
+\end{DefT}
+
+\mini{.5\linewidth}{
+\begin{DefT}{Coordonnées d'un vecteur dans le plan.}
+Soit $(O;\vec{i},\vec{j})$ un repère et $\vec{u}$ un vecteur.
+
+Soit $M$ le point tel que $\vec{u}=\vec{OM}$.
+
+Les coordonnées du vecteur $\vec{u}$ sont les coordonnées de $M$.
+\end{DefT}
+}{.5\linewidth}{
+\begin{Rq}
+Dans un repère $(O;\vec{i},\vec{j})$ dire que $\vec{u}$ a pour coordonnées $(x_{\vec{u}};y_{\vec{u}})$ signifie que  $\vec{u}=x_{\vec{u}}\vec{i}+y_{\vec{u}}\vec{j}$.
+\end{Rq}
+}
+
+\begin{PpT}{Coordonnées d'un vecteur défini par deux points.}
+Soit $(O;\vec{i},\vec{j})$ un repère du plan.
+
+$A(x_A;y_A)$ et  B$(x_B;y_B)$ deux points.
+
+Le vecteur $\vec{AB}$ a pour coordonnées :
+
+\[\vec{AB}(x_B-x_A;y_B-y_A)\]
+\end{PpT}
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Calculs des coordonnées d'un vecteur}
+
+\begin{Pp}
+Soit $(O;\vec{i},\vec{j})$ un repère du plan.
+
+Soit $\vec{u}(x_{\vec{u}};y_{\vec{u})}$ et $\vec{v}(x_{\vec{v}};y_{\vec{v}})$  deux vecteurs et $k$ un nombre réel.
+\begin{itemize}
+\item $\vec{u}=\vec{v}\Leftrightarrow x_{\vec{u}}=x_{\vec{v}}\text{ et }y_{\vec{u}}=y_{\vec{v}}$
+\item $k\vec{u}$ a pour coordonnées $(k\times x_{\vec{u}};k\times y_{\vec{u}})$.
+\item $\vec{u}+\vec{v}$ a pour coordonnées $(x_{\vec{u}}+x_{\vec{v}};y_{\vec{u}}+y_{\vec{v}})$.
+\end{itemize}
+\end{Pp}
+
+\section{Condition analytique de colinéarité.}
+
+\begin{DefT}{Déterminant de deux vecteurs}
+Soit $(O;\vec{i},\vec{j})$ un repère, $\vec{u}(x_{\vec{u}};y_{\vec{u}})$ et $\vec{v}(x_{\vec{v}};y_{\vec{v}})$ deux vecteurs.
+
+On appelle déterminant de $\vec{u}$ et de $\vec{v}$ le nombre : 
+
+\[det(\vec{u};\vec{v})=\begin{vmatrix}
+x_{\vec{u}} & x_{\vec{v}} \\
+y_{\vec{u}} & y_{\vec{v}}
+\end{vmatrix} =x_{\vec{u}}\times y_{\vec{v}}-y_{\vec{u}}\times x_{\vec{v}}\]
+
+\end{DefT}
+
+\begin{PpT}{Condition analytique de colinéarité}
+\textcolor{red}{Démonstration exigible}
+
+Soient $\vec{u}$ et $\vec{v}$ deux vecteurs alors les affirmations suivantes sont équivalentes :
+
+\begin{center}
+$\vec{u}$ et $\vec{v}$ sont colinéaires \hspace{1cm} $det(\vec{u},\vec{v})=0$
+\end{center}
+
+\end{PpT}
+
+\begin{Pv}
+
+\mini{.45\linewidth}{
+\begin{center}
+\textbf{Montrons que si $\vec{u}$ et $\vec{v}$ sont colinéaires alors $det(\vec{u},\vec{v})=0$.}
+\end{center}
+
+Soit $\vec{u}(x_{\vec{u}};y_{\vec{u}})$ et $\vec{v}(x_{\vec{v}};y_{\vec{v}})$ deux vecteurs colinéaires.
+
+Alors il existe un nombre $k$ tel que $\vec{v}=k\vec{u}$ donc $x_{\vec{v}}=k\times x_{\vec{u}}$ et $y_{\vec{v}}=k\times y_{\vec{u}}$.
+
+$det(\vec{u},\vec{v})=x_{\vec{u}}\times y_{\vec{v}}-y_{\vec{u}}\times x_{\vec{v}}$ 
+
+donc $det(\vec{u},\vec{v})=x_{\vec{u}}\times k \times y_{\vec{u}}-y_{\vec{u}}\times k \times x_{\vec{u}}=0$
+
+}{.45\linewidth}{
+\begin{center}
+\textbf{Montrons que si $det(\vec{u},\vec{v})=0$ alors $\vec{u}$ et $\vec{v}$ sont colinéaires.}
+\end{center}
+
+Si $\vec{u}$ et $\vec{v}$ sont nuls alors ils sont colinéaires. On suppose que $\vec{u}$ et $\vec{v}$ ne sont pas tous les deux nuls (par exemple $x_{\vec{u}}\neq0$.
+
+\begin{align*}
+det(\vec{u},\vec{v})=0&\Leftrightarrow x_{\vec{u}}\times y_{\vec{v}}-y_{\vec{u}}\times x_{\vec{v}}=0\\
+&\Leftrightarrow x_{\vec{u}}\times y_{\vec{v}}=y_{\vec{u}}\times x_{\vec{v}}
+\end{align*}
+
+Si $x_{\vec{u}}\neq0$ alors $y_{\vec{v}}=\dfrac{y_{\vec{u}}\times x_{\vec{v}}}{x_{\vec{u}}}=\dfrac{x_{\vec{v}}}{x_{\vec{u}}}\times y_{\vec{u}}$
+
+On pose $\dfrac{x_{\vec{v}}}{x_{\vec{u}}}=k$ alors $y_{\vec{v}}=k\times y_{\vec{u}}$ et comme $x_{\vec{v}}=k\times x_{\vec{u}}$ alors $\vec{v}=k\vec{u}$ donc les vecteurs $\vec{u}$ et $\vec{v}$ sont colinéaires.
+}
+\end{Pv}
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 3
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Applications}
+
+\begin{PpT}{Coordonnées du milieu d'un segment}
+Soit $(O;\vec{i},\vec{j})$ un repère du plan et $A(x_A;y_A)$ et $B(x_B;y_B)$ deux points.
+
+Soit $M$ le milieu de $[AB]$ alors :
+
+\[M(\frac{x_A+x_B}{2};\frac{y_A+y_B}{2})\]
+\end{PpT}
+
+\begin{PpT}{Distance dans un repère orthonormé}
+Soit $(O;\vec{i},\vec{j})$ un repère orthonormé $A(x_A;y_A)$ et $B(x_B;y_B)$ deux points, alors :
+
+\[AB=\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}\]
+\end{PpT}
+
+\begin{PpT}{Norme d'un vecteur dans un repère orthonormé}
+Soit $(O;\vec{i},\vec{j})$ un repère orthonormé $\vec{u}(x_{\vec{u}};y_{\vec{u}})$ un vecteur, alors :
+
+\[||\vec{u}||=\sqrt{x^2_{\vec{u}}+y^2_{\vec{u}}}\]
+\end{PpT}
+
+\end{pageCours} % Fin page de cours 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 3
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
+  
+\end{ExoCu}
+
+%Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Quatrième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Cinquième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Sixième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+%Premier exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Deuxième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Troisième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Quatrième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Cinquième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Sixième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Sixième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Exercice d'algorithmique
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}
