@@ -1,0 +1,487 @@
+\input{../MISC/preambule_sacado.tex}
+\input{../MISC/environnements_sacado.tex}
+\input{../MISC/macro_sacado.tex}
+
+\title{Mathématiques 2nde  : le livre sacado}
+\author{L'équipe SACADO}
+
+\begin{document}
+
+%\maketitle
+
+\chapter{Équations de droites}{14}
+{https://sacado.xyz/qcm/parcours_show/0/142946}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+ 		\item Savoir déterminer une équation de droite à partir de deux points, un point et un vecteur directeur ou un point et la pente.
+		\item Savoir déterminer la pente ou un vecteur directeur d'une droite donnée par une équation ou
+une représentation graphique.
+		\item Savoir tracer une droite connaissant son équation cartésienne ou réduite.
+		\item Savoir établir que trois points sont alignés ou non.
+		\item Savoir déterminer si deux droites sont parallèles ou sécantes.
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
+\end{His}
+
+\begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
+% Un exercice de découverte/d'accroche
+\end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Vecteurs directeurs d'une droite.}
+
+\begin{DefT}{Vecteurs directeur d'une droite.}
+Soit $(d)$ une droite.
+
+On appelle vecteur directeur de $(d)$ tout vecteur non nul ayant la même direction que $(d)$.
+\end{DefT}
+
+\begin{Rq}
+Une droite a une infinité de vecteurs directeurs.
+\end{Rq}
+
+\begin{PpT}{Définition d'une droite par un point et un vecteur directeur.}
+Soit $(d)$ la droite de vecteur directeur $\vec{u}$ et passant par le point $A$.
+
+Alors pour tous points $M$ de $(d)$, les vecteurs $\vec{AM}$ et $\vec{u}$ sont colinéaires.
+\end{PpT}
+
+\begin{Def}
+La droite $(d)$ de vecteur directeur $\vec{u}$ et passant par le point $A$ est l'ensemble des points $M$ tels que $\vec{AM}$ et $\vec{u}$ sont colinéaires.
+\end{Def}
+
+\section{Équations cartésiennes de droites.}
+
+\begin{Pp}
+\textcolor{red}{Démonstration exigible}
+
+Soit $(d)$ une droite, alors il existe $a$, $b$ et $c$ trois nombres $(a;b)\neq(0;0)$ tels que tous les points $M(x;y)$ de $(d)$ ont leurs coordonnées qui sont solution de l'équation $(E):ax+by+c=0$.
+
+Cette équation est appelée équation cartésienne de la droite $(d)$.
+
+$\vec{u}(-b;a)$ est un vecteur directeur de $(d)$.
+\end{Pp}
+
+\begin{Pv}
+Soit $(d)$ la droite passant par $A(x_A;y_A)$ et de vecteur directeur $\vec{u}(x_{\vec{u}};y_{\vec{u}})$.
+
+Soit $M(x_m;y_M)$ un point de $(d)$. On a $\vec{AM}(x_M-x_A;y_M-y_A)$.
+
+\[det(\vec{AM};\vec{u})=
+\begin{vmatrix}
+x_M-x_A & x_{\vec{u}}\\
+y_M-y_A & y_{\vec{u}}\\
+\end{vmatrix}
+=(x_M-x_A)\times y_{\vec{u}}-(y_M-y_A)\times x_{\vec{u}}\]
+
+Les vecteurs $\vec{AM}$ et $\vec{u}$ sont colinéaires donc $det(\vec{AM};\vec{u})=0$, donc $(x_M-x_A)\times y_{\vec{u}}-(y_M-y_A)\times x_{\vec{u}}=0$.
+
+Soit :
+
+\[y_{\vec{u}}\times x_M+(-x_{\vec{u}}\times y_M+(-x_A\times y_{\vec{u}}+y_A\times x_{\vec{u}})\]
+
+En posant : $a=y_{\vec{u}}$, $b=-x_{\vec{u}}$ et $c=-x_A\times y_{\vec{u}}+y_A\times x_{\vec{u}}$. On obtient $a\times x_M+b\times y_M+c=0$.
+
+Donc le couple $(x_M;y_M)$ est solution de $(E):ax+by+c=0$ et $\vec{u}(-b;a)$ est un vecteur directeur de $(d)$.
+\end{Pv}
+
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Équations réduites de droites.}
+
+\begin{Def}
+On considère une droite $(d)$ d'équation cartésienne $(E):ax+by+c=0$
+\begin{itemize}
+\item Si $b=0$, alors $(E)$ est équivalente à une équation $(E_1)$ de la forme $(E_1):x=k$.
+\item Si $b\neq0$, alors $(E)$ est équivalente à une équation $(E_1)$ de la forme $(E_1):y=mx+p$.
+\begin{itemize}
+\item $m$ est appelé la pente ou le coefficient directeur de la droite $(d)$.
+\item $p$ est appelé l'ordonnée à l'origine de la droite $(d)$.
+\end{itemize}
+\end{itemize}
+Dans les deux cas, l'équation $(E_1)$ est appelée l'équation réduite de la droite $(d)$.
+\end{Def}
+
+%\begin{Rq}
+%\begin{itemize}
+%\item Une droite a une unique équation réduite.
+%\item Si $b\neq 0$, dans l'équation réduite on retrouve l'expression d'une fonction affine.
+%\end{itemize}
+%\end{Rq}
+
+\begin{PpT}{Déterminer une équation réduite}
+Soit $A(x_A;y_A)$ et $B(x_B;y_B)$ deux points.
+\begin{itemize}
+\item Si $x_A=x_B$, $(AB)$ a pour équation réduite $x=x_A$, $\vec{u}(0;1)$ est un vecteur directeur de $(AB)$.
+\item Si $x_A\neq x_B$, $(AB)$ a une équation réduite de la forme : $y=mx+p$ avec $m=\dfrac{y_B-y_A}{x_B-x_A}$
+
+$\vec{u}(1;m)$ est un vecteur directeur de $(AB)$.
+\end{itemize}
+\end{PpT}
+
+\section{Positions relatives de deux droites.}
+
+\begin{PpT}{Droites parallèles}
+Deux droites sont parallèles si et seulement si elles ont des vecteurs directeurs colinéaires.
+\end{PpT}
+
+\begin{Rq}
+En considérant les équations réduites, des droites sont parallèles si et seulement si :
+\begin{itemize}
+\item elles ont des équations de la forme $x=k$
+\item elles ont des équations de la forme $y=mx+p$
+avec le même coefficient directeur.
+\end{itemize}
+\end{Rq}
+
+\begin{PpT}{Point d'intersection de deux droites}
+Soit $(d_1):ax+by+c=0$ et $(d_2):a'x+b'y+c'=0$
+
+Si $(d_1)$ et $(d_2)$ sont sécantes alors leur point d'intersection a pour coordonnées l'unique solution du système 
+
+\[(S):
+\begin{cases} 
+ax+by+c=0 \\ 
+a'x+b'y+c'=0
+\end{cases}
+\]
+\end{PpT}
+
+\mini{.45\linewidth}{
+\begin{Def}
+Soit $(S):
+\begin{cases} 
+ax+by+c=0 \\ 
+a'x+b'y+c'=0
+\end{cases}$ un système à deux inconnues et deux équations. On appelle déterminant du système le nombre $det(S)=ab -a'b$
+\end{Def}
+}{.55\linewidth}{
+\begin{Pp}
+Soit (S) un système à deux inconnues et deux équations
+\begin{itemize}
+\item Si $det(S)\neq 0$ alors $(S)$ a une unique solution.
+\item Si $det(S)=0$ alors $(S)$ a soit aucune solution soit une infinité de solutions.
+\end{itemize} 
+\end{Pp}
+}
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 3
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Projeté orthogonal d'un point sur une droite.}
+
+\begin{Def}
+Soit une droite $(d)$ et un point $A$ du plan.
+
+Le projeté orthogonal du point $A$ sur la droite $(d)$ est le point d'intersection $H$ de la droite $(d)$ avec la perpendiculaire à $(d)$ passant par $A$.
+\end{Def}
+
+\begin{Pp}
+\textcolor{red}{Démonstration exigible}
+
+Le projeté orthogonal du point $A$ sur la droite $(d)$ est le point de la droite $(d)$ le plus proche du point $A$.
+\end{Pp}
+
+\begin{Pv}
+$H$ est le projeté orthogonal de $A$ sur la droite $(d)$.
+
+Soit $K$ le point de $(d)$ le plus proche de $A$ alors $K$ est plus proche de $A$ que $H$ donc $AK\leq AH$ et $AK^2\leq AH^2$. Le triangle $AKH$ est rectangle en $H$ donc d'après le théorème de M. Pythagore : $AK^2=AH^2+KH^2$ donc $AH^2+KH^2\leq AH^2$ soit $KH^2\leq 0$ donc $KH=0$ donc $K$ et $H$ sont confondus. Ainsi, $H$ est le point de la droite $(d)$ le plus proche du point $A$.
+\end{Pv}
+
+\begin{Pp}
+\textcolor{red}{Démonstration exigible}
+
+Dans un triangle rectangle, si $\alpha$ est une mesure d'un angle aigu alors $cos^2(\alpha)+sin^2(\alpha)=1$
+\end{Pp}
+
+\begin{Pv}
+$H$ est le projeté orthogonal de $A$ sur la droite $(d)$.
+
+Soit $P$ un point de $(d)$ et soit $\alpha$ l'angle $\widehat{APH}$, le triangle $APH$ est rectangle en $H$ donc on peut utiliser les formules de trigonométrie :
+$cos(\alpha)=\dfrac{PH}{PA}$ et $sin(\alpha)=\dfrac{AH}{PA}$, donc : 
+
+\[cos^2(\alpha)+sin^2(\alpha)=\frac{PH^2}{PA^2}+\frac{AH^2}{PA^2}=\frac{PH^2+AH^2}{PA^2}\]
+
+Or d'après le théorème de M. Pythagore : $PH^2+AH^2=PA^2$. Donc $cos^2(\alpha)+sin^2(\alpha)=\frac{PH^2+AH^2}{PA^2}=\frac{PA^2}{PA^2}=1$
+\end{Pv}
+
+\end{pageCours} % Fin page de cours 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 3
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
+  
+\end{ExoCu}
+
+%Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Quatrième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Cinquième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Sixième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+%Premier exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Deuxième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Troisième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Quatrième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Cinquième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Sixième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Sixième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Page algorithmique
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAlgo} % Début de la page d'exos d'algorithmique
+
+%Exercice d'algorithmique
+\begin{ExoAlgoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgoN}
+
+%Exercice d'algorithmique
+\begin{ExoAlgo}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgo}
+
+\end{pageAlgo} % Fin de la page d'exos d'algorithmique
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}

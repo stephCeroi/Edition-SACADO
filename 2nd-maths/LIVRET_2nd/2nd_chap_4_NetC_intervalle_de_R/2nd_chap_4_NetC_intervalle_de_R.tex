@@ -1,0 +1,1035 @@
+\input{../MISC/preambule_sacado.tex}
+\input{../MISC/environnements_sacado.tex}
+\input{../MISC/macro_sacado.tex}
+
+\title{Mathématiques 2nde  : le livre sacado}
+\author{L'équipe SACADO}
+
+\begin{document}
+
+%\maketitle
+
+\chapter{Intervalle de $\mathbb{R}$}{4}
+{URL du parcours}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+ 		\item Représenter les ensembles de nombres sur la droite graduée
+ 		\item Identifier les intervalles de $\R$
+ 		\item Lire et écrire des propositions contenant les connecteurs « $et$ », « $ou$ » ;
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+\textbf{Georg Cantor} est un mathématicien allemand, né le 3 mars 1845 à Saint-Pétersbourg et mort le $6$ janvier $1918$ à Halle.\\ 
+Il est connu pour être le créateur de la théorie des ensembles.\\ 
+Il prouva que les nombres réels sont "plus nombreux" que les entiers naturels. En fait, le théorème de Cantor implique\\ 
+l'existence d'une "infinité d'infinis". Il définit les nombres cardinaux, les nombres ordinaux et leur arithmétique. \\ 
+Une partie du travail de Cantor consista à dire que l'infini a plusieurs taille. Et qu'il y a des infini plus grand que d'autres. \\ 
+Cantor rejoint ainsi le monde de la philosophie, comme \textbf{Pascal} 3 siècle plus tôt. \end{His}
+
+%\begin{ExoDec}{Chercher.}{1234}{1}{0}{0}{0}
+%L'\textbf{E}urope est composée de 27 pays dont la \textbf{F}rance, l'\textbf{I}talie et la \textbf{G}rèce. Les capitales respectives sont \textbf{P}aris, \textbf{R}ome et \textbf{A}thènes. 
+%\begin{enumerate}
+%\item Un habitant de Rome est-il en Italie ? 
+%\item Un habitant de Grèce est-il une habitant de Rome ? 
+%\item Un habitant d'Italie est-il en Europe ?
+%\item Si je ne suis pas en Europe, puis-je être en France ?
+%\item Construire un diagramme de Venn qui illustre cette situation.
+%\end{enumerate}
+%
+%{\small \textit{Pour faciliter l'écriture, on pourra utilisera l'initiale des noms respectifs : $E$, $F$, $I$, $G$, $P$, $R$ et $A$.}}
+%\end{ExoDec}
+
+\begin{ExoDec}{Chercher.}{1234}{2}{0}{0}{0}
+ 
+L'INSEE estime qu'un couple avec deux enfants appartient à la classe moyenne quand les revenus du foyer sont situés dans l'intervalle $[3253;5609]$. Monsieur Twicks gagne $2731$ euros et madame Twicks gagne $2952$ euros et ont deux enfants Mary et Paul.
+
+ La famille appartient-elle à la classe moyenne ?
+
+%Le couple gagne donc $s_{global}=2731+2952 = 5683$ euros. On compare cette valeur à l'intervalle de la classe moyenne $[3253;5609]$.
+%
+%$5683>5609 $ donc $5683 \not \in [3253;5609]$. Le couple n'appartient donc pas à la classe moyenne.
+ 
+ \end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Intervalles de $\R$ }
+
+\begin{DefT}{Intervalle fermé. Intervalle ouvert}\index{Intervalle}
+Un \textbf{intervalle fermé} de $\R$ est un sous-ensemble borné de $\R$, c'est à dire un ensemble de nombres compris entre deux valeurs réelles.
+ 
+Un \textbf{intervalle ouvert} de $\R$ est un sous-ensemble de $\R$ dont les bornes ne sont pas incluses dans l'ensemble, c'est à dire un ensemble de nombres compris entre deux valeurs réelles non comprises.
+\end{DefT}
+
+\begin{Rep}
+\begin{enumerate}
+\item On a représenté sur la droite des nombres réels tous les nombres réels $x$ tels que $-1 \leq x \leq 3$.
+
+\begin{center}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.390839866186475,0.) -- (7.64974334956303,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.390839866186475,-0.5880295569511441) rectangle (7.64974334956303,0.5863275715079787);
+\draw [line width=2.4pt,color=ffxfqq] (-1.,0.)-- (3.,0.);
+\draw [color=ffxfqq](-1.16,0.35) node[anchor=north west] {\Large{[}};
+\draw [color=ffxfqq](2.85,0.35) node[anchor=north west] {\Large{]}};
+\end{tikzpicture}
+ \end{center} 
+ 
+Cet intervalle est noté $[-1;3]$ et on écrit alors $x \in [-1;3]$. Cet intervalle est dit \textbf{fermé}.
+ \item On a représenté sur la droite des nombres réels tous les nombres réels $x$ tels que $-1 < x < 3$.
+
+\begin{center}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.390839866186475,0.) -- (7.64974334956303,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.390839866186475,-0.5295569511441) rectangle (7.64974334956303,0.563275715079787);
+\draw [line width=2.4pt,color=ffxfqq] (-1.,0.)-- (3.,0.);
+\draw [color=ffxfqq](-1.2,0.35) node[anchor=north west] {\Large{]}};
+\draw [color=ffxfqq](2.85,0.35) node[anchor=north west] {\Large{[}};
+\end{tikzpicture}
+ \end{center}
+Cet intervalle ouvert est noté $]-1;3[$ et on écrit alors $x \in ]-1;3[$. Cet intervalle est dit \textbf{ouvert}.
+
+ \item On a représenté sur la droite des nombres réels tous les nombres réels $x$ tels que $x \geq -1$.
+
+
+\begin{center}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.390839866186475,0.) -- (7.64974334956303,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,0,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\clip(-4.390839866186475,-0.5880295569511441) rectangle (7.64974334956303,0.53275715079787);
+\draw [line width=2.4pt,color=ffxfqq] (-1.,0.)-- (8.,0.);
+\draw [color=ffxfqq](-1.2,0.35) node[anchor=north west] {\Large{[}};
+\end{tikzpicture}
+ \end{center} 
+Cet ensemble est noté $[-1 ; +\infty[$ et on écrit alors $x \in [-1 ; +\infty[$. Cet intervalle est semi-ouvert à droite.
+
+
+ \item On a représenté sur la droite des nombres réels tous les nombres réels $x$ tels que $x \geq -1$.
+
+
+\begin{center}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.390839866186475,0.) -- (7.64974334956303,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,0,1.,2.,3.,4.,5.,6.,7.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\clip(-4.390839866186475,-0.5880295569511441) rectangle (7.64974334956303,0.53275715079787);
+\draw [line width=2.4pt,color=ffxfqq] (-5.,0.)-- (2.,0.);
+\draw [color=ffxfqq](1.8,0.35) node[anchor=north west] {\Large{]}};
+\end{tikzpicture}
+ \end{center} 
+Cet ensemble est noté $]-\infty;2]$ et on écrit alors $x \in ]-\infty;2]$. Cet intervalle est semi-ouvert à gauche.
+
+
+
+\end{enumerate}
+\end{Rep}
+
+\begin{Rqs}
+\begin{enumerate}
+\item  $+ \infty$ se lit "plus l’infini". L'ensemble des nombres réels $\R$ est l'intervalle $]-\infty ; +\infty[ = \R$.
+\item Un intervalle est une partie de $\R$ "sans trou", en "un seul morceau".
+\item $+\infty$ et $-\infty$ ne sont pas des nombres. Ce ne sont que des notations (ce qui explique qu'ils soient toujours exclus).
+\item Les intervalles correspondants aux quatre premières lignes du tableau sont dits bornés.
+\item  Plus généralement, les différents types d'intervalles sont donnés dans le tableau ci-dessous (où $a$ et $b$ représentent deux réels, avec $a < b$).
+\end{enumerate}
+\end{Rqs}
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Connaitre et représenter les intervalles}
+ 
+
+  
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+
+Soit $x$ un nombre. Écrire sous forme d'intervalle les inégalités suivantes :
+
+
+\begin{enumerate}[leftmargin=*]
+\begin{minipage}{0.49\linewidth}
+	\item $-2 \leq x \leq 3$  \point{1}
+	\item $-\pi \leq x <  \pi$  \point{1}
+	\item Soient $a$ et $b$ deux réels, $a \leq x \leq  b$  \point{1}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+	\item $ x \leq -2$  \point{1}
+	\item $0 \geq x $  \point{1}
+	\item Soient $a$ un réel, $x <  a$  \point{1}
+\end{minipage}
+\end{enumerate} 
+\end{ExoCad}
+
+  
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+
+Soit $x$ un nombre. Écrire sous forme d'inégalités  les  intervalles suivants :
+
+\begin{enumerate}[leftmargin=*]
+\begin{minipage}{0.3\linewidth}
+	\item $x \in [-3;2]$  \point{1}
+	\item $x \in ]-\infty;3]$  \point{1}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+	\item $x \in ]0;1]$  \point{1}
+	\item $x \in ]1;+\infty[$  \point{1}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+	\item $x \in ]-5;8[$  \point{1}
+	\item $x \in [a;b]$  \point{1}
+\end{minipage}
+\end{enumerate} 
+\end{ExoCad}
+
+
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+\begin{enumerate}[leftmargin=*]
+	\item Écrire l'ensemble des réels strictement supérieurs à $-2$ et inférieurs à $4$  \point{1}
+	\item Écrire l'ensemble des réels supérieurs à $2$ et inférieurs à $6$  \point{1}
+	\item Écrire l'ensemble des réels inférieurs à $-1$  \point{1}
+\end{enumerate}
+\end{ExoCad}
+
+
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+
+Recopier et compléter le tableau.
+
+\begin{tabular}{|c|c|c|}
+\hline 
+Intervalle & Inégalité & Représentation  sur la droite graduée  \\ 
+\hline 
+$x\in \left[ -6 ; \dfrac{2}{7}\right]$ & $-6  \leq x \leq  \dfrac{2}{7} $  &   \\ 
+\hline 
+ & $-3 \leq x <5$ &    \\ 
+\hline 
+$x\in \left[ 5 ; 8 \right[ $  &  &     \\ 
+\hline 
+ &  & 
+ \definecolor{ffdxqq}{rgb}{1.,0.8431372549019608,0.}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-5.174092090680384,0.) -- (2.566282833730012,0.);
+\foreach \x in {-5.,-4.,-3.,-2.,-1.,1.,2.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-5.174092090680384,-0.4115875953650586) rectangle (2.566282833730012,0.4791698364123281);
+\draw [line width=2.4pt,color=ffxfqq] (-4.,0.)-- (1.,0.);
+\draw [color=ffdxqq](-4.2,0.35) node[anchor=north west] {\Large{]}};
+\draw [color=ffdxqq](0.88 ,0.35) node[anchor=north west] {\Large{]}};
+\end{tikzpicture} 
+ \\ 
+\hline 
+\end{tabular} 
+ 
+\end{ExoCad}
+
+
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+
+Représenter sur une droite graduée les intervalles donnés. Soit $x$ un réel,
+\begin{enumerate}[leftmargin=*]
+	\item $-10< x < 3$  \point{1}
+	\item $ x \in [0;\pi]$  \point{1}
+	\item $ x \geq \dfrac{1}{3}$  \point{1}
+	\item l'ensemble des réels strictement supérieurs à $-1$ et inférieurs à $3$  \point{1}
+\end{enumerate}
+\end{ExoCad}
+
+
+ 
+ 
+ 
+\begin{ExoCad}{Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+Complète par  $\in$ ou $\notin$.
+
+\begin{enumerate}
+\begin{minipage}{0.32\linewidth}
+\item $4 \ldots \ldots [4;5]$ \vspace{0.1cm}
+\item $1,5 \ldots \ldots [1;3]$\vspace{0.1cm}
+\item $-5,9 \ldots \ldots ]-\infty;-6]$
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\linewidth}
+\item $3 \ldots \ldots [0;3[$\vspace{0.1cm}
+\item $\dfrac{2}{3} \ldots \ldots [2;3]$\vspace{0.1cm}
+\item $\dfrac{1}{2} \ldots \ldots ]-1;1[$
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\linewidth}
+\item $\dfrac{5}{3} \ldots \ldots \left[ \dfrac{5}{6}; \dfrac{11}{6}  \right]$ 
+\item $\sqrt{5} \ldots \ldots \left[ 1;3 \right]$\vspace{0.1cm}
+\item $\sqrt{24} \ldots \ldots \left[0; 4\right]$ 
+\end{minipage}
+
+\end{enumerate}
+ 
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Opérations d'ensembles de nombres et logique mathématique}
+ 
+\begin{minipage}[t]{0.69\linewidth}
+
+\begin{DefT}{Inclusion}\index{Ensemble!Inclusion}
+
+\begin{minipage}{0.58\linewidth}
+Un ensemble $A$ \textbf{est inclus dans} un ensemble $B$ lorsque \textbf{tous} les éléments de $A$ sont contenus dans $B$. On note $A \subset B$. \point{3}
+\end{minipage}
+\hfill
+\begin{minipage}{0.38\linewidth}
+
+\definecolor{ffttww}{rgb}{1.,0.2,0.4}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(1.32,0.48) rectangle (6.42,3.82);
+\draw [rotate around={-1.123302714075422:(3.77,2.23)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.30000001192092896] (3.77,2.23) ellipse (2.1702715668569548cm and 1.5389212695611632cm);
+\draw [rotate around={-61.97549946792974:(3.77,2.32)},line width=2.pt,color=ffttww,fill=ffttww,fill opacity=0.3499999940395355] (3.77,2.32) ellipse (1.1237882510756807cm and 0.8772685069325904cm);
+\draw (4.76,3.48) node[anchor=north west] {$B$};
+\draw (3.6,3.24) node[anchor=north west] {$A$};
+\end{tikzpicture}
+\end{minipage}
+\end{DefT}
+\end{minipage}
+\begin{minipage}[t]{0.28\linewidth}
+\begin{Rq}
+\begin{description}[leftmargin=*]
+\item Un ensemble \textbf{est inclus dans} un ensemble. $A$ et $B$ deux ensembles : $A \subset B$.
+\item Un élément \textbf{appartient à} un ensemble. $x$ un élément et $A$ un ensemble : $x \in B$.
+\end{description}
+\end{Rq}
+\end{minipage}
+
+
+\begin{minipage}[t]{0.55\linewidth}
+\begin{LogT}{Le contre exemple}
+
+$\Z$ est-il inclus dans $\N$ ? Autrement dit, tous les éléments de $\Z$ sont -ils contenus dans $\N$ ?\\ On cherche  un seul élément de $\Z$ qui n'appartient pas à $\N$ : $-2 \in \Z$ mais $-2 \not\in \N$ donc $\Z \not\subset \N$. 
+
+$-2$ est appelé un \textbf{contre exemple}\index{Contre exemple!Logique}. 
+ 
+
+\end{LogT}
+\end{minipage}
+\begin{minipage}[t]{0.43\linewidth}
+ 
+\begin{LogT}{La contra-posée} 
+Soit $A$ et $B$ deux ensembles tels que $A \subset B$. 
+
+Ces deux propositions disent la même idée :
+
+Si $x \in A$ alors $x \in B \Longleftrightarrow$ Si $x \not\in B$ alors $x \not\in A$.
+
+$\sqrt{3} \not\in \Q \Rightarrow \sqrt{3} \not\in \Z$
+\end{LogT}
+
+\end{minipage}
+
+\begin{DefT}{Complémentaire}\index{Ensemble!Complémentaire}
+
+\begin{minipage}{0.68\linewidth}
+Soit $\Omega$ un ensemble contenant un ensemble $A$. On appelle \textbf{complémentaire} de $A$ dans $\Omega$, \textbf{tous} les éléments de $\Omega$ qui n'appartiennent pas à $A$. \point{2}
+Si $\Omega=\lbrace{0;1;2;3;4;5;6\rbrace}$ et $A=\lbrace{3;4;6\rbrace}$ alors $\Omega\setminus A=\lbrace{0;1;2;5\rbrace}$
+\end{minipage}
+\begin{minipage}{0.28\linewidth}
+
+\definecolor{ffffff}{rgb}{1.,1.,1.}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ffttww}{rgb}{1.,0.2,0.4}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(1.32,0.5) rectangle (5.9,3.96);
+\draw [rotate around={0.916654256385289:(3.49,2.28)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.5] (3.49,2.28) ellipse (2.0420114277198222cm and 1.6145930357022946cm);
+\draw [rotate around={-61.97549946792974:(2.99,2.34)},line width=2.pt,color=ffttww,fill=ffttww,fill opacity=1.0] (2.99,2.34) ellipse (1.1237882510756807cm and 0.8772685069325904cm);
+\draw [color=xfqqff](5.36,3.78) node[anchor=north west] {$B$};
+\draw [color=ffffff](2.32,3.3) node[anchor=north west] {$A$};
+\draw (3.8,3.48) node[anchor=north west] {$B\setminus A$};
+\end{tikzpicture}
+
+\end{minipage}
+\end{DefT}
+ 
+
+
+ 
+\begin{minipage}[t]{0.68\linewidth}
+\begin{DefT}{Intersection}\index{Ensemble!Intersection}
+
+\begin{minipage}{0.58\linewidth}
+L'\textbf{intersection} de deux ensembles $A$ et $B$ est l'ensemble $A \cap B$ qui contient \textbf{tous} les éléments communs aux deux ensembles. 
+
+On lit $A$ "inter" $B$. 
+
+L'ensemble $A \cap B$ est l'ensemble qui réunit les éléments de $A$ \textbf{et} de $B$ pris une seule fois. \point{2}
+Si $A=\lbrace{0;1;2;3;4;5;6\rbrace}$ et $B=\lbrace{3;4;7;8\rbrace}$ alors $A \cap B=\lbrace{3;4 \rbrace}$
+\end{minipage}
+\hfill
+\begin{minipage}{0.38\linewidth}
+
+\definecolor{ffttww}{rgb}{1.,0.2,0.4}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.06,0.86) rectangle (4.72,4.1);
+\draw [rotate around={-2.7263109939062526:(3.08,2.22)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.30000001192092896] (3.08,2.22) ellipse (1.44092369450198cm and 1.1700688412983384cm);
+\draw [rotate around={-61.97549946792966:(1.29,2.28)},line width=2.pt,color=ffttww,fill=ffttww,fill opacity=0.3499999940395355] (1.29,2.28) ellipse (1.123788251075678cm and 0.8772685069325883cm);
+\draw (4.16,3.52) node[anchor=north west] {$B$};
+\draw (0.28,3.98) node[anchor=north west] {$A$};
+\draw [->,line width=1.pt] (1.84,3.38) -- (1.88,2.16);
+\draw (1.24,3.98) node[anchor=north west] {$A\cap B$};
+\end{tikzpicture}
+
+\end{minipage}
+
+\end{DefT}
+
+\end{minipage}
+\begin{minipage}[t]{0.28\linewidth}
+
+
+\begin{Rq}\index{Ensembles disjoints}
+Deux ensembles sont \textbf{disjoints} lorsque $A \cap B = \oslash$. $\oslash$ est l'ensemble vide.\index{Ensemble!vide}
+\vspace{0.2cm}
+
+Si $C=\lbrace{0;1;2;3\rbrace}$ 
+
+et $D=\lbrace{4;5;6\rbrace}$ 
+
+alors $A \cap B= \oslash $
+
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{ffttww}{rgb}{1.,0.2,0.4}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-5.398001213875861,3.010943854292776) rectangle (-0.9359834713983067,4.7475129216353915);
+\draw [rotate around={9.950626687951598:(-4.276467024550424,3.8551093731398804)},line width=2.pt,color=ffttww,fill=ffttww,fill opacity=0.15000000596046448] (-4.276467024550424,3.8551093731398804) ellipse (0.8703197956159994cm and 0.5200054996195858cm);
+\draw [rotate around={-0.9240453527727059:(-2.0695771681358472,3.7706928212551696)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.25] (-2.0695771681358472,3.7706928212551696) ellipse (0.9314625917474598cm and 0.5553715874828972cm);
+\draw (-4.867382887743395,4.10984671409655) node[anchor=north west] {$1$};
+\draw (-4.360883576435132,3.892775580678723) node[anchor=north west] {$2$};
+\draw (-4.553835695028756,4.35103686233858) node[anchor=north west] {$3$};
+\draw (-4.095574413368899,4.182203758569159) node[anchor=north west] {$0$};
+\draw (-2.624314509092516,4.158084743744956) node[anchor=north west] {$5$};
+\draw (-1.7801489902454115,4.158084743744956) node[anchor=north west] {$6$};
+\draw (-2.3590053460262834,3.823942476909302) node[anchor=north west] {$4$};
+\end{tikzpicture}
+
+\end{Rq}
+\end{minipage}
+
+
+\begin{DefT}{Réunion}\index{Ensemble!Réunion}
+
+\begin{minipage}{0.68\linewidth}
+La \textbf{réunion} de deux ensembles est l'ensemble $A \cup B$ qui contient \textbf{tous} les éléments de $A$ \textbf{ou} de $B$ pris une seule fois. 
+
+On lit $A$ "union" $B$. \point{2}
+
+Si $A=\lbrace{0;1;2;3;4;5;6\rbrace}$ et $B=\lbrace{3;4;7;8\rbrace}$ alors $A \cup B=\lbrace{0;1;2;3;4;5;6;7;8 \rbrace}$
+\end{minipage}
+\hfill
+\begin{minipage}{0.28\linewidth}
+
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ffttww}{rgb}{1.,0.2,0.4}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(0.06,0.8) rectangle (4.82,4.12);
+\draw [rotate around={-2.7263109939062526:(3.08,2.22)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.5] (3.08,2.22) ellipse (1.44092369450198cm and 1.1700688412983384cm);
+\draw [rotate around={-61.97549946792966:(1.29,2.28)},line width=2.pt,color=ffttww,fill=ffttww,fill opacity=0.550000011920929] (1.29,2.28) ellipse (1.123788251075678cm and 0.8772685069325883cm);
+\draw [color=xfqqff](4.16,3.52) node[anchor=north west] {$B$};
+\draw [color=ffqqqq](0.28,3.98) node[anchor=north west] {$A$};
+\draw (1.36,3.96) node[anchor=north west] {$A\cup B$};
+\draw [rotate around={-2.7263109939062526:(3.08,2.22)},line width=1.pt,fill=black,pattern=north east lines,pattern color=black] (3.08,2.22) ellipse (1.44092369450198cm and 1.1700688412983384cm);
+\draw [rotate around={-61.97549946792966:(1.29,2.28)},line width=1.pt,fill=black,pattern=north east lines,pattern color=black] (1.29,2.28) ellipse (1.123788251075678cm and 0.8772685069325883cm);
+\end{tikzpicture}
+
+
+\end{minipage}
+
+\end{DefT}
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Opérer avec les ensembles}
+ 
+  
+\begin{ExoCad}{Communiquer.}{1234}{2}{0}{0}{0}{0}
+
+Compléter par $\subset$  ou $\not\subset$. Justifier l'utilisation de  $\not\subset$.
+
+\begin{enumerate}
+\begin{minipage}{0.49\linewidth}
+\item $\Z \ldots \ldots \R$ \point{1}
+\item $\Q \ldots \ldots \Z$ \point{1}
+\item $\Z \ldots \ldots \N$ \point{1}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\item $\Z \ldots \ldots \D$ \point{1}
+\item $\D \ldots \ldots \Q$ \point{1}
+\item $\Q \ldots \ldots \N$ \point{1}
+\end{minipage}
+\end{enumerate}
+ 
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+
+On propose dans chaque cas deux ensembles $A$ et $B$. Lequel est-il inclus dans l'autre ? \vspace{0.2cm} 
+
+\begin{enumerate}
+
+\begin{minipage}{0.48\linewidth}
+\item $A=[-1,1;3]$ et $B=]-2,9;6]$ \point{1}
+\item $A=[0,7;0,8]$ et $B=[0,5;+\infty[$\point{1}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\item $A=]1;2[$ et $B=[1;2]$\point{1}
+\item $A=\Q$ et $B=\Z$\point{1}
+\end{minipage}
+
+\end{enumerate}
+ 
+\end{ExoCad}
+
+
+
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Déterminer les complémentaires de l'ensemble $A$ par rapport $\Omega$. 
+\begin{enumerate}
+\item $\Omega = \lbrace 1;2;3;4;5;6\rbrace$ et $A = \lbrace 1;2 \rbrace$. $\Omega \setminus A = $\point{1}
+\item $\Omega = \lbrace -4;-2;-1;0;1;2;\rbrace$ et $A = \lbrace -2;1;2 \rbrace$.  $\Omega \setminus A = $\point{1}
+\item $\Omega = \R$ et $A = \Q$. $\Omega \setminus A = $\point{1}
+\item $\Omega = \R$ et $A = \R^-$. $\Omega \setminus A = $\point{1}
+\end{enumerate} 
+ \end{ExoCad}
+
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+
+Déterminer les intersections des ensembles $A$ et $B$ suivants.   $A \cap B = $ se lit $A$ inter $B$.
+\begin{enumerate}
+\item $A = \lbrace 1;2;3;4;5;6\rbrace$ et $B = \lbrace 1;2 \rbrace$. $A \cap B = $\point{1}
+\item $A = \lbrace -4;-2;-1;0;1;2;\rbrace$ et $B = \lbrace -2;1;2 \rbrace$.  $A \cap B = $\point{1}
+\item $A = \N$ et $B = \R$. $A \cap B = $ \point{1}
+\item $A = [-4;3[$ et $B =[-2;7]$. $A \cap B = $ \point{1}
+\item $A = [-2;1]$ et $B =[2;3]$. $A \cap B = $ \point{1}
+\item $A = \N$ et $B =]-\infty;5]$. $A \cap B = $ \point{1}
+\end{enumerate}
+ 
+\end{ExoCad}
+
+
+
+
+
+
+
+
+
+\begin{ExoCad}{Représenter.}{e/1234}{0}{0}{0}{0}{0}
+
+Déterminer les réunions des ensembles $A$ et $B$ suivants. 
+\begin{enumerate}
+\item $A = \lbrace 1;2;3;4;5;6\rbrace$, $B = \lbrace 1;2 \rbrace$. $A \cup B = $\point{1}
+\item $A = \lbrace -4;-2;-1;0;1;2;\rbrace$,$B = \lbrace -2;1;2 \rbrace$.  $A \cup B = $\point{1}
+\item $A=\Z$, $B =\R$. $A \cup B = $ \point{1}
+\item $A=\left\lbrace 1;2;8;6  \right\rbrace $, $B =\left\lbrace 0;2;4;8  \right\rbrace $. $A \cup B = $ \point{1}
+\item $A=[-2;1]$, $B =[2;3]$. $A \cup B = $ \point{1}
+\item $A=[0;+\infty[$, $B =]-\infty;5]$. $A \cup B = $ \point{1}
+\end{enumerate} 
+\end{ExoCad}
+
+\end{pageAD} % Fin page d'exercice d'application direct 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Communiquer.}{1234}{2}{0}{0}{0}{0}
+
+Johan visite Vienne, la capitale de l'Autriche. L' Autriche est un pays Européen.
+\begin{enumerate}[leftmargin=*]
+\item Arrivé en Autriche, Johan est-il à Vienne ? \point{1}
+\item A Vienne, Johan est-il en Autriche ?\point{1}
+\item Peut-on dire que Johan est en Europe ?\point{1}
+\item Lettres $A$, $E$ et $V$ sont les initiales respectives de Autriche, Europe et Vienne. Compléter avec les lettres $A$, $E$ et $V$ : $\ldots\ldots \subset \ldots\ldots \subset \ldots\ldots $
+\end{enumerate}
+\end{ExoCu}
+
+%Deuxième exo du parcours 1
+\begin{ExoCu}{Communiquer.}{1234}{2}{0}{0}{0}{0}
+
+Recopie et complète par $\subset$, $\in$, $\not\subset$ ou $\notin$.
+
+\begin{enumerate}
+\begin{minipage}{0.32\linewidth}
+\item $\N \ldots \ldots \R$
+\item $-5 \ldots \ldots \Z$
+\item $\Z \ldots \ldots \N$
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\linewidth}
+\item $\left\lbrace 0;1;2 \right\rbrace \ldots \ldots \N$
+\item $]-\infty;1] \ldots \ldots \R$
+\item $]0;+\infty[ \ldots \ldots \Z$
+\end{minipage}
+\hfill
+\begin{minipage}{0.32\linewidth}
+\item $\sqrt{3} \ldots \ldots \N$
+\item $-1,5 \ldots \ldots \Z$
+\item $\Q \ldots \ldots \Z$
+\end{minipage}
+\end{enumerate}
+ 
+\end{ExoCu}
+
+%Troisième exo du parcours 1
+\begin{ExoCu}{Communiquer.}{1234}{2}{0}{0}{0}{0}
+
+Déterminer les intersections des ensembles suivants.
+\begin{enumerate}
+\item $A = \Z$ et $B = \Q$. $A \cap B = $ \point{1}
+\item $A = ]-2;3[$ et $B =[-1;5]$. $A \cap B = $ \point{1}
+\item $A = [-4;3]$ et $B =[2;6]$. $A \cap B = $ \point{1}
+\item $A = ]-6;1[$ et $B =[0;5]$. $A \cap B = $ \point{1}
+\end{enumerate}
+\end{ExoCu}
+
+%Quatrième exo du parcours 1
+\begin{ExoCu}{Chercher.communiquer.}{2}{0}{0}{0}{0}
+ 
+Dans chaque cas, trouver, lorsque cela est possible, un nombre $x$ qui remplit les critères suivants :
+\begin{enumerate}
+\item $x \in \Q$ et $x \not\in \Z$ \point{1}
+\item $x \in \R$ et $x \not\in \N$ \point{1}
+\end{enumerate}
+\end{ExoCu}
+
+%Cinquième exo du parcours 1
+\begin{ExoCu}{Représenter. Raisonner. Communiquer.}{1234}{2}{0}{0}{0}{0}
+Déterminer, dans chaque cas, la réunion des ensembles suivants. On écrira : $A \cup B = $ où $A$ et $B$ sont les ensembles ci-dessous.
+\begin{enumerate}
+\item $A=\left\lbrace 1;3;5;7  \right\rbrace $ et $B=\left\lbrace 0;2;4;5;7;8  \right\rbrace $\point{1}
+\item $A=[-3;4]$ et $B=[2;6]$\point{1}
+\item $A=[0;+\infty[$ et $B=]-\infty;5]$\point{1}
+\end{enumerate}
+On pourra représenter les intervalles sur une droite graduée tracée à main levée.\end{ExoCu}
+
+%Sixième exo du parcours 1
+\begin{ExoCu}{Modéliser.}{1234}{0}{0}{0}{0}{0}
+Déterminer l'ensemble des valeurs de $x$ dans chaque cas.
+\begin{enumerate}
+\item $x < -4$ et $x \geq 10$\point{1}
+\item $x \leq 6$ et $x \leq 3$\point{1}
+\item $x \leq 6$ ou $x \geq 3$\point{1}
+\end{enumerate} 
+\end{ExoCu}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+%Premier exo du parcours 2
+\begin{ExoCd}{Représenter. Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Déterminer l'intervalle des valeurs de $x$ dans chaque cas.
+
+\begin{enumerate}
+\begin{minipage}{0.5\linewidth}
+%\input{CHAPITRES/FEA-16B} 
+
+\item $[-1,1;3]$ et $[2,9;6]$
+\item $x > -4$ et $x \leq 10$
+\item $x \leq -3$ et $x \leq 5$
+
+
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+%\input{CHAPITRES/FEA-83} 
+\item $x \geq 1$ ou $x<3$.  
+\item $x \geq 1$ et $x<3$.  
+\item $x \leq 5$ ou $x \geq 2$
+\end{minipage}
+\end{enumerate}
+
+\end{ExoCd}
+
+%Deuxième exo du parcours 2
+\begin{ExoCd}{Représenter.}{1234}{0}{0}{0}{0}{0}
+
+Dans chaque cas, trouver, lorsque cela est possible, un nombre $x$ qui remplit les conditions suivantes :
+ 
+\begin{enumerate}[leftmargin=*]
+\item $x \not\in D$ et $x \in \R$  \point{1}
+\item $x \in \Q$ et $x \not\in \Z$  \point{1}
+\item $x \not\in \N$ et $x \in \Z$  \point{1}
+\item $x \in \D$ ou $x \in \Q$  \point{1}
+\item $x \not\in \N$ ou $x \in \Z$  \point{1}
+\end{enumerate}
+ 
+ \end{ExoCd}
+
+%Troisième exo du parcours 2
+\begin{ExoCd}{Représenter. Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+On propose dans chaque cas deux ensembles $A$ et $B$. Lequel est inclus dans l'autre ?  
+
+\textit{{\small On pourra représenter chaque intervalle sur une droite graduée.}}
+
+\begin{minipage}{0.48\linewidth}
+
+ 
+\begin{enumerate}
+\item $A = \left[ -\frac{11}{10};\frac{29}{10}\right]$ et $B=\left[-\frac{3}{2};3 \right]$
+\item $A =\left[ \frac{1}{2}; +\infty \right[$ et $B=[0,7;0,8]$.
+\item $A =[1;2]$ et $B=]1;2[$. 
+\end{enumerate}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+ 
+\begin{enumerate}
+
+\item
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [->,line width=1.pt,domain=0.34:6.36] plot(\x,{(-14.-0.*\x)/7.});
+\end{tikzpicture}
+\item
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [->,line width=1.pt,domain=0.34:6.36] plot(\x,{(-14.-0.*\x)/7.});
+\end{tikzpicture}
+\item
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [->,line width=1.pt,domain=0.34:6.36] plot(\x,{(-14.-0.*\x)/7.});
+\end{tikzpicture}
+\end{enumerate}
+
+\end{minipage} 
+\end{ExoCd}
+
+%Quatrième exo du parcours 2
+\begin{ExoCd}{Représenter. Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+Déterminer les intersections des ensembles suivants. On écrira : $A \cap B = $ où $A$ et $B$ sont les ensembles ci-dessous.
+ 
+
+\textit{{\small On pourra représenter chaque intervalle sur une droite graduée.}}
+
+
+
+\begin{minipage}{0.48\linewidth}
+
+\begin{enumerate}
+\item $\Z$ et $\Q$
+\item $[-5;2[$ et $[0;7]$
+\item $[-1;4]$ et $[-3;-1]$
+\item $\N$ et $]-\infty;5]$
+\item $[-5;0[$ et $[0;3]$
+\end{enumerate}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+ 
+\begin{enumerate}
+\item
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [->,line width=1.pt,domain=0.34:6.36] plot(\x,{(-14.-0.*\x)/7.});
+\end{tikzpicture}
+\item
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [->,line width=1.pt,domain=0.34:6.36] plot(\x,{(-14.-0.*\x)/7.});
+\end{tikzpicture}
+\item
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [->,line width=1.pt,domain=0.34:6.36] plot(\x,{(-14.-0.*\x)/7.});
+\end{tikzpicture}
+\item
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [->,line width=1.pt,domain=0.34:6.36] plot(\x,{(-14.-0.*\x)/7.});
+\end{tikzpicture}
+\item
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [->,line width=1.pt,domain=0.34:6.36] plot(\x,{(-14.-0.*\x)/7.});
+\end{tikzpicture}
+\end{enumerate}
+
+\end{minipage} 
+\end{ExoCd}
+
+%Cinquième exo du parcours 2
+\begin{ExoCd}{Chercher.}{1234}{0}{0}{0}{0}{0}
+
+On donne le programme en Python ci dessous. 
+ 
+\begin{lstlisting}
+def is_in(x,a,b):
+    if x > a and x < b :
+    	test = "{} is in  ]{};{}[".format(x,a,b) 
+    else :
+        test = "{} is not in ]{};{}[".format(x,a,b) 
+    return test    
+x=int(input("Entrer un nombre  :")) 
+a=int(input("Entrer la borne inf :"))
+b=int(input("Entrer la borne sup :"))    
+print(is_in(x,a,b))
+\end{lstlisting}
+ 
+
+
+\begin{enumerate}
+\item Que fait ce programme ? Vous pouvez aussi ouvrir l'éditeur Python : \url{https://sacado.xyz/tool/show/18}
+\item Modifier ce programme pour qu'il teste si un nombre $x$ appartient à l'intervalle $[a;b]$.
+\end{enumerate} 
+\end{ExoCd}
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Représenter.}{1}{1}{0}{0}{0}
+
+Démontrer que si $p^2$ est impair alors $p$ est impair.
+
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{DefT}{Nombre décimal périodique}
+Le nombre $a_0,\underline{a_1a_2a_3}$ est un nombre décimal périodique de période $a_1a_2a_3$. Les chiffres $a_1$, $a_2$, $a_3$ se répètent indéfiniment.
+\end{DefT}
+
+\begin{ExoCtN}{Représenter. Calculer.}{1234}{0}{0}{0}{0} 
+ 
+Démontrer que $0,\underline{9}=1$.   \point{6}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Représenter. Calculer.}{1234}{1}{0}{0}{0}
+
+\begin{enumerate}
+\item On considère le nombre $\frac{19}{11}$.
+
+\begin{enumerate}
+\item Donner le développement décimal de $\frac{19}{11}$ avec 8 chiffres significatifs. $\frac{19}{11}$ semble-t-il décimal ?
+\item On dit que $\frac{19}{11}$ a une écriture périodique.
+Préciser sa période (série de chiffres qui se répète à l'infini dans le développement décimal).
+\end{enumerate}
+\item On considère le nombre $x=0,13131313....$ dont le développement décimal a pour période 13.
+\begin{enumerate}
+\item Démontrer que $100x = 13 + x$. 
+\item  En déduire une écriture fractionnaire de $x$. Quelle est la nature du nombre $x$ ?
+\end{enumerate}
+\end{enumerate} 
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Représenter. Calculer.}{2}{1}{0}{0} 
+
+\begin{enumerate}
+\item Démontrer que $0,\underline{12}$ est un nombre rationnel à préciser.
+\item Démontrer que $x=3,\underline{412}$ est un nombre rationnel. 
+\end{enumerate}
+\end{ExoCtN} 
+
+% Cinquième exo du parcours 3
+\begin{ExoCt}{Raisonner.}{1234}{2}{0}{0}{0}{0}
+ 
+Représenter graphiquement dans le plan muni d'un repère orthonormal 
+ 
+\begin{enumerate}
+\item l'ensemble des points $M(x;y)$ tes que  $$1 < x < 3 \text{ et} 0 \leq y <4$$
+\item l'ensemble des points $M(x;y)$ tes que  $$1 \leq  x \leq  5 \text{ et } -2 \leq y   \leq  1$$
+\end{enumerate}
+ 
+\end{ExoCt}
+
+% Sixième exo du parcours 3
+\begin{ExoCt}{Représenter.}{1234}{2}{0}{0}{0}{0}
+Représenter graphiquement, dans le plan muni d'un repère orthonormal, l'ensemble des points $M(x;y)$ tes que  $$1 \leq  2x+1 \leq  5 \text{ et }  -2 \leq 3y + 4  \leq  13$$
+\end{ExoCt} 
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Raisonner.}{2}{0}{0}{0}{0}
+
+Compléter avec $\in$, $\not\in$, $\subset$ ou $\not\subset$.
+
+ \begin{tabular}{ccc}
+
+$\frac{2}{10}..........\Z$ & $-\sqrt{25}..........\Z$ & $\frac{\sqrt{3}}{4}..........\Q$ \\ 
+
+$\pi..........\R$  & $-\frac{5}{3}..........\Q$  &  $\sqrt{11}..........\R$ \\ 
+
+\end{tabular} 
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Raisonner.}{2}{0}{0}{0}{0}
+ 
+
+Déterminer, dans chaque cas, l'intersection puis la réunion des ensembles suivants. 
+
+\begin{enumerate}
+\item $A=\left\lbrace 1;3;5;7  \right\rbrace $ et $B=\left\lbrace 0;2;4;5;7;8  \right\rbrace $\point{2}
+\item $A=[-3;4]$ et $B=[2;6]$\point{2}
+\item $A=[0;+\infty[$ et $B=]-\infty;5]$\point{2}
+\end{enumerate}
+On pourra représenter les intervalles sur une droite graduée tracée à main levée.
+\end{ExoAutoN}
+
+%Troisième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Représenter. Raisonner.}{2}{0}{0}{0}{0}
+
+ Recopier et compléter le tableau.
+
+\begin{tabular}{|c|c|c|}
+\hline 
+Intervalle & Inégalité & Représentation   \\ 
+\hline 
+$x\in \left[ -2 ; 6\right]$ & $-2  \leq x \leq  6 $  &  \\ 
+\hline 
+ & $1 \leq x <3$ &     \\ 
+\hline 
+$x\in \left[ -6 ; 6 \right[ $  &  &  \\ 
+\hline 
+ &  & \definecolor{ffdxqq}{rgb}{1.,0.8431372549019608,0.}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-5.174092090680384,0.) -- (2.566282833730012,0.);
+\foreach \x in {-5.,-4.,-3.,-2.,0,-1.,1.,2.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\clip(-5.174092090680384,-0.4115875953650586) rectangle (2.566282833730012,0.4791698364123281);
+\draw [line width=2.4pt,color=ffxfqq] (-4.,0.)-- (1.,0.);
+\draw [color=ffxfqq](0.8,0.35) node[anchor=north west] {\Large{]}};
+\draw [color=ffxfqq](-4.2,0.35) node[anchor=north west] {\Large{]}};
+\end{tikzpicture}    \\ 
+\hline 
+\end{tabular} 
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Raisonner.}{2}{0}{0}{0}{0}
+
+Démontrer que $0,\underline{485}$ est un nombre rationnel à préciser.
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Page algorithmique
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAlgo} % Début de la page d'exos d'algorithmique
+
+%Exercice d'algorithmique
+\begin{ExoAlgoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgoN}
+
+%Exercice d'algorithmique
+\begin{ExoAlgo}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgo}
+
+\end{pageAlgo} % Fin de la page d'exos d'algorithmique
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}

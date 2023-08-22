@@ -9,20 +9,21 @@
 
 %\maketitle
 
-\chapter{Systèmes d'équations}
-{https://sacado.xyz/qcm/parcours_show/0/142938}
+\chapter{Proportions et pourcentages }{15}
+{https://sacado.xyz/qcm/parcours_show/31123/142947}
 {
  \begin{CpsCol}
 	\textbf{Les savoir-faire du parcours}
  	\begin{itemize}
- 		\item Savoir vérifier si un couple est solution d'une équation.
-		\item Savoir exprimer une inconnue en fonction de l'autre.
-		\item Savoir compléter un couple solution.
-		\item Savoir trouver un couple solution d'une équation
-		\item Savoir vérifier qu'un couple est solution d'un système.
-		\item Savoir résoudre un système par substitution.
-		\item Savoir résoudre un système par combinaison linéaire.
-		\item Savoir résoudre un problème à deux inconnues avec un système.
+ 		\item Savoir déterminer une proportion.
+		\item Savoir calculer une proportion de proportion.
+		\item Savoir déterminer un taux d'évolution.
+		\item Savoir associer un coefficient multiplicateur à une évolution.
+		\item Savoir appliquer un taux d'évolution.
+		\item Savoir déterminer une évolution.
+		\item Savoir calculer un taux d'évolution global.
+		\item Savoir déterminer un taux d'évolution réciproque.
+		\item Savoir utiliser un taux d'évolution réciproque.
  	\end{itemize}
  \end{CpsCol}
 
@@ -43,67 +44,56 @@
 
 \newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
 
-\section{Équations à deux inconnues.}
+\section{Proportions}
 
-\mini{.48\linewidth}{
-\begin{Def}
-Une équation à deux inconnues est de la forme $(E):ax+by=c$, avec $a$, $b$ et $c$ des nombres réels donnés. 
-\end{Def}
-}{.48\linewidth}{
-\begin{Def}
-Une solution d'une équation à deux inconnues est un couple $(x_0;y_0)$ qui vérifie l'égalité.
-\end{Def}
-}
-
-
-\section{Systèmes à deux équations et deux inconnues.}
-
-\mini{.60\linewidth}{
-\begin{Def}
-Un système de deux équations à deux inconnues peut s'écrire sous la forme $(S):
-\begin{cases} 
-ax+by+c=0 \\ 
-a'x+b'y+c'=0
-\end{cases}$ avec $a$, $b$, $c$, $a'$, $b'$ et $c'$ qui sont des nombres réels donnés.
-\end{Def}
-}{.40\linewidth}{
-\begin{Def}
-Une solution d'un système à deux équation à deux inconnues est un couple $(x_0;y_0)$ qui vérifie les deux égalités.
-\end{Def}
-}
-
-\begin{Def}
-Résoudre un système signifie déterminer tous les couples solutions de ce système.
-\end{Def}
-
-\section{Méthodes de résolution de systèmes.}
-
-\begin{MtT}{Résoudre un système par substitution}
-Substituer signifie remplacer : Pour résoudre un système à deux équations et deux inconnues par substitution :
+\begin{DefT}{Population totale et sous-population}
 \begin{itemize}
-\item On utilise une équation pour exprimer une inconnue en fonction de l'autre.
-\item On substitue la valeur exprimée de cette inconnue dans l'autre équation.
-\item On résout l'équation à une inconnue obtenue.
-\item On détermine la valeur de l'autre inconnue.
+\item On appelle population totale un ensemble d'éléments appelés les individus.
+\item On appelle sous-population une partie de la population.
 \end{itemize}
-\end{MtT}
+\end{DefT}
 
-\begin{PpT}{Résoudre un système par combinaison linéaire.}
-On ne change pas les solutions d'un système si :
-\begin{itemize}
-\item On multiplie les deux membres d'une équation par un nombre non nul.
-\item On remplace une équation par la somme des deux équations membre à membre.
-\end{itemize}
+\begin{DefT}{Proportion d'une sous-population}
+On considère une population d'effectif $N$ et une sous-population d'effectif $n$.
+
+La proportion de la sous-population est le quotient $p=\frac{n}{N}$
+\end{DefT}
+
+\begin{Rq}
+Une proportion peut s'exprimer en pourcentage.
+\end{Rq}
+
+\begin{PpT}{Proportion de proportion}
+Soit $A\subset B$ et $B\subset C$.
+
+$p_1$ est la proportion de $A$ dans $B$ et $p_2$ est la proportion de $B$ dans $C$. 
+
+Alors la proportion de $A$ dans $C$ est $p=p_1\times p_2$.
 \end{PpT}
 
-\begin{MtT}{Résoudre un problème avec un système.}
-On définit les inconnues (les nombres cherchés) en fonction du problème.
+\section{Variations d'une quantité, taux d'évolution}
+
+\begin{DefT}{Taux d'évolution}
+On considère une quantité qui varie au cours du temps.
+
+On note $V_0$ la valeur initiale et $V_1$ la valeur finale.
+
+Le taux d'évolution de la quantité entre $V_0$ et $V_1$ est égal à $t=\frac{V_1-V_0}{v_0}$.
+\end{DefT}
+\mini{.58\linewidth}{
+\begin{PpT}{Coefficients multiplicateurs}
 \begin{itemize}
-\item On traduit chaque donnée du problème par une équation
-\item On résout le système obtenu.
-\item On interprète la solution trouvée pour répondre au problème.
+\item Augmenter une quantité de $t\%$ revient à la multiplier par $(1+\frac{t}{100})$
+\item Diminuer une quantité de $t\%$ revient à la multiplier par $(1-\frac{t}{100})$
 \end{itemize}
-\end{MtT}
+\end{PpT}
+}{.38\linewidth}{
+\begin{Pv}
+On augmente une valeur $V_0$ de $t\%$.
+
+On a alors : $V_1=V_0+\frac{t}{100}\times V_0$ donc $V_1=(1+\frac{t}{100})\times V_0$ donc augmenter une quantité de $t\%$ revient à la multiplier par $(1+\frac{t}{100})$.
+\end{Pv}
+}
 
 \end{pageCours} % Fin page de cours 1
 
@@ -133,6 +123,61 @@ On définit les inconnues (les nombres cherchés) en fonction du problème.
 \end{ExoCad}
  
 \end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Évolutions successives}
+
+\begin{Pp}
+Si une grandeur subit des évolutions successives alors le coefficient multiplicateur global est égal au produit des coefficients multiplicateurs de chaque évolution.
+\end{Pp}
+
+\section{Évolutions réciproques}
+
+\begin{Def}
+Soit $t$ le taux d'évolution de $V_0$ à $V_1$.
+
+On appelle taux d'évolution réciproque de $t$, le taux d'évolution qui appliqué à $V_1$ permet de retrouver la valeur initiale $V_0$.
+\end{Def}
+
+\begin{Pp}
+Des taux d'évolution réciproques ont des coefficients multiplicateurs inverses.
+\end{Pp}
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Parcours niveau 1
@@ -273,15 +318,25 @@ On définit les inconnues (les nombres cherchés) en fonction du problème.
 
 \end{ExoAutoN}
 
+\end{pageAuto} % Fin de la page d'exos ouverts
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Page algorithmique
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAlgo} % Début de la page d'exos d'algorithmique
 
 %Exercice d'algorithmique
-\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+\begin{ExoAlgoN}{Compétence.}{1}{0}{0}{0}{0}
 
-\end{ExoAutoN}
+\end{ExoAlgoN}
 
-\end{pageAuto} % Fin de la page d'exos ouverts
+%Exercice d'algorithmique
+\begin{ExoAlgo}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgo}
+
+\end{pageAlgo} % Fin de la page d'exos d'algorithmique
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%  Page(s) blanche(s)

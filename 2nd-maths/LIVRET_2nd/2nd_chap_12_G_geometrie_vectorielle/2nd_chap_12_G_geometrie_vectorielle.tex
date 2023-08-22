@@ -1,0 +1,484 @@
+\input{../MISC/preambule_sacado.tex}
+\input{../MISC/environnements_sacado.tex}
+\input{../MISC/macro_sacado.tex}
+
+\title{Mathématiques 2nde  : le livre sacado}
+\author{L'équipe SACADO}
+
+\begin{document}
+
+%\maketitle
+
+\chapter{Géométrie vectorielle}{12}
+{https://sacado.xyz/qcm/parcours_show/31122/142944}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+ 		\item Savoir représenter géométriquement des vecteurs.
+ 		\item Savoir construire géométriquement la somme et la différence de deux vecteurs.
+ 		\item Savoir appliquer la relation de M. Chasles avec des vecteurs.
+ 		\item Savoir construire géométriquement le produit d'un vecteur par un nombre réel.
+ 		\item Savoir caractériser alignement de parallélisme par la colinéarité de vecteurs.
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+	Michel Chasles était un mathématicien français du XIXe siècle qui a apporté d'importantes contributions dans le domaine de la géométrie vectorielle. Il est célèbre pour avoir formulé le "théorème de Chasles", qui établit que tout mouvement d'un solide rigide dans l'espace est équivalent à une combinaison de translations et de rotations. Cette découverte a été essentielle pour le développement de la géométrie vectorielle et a permis de comprendre les transformations géométriques en termes de vecteurs. Le travail de Michel Chasles a ouvert la voie à de nouvelles avancées dans la géométrie analytique et a eu un impact significatif sur le développement ultérieur des mathématiques.
+\end{His}
+
+\begin{ExoDec}{Représenter. Raisonner.}{1234}{0}{0}{0}{0}
+Vous vous promenez dans une ville inconnue avec un plan peu détaillé. Vous partez de votre position actuelle A et effectuez les déplacements suivants :
+\begin{enumerate}
+\item Marchez 200 mètres vers le nord.
+\item Tournez à gauche et marchez 150 mètres vers l'ouest.
+\item Prenez un raccourci en marchant 100 mètres vers le nord-est.
+\end{enumerate}
+
+Comment déterminer votre position finale B par rapport à votre point de départ A ? Quelle distance totale avez-vous parcourue pour atteindre votre destination ?\end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Vecteur du plan}
+
+\begin{DefT}{Translation dans le plan}
+Soit $B$ et $C$ deux points distincts du plan.
+
+L'image d'un point $A$ par la \textbf{translation} qui transforme $B$ en $C$ est le point $A'$ tel que $ABCA'$ soit un \textbf{parallélogramme}. 
+\end{DefT}
+
+\begin{DefT}{Vecteur}
+On appelle \textbf{vecteur d'origine} $A$ et d'\textbf{extrémité} $B$, l'idée du déplacement de $A$ vers $B$.  
+
+On le note $\vec{AB}$.
+
+Le vecteur $\vec{AB}$ est défini par :
+\begin{itemize}
+\item Une \textbf{direction}.
+\item Un \textbf{sens}.
+\item Une \textbf{longueur}, appelée \textbf{norme} du vecteur.
+\end{itemize}
+
+La translation qui transforme $A$ en $B$ est appelée translation de vecteur $\vec{AB}$.
+\end{DefT}
+
+\mini{.55\linewidth}{
+\begin{DefT}{Vecteurs égaux}
+On dit que deux vecteurs $\vec{AB}$ et $\vec{CD}$ sont égaux s'ils ont :
+\begin{itemize}
+\item La même direction.
+\item Le même sens.
+\item La même norme.
+\end{itemize}
+\end{DefT}
+}{.45\linewidth}{
+\begin{Pp}
+\[\vec{AB}=\vec{CD}\Leftrightarrow ABCD\text{ est un parallélogramme.}\]
+\end{Pp}
+}
+
+\begin{DefT}{Représentants d'un vecteur}
+\mini{.65\linewidth}{
+Les vecteurs $\vec{u}$ et $\vec{AB}$ ont la \textbf{même direction}, le \textbf{même sens} et la \textbf{même longueur}, ils sont \textbf{égaux}.
+
+On dit que le vecteur $\vec{AB}$ est un \textbf{représentant} du vecteur $\vec{u}$.
+}{.30\linewidth}{
+\begin{center}
+\definecolor{qqzzff}{rgb}{0,0.6,1}
+\definecolor{ffqqff}{rgb}{1,0,1}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.6cm,y=.6cm]
+\clip(-2,-5) rectangle (5,4);
+\draw [->,line width=2.8pt,color=ffqqff] (-1.126964000000001,0.23064600000000093) -- (3.528874000000002,3.2466919999999972);
+\draw [->,line width=2.8pt,color=qqzzff] (-0.7170160000000009,-4.073807999999995) -- (3.938822000000002,-1.057761999999999);
+\draw [color=qqqqff] (-0.7170160000000009,-4.073807999999995)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+\draw[color=qqqqff] (-1,-3.5) node {$A$};
+\draw [color=qqqqff] (-1.126964000000001,0.23064600000000093)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+\draw [color=qqqqff] (3.5288740000000014,3.2466919999999972)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+\draw[color=ffqqff] (1.5,2.6) node {$\vec{u}$};
+\draw [color=qqqqff] (3.938822000000002,-1.057761999999999)-- ++(-2.5pt,-2.5pt) -- ++(5pt,5pt) ++(-5pt,0) -- ++(5pt,-5pt);
+\draw[color=qqqqff] (4,-.6) node {$B$};
+\end{tikzpicture}
+\end{center}
+}
+\end{DefT}
+
+\begin{Pp}
+Soit $A$ un point et $\vec{u}$ un vecteur, alors il existe un \textbf{unique point} $B$ tel que $\vec{AB}$ soit un représentant de $\vec{u}$.
+\end{Pp}
+
+\end{pageCours} % Fin page de cours 1
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Savoir représenter géométriquement des vecteurs.}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\section{Opérations avec les vecteurs}
+
+\subsection{Addition de vecteurs}
+
+\begin{Def}
+Soit $\vec{u}$ et $\vec{v}$ deux vecteurs.
+
+Si on enchaine le translation de vecteur $\vec{u}$
+puis la translation de vecteur $\vec{v}$, on obtient une translation.
+
+On appelle somme des vecteurs $\vec{u}$
+et $\vec{v}$, notée $\vec{u}+\vec{v}$, le vecteur qui lui est associé.
+\end{Def}
+
+\mini{.45\linewidth}{
+\begin{DefT}{Relation de M. Chasles}
+Soit $A$, $B$ et $C$ trois points, alors $\vec{AB}+\vec{BC}=\vec{AC}$
+\end{DefT}
+}{.53\linewidth}{
+\begin{PpT}{Propriétés de l'addition de vecteurs}
+Pour tous vecteurs $\vec{u}$, $\vec{v}$ et $\vec{w}$ :
+\begin{itemize}
+\item $\vec{u}+\vec{v}=\vec{v}+\vec{u}$, l'addition est commutative.
+\item $\vec{u}+(\vec{v}+\vec{w})=(\vec{u}+\vec{v})+\vec{w}$, l'addition est associative.
+\end{itemize}
+\end{PpT}
+}
+
+\begin{PpT}{Propriété du parallélogramme}
+Soit $ABCD$ un parallélogramme, alors $\vec{AB}+\vec{AD}=\vec{AC}$.
+\end{PpT}
+
+\subsection{Soustraction de vecteurs}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Le vecteur nul : $\vec{0}$}
+Soit $A$ un point du plan, on appelle vecteur $\vec{AA}$ le \textbf{vecteur nul} et on le note $\vec{0}$.
+\end{DefT}
+}{.48\linewidth}{
+\begin{Pp}
+Pour tout vecteur $\vec{u}$, $\vec{u}+\vec{0}=\vec{0}+\vec{u}=\vec{u}$
+\end{Pp}
+}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Vecteurs opposés}
+On dit que deux vecteurs $\vec{u}$ et $\vec{v}$ sont \textbf{opposés} lorsque :
+\begin{itemize}
+\item Ils ont la \textbf{même direction}.
+\item Ils ont la \textbf{même norme}.
+\item Ils sont de \textbf{sens contraires}.
+\end{itemize}
+On le note : $\vec{u}=-\vec{v}$.
+\end{DefT}
+}{.48\linewidth}{
+\begin{DefT}{Soustraction de vecteurs}
+Soit $\vec{u}$ et $\vec{v}$ deux vecteurs.
+
+On définit la \textbf{différence} des vecteurs $\vec{u}$ et $\vec{v}$ par : $\vec{u}-\vec{v}=\vec{u}+(-\vec{v})$.
+\end{DefT}
+}
+
+\subsection{Multiplication d'un vecteur par un nombre}
+
+\mini{.65\linewidth}{
+\begin{Def}
+Soit $\vec{u}$ un vecteur et $k$ un nombre réel non nul.
+Le produit du vecteur $\vec{u}$ par le nombre $k$, noté $k\vec{u}$ est le vecteur $\vec{v}$ tel que :
+\begin{itemize}
+\item Les vecteurs $\vec{u}$ et $\vec{v}$ ont la même direction.
+\item Les vecteurs $\vec{u}$ et $\vec{v}$ ont :
+Le même sens si $k>0$. \hspace{1cm} Des  sens contraires si $k<0$.
+\item La norme de $\vec{v}$ est égale à $|k|$ fois la norme de $\vec{u}$.
+\end{itemize}
+\end{Def}
+}{.3\linewidth}{
+\begin{Pp}
+Si $M$ est le milieu du segment $[AB]$ alors :
+\begin{itemize}
+\item $\vec{AB}=2\vec{AM}$
+\item $\vec{AM}=\frac{1}{2}\vec{AB}$
+\item $\vec{AM}=\vec{MB}$
+\item $\vec{AM}+\vec{BM}=\vec{0}$
+\end{itemize}
+\end{Pp}
+}
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 2
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 3
+
+\section{Vecteurs colinéaires}
+
+\begin{Def}
+On dit que deux vecteurs $\vec{u}$ et $\vec{v}$ sont \textbf{colinéaires} lorsqu'ils ont la \textbf{même direction}.
+\end{Def}
+
+\begin{Pp}
+Soit $\vec{u}$ et $\vec{v}$ deux vecteurs.
+\[ \vec{u} \text{ et } \vec{v} \text{ sont colinéaires.}\Leftrightarrow  \text{Il existe un nombre réel } k\text{ tel que }\vec{u}=k\vec{v}\]
+\end{Pp}
+
+\end{pageCours} % Fin page de cours 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 3
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
+  
+\end{ExoCu}
+
+%Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Quatrième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Cinquième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Sixième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+%Premier exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Deuxième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Troisième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Quatrième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Cinquième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Sixième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Sixième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Page algorithmique
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAlgo} % Début de la page d'exos d'algorithmique
+
+%Exercice d'algorithmique
+\begin{ExoAlgoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgoN}
+
+%Exercice d'algorithmique
+\begin{ExoAlgo}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgo}
+
+\end{pageAlgo} % Fin de la page d'exos d'algorithmique
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}
