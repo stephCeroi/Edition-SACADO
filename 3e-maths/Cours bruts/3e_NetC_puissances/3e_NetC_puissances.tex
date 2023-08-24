@@ -1,0 +1,271 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+%\chapter{Puissances}
+%{https://sacado.xyz/qcm/parcours_show_course/0/129869}
+%
+
+% {
+% \begin{CpsCol}
+ % \textbf{Les savoir-faire du parcours}
+ % \begin{itemize}
+ % \item Savoir simplifier une écriture avec la notation puissance.
+ % \item Savoir calculer la puissance d'un nombre avec un exposant positif.
+ % \item Savoir calculer une puissance de 10 avec un exposant entier relatif.
+ % \item Savoir donner l'écriture décimale d'un nombre écrit avec une puissance de 10.
+ % \item Savoir utiliser les préfixes associés aux puissances de 10.
+ % \item Savoir déterminer l'écriture scientifique d'un nombre.
+ % \item Savoir utiliser l'écriture scientifique pour comparer des nombres.
+ % \item Savoir calculer la puissance d'un nombre avec un exposant négatif.
+ % \item Savoir simplifier une écriture avec des puisances d'exposant entier relatif.
+ % \item Savoir utiliser les formules de calcul avec des puissances de 10.
+ % \item Savoir utiliser les formules de calcul avec des puissances.
+ % \item Savoir résoudre un problème avec des puissances.
+ % \end{itemize}
+% \end{CpsCol}
+
+% \textbf{qrcode vers le parcours diagnostic}
+
+% }
+
+%\begin{pageCours}
+
+\section{La notation puissance}
+
+\mini{.50\linewidth}{
+\begin{Def}
+Soit $a$ un nombre et $n$ un entier naturel supérieur ou égal à $2$.
+
+On note $a^n$ le produit de $n$ facteurs 
+\[\underbrace{a\times a\times a\times \ldots\times a\times a}_n\]
+
+$a^n$ se lit " $a$ puissance $n$ " ou " $a$ exposant $n$ ".
+\end{Def}
+
+}{.45\linewidth}{
+\begin{Ex}
+L'écriture suivante se simplifie en utilisant la notation de puissance : 
+\[(-9)\times(-9)\times(-9)\times(-9)\times(-9)=(-9)^5\]
+\end{Ex}
+}
+
+\begin{Mt}
+On considère le nombre : $A=-(-5)^5$.
+Pour déterminer si le nombre est négatif ou positif on utilise la définition de la notation de puissance :
+\[-(-5)^5=-(-5)\times(-5)\times(-5)\times(-5)\times(-5)\]
+il y a un nombre pair de facteurs négatifs, donc le nombre $A$ est positif : $A=\np{3125}$
+\end{Mt}
+
+\begin{Rq}
+Par convention, pour tout nombre $a$, on pose : $a^1=a$ et $a^0=1$.
+\end{Rq}
+
+\begin{Mt}
+\qr{•}{Effectuer un calcul avec des puissances niveau 2}
+\end{Mt}
+
+\section{Puissances de 10}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Puissances de 10 avec un exposant entier positif}
+Soit $n$ un entier positif.
+\[10^n=10\times10\times10\times\ldots\times10\]
+Par convention : $10^1=10$ et $10^0=1$.
+\end{DefT}
+}{.48\linewidth}{
+\begin{Ex}
+L'écriture décimale du nombre $A=10^9$ est :
+\[A=10^9=10\times10\times10\times10\times10\times10\times10\times10\times10\]
+\[A=\np{1000000000}\]
+\end{Ex}
+}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Puissances de 10 avec un exposant entier négatif}
+Soit $n$ un entier positif.
+
+On note $10^{-n}$ l'\textbf{inverse} du nombre $10^n$ :
+\[10^n=\frac{1}{10^n}\]
+\end{DefT}
+}{.48\linewidth}{
+\begin{Ex}
+L'écriture décimale du nombre $A=10^{-8}$ est :
+\[A=10^{-8}=\frac{1}{10^8}=\frac{1}{\np{100000000}}\]
+donc $A=\np{0,00000001}$.
+\end{Ex}
+}
+
+\section{Écriture décimale et puissances de 10}
+
+\begin{Def}
+Notre système numérique est un \textbf{système décimal}, il est basé sur les puissances de 10.
+\end{Def}
+
+\begin{Ill}
+\begin{center}
+\includegraphics[width=.8\linewidth]{ecriture_decimale.png}
+\end{center}
+\end{Ill}
+
+\begin{Ex}
+L'écriture décimale de $23,27\times10^3$ est $\np{23270}$.
+\end{Ex}
+
+\begin{Mt}
+Les préfixes associés aux puissances de 10 :
+\begin{center}
+\includegraphics[width=.8\linewidth]{prefixes.png}
+\end{center}
+\end{Mt}
+
+\section{Écriture scientifique d'un nombre}
+
+\mini{.58\linewidth}{
+\begin{Def}
+L'\textbf{écriture scientifique} d'un nombre est le produit d'un nombre décimal dont la partie entière comporte \textbf{un seul chiffre} différent de zéro par une \textbf{puissance de} 10.
+
+L'écriture scientifique est de la forme  $a:\times10^n$, où $1\leq a<10$ et $n$ est un entier relatif.
+
+L'écriture scientifique d'un nombre est \textbf{unique}.
+\end{Def}
+}{.38\linewidth}{
+\begin{Ex}
+L'écriture scientifique du nombre $a=\np{0,2059}$ est :
+\[a=2,059\times10^{-1}\]
+En effet, $1\leq2,059<10$.
+\end{Ex}
+}
+
+\begin{Rq}
+\begin{itemize}
+\item Seuls les nombres décimaux ont une écriture scientifique.
+\item L'écriture scientifique d'un nombre permet de connaitre rapidement un ordre de grandeur de ce nombre.
+\end{itemize}
+\end{Rq}
+
+\begin{Mt}
+\mini{.48\linewidth}{
+\qr{•}{Utiliser l'écriture scientifique pour donner un ordre de grandeur}
+}{.48\linewidth}{
+\qr{•}{Déterminer l'écriture scientifique d'un nombre}
+}
+\end{Mt}
+
+\section{Puissances d'exposant entier négatif}
+
+\mini{.38\linewidth}{
+\begin{Def}
+Soit $a$ un nombre non nul et $n$ un entier naturel positif.
+
+On note $a^{-n}$ l'\textbf{inverse} de $a^n$ donc $a^{-n}=\frac{1}{a^n}$.
+\end{Def}
+
+}{.58\linewidth}{
+\begin{Ex}
+\[A=(-1)^{-4}=\frac{1}{(-1)^4}=\frac{1}{(-1)\times(-1)\times(-1)\times(-1)}=1\]
+\end{Ex}
+}
+
+\section{Opérations sur les puissances}
+
+\mini{.58\linewidth}{
+\begin{PpT}{Produit de puissances}
+Soit $a$ un nombre et $n$ et $m$ deux entiers relatifs alors : 
+
+\[a^n\times a^m=a^{n+m}\]
+\end{PpT}
+}{.38\linewidth}{
+\begin{Ex}
+\[A=4^{-5}\times4^{-11}=4^{-5+(-11)}=4^{-16}\]
+\end{Ex}
+}
+
+\mini{.58\linewidth}{
+\begin{PpT}{Quotient de puissances}
+Soit $a$ un nombre et $n$ et $m$ deux entiers relatifs alors : 
+
+\[\frac{a^n}{a^m}=a^{n-m}\]
+\end{PpT}
+}{.38\linewidth}{
+\begin{Ex}
+\[A=\frac{(-6)^{-8}}{(-6)^{-5}}=(-6)^{-6-(-8)}=(-6)^{2}\]
+\end{Ex}
+}
+
+\mini{.58\linewidth}{
+\begin{PpT}{Puissance de puissances}
+Soit $a$ un nombre et $n$ et $m$ deux entiers relatifs alors : $(a^n)^m=a^{n\times m}$
+\end{PpT}
+}{.38\linewidth}{
+\begin{Ex}
+\[A=(3^5)^{-2}=3^{5\times(-2)}=3^{-10}\]
+\end{Ex}
+}
+
+\section{Les savoir-faire du parcours}
+
+ \begin{CpsCol}
+  \textbf{Les savoir-faire du parcours}
+  \begin{itemize}
+  \item Savoir simplifier une écriture avec la notation puissance.
+  \item Savoir calculer la puissance d'un nombre avec un exposant positif.
+  \item Savoir calculer une puissance de 10 avec un exposant entier relatif.
+  \item Savoir donner l'écriture décimale d'un nombre écrit avec une puissance de 10.
+  \item Savoir utiliser les préfixes associés aux puissances de 10.
+  \item Savoir déterminer l'écriture scientifique d'un nombre.
+  \item Savoir utiliser l'écriture scientifique pour comparer des nombres.
+  \item Savoir calculer la puissance d'un nombre avec un exposant négatif.
+  \item Savoir simplifier une écriture avec des puisances d'exposant entier relatif.
+  \item Savoir utiliser les formules de calcul avec des puissances de 10.
+  \item Savoir utiliser les formules de calcul avec des puissances.
+  \item Savoir résoudre un problème avec des puissances.
+  \end{itemize}
+ \end{CpsCol}
+
+\end{document}
+
+%\end{pageCours}

@@ -1,0 +1,253 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+
+
+\section{Les tables de multiplication}
+
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c|c|c|c|c|c}
+\textbf{$\times$} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\\hline\hline
+\textbf{1} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\\hline
+\textbf{2} & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 \\\hline
+\textbf{3} & 3 & 6 & 9 & 12 & 15 & 18 & 21 & 24 & 27 & 30 \\\hline
+\textbf{4} & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 & 40 \\\hline
+\textbf{5} & 5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50 \\\hline
+\textbf{6} & 6 & 12 & 18 & 24 & 30 & 36 & 42 & 48 & 54 & 60 \\\hline
+\textbf{7} & 7 & 14 & 21 & 28 & 35 & 42 & 49 & 56 & 63 & 70 \\\hline
+\textbf{8} & 8 & 16 & 24 & 32 & 40 & 48 & 56 & 64 & 72 & 80 \\\hline
+\textbf{9} & 9 & 18 & 27 & 36 & 45 & 54 & 63 & 72 & 81 & 90 \\\hline
+\textbf{10} & 10 & 20 & 30 & 40 & 50 & 60 & 70 & 80 & 90 & 100 \\
+\end{tabular}
+\end{center}
+
+\section{La multiplication}
+
+\begin{Voc}
+Lorsqu'on multiplie deux nombres :
+\begin{itemize}
+\item On appelle les nombres que l’on multiplie les facteurs de la multiplication.
+\item On appelle le résultat d’une multiplication le produit des facteurs.
+\end{itemize}
+\end{Voc}
+
+\begin{Ex}
+Dans l'opération : $84\times35=2940$, les nombres $84$ et $35$ sont les \textcolor{red}{facteurs}, le nombre $2940$ est le \textcolor{red}{produit}.
+\end{Ex}
+
+\begin{Pp}
+Dans une multiplication on peut :
+\begin{itemize}
+    \item Changer les facteurs de place : $4\times3=3\times4=12$
+    \item Regrouper les facteurs : $4\times3\times25=4\times25\times3=100\times3=300$
+\end{itemize}
+On dit que la multiplication est une opération \textbf{commutative}.
+\end{Pp}
+
+\section{Multiplier des nombres entiers}
+
+\subsection{Multiplier un nombre par 10, 100 ou 1 000}
+
+\begin{Mt}
+Si on multiplie un nombre pas \textbf{10 ; 100 ou 1000}, le chiffre des \textbf{unités} de ce nombre prend une valeur \textbf{10 ; 100 ou 1000} fois plus grande et devient le chiffre des \textbf{dizaines ; centaines ou milliers}.
+\end{Mt}
+
+\begin{Ex}
+\[\textcolor{red}{2},34\times1000=\textcolor{red}{2}\,340\]
+Le chiffre des \textbf{unités} est \textcolor{red}{$2$}, multiplié par $1000$, il devient le chiffre des \textbf{milliers}.
+\end{Ex} 
+
+\subsection{Multiplier un nombre par 5, 50 ou 500}
+
+\begin{Mt}
+5 est la moitié de 10 ; 50 est la moitié de 100 et 500 est la moitié de 1000, donc pour multiplier un nombre décimal par 5 ; 50 ou 500, on le multiplie par 10 ; 100 ou 1000 puis on calcule la moitié du résultat.\\
+\end{Mt}
+
+\begin{Ex}
+ \[34,6\times50\rightarrow34,6\times100=3460
+ \rightarrow3460\div2=1730\]
+\end{Ex}
+
+\subsection{Poser la multiplication de deux nombres entiers}
+
+Lorsque le calcul mental ne permet pas de trouver facilement un produit, on peut poser la multiplication :
+
+\begin{Ex}
+\[\opmul[decimalsepsymbol={,},
+voperator=bottom,
+displayshiftintermediary=all]{8447}{368}\]
+
+Ainsi : \opmul[style=text]{8447}{368}
+\end{Ex}
+
+\section{Multiplier des nombres décimaux}
+
+\subsection{Multiplier un nombre par 0,1 , 0,01 ou 0,001}
+
+\begin{Mt}
+Si on multiplie un nombre pas \textbf{0,1 ; 0,01 ou 0,001}, le chiffre des \textbf{unités} de ce nombre prend une valeur \textbf{10 ; 100 ou 1000} fois plus petite et devient le chiffre des \textbf{dixièmes ; centièmes ou millièmes}.
+\end{Mt}
+
+\begin{Ex}
+\[7\textcolor{red}{3},22\times0,1=7,\textcolor{red}{3}22\]
+Le chiffre des \textbf{unités} est $\textcolor{red}{3}$, multiplié par $0,1$ il devient le chiffre des \textbf{dixièmes}.
+\end{Ex} 
+
+\subsection{Multiplier un nombre par 0,5}
+
+\begin{Mt}
+Multiplier un nombre décimal par \textbf{0,5} revient à calculer sa \textbf{moitié}.
+
+On peut soit diviser le nombre par 2 , Soit multiplier le nombre par 5 puis diviser le résultat par 10.
+\end{Mt}
+
+\begin{Ex}
+Calcule du produit : $A=307\times0,5$
+\begin{itemize}
+\item Multiplier un nombre par 0,5 revient à le diviser par 2 :
+\[307\times0,5=307\div 2=153,5\]
+\item Multiplier un nombre par 0,5 revient à le multiplier par 5 et diviser le résultat par 10 :
+\[307\times5=1535\hspace{.2cm}et\hspace{.2cm}1535\div10=153,5\]
+\end{itemize}
+\end{Ex}
+
+\subsection{Multiplier des nombres décimaux}
+
+\begin{Mt}
+\begin{itemize}
+\item Puisque l'on sait maintenant multiplier un nombre par 0,1 ; 0,01 ou 0,001 nous pouvons utiliser ça pour transformer un nombre décimal en produit d'un nombre entier et de 0,1 ; 0,01 ou 0,001.
+
+\begin{Ex}
+$84,41=8441$ centièmes donc :
+\[84,41=8441\times0,01\]
+\end{Ex}
+\item On peut alors calculer des produits simples de nombres décimaux en commençant par convertir en produits de nombre entiers et de 0,1 ; 0,01 ou 0,001.
+\begin{Ex}
+Calcule du produit : $A=0,6\times0,05$\\
+On sait que $0,6=6\times0,1$ et que $0,05=5\times0,01$, donc :
+\[0,6\times0,05=6\times0,1\times5\times0,01\]
+donc :
+\[0,6\times0,05=6\times5\times0,1\times0,01\]
+donc :
+\[0,6\times0,05=30\times0,001=0,03\]
+\end{Ex}
+\end{itemize}
+\end{Mt}
+
+\begin{Ex}
+Cette méthode est très pratique pour calculer des produits de nombres décimaux en utilisant le produit des nombres entiers.
+
+En effet, si on sait que  $416\times372=154752$ on peut déduire le résultat de $4,16\times3,72$ en faisant :
+\[4,16\times3,72=416\times
+0,01\times372\times0,01\]
+donc : \[4,16\times3,72=416\times372\times0,0001\]
+donc :
+\[4,16\times3,72=154752\times0,0001=15,4752\]
+\end{Ex}
+
+\subsection{Poser la multiplication de deux nombres décimaux}
+
+\begin{Mt}
+Lorsque le calcul mental ne permet pas de trouver facilement un produit, on peut poser la multiplication :
+
+Pour effectuer la multiplication de deux nombres décimaux : On effectue d'abord la multiplication sans tenir compte des virgules puis on place la virgule dans le produit en comptabilisant le nombre de chiffres à droite de la virgule de chacun des facteurs.
+\end{Mt}
+
+\begin{Ex}
+Multiplication posée de $35,66\times2,68$. On comptabilise 1 chiffre après la virgule pour le premier facteur et 2 chiffres après la virgule pour le second facteur. Le résultat aura alors 3 chiffres après la virgule.
+\[\opmul[decimalsepsymbol={,},
+voperator=bottom,
+displayshiftintermediary=all]{35,66}{2,68}\]
+\end{Ex} 
+
+\section{Ordre de grandeur d'un produit}
+
+\begin{Def}
+Un ordre de grandeur d'un nombre est une valeur approchée simple de ce nombre.
+\end{Def}
+
+\begin{Ex}
+On considère le nombre $a=2931,22$.
+
+Une valeur approchée de $a$ est $3000$, on dit que $3000$ est un ordre de grandeur de $a$ et on note $2931,22\approx3000$.
+\end{Ex}
+
+\begin{Rq}
+\begin{itemize}
+\item  Calculer un ordre de grandeur permet de vérifier la cohérence du résultat d'un calcul.
+\item Un ordre de grandeur n'est pas unique.
+\end{itemize}
+\end{Rq}
+
+\begin{Reg}
+Pour obtenir un \textbf{ordre de grandeur} d'un produit, on multiplie un ordre de grandeur de chacun des facteurs.
+\end{Reg} 
+
+\begin{Ex}
+Un ordre de grandeur de $1,95$ est $2$, un ordre de grandeur de $4,2$ est $4$ ; donc un ordre de grandeur de $1,95\times4,2$ est $2\times4=8$.
+\end{Ex} 
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\begin{itemize}
+\item Savoir utiliser les tables de multiplication.
+\item Savoir utiliser le vocabulaire de la multiplication.
+\item Savoir calculer mentalement certains produits.
+\item Savoir calculer astucieusement certains produits.
+\item Savoir poser la multiplication de deux nombres entiers.
+\item Savoir multiplier un nombre par 10 ; 100 ou 1 000.
+\item Savoir multiplier un nombre par 0,1 ; 0,01 ou 0,001.
+\item Savoir multiplier deux nombres décimaux.
+\item Savoir poser la multiplication de deux nombres décimaux.
+\item Savoir déterminer l'ordre de grandeur d'un résultat.
+\item Savoir résoudre un problème numérique.
+\end{itemize}
+\end{CpsCol}
+
+
+\end{document}

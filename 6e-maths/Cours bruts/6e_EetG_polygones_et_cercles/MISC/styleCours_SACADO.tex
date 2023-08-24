@@ -1,0 +1,510 @@
+%----------------------------------------------------------------------------------------
+%		Définition de couleur pour les boites
+%----------------------------------------------------------------------------------------
+\definecolor{bleu1}{rgb}{0.54,0.79,0.95} %% Bleu
+\definecolor{sapgreen}{rgb}{0.4, 0.49, 0}
+\definecolor{dvzfxr}{rgb}{0.7,0.4,0.}
+\definecolor{beamer}{rgb}{0.5176470588235295,0.49019607843137253,0.32941176470588235} % couleur beamer
+\definecolor{preuveRbeamer}{rgb}{0.8,0.4,0}
+\definecolor{sectioncolor}{rgb}{0.24,0.21,0.44}
+\definecolor{subsectioncolor}{rgb}{0.1,0.21,0.61}
+\definecolor{subsubsectioncolor}{rgb}{0.1,0.21,0.61}
+\definecolor{info}{rgb}{0.82,0.62,0}
+\definecolor{bleu2}{rgb}{0.38,0.56,0.68}
+\definecolor{bleu3}{rgb}{0.24,0.34,0.40}
+\definecolor{bleu4}{rgb}{0.12,0.20,0.25}
+\definecolor{vert}{rgb}{0.21,0.33,0}
+\definecolor{vertS}{rgb}{0.05,0.6,0.42}
+\definecolor{red}{rgb}{0.78,0,0}
+\definecolor{color5}{rgb}{0,0.4,0.58}
+\definecolor{eduscol4B}{rgb}{0.19,0.53,0.64}
+\definecolor{eduscol4P}{rgb}{0.62,0.12,0.39}
+
+%----------------------------------------------------------------------------------------
+%		Définition de couleur pour les boites SACADO
+%----------------------------------------------------------------------------------------
+\definecolor{sacado_blue}{RGB}{0,129,159} %% Bleu Sacado
+\definecolor{sacado_green}{RGB}{59, 157, 38} %% Vert Sacado
+\definecolor{sacado_yellow}{RGB}{255,180,0} %% Jaune Sacado
+\definecolor{sacado_purple}{RGB}{94,68,145} %% Violet foncé Sacado
+\definecolor{sacado_violet}{RGB}{153,117,224} %% Violet clair Sacado
+\definecolor{sacado_orange}{RGB}{249,168,100} %% Orange Sacado
+\definecolor{ill_frame}{HTML}{F0F0F0}
+\definecolor{ill_back}{HTML}{F7F7F7}
+\definecolor{ill_title}{HTML}{AAAAAA}
+
+
+ % Compteurs pour Théorème, Définition, Exemple, Remarque, .....
+\newcounter{cpttheo}
+\setcounter{cpttheo}{0}
+\newcounter{cptdef}
+\setcounter{cptdef}{0}
+\newcounter{cptmth}
+\setcounter{cptmth}{0}
+\newcounter{cpttitre}
+\setcounter{cpttitre}{0}
+ % Exercices
+\newcounter{cptapp}
+\setcounter{cptapp}{0}
+\newcounter{cptex}
+\setcounter{cptex}{0}
+\newcounter{cptsr}
+\setcounter{cptsr}{0}
+\newcounter{cpti}
+\setcounter{cpti}{0}
+\newcounter{cptcor}
+\setcounter{cptcor}{0}
+
+
+
+
+%%%%% Pour réinitialiser numéros des paragraphes après une nouvelle partie
+\makeatletter
+    \@addtoreset{paragraph}{part}
+\makeatother
+
+
+%%%% Titres et sections
+
+\newlength\chapnumb
+\setlength\chapnumb{3cm}
+
+
+% \titleformat{\part}[block] {
+ % \normalfont\sffamily\color{violet}}{}{0pt} {
+   % \parbox[t]{\chapnumb}{\fontsize{120}{110}\selectfont\ding{110}}
+   % \parbox[b]{\dimexpr\textwidth-\chapnumb\relax}{
+       % \raggedleft
+       % \hfill{{\color{bleu3}\fontsize{40}{30}\selectfont#1}}\\
+       % \rule{0.99\textwidth-\chapnumb\relax}{0.4pt}
+ % }
+% }
+
+% \titleformat{name=\part,numberless}[block]
+% {\normalfont\sffamily\color{bleu3}}{}{0pt}
+% {\parbox[b]{\chapnumb}{%
+  % \mbox{}}%
+ % \parbox[b]{\dimexpr\textwidth-\chapnumb\relax}{%
+   % \raggedleft%
+   % \hfill{{\color{bleu3}\fontsize{40}{30}\selectfont#1}}\\
+   % \rule{0.99\textwidth-\chapnumb\relax}{0.4pt}
+ % }
+% }
+
+
+
+% \titleformat{\chapter}[block] {
+ % \normalfont\sffamily\color{violet}}{}{0pt} {
+   % \parbox[t]{\chapnumb}{ 
+     % \fontsize{120}{110}\selectfont\thechapter}
+     % \parbox[b]{\textwidth-\chapnumb}{
+       % \raggedleft
+       % \hfill{{\color{bleu3}\huge#1}}\\  
+  % \ifthenelse{\thechapter<10}{\rule{0.99\textwidth-\chapnumb}{0.4pt}}{\rule{0.9\textwidth - \chapnumb}{0.4pt}}
+       % \setcounter{cpttitre}{0}
+	% \setcounter{cptapp}{0}
+	% \setcounter{cptex}{0}
+	% \setcounter{cptsr}{0}
+	% \setcounter{cpti}{0}
+	% \setcounter{cptcor}{0} 
+ % }
+% }
+
+% \titleformat{name=\chapter,numberless}[block]
+% {\normalfont\sffamily\color{bleu3}}{}{0pt}
+% {\parbox[b]{\chapnumb}{%
+  % \mbox{}}%
+ % \parbox[b]{\textwidth-\chapnumb}{%
+   % \raggedleft
+   % \hfill{{\color{bleu3}\huge#1}}\\
+   % \ifthenelse{\thechapter<10}{\rule{0.99\textwidth-\chapnumb}{0.4pt}}{ \rule{0.9\textwidth - \chapnumb}{0.4pt}}
+       % \setcounter{cpttitre}{0}
+	% \setcounter{cptapp}{0}
+	% \setcounter{cptex}{0}
+	% \setcounter{cptsr}{0}
+	% \setcounter{cpti}{0}
+	% \setcounter{cptcor}{0} 
+ % }
+% }
+%
+%       
+%
+%%%%% Personnalisation des numéros des sections
+\renewcommand\thesection{\Roman{section}. }
+\renewcommand\thesubsection{\hspace{1cm}\arabic{subsection}. }
+\renewcommand\thesubsubsection{\hspace{2cm}\alph{subsubsection}. }
+
+\titleformat{\section}[hang]{\color{sacado_purple}{}\normalfont\filright\huge}{}{0.4em}{\textbf{\thesection  #1}}   
+% \titlespacing*{\section}{0.2pt}{0ex plus 0ex minus 0ex}{0.3em}
+   
+\titleformat{\subsection}[hang]{\color{sacado_purple}{}\normalfont\filright\Large}{}{0.4em}{\thesubsection
+ #1}            
+\titleformat{\subsubsection}[hang]{\color{sacado_purple}{}\normalfont\filright\large}{}{0.4em}{\thesubsubsection
+ #1}
+\titleformat{\paragraph}[hang]{\color{black}{}\normalfont\filright\normalsize}{}{0.4em}{#1}
+
+
+
+%%%%%%%%%%%%%%%%%%%%% Cycle 4
+%\newcommand{\Titre}[2]{\section*{#1 
+%\ifthenelse{\equal{#2}{1}}   {\hfill{ \ding{182}  \ding{173} \ding{174} } \addcontentsline{toc}{section}{#1 \ding{182}} }%
+%{%
+%\ifthenelse{\equal{#2}{2}}{\hfill{ \ding{172}  \ding{183} \ding{174} } \addcontentsline{toc}{section}{#1 {\color{purple}\ding{183}}} }{%           
+%\hfill{ \ding{172}  \ding{173} \ding{184} } \addcontentsline{toc}{section}{#1 {\color{orange}\ding{184}}}% 
+%}%
+%}%
+%}
+%}
+
+
+%%%%%%%%%%%%%%%%%%%%% Cycle 4
+\newcommand{\Titre}[2]{\section*{#1 
+\ifthenelse{\equal{#2}{1}}   {\hfill{ \ding{182}  \ding{173} \ding{174} } \addcontentsline{toc}{section}{#1 \, \ding{182}} }%
+{% sinon
+\ifthenelse{\equal{#2}{1,5}}   {\hfill{ \ding{182}  \ding{183} \ding{174} } \addcontentsline{toc}{section}{#1 \, \ding{182} {\color{purple}\ding{183}}} }%
+{% sinon
+\ifthenelse{\equal{#2}{2}}   {\hfill{ \ding{172}  \ding{183} \ding{174} } \addcontentsline{toc}{section}{#1 \, {\color{purple}\ding{183}}} }
+{% sinon
+\ifthenelse{\equal{#2}{2,5}}   {\hfill{ \ding{172}  \ding{183} \ding{184} } \addcontentsline{toc}{section}{#1 \, {\color{purple}\ding{183}}  {\color{orange}\ding{184}}} }%
+{% sinon
+\hfill{ \ding{172}  \ding{173} \ding{184} } \addcontentsline{toc}{section}{#1 \,{\color{orange}\ding{184}}}% 
+}%
+}%
+}%
+}%
+}%
+}
+
+%%%%%%%%%%%%% Titre
+\newenvironment{titre}[2][]{%
+\vspace{0.5cm}
+\begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{black!60!white}, attach boxed title to top left={xshift=110mm, yshift*=-3mm}, coltitle=violet, colback=bleu3!25!white, boxed title style={colback=white!100}, colframe=bleu3,title=\stepcounter{cpttitre} \textbf{Fiche \thecpttitre}. #1 #2 ]}
+{%
+\end{tcolorbox}
+\par}
+
+
+
+%%%%%%%%%%%%% Définitions
+\newenvironment{Def}[1][]{%
+\medskip \begin{tcolorbox}[widget,colback=sacado_violet!0,colframe=sacado_violet!75,
+adjusted title= \stepcounter{cptdef} Définition \thecptdef . {#1} ]}
+{%
+\end{tcolorbox}\par}
+
+
+\newenvironment{DefT}[2][]{%
+\medskip \begin{tcolorbox}[widget,colback=sacado_violet!0,colframe=sacado_violet!75,
+adjusted title= \stepcounter{cptdef} Définition \thecptdef . {#1} \textit{#2}]}
+{%
+\end{tcolorbox}\par}
+
+%%%%%%%%%%%%% Proposition
+\newenvironment{Prop}[1][]{%
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!0,colframe=sacado_blue!75!black,
+adjusted title= \stepcounter{cpttheo} Proposition \thecpttheo . {#1} ]}
+{%
+\end{tcolorbox}\par}
+
+%%%%%%%%%%%%% Propriétés
+\newenvironment{Pp}[1][]{%
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!0,colframe=sacado_blue!75!black,
+adjusted title= \stepcounter{cpttheo} Propriété \thecpttheo . {#1}]}
+{%
+\end{tcolorbox}\par}
+
+\newenvironment{PpT}[2][]{%
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!0,colframe=sacado_blue!75!black,
+adjusted title= \stepcounter{cpttheo} Propriété \thecpttheo . {#1} #2]}
+{%
+\end{tcolorbox}\par}
+
+\newenvironment{Pps}[1][]{%
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!0,colframe=sacado_blue!75!black,
+adjusted title= \stepcounter{cpttheo} Propriétés \thecpttheo . {#1}]}
+{%
+\end{tcolorbox}\par}
+
+%%%%%%%%%%%%% Théorèmes
+\newenvironment{ThT}[2][]{% théorème avec titre
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!0,colframe=sacado_blue!75!black,
+adjusted title= \stepcounter{cpttheo} Théorème \thecpttheo . {#1} #2]}
+{%
+\end{tcolorbox}\par}
+
+\newenvironment{Th}[1][]{%
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!0,colframe=sacado_blue!75!black,
+adjusted title= \stepcounter{cpttheo} Théorème \thecpttheo . {#1}]}
+{%
+\end{tcolorbox}\par}
+
+%%%%%%%%%%%%% Règles
+\newenvironment{Reg}[1][]{%
+\medskip \begin{tcolorbox}[widget,colback=sacado_blue!0,colframe=sacado_blue!75!black,
+adjusted title= \stepcounter{cpttheo} Règle \thecpttheo . {#1}]}
+{%
+\end{tcolorbox}\par}
+
+%%%%%%%%%%%%% REMARQUES
+\newenvironment{Rq}[1][]{%
+\begin{bclogo}[couleur=sacado_orange!0, arrondi =0.15, noborder=true, couleurBarre=sacado_orange, logo = \bcinfo ]{ 
+{\color{info}\normalsize{Remarque#1}}}}
+{%
+\end{bclogo}
+\par}
+
+
+\newenvironment{Rqs}[1][]{%
+\begin{bclogo}[couleur=sacado_orange!0, arrondi =0.15, noborder=true, couleurBarre=sacado_orange, logo = \bcinfo ]{ 
+{\color{info}\normalsize{Remarques#1}}}}
+{%
+\end{bclogo}
+\par}
+
+%%%%%%%%%%%%% EXEMPLES
+\newenvironment{Ex}[1][]{%
+\begin{bclogo}[couleur=sacado_yellow!15, arrondi =0.15, noborder=true, couleurBarre=sacado_yellow, logo = \bclampe ]{ 
+\normalsize{Exemple#1}}}
+{%
+\end{bclogo}
+\par}
+
+
+
+
+%%%%%%%%%%%%% Preuve
+\newenvironment{Pv}[1][]{%
+\begin{tcolorbox}[breakable, enhanced,widget, colback=sacado_blue!10!white,boxrule=0pt,frame hidden,
+borderline west={1mm}{0mm}{sacado_blue!75}]
+\textbf{Preuve#1 : }}
+{%
+\end{tcolorbox}
+\par}
+
+
+%%%%%%%%%%%%% PreuveROC
+\newenvironment{PvR}[1][]{%
+\begin{tcolorbox}[breakable, enhanced,widget, colback=sacado_blue!10!white,boxrule=0pt,frame hidden,
+borderline west={1mm}{0mm}{sacado_blue!75}]
+\textbf{Preuve (ROC)#1 : }}
+{%
+\end{tcolorbox}
+\par}
+
+
+%%%%%%%%%%%%% Compétences
+\newenvironment{Cps}[1][]{%
+\vspace{0.4cm}
+\begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{black!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=sacado_green!100}, colframe=sacado_green!75!black,title=\textbf{Compétences associées#1}]}
+{%
+\end{tcolorbox}
+\par}
+
+%%%%%%%%%%%%% Compétences Collège
+\newenvironment{CpsCol}[1][]{%
+\vspace{0.4cm}
+\begin{tcolorbox}[breakable, enhanced,widget, colback=white ,boxrule=0pt,frame hidden,
+borderline west={2mm}{0mm}{bleu3}]
+\textbf{#1}}
+{%
+\end{tcolorbox}
+\par}
+
+
+
+
+%%%%%%%%%%%%% Attendus
+\newenvironment{Ats}[1][]{%
+\vspace{0.4cm}
+\begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{black!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=sacado_green!100}, colframe=sacado_green!75!black,title=\textbf{Attendus du chapitre#1}]}
+{%
+\end{tcolorbox}
+\par}
+
+%%%%%%%%%%%%% Méthode
+\newenvironment{Mt}[1][]{%
+\vspace{0.4cm}
+\begin{bclogo}[couleur=sacado_blue!0, arrondi =0.15, noborder=true, couleurBarre=bleu3, logo = \bccrayon ]{ 
+\normalsize{{\color{bleu3}Méthode #1}}}}
+{%
+\end{bclogo}
+\par}
+
+
+%%%%%%%%%%%%% Méthode en vidéo
+\newcommand{\MtV}[2]{\vspace{0.4cm} \colorbox{sacado_blue!0}{\hspace{0.2 cm}\tikz\node[rounded corners=1pt,draw] {\color{red}$\blacktriangleright$}; \quad  \href{https://youtu.be/#1?rel=0}{\raisebox{0.8mm}{{\color{red}\textbf{Méthode en vidéo : #2}}}}}}
+
+
+%%%%%%%%%%%%% A voir (AV) : Lien externe + vidéo non Youtube
+\newcommand{\AV}[2]{\vspace{0.4cm} \colorbox{bleu1!0}{\hspace{0.2 cm}\tikz\node[rounded corners=1pt,draw] {\color{red}$\blacktriangleright$}; \quad  \href{#1}{\raisebox{0.8mm}{{\color{red}\textbf{#2}}}}}}
+
+
+%%%%%%%%%%%%% Etymologie
+\newenvironment{Ety}[1][]{%
+\begin{bclogo}[couleur=sacado_green!0, arrondi =0.15, noborder=true, couleurBarre=sacado_green, logo = \bcplume ]{ 
+\normalsize{{\color{sacado_green}Étymologie#1}}}}
+{%
+\end{bclogo}
+\par}
+
+
+%%%%%%%%%%%%% Notation
+\newenvironment{Nt}[1][]{%
+\begin{bclogo}[couleur=sacado_violet!0, arrondi =0.15, noborder=true, couleurBarre=sacado_violet!75, logo = \bccrayon ]{ 
+\normalsize{{\color{violet!75}Notation#1}}}}
+{%
+\end{bclogo}
+\par}
+%%%%%%%%%%%%% Histoire
+%\newenvironment{His}[1][]{%
+%\begin{bclogo}[couleur=brown!30, arrondi =0.15, noborder=true, couleurBarre=brown, logo = \bcvaletcoeur ]{ 
+%\normalsize{{\color{brown}Histoire des mathématiques#1}}}}
+%{%
+%\end{bclogo}
+%\par}
+
+\newenvironment{His}[1][]{%
+\vspace{0.4cm}
+\begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{brown!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=brown!100}, colframe=brown!75!black,title=\textbf{Histoire des mathématiques#1}]}
+{%
+\end{tcolorbox}
+\par}
+
+%%%%%%%%%%%%% Attention
+\newenvironment{Att}[1][]{%
+\begin{bclogo}[couleur=red!0, arrondi =0.15, noborder=true, couleurBarre=red, logo = \bcattention ]{ 
+\normalsize{{\color{red}Attention. #1}}}}
+{%
+\end{bclogo}
+\par}
+
+
+%%%%%%%%%%%%% Conséquence
+\newenvironment{Cq}[1][]{%
+\textbf{Conséquence #1}}
+{%
+\par}
+
+%%%%%%%%%%%%% Vocabulaire
+\newenvironment{Voc}[1][]{%
+\setlength{\logowidth}{10pt}
+%\begin{footnotesize}
+\begin{bclogo}[ noborder , couleur=white, logo =\bcbook]{#1}}
+{%
+\end{bclogo}
+%\end{footnotesize}
+\par}
+
+
+%%%%%%%%%%%%% Video
+\newenvironment{Vid}[1][]{%
+\setlength{\logowidth}{12pt}
+\begin{bclogo}[ noborder , couleur=white,barre=none, logo =\bcoeil]{#1}}
+{%
+\end{bclogo}
+\par}
+
+
+%%%%%%%%%%%%% Syntaxe
+\newenvironment{Syn}[1][]{%
+\begin{bclogo}[couleur=violet!0, arrondi =0.15, noborder=true, couleurBarre=violet!75, logo = \bcicosaedre ]{ 
+\normalsize{{\color{violet!75}Syntaxe#1}}}}
+{%
+\end{bclogo}
+\par}
+
+%%%%%%%%%%%%% Auto évaluation
+\newenvironment{autoeval}[1][]{%
+\vspace{0.4cm}
+\begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{black!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=sacado_green!100}, colframe=sacado_green!75!black,title=\textbf{J'évalue mes compétences#1}]}
+{%
+\end{tcolorbox}
+\par}
+
+
+\newenvironment{autotest}[1][]{%
+\vspace{0.4cm}
+\begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{red!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=red!100}, colframe=red!75!black,title=\textbf{Pour faire le point #1}]}
+{%
+\end{tcolorbox}
+\par}
+
+\newenvironment{ExOApp}[1][]{% Exercice d'application direct
+\vspace{0.4cm}
+\begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{red!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=sacado_green!100}, colframe=sacado_green!75!black,title=\textbf{Application #1}]}
+{%
+\end{tcolorbox}
+\par}
+
+\newenvironment{ExOInt}[1][]{% Exercice d'application direct
+\vspace{0.4cm}
+\begin{tcolorbox}[enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
+{red!60!white}, attach boxed title to top left={xshift=5mm, yshift*=-3mm}, coltitle=white, colback=white, boxed title style={colback=sacado_green!50}, colframe=sacado_green!75!black,title=\textbf{Exercice #1}]}
+{%
+\end{tcolorbox}
+\par}
+
+%Illustrations
+\newtcolorbox{Illqr}[1]{
+  enhanced,
+  colback=white,
+  colframe=ill_frame,
+  colbacktitle=ill_back,
+  coltitle=ill_title,
+  title=\textbf{Illustration},
+  boxrule=1pt, % épaisseur du trait à 1pt
+  center,
+  overlay={
+    \node[anchor=south east, inner sep=0pt,xshift=-1pt,yshift=2pt,fill=white] at (frame.south east) {\fancyqr[height=1cm]{#1}};
+  },
+  after=\par,
+  before=\vspace{0.4cm},
+}
+
+\newtcolorbox{Ill}{
+  enhanced,
+  colback=white,
+  colframe=ill_frame,
+  colbacktitle=ill_back,
+  coltitle=ill_title,
+  title=\textbf{Illustration},
+  boxrule=1pt, % épaisseur du trait à 1pt
+  center,
+  after=\par,
+  before=\vspace{0.4cm},
+}
+
+%%%%%%%%%%%%%% Propriétés
+%\newenvironment{Pp}[1][]{%
+%\medskip \begin{tcolorbox}[widget,colback=sacado_blue!0,colframe=sacado_blue!75!black,
+%adjusted title= \stepcounter{cpttheo} Propriété \thecpttheo . {#1}]}
+%{%
+%\end{tcolorbox}\par}
+
+%%%%% Pour réinitialiser numéros des chapitres après une nouvelle partie
+% \makeatletter
+    % \@addtoreset{section}{part}
+% \makeatother
+
+% \newcommand{\EPC}[3]{ % Exercice par compétence de niveau 1
+% \ifthenelse{\equal{#1}{1}}
+% {%condition2 vraie
+% \vspace{0.4cm}
+% \stepcounter{cptex}
+% \tikz\node[rounded corners=0pt,draw,fill=bleu2]{\color{white}\textbf{ \thecptex}}; \quad  {\color{bleu2}\textbf{#3}}
+% \input{#2}
+% }% fin condition2 vraie
+% {%condition2 fausse
+% \vspace{0.4cm}
+% \stepcounter{cptex}
+% \tikz\node[rounded corners=2pt,draw,fill=eduscol4P]{\color{white}\textbf{ \thecptex}}; \quad  {\color{eduscol4P} \textbf{En temps libre.} \textbf{ #3}} 
+% \input{#2}
+% }% fin condition2 fausse
+% } % fin de la procédure

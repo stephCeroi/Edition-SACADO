@@ -1,0 +1,403 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+%\chapter{Droites parallèles et perpendiculaires}
+%{https://sacado.xyz/qcm/parcours_show_course/0/117127}
+%
+
+%\begin{His}
+%La géométrie étudiée au collège est la \textit{géométrie euclidienne} du savant grec \textbf{Euclide} vivant à Alexandrie au IIIe siècle avant J.C. Il a écrit 13 livres appelés 'Les éléments' dans lesquels il va démontrer la plupart des propositions géométriques à partir d'une petite série de postulats ou axiomes (points de départs).\\
+%
+%\begin{Def}
+%Un postulat est une proposition qu'on demande d'admettre au commencement d'une discussion.
+%\end{Def}
+%
+%Les cinq postulats de la géométrie euclidienne sont les suivants :
+%\begin{itemize}
+%\item \textbf{Postulat 1} : Par deux points distincts, il passe une droite et une seule.
+%\item \textbf{Postulat 2} : Tout segment est prolongeable en une droite.
+%\item \textbf{Postulat 3} : Deux points distincts étant donnés, il passe un cercle et un seul de centre le premier point et passant par le second.
+%\item \textbf{Postulat 4} : Tous les angles droits sont égaux entre eux.
+%\item \textbf{Postulat 5} : Il n'existe qu'une seule parallèle à une droite donnée passant par un point extérieur à cette droite.
+%\end{itemize}
+%C'est à partir de ces cinq postulats qu'on peut construire toute la géométrie.
+%\end{His}
+
+%\begin{pageCours}
+
+\section{Droites sécantes}
+
+\mini{.58\linewidth}
+{
+\begin{Def}
+Lorsque deux droites \textcolor{orange}{$(d_1)$} et \textcolor{qqqqff}{$(d_2)$} se coupent en un point $A$ on dit qu'elles sont sécantes en $A$.
+On dit que $A$ est le point d'intersection des droites \textcolor{orange}{$(d_1)$} et \textcolor{qqqqff}{$(d_2)$}.
+\end{Def}
+}
+{.38\linewidth}
+{
+\begin{Ill}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(3,-3) rectangle (14,3.52);
+\draw [line width=2.pt,color=qqqqff,domain=2.24:15.28] plot(\x,{(--25.75-3.3*\x)/8.9});
+\draw [line width=2.pt,color=orange,domain=2.24:15.28] plot(\x,{(-57.3296--6.36*\x)/11.92});
+\draw [color=orange](4.7,-.6) node[anchor=north west] {$(d_1)$};
+\draw [color=qqqqff](5.18,1.9) node[anchor=north west] {$(d_2)$};
+\draw (8.28,0.7) node[anchor=north west] {$A$};
+\end{tikzpicture}
+\end{center}
+\end{Ill}
+}
+
+\mini{.48\linewidth}{\qr{}{Determiner deux droites sécantes en un point donné}}{.48\linewidth}{\qr{}{Déterminer le point d'intersection de deux droites}}
+
+\section{Droites perpendiculaires}
+
+\mini{.58\linewidth}{
+\begin{Def}
+Deux droites sont \textbf{perpendiculaires} lorsqu'elles se coupent en formant un \textbf{angle droit}.
+\end{Def}
+\begin{Nt}
+Lorsque deux droites $(d_1)$ et $(d_2)$ sont perpendiculaires,  on note $(d_1)\perp(d_2)$.
+\end{Nt}
+}
+{.38\linewidth}{
+\begin{Ill}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+%\clip(1.98,-3.92) rectangle (13.46,4.02);
+\clip(2.24,-4.04) rectangle (15.28,3.52);
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (7.567363216384809,-0.29103294643190725) -- (7.193047343953587,-0.49075181796400164) -- (7.392766215485682,-0.8650676903952232) -- (7.767082087916903,-0.6653488188631289) -- cycle; 
+\draw [line width=2.pt,color=orange,domain=1.98:13.46] plot(\x,{(-57.3296--6.36*\x)/11.92});
+\draw [color=orange](4.52,-1.06) node[anchor=north west] {$(d_1)$};
+\draw [color=qqqqff](4.64,2.1) node[anchor=north west] {$(d_2)$};
+\draw (8.,0.70) node[anchor=north west] {$A$};
+\draw [line width=2.pt,color=qqqqff,domain=1.98:13.46] plot(\x,{(-88.352--11.92*\x)/-6.36});
+\end{tikzpicture}
+\end{center}
+\end{Ill}}
+
+\mini{.68\linewidth}{
+\begin{Rqs}
+\begin{itemize}
+\item Deux droites perpendiculaires sont sécantes.
+\item Deux droites sécantes ne sont pas forcément perpendiculaires.
+\end{itemize}
+\end{Rqs}}{.28\linewidth}{\qr{•}{Reconnaître des droites perpendiculaires}}
+
+\mini{.68\linewidth}
+{\begin{Pp}
+Soit $(d)$ une droite et $A$ un point.
+Il existe une \textbf{unique droite} passant par $A$
+et perpendiculaire à $(d)$.
+\end{Pp}}
+{.28\linewidth}{\begin{Mt}
+\qr{}{Construire la droite perpendiculaire à une droite passant par un point donné.}
+\end{Mt}}
+
+\section{Droites parallèles}
+
+
+\mini{.58\linewidth}{
+\begin{Def}
+Deux droites sont \textbf{parallèles} lorsqu'elles \textbf{ne se coupent pas}.
+\end{Def}
+\begin{Nt}
+Lorsque deux droites $(d_1)$ et $(d_2)$ sont parallèles,  on note $(d_1)//(d_2)$.
+\end{Nt}
+}
+{.38\linewidth}{
+\begin{Ill}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+%\clip(1.,-3.5) rectangle (12.46,3.32);
+\clip(2.24,-4.04) rectangle (15.28,3.52);
+\draw [line width=2.pt,color=orange,domain=1.:12.46] plot(\x,{(-57.3296--6.36*\x)/11.92});
+\draw [color=orange](4.52,-.8) node[anchor=north west] {$(d_1)$};
+\draw [color=qqqqff](4.64,2.1) node[anchor=north west] {$(d_2)$};
+\draw [line width=2.pt,color=qqqqff,domain=1.:12.46] plot(\x,{(-22.8992--6.36*\x)/11.92});
+\end{tikzpicture}
+\end{center}
+\end{Ill}}
+
+\mini{.68\linewidth}{
+\begin{Rq}
+Deux droites sont soit \textbf{parallèles} soit \textbf{sécantes}.
+\end{Rq}}{.28\linewidth}{\qr{•}{Reconnaître des droites parallèles ou sécantes}}
+
+\mini{.68\linewidth}
+{\begin{Pp}
+Soit $(d)$ une droite et $A$ un point.
+Il existe une \textbf{unique droite} passant par $A$
+et parallèle à $(d)$.
+\end{Pp}}
+{.28\linewidth}{\begin{Mt}
+\qr{}{Construire la parallèle à une droite passant par un point donné.}
+\end{Mt}}
+
+\section{Propriétés}
+
+\mini{.58\linewidth}{
+\begin{Pp}
+\textbf{Si} deux droites sont parallèles à une même droite, \textbf{alors} elles sont parallèles entre elles.
+\end{Pp}
+\begin{Nt}
+Si  $(d_1)//(d_2)$ et  $(d_1)//(d_3)$ alors on peut affirmer que : $(d_2)//(d_3)$.
+\end{Nt}
+}
+{.38\linewidth}{
+\begin{Ill}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+%\clip(0.78,-3.94) rectangle (12.6,2.88);
+\clip(2.24,-4.04) rectangle (15.28,3.52);
+\draw [line width=2.pt,color=orange,domain=0.78:12.6] plot(\x,{(-57.3296--6.36*\x)/11.92});
+\draw [color=orange](4.52,-1.06) node[anchor=north west] {$(d_1)$};
+\draw [color=qqqqff](4.64,1.92) node[anchor=north west] {$(d_2)$};
+\draw [line width=2.pt,color=qqqqff,domain=0.78:12.6] plot(\x,{(-22.8992--6.36*\x)/11.92});
+\draw [line width=2.pt,domain=0.78:12.6] plot(\x,{(-69.9816--6.36*\x)/11.92});
+\draw (8.64,-1.62) node[anchor=north west] {$(d_3)$};
+\end{tikzpicture}
+\end{center}
+\end{Ill}}
+
+\mini{.58\linewidth}{
+\begin{Pp}
+\textbf{Si} deux droites sont perpendiculaires à une même droite, \textbf{alors} elles sont parallèles entre elles.
+\end{Pp}
+\begin{Nt}
+Si $(d_2)\perp(d_1)$ et $(d_3)\perp(d_1)$ alors on peut affirmer que : $(d_2)//(d_3)$.
+\end{Nt}
+}
+{.38\linewidth}{
+\begin{Ill}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(0.64,-4.06) rectangle (11.66,2.7);
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (4.670102723253892,1.1145231636719009) -- (4.295234489709246,0.9158429998932381) -- (4.493914653487909,0.5409747663485918) -- (4.868782887032555,0.7396549301272544) -- cycle; 
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (5.897183681954806,-1.2007239282166144) -- (5.5223154484101595,-1.399404091995277) -- (5.720995612188823,-1.7742723255399235) -- (6.095863845733469,-1.575592161761261) -- cycle; 
+\draw [line width=2.pt,color=orange,domain=0.64:11.66] plot(\x,{(-9.6128--1.06*\x)/2.});
+\draw [color=orange](4,-1.06) node[anchor=north west] {$(d_1)$};
+\draw [color=qqqqff](4.64,2.2) node[anchor=north west] {$(d_2)$};
+\draw [line width=2.pt,color=qqqqff,domain=0.64:11.66] plot(\x,{(-3.6816--1.06*\x)/2.});
+\draw (6.92,-2.26) node[anchor=north west] {$(d_3)$};
+\draw [line width=2.pt,domain=0.64:11.66] plot(\x,{(-10.5216--2.*\x)/-1.06});
+\end{tikzpicture}
+\end{center}
+\end{Ill}}
+
+\mini{.58\linewidth}{
+\begin{Pp}
+\textbf{Si} deux droites sont parallèles, toute perpendiculaire à l'une est \textbf{alors} perpendiculaire à l'autre.
+\end{Pp}
+\begin{Nt}
+Si $(d_1)//(d_2)$  et  $(d_1)\perp(d_3)$ alors on peut affirmer que : $(d_2)\perp(d_3)$.
+\end{Nt}
+}
+{.38\linewidth}{
+\begin{Ill}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(0.64,-4.06) rectangle (11.66,2.7);
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (4.670102723253892,1.1145231636719009) -- (4.295234489709246,0.9158429998932381) -- (4.493914653487909,0.5409747663485918) -- (4.868782887032555,0.7396549301272544) -- cycle; 
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (5.897183681954806,-1.2007239282166144) -- (5.5223154484101595,-1.399404091995277) -- (5.720995612188823,-1.7742723255399235) -- (6.095863845733469,-1.575592161761261) -- cycle; 
+\draw [line width=2.pt,color=orange,domain=0.64:11.66] plot(\x,{(-9.6128--1.06*\x)/2.});
+\draw [color=orange](4,-1.06) node[anchor=north west] {$(d_1)$};
+\draw [color=qqqqff](4.64,2.2) node[anchor=north west] {$(d_2)$};
+\draw [line width=2.pt,color=qqqqff,domain=0.64:11.66] plot(\x,{(-3.6816--1.06*\x)/2.});
+\draw (6.92,-2.26) node[anchor=north west] {$(d_3)$};
+\draw [line width=2.pt,domain=0.64:11.66] plot(\x,{(-10.5216--2.*\x)/-1.06});
+\end{tikzpicture}
+\end{center}
+\end{Ill}}
+
+\section{La médiatrice d'un segment}
+
+\mini{.58\linewidth}{
+\begin{Def}
+La \textbf{médiatrice} d'une segment est la droite passant par le \textbf{milieu} de ce segment \textbf{perpendiculairement}.
+\end{Def}
+\begin{Nt}
+$(d)$ est la médiatrice de $[AB]$ signifie :
+\begin{itemize}
+\item $(d)$ passe par le milieu de $[AB]$.
+\item $(d)$ et $(AB)$ sont perpendiculaires.
+\end{itemize}
+\end{Nt}
+}
+{.38\linewidth}{
+\begin{Ill}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(-1.86,-3.04) rectangle (9.78,5.28);
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (3.282146544641254,1.1068490608270765) -- (2.965297483814177,1.3889956054683306) -- (2.683150939172923,1.072146544641254) -- (3.,0.79) -- cycle; 
+\draw [line width=2.pt,color=qqqqff,domain=-1.86:9.78] plot(\x,{(-9.6454--4.2*\x)/3.74});
+\draw [line width=2.pt,color=orange] (0.9,2.66)-- (3.,0.79);
+\draw [line width=1.pt,color=orange] (2.109606188003346,1.9042368956187326) -- (1.790393811996652,1.5457631043812687);
+\draw [line width=2.pt,color=orange] (3.,0.79)-- (5.1,-1.08);
+\draw [line width=1.pt,color=orange] (4.209606188003345,0.034236895618731764) -- (3.890393811996651,-0.32423689561873187);
+\draw [color=qqqqff](4,4) node[anchor=north west] {$(d)$};
+\draw [line width=2.pt,color=orange] (0.9,2.66)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt);% ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=orange] (1.3,3.3) node {$A$};
+\draw [line width=2.pt,color=orange] (5.1,-1.08)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt);% ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=orange] (5.24,-0.2) node {$B$};
+\end{tikzpicture}
+\end{center}
+\end{Ill}}
+
+\begin{Mt}
+\qr{}{Construire la médiatrice d'un segment avec une équerre.}
+\end{Mt}
+
+\mini{.58\linewidth}{
+\begin{Pp}
+Tous les \textbf{points de la médiatrice} d'un segment sont à \textbf{égale distance} des \textbf{extrémités} de ce segment.
+\end{Pp}
+\begin{Nt}
+Si $(d)$ est la médiatrice de $[AB]$ alors :
+\begin{itemize}
+\item Si $M\in(d)$ alors $MA=MB$.
+\item Si $MA=MB$ alors $M\in(d)$. 
+\end{itemize}
+\end{Nt}
+}
+{.38\linewidth}{
+\begin{Illqr}{Manipuler le point M}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(-1.86,-3.04) rectangle (9.78,5.28);
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (3.282146544641254,1.1068490608270765) -- (2.965297483814177,1.3889956054683306) -- (2.683150939172923,1.072146544641254) -- (3.,0.79) -- cycle; 
+\draw [line width=2.pt,color=qqqqff,domain=-1.86:9.78] plot(\x,{(-9.6454--4.2*\x)/3.74});
+\draw [line width=2.pt,color=orange] (0.9,2.66)-- (3.,0.79);
+\draw [line width=1.pt,color=orange] (2.109606188003346,1.9042368956187326) -- (1.790393811996652,1.5457631043812687);
+\draw [line width=2.pt,color=orange] (3.,0.79)-- (5.1,-1.08);
+\draw [line width=1.pt,color=orange] (4.209606188003345,0.034236895618731764) -- (3.890393811996651,-0.32423689561873187);
+\draw [color=qqqqff](4,4) node[anchor=north west] {$(d)$};
+\draw [line width=2.pt] (1.1139414941380312,-1.328033616208628)-- (0.9,2.66);
+\draw [line width=1.pt] (0.8898214896297482,0.6096267239312342) -- (1.1294768878442067,0.6224832439374486);
+\draw [line width=1.pt] (0.8844646062938268,0.709483139853925) -- (1.1241200045082855,0.7223396598601394);
+\draw [line width=2.pt] (1.1139414941380312,-1.328033616208628)-- (5.1,-1.08);
+\draw [line width=1.pt] (3.0496146469026013,-1.0873537129383606) -- (3.064519886121612,-1.326890419611522);
+\draw [line width=1.pt] (3.1494216080164192,-1.0811431965971057) -- (3.1643268472354302,-1.3206799032702672);
+\draw [line width=2.pt,color=orange] (0.9,2.66)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt);% ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=orange] (1.3,3.3) node {$A$};
+\draw [line width=2.pt,color=orange] (5.1,-1.08)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt);% ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=orange] (5.24,-0.2) node {$B$};
+%\draw [color=black] (1.1139414941380312,-1.328033616208628)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=black] (0.42,-1.01) node {$M$};
+\end{tikzpicture}
+\end{center}
+\end{Illqr}}
+
+\begin{Mt}
+\qr{}{Construire la médiatrice d'un segment avec un compas.}
+\end{Mt}
+
+\begin{Rq}
+Tu peux construire un angle droit sans équerre (avec un compas et une règle) !!!!
+\end{Rq}
+
+\section{Distance d'un point à une droite}
+
+\begin{Def}
+La \textbf{distance} d'un \textbf{point} à une \textbf{droite} est la longueur du \textbf{plus petit} segment reliant ce point à l'un des points de la droite.
+\end{Def}
+
+
+\mini{.58\linewidth}{
+\begin{Def}
+La distance d’un point $A$ à une droite $(d)$ est la longueur du segment reliant le point $A$ au pied de la perpendiculaire à $(d)$ passant par ce même point $A$.
+\end{Def}}
+{.38\linewidth}{
+\begin{Illqr}{Déterminer la distance entre un point et une droite}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(-5.72,-0.86) rectangle (5.86,6.92);
+\draw[line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (-0.020116391374110087,2.7030211271476134) -- (-0.32777806381733166,2.4108836675340957) -- (-0.035640604203813986,2.103221995090874) -- (0.2720210682394075,2.395359454704392) -- cycle; 
+\draw [line width=2.pt,color=qqqqff,domain=-5.72:5.86] plot(\x,{(--9.3176--4.14*\x)/4.36});
+\draw [color=qqqqff](2.26,3.88) node[anchor=north west] {$(d)$};
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt,color=black!40] (-2.6,5.42)-- (-1.9175072200767929,0.3163119515784584);
+\draw [line width=1.pt,dash pattern=on 1pt off 3pt,color=black!40] (-2.6,5.42)-- (0.2720210682394075,2.395359454704392);
+\draw [color=black] (-2.6,5.42)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+\draw[color=black] (-2.46,5.79) node {$A$};
+\draw[color=black!40] (-4,2.59) node {$5,15\,cm$};
+\draw[color=black!40] (0.5,4.35) node {$4,17\,cm$};
+\end{tikzpicture}
+\end{center}
+\end{Illqr}}
+
+
+
+
+\section{Exercice bilan}
+
+\qr{•}{Exercice de construction bilan}
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\begin{itemize}
+\item Savoir déterminer le point d'intersection de deux droites
+\item Savoir déterminer deux droites ayant un point d'intersection donné
+\item Savoir reconnaitre des droites sécantes.
+\item Savoir construire un angle droit
+\item Savoir construire deux droites perpendiculaires.
+\item Savoir reconnaitre des droites perpendiculaires.
+\item Savoir construire la perpendiculaire à une droite passant par un point.
+\item Savoir construire deux droites parallèles.
+\item Savoir reconnaitre des droites parallèles.
+\item Savoir construire la parallèle à une droite passant par un point.
+\item Savoir reconnaître la médiatrice d'un segment. 
+\item Savoir construire la médiatrice d'un segment. 
+\item Savoir déterminer la distance d'un point à une droite.
+\end{itemize}
+\end{CpsCol}
+
+\end{document}
+
+%\end{pageCours}

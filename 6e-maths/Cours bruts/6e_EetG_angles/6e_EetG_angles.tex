@@ -1,0 +1,225 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+%\chapter{Angles}
+%{https://sacado.xyz/qcm/parcours_show_course/0/117130}
+%
+%\begin{pageCours}
+
+\section{Définition et notation d'un angle}
+
+\mini{.58\linewidth}{\begin{Def}
+\begin{itemize}
+\item Un angle est une ouverture limitée par deux demi-droites de même origine.
+\item Le point d'intersection des deux demi-droites est appelé le sommet de l'angle.
+\item Les deux demi-droites sont appelées les côtés de l'angle.
+\end{itemize}
+\end{Def}
+\begin{Nt}
+L'angle représenté se note $\widehat{BAC}$ ou $\widehat{CAB}$.
+\end{Nt}}
+{.38\linewidth}{
+\begin{Illqr}{Nommer les angles}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.8cm,y=.8cm]
+\clip(-.5,-3) rectangle (5,4);
+\draw [shift={(0.,0.)},line width=2.4pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (-18.434948822921967:1.0340709101622498) arc (-18.434948822921967:63.434948822922024:1.0340709101622498) -- cycle;
+\draw [line width=2.pt,domain=0.0:4.993389700427471] plot(\x,{(-0.--2.*\x)/1.});
+\draw [line width=2.pt,domain=0.0:4.993389700427471] plot(\x,{(-0.-1.*\x)/3.});
+\draw[color=qqqqff] (-0.42809635713746785,0.25731172259058155) node {$A$};
+\draw [color=qqqqff] (1.,2.)-- ++(-2.0pt,-2.0pt) -- ++(4.0pt,4.0pt) ++(-4.0pt,0) -- ++(4.0pt,-4.0pt);
+\draw[color=qqqqff] (0.9605131507946963,2.547040166521276) node {$B$};
+\draw [color=qqqqff] (3.,-1.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=qqqqff] (3.265014036299139,-0.7176694212766819) node {$C$};
+\end{tikzpicture}
+\end{center}
+\end{Illqr}
+\begin{flushright}
+Scan le QR code et entraine-toi à nommer les angles représentés.
+\end{flushright}}
+
+\section{Comparer des angles}
+
+\qr{•}{Comparer des angles}
+
+\begin{DefT}{Caractérisation des angles}
+\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.7cm,y=.7cm]
+\clip(-2,-.5) rectangle (5,4);
+\draw [shift={(0.,0.)},line width=2.4pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (0.:1.0340709101622498) arc (0.:48.48908304625411:1.0340709101622498) -- cycle;
+\draw [line width=2.pt,domain=0.0:9.425122172551399] plot(\x,{(-0.--1.7862594254733355*\x)/1.5809556968920464});
+\draw [line width=2.pt,domain=0.0:9.425122172551399] plot(\x,{(-0.-0.*\x)/3.});
+\draw[color=qqqqff] (-0.42809635713746785,0.25731172259058155) node {$A$};
+\draw [color=qqqqff] (1.5809556968920464,1.7862594254733355)-- ++(-2.0pt,-2.0pt) -- ++(4.0pt,4.0pt) ++(-4.0pt,0) -- ++(4.0pt,-4.0pt);
+\draw[color=qqqqff] (1.536638372170807,2.3402259844888262) node {$B$};
+\draw [color=qqqqff] (3.,0.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=qqqqff] (3.265014036299139,0.28685660573807437) node {$C$};
+\end{tikzpicture}
+
+\vspace{.2cm}
+Un angle \textbf{aigu} est un angle plus petit qu'un angle droit.
+\end{center}
+\end{minipage}
+\hfill % espace horizontal
+\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.7cm,y=.7cm]
+\clip(-2,-.5) rectangle (5,4);
+\draw[line width=2.4pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0.731198552803472,0.) -- (0.7311985528034722,0.7311985528034719) -- (0.,0.731198552803472) -- (0.,0.) -- cycle; 
+\draw [line width=2.pt] (0.,0.) -- (0.,6.01117771556481);
+\draw [line width=2.pt,domain=0.0:9.425122172551399] plot(\x,{(-0.-0.*\x)/3.});
+\draw[color=qqqqff] (-0.42809635713746785,0.25731172259058155) node {$A$};
+\draw [color=qqqqff] (0.,2.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt);% ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=qqqqff] (-.5,2.547040166521276) node {$B$};
+\draw [color=qqqqff] (3.,0.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=qqqqff] (3.265014036299139,0.28685660573807437) node {$C$};
+\end{tikzpicture}
+
+\vspace{.2cm}
+Un angle \textbf{droit}
+\end{center}
+\end{minipage}
+\hfill % espace horizontal
+\begin{minipage}[c]{.3\linewidth}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.7cm,y=.7cm]
+\clip(-2,-.5) rectangle (5,4);
+\draw [shift={(0.,0.)},line width=2.4pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (0.:1.0340709101622498) arc (0.:122.60780771993535:1.0340709101622498) -- cycle;
+\draw [line width=2.pt,domain=-8.360897482239299:0.0] plot(\x,{(-0.--2.5396539457344027*\x)/-1.6246641246109286});
+\draw [line width=2.pt,domain=0.0:9.425122172551399] plot(\x,{(-0.-0.*\x)/3.});
+\draw[color=qqqqff] (-0.42809635713746785,0.25731172259058155) node {$A$};
+\draw [color=qqqqff] (-1.6246641246109286,2.5396539457344027)-- ++(-2.0pt,-2.0pt) -- ++(4.0pt,4.0pt) ++(-4.0pt,0) -- ++(4.0pt,-4.0pt);
+\draw[color=qqqqff] (-1.668981449332168,3.093620504749893) node {$B$};
+\draw [color=qqqqff] (3.,0.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=qqqqff] (3.265014036299139,0.28685660573807437) node {$C$};
+\end{tikzpicture}
+
+\vspace{.2cm}
+Un angle \textbf{obtus} est un angle plus grand qu'un angle droit.
+\end{center}
+\end{minipage}
+\end{DefT}
+
+\qr{•}{Comparer des angles}
+
+\section{Unité de mesures d'angles : Le degré}
+
+\begin{Def}
+L'unité de mesure des angles est le \textbf{degré}, on le note °.
+\end{Def}
+
+\mini{.70\linewidth}{\begin{Def}
+\begin{itemize}
+\item Un angle aigu mesure moins de 90°.
+\item Un angle droit mesure 90°.
+\item Un angle obtus mesure entre 90° et 180°.
+\item Un angle plat mesure 180°.
+\end{itemize}
+\end{Def}}
+{.26\linewidth}{\qr{•}{Mesure d'angle}}
+
+\section{Mesurer des angles}
+
+\begin{Mt}
+\mini{.70\linewidth}{
+\begin{enumerate}
+    \item On place le centre du rapporteur sur le sommet de l'angle.
+    \item Le « 0° » du rapporteur repose sur une extrémité de l'angle : la demi-droite [AC)
+    \item Les flèches du rapporteur recouvrent l'angle.
+    \item La mesure de l'angle se lit sur l'autre extrémité de l'angle : la demi-droite [AB)
+\end{enumerate}}
+{.26\linewidth}{
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.8cm,y=.8cm]
+\clip(-.5,-.5) rectangle (5,4);
+\draw [shift={(0.,0.)},line width=2.4pt,color=xdxdff,fill=xdxdff,fill opacity=0.10000000149011612] (0,0) -- (0.:1.0340709101622498) arc (0.:70.03348028439399:1.0340709101622498) -- cycle;
+\draw [line width=2.pt,domain=0.0:9.425122172551399] plot(\x,{(-0.--1.8305767501945749*\x)/0.6650643193197678});
+\draw [line width=2.pt,domain=0.0:9.425122172551399] plot(\x,{(-0.-0.*\x)/3.});
+\draw [color=qqqqff] (0.,0.)-- ++(-2.0pt,-2.0pt) -- ++(4.0pt,4.0pt) ++(-4.0pt,0) -- ++(4.0pt,-4.0pt);
+\draw[color=qqqqff] (-0.42809635713746785,0.25731172259058155) node {$A$};
+\draw [color=qqqqff] (0.6650643193197678,1.8305767501945749)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=qqqqff] (0.6207469945985286,2.3845433092100654) node {$B$};
+\draw [color=qqqqff] (3.,0.)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+\draw[color=qqqqff] (3.265014036299139,0.28685660573807437) node {$C$};
+\draw[color=xdxdff] (1.2411895406958786,0.6118503203604956) node {$70\textrm{\degre}$};
+\end{tikzpicture}
+\end{center}}
+\qr{•}{Mesurer un angle au rapporteur}
+\end{Mt}
+
+\section{Construire des angles}
+
+\begin{Mt}
+Pour construire un angle $\widehat{ABC}$ de 68°
+\begin{enumerate}
+    \item On commence par tracer une demi-droite [BA)
+    \item On place le rapporteur en alignant le « 0° » du rapporteur avec la demi-droite [BA).
+    \item On marque l'angle à 68° sur la feuille.
+    \item On trace la demi-droite [BC) partant de B et passant par la marque faite à 68°.
+\end{enumerate}
+\qr{•}{Construire un angle de mesure donnée}
+\end{Mt}
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\begin{itemize}
+\item Savoir nommer un angle.
+\item Savoir déterminer un angle.
+\item Savoir comparer des angles.
+\item Savoir déterminer si un angle est droit avec une équerre.   
+\item Savoir déterminer si un angle est droit avec un rapporteur.   
+\item Savoir reconnaitre un angle aigu ou obtus.   
+\item Savoir mesurer un angle.
+\item Savoir construire un angle de mesure donnée.
+\end{itemize}
+\end{CpsCol}
+
+\end{document}
+
+%\end{pageCours}

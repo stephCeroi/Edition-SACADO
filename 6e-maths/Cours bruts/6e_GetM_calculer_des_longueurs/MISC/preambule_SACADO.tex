@@ -1,0 +1,183 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%		Generals
+%----------------------------------------------------------------------------------------
+\usepackage{fourier}
+\usepackage{frcursive}
+\usepackage[T1]{fontenc} %Accents handling
+\usepackage[utf8]{inputenc} % Use UTF-8 encoding
+%\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[english, francais]{babel} % Language hyphenation and typographical rules
+
+%----------------------------------------------------------------------------------------
+%		Graphics
+%----------------------------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{graphicx, multicol} % Enhanced support for graphics
+\graphicspath{{FIG/}}
+\usepackage{wrapfig}
+
+%----------------------------------------------------------------------------------------
+%		Other packages
+%----------------------------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true, %colorise les liens
+	breaklinks=true, %permet le retour à la ligne dans les liens trop longs
+	urlcolor= bleu3,  %couleur des hyperliens
+	linkcolor= bleu3, %couleur des liens internes
+	plainpages=false  %pour palier à "Bookmark problems can occur when you have duplicate page numbers, for example, if you have a page i and a page 1."
+}
+\usepackage{tabularx}
+\newcolumntype{M}[1]{>{\arraybackslash}m{#1}} %Defines a scalable column type in tabular
+\usepackage{booktabs} % Enhances quality of tables
+\usepackage{diagbox} % barre en diagonale dans un tableau
+\usepackage{multicol}
+\usepackage[toctitles,explicit]{titlesec}
+
+
+%----------------------------------------------------------------------------------------
+%		Headers and footers
+%----------------------------------------------------------------------------------------
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{}\renewcommand{\headrulewidth}{0pt} % Blank out the default header
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{} % Custom footer text
+\fancyfoot[C]{\href{https://sacado.xyz/}{sacado.xyz}} % Custom footer text
+\fancyfoot[R]{\thepage} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+%		Table of Contents
+%----------------------------------------------------------------------------------------
+%%%%% Pour la Table Of Contents TOC
+% \usepackage{titletoc}
+\renewcommand\contentsname{Table des maères}
+% %%%%%%%%%%%%% Profondeur de TOC
+% \setcounter{tocdepth}{3}     % Dans la table des matieres
+% \setcounter{secnumdepth}{3}  % Avec un numero.
+
+%----------------------------------------------------------------------------------------
+%		Mathematics packages
+%----------------------------------------------------------------------------------------
+\usepackage{amsthm, amsmath, amssymb} % Mathematical typesetting
+\usepackage{marvosym, wasysym} % More symbols
+\usepackage[makeroom]{cancel}
+\usepackage{xlop}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usetikzlibrary{positioning}
+%\usetikzlibrary{arrows}
+\usepackage{pst-plot,pst-tree,pst-func, pstricks-add,pst-node,pst-text}
+\usepackage{units}
+\usepackage{nicefrac}
+\usepackage[np]{numprint} %Séparation milliers dans un nombre
+
+%----------------------------------------------------------------------------------------
+%		New text commands
+%----------------------------------------------------------------------------------------
+\usepackage{calc}
+\usepackage{boites}
+ \renewcommand{\arraystretch}{1.6}
+
+%%%%% Pour les imports.
+\usepackage{import}
+
+%%%%% Pour faire des boites
+\usepackage[tikz]{bclogo}
+\usepackage{bclogo}
+\usepackage{framed}
+\usepackage[skins]{tcolorbox}
+\tcbuselibrary{breakable}
+\tcbuselibrary{skins}
+\usetikzlibrary{babel,arrows,shadows,decorations.pathmorphing,decorations.markings,patterns}
+
+%%%%% Pour les symboles et les ensembles
+\newcommand{\pp}{\leq}
+\newcommand{\pg}{\geq}
+%\newcommand{\euro}{\eurologo{}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+
+%%%%% Pour une double minipage
+\newcommand{\mini}[2]{
+\begin{minipage}[t]{0.48\linewidth}
+#1
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}
+#2
+\end{minipage}
+}
+
+
+%\newcommand\hole[1]{\texttt{\_}}
+%\newcommand{\PROP}[1]{\textbf{\underline{#1}}}
+%\newcommand{\exercice}{\textcolor{OliveGreen}{Exercice : }}
+%\newcommand{\correction}{\textcolor{BurntOrange}{Correction : }}
+%\newcommand{\propriete}{\textbf{\underline{Propriété}} : }
+%\newcommand{\prop}{\textbf{\underline{Propriété}} : }
+%\newcommand{\vocabulaire}{\textbf{\underline{Vocabulaire}} : }
+%\newcommand{\voca}{\textbf{\underline{Vocabulaire}} : }
+
+\usepackage{enumitem}
+\newlist{todolist}{itemize}{2} %Pour faire des QCM
+\setlist[todolist]{label=$\square$} %Pour faire des QCM \begin{todolist} instead of itemize
+
+%----------------------------------------------------------------------------------------
+%		Définition de couleur pour geogebra
+%----------------------------------------------------------------------------------------
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.} %rouge des polygones
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}%bleu
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.} %vert des angles
+\definecolor{ffqqqq}{rgb}{1.,0.,0.} %rouge vif
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqzzqq}{rgb}{0.,0.6,0.}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882} %gris
+\definecolor{qqffqq}{rgb}{0.,1.,0.}
+\definecolor{ffdxqq}{rgb}{1.,0.8431372549019608,0.}
+\definecolor{ffffff}{rgb}{1.,1.,1.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+
+%-------------------------------------------------
+%
+%	EN TETE
+%
+%-------------------------------------------------
+
+% Classe
+\newcommand{\myClasse}   
+{
+    6e
+}
+
+% Discipline
+\newcommand{\myDiscipline}   
+{
+    Mathématiques
+}
+
+% Parcours
+\newcommand{\myParcours}
+{
+  Grandeurs et Mesures
+}
+
+%Titre de la séquence
+\newcommand{\myTitle}
+{
+    \scshape\huge
+\textcolor{sacado_purple}{
+Calculer des longueurs
+}
+}
+
+%----------------------------------------------------------------------------------------

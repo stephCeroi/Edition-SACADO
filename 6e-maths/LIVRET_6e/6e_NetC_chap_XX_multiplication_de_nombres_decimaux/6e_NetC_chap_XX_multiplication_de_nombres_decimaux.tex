@@ -1,0 +1,363 @@
+\input{../MISC/preambule_sacado.tex}
+\input{../MISC/environnements_sacado.tex}
+\input{../MISC/macro_sacado.tex}
+
+\title{Mathématiques 6e  : le livre sacado}
+\author{L'équipe SACADO}
+
+\begin{document}
+
+%\maketitle
+
+\chapter{Multiplication de nombres décimaux}{XX} %XX = numero du chapitre
+{https://sacado.xyz/qcm/parcours_show/25329/117121}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+		\item Savoir utiliser les tables de multiplication.
+		\item Savoir utiliser le vocabulaire de la multiplication.
+		\item Savoir calculer mentalement certains produits.
+		\item Savoir calculer astucieusement certains produits.
+		\item Savoir poser la multiplication de deux nombres entiers.
+		\item Savoir multiplier un nombre par $10$, $100$ ou $1\, 000$.
+		\item Savoir multiplier un nombre par $0,1$, $0,01$ ou $0,001$.
+		\item Savoir multiplier deux nombres décimaux.
+		\item Savoir poser la multiplication de deux nombres décimaux.
+		\item Savoir déterminer l'ordre de grandeur d'un résultat.
+		\item Savoir résoudre un problème numérique.
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
+\end{His}
+
+\begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
+% Un exercice de découverte/d'accroche
+\end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{La multiplication}
+
+\begin{DefT}{Vocabulaire}
+Lorsqu'on multiplie deux nombres :
+\begin{itemize}
+\item On appelle les nombres que l’on multiplie les facteurs de la multiplication.
+\item On appelle le résultat d’une multiplication le produit des facteurs.
+\end{itemize}
+\end{DefT}
+
+\begin{Pp}
+Dans une multiplication on peut :
+\begin{itemize}
+    \item Changer les facteurs de place : $4\times3=3\times4=12$
+    \item Regrouper les facteurs : $4\times3\times25=4\times25\times3=100\times3=300$
+\end{itemize}
+On dit que la multiplication est une opération \textbf{commutative}.
+\end{Pp}
+
+\section{Multiplier des nombres entiers}
+
+\begin{MtT}{{Multiplier un nombre par $10$, $100$ ou $1\, 000$}}
+Si on multiplie un nombre pas $10$, $100$ ou $1\, 000$, le chiffre des \textbf{unités} de ce nombre prend une valeur $10$, $100$ ou $1\, 000$ fois plus grande et devient le chiffre des \textbf{dizaines ; centaines ou milliers}.
+\end{MtT}
+
+\begin{MtT}{{Multiplier un nombre par $5$, $50$ ou $500$}}
+$5$ est la moitié de $10$ ; $50$ est la moitié de $100$ et $500$ est la moitié de $1\,000$, donc pour multiplier un nombre décimal par $5$, $50$ ou $500$, on le multiplie par $10$, $100$ ou $1\, 000$ puis on calcule la moitié du résultat.
+\end{MtT}
+
+\begin{MtT}{Poser la multiplication de deux nombres entiers}
+
+Lorsque le calcul mental ne permet pas de trouver facilement un produit, on peut poser la multiplication :
+\[\opmul[decimalsepsymbol={,},
+voperator=bottom,
+displayshiftintermediary=all]{8447}{368}\]
+
+Ainsi : \opmul[style=text]{8447}{368}
+\end{MtT} 
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Multiplier des nombres décimaux}
+
+\begin{MtT}{{Multiplier un nombre par $0,1$, $0,01$ ou $0,001$}}
+Si on multiplie un nombre pas $0,1$, $0,01$ ou $0,001$, le chiffre des \textbf{unités} de ce nombre prend une valeur $10$, $100$ ou $1\, 000$ fois plus petite et devient le chiffre des \textbf{dixièmes ; centièmes ou millièmes}.
+\end{MtT} 
+
+\begin{MtT}{{Multiplier un nombre par $0,5$}}
+Multiplier un nombre décimal par $0,5$ revient à calculer sa \textbf{moitié}.
+
+On peut soit diviser le nombre par $2$, Soit multiplier le nombre par $5$ puis diviser le résultat par $10$.
+\end{MtT}
+
+\begin{MtT}{Multiplier des nombres décimaux}
+\begin{itemize}
+\item Puisque l'on sait maintenant multiplier un nombre par $0,1$, $0,01$ ou $0,001$ nous pouvons utiliser ça pour transformer un nombre décimal en produit d'un nombre entier et de $0,1$, $0,01$ ou $0,001$.
+\item On peut alors calculer des produits simples de nombres décimaux en commençant par convertir en produits de nombre entiers et de $0,1$, $0,01$ ou $0,001$.
+\end{itemize}
+\end{MtT}
+
+\begin{MtT}{Poser la multiplication de deux nombres décimaux}
+Lorsque le calcul mental ne permet pas de trouver facilement un produit, on peut poser la multiplication :
+
+Pour effectuer la multiplication de deux nombres décimaux : On effectue d'abord la multiplication sans tenir compte des virgules puis on place la virgule dans le produit en comptabilisant le nombre de chiffres à droite de la virgule de chacun des facteurs.
+\end{MtT}
+
+\section{Ordre de grandeur d'un produit}
+
+\begin{Def}
+Un ordre de grandeur d'un nombre est une valeur approchée simple de ce nombre.
+\end{Def}
+
+\begin{Rq}
+\begin{itemize}
+\item  Calculer un ordre de grandeur permet de vérifier la cohérence du résultat d'un calcul.
+\item Un ordre de grandeur n'est pas unique.
+\end{itemize}
+\end{Rq}
+
+\begin{Reg}
+Pour obtenir un \textbf{ordre de grandeur} d'un produit, on multiplie un ordre de grandeur de chacun des facteurs.
+\end{Reg} 
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
+  
+\end{ExoCu}
+
+%Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Quatrième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Cinquième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Sixième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+%Premier exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Deuxième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Troisième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Quatrième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Cinquième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Sixième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Sixième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Page algorithmique
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAlgo} % Début de la page d'exos d'algorithmique
+
+%Exercice d'algorithmique
+\begin{ExoAlgoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgoN}
+
+%Exercice d'algorithmique
+\begin{ExoAlgo}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgo}
+
+\end{pageAlgo} % Fin de la page d'exos d'algorithmique
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}

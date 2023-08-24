@@ -1,0 +1,271 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+%\chapter{Fractions}
+%{https://sacado.xyz/qcm/parcours_show_course/0/117124}
+%
+%\begin{pageCours}
+
+\section{Fractions}
+
+\subsection{Définition}
+
+\begin{Def}
+Soit $a$ et $b$ deux nombres (avec $b$ différent de zéro).
+\begin{itemize}
+\item Si $a$ et $b$ sont des \textbf{nombres entiers}, on dit que $\frac{a}{b}$ est une \textbf{fraction}.
+$a$ est appelé le \textbf{numérateur} et $b$ le \textbf{dénominateur} de la fraction $\frac{a}{b}$.
+\item Si $a$ ou $b$ n'est pas un nombre entier, on parle alors d'\textbf{écriture fractionnaire}.
+\end{itemize}
+\end{Def}
+
+\begin{Pp}
+Tout nombre entier peut s'écrire sous la forme d'une fraction. Pour tout nombre entier $n$, on a : $n=\frac{n}{1}$. 
+\end{Pp}
+
+\subsection{Représentation d'une fraction d'une quantité}
+
+\mini{0.7\linewidth}{\begin{Def}
+Lorsqu'on \textbf{partage} une quantité en \textbf{parties égales}, on peut exprimer une \textbf{proportion} de cette quantité avec une \textbf{fraction}.
+\end{Def}
+\begin{Rq}
+Pour pouvoir exprimer une proportion d'une quantité par une fraction il est nécessaire que la quantité soit partagée en parties égales. Dans l'exemple ci-dessus, la zone coloriée ne peut pas être exprimée comme une fraction car le découpage du disque n'est pas en 4 parties égales.
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm]
+\clip(-1.1930483445749616,-1.0964271950736066) rectangle (1.0971828073616516,1.0354369091227043);
+\draw [line width=2.pt] (0.,0.) circle (1.5cm);
+\draw [line width=2.pt] (-0.8660254037844386,0.5)-- (0.8660254037844387,0.5);
+\draw [line width=2.pt] (-0.8660254037844386,-0.5)-- (0.8660254037844387,-0.5);
+\draw [line width=2.pt] (-1.,0.)-- (1.,0.);
+\draw [shift={(0.,0.)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.4]  plot[domain=0.:3.141592653589793,variable=\t]({1.*1.*cos(\t r)+0.*1.*sin(\t r)},{0.*1.*cos(\t r)+1.*1.*sin(\t r)});
+\end{tikzpicture}
+\end{center}
+\end{Rq}}
+{0.28\linewidth}{\begin{Ex}
+On choisit comme unité un disque. On le partage en \textbf{6 parts égales}. Si on prend \textbf{4 parts}, on obtient : $\frac{4}{6}$ d'un disque.
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm]
+\clip(-1.0422907980988494,-1.0162878783829164) rectangle (1.0608600417127816,1.02968917761952985);
+\draw [line width=2.pt] (0.,0.) circle (1.5cm);
+\draw [line width=2.pt] (-0.5,0.8660254037844386)-- (0.5,-0.8660254037844386);
+\draw [line width=2.pt] (-0.5,-0.8660254037844386)-- (0.5,0.8660254037844386);
+\draw [line width=2.pt] (-1.,0.)-- (1.,0.);
+\draw [shift={(0.,0.)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.4]  (0,0) --  plot[domain=-4.1887902047863905:0.,variable=\t]({1.*1.*cos(\t r)+0.*1.*sin(\t r)},{0.*1.*cos(\t r)+1.*1.*sin(\t r)}) -- cycle ;
+\end{tikzpicture}
+\end{center}
+\end{Ex}}
+
+%\begin{Rq}
+%Pour pouvoir exprimer une proportion d'une quantité par une fraction il est nécessaire que la quantité soit partagée en parties égales. Dans l'exemple ci-dessus, la zone coloriée ne peut pas être exprimée comme une fraction car le découpage du disque n'est pas en 4 parties égales.
+%\begin{center}
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm]
+%\clip(-1.1930483445749616,-1.0964271950736066) rectangle (1.0971828073616516,1.0354369091227043);
+%\draw [line width=2.pt] (0.,0.) circle (1.5cm);
+%\draw [line width=2.pt] (-0.8660254037844386,0.5)-- (0.8660254037844387,0.5);
+%\draw [line width=2.pt] (-0.8660254037844386,-0.5)-- (0.8660254037844387,-0.5);
+%\draw [line width=2.pt] (-1.,0.)-- (1.,0.);
+%\draw [shift={(0.,0.)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.4]  plot[domain=0.:3.141592653589793,variable=\t]({1.*1.*cos(\t r)+0.*1.*sin(\t r)},{0.*1.*cos(\t r)+1.*1.*sin(\t r)});
+%\end{tikzpicture}
+%\end{center}
+%\end{Rq}
+
+\section{Quotient de deux nombres}
+
+\subsection{Définition}
+
+\mini{0.48\linewidth}{\begin{Def}
+Le \textbf{quotient} d'un nombre $a$ par un nombre $b$ (différent de zéro) est le nombre $q$ qui vérifie : $a=q\times b$.
+\end{Def}}
+{0.48\linewidth}{\begin{Ex}
+Le \textbf{quotient} de $21$ par $10$ est le nombre qui multiplié pas $10$, donne $21$.
+\begin{center}
+$21\div10=2,1$
+
+donc
+
+$10\times2,1=21$
+\end{center}
+
+donc le quotient de $21$ par $10$ est $2,1$.
+\end{Ex}}
+
+\subsection{Écriture fractionnaire d'un quotient}
+
+\mini{.6\linewidth}{\begin{Def}
+Le quotient d'un nombre $a$ par un nombre $b$ (différent de zéro) est la fraction $\frac{a}{b}$.
+
+On a: $a\div b=\frac{a}{b}$ et $b\times \frac{a}{b}=a$.
+\end{Def}
+\begin{Rq}
+On peut toujours exprimer un quotient sous sa forme fractionnaire, mais un quotient n'a pas toujours une écriture décimale.
+\end{Rq}}
+{0.38\linewidth}{\begin{Ex}
+Par quel nombre faut-il multiplier $2$ pour obtenir $3$ ?
+\begin{center}
+$2\times1.5=3$, le quotient de $3$ par $2$ est $1,5$.
+
+$\frac{3}{2}=1,5$
+\end{center}
+\end{Ex}}
+
+\section{Fractions et demi-droite graduée}
+
+\begin{Def}
+Une \textbf{fraction} est un \textbf{nombre}, donc on peut la placer sur une \textbf{demi-droite graduée}.
+\end{Def}
+
+\miniqr{\begin{Mt}
+Pour placer la fractions $\frac{3}{5}$ sur une demi-droite graduée, on partage l'unité en 5 parts égales et on en compte 3 à partir de l'origine 0.
+
+\begin{center}
+\includegraphics[width=10cm]{demi-droite_1.png}
+\end{center}
+
+Le point M a pour \textbf{abscisse} $\frac{3}{5}$ et on écrit $M(\frac{3}{5})$. Cela signifie que le segment [OM] représente $\frac{3}{5}$ du segment d'unité [OB]. L'abscisse du point \textcolor{red}{A} est $\frac{7}{5}$.
+\end{Mt}}
+{id}{Placer des fractions sur une droite graduée}
+
+\section{Comparer des fractions de même dénominateur}
+
+\begin{Pp}
+Deux fractions qui ont le \textbf{même dénominateur} sont rangées dans le même ordre que leurs \textbf{numérateurs}.
+\end{Pp}
+
+\begin{Ex}
+Comparaison des fractions $\frac{28}{12}$ et $\frac{25}{12}$ :
+Les fractions ont le même dénominateur donc elles sont rangées dans le même ordre que leur numérateur :
+\begin{center}
+$28>25$ donc $\frac{28}{12}>\frac{25}{12}$
+\end{center}
+\end{Ex}
+
+\qr{}{Ordonner des fractions dans l'ordre croissant ou décroissant}
+
+\section{Ajouter des fractions de même dénominateur}
+
+\mini{.80\linewidth}{\begin{Def}
+Pour \textbf{ajouter} deux \textbf{fractions} de \textbf{même dénominateur}, il suffit d'\textbf{ajouter} les \textbf{numérateurs} et de conserver le dénominateur commun.
+\end{Def}}
+{.18\linewidth}{
+\begin{Ex}
+\[\frac{7}{8}+\frac{2}{8}=\frac{9}{8}\]
+\end{Ex}}
+
+\section{Décomposer une fraction}
+
+\qr{}{Fractions et nombres entiers}
+
+\mini{.3\linewidth}{\begin{Pp}
+Toute fraction peut se \textbf{décomposer} en une \textbf{somme} d'un \textbf{entier} et d'une \textbf{fraction inférieure à 1}.
+\end{Pp}} 
+{.68\linewidth}{
+\begin{Ex}
+La fraction $\frac{5}{3}$ peut se décomposer en $\frac{3}{3}+\frac{2}{3}=1+\frac{2}{3}$ :
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm]
+%\clip(-1.0914879023504986,-1.1532206611843392) rectangle (3.6195031044196213,1.1683339848032337);
+\clip(-1.0422907980988494,-1.0162878783829164) rectangle (3.5608600417127816,1.02968917761952985);
+\draw [line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.4] (0.,0.) circle (1.5cm);
+\draw [line width=2.pt] (0.,0.)-- (0.5,0.8660254037844386);
+\draw [line width=2.pt] (0.,0.)-- (0.5,-0.8660254037844386);
+\draw [line width=2.pt] (2.5,0.) circle (1.5cm);
+\draw [line width=2.pt] (2.5,0.)-- (1.5,0.);
+\draw [line width=2.pt] (2.5,0.)-- (3.,0.8660254037844386);
+\draw [line width=2.pt] (2.5,0.)-- (3.,-0.8660254037844386);
+\draw [shift={(2.5,0.)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.4]  (0,0) --  plot[domain=-1.0471975511965974:3.141592653589793,variable=\t]({1.*1.*cos(\t r)+0.*1.*sin(\t r)},{0.*1.*cos(\t r)+1.*1.*sin(\t r)}) -- cycle ;
+\draw [line width=2.pt] (0.,0.)-- (-1.,0.);
+\end{tikzpicture}
+\end{center}
+\end{Ex}}
+
+\qr{}{Décomposer une fraction comme somme d'un entier et d'une fraction inférieure à 1}
+
+\section{Encadrer une fraction}
+
+\qr{}{Comparer une fraction et un nombre entier}
+
+\mini{.8\linewidth}{\begin{Pp}
+On peut toujours \textbf{encadrer} une \textbf{fraction} par deux nombres entiers \textbf{consécutifs}. 
+\end{Pp}}
+{.18\linewidth}{
+\begin{Ex}
+\begin{center}
+$\frac{70}{10}<\frac{71}{10}<\frac{80}{10}$
+
+donc
+
+$7<\frac{71}{10}<8$
+\end{center}
+\end{Ex}}
+
+\qr{}{Encadrer une fraction entre deux entiers consécutifs}
+
+\section{Outils}
+
+\mini{.48\linewidth}{
+\qr{}{Outil gabarits de fraction}}{.48\linewidth}{\qr{}{Outil représentations de fraction}}
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\begin{itemize}
+\item Savoir écrire une fraction.
+\item Savoir identifier le numérateur et le dénominateur d'une fraction.
+\item Savoir représenter une fraction d'une quantité.
+\item Savoir exprimer une fraction d'une quantité.
+\item Savoir déterminer le quotient de deux nombres
+\item Savoir repérer et placer une fraction sur une demi-droite graduée.
+\item Savoir comparer des fractions de même dénominateur.
+\item Savoir ajouter des fractions de même dénominateur.
+\item Savoir décomposer une fraction.
+\item Savoir encadrer une fraction.
+\end{itemize}
+\end{CpsCol}
+
+\end{document}
+
+%\end{pageCours}

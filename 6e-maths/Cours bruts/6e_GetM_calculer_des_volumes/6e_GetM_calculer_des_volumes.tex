@@ -1,0 +1,211 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+\input{MISC/tikz_cubic_shapes}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+
+\section{Unités de volume}
+
+\begin{DefT}{Volume}
+Le \textbf{volume} est la mesure de l'\textbf{intérieur d'un solide}. L'unité de mesure des volumes est le \textbf{mètre cube}, on note $m^3$, c'est le volume d'un \textbf{cube} de $1\,m$ d'\textbf{arête}. On note :
+\begin{itemize}
+\item $1\,dm^3$ le volume d'un cube de $1\,dm$ d'arête.
+\item $1\,cm^3$ le volume d'un cube de $1\,cm$ d'arête.
+\item $1\,mm^3$ le volume d'un cube de $1\,mm$ d'arête.
+\end{itemize}
+\end{DefT}
+
+\begin{Pp}
+Dans un cube de $1\,cm=10\,mm$ de côté, on peut construire $10\times10\times10=1000$ cubes de $1\, mm$ de côté.
+Donc $1 \,cm^3 = 1000 mm^3$.
+
+\begin{center}
+
+\begin{tikzpicture}
+\pic {xannotated cuboid={width=20,height=20,depth=20,units=mm}};
+\pic at (3,-1) {yannotated cuboid={width=2,height=2,depth=2,units=mm}};
+\end{tikzpicture}
+\begin{tikzpicture}
+\tikzcuboid{%
+    shiftx=0cm,%
+    shifty=8cm,%
+    scale=1.00,%
+    rotation=0,%
+    densityx=5,%
+    densityy=5,%
+    densityz=5,%
+    dimx=2,%
+    dimy=2,%
+    dimz=2,%
+    scalex=1,%
+    scaley=1,%
+    scalez=1,%
+    anglex=-30,%
+    angley=90,%
+    anglez=210,%
+    front/.style={draw=black,fill=white},%
+    top/.style={draw=black,fill=white},%
+    right/.style={draw=black,fill=white},%
+    emphedge,%
+    emphstyle/.style={line width=1pt},
+%    shade,%
+%    shadesamples=64,%
+%    shadeopacity=0.15,%
+    }
+\end{tikzpicture}
+\end{center}
+\end{Pp}
+
+\section{Unités de contenance}
+
+\begin{DefT}{Contenance}
+Quantité de ce qu'un récipient peut contenir. Son unité est le \textbf{litre ($L$)}.
+\[1\,L=1\,dm^3\]
+\end{DefT}
+
+\begin{Mt}
+Voici un tableau de conversion volume $\rightarrow$ contenance :
+\begin{center}
+\begin{tabular}{M{1.8cm}||M{.6cm}|M{.6cm}|M{.6cm}||M{.6cm}|M{.6cm}|M{.6cm}||M{.6cm}|M{.6cm}|M{.6cm}||M{.6cm}|M{.6cm}|M{.6cm}}
+Volume & & & $m^3$ & & & $dm^3$ & & & $cm^3$ & & & $mm^3$\\\hline
+Contenance & & & $kL$ & $hL$ & $daL$ & $L$ & $dL$ & $cL$ & $mL$ & & & $\mu L$ \\
+\end{tabular}
+\end{center}
+\end{Mt}
+
+\section{Volumes et contenances}
+
+\begin{Pp}
+$1\,L$ est la \textbf{contenance} d’un cube de $1\,dm$ d’arête, donc $1\,L\,=\,1\,dm^3$.
+\end{Pp}
+
+\section{Calculs du volume de solides particuliers}
+
+\subsection{Volume d'un cube}
+
+\begin{Pp}
+Le volume d'un cube de longueur d'arête $c$
+est donné par la formule :
+\[V_{cube}=c\times c\times c\]
+
+\begin{center}
+\begin{tikzpicture}
+\pic {defiannotated cuboid={width=30, height=25, depth=15}};
+\end{tikzpicture}
+\end{center}
+\end{Pp}
+
+\begin{Ex}
+\begin{center}
+\begin{tikzpicture}
+\pic {annotated cuboid={width=30, height=30, depth=30, units=\,cm}};
+\end{tikzpicture}
+\end{center}
+\[V_{cube}=30\times30\times30=27000\,cm^3\]
+\end{Ex}
+
+\subsection{Volume d'un parallélépipède rectangle}
+
+\begin{Pp}
+Le volume d'un parallélépipède rectangle de Longueur L, de largeur l et de hauteur h est donné par la formule :
+
+\[V_{parallélépipède}=L\times l\times h\]
+
+\begin{center}
+\begin{tikzpicture}
+\pic {defiiannotated cuboid={width=30, height=25, depth=15}};
+\end{tikzpicture}
+\end{center}
+\end{Pp}
+
+\begin{Rq}
+Attention, il est nécessaire que toutes les longueurs soient exprimées dans la \textbf{même unité} de longueur pour pouvoir appliquer la formule.
+\end{Rq}
+
+\begin{Ex}
+\begin{center}
+\begin{tikzpicture}
+\pic {annotated cuboid={width=40, height=30, depth=20, units=\,m}};
+\end{tikzpicture}
+\end{center}
+\[V_{parallélépipède}=40\times 30\times 20=24000\,cm^3\]
+\end{Ex}
+
+\section{Formulaire}
+
+\begin{Att}
+\textbf{Avant} d'appliquer une \textbf{formule} pour calculer un volume il faut s'assurer que toutes les \textbf{longueurs} sont exprimées dans la \textbf{même unité}.
+\end{Att}
+
+\begin{tabular}{M{.5\textwidth}|M{.5\textwidth}}
+\begin{center}
+\begin{tikzpicture}
+\pic {defiannotated cuboid={width=25, height=25, depth=25}};
+\end{tikzpicture}
+\end{center} & 
+\begin{center}
+\begin{tikzpicture}
+\pic {defiiannotated cuboid={width=30, height=25, depth=15}};
+\end{tikzpicture}
+\end{center} \\
+\[V_{cube}=c\times c\times c\] & \[V_{parallélépipède}=L\times l\times h\]
+\end{tabular}
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\begin{itemize}
+\item Savoir convertir des unités de volume.
+\item Savoir convertir des unités de contenance.
+\item Savoir utiliser la relation entre unités de volume et unités de contenance.
+\item Savoir calculer le volume d'un cube.
+\item Savoir calculer le volume d'un parallélépipède rectangle.
+\item Savoir résoudre un problème de volume.
+\end{itemize}
+\end{CpsCol}
+
+
+\end{document}

@@ -1,0 +1,712 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\section{Aire d'une figure}
+
+\begin{Def}
+L'\textbf{aire} d'une figure est la \textbf{mesure} de sa \textbf{surface intérieure} dans une \textbf{unité d'aire} donnée.
+\end{Def}
+
+\begin{Ex}
+L'aire des \textcolor{zzttqq}{figures oranges} peut être exprimée comme somme de \textcolor{qqwuqq}{carrés verts}, entiers ou non, valant $1\,u$ (une unité).
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-0.18164835357409106,-0.17948573521827438) grid (9.210839706161456,2.2136687567143394);
+\clip(-0.18164835357409106,-0.17948573521827438) rectangle (9.210839706161456,2.2136687567143394);
+\fill[line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.,0.) -- (1.,0.) -- (1.,1.) -- (0.,1.) -- cycle;
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (2.,1.) -- (2.,0.) -- (4.,0.) -- (4.,1.) -- cycle;
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (5.,0.) -- (5.,2.) -- (8.,2.) -- (9.,1.) -- (9.,0.) -- cycle;
+\draw [line width=2.pt,color=qqwuqq] (0.,0.)-- (1.,0.);
+\draw [line width=2.pt,color=qqwuqq] (1.,0.)-- (1.,1.);
+\draw [line width=2.pt,color=qqwuqq] (1.,1.)-- (0.,1.);
+\draw [line width=2.pt,color=qqwuqq] (0.,1.)-- (0.,0.);
+\draw [line width=2.pt,color=zzttqq] (2.,1.)-- (2.,0.);
+\draw [line width=2.pt,color=zzttqq] (2.,0.)-- (4.,0.);
+\draw [line width=2.pt,color=zzttqq] (4.,0.)-- (4.,1.);
+\draw [line width=2.pt,color=zzttqq] (4.,1.)-- (2.,1.);
+\draw [line width=2.pt,color=zzttqq] (5.,0.)-- (5.,2.);
+\draw [line width=2.pt,color=zzttqq] (5.,2.)-- (8.,2.);
+\draw [line width=2.pt,color=zzttqq] (8.,2.)-- (9.,1.);
+\draw [line width=2.pt,color=zzttqq] (9.,1.)-- (9.,0.);
+\draw [line width=2.pt,color=zzttqq] (9.,0.)-- (5.,0.);
+%\begin{scriptsize}
+\draw[color=qqwuqq] (0.5,0.5) node {$1\,u$};
+\draw[color=zzttqq] (3,0.5) node {$2\,u$};
+\draw[color=zzttqq] (7,1) node {$7,5\,u$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Ex}
+
+\begin{ExOApp}[]
+Déterminer l'aire des figures suivantes en fonction de l'unité proposée :
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-0.2202476195730043,-0.19235215721791207) grid (12.234448876076325,4.246563432657098);
+\clip(-0.2202476195730043,-0.19235215721791207) rectangle (12.234448876076325,4.246563432657098);
+\fill[line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.,0.) -- (1.,0.) -- (1.,1.) -- (0.,1.) -- cycle;
+\fill[line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (2.,0.) -- (2.,4.) -- (9.,4.) -- cycle;
+\fill[line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (6.012866421999638,0.003580915971741372) -- (8.012866421999638,2.0035809159717415) -- (9.012866421999638,2.0035809159717415) -- (7.012866421999638,0.003580915971741372) -- cycle;
+\fill[line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (10.,3.) -- (11.,4.) -- (12.,3.) -- (12.,1.) -- (11.,0.) -- (10.,1.) -- cycle;
+\draw [line width=2.pt,color=qqwuqq] (0.,0.)-- (1.,0.);
+\draw [line width=2.pt,color=qqwuqq] (1.,0.)-- (1.,1.);
+\draw [line width=2.pt,color=qqwuqq] (1.,1.)-- (0.,1.);
+\draw [line width=2.pt,color=qqwuqq] (0.,1.)-- (0.,0.);
+\draw [line width=2.pt,color=qqwuqq] (2.,0.)-- (2.,4.);
+\draw [line width=2.pt,color=qqwuqq] (2.,4.)-- (9.,4.);
+\draw [line width=2.pt,color=qqwuqq] (9.,4.)-- (2.,0.);
+\draw [line width=2.pt,color=qqwuqq] (6.012866421999638,0.003580915971741372)-- (8.012866421999638,2.0035809159717415);
+\draw [line width=2.pt,color=qqwuqq] (8.012866421999638,2.0035809159717415)-- (9.012866421999638,2.0035809159717415);
+\draw [line width=2.pt,color=qqwuqq] (9.012866421999638,2.0035809159717415)-- (7.012866421999638,0.003580915971741372);
+\draw [line width=2.pt,color=qqwuqq] (7.012866421999638,0.003580915971741372)-- (6.012866421999638,0.003580915971741372);
+\draw [line width=2.pt,color=qqwuqq] (10.,3.)-- (11.,4.);
+\draw [line width=2.pt,color=qqwuqq] (11.,4.)-- (12.,3.);
+\draw [line width=2.pt,color=qqwuqq] (12.,3.)-- (12.,1.);
+\draw [line width=2.pt,color=qqwuqq] (12.,1.)-- (11.,0.);
+\draw [line width=2.pt,color=qqwuqq] (11.,0.)-- (10.,1.);
+\draw [line width=2.pt,color=qqwuqq] (10.,1.)-- (10.,3.);
+%\begin{scriptsize}
+\draw[color=qqwuqq] (0.5,0.5) node {$unité$};
+\draw[color=qqwuqq] (4,2.5) node {$Fig.\,1$};
+\draw[color=qqwuqq] (7.5,1) node {$Fig.\,2$};
+\draw[color=qqwuqq] (11,2) node {$Fig.\,3$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{ExOApp}
+
+\section{Encadrer une aire}
+
+\section{Périmètre et aire}
+
+\begin{Rq}
+Deux figures ayant la même aire n'ont pas nécessairement le même périmètre.
+
+Deux figures ayant le même périmètre n'ont pas nécessairement la même aire.
+\end{Rq}
+
+\begin{Ex}
+\[\textcolor{qqwuqq}{\mathcal{P}_1=20\,u.l.}\hspace{.5cm}\textcolor{qqwuqq}{\mathcal{A}_1=14\,u.a.}\hspace{1cm}\textcolor{qqqqff}{\mathcal{P}_2=20\,u.l.}\hspace{.5cm}\textcolor{qqqqff}{\mathcal{A}_2=14\,u.a.}\]q
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=1.0cm,ystep=1.0cm] (-3.02,-4.96) grid (11.,4.06);
+\clip(-3.02,-4.96) rectangle (11.,4.06);
+\fill[line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (1.,-1.) -- (-2.,-1.) -- (-2.,0.) -- (-1.,0.) -- (-1.,1.) -- (-2.,1.) -- (-2.,2.) -- (-1.,2.) -- (-1.,3.) -- (1.,3.) -- (1.,2.) -- (3.,2.) -- (3.,0.) -- (1.,0.) -- cycle;
+\fill[line width=2.pt,color=qqqqff,fill=qqqqff,fill opacity=0.10000000149011612] (5.,-1.) -- (5.,0.) -- (7.,0.) -- (7.,2.) -- (9.,2.) -- (9.,0.) -- (10.,0.) -- (10.,-2.) -- (9.,-2.) -- (9.,-3.) -- (7.,-3.) -- (7.,-1.) -- cycle;
+\fill[line width=2.pt,color=ffqqff,fill=ffqqff,fill opacity=1.0] (-1.,-3.) -- (0.,-3.) -- (0.,-4.) -- (-1.,-4.) -- cycle;
+\draw [line width=2.pt,color=qqwuqq] (1.,-1.)-- (-2.,-1.);
+\draw [line width=2.pt,color=qqwuqq] (-2.,-1.)-- (-2.,0.);
+\draw [line width=2.pt,color=qqwuqq] (-2.,0.)-- (-1.,0.);
+\draw [line width=2.pt,color=qqwuqq] (-1.,0.)-- (-1.,1.);
+\draw [line width=2.pt,color=qqwuqq] (-1.,1.)-- (-2.,1.);
+\draw [line width=2.pt,color=qqwuqq] (-2.,1.)-- (-2.,2.);
+\draw [line width=2.pt,color=qqwuqq] (-2.,2.)-- (-1.,2.);
+\draw [line width=2.pt,color=qqwuqq] (-1.,2.)-- (-1.,3.);
+\draw [line width=2.pt,color=qqwuqq] (-1.,3.)-- (1.,3.);
+\draw [line width=2.pt,color=qqwuqq] (1.,3.)-- (1.,2.);
+\draw [line width=2.pt,color=qqwuqq] (1.,2.)-- (3.,2.);
+\draw [line width=2.pt,color=qqwuqq] (3.,2.)-- (3.,0.);
+\draw [line width=2.pt,color=qqwuqq] (3.,0.)-- (1.,0.);
+\draw [line width=2.pt,color=qqwuqq] (1.,0.)-- (1.,-1.);
+\draw [line width=2.pt,color=qqqqff] (5.,-1.)-- (5.,0.);
+\draw [line width=2.pt,color=qqqqff] (5.,0.)-- (7.,0.);
+\draw [line width=2.pt,color=qqqqff] (7.,0.)-- (7.,2.);
+\draw [line width=2.pt,color=qqqqff] (7.,2.)-- (9.,2.);
+\draw [line width=2.pt,color=qqqqff] (9.,2.)-- (9.,0.);
+\draw [line width=2.pt,color=qqqqff] (9.,0.)-- (10.,0.);
+\draw [line width=2.pt,color=qqqqff] (10.,0.)-- (10.,-2.);
+\draw [line width=2.pt,color=qqqqff] (10.,-2.)-- (9.,-2.);
+\draw [line width=2.pt,color=qqqqff] (9.,-2.)-- (9.,-3.);
+\draw [line width=2.pt,color=qqqqff] (9.,-3.)-- (7.,-3.);
+\draw [line width=2.pt,color=qqqqff] (7.,-3.)-- (7.,-1.);
+\draw [line width=2.pt,color=qqqqff] (7.,-1.)-- (5.,-1.);
+\draw [line width=3.6pt,color=ffqqff] (-1.,-2.)-- (0.,-2.);
+\draw [line width=2.pt,color=ffqqff] (-1.,-3.)-- (0.,-3.);
+\draw [line width=2.pt,color=ffqqff] (0.,-3.)-- (0.,-4.);
+\draw [line width=2.pt,color=ffqqff] (0.,-4.)-- (-1.,-4.);
+\draw [line width=2.pt,color=ffqqff] (-1.,-4.)-- (-1.,-3.);
+\draw [color=ffqqff](-0.86,-2.32) node[anchor=north west] {1 u.l.};
+\draw [color=ffqqff](-0.94,-4.28) node[anchor=north west] {1 u.a.};
+\begin{scriptsize}
+\draw[color=qqwuqq] (0.14,1.19) node {$Fig.1$};
+\draw[color=qqqqff] (8.12,-0.49) node {$Fig.2$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Ex}
+
+\section{Unités d'aires usuelles}
+
+\begin{Def}
+L'unité de mesure des aires est le \textbf{mètre carré}, on le note $m^2$, c'est l'aire d'un carré de $1\,m$ de côté.
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+\clip(-0.19063259065814545,-0.2571668280229305) rectangle (1.1623070595760396,1.1049452944162321);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,0.) -- (1.,0.) -- (1.,1.) -- (0.,1.) -- cycle;
+\draw [line width=1.pt,color=zzttqq] (0.,0.)-- (1.,0.);
+\draw [line width=1.pt,color=zzttqq] (0.5,0.010319031230599716) -- (0.5,-0.010319031230599716);
+\draw [line width=1.pt,color=zzttqq] (1.,0.)-- (1.,1.);
+\draw [line width=1.pt,color=zzttqq] (0.9896809687694005,0.5) -- (1.0103190312305999,0.5);
+\draw [line width=1.pt,color=zzttqq] (1.,1.)-- (0.,1.);
+\draw [line width=1.pt,color=zzttqq] (0.5,0.9896809687694005) -- (0.5,1.0103190312305999);
+\draw [line width=1.pt,color=zzttqq] (0.,1.)-- (0.,0.);
+\draw [line width=1.pt,color=zzttqq] (0.010319031230599716,0.5) -- (-0.010319031230599716,0.5);
+\begin{scriptsize}
+\draw [fill=xdxdff] (0.,0.) circle (2.0pt);
+\draw [fill=xdxdff] (1.,0.) circle (2.0pt);
+\draw [fill=xdxdff] (1.,1.) circle (2.0pt);
+\draw [fill=xdxdff] (0.,1.) circle (2.0pt);
+\draw[color=zzttqq] (0.5,0.5) node {$1\,m^2$};
+\draw[color=zzttqq] (0.5,-0.1) node {$1\,m$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Def}
+
+\begin{Rq}
+De la même manière nous pouvons définir :
+\begin{itemize}
+\item $1\,dm^2$ est l'aire d'un carré de $1\,dm$ de côté.
+\item $1\,cm^2$ est l'aire d'un carré de $1\,cm$ de côté.
+\item $1\,mm^2$ est l'aire d'un carré de $1\,mm$ de côté.
+\end{itemize}
+\end{Rq}
+
+\begin{Voc}
+Pour mesurer la superficie des terrains, on utilise l'\textbf{are} ($a$) et l'\textbf{hectare} ($ha$) :
+\begin{itemize}
+\item $1\,a=1\,dam^2=100\,m^2$
+\item $1\,ha=1\,hm^2=10\,000\,m^2$
+\end{itemize}
+\end{Voc}
+
+\section{Convertir des unités d'aire}
+
+\begin{Pp}
+Dans un carré de $1 \,cm$ de côté, on peut construire $10\times10=100$ carrés de $1\, mm$ de côté.
+Donc $1 \,cm^2 = 100 mm^2$
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.7008474435890936,-1.001194059753229) rectangle (12.772217041258656,10.391470761992991);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,0.) -- (1.,0.) -- (1.,1.) -- (0.,1.) -- cycle;
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (2.,0.) -- (3.,0.) -- (3.,1.) -- (2.,1.) -- cycle;
+\draw [line width=2.pt,color=zzttqq] (0.,0.)-- (1.,0.);
+%\draw [line width=1.pt,color=zzttqq] (0.5,0.08915998556149216) -- (0.5,-0.08915998556149216);
+\draw [line width=2.pt,color=zzttqq] (1.,0.)-- (1.,1.);
+%\draw [line width=1.pt,color=zzttqq] (0.910840014438507,0.5) -- (1.089159985561492,0.5);
+\draw [line width=2.pt,color=zzttqq] (1.,1.)-- (0.,1.);
+%\draw [line width=1.pt,color=zzttqq] (0.5,0.9108400144385084) -- (0.5,1.0891599855614926);
+\draw [line width=2.pt,color=zzttqq] (0.,1.)-- (0.,0.);
+%\draw [line width=1.pt,color=zzttqq] (0.08915998556149246,0.5) -- (-0.08915998556149246,0.5);
+\draw [line width=.5pt,color=zzttqq] (3.,10.)-- (3.,0.);
+\draw [line width=.5pt,color=zzttqq] (4.,10.)-- (4.,0.);
+\draw [line width=.5pt,color=zzttqq] (5.,10.)-- (5.,0.);
+\draw [line width=.5pt,color=zzttqq] (6.,10.)-- (6.,0.);
+\draw [line width=.5pt,color=zzttqq] (7.,10.)-- (7.,0.);
+\draw [line width=.5pt,color=zzttqq] (8.,10.)-- (8.,0.);
+\draw [line width=.5pt,color=zzttqq] (9.,10.)-- (9.,0.);
+\draw [line width=.5pt,color=zzttqq] (10.,10.)-- (10.,0.);
+\draw [line width=.5pt,color=zzttqq] (11.,10.)-- (11.,0.);
+\draw [line width=.5pt,color=zzttqq] (2.,1.)-- (12.,1.);
+\draw [line width=.5pt,color=zzttqq] (2.,2.)-- (12.,2.);
+\draw [line width=.5pt,color=zzttqq] (2.,3.)-- (12.,3.);
+\draw [line width=.5pt,color=zzttqq] (2.,4.)-- (12.,4.);
+\draw [line width=.5pt,color=zzttqq] (2.,5.)-- (12.,5.);
+\draw [line width=.5pt,color=zzttqq] (2.,6.)-- (12.,6.);
+\draw [line width=.5pt,color=zzttqq] (2.,7.)-- (12.,7.);
+\draw [line width=.5pt,color=zzttqq] (2.,8.)-- (12.,8.);
+\draw [line width=.5pt,color=zzttqq] (2.,9.)-- (12.,9.);
+\draw [line width=2.pt,color=zzttqq] (2.,0.)-- (3.,0.);
+\draw [line width=2.pt,color=zzttqq] (3.,0.)-- (3.,1.);
+\draw [line width=2.pt,color=zzttqq] (3.,1.)-- (2.,1.);
+\draw [line width=2.pt,color=zzttqq] (2.,1.)-- (2.,0.);
+\draw [line width=2.pt,color=zzttqq] (2.,10.)-- (2.,0.);
+\draw [line width=2.pt,color=zzttqq] (2.,0.)-- (12.,0.);
+\draw [line width=2.pt,color=zzttqq] (12.,0.)-- (12.,10.);
+\draw [line width=2.pt,color=zzttqq] (12.,10.)-- (2.,10.);
+%\begin{scriptsize}
+\draw [fill=xdxdff] (0.,0.) circle (1.5pt);
+\draw [fill=xdxdff] (1.,0.) circle (1.5pt);
+\draw [fill=xdxdff] (1.,1.) circle (1.5pt);
+\draw [fill=xdxdff] (0.,1.) circle (1.5pt);
+\draw[color=zzttqq] (0.5,0.5) node {$1\,cm^2$};
+\draw[color=zzttqq] (0.5,-0.4) node {$1\,cm$};
+\draw [fill=xdxdff] (2.,0.) circle (1.5pt);
+\draw [fill=xdxdff] (12.,0.) circle (1.5pt);
+\draw [fill=xdxdff] (12.,10.) circle (1.5pt);
+\draw [fill=xdxdff] (2.,10.) circle (1.5pt);
+\draw[color=zzttqq] (7,5) node {$1\,dm^2$};
+\draw[color=zzttqq] (7,-0.4) node {$1\,dm$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Pp}
+
+\begin{Mt}
+Nous pouvons nous aider d'un tableau de conversion.
+
+\begin{center}
+\begin{tabular}{M{.5cm}|M{.5cm}||M{.5cm}|M{.5cm}||M{.5cm}|M{.5cm}||M{.5cm}|M{.5cm}||M{.5cm}|M{.5cm}||M{.5cm}|M{.5cm}||M{.5cm}|M{.5cm}}
+\multicolumn{2}{c}{$km^2$} & \multicolumn{2}{c}{$hm^2$} & \multicolumn{2}{c}{$dam^2$} & \multicolumn{2}{c}{$m^2$} & \multicolumn{2}{c}{$dm^2$} & \multicolumn{2}{c}{$cm^2$} & \multicolumn{2}{c}{$mm^2$} \\\hline
+ & & & & & & 2 & 5 & & & & & &  \\\hline
+  & & & & & & 2 & 5 & 0 & 0 & & & & \\\hline
+\end{tabular}
+\end{center}
+
+Ainsi : $25\,m^2=2\,500\,dm^2$.
+\end{Mt}
+
+\begin{ExOApp}[]
+Effectuer les conversions suivantes :
+\[28\,m^2=...\,cm^2\hspace{.5cm}4,32\,dm^2=...\,m^2\hspace{.5cm}1\,cm^2=...\,mm^2\hspace{.5cm}3,3\,dm^2=...\,mm^2\hspace{.5cm}2,1\,dm^2=...\,dam^2\]
+\end{ExOApp}
+
+\section{Calculs d'aire de surfaces particulières}
+
+\subsection{Aire d'un carré}
+
+\begin{Pp}
+L'aire d'un carré est donnée par la formule :
+\[\mathcal{A}_{carré}=côté\times côté\]
+\[\mathcal{A}_{carré}=c\times c\]
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+\clip(-0.5258160132035038,-0.9097206258865002) rectangle (6.482416380185364,6.303964834409533);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,6.) -- (6.,6.) -- (6.,0.) -- (0.,0.) -- cycle;
+\draw[line width=2.pt,color=zzttqq] (0.,5.515742477247899) -- (0.48425752275210066,5.515742477247899) -- (0.4842575227521006,6.) -- (0.,6.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq] (5.515742477247899,6.) -- (5.515742477247899,5.515742477247899) -- (6.,5.515742477247899) -- (6.,6.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq] (6.,0.4842575227521006) -- (5.515742477247899,0.48425752275210066) -- (5.515742477247899,0.) -- (6.,0.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq] (0.4842575227521006,0.) -- (0.48425752275210066,0.4842575227521006) -- (0.,0.4842575227521006) -- (0.,0.) -- cycle; 
+\draw [line width=1.2pt,color=zzttqq] (0.,6.)-- (6.,6.);
+\draw [line width=1.2pt,color=zzttqq] (2.954343762909519,6.114140592726204) -- (2.954343762909519,5.885859407273798);
+\draw [line width=1.2pt,color=zzttqq] (3.045656237090481,6.114140592726204) -- (3.045656237090481,5.885859407273798);
+\draw [line width=1.2pt,color=zzttqq] (6.,6.)-- (6.,0.);
+\draw [line width=1.2pt,color=zzttqq] (6.114140592726202,3.0456562370904816) -- (5.885859407273796,3.0456562370904816);
+\draw [line width=1.2pt,color=zzttqq] (6.114140592726202,2.9543437629095193) -- (5.885859407273796,2.9543437629095193);
+\draw [line width=1.2pt,color=zzttqq] (6.,0.)-- (0.,0.);
+\draw [line width=1.2pt,color=zzttqq] (3.045656237090481,-0.11414059272620306) -- (3.045656237090481,0.11414059272620306);
+\draw [line width=1.2pt,color=zzttqq] (2.954343762909519,-0.11414059272620306) -- (2.954343762909519,0.11414059272620306);
+\draw [line width=1.2pt,color=zzttqq] (0.,0.)-- (0.,6.);
+\draw [line width=1.2pt,color=zzttqq] (-0.11414059272620307,2.9543437629095193) -- (0.11414059272620307,2.9543437629095193);
+\draw [line width=1.2pt,color=zzttqq] (-0.11414059272620307,3.0456562370904816) -- (0.11414059272620307,3.0456562370904816);
+%\begin{scriptsize}
+\draw[color=zzttqq] (3,-0.7) node {$c$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Pp}
+
+\begin{ExOApp}[]
+\begin{enumerate}
+\item Un carré a un côté de $3\,cm$. Calculer son aire.
+\item Un carré a une aire de $64\,dm^2$. Calculer la longueur de son côté.
+\end{enumerate}
+\end{ExOApp}
+
+\subsection{Aire d'un rectangle}
+
+\begin{Pp}
+L'aire d'un rectangle est donnée par la formule :
+\[\mathcal{A}_{rectangle}=largeur\times Longueur\]
+\[\mathcal{A}_{rectangle}=l\times L\]
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.3cm,y=0.3cm]
+\clip(-1.3248001622869252,-1.2521424040651092) rectangle (11.55025869722878,6.92032403513103);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,6.) -- (10.,6.) -- (10.,0.) -- (0.,0.) -- cycle;
+\draw[line width=2.pt,color=zzttqq] (0.,5.515742477247899) -- (0.48425752275210066,5.515742477247899) -- (0.4842575227521006,6.) -- (0.,6.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq] (9.5157424772479,6.) -- (9.5157424772479,5.515742477247899) -- (10.,5.515742477247899) -- (10.,6.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq] (10.,0.4842575227521006) -- (9.5157424772479,0.48425752275210066) -- (9.5157424772479,0.) -- (10.,0.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq] (0.4842575227521006,0.) -- (0.48425752275210066,0.4842575227521006) -- (0.,0.4842575227521006) -- (0.,0.) -- cycle; 
+\draw [line width=1.pt,color=zzttqq] (0.,6.)-- (10.,6.);
+\draw [line width=1.pt,color=zzttqq] (5.,6.380468642420676) -- (5.,5.619531357579324);
+\draw [line width=1.pt,color=zzttqq] (10.,6.)-- (10.,0.);
+\draw [line width=1.pt,color=zzttqq] (10.114140592726201,3.0456562370904816) -- (9.885859407273795,3.0456562370904816);
+\draw [line width=1.pt,color=zzttqq] (10.114140592726201,2.9543437629095193) -- (9.885859407273795,2.9543437629095193);
+\draw [line width=1.pt,color=zzttqq] (10.,0.)-- (0.,0.);
+\draw [line width=1.pt,color=zzttqq] (5.,-0.3804686424206773) -- (5.,0.3804686424206773);
+\draw [line width=1.pt,color=zzttqq] (0.,0.)-- (0.,6.);
+\draw [line width=1.pt,color=zzttqq] (-0.11414059272620307,2.9543437629095193) -- (0.11414059272620307,2.9543437629095193);
+\draw [line width=1.pt,color=zzttqq] (-0.11414059272620307,3.0456562370904816) -- (0.11414059272620307,3.0456562370904816);
+%\begin{scriptsize}
+%\draw [fill=xdxdff] (0.,6.) circle (2.0pt);
+%\draw[color=xdxdff] (-0.5029878946582631,6.475175723498838) node {$A$};
+%\draw [fill=xdxdff] (10.,6.) circle (2.0pt);
+%\draw[color=xdxdff] (10.271884058695306,6.475175723498838) node {$B$};
+%\draw [fill=xdxdff] (10.,0.) circle (2.0pt);
+%\draw[color=xdxdff] (10.340368414331028,-0.1678067731661803) node {$C$};
+%\draw [fill=xdxdff] (0.,0.) circle (2.0pt);
+%\draw[color=xdxdff] (-0.5029878946582631,-0.23629112880190217) node {$D$};
+\draw[color=zzttqq] (5,-0.7) node {$L$};
+\draw[color=zzttqq] (-0.7,3) node {$l$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Pp}
+
+\begin{Pv}
+L'aire du rectangle correspond au nombre de carreaux verts unitaires rentrant à l'intérieur. Pour la calculer, on multiplie le nombre d'unité rentrant dans la largeur par le nombre d'unité rentrant dans la longueur. Ici :
+\[3\times5=15\,u\] 
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,, xstep=2.0cm,ystep=2.0cm] (-0.7997534357463911,-0.7727519146150565) grid (10.865415140871562,6.851839679495307);
+\clip(-0.7997534357463911,-0.7727519146150565) rectangle (10.865415140871562,6.851839679495307);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,6.) -- (10.,6.) -- (10.,0.) -- (0.,0.) -- cycle;
+\draw[line width=2.pt,color=zzttqq] (0.,5.515742477247899) -- (0.48425752275210066,5.515742477247899) -- (0.4842575227521006,6.) -- (0.,6.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq] (9.5157424772479,6.) -- (9.5157424772479,5.515742477247899) -- (10.,5.515742477247899) -- (10.,6.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq] (10.,0.4842575227521006) -- (9.5157424772479,0.48425752275210066) -- (9.5157424772479,0.) -- (10.,0.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq] (0.4842575227521006,0.) -- (0.48425752275210066,0.4842575227521006) -- (0.,0.4842575227521006) -- (0.,0.) -- cycle; 
+\fill[line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.,0.) -- (0.,2.) -- (2.,2.) -- (2.,0.) -- cycle;
+\draw [line width=1.pt,color=zzttqq] (0.,6.)-- (10.,6.);
+\draw [line width=1.pt,color=zzttqq] (5.,6.114140592726204) -- (5.,5.885859407273798);
+\draw [line width=1.pt,color=zzttqq] (10.,6.)-- (10.,0.);
+\draw [line width=1.pt,color=zzttqq] (10.114140592726201,3.0456562370904816) -- (9.885859407273795,3.0456562370904816);
+\draw [line width=1.pt,color=zzttqq] (10.114140592726201,2.9543437629095193) -- (9.885859407273795,2.9543437629095193);
+\draw [line width=1.pt,color=zzttqq] (10.,0.)-- (0.,0.);
+\draw [line width=1.pt,color=zzttqq] (5.,-0.11414059272620306) -- (5.,0.11414059272620306);
+\draw [line width=1.pt,color=zzttqq] (0.,0.)-- (0.,6.);
+\draw [line width=1.pt,color=zzttqq] (-0.11414059272620307,2.9543437629095193) -- (0.11414059272620307,2.9543437629095193);
+\draw [line width=1.pt,color=zzttqq] (-0.11414059272620307,3.0456562370904816) -- (0.11414059272620307,3.0456562370904816);
+\draw [line width=1.pt,color=qqwuqq] (0.,0.)-- (0.,2.);
+\draw [line width=1.pt,color=qqwuqq] (0.,2.)-- (2.,2.);
+\draw [line width=1.pt,color=qqwuqq] (2.,2.)-- (2.,0.);
+\draw [line width=1.pt,color=qqwuqq] (2.,0.)-- (0.,0.);
+\draw [line width=1.pt,color=qqwuqq] (2.,2.)-- (2.,6.);
+\draw [line width=1.pt,color=qqwuqq] (0.,4.)-- (2.,4.);
+\draw [line width=1.pt,color=qqwuqq] (2.,2.)-- (10.,2.);
+\draw [line width=1.pt,color=qqwuqq] (4.,2.)-- (4.,0.);
+\draw [line width=1.pt,color=qqwuqq] (6.,2.)-- (6.,0.);
+\draw [line width=1.pt,color=qqwuqq] (8.,0.)-- (8.,2.);
+%\begin{scriptsize}
+\draw [fill=xdxdff] (0.,6.) circle (2pt);
+\draw[color=xdxdff] (-0.5029878946582631,6.429519486408356) node {$A$};
+\draw [fill=xdxdff] (10.,6.) circle (2pt);
+\draw[color=xdxdff] (10.271884058695306,6.429519486408356) node {$B$};
+\draw [fill=xdxdff] (10.,0.) circle (2pt);
+\draw[color=xdxdff] (10.340368414331028,-0.21346301025666153) node {$C$};
+\draw [fill=xdxdff] (0.,0.) circle (2pt);
+\draw[color=xdxdff] (-0.5029878946582631,-0.2819473658923834) node {$D$};
+\draw[color=qqwuqq] (1,1) node {$unité$};
+\draw[color=qqwuqq] (1,3) node {$2$};
+\draw[color=qqwuqq] (1,5) node {$3$};
+\draw[color=qqwuqq] (3,1) node {$2$};
+\draw[color=qqwuqq] (5,1) node {$3$};\draw[color=qqwuqq] (7,1) node {$4$};\draw[color=qqwuqq] (9,1) node {$5$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Pv}
+
+\begin{ExOApp}[]
+\begin{enumerate}
+\item Un rectangle a une largeur de $6\,km$ et une aire de $90\,km^2$. Calculer sa longueur.
+\item Un rectangle a une longueur de $17\,dam$ et une largeur de $9\,dam$. Calculer son aire.
+\item Un rectangle a une longueur de $15\,m$ et une aire de $135\,m^2$. Calculer sa largeur.
+\end{enumerate}
+\end{ExOApp}
+
+\subsection{Aire d'un triangle}
+
+\begin{PpT}{Aire d'un triangle rectangle}
+L'aire d'un triangle rectangle est donnée par la formule :
+\[\mathcal{A}_{triangle\,rectangle}=\frac{a\times b}{2}\]
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6cm,y=0.6cm]
+\clip(-1.0736908582892786,-1.0695174557031843) rectangle (11.185008800504932,6.897495916585789);
+\draw[line width=2.pt,color=zzttqq] (0.4842575227521006,0.) -- (0.48425752275210066,0.4842575227521006) -- (0.,0.4842575227521006) -- (0.,0.) -- cycle; 
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,0.) -- (0.,6.) -- (10.,0.) -- cycle;
+%\draw [line width=2.pt,dash pattern=on 1pt off 1pt] (0.,6.)-- (10.,6.);
+%\draw [line width=2.pt,dash pattern=on 1pt off 1pt] (10.,6.)-- (10.,0.);
+\draw [line width=2.pt,color=zzttqq] (0.,0.)-- (0.,6.);
+\draw [line width=2.pt,color=zzttqq] (0.,6.)-- (10.,0.);
+\draw [line width=2.pt,color=zzttqq] (10.,0.)-- (0.,0.);
+%\begin{scriptsize}
+\draw [fill=xdxdff] (0.,6.) circle (2.0pt);
+\draw[color=xdxdff] (-0.5029878946582631,6.475175723498838) node {$A$};
+\draw [fill=xdxdff] (10.,0.) circle (2.0pt);
+\draw[color=xdxdff] (10.340368414331028,-0.1678067731661803) node {$B$};
+\draw [fill=xdxdff] (0.,0.) circle (2.0pt);
+\draw[color=xdxdff] (-0.5029878946582631,-0.23629112880190217) node {$C$};
+\draw[color=zzttqq] (0.41013684715136145,2.913989230441302) node {$b$};
+\draw[color=zzttqq] (4.7703074892923185,0.5626930202815192) node {$a$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{PpT}
+
+\begin{Pv}
+Il s'agit de l'aire d'un \textbf{demi-rectangle}, donc la moitié de l'aire du rectangle dont une des diagonales est $[AB]$.
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6cm,y=0.6cm]
+\clip(-1.0736908582892786,-1.0695174557031843) rectangle (11.185008800504932,6.897495916585789);
+\draw[line width=2.pt,color=zzttqq] (0.4842575227521006,0.) -- (0.48425752275210066,0.4842575227521006) -- (0.,0.4842575227521006) -- (0.,0.) -- cycle; 
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,0.) -- (0.,6.) -- (10.,0.) -- cycle;
+\draw [line width=1.pt,dash pattern=on 1pt off 2pt] (0.,6.)-- (10.,6.);
+\draw [line width=1.pt,dash pattern=on 1pt off 2pt] (10.,6.)-- (10.,0.);
+\draw [line width=2.pt,color=zzttqq] (0.,0.)-- (0.,6.);
+\draw [line width=2.pt,color=zzttqq] (0.,6.)-- (10.,0.);
+\draw [line width=2.pt,color=zzttqq] (10.,0.)-- (0.,0.);
+%\begin{scriptsize}
+\draw [fill=xdxdff] (0.,6.) circle (2.0pt);
+\draw[color=xdxdff] (-0.5029878946582631,6.475175723498838) node {$A$};
+\draw [fill=xdxdff] (10.,0.) circle (2.0pt);
+\draw[color=xdxdff] (10.340368414331028,-0.1678067731661803) node {$B$};
+\draw [fill=xdxdff] (0.,0.) circle (2.0pt);
+\draw[color=xdxdff] (-0.5029878946582631,-0.23629112880190217) node {$C$};
+\draw[color=zzttqq] (0.41013684715136145,2.913989230441302) node {$b$};
+\draw[color=zzttqq] (4.7703074892923185,0.5626930202815192) node {$a$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Pv}
+
+\begin{PpT}{Aire d'un triangle quelconque}
+L'aire d'un triangle quelconque est donné par la formule :
+\[\mathcal{A}_{triangle}=\frac{base\times hauteur}{2}\]
+\[\mathcal{A}_{triangle}=\frac{b\times h}{2}\]
+Où la \textcolor{ffqqqq}{hauteur (h)} désigne une perpendiculaire à un côté du triangle passant par le sommet opposé et la \textcolor{zzttqq}{base (b)} désigne le côté que la \textcolor{ffqqqq}{hauteur} coupe.
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6cm,y=0.6cm]
+\clip(-1.598737584829813,-0.5444707291626504) rectangle (10.979555733597763,7.6051675914882475);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,0.) -- (4.,6.) -- (10.,2.) -- cycle;
+\draw[line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (4.9050292862262665,1.474853568868666) -- (4.430175717357601,1.3798828550949327) -- (4.5251464311313345,0.9050292862262668) -- (5.,1.) -- cycle; 
+\draw [line width=2.pt,color=zzttqq] (0.,0.)-- (4.,6.);
+\draw [line width=2.pt,color=zzttqq] (4.,6.)-- (10.,2.);
+\draw [line width=2.pt,color=zzttqq] (10.,2.)-- (0.,0.);
+\draw [line width=2.pt,color=ffqqqq] (4.,6.)-- (5.,1.);
+%\draw [line width=2.pt,dash pattern=on 2pt off 2pt] (0.,0.)-- (-1.,5.);
+%\draw [line width=2.pt,dash pattern=on 2pt off 2pt] (-1.,5.)-- (9.,7.);
+%\draw [line width=2.pt,dash pattern=on 2pt off 2pt] (9.,7.)-- (10.,2.);
+%\begin{scriptsize}
+\draw [fill=xdxdff] (0.,0.) circle (2.0pt);
+\draw[color=xdxdff] (-0.6171284873844668,0.24309936064815066) node {$A$};
+\draw [fill=xdxdff] (4.,6.) circle (2.5pt);
+\draw[color=xdxdff] (4.15394828857082,6.429519486408356) node {$B$};
+\draw [fill=xdxdff] (10.,2.) circle (2.5pt);
+\draw[color=xdxdff] (10.157743465969101,2.4117706224460087) node {$C$};
+\draw[color=zzttqq] (5.135557386016167,0.38006807191959435) node {$b$};
+\draw [fill=uuuuuu] (5.,1.) circle (2.0pt);
+\draw[color=ffqqqq] (4.085463932935099,3.3020672457103926) node {$h$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{PpT}
+
+\begin{Rqs}
+\begin{itemize}
+\item Deux triangles de même hauteur et de même base ont la même aire.
+\item L'aire d'un triangle ne dépend pas du côté choisi.
+\end{itemize}
+\end{Rqs}
+
+\begin{ExOApp}[]
+Le triangle $ABC$ a une hauteur de $10\,mm$ et une aire de $85\,mm^2$. Calculer la longueur de sa base.
+\end{ExOApp}
+
+\subsection{Aire d'un disque}
+
+\begin{Def}
+Un \textbf{disque} est un cercle contenant une surface.
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-3.2258782096036835,-1.3387575571899715) rectangle (3.220423513612537,1.6953257957763235);
+\draw [line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (2.,0.) circle (1.cm);
+\draw [line width=2.pt] (-2.,0.) circle (1.cm);
+\begin{scriptsize}
+\draw [fill=xdxdff] (-2.,0.) circle (2.5pt);
+\draw[color=black] (-2,1.3) node {$cercle$};
+\draw [fill=xdxdff] (2.,0.) circle (2.5pt);
+\draw[color=zzttqq] (2,1.3) node {$disque$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Def}
+
+\begin{Pp}
+L'aire d'un disque est donnée par la formule :
+\[\mathcal{A}_{disque}=\pi \times rayon \times rayon=\pi \times rayon^2\]
+\[\mathcal{A}_{disque}=\pi \times r^2\]
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+%\clip(-0.4116754204773013,-4.356766526217832) rectangle (10.705618311054875,6.3952773085904955);
+\draw [line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.1] (5.021416793289964,1.0306694504589518) circle (2.363592350903993cm);
+\draw [line width=2.pt,color=qqwuqq] (5.021416793289964,1.0306694504589518)-- (9.221790605614236,3.19934071225681);
+%\begin{scriptsize}
+\draw [fill=ududff] (5.021416793289964,1.0306694504589518) circle (2.5pt);
+\draw[color=ududff] (4.450713829658948,1.3160209322744594) node {$A$};
+\draw [fill=ududff] (9.221790605614236,3.19934071225681) circle (2.5pt);
+\draw[color=ududff] (9.381587435430921,3.621660905343761) node {$B$};
+\draw[color=qqwuqq] (7.349884884904506,1.7497551846340311) node {$r$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Pp}
+
+\begin{Rq}
+$r^2$ se prononce "$r$ au carré" et signifie qu'il faut prendre le nombre $r\times r$.
+\end{Rq}
+
+\begin{Pv}
+La preuve de la formule de l'aire du disque a été apportée par le grand mathématicien Archimède. Il a découpé le disque en secteurs égaux puis les a rassemblés pour former une sorte de rectangle dont la largeur est le rayon et la longueur est la moitié du périmètre :
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-5.06354915382803,-6.147772259251827) rectangle (4.735026060140306,2.4059020054008484);
+\draw [line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10999999940395355] (0.,0.) circle (2.cm);
+\draw [line width=2.pt,color=zzttqq] (0.,2.)-- (0.,-2.);
+\draw [line width=2.pt,color=zzttqq] (-2.,0.)-- (2.,0.);
+\draw [line width=2.pt,color=zzttqq] (-1.4142135623730951,1.4142135623730951)-- (1.414213562373095,-1.414213562373095);
+\draw [line width=2.pt,color=zzttqq] (1.414213562373095,1.414213562373095)-- (-1.4142135623730951,-1.4142135623730951);
+\draw [shift={(-2.84,-5.4)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10999999940395355]  (0,0) --  plot[domain=1.1955255039389394:1.9809236673363877,variable=\t]({1.*2.128097742116184*cos(\t r)+0.*2.128097742116184*sin(\t r)},{0.*2.128097742116184*cos(\t r)+1.*2.128097742116184*sin(\t r)}) -- cycle ;
+\draw [shift={(-2.06,-3.42)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10999999940395355]  (0,0) --  plot[domain=4.3371181575287325:5.122516320926181,variable=\t]({1.*2.128097742116184*cos(\t r)+0.*2.128097742116184*sin(\t r)},{0.*2.128097742116184*cos(\t r)+1.*2.128097742116184*sin(\t r)}) -- cycle ;
+\draw [shift={(-1.2114718625761427,-5.3716147160748715)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10999999940395355]  (0,0) --  plot[domain=1.1955255039389394:1.9809236673363877,variable=\t]({1.*2.128097742116184*cos(\t r)+0.*2.128097742116184*sin(\t r)},{0.*2.128097742116184*cos(\t r)+1.*2.128097742116184*sin(\t r)}) -- cycle ;
+\draw [shift={(-0.4314718625761429,-3.391614716074871)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10999999940395355]  (0,0) --  plot[domain=4.3371181575287325:5.122516320926181,variable=\t]({1.*2.128097742116184*cos(\t r)+0.*2.128097742116184*sin(\t r)},{0.*2.128097742116184*cos(\t r)+1.*2.128097742116184*sin(\t r)}) -- cycle ;
+\draw [shift={(0.41705627484771446,-5.343229432149743)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10999999940395355]  (0,0) --  plot[domain=1.1955255039389394:1.9809236673363877,variable=\t]({1.*2.128097742116184*cos(\t r)+0.*2.128097742116184*sin(\t r)},{0.*2.128097742116184*cos(\t r)+1.*2.128097742116184*sin(\t r)}) -- cycle ;
+\draw [shift={(1.1970562748477143,-3.3632294321497422)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10999999940395355]  (0,0) --  plot[domain=4.3371181575287325:5.122516320926181,variable=\t]({1.*2.128097742116184*cos(\t r)+0.*2.128097742116184*sin(\t r)},{0.*2.128097742116184*cos(\t r)+1.*2.128097742116184*sin(\t r)}) -- cycle ;
+\draw [shift={(2.0455844122715714,-5.314844148224614)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10999999940395355]  (0,0) --  plot[domain=1.1955255039389392:1.9809236673363877,variable=\t]({1.*2.1280977421161844*cos(\t r)+0.*2.1280977421161844*sin(\t r)},{0.*2.1280977421161844*cos(\t r)+1.*2.1280977421161844*sin(\t r)}) -- cycle ;
+\draw [shift={(2.8255844122715716,-3.3348441482246134)},line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10999999940395355]  (0,0) --  plot[domain=4.337118157528732:5.122516320926181,variable=\t]({1.*2.1280977421161844*cos(\t r)+0.*2.1280977421161844*sin(\t r)},{0.*2.1280977421161844*cos(\t r)+1.*2.1280977421161844*sin(\t r)}) -- cycle ;
+%\draw [line width=2.pt] (-3.688528137423857,-3.448385283925129)-- (-2.84,-5.4);
+%\draw [line width=2.pt] (-3.688528137423857,-3.448385283925129)-- (2.8722786296747205,-3.3229307497861025);
+%\begin{scriptsize}
+%\draw [fill=zzttqq] (0.,0.) circle (2.0pt);
+%\draw [fill=xdxdff] (-3.688528137423857,-3.448385283925129) circle (2.5pt);
+%\draw [fill=xdxdff] (-2.84,-5.4) circle (2.5pt);
+\draw[color=black] (-3.9592015374996326,-4.531408929898445) node {$r$};
+%\draw [fill=xdxdff] (2.8722786296747205,-3.3229307497861025) circle (2.5pt);
+\draw[color=black] (-0.12410345170464818,-2.724294648633796) node {$\frac{\mathcal{P}}{2}$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+En augmentant le nombre de secteurs la forme ressemble de plus en plus à un rectangle et pour un nombre infini de secteur elle devient un rectangle. La formule de l'aire du rectangle nous donne :
+\[\mathcal{A}_{disque}=r\times \frac{\mathcal{P}}{2}=r\times \frac{2\times\pi\times r}{2}=\pi \times r \times r\]
+\end{Pv}
+
+\begin{ExOApp}[]
+Déterminer l'aire du disque de centre O et de rayon $4\,hm$.
+\end{ExOApp}
+
+\section{Formulaire}
+
+\begin{Pp}
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-1.1508968623201985,-5.535831819898127) rectangle (14.729158042124956,2.4283294543676694);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,0.) -- (0.,2.) -- (2.,2.) -- (2.,0.) -- cycle;
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (4.,2.) -- (4.,0.) -- (8.,0.) -- (8.,2.) -- cycle;
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,-2.) -- (0.,-4.) -- (3.,-4.) -- cycle;
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (6.,-2.) -- (5.,-4.) -- (9.,-3.) -- cycle;
+\draw [line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.14000000059604645] (12.,-1.) circle (1.54cm);
+\draw[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.34130378445434223,-4.) -- (0.3413037844543423,-3.6586962155456577) -- (0.,-3.6586962155456577) -- (0.,-4.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,1.6586962155456577) -- (0.3413037844543423,1.6586962155456577) -- (0.34130378445434223,2.) -- (0.,2.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (1.6586962155456577,2.) -- (1.6586962155456577,1.6586962155456577) -- (2.,1.6586962155456577) -- (2.,2.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (2.,0.34130378445434223) -- (1.6586962155456577,0.3413037844543423) -- (1.6586962155456577,0.) -- (2.,0.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.34130378445434223,0.) -- (0.3413037844543423,0.34130378445434223) -- (0.,0.34130378445434223) -- (0.,0.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (4.,1.6586962155456577) -- (4.341303784454342,1.6586962155456577) -- (4.341303784454342,2.) -- (4.,2.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (7.658696215545658,2.) -- (7.658696215545658,1.6586962155456577) -- (8.,1.6586962155456577) -- (8.,2.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (8.,0.34130378445434223) -- (7.658696215545658,0.3413037844543423) -- (7.658696215545658,0.) -- (8.,0.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (4.341303784454342,0.) -- (4.341303784454342,0.34130378445434223) -- (4.,0.34130378445434223) -- (4.,0.) -- cycle; 
+\draw[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (6.7428780126419525,-3.564280496839512) -- (6.660099685952052,-3.233167190079913) -- (6.328986379192454,-3.315945516769813) -- (6.411764705882353,-3.6470588235294117) -- cycle; 
+\draw [line width=2.pt,color=zzttqq] (0.,0.)-- (0.,2.);
+\draw [line width=2.pt,color=zzttqq] (-0.09653528817291887,1.) -- (0.09653528817291887,1.);
+\draw [line width=2.pt,color=zzttqq] (0.,2.)-- (2.,2.);
+\draw [line width=2.pt,color=zzttqq] (1.,2.0965352881729187) -- (1.,1.903464711827081);
+\draw [line width=2.pt,color=zzttqq] (2.,2.)-- (2.,0.);
+\draw [line width=2.pt,color=zzttqq] (2.0965352881729196,1.) -- (1.9034647118270818,1.);
+\draw [line width=2.pt,color=zzttqq] (2.,0.)-- (0.,0.);
+\draw [line width=2.pt,color=zzttqq] (1.,-0.09653528817291875) -- (1.,0.09653528817291875);
+\draw [line width=2.pt,color=zzttqq] (4.,2.)-- (4.,0.);
+\draw [line width=2.pt,color=zzttqq] (4.096535288172918,1.) -- (3.9034647118270804,1.);
+\draw [line width=2.pt,color=zzttqq] (4.,0.)-- (8.,0.);
+\draw [line width=2.pt,color=zzttqq] (5.959776963261284,0.09653528817291875) -- (5.959776963261284,-0.09653528817291875);
+\draw [line width=2.pt,color=zzttqq] (6.040223036738716,0.09653528817291875) -- (6.040223036738716,-0.09653528817291875);
+\draw [line width=2.pt,color=zzttqq] (8.,0.)-- (8.,2.);
+\draw [line width=2.pt,color=zzttqq] (7.903464711827081,1.) -- (8.09653528817292,1.);
+\draw [line width=2.pt,color=zzttqq] (8.,2.)-- (4.,2.);
+\draw [line width=2.pt,color=zzttqq] (6.040223036738716,1.903464711827081) -- (6.040223036738716,2.0965352881729187);
+\draw [line width=2.pt,color=zzttqq] (5.959776963261284,1.903464711827081) -- (5.959776963261284,2.0965352881729187);
+\draw [line width=2.pt,color=zzttqq] (0.,-2.)-- (0.,-4.);
+\draw [line width=2.pt,color=zzttqq] (0.,-4.)-- (3.,-4.);
+\draw [line width=2.pt,color=zzttqq] (3.,-4.)-- (0.,-2.);
+\draw [line width=2.pt,color=zzttqq] (6.,-2.)-- (5.,-4.);
+\draw [line width=2.pt,color=zzttqq] (5.,-4.)-- (9.,-3.);
+\draw [line width=2.pt,color=zzttqq] (9.,-3.)-- (6.,-2.);
+\draw [line width=2.pt] (12.,-1.)-- (10.46,-1.);
+\draw (-0.45906063041427997,-0.35510468795148753) node[anchor=north west] {$\mathcal{A}_{carré}=c\times c=c^2$};
+\draw (4.769934145618826,-0.3390154732560011) node[anchor=north west] {$\mathcal{A}_{rectangle}=l\times L$};
+\draw (-0.2659900540684422,-4.0234456385224) node[anchor=north west] {$\mathcal{A}_{triangle\;rectangle}=\frac{b\times h}{2}$};
+\draw (5.220432157092447,-3.991267209131427) node[anchor=north west] {$\mathcal{A}_{triangle}=\frac{b\times h}{2}$};
+\draw (10.079374995129363,-2.623683960015078) node[anchor=north west] {$\mathcal{A}_{disque}=\pi\times r\times r =\pi\times r^2$};
+\draw [line width=2.pt] (6.411764705882353,-3.6470588235294117)-- (6.,-2.);
+%\begin{scriptsize}
+\draw[color=zzttqq] (1.0372363362659625,0.4091330100841192) node {$c$};
+\draw[color=zzttqq] (4.43206063701361,1.0527015979035774) node {$l$};
+\draw[color=zzttqq] (5.944446818389339,0.5217575129525244) node {$L$};
+\draw[color=zzttqq] (0.26495403088261155,-2.9856912906635236) node {$h$};
+\draw[color=zzttqq] (1.3107529860892326,-3.6) node {$b$};
+\draw[color=zzttqq] (7.143093313203082,-3.8) node {$b$};
+\draw[color=black] (11.269976882595364,-0.6044875157315277) node {$r$};
+\draw[color=black] (6.491480118035879,-2.6156393526673347) node {$h$};
+%\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{Pp}
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\begin{itemize}
+\item Savoir exprimer l'aire d'une figure en fonction d'une unité d'aire.
+\item Savoir convertir des unités d'aire.
+\item Savoir calculer l'aire d'un carré.
+\item Savoir calculer l'aire d'un rectangle.
+\item Savoir calculer l'aire d'un triangle.
+\item Savoir calculer l'aire d'un disque.
+\item Savoir résoudre un problème d'aire.
+\end{itemize}
+\end{CpsCol}
+
+
+\end{document}

@@ -1,0 +1,333 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+%\chapter{Titre du chapitre}
+%{URL du cours}
+%
+%\begin{pageCours}
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\begin{itemize}
+\item Savoir traduire une phrase par un calcul
+\item Savoir déterminer l'opposé d'un nombre. 
+\item Savoir déterminer l'inverse d'un nombre non nul. 
+\item Savoir utiliser le vocabulaire des opérations.
+\item Savoir ajouter ou soustraire, multiplier ou diviser des nombres relatifs.
+\item Savoir effectuer un enchainement d'opérations avec des nombres relatifs.
+\item Savoir produire des fractions égales.
+\item Savoir déterminer si des fractions sont égales.         
+\item Savoir ajouter ou soustraire, multiplier ou diviser des fractions.
+\item Savoir effectuer un enchainement d'opérations avec des fractions.
+\item Savoir résoudre un problème avec des fractions.
+\end{itemize}
+\end{CpsCol}
+
+\section{Vocabulaire}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Vocabulaire des opérations}
+\begin{itemize}
+\item La somme de deux nombres est le résultat de l'addition de ces nombres.
+\item La différence de deux nombres est le résultat de la soustraction de ces nombres.
+\item Le produit de deux nombres est le résultat de la multiplication de ces nombres.
+\item Le quotient de deux nombres est le résultat de la division de ces nombres.
+\end{itemize}
+\end{DefT}
+}{.48\linewidth}{
+\begin{Ex}
+La phrase :
+\[\text{\textbf{A est le produit de 20 par la différence de 7 par 2.}}\]
+se traduit par la ligne de calcul :
+\[A=20\times(7-2)\]
+\end{Ex}
+}
+
+\mini{.68\linewidth}{
+\begin{DefT}{Nombres opposés}
+Deux nombres relatifs sont dit \textbf{opposés} lorsque leur \textbf{somme est égale à 0}.
+\end{DefT}
+
+\begin{Pp}
+\begin{itemize}
+\item Deux nombres \textbf{opposés} sont de \textbf{signes contraires}.
+\item L'opposé d'un nombre $a$ se note $-a$ et il vérifie : $a+(-a)=0$ et $-a=(-1)\times a$
+\end{itemize}
+\end{Pp}
+}{.28\linewidth}{
+\begin{Ex}
+L'opposé du nombre $-41$ est $+41$. On a
+\[-41+41=0\]
+\end{Ex}
+}
+
+\mini{.68\linewidth}{
+\begin{DefT}{Nombres inverses}
+Deux nombres non nuls sont dits \textbf{inverses} lorsque leur \textbf{produit est égal à 1}.
+\end{DefT}
+\begin{Pp}
+\begin{itemize}
+\item Deux nombres \textbf{inverses} sont de \textbf{même signes}.
+\item L'inverse d'un nombre $a$ non nul se note $\frac{1}{a}$ et il vérifie : $a\times\frac{1}{a}=1$ et $1\div a=\frac{1}{a}$
+\end{itemize}
+\end{Pp}
+}{.28\linewidth}{
+\begin{Ex}
+L'inverse du nombres $-0,1$ est $-10$. On a : \[-0,1\times -10=1\]
+\end{Ex} 
+}
+
+\section{Opérations avec des nombres relatifs}
+
+\mini{.58\linewidth}{
+\begin{PpT}{Addition de deux nombres relatifs}
+\begin{itemize}
+\item Pour additionner des nombres relatifs de même signe, on garde leur signe commun et on ajoute leur partie numérique.
+\item Pour additionner des nombres relatifs de signes contraires, on garde le signe de celui qui a la plus grande partie numérique et on calcule la différence entre la plus grande partie numérique et la plus petite.
+\end{itemize}
+\end{PpT}
+}{.38\linewidth}{
+\begin{Ex}
+Calcul de la somme : $A=(-3)+(+15)$
+
+$(+15)$ et $(-3)$ ne sont pas de même signe, on soustrait $15-3=12$ et on conserve le signe de $(+15)$
+
+\[A=(+15)+(-3)=12\]
+\end{Ex}
+}
+
+\mini{.48\linewidth}{
+\begin{PpT}{Soustraction de deux nombres relatifs}
+\textbf{Soustraire un nombre} revient à \textbf{ajouter son opposé}.
+\end{PpT}
+}{.48\linewidth}{
+\begin{Ex}
+Calcul de la différence : $A=(-144)\textcolor{red}{-}(+1)$
+
+\[A=(-144)\textcolor{red}{+}(\textcolor{sacado_violet}{-1})=-145\]
+\end{Ex}
+}
+
+\mini{.48\linewidth}{
+\begin{PpT}{Multiplication de deux nombres relatifs}
+\begin{itemize}
+\item Le \textbf{produit} de deux nombres de \textbf{même signe} est \textbf{positif}.
+\item Le \textbf{produit} de deux nombres de \textbf{signes contraires} est \textbf{négatif}.
+\end{itemize}
+\end{PpT}
+}{.48\linewidth}{
+\begin{Ex}
+Calcul du produit : $A=(+12)\times(-4)$
+
+Le produit de deux nombres de signes contraires est négatif, donc $A$ est négatif. On a :
+
+\[A=-48\]
+\end{Ex}
+}
+
+\mini{.48\linewidth}{
+\begin{PpT}{Division de deux nombres relatifs}
+\begin{itemize}
+\item Le \textbf{quotient} de deux nombres de \textbf{même signe} est \textbf{positif}.
+\item Le \textbf{quotient} de deux nombres de \textbf{signes contraires} est \textbf{négatif}.
+\end{itemize}
+\end{PpT}
+}{.48\linewidth}{
+\begin{Ex}
+Calcul du quotient : $A=(-135)\div(-15)$
+
+Le quotient de deux nombres de même signe est positif, donc $A$ est positif. On a :
+
+\[A=+9\]
+
+On vérifie que : $(+9)\times(-15)=-135$
+\end{Ex}
+}
+
+\section{Signe d'un produit ou d'un quotient}
+
+\mini{.48\linewidth}{
+\begin{PpT}{Signe d'un produit de plusieurs facteurs}
+Si dans un \textbf{produit} de \textbf{plusieurs facteurs} :
+\begin{itemize}
+\item Il y a un \textbf{nombre pair} de facteurs \textbf{négatifs}, alors le produit est \textbf{positif}.
+\item Il y a un \textbf{nombre impair} de facteurs \textbf{négatifs}, alors le produit est \textbf{négatif}.
+\end{itemize}
+\end{PpT}
+}{.48\linewidth}{
+\begin{Ex}
+Pour déterminer le signe de : 
+
+\[A=-(-4)\times(-6)\times(-8)=(-1)\times(-4)\times(-6)\times(-8)\]
+Il y a un nombre pair de facteurs négatifs, donc $A$ est un nombre positif.
+\end{Ex}
+}
+
+\begin{Rq}
+Les mêmes règles s'appliquent dans le cas d'un \textbf{quotient}.
+\end{Rq}
+
+\begin{Ex}
+Pour déterminer le signe de :
+
+\[A=-\frac{(+1)\times(-9)}{(+9)}=\frac{(-1)\times(+1)\times(-9)}{(+9)}\]
+
+Il y a un nombre pair de facteurs négatifs, donc $A$ est un nombre positif.
+\end{Ex}
+
+\section{Fractions égales}
+
+\mini{.48\linewidth}{
+\begin{Pp}
+Un \textbf{quotient ne change pas} si on divise ou on multiplie son numérateur et son dénominateur par un \textbf{même nombre} non nul.
+
+Traduction en langage mathématique :
+Pour tous nombres $a$, $b$ et $k$ ($b\neq0$ et $k\neq0$),
+\[\frac{a}{b}=\frac{a\times k}{b\times k}\]
+\end{Pp}
+}{.48\linewidth}{
+\begin{Ex}
+\[\frac{72}{45}=\frac{72\textcolor{red}{\div9}}{45\textcolor{red}{\div9}}=\frac{8}{5}\]
+\end{Ex}
+}
+
+\qr{}{Reconnaitre des fractions égales}
+
+\mini{.48\linewidth}{
+\begin{PpT}{Fractions égales et produit en croix}
+Pour tous nombres $a$, $b$, $c$ et $d$ ($b$ et $d$ non nuls) :
+\[\frac{a}{b}=\frac{c}{d}\Leftrightarrow a\times d=c\times b\]
+\end{PpT}
+}{.48\linewidth}{
+\begin{Ex}
+Pour déterminer si $\frac{168}{105}$ et $\frac{160}{100}$ sont égales, on effectue le produit en croix :
+\[168\times100=\np{168000}\hspace{1cm}105\times160=\np{168000}\]
+donc $168\times100=105\times160$ donc $\frac{168}{105}=\frac{160}{100}$
+\end{Ex}
+}
+
+\qr{}{Compléter une égalité de fractions}
+
+\section{Fractions et nombres relatifs}
+
+\mini{.48\linewidth}{
+\begin{DefT}{Opposé d'une fraction}
+L'opposé d'une fraction $\frac{a}{b}$ se note $-\frac{a}{b}$ ou $\frac{-a}{b}$
+\end{DefT}
+}{.48\linewidth}{
+\begin{Ex}
+L'opposé de la fraction $\frac{2}{19}$ est noté $-\frac{2}{19}$.
+En effet : 
+\[\frac{2}{19}+(-\frac{2}{19})=\frac{2-2}{19}=\frac{0}{19}=0\]
+\end{Ex}
+}
+
+\begin{Pp}
+Pour tous nombres $a$ et $b$ ($b$ non nul), on a :
+\[\frac{-a}{-b}\hspace{1cm}-\frac{a}{b}=\frac{-a}{b}=\frac{a}{-b}\]
+\end{Pp}
+
+\mini{.48\linewidth}{
+\qr{•}{Déterminer le signe d'une fraction}
+}{.48\linewidth}{
+\qr{•}{Simplifier une fraction avec des nombres relatifs}
+}
+
+\section{Opérations avec des fractions}
+
+\mini{.58\linewidth}{
+\begin{PpT}{Ajouter ou soustraire des fraction}
+Pour \textbf{ajouter} (ou \textbf{soustraire}) deux fractions de \textbf{même dénominateur}, il suffit d'\textbf{ajouter} (ou de \textbf{soustraire}) les \textbf{numérateurs} et de conserver le dénominateur commun.
+
+Traduction en langage mathématiques :
+
+Pour tous nombres $a$, $b$ et $c$ ($c\neq0$)
+\[\frac{a}{c}+\frac{b}{c}=\frac{a+b}{c}\hspace{1cm}\frac{a}{b}-\frac{b}{c}=\frac{a-b}{c}\]
+\end{PpT}
+\begin{Rq}
+Si les fractions ont des dénominateurs différents, il faut les réduire au même dénominateur pour pouvoir les ajouter ou les soustraire.
+\end{Rq}
+}{.38\linewidth}{
+\begin{Ex}
+Calcul de : $A=\frac{3}{2}-\frac{1}{4}$
+\[A=\frac{3\times2}{2\times2}-\frac{1}{4}=\frac{6}{4}-\frac{1}{4}=\frac{6-1}{4}=\frac{5}{4}\]
+\end{Ex}
+}
+
+\mini{.48\linewidth}{
+\begin{PpT}{Multiplier des fractions}
+Pour \textbf{multiplier} deux fractions, il suffit de \textbf{multiplier les numérateurs} entre eux et \textbf{les dénominateurs} entre eux.
+\end{PpT}
+}{.48\linewidth}{
+\begin{Ex}
+Calcul de : $A=\frac{4}{6}\times\frac{3}{9}$
+
+\[A=\frac{4\times3}{6\times9}=\frac{12}{54}\]
+
+On peut simplifier :
+
+\[A=\frac{12}{54}=\frac{2\times6}{9\times6}=\frac{2}{9}\]
+\end{Ex}
+}
+
+\mini{.48\linewidth}{
+\begin{PpT}{Diviser des fractions}
+Pour tous nombres $a$, $b$, $c$ et $d$ ($b$, $c$ et $d$ non nuls). On a :
+\[\frac{a}{b}\div\frac{c}{d}=\frac{a}{b}\times\frac{d}{c}\]
+\end{PpT}
+}{.48\linewidth}{
+\begin{Ex}
+Calcul de : $A=\frac{12}{5}\div\frac{9}{10}$
+
+\[A=\frac{12}{5}\times\frac{10}{9}=\frac{2\times2\times3}{5}\times\frac{2\times5}{3\times3}=\frac{8}{3}\]
+\end{Ex}
+}
+
+\end{document}
+
+%\end{pageCours}
