@@ -1,0 +1,389 @@
+\input{../MISC/preambule_sacado.tex}
+\input{../MISC/environnements_sacado.tex}
+\input{../MISC/macro_sacado.tex}
+
+\title{Mathématiques 6e  : le livre sacado}
+\author{L'équipe SACADO}
+
+\usepackage{multido}
+
+\begin{document}
+
+%\maketitle
+
+\chapter{Les nombres entiers}{2} %XX = numero du chapitre
+{https://sacado.xyz/qcm/parcours_show/32270/147706}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+ 		\item Savoir écrire un nombre entier en lettres.
+		\item Savoir écrire un nombre entier en chiffres.
+		\item Savoir déterminer la valeur d'un chiffre selon sa position.
+		\item Savoir déterminer un nombre de ... dans un nombre entier.
+		\item Savoir décomposer un nombre entier.
+		\item Savoir comparer des nombres entiers.
+		\item Savoir encadrer un nombre entier.
+		\item Savoir repérer un nombre entier sur une demi-droite graduée.
+		\item Savoir placer un nombre sur une demi-droite graduée.
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
+\end{His}
+
+\begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
+% Un exercice de découverte/d'accroche
+\end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Nombres entiers}
+
+\begin{Def}
+Un \textbf{nombre entier} est un nombre qui peut s'écrire \textbf{sans virgule}
+\end{Def}
+
+\begin{Rqs}
+\begin{itemize}
+\item $0$, $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$ et $9$ sont les dix \textbf{chiffres} qui permettent d'écrire tous les nombres entiers.
+\item Pour pouvoir lire les grands nombres entiers facilement, on regroupe les chiffres par groupe de 3 : $345\,202$
+\end{itemize}
+\end{Rqs}
+
+\begin{Reg}
+Règles orthographiques pour l'écriture des nombres :
+\begin{itemize}
+    \item Un trait d'union entre chaque mot.
+    \item Les mots servant à écrire les nombres sont tous invariable sauf :
+    \begin{itemize}
+        \item Au pluriel million et milliard prennent un 's'.
+        \item Au pluriel cent et vingt prennent un 's' lorsqu'ils ne sont pas suivi par un autre nombre.
+    \end{itemize}
+\end{itemize}
+\end{Reg}
+
+\begin{Ex}
+\begin{itemize}
+\item $895$ s'écrit : 'huit-cent-quatre-vingt-quinze'
+\item $1\,200$ s'écrit : 'mille-deux-cents'
+\item $1\,230$ s'écrit : 'mille-deux-cent-trente'
+\item $1\,280$ s'écrit : 'mille-deux-cent-quatre-vingts'
+\item $1\,285$ s'écrit : 'mille-deux-cent-quatre-vingt-cinq'
+\end{itemize}
+\end{Ex}
+
+\section{Position d'un chiffre dans un nombre}
+
+\begin{Def}
+\begin{itemize}
+\item Notre système numérique est un \textbf{système décimal} (numération décimale).
+\item Chaque \textbf{chiffre} à une valeur en fonction de sa \textbf{position} dans le nombre (numération de position)
+\end{itemize}
+\end{Def}
+
+\begin{Ex}
+Un million = $1\,000\,000$ unités
+\end{Ex}
+
+\begin{DefT}{Vocabulaire}
+Chaque position (rang) possède un nom spécifique : unité, dizaine, centaines....
+    
+\begin{center}
+    \includegraphics[width=13cm]{FIG/tableau_position.png}
+\end{center}
+\end{DefT}
+
+\begin{Mt}
+Décomposition de $437\,640\,881$ :
+\begin{itemize}
+\item Décomposition 1 : 
+\[437\,000\,000+640\,000+881\]
+\item Décomposition 2 :
+\[(437\times1\,000\,000)+(640\times 1\,000)+(881\times1)\]
+\item Décomposition 3 :
+\[400\,000\,000+30\,000\,000+7\,000\,000+600\,000+40\,000+800+80+1\]
+\item Décomposition 4 :
+\[4\times100\,000\,000+3\times10\,000\,000+7\times1\,000\,000+6\times100\,000+4\times10\,000+8\times100+8\times10+1\times1\]
+\end{itemize}
+\end{Mt}
+
+\section{Comparer des nombres entiers}
+
+\begin{Def}
+\textbf{Comparer} deux nombres, c'est trouver le \textbf{plus grand} (ou le \textbf{plus petit}) ou dire s'ils sont \textbf{égaux}.
+
+On utilise les \textbf{symboles de comparaison} :
+\begin{center}
+est supérieur à ($>$) \hspace{1cm} est inférieur à ($<$) \hspace{1cm} est égal à ($=$)
+\end{center}
+\end{Def}
+
+\begin{Ex}
+$29\,874\,492$ est plus grand que $27\,514\,420$ donc $29\,874\,492>27\,514\,420$.
+\end{Ex}
+
+\begin{Def}
+\begin{itemize}
+\item Ranger des nombres dans \textbf{l'ordre croissant} signifie les ranger \textbf{du plus petit au plus grand}.
+\item Ranger des nombres dans \textbf{l'ordre décroissant} signifie les ranger \textbf{du plus grand au plus petit}.
+\end{itemize}
+\end{Def}
+
+
+\section{Encadrer un nombre entier}
+
+\begin{Def}
+\textbf{Encadrer} un nombre, c'est trouver un nombre plus petit et un nombre plus grand.
+
+La \textbf{précision de l'encadrement} est la \textbf{différence} entre les deux nombres trouvés.
+\end{Def}
+
+\begin{Ex}
+Encadrement du nombre $56$ :
+ \begin{itemize}
+\item Encadrement à la dizaine : \(50 < 56< 60\)
+
+\item Encadrement au centième : \(0 < 56< 100\)
+ \end{itemize}
+\end{Ex}
+
+\section{Nombres entiers et demi-droite graduée}
+
+\begin{Def}
+Une \textbf{demi-droite graduée} est une \textbf{demi-droite} sur laquelle on a reporté une \textbf{unité de longueur} régulièrement à partir de son \textbf{origine}.
+
+Sur une demi-droite graduée, \textbf{un point} est repéré par \textbf{un nombre}, son \textbf{abscisse}.
+
+Si un point $A$ a pour abscisse $6$, on note : $A(6)$.
+
+L'origine est repérée par le nombre $0$.
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+xmin=-0.1994343408245771,
+xmax=9.60761325487766,
+ymin=-0.4707007586686898,
+ymax=0.44760621908013903,
+xtick={-0.0,1.0,...,9.0},
+ytick={-0.0,1.0,...,0.0},]
+\clip(-0.1994343408245771,-0.4707007586686898) rectangle (9.60761325487766,0.44760621908013903);
+\draw [->,line width=2.pt] (0.,0.) -- (9.619386421259055,0.);
+\begin{scriptsize}
+\draw [fill=xdxdff] (6.,0.) circle (2.5pt);
+\draw[color=xdxdff] (6.087436506840482,0.21802947464293182) node {$A$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\end{Def}
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
+  
+\end{ExoCu}
+
+%Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Quatrième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Cinquième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Sixième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+%Premier exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Deuxième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Troisième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Quatrième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Cinquième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Sixième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Sixième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Page algorithmique
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAlgo} % Début de la page d'exos d'algorithmique
+
+%Exercice d'algorithmique
+\begin{ExoAlgoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgoN}
+
+%Exercice d'algorithmique
+\begin{ExoAlgo}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgo}
+
+\end{pageAlgo} % Fin de la page d'exos d'algorithmique
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}
