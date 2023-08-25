@@ -1,0 +1,896 @@
+\chapter{Arithmétique}
+{https://sacado.xyz/qcm/parcours_show_course/0/117129}
+{
+
+
+ \begin{CpsCol}
+\textbf{Les savoir-faire du parcours}
+ \begin{itemize}
+ \item \textbf{Utiliser des nombres pour calculer et résoudre des problèmes}
+ \item Connaitre les bases de l'arithmétique
+ \item Simplifier une fraction pour la rendre irréductible
+ \end{itemize}
+ \end{CpsCol}
+
+ \begin{His}
+   
+  \hfill{\em Dieu a fait les nombres entiers, tout le reste est l'œuvre de l'Homme}
+
+  \hfill{Leopold Kronecker}
+
+     \bigskip
+
+     
+\begin{minipage}[b]{0.6\textwidth}{L'arithmétique est la branche des mathématiques qui étudie
+  les nombres entiers et les opérations $+$, $-$, $\times$, $\div$,...
+  Comme le relève la citation en exergue, les concepts de l'arithmétique
+  sont élémentaires et fondamentaux.
+
+  Mais cela ne signifie pas que
+  les problèmes de l'arithmétique sont simples. Par exemple,
+  les nombres premiers sont source de nombreux problèmes
+  non résolus à ce jour, en particulier l'{\em hypothèse de Riemann}
+  qui porte sur la {\em fonction zêta} et qui est reliée à la
+  répartition des nombres premiers.
+
+  L'importance de l'arithmétique dépasse les mathématiques : la plupart des
+  cryptosystèmes (algorithmes qui permettent la sécurité des
+  communications sur internet) sont fondés sur l'arithmétique.
+  }
+\end{minipage}
+\begin{minipage}[b]{0.4\textwidth}
+\begin{center}    
+  \includegraphics[width=5.5cm]{FIG/zeta7b.png}
+
+  Une représentation de la fonction zêta de Riemann
+
+\end{center}
+\end{minipage}
+
+\end{His}
+
+ 
+
+\begin{ExoDec}{Chercher.}{1234}{1}{0}{0}{0}
+
+Pour fêter les 25 ans de sa boutique, un chocolatier souhaite offrir aux premiers clients de la journée une boîte contenant des truffes au chocolat.
+Il a confectionné 300 truffes : 125 truffes parfumées au café et 175 truffes enrobées de noix de coco, et toutes les boîtes devront être identiques : elles
+devront contenir le même nombre de truffes café, et le même nombre
+de truffes noix de coco.
+
+Combien, au minimum,  y aura-t-il de truffes de chaque sorte dans chaque boîte ?
+ 
+\end{ExoDec}
+
+
+
+}
+
+\begin{pageCours}
+
+
+\section{Les nombres entiers naturels et nombres entiers relatifs}
+
+\begin{DefT}{Entiers naturels et relatifs.}
+
+\begin{enumerate}
+<<<<<<< HEAD
+\item On appelle \textbf{entiers naturels} les nombres : $0$ ; $1$ ; $2$ ; $3$ ; $\ldots$  Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\N$}, on a donc : $\N =  \lbrace 0 ; 1 ; 2 ; 3 \ldots \rbrace $
+ 
+\item  On appelle \textbf{entiers relatifs} ou simplement \textbf{entiers} les nombres entiers naturels et leurs opposés. Leur ensemble est noté $\Z$ \index{Ensemble de nombres! Entiers $\Z$}(d'après le mot allemand Zahl qui signifie chiffre, nombre).
+On a donc : $\Z = \lbrace \ldots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
+=======
+\item On appelle \textbf{entiers naturels} les nombres : $0$ ; $1$ ; $2$ ; $3$ ; $\ldots$  Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\mathbb N$}, on a donc : $\mathbb N=  \lbrace 0 ; 1 ; 2 ; 3 \ldots \rbrace $
+ 
+\item  On appelle \textbf{entiers relatifs} ou simplement \textbf{entiers} les nombres entiers naturels et leurs opposés. Leur ensemble est noté $\mathbb Z$ \index{Ensemble de nombres! Entiers $\mathbb Z$}(d'après le mot allemand Zahl qui signifie chiffre, nombre).
+On a donc : $\mathbb Z = \lbrace \ldots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+Parfois, on dit abusivement que les nombres entiers sont les nombres sans partie décimale.
+\end{enumerate}
+\end{DefT}
+
+\begin{minipage}{0.6\linewidth}
+\begin{Rqs} 
+\begin{itemize}[leftmargin=*]
+\item L'ensemble des nombres entiers $\Z$ contient l'ensemble des nombres naturels $\N$. 
+
+On écrit $\mathbb N  \subset \mathbb Z$ et on dit que l'ensemble $\mathbb N$ est inclus dans $\mathbb Z$.
+
+<<<<<<< HEAD
+  Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il existe un entier $q \in \Z$ tel que $m=qd$. Dans ce cas, on dit aussi
+  que $d$ est un \textbf{diviseur} de $m$.
+\end{DefT}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{Exs} 
+  $35=5 \times 7$ où $7 \in \Z$ donc $35$ est un multiple de $5$
+  et $5$ est un diviseur de $35$. Comme $5 \in \Z$, on peut aussi
+  dire que $35$ est un multiple de $7$ et que $7$ est un diviseur de
+  $35$.
+  1 est un diviseur de tous les entiers, et tous les entiers
+  divisent 0.
+\end{Exs}
+\end{minipage}
+=======
+\item Si $x \in \mathbb N$ alors $x \in \mathbb Z$. Le symbole $\in$ signifie \textbf{appartient à}. 
+\end{itemize}
+\end{Rqs}
+ 
+\end{minipage}
+\begin{minipage}{0.4\linewidth} 
+ 
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.7,-1.22) rectangle (4.54,2.62);
+\draw [rotate around={12.739646792482095:(2.15,0.66)},line width=2.pt,color=ffqqqq] (2.15,0.66) ellipse (1.5997803770827426cm and 1.08129424991489cm);
+\draw [rotate around={18.434948822922024:(1.92,0.68)},line width=2.pt,color=xfqqff] (1.92,0.68) ellipse (2.576113244705657cm and 1.6710354423374485cm);
+\draw [color=xfqqff](3.32,2.14) node[anchor=north west] {$\mathbb Z$};
+\draw [color=ffqqqq](2.78,1.58) node[anchor=north west] {$\mathbb N$};
+\draw (1.54,0.14) node[anchor=north west] {0};
+\draw (1.96,0.94) node[anchor=north west] {1};
+\draw (2.72,0.38) node[anchor=north west] {2};
+\draw (1.06,-0.46) node[anchor=north west] {$-5$};
+\draw (-0.18,1.36) node[anchor=north west] {$-2$};
+\draw (0.02,0.02) node[anchor=north west] {$-1$};
+\end{tikzpicture}
+ 
+ 
+\end{minipage} 
+
+\section{Multiples et diviseurs, nombre premier, nombre pair, nombre impair}
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+
+ 
+
+<<<<<<< HEAD
+%\begin{minipage}{0.5\linewidth}
+%\begin{DefT}{Diviseur}\index{Diviseur!Nombres}%
+%
+%Soit $n$ un nombre entier. Le nombre $q$ est dit \textbf{diviseur} de $n$ s'il %existe un entier $k \in \Z$ tel que $n=kq$.
+%\end{DefT}
+%\end{minipage}
+%\begin{minipage}{0.5\linewidth}
+%\begin{Ex} 
+%
+%$48 = 6 \times 8$ où $6 \in \Z$  donc $8$ est un diviseur de $48$ et aussi,  $6%$ est diviseur de $48$.
+%\end{Ex}
+%\end{minipage}
+=======
+\begin{DefT}{Multiples et diviseurs}\index{Multiple!Nombres}\index{Diviseur!Nombres}
+
+Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il existe un entier $q \in \Z$ tel que $m=qd$. Dans ce cas, on dit aussi que $d$ est un \textbf{diviseur} de $m$.
+\end{DefT}
+
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+
+\begin{Exs} 
+  $35=5 \times 7$ où $7 \in \Z$ donc $35$ est un multiple de $5$
+  et $5$ est un diviseur de $35$. Comme $5 \in \Z$, on peut aussi
+  dire que $35$ est un multiple de $7$ et que $7$ est un diviseur de
+  $35$.
+  1 est un diviseur de tous les entiers, et tous les entiers
+  divisent 0.
+\end{Exs}
+
+
+ 
+
+\begin{DefT}{Nombre premier}\index{Nombre premier}
+
+Un \textbf{nombre premier} est un nombre entier naturel qui a exactement 2 diviseurs positifs (qui sont alors 1 et lui-même) 
+
+\end{DefT}
+
+
+\begin{Ex} 
+
+  $19$ est un nombre premier :  il n'est divisible que par 1 et lui-même.
+<<<<<<< HEAD
+
+  $1$ n'est pas premier, car il n'a qu'un seul diviseur.  
+\end{Ex}
+\end{minipage}
+=======
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+
+  $1$ n'est pas premier, car il n'a qu'un seul diviseur.  
+\end{Ex}
+
+<<<<<<< HEAD
+\begin{minipage}{0.5\linewidth}
+=======
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+\begin{DefT}{Nombres pairs et impairs}\index{Nombres pairs et impairs}
+
+  Un \textbf{nombre pair} est un nombre entier divisible par 2, autrement
+  dit un nombre entier $n$ est pair lorsqu'il existe $k \in \Z$
+  tel que $n=2k$.
+ % . \\  Soit $n$ un nombre pair, $n=2\times k$ avec $k\in\Z$.
+
+  Un entier $n$ est un \textbf{nombre impair} lorsqu'il existe $k \in \Z$
+  tel que $n=2k+1$.
+\end{DefT}
+<<<<<<< HEAD
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+=======
+
+
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+\begin{Exs} 
+$46 = 2 \times 23$ et $23\in\Z$ donc $46$ est un nombre pair.
+
+  $15= 2 \times 7,5$. Comme $7,5 \not\in\Z$, $15$ n'est pas pair. Par contre,
+  $15=2 \times 7+1$ avec $7 \in \Z$, donc $15$ est impair.
+\end{Exs}
+<<<<<<< HEAD
+=======
+
+
+\end{pageCours} 
+\begin{pageAD} 
+ 
+
+\Sf{Connaitre les ensembles $\mathbb N$ et $\mathbb Z$}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Complète avec $\in$ ou $\not \in$.
+
+\begin{enumerate}
+\begin{minipage}{0.3\linewidth}
+\item $2 \ldots \ldots \mathbb Z$
+\item $-4 \ldots \ldots \mathbb N$
+\item $7 \ldots \ldots \mathbb N$
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\item $42 \ldots \ldots \mathbb N$
+\item $-123 \ldots \ldots \mathbb Z$
+\item $-9 \ldots \ldots \mathbb N$
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\item $-22 \ldots \ldots \mathbb N$
+\item $25 \ldots \ldots \mathbb Z$
+\item $0 \ldots \ldots \mathbb Z$
+\end{minipage}
+\end{enumerate}
+
+
+<<<<<<< HEAD
+\begin{minipage}{0.5\linewidth}
+  \begin{ThT}{Décomposition en facteurs premiers}
+    Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers.
+  \end{ThT}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+=======
+\end{ExoCad}
+
+\Sf{Utiliser les multiples et les diviseurs}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+\begin{enumerate}
+\item Déterminer les 10 premiers multiples positifs de 4 : \point{1}
+\item Déterminer les 10 premiers multiples positifs de 6 : \point{1}
+\item Déterminer les 3 premiers multiples communs de 4 et de 6 : \point{1}
+\end{enumerate}
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+$51$ est-il un nombre premier ? Justifier. 
+
+\point{2}
+
+\end{ExoCad}
+
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Démontrer que $126$ est un nombre pair.
+
+\point{3}
+
+\end{ExoCad}
+
+
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Démontrer que si $n$ est un nombre impair alors $n^2$ est impair.
+
+\point{3}
+
+\end{ExoCad}
+
+
+
+\begin{ExoCad}{Calculer, raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Démontrer que la somme de deux multiples de $3$ est un multiple de $3$. \point{4}
+
+Soit $a$ un entier. Démontrer que la somme de deux multiples de $a$ est un multiple de $a$. \point{4}
+
+\end{ExoCad}
+
+
+
+
+\end{pageAD}
+\begin{pageCours}
+
+\section{Nombres premiers entre eux}
+
+  \begin{DefT}{Nombres premiers entre eux}\index{Premiers entre eux}
+
+    Deux nombres entiers $a$ et $b$ sont \textbf{premiers entre eux}
+    lorsque leur seul diviseur positif commun est $1$.
+  \end{DefT}
+
+\begin{Ex}
+  Les diviseurs positifs de $8$ sont $1$ ; $2$ ; $4$ et $8$. Ceux de $15$ sont
+  $1$ ; $3$ ; $5$ et $15$. Le seul diviseur commun est $1$ et \textbf{$8$ et $15$ sont donc premiers entre eux} (Pourtant, ils ne sont pas premiers)
+\end{Ex}
+
+\section{Décomposition en facteurs premiers}
+
+  \begin{ThT}{Décomposition en facteurs premiers}
+    Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers.
+  \end{ThT}
+
+
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+\begin{Exs}
+Les décompositions en facteurs premiers de $8$, $15$ et $19$ sont respectivement  
+$8=2^3$ ; $15=3 \times 5$ ; $19=19$.
+  
+\end{Exs}
+<<<<<<< HEAD
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+  \begin{DefT}{Nombres premiers entre eux}\index{Premiers entre eux}
+
+    Deux nombres entiers $a$ et $b$ sont \textbf{premiers entre eux}
+    lorsque leur seul diviseur positif commun est $1$.
+  \end{DefT}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{Ex}
+  Les diviseurs positifs de $8$ sont $1$ ; $2$ ; $4$ et $8$. Ceux de $15$ sont
+  $1$ ; $3$ ; $5$ et $15$. Le seul diviseur commun est $1$ et \textbf{$8$ et $15$ sont donc premiers entre eux} (Pourtant, ils ne sont pas premiers)
+\end{Ex}
+\end{minipage}
+=======
+
+
+
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+
+
+
+
+\section{Logique}
+
+ 
+\begin{DefT}{Proposition universelle}\index{Proposition universelle}
+
+  Une \textbf{proposition universelle} est une proposition qui porte sur tous
+  les éléments d'un ensemble. 
+
+\end{DefT}
+<<<<<<< HEAD
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{Ex} 
+=======
+ 
+ 
+\begin{Rq} 
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+  Le théorème de décomposition en facteurs premiers est une proposition
+  universelle (et elle est vraie).
+  
+%Quels que soient trois nombres $a$, $b$ et  $c$, $a(b+c)=ab+ac$. La distributivité est une proposition universelle.
+<<<<<<< HEAD
+
+\end{Ex}
+\end{minipage}
+=======
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+
+\end{Rq}
+ 
+\begin{DefT}{Contre-exemple}\index{Contre-exemple}
+
+Un \textbf{contre-exemple} est un cas particulier qui vient contredire une proposition universelle. 
+
+\end{DefT}
+ 
+
+\begin{Ex} 
+
+Considérons une proposition universelle : « tous les nombres sont pairs ». Pour démontrer que cette proposition est fausse, il suffit de démontrer qu'un seul nombre n'est pas pair. La contradiction vient sur le mot \textbf{tous}.
+
+$3=2\times1,5$ et $1,5 \not\in\Z$ donc $3$ n'est pas pair. \textbf{Il existe
+  des nombres non-pairs}, la proposition universelle initiale est fausse. 
+
+\end{Ex}
+ 
+
+\begin{LogT}{On souhaite répondre à la proposition : "Tout entier est-il un entier naturel ?"  }
+
+Cette proposition est une proposition universelle qui se traduit par : "Tout nombre entier appartient-il à $\N$ ?". 
+
+A priori, on ne sait pas quelle est la réponse. On peut utiliser alors des exemples pour tester la proposition.
+
+Il suffit de trouver un seul nombre entier n'appartenant pas à $\N$ pour informer la proposition : Principe du contre exemple. 
+
+
+$-2 \in \Z$ mais $-2 \not \in \N$. Donc $\Z \not \subset \N$.
+
+\end{LogT}
+
+
+\end{pageCours} 
+\begin{pageAD} 
+
+
+<<<<<<< HEAD
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+\begin{enumerate}
+\item Déterminer les 10 premiers multiples positifs de 4 : \point{1}
+\item Déterminer les 10 premiers multiples positifs de 6 : \point{1}
+\item Déterminer tous les multiples communs de 4 et de 6 : \point{1}
+\end{enumerate}
+\end{ExoCad}
+=======
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+
+\Sf{Décomposer en produit de facteurs premiers}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Les nombres $145$ et $126$ sont-ils premiers entre eux ? Justifier.
+
+\point{3}
+
+\end{ExoCad}
+
+
+
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Décomposer 24 en produit de facteurs premiers.
+
+\point{3}
+
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter. Calculer. }{1234}{1}{0}{0}{0}
+
+\begin{minipage}{0.55\linewidth}
+
+Pour déterminer tous les diviseurs d'un nombre, on utilise un arbre de diviseurs. C'est un représentation qui propose tous les calculs possibles avec les facteurs premiers du nombre.
+
+<<<<<<< HEAD
+Simplifier la fraction $\dfrac{735}{840}$ 
+=======
+On donne en exemple l'arbre de diviseurs de $36$.
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+
+Construire l'arbre des diviseurs de $20$.
+
+\vspace{4cm}
+
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-3.6,-1.) rectangle (3.9,5.42);
+\draw (-3.34,2.36) node[anchor=north west] {$36=2^2\times 3^2$};
+\draw [line width=1.pt] (-1.,2.)-- (1.,4.);
+\draw [line width=1.pt] (-1.,2.)-- (1.,2.);
+\draw [line width=1.pt] (-1.,2.)-- (1.,0.);
+\draw [line width=1.pt] (1.,2.)-- (2.04,2.78);
+\draw [line width=1.pt] (1.,2.)-- (2.,2.);
+\draw [line width=1.pt] (1.,2.)-- (1.98,1.24);
+\draw [line width=1.pt] (1.,0.)-- (2.02,0.64);
+\draw [line width=1.pt] (1.,0.)-- (2.,0.);
+\draw [line width=1.pt] (1.,0.)-- (2.02,-0.74);
+\draw [line width=1.pt] (1.,4.)-- (1.96,4.66);
+\draw [line width=1.pt] (1.,4.)-- (2.,4.);
+\draw [line width=1.pt] (1.,4.)-- (2.06,3.5);
+\begin{scriptsize}
+\draw[color=ududff] (2.9,2.91) node {$2^1 \times 3^0=2$};
+\draw[color=ududff] (2.9,2.09) node {$2^1 \times 3^1=6$};
+\draw[color=ududff] (2.9,1.31) node {$2^1 \times 3^2=18$};
+\draw[color=ududff] (2.9,0.77) node {$2^2 \times 3^0=4$};
+\draw[color=ududff] (2.9,0.07) node {$2^2 \times 3^1=12$};
+\draw[color=ududff] (2.9,-0.63) node {$2^2 \times 3^2=36$};
+\draw[color=ududff] (2.9,4.73) node {$2^0 \times 3^0=1$};
+\draw[color=ududff] (2.9,4.09) node {$2^0 \times 3^1=3$}; 
+
+\draw[color=black] (0.16,3.37) node {$2^0$};
+\draw[color=black] (0.16,2.35) node {$2^1$};
+\draw[color=black] (0.16,1.23) node {$2^2$};
+
+\draw[color=black] (1.56,4.5) node {$3^0$};
+\draw[color=black] (1.56,4.15) node {$3^1$};
+\draw[color=black] (1.56,3.55) node {$3^2$};
+
+\draw[color=black] (1.56,2.61) node {$3^0$};
+\draw[color=black] (1.56,2.2) node {$3^1$};
+\draw[color=black] (1.56,1.35) node {$3^2$};
+
+\draw[color=black] (1.56,0.63) node {$3^0$};
+\draw[color=black] (1.56,0.15) node {$3^1$};
+\draw[color=black] (1.56,-0.63) node {$3^2$};
+
+\end{scriptsize}
+\end{tikzpicture}
+\end{minipage}
+
+\end{ExoCad} 
+
+\begin{ExoCad}{Calculer, raisonner.}{1234}{0}{0}{0}{0}{0}
+
+<<<<<<< HEAD
+Soit $a$ un entier. Démontrer que la somme de deux multiples de $a$ est un multiple de $a$. \point{3}
+=======
+Simplifier la fraction $\dfrac{735}{840}$ 
+
+\point{3}
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+
+\end{ExoCad}
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+Vrai ou faux : quel que soit l'entier $n$, $2n-1$ est un nombre premier. Justifier.\point{2}
+\end{ExoCad}
+
+
+ 
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Les propositions suivantes sont-elles vraies ou fausses ?
+\begin{enumerate}[leftmargin=*]
+\item La différence de deux nombres entiers naturels est un entier naturel. \point{1}
+\item Le quotient de deux nombres décimaux non nuls est un nombre décimal. \point{1} 
+\item Il existe deux nombres premiers distincts dont le quotient est un
+  entier relatif. \point{1}
+\item Il existe deux nombres premiers distincts dont le quotient est un
+  nombre décimal. \point{1}
+\end{enumerate} 
+ 
+ \end{ExoCad}
+ 
+\end{pageAD}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursu} 
+
+
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
+
+\begin{enumerate}
+\item Décomposer $186$ et $155$ en produit de facteurs premiers. \point{3}
+\item Déterminer le PGCD (plus grand diviseur commun)
+  de $186$ et $155$. \point{2}
+\item Un chocolatier a fabriqué $186$ pralines et $155$ chocolats
+  qu'il répartit dans des colis. 
+Les colis sont constitués ainsi :
+\begin{description}
+\item Le nombre de pralines est le même dans chaque colis.
+\item Le nombre de chocolats est le même dans chaque colis.
+\item Tous les chocolats et toutes les pralines sont utilisés.
+\end{description}
+\begin{enumerate}
+\item Quel nombre maximal de colis pourra-t-il réaliser ?  \point{3}
+\item Combien y aura-t-il de chocolats et de pralines dans chaque colis ?   \point{3}
+\end{enumerate}
+\end{enumerate}
+  
+\end{ExoCu}
+
+
+\begin{ExoCuN}{Raisonner.}{1}{0}{0}{0}{0}
+Simplifier la fraction $\dfrac{2310}{2730}$ pour la rendre irréductible. \point{2}
+\end{ExoCuN}
+
+
+\begin{ExoCuN}{Raisonner.}{1}{0}{0}{0}{0}
+Démontrer que le produit de deux entiers consécutifs est pair. \point{2}
+\end{ExoCuN}
+
+\begin{ExoCuN}{Chercher.}{1}{0}{0}{0}{0}
+Proposer deux nombres premiers entre eux. \point{2}
+\end{ExoCuN}
+
+\begin{ExoCuN}{Chercher. Raisonner.}{1}{0}{0}{0}{0}
+Les produits de deux nombres premiers est-il un nombre premier ? Justifier. \point{2}
+\end{ExoCuN}
+
+
+\begin{ExoCuN}{Chercher.}{2}{0}{0}{0}{0} 
+Je suis un nombre à trois chiffres non nuls. Je suis divisible par 94. Changez l'ordre de mes chiffres d'une certaine manière, et je deviens divisible par 49.
+Qui suis-je ?   \point{5}
+\end{ExoCuN}
+
+
+\end{pageParcoursu} 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcoursd} 
+
+
+
+\begin{ExoCdN}{Représenter.}{2}{0}{0}{0}{0}
+On veut démontrer que la proposition universelle $\mathcal P$ suivante : « La somme de deux nombres impairs est un nombre pair » est vraie.
+
+\begin{enumerate}
+\item Calculer $a=5+7$. Peut-on en déduire que la proposition $P$
+  est vraie ? %La proposition $\mathcal P$ semble-t-elle vraie ?\point{2}
+\item Soient $n$ et $m$ deux nombres impairs. Il existe donc deux entiers
+  relatifs $k$ et $q$ tels que $n=2k+1$ et $m=2q+1$.
+  %Exprimer un autre nombre impair $m$ en fonction de $q$.\point{3}
+  %\item
+  Calculer $n+m$ en fonction de $k$ et $q$. \point{3}
+\item En déduire que la somme $n+m$ est un nombre pair. \point{3}
+\end{enumerate}
+
+\end{ExoCdN}
+
+ 
+\begin{ExoCdN}{Représenter.}{1}{1}{0}{0}{0}
+
+  
+Démontrer que si $p$ est pair alors $p^2$ est pair.
+
+
+ \point{6}
+ 
+\end{ExoCdN}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCdN}{Raisonner.}{1}{0}{0}{0}{0}
+
+Démontrer que tout nombre entier $n$ multiple de $9$ est un multiple de $3$.  \point{6}
+
+\end{ExoCdN}
+
+\begin{ExoCdN}{Raisonner.}{1}{0}{0}{0}{0}
+Montrer que la somme de trois entiers consécutifs est toujours un multiple de 3. \point{6}
+\end{ExoCdN}
+
+
+\begin{ExoCdN}{Raisonner.}{2}{0}{0}{0}{0}
+Le produit de deux nombres impairs est-il impair ? \point{3}
+\end{ExoCdN}
+
+
+
+
+
+\end{pageParcoursd}
+ 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageParcourst}
+
+
+
+ 
+\begin{ExoCtN}{Raisonner.}{1}{1}{0}{0}{0}
+
+  Démontrer que si $n$ est impair alors $n^2$ est impair.
+
+ \point{5}
+ 
+\end{ExoCtN}
+
+
+\begin{ExoCtN}{Raisonner.}{1}{0}{0}{0}{0}
+On donne le programme en Python ci dessous. 
+ 
+\begin{lstlisting}[language=Python] 
+def is_divisible(x,y):
+    if x%y == 0 :
+    	test = "{} est divisible par {}".format(x,y) 
+    else :	
+        test = "{} n'est pas divisible par {}".format(x,y)
+    return test    
+    
+n=int(input("Entrer un nombre n :"))
+    
+print(is_divisible(n,4))
+\end{lstlisting}
+ 
+\begin{enumerate}
+\item Que fait ce programme ? On pourra tester le programme avec l'éditeur : \url{https://sacado.xyz/tool/show/18}  \point{3}
+\item Modifier le programme pour qu'il teste si un nombre $a$ divise $n$.   
+\end{enumerate}
+ 
+\end{ExoCtN}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCtN}{Raisonner.}{2}{1}{0}{0}{0}
+ 
+ 
+Dans un pays où le système fiduciaire (les pièces et les billets) n'est constitué que de pièces de 3 et de 5, il s'agit d'aider les habitants en créant un algorithme  qui donne le nombre minimal de pièces nécessaires à tout achat d'un montant entier supérieur ou égal à 8. 
+
+Pour tester l'algorithme, on peut utiliser l'éditeur Python : \url{https://sacado.xyz/tool/show/18}
+
+\hfill{{\footnotesize Source : d’après PISA, items libérés}}
+ 
+\end{ExoCtN}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoCtN}{Raisonner.}{2}{1}{0}{0}{0}
+ 
+ \begin{minipage}{0.5\linewidth} 
+ 
+\textbf{Le crible d'Eratosthène}
+
+L'algorithme procède par élimination : il s'agit de rayer d'une table d'entiers tous les multiples d'un entier $n$ (autres que lui-même), et d'entourer
+tous les autres. 
+
+En supprimant tous ces multiples, à la fin il ne restera que les entiers qui ne sont multiples d'aucun entier à part 1 et eux-mêmes, et qui sont donc les nombres premiers.
+
+On commence par entourer deux, puis on barre tous
+les multiples de 2 à partir de 4. On entoure alors le premier
+nombre non rayé ni entouré, qui est 3, et on raye puis les multiples de 3
+sauf 3. Puis on entoure le premier nombre non rayé ni entouré, qui est
+5, et on raye tous les multiples de 5 sauf 5... On répète l'opération
+jusqu'à ce qu'il n'y ait plus d'entier à rayer. 
+
+\begin{enumerate}
+
+\item Exécuter le crible sur la table ci-contre.
+\item Quel est le résultat de ce crible ? \point{3}
+
+\item Écrire un code en Python du crible d'Eratosthène : \url{https://sacado.xyz/tool/show/18}
+
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+
+ 
+
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+ \hline 
+ &  & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\ 
+ \hline 
+ 10&11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 \\
+ \hline 
+ 20&21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 \\
+ \hline 
+ 30&31 & 32 & 33 & 34 & 35 & 36 & 37 & 38 & 39 \\
+ \hline 
+ 40&41 & 42 & 43 & 44 & 45 & 46 & 47 & 48 & 49 \\
+ \hline 
+ 50&51 & 52 & 53 & 54 & 55 & 56 & 57 & 58 & 59 \\
+ \hline 
+ 60&61 & 62 & 63 & 64 & 65 & 66 & 67 & 68 & 69 \\
+ \hline 
+ 70&71 & 72 & 73 & 74 & 75 & 76 & 77 & 78 & 79 \\
+ \hline 
+ 80&81 & 82 & 83 & 84 & 85 & 86 & 87 & 88 & 89 \\
+ \hline 
+ 90&91 & 92 & 93 & 94 & 95 & 96 & 97 & 98 & 99 \\
+ \hline 
+ \end{tabular}  
+ 
+ \end{minipage}
+
+
+ 
+\end{ExoCtN}
+ 
+\end{pageParcourst}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Brouillon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Auto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAuto} 
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAutoN}{Raisonner.}{1}{0}{0}{0}{0}
+Simplifier le nombre $a=\dfrac{60}{126}$ pour la rendre irréductible. \point{4}
+\end{ExoAutoN}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAutoN}{Raisonner.}{1}{0}{0}{0}{0}
+Simplifier le nombre $b=\dfrac{12a+4}{8}$. \point{2}
+\end{ExoAutoN}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAutoN}{Raisonner.}{2}{0}{0}{0}{0}
+Soit $n$ un entier.
+
+Démontrer que la différence de deux multiples de $n$ est un multiple de $n$. \point{6}
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ExoAutoN}{Raisonner.}{2}{0}{0}{0}{0}
+  Pour déterminer le PGCD de deux entiers naturel $a$ et $b$ (avec $b \neq 0$),
+  on effectue la division euclidienne de $a$ par $b$. On appelle $r_0$ le reste. \\
+Puis on divise $b$ par $r_0$ et on appelle $r_1$ le reste. \\
+On divise alors $r_0$ par $r_1$ et on appelle $r_2$ le reste.\\ 
+On divise alors $r_1$ par $r_2$ et on appelle $r_3$ le reste. Et ainsi de suite,
+jusqu'à obtenir un reste nul. 
+Le PGCD de $a$ et de $b$ est alors le dernier reste non nul (ou $b$
+si le premier reste est déjà nul).
+On appelle ce procédé « la méthode par divisions successives » ou
+« l'algorithme d'Euclide ». 
+
+\begin{enumerate}[leftmargin=*]
+
+\item Déterminer à l'aide de ce procédé le PGCD de $912$ et de $\np{1104}$. \point{3}
+\item 
+%\begin{enumerate}[leftmargin=*]
+% \item Un tapissier achète $2 622$ clous tête plate et $2 530$ clous tête ronde pour la fabrication de fauteuils identiques : ch Après la fabrication, il ne lui reste plus aucun clous. Quel est le plus grand nombre de fauteuil que le tapissier peut réaliser ? 
+% \point{3}
+  %\item Dans ce cas, quelle sera le nombre de chaque type de clou par fauteuil ? \point{2}
+  Un carreleur doit carreler une pièce rectangulaire de $912$cm par
+  $\np{1104}$cm
+  en utilisant des carreaux carrés. Le travail sera grandement facilité
+  si :
+  \begin{itemize}
+  \item il n'a pas de découpe à faire : il disposera un nombre entier
+    de carreaux sur la longueur et sur la largeur de la pièce ;
+  \item il utilise le moins possible de carreaux, donc les carreaux
+    sont les plus grands possibles.
+    
+  \end{itemize}
+  \begin{enumerate}
+<<<<<<< HEAD
+  \item Quel est le côté $c$ des carreaux qui répond à ces deux contraintes ?
+  \item Combien de carreaux seront disposés en longueur ? en largeur ?
+    Combien de carreaux seront utilisés au total ?
+=======
+  \item Quel est le côté $c$ des carreaux qui répond à ces deux contraintes ?\point{3}
+  \item Combien de carreaux seront disposés en longueur ? en largeur ?
+    Combien de carreaux seront utilisés au total ?\point{4}
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
+  \end{enumerate}
+\end{enumerate}
+\end{ExoAutoN}
+
+\end{pageAuto}
