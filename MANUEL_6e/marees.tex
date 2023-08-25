@@ -1,0 +1,92 @@
+\input{MISC/preambule_sacado.tex}
+\input{MISC/environnements_sacado.tex}
+\input{MISC/macro_sacado.tex}
+\input{MISC/tikz_cubic_shapes}
+
+\usepackage{multirow}
+%\usepackage[table,xcdraw]{xcolor}
+
+
+\title{Mathématiques 6\ieme : le livre sacado \\ Extraits\\ Document de travail}
+\author{L'équipe SACADO}
+
+
+
+
+
+
+
+\newcommand{\ExoCad}[2]{{
+    
+\tcbset{top=-0.1cm}
+\newtcbox{\mybox}{colback=white,
+  colframe=sacado_violet}
+
+\mybox{\stepcounter{exo}
+\parbox[t]{0.9\linewidth}{\hspace{-1.37cm}
+   \parbox[t]{1.1\linewidth}{ \begin{tikzpicture}
+    \node[fill=sacado_violet,minimum width=0.7cm] {\textcolor{white}{\bf\theexo}};
+    \end{tikzpicture} \hfill \textcolor{sacado_violet!75!black}{#1}}\\[0.5em]
+   #2}}
+}
+}
+
+\begin{document}
+
+
+\ExoCad{Calculer, Représenter.}{bla bla bla}
+
+
+
+  
+
+\begin{table}[]
+\begin{tabular}{|
+>{\columncolor[HTML]{3166FF}}c ll|
+>{\columncolor[HTML]{3166FF}}c ll|}
+\hline
+\multicolumn{3}{|c|}{\cellcolor[HTML]{3166FF}   Matin}                                           & \multicolumn{3}{c|}{\cellcolor[HTML]{3166FF}    Après-midi}                                          \\ \hline
+\multicolumn{1}{|l|}{\cellcolor[HTML]{3166FF}   Coeff.  }              & \multicolumn{1}{l|}{ Basse mer} & Pleine mer & \multicolumn{1}{l|}{\cellcolor[HTML]{3166FF} Coeff.}                  & \multicolumn{1}{l|}{ Basse mer} & Pleine Mer \\ \hline
+\multicolumn{1}{|l|}{\cellcolor[HTML]{3166FF}       }           & \multicolumn{1}{l|}{ 7h14} & 00h07  & \multicolumn{1}{l|}{\cellcolor[HTML]{3166FF} }                  & \multicolumn{1}{l|}{ 18h42} & 11h40  \\ \cline{2-3} \cline{5-6} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{3166FF}} 81} &  \multicolumn{1}{l|}{ 0,31} & 0,38  & \multicolumn{1}{l|}{\multirow{-2}{*}{\cellcolor[HTML]{3166FF}} 77} & \multicolumn{1}{l|}{ 0,26m}  &  0,40m \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[]
+\begin{tabular}{|
+>{\columncolor[HTML]{3166FF}}c 
+>{\columncolor[HTML]{34CDF9}}c 
+>{\columncolor[HTML]{34CDF9}}c |
+>{\columncolor[HTML]{3166FF}}c 
+>{\columncolor[HTML]{34CDF9}}c 
+>{\columncolor[HTML]{34CDF9}}c |}
+\hline
+\multicolumn{3}{|c|}{\cellcolor[HTML]{3166FF}}                                                                                           & \multicolumn{3}{c|}{\cellcolor[HTML]{3166FF}}                                                                                           \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{3166FF}Coeff.}               & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}Basse mer} & Pleine mer & \multicolumn{1}{c|}{\cellcolor[HTML]{3166FF}Coeff.}               & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}Basse mer} & Pleine mer \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{3166FF}}                     & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}7h14}      & 00h07      & \multicolumn{1}{c|}{\cellcolor[HTML]{3166FF}}                     & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}18h42}     & 11h40      \\ \cline{2-3} \cline{5-6} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{3166FF}81}} & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}0,31}      & 0,38       & \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{3166FF}77}} & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}0,26m}     & 0,40m      \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+\begin{table}[]
+\begin{tabular}{|
+>{\columncolor[HTML]{3166FF}}c 
+>{\columncolor[HTML]{34CDF9}}c 
+>{\columncolor[HTML]{34CDF9}}c |
+>{\columncolor[HTML]{3166FF}}c 
+>{\columncolor[HTML]{34CDF9}}c 
+>{\columncolor[HTML]{34CDF9}}c |}
+\hline
+\multicolumn{3}{|c|}{\cellcolor[HTML]{3166FF}Matin}                                                                                      & \multicolumn{3}{c|}{\cellcolor[HTML]{3166FF}Après-midi}                                                                                 \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{3166FF}Coeff.}               & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}Basse mer} & Pleine mer & \multicolumn{1}{c|}{\cellcolor[HTML]{3166FF}Coeff.}               & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}Basse mer} & Pleine mer \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{3166FF}}                     & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}7h14}      & 00h07      & \multicolumn{1}{c|}{\cellcolor[HTML]{3166FF}}                     & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}18h42}     & 11h40      \\ \cline{2-3} \cline{5-6} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{3166FF}81}} & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}0,31}      & 0,38       & \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{3166FF}77}} & \multicolumn{1}{c|}{\cellcolor[HTML]{34CDF9}0,26m}     & 0,40m      \\ \hline
+\end{tabular}
+\end{table}
+
+\end{document}

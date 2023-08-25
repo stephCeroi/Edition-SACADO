@@ -235,50 +235,50 @@ headheight=20.60pt %hauteur du header
 %		QR codes
 %----------------------------------------------------------------------------------------
 
-\usepackage[
+%\usepackage[
 %final %Pour la compilation finale
-draft %Pour le travail sur les documents
-]{qrcode}
-\usepackage{fontawesome}
-\usepackage{fancyqr}
-\FancyQrLoad{flat}
-\fancyqrset{
+%draft %Pour le travail sur les documents
+%]{qrcode}
+%\usepackage{fontawesome}
+%\usepackage{fancyqr}
+%\FancyQrLoad{flat}
+%\fancyqrset{
 %image=\scalebox{.8}{\includegraphics[scale=1]{sacadoA1.png}},image padding=.5,
-l color=sacado_violet,r color=sacado_blue}
-\newcommand{\qr}[2]{\centering \fancyqr{https://sacado.xyz/qcm/show_course_from_qrcode/#1}
+%l color=sacado_violet,r color=sacado_blue}
+%\newcommand{\qr}[2]{\centering \fancyqr{https://sacado.xyz/qcm/show_course_from_qrcode/#1}
 
-\vspace{.2cm}
+%\vspace{.2cm}
 
-#2} %\qr{id} Pour obtenir un qrcode en indiquant seulement l'id de l'exercice
-
-
+%#2} %\qr{id} Pour obtenir un qrcode en indiquant seulement l'id de l'exercice
 
 
 
-\newcommand{\miniqr}[3]{
-\begin{minipage}[c]{.8\linewidth}
-#1
-\end{minipage}
-\hfill
-\fbox{
-\begin{minipage}[c]{.18\linewidth}
-\begin{center}
-\fancyqr{https://sacado.xyz/qcm/show\_course\_from\_qrcode/#2}
 
-\vspace{.2cm}
 
-#3
-\end{center}
-\end{minipage}
-}
-}
+%\newcommand{\miniqr}[3]{
+%\begin{minipage}[c]{.8\linewidth}
+%#1
+%\end{minipage}
+%\hfill
+%\fbox{
+%\begin{minipage}[c]{.18\linewidth}
+%\begin{center}
+%\fancyqr{https://sacado.xyz/qcm/show\_course\_from\_qrcode/#2}
+%
+%\vspace{.2cm}
+
+%#3
+%\end{center}
+%\end{minipage}
+%}
+%}
 
 %practice/frombook/<int:ide>/ pour accéder à un exercice depuis le livre.
 
 \usepackage{pythontex}
 \begin{pycode}
 import qrcode
-def qr(data):
+def qr(data,taille):
      fic=r"qrcodes/qr"+data+'.png'
      urlcourte=r"sacado.xyz/"+data
      urllongue=r"https://"+urlcourte
@@ -288,23 +288,34 @@ error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)
      qr.make(fit=True)
      qr_image = qr.make_image(fill_color="black", back_color="white")
      qr_image.save(fic)
-     return r"""\parbox{3.5cm}{\begin{center}
+     
+     if taille==1 :  # grand qrcode
+         s=r"""\parbox{3.5cm}"""
+     else :
+         s=r"""\parbox{1cm}"""
+         
+     return s+r"""{\begin{center}
 \includegraphics{"""+fic+r"}\\{\scriptsize\tt "+urlcourte+r"}\end{center}}"
 \end{pycode}
 
-%\renewcommand{\qr}[1]{\py{qr("#1")}} % compilation complete
+% compilation complete
+
+%\renewcommand{\qr}[1]{\py{qr("#1",1)}} % compilation complete
 %utiliser :
-%  pdflatex --shell-escape MANUEL_6e_V1.tex ; pythontex MANUEL_6e_V1.tex --interpreter python:python3 ; pdflatex --shell-escape % %MANUEL_6e_V1.tex
+%  pdflatex --shell-escape MANUEL_6e.tex ; pythontex MANUEL_6e.tex --interpreter python:python3 ; pdflatex --shell-escape MANUEL_6e.tex
+
+
+%\renewcommand{\miniqr}[1]{\py{qr("#1",0)}} 
 
 %  draft
-\renewcommand{\qr}[1]{
+\newcommand{\qr}[1]{
 \parbox{5cm}{\begin{center}
        \includegraphics{qrcodes/qrDummy.png}
        %\\{\tt dummy}
 \end{center}}
 }
 
-\renewcommand{\miniqr}[1]{
+\newcommand{\miniqr}[1]{
        \includegraphics[height=1cm]{qrcodes/qrDummy.png}
        %\\{\tt dummy}}
 }

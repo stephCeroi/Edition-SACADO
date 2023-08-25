@@ -12,12 +12,40 @@
  \end{itemize}
  \end{CpsCol}
 
-\begin{His}
+ \begin{His}
+   
+  \hfill{\em Dieu a fait les nombres entiers, tout le reste est l'œuvre de l'Homme}
 
-  
-L'arithmétique est une branche des mathématiques qui correspond à la science des nombres. De nombreux nombres entiers ont des propriétés particulières. Ces propriétés font l'objet de la théorie des nombres. Parmi ces nombres particuliers, les nombres premiers sont sans doute les plus importants.
+  \hfill{Leopold Kronecker}
 
-On connait aussi les nombres pairs et les nombres impairs. 
+     \bigskip
+
+     
+\begin{minipage}[b]{0.6\textwidth}{L'arithmétique est la branche des mathématiques qui étudie
+  les nombres entiers et les opérations $+$, $-$, $\times$, $\div$,...
+  Comme le relève la citation en exergue, les concepts de l'arithmétique
+  sont élémentaires et fondamentaux.
+
+  Mais cela ne signifie pas que
+  les problèmes de l'arithmétique sont simples. Par exemple,
+  les nombres premiers sont source de nombreux problèmes
+  non résolus à ce jour, en particulier l'{\em hypothèse de Riemann}
+  qui porte sur la {\em fonction zêta} et qui est reliée à la
+  répartition des nombres premiers.
+
+  L'importance de l'arithmétique dépasse les mathématiques : la plupart des
+  cryptosystèmes (algorithmes qui permettent la sécurité des
+  communications sur internet) sont fondés sur l'arithmétique.
+  }
+\end{minipage}
+\begin{minipage}[b]{0.4\textwidth}
+\begin{center}    
+  \includegraphics[width=5.5cm]{FIG/zeta7b.png}
+
+  Une représentation de la fonction zêta de Riemann
+
+\end{center}
+\end{minipage}
 
 \end{His}
 
@@ -26,7 +54,11 @@ On connait aussi les nombres pairs et les nombres impairs.
 \begin{ExoDec}{Chercher.}{1234}{1}{0}{0}{0}
 
 Pour fêter les 25 ans de sa boutique, un chocolatier souhaite offrir aux premiers clients de la journée une boîte contenant des truffes au chocolat.
-Il a confectionné 300 truffes : 125 truffes parfumées au café et 175 truffes enrobées de noix de coco. Combien y aura-t-il de truffes de chaque sorte dans chaque boîte ?
+Il a confectionné 300 truffes : 125 truffes parfumées au café et 175 truffes enrobées de noix de coco, et toutes les boîtes devront être identiques : elles
+devront contenir le même nombre de truffes café, et le même nombre
+de truffes noix de coco.
+
+Combien, au minimum,  y aura-t-il de truffes de chaque sorte dans chaque boîte ?
  
 \end{ExoDec}
 
@@ -39,13 +71,14 @@ Il a confectionné 300 truffes : 125 truffes parfumées au café et 175 truffes 
 
 \section{Les entiers naturels et entiers relatifs}
 
-\begin{DefT}{Ensemble de nombres}
+\begin{DefT}{Entiers naturels et relatifs.}
 
 \begin{enumerate}
-\item On appelle \textbf{entiers naturels} les nombres : 0 ; 1 ; 2 ; 3 . . . Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\N$}. Parfois, on dit abusivement que les nombres entiers sont des nombres sans partie décimale.
-On a donc : $\N =  \lbrace 0 ; 1 ; 2 ; 3 \cdots \rbrace $
-\item  On appelle \textbf{entiers relatifs} les nombres entiers naturels et leur symétrique par rapport à 0. Leur ensemble est noté $\Z$.\index{Ensemble de nombres! Entiers $\Z$}. L'utilisation de la lettre $\Z$ vient de l'allemand Zahlen (Chiffre).
-On a donc : $\Z = \lbrace \cdots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
+\item On appelle \textbf{entiers naturels} les nombres : $0$ ; $1$ ; $2$ ; $3$ ; $\ldots$  Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\N$}, on a donc : $\N =  \lbrace 0 ; 1 ; 2 ; 3 \ldots \rbrace $
+ 
+\item  On appelle \textbf{entiers relatifs} ou simplement \textbf{entiers} les nombres entiers naturels et leurs opposés. Leur ensemble est noté $\Z$ \index{Ensemble de nombres! Entiers $\Z$}(d'après le mot allemand Zahl qui signifie chiffre, nombre).
+On a donc : $\Z = \lbrace \ldots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
+Parfois, on dit abusivement que les nombres entiers sont les nombres sans partie décimale.
 \end{enumerate}
 \end{DefT}
 
@@ -56,76 +89,99 @@ On a donc : $\Z = \lbrace \cdots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
 
 \begin{DefT}{Multiple}\index{Multiple!Nombres}
 
-Soit $a$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $a$ s'il existe un entier $k \in \Z$ tel que $m=ka$.
+  Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il existe un entier $q \in \Z$ tel que $m=qd$. Dans ce cas, on dit aussi
+  que $d$ est un \textbf{diviseur} de $m$.
 \end{DefT}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-\begin{Ex} 
-
-$5 \times 7 = 35$ où $7 \in \Z$ donc $35$ est un multiple de $5$ et aussi,  $35$ est un multiple de $7$.
-\end{Ex}
+\begin{Exs} 
+  $35=5 \times 7$ où $7 \in \Z$ donc $35$ est un multiple de $5$
+  et $5$ est un diviseur de $35$. Comme $5 \in \Z$, on peut aussi
+  dire que $35$ est un multiple de $7$ et que $7$ est un diviseur de
+  $35$.
+  1 est un diviseur de tous les entiers, et tous les entiers
+  divisent 0.
+\end{Exs}
 \end{minipage}
 
 
-\begin{minipage}{0.5\linewidth}
-\begin{DefT}{Diviseur}\index{Diviseur!Nombres}
-
-Soit $n$ un nombre entier. Le nombre $q$ est dit \textbf{diviseur} de $n$ s'il existe un entier $k \in \Z$ tel que $n=kq$.
-\end{DefT}
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
-\begin{Ex} 
-
-$48 = 6 \times 8$ où $6 \in \Z$  donc $8$ est un diviseur de $48$ et aussi,  $6$ est diviseur de $48$.
-\end{Ex}
-\end{minipage}
+%\begin{minipage}{0.5\linewidth}
+%\begin{DefT}{Diviseur}\index{Diviseur!Nombres}%
+%
+%Soit $n$ un nombre entier. Le nombre $q$ est dit \textbf{diviseur} de $n$ s'il %existe un entier $k \in \Z$ tel que $n=kq$.
+%\end{DefT}
+%\end{minipage}
+%\begin{minipage}{0.5\linewidth}
+%\begin{Ex} 
+%
+%$48 = 6 \times 8$ où $6 \in \Z$  donc $8$ est un diviseur de $48$ et aussi,  $6%$ est diviseur de $48$.
+%\end{Ex}
+%\end{minipage}
 
 \begin{minipage}{0.5\linewidth}
 \begin{DefT}{Nombre premier}\index{Nombre premier}
 
-Un \textbf{nombre premier} est un nombre entier supérieur à 2 avec exactement 2 diviseurs : 1 et lui-même. 
+Un \textbf{nombre premier} est un nombre entier naturel qui a exactement 2 diviseurs positifs (qui sont alors 1 et lui-même) 
 
 \end{DefT}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
 \begin{Ex} 
 
-$19$ est un nombre premier. Il n'est divisible que par 1 et lui-même. 
+  $19$ est un nombre premier :  il n'est divisible que par 1 et lui-même.
+
+  $1$ n'est pas premier, car il n'a qu'un seul diviseur.  
 \end{Ex}
 \end{minipage}
 
 
 \begin{minipage}{0.5\linewidth}
-\begin{DefT}{Nombre pair}\index{Nombre pair}
+\begin{DefT}{Nombres pairs et impairs}\index{Nombres pairs et impairs}
 
-Un \textbf{nombre pair} est un nombre entier divisible par 2. \\  Soit $n$ un nombre pair, $n=2\times k$ avec $k\in\Z$.
+  Un \textbf{nombre pair} est un nombre entier divisible par 2, autrement
+  dit un nombre entier $n$ est pair lorsqu'il existe $k \in \Z$
+  tel que $n=2k$.
+ % . \\  Soit $n$ un nombre pair, $n=2\times k$ avec $k\in\Z$.
 
+  Un entier $n$ est un \textbf{nombre impair} lorsqu'il existe $k \in \Z$
+  tel que $n=2k+1$.
 \end{DefT}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-\begin{Ex} 
+\begin{Exs} 
 $46 = 2 \times 23$ et $23\in\Z$ donc $46$ est un nombre pair.
 
-$15= 2 \times 7,5$. Comme $7,5 \not\in\Z$, $15$ n'est pas pair.
-\end{Ex}
+  $15= 2 \times 7,5$. Comme $7,5 \not\in\Z$, $15$ n'est pas pair. Par contre,
+  $15=2 \times 7+1$ avec $7 \in \Z$, donc $15$ est impair.
+\end{Exs}
 \end{minipage}
 
 
 \begin{minipage}{0.5\linewidth}
-\begin{DefT}{Nombres premiers entre eux}\index{Premiers entre eux}
-\begin{enumerate}[leftmargin=*]
-\item Tout nombre se décompose de façon unique comme produit de facteurs premiers.
-\item Deux nombres entiers $a$ et $b$ sont premiers entre eux lorsque leurs seuls diviseurs communs sont 1 ou $-1$.
-\end{enumerate}
-\end{DefT}
+  \begin{ThT}{Décomposition en facteurs premiers}
+    Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers.
+  \end{ThT}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-\begin{Att}
- 
-$8=2^3$ et $15=3 \times 5$.
-Donc $8$ et $15$ n'ont pas de diviseurs communs. \textbf{$8$ et $15$ sont donc premiers entre eux}. Pourtant $8$ et $15$ ne sont pas premiers.
+\begin{Exs}
+Les décompositions en facteurs premiers de $8$, $15$ et $19$ sont respectivement  
+$8=2^3$ ; $15=3 \times 5$ ; $19=19$.
   
-\end{Att}
+\end{Exs}
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+  \begin{DefT}{Nombres premiers entre eux}\index{Premiers entre eux}
+
+    Deux nombres entiers $a$ et $b$ sont \textbf{premiers entre eux}
+    lorsque leur seul diviseur positif commun est $1$.
+  \end{DefT}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{Ex}
+  Les diviseurs positifs de $8$ sont $1$ ; $2$ ; $4$ et $8$. Ceux de $15$ sont
+  $1$ ; $3$ ; $5$ et $15$. Le seul diviseur commun est $1$ et \textbf{$8$ et $15$ sont donc premiers entre eux} (Pourtant, ils ne sont pas premiers)
+\end{Ex}
 \end{minipage}
 
 
@@ -136,14 +192,17 @@ Donc $8$ et $15$ n'ont pas de diviseurs communs. \textbf{$8$ et $15$ sont donc p
 \begin{minipage}{0.5\linewidth}
 \begin{DefT}{Proposition universelle}\index{Proposition universelle}
 
-Une proposition universelle est une proposition qui inclut tous les cas existants de l'univers. 
+  Une \textbf{proposition universelle} est une proposition qui porte sur tous
+  les éléments d'un ensemble. 
 
 \end{DefT}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
 \begin{Ex} 
-
-Quelque soit trois nombres $a, b, c$, $a(b+c)=ab+ac$. La distributivité est une proposition universelle.
+  Le théorème de décomposition en facteurs premiers est une proposition
+  universelle (et elle est vraie).
+  
+%Quels que soient trois nombres $a$, $b$ et  $c$, $a(b+c)=ab+ac$. La distributivité est une proposition universelle.
 
 \end{Ex}
 \end{minipage}
@@ -151,7 +210,7 @@ Quelque soit trois nombres $a, b, c$, $a(b+c)=ab+ac$. La distributivité est une
 \begin{minipage}{0.5\linewidth}
 \begin{DefT}{Contre-exemple}\index{Contre-exemple}
 
-Un \textbf{contre-exemple} est un cas particulier qui vient contredire une propriété universelle. 
+Un \textbf{contre-exemple} est un cas particulier qui vient contredire une proposition universelle. 
 
 \end{DefT}
 
@@ -160,9 +219,10 @@ Un \textbf{contre-exemple} est un cas particulier qui vient contredire une propr
 
 \begin{Ex} 
 
-Considérons une proposition universelle : Tous les nombres sont pairs. Pour démontrer que cette proposition est fausse, il suffit de démontrer qu'un seul nombre n'est pas pair. La contradiction vient sur le mot \textbf{tous}.
+Considérons une proposition universelle : « tous les nombres sont pairs ». Pour démontrer que cette proposition est fausse, il suffit de démontrer qu'un seul nombre n'est pas pair. La contradiction vient sur le mot \textbf{tous}.
 
-$3=2\times1,5$ et $1,5 \not\in\Z$ donc $3$ n'est pas pair. \textbf{Donc tous les nombres ne sont pas pairs.}
+$3=2\times1,5$ et $1,5 \not\in\Z$ donc $3$ n'est pas pair. \textbf{Il existe
+  des nombres non-pairs}, la proposition universelle initiale est fausse. 
 
 \end{Ex}
 \end{minipage}
@@ -178,9 +238,9 @@ $3=2\times1,5$ et $1,5 \not\in\Z$ donc $3$ n'est pas pair. \textbf{Donc tous les
 
 \begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
 \begin{enumerate}
-\item Déterminer les 10 premiers multiples de 4 : \point{1}
-\item Déterminer les 10 premiers multiples de 6 : \point{1}
-\item Déterminer les multiples communs de 4 et de 6 : \point{1}
+\item Déterminer les 10 premiers multiples positifs de 4 : \point{1}
+\item Déterminer les 10 premiers multiples positifs de 6 : \point{1}
+\item Déterminer tous les multiples communs de 4 et de 6 : \point{1}
 \end{enumerate}
 \end{ExoCad}
 
@@ -206,7 +266,7 @@ Décomposer 24 en produit de facteurs premiers.
 
 \begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
 
-Simplifie la fraction $\dfrac{735}{840}$ 
+Simplifier la fraction $\dfrac{735}{840}$ 
 
 \point{3}
 
@@ -214,27 +274,29 @@ Simplifie la fraction $\dfrac{735}{840}$
 
 
 
-\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+\begin{ExoCad}{Calculer, raisonner.}{1234}{0}{0}{0}{0}{0}
 
-Soit $a$ un entier. La somme de deux multiples de $a$ est un multiple de $a$. \point{3}
+Soit $a$ un entier. Démontrer que la somme de deux multiples de $a$ est un multiple de $a$. \point{3}
 
 \end{ExoCad}
 
 
-\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
-Vrai ou faux : Quel que soit l'entier $n$, $2n-1$ est un nombre premier. Justifier.\point{2}
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+Vrai ou faux : quel que soit l'entier $n$, $2n-1$ est un nombre premier. Justifier.\point{2}
 \end{ExoCad}
 
 
  
 \begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 
-Les affirmations sont-elles vraies ou fausses ?
+Les propositions suivantes sont-elles vraies ou fausses ?
 \begin{enumerate}[leftmargin=*]
 \item La différence de deux nombres entiers naturels est un entier naturel. \point{1}
-\item Le quotient de deux nombres décimal est un nombre décimal. \point{1}
-\item Le quotient de deux nombres premiers distincts peut être un entier relatif. \point{1}
-\item Le quotient de deux nombres premiers distincts peut être un nombre décimal. \point{1}
+\item Le quotient de deux nombres décimaux non nuls est un nombre décimal. \point{1} 
+\item Il existe deux nombres premiers distincts dont le quotient est un
+  entier relatif. \point{1}
+\item Il existe deux nombres premiers distincts dont le quotient est un
+  nombre décimal. \point{1}
 \end{enumerate} 
  
  \end{ExoCad}
@@ -255,8 +317,10 @@ Les affirmations sont-elles vraies ou fausses ?
 
 \begin{enumerate}
 \item Décomposer $186$ et $155$ en produit de facteurs premiers. \point{3}
-\item Déterminer le PGCD de $186$ et $155$. \point{2}
-\item Un chocolatier a fabriqué $186$ pralines et $155$ chocolats.
+\item Déterminer le PGCD (plus grand diviseur commun)
+  de $186$ et $155$. \point{2}
+\item Un chocolatier a fabriqué $186$ pralines et $155$ chocolats
+  qu'il répartit dans des colis. 
 Les colis sont constitués ainsi :
 \begin{description}
 \item Le nombre de pralines est le même dans chaque colis.
@@ -265,7 +329,7 @@ Les colis sont constitués ainsi :
 \end{description}
 \begin{enumerate}
 \item Quel nombre maximal de colis pourra-t-il réaliser ?  \point{3}
-\item Combien y aura-t-il de chocolats et de pralines dans chaque colis.   \point{3}
+\item Combien y aura-t-il de chocolats et de pralines dans chaque colis ?   \point{3}
 \end{enumerate}
 \end{enumerate}
   
@@ -278,11 +342,11 @@ Simplifier la fraction $\dfrac{2310}{2730}$ pour la rendre irréductible. \point
 
 
 \begin{ExoCuN}{Raisonner.}{1}{0}{0}{0}{0}
-Choisir 2 nombres entiers consécutifs. Vérifier que leur produit est pair. \point{2}
+Démontrer que le produit de deux entiers consécutifs est pair. \point{2}
 \end{ExoCuN}
 
 \begin{ExoCuN}{Chercher.}{1}{0}{0}{0}{0}
-Proposer 2 nombres premiers entre eux. \point{2}
+Proposer deux nombres premiers entre eux. \point{2}
 \end{ExoCuN}
 
 \begin{ExoCuN}{Chercher. Raisonner.}{1}{0}{0}{0}{0}
@@ -291,7 +355,7 @@ Les produits de deux nombres premiers est-il un nombre premier ? Justifier. \poi
 
 
 \begin{ExoCuN}{Chercher.}{2}{0}{0}{0}{0} 
-Je suis un nombre à trois chiffres non nuls. Je suis divisible par 94. Changez l'ordre de mes chiffres et je deviens divisible par 49.
+Je suis un nombre à trois chiffres non nuls. Je suis divisible par 94. Changez l'ordre de mes chiffres d'une certaine manière, et je deviens divisible par 49.
 Qui suis-je ?   \point{5}
 \end{ExoCuN}
 
@@ -306,12 +370,16 @@ Qui suis-je ?   \point{5}
 
 
 \begin{ExoCdN}{Représenter.}{2}{0}{0}{0}{0}
-On veut démontrer que la proposition $\mathcal P$ suivante : "La somme de deux nombres impairs est un nombre pair".
+On veut démontrer que la proposition universelle $\mathcal P$ suivante : « La somme de deux nombres impairs est un nombre pair » est vraie.
 
 \begin{enumerate}
-\item Calculer $a=5+7$. La proposition $\mathcal P$ semble-t-elle vraie ?\point{2}
-\item Soit $k$ et $q$ deux nombres relatifs. Le nombre impair $n$ s'écrit $n=2k+1$. Exprimer un autre nombre impair $m$ en fonction de $q$.\point{3}
-\item Calculer $n+m$ en fonction de $k$ et $q$. \point{3}
+\item Calculer $a=5+7$. Peut-on en déduire que la proposition $P$
+  est vraie ? %La proposition $\mathcal P$ semble-t-elle vraie ?\point{2}
+\item Soient $n$ et $m$ deux nombres impairs. Il existe donc deux entiers
+  relatifs $k$ et $q$ tels que $n=2k+1$ et $m=2q+1$.
+  %Exprimer un autre nombre impair $m$ en fonction de $q$.\point{3}
+  %\item
+  Calculer $n+m$ en fonction de $k$ et $q$. \point{3}
 \item En déduire que la somme $n+m$ est un nombre pair. \point{3}
 \end{enumerate}
 
@@ -320,7 +388,9 @@ On veut démontrer que la proposition $\mathcal P$ suivante : "La somme de deux 
  
 \begin{ExoCdN}{Représenter.}{1}{1}{0}{0}{0}
 
-Démontrer que si $p$ est impair alors $p^2$ est impair.
+  
+Démontrer que si $p$ est pair alors $p^2$ est pair.
+
 
  \point{6}
  
@@ -351,7 +421,7 @@ Montrer que la somme de trois entiers consécutifs est toujours un multiple de 3
  
 \begin{ExoCtN}{Raisonner.}{1}{1}{0}{0}{0}
 
-Démontrer que si $p$ est pair alors $p^2$ est pair.
+  Démontrer que si $n$ est impair alors $n^2$ est impair.
 
  \point{5}
  
@@ -375,8 +445,8 @@ print(is_divisible(n,4))
 \end{lstlisting}
  
 \begin{enumerate}
-\item Que fait ce programme ? on tester le programme écrit en Python avec l'éditeur : \url{https://sacado.xyz/tool/show/18}  \point{3}
-\item Modifier directement le programme pour qu'il teste si un nombre $a$ divise $n$.   
+\item Que fait ce programme ? On pourra tester le programme avec l'éditeur : \url{https://sacado.xyz/tool/show/18}  \point{3}
+\item Modifier le programme pour qu'il teste si un nombre $a$ divise $n$.   
 \end{enumerate}
  
 \end{ExoCtN}
@@ -387,7 +457,7 @@ print(is_divisible(n,4))
 \begin{ExoCtN}{Raisonner.}{2}{1}{0}{0}{0}
  
  
-Dans un pays où le système monétaire n'est constitué que de pièces de 3 et de 5, il s'agit d'aider les habitants en créant un algorithme  qui donne le nombre de pièces nécessaires à tout achat d'un montant entier supérieur ou égal à 8. 
+Dans un pays où le système fiduciaire (les pièces et les billets) n'est constitué que de pièces de 3 et de 5, il s'agit d'aider les habitants en créant un algorithme  qui donne le nombre minimal de pièces nécessaires à tout achat d'un montant entier supérieur ou égal à 8. 
 
 Pour tester l'algorithme, on peut utiliser l'éditeur Python : \url{https://sacado.xyz/tool/show/18}
 
@@ -402,15 +472,21 @@ Pour tester l'algorithme, on peut utiliser l'éditeur Python : \url{https://saca
  
 \textbf{Le crible d'Eratosthène}
 
-L'algorithme procède par élimination : il s'agit de supprimer d'une table d'entiers tous les multiples d'un entier $n$ (autres que lui-même).
+L'algorithme procède par élimination : il s'agit de rayer d'une table d'entiers tous les multiples d'un entier $n$ (autres que lui-même), et d'entourer
+tous les autres. 
 
 En supprimant tous ces multiples, à la fin il ne restera que les entiers qui ne sont multiples d'aucun entier à part 1 et eux-mêmes, et qui sont donc les nombres premiers.
 
-On commence par rayer les multiples de 2, puis les multiples de 3 restants, puis les multiples de 5 restants, et ainsi de suite en rayant à chaque fois tous les multiples du plus petit entier restant.
+On commence par entourer deux, puis on barre tous
+les multiples de 2 à partir de 4. On entoure alors le premier
+nombre non rayé ni entouré, qui est 3, et on raye puis les multiples de 3
+sauf 3. Puis on entoure le premier nombre non rayé ni entouré, qui est
+5, et on raye tous les multiples de 5 sauf 5... On répète l'opération
+jusqu'à ce qu'il n'y ait plus d'entier à rayer. 
 
 \begin{enumerate}
 
-\item Faire fonctionner le crible sur la table ci-contre.
+\item Exécuter le crible sur la table ci-contre.
 \item Quel est le résultat de ce crible ? \point{3}
 
 \item Écrire un code en Python du crible d'Eratosthène : \url{https://sacado.xyz/tool/show/18}
@@ -493,22 +569,41 @@ Démontrer que la différence de deux multiples de $n$ est un multiple de $n$. \
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ExoAutoN}{Raisonner.}{2}{0}{0}{0}{0}
-Pour déterminer le PGCD de deux nombres $a$ et $b$, $a>b$, on effectue la division euclidienne de $a$ par $b$. On appelle $r_0$ le reste. \\
+  Pour déterminer le PGCD de deux entiers naturel $a$ et $b$ (avec $b \neq 0$),
+  on effectue la division euclidienne de $a$ par $b$. On appelle $r_0$ le reste. \\
 Puis on divise $b$ par $r_0$ et on appelle $r_1$ le reste. \\
 On divise alors $r_0$ par $r_1$ et on appelle $r_2$ le reste.\\ 
-On divise alors $r_1$ par $r_2$ et on appelle $r_3$ le reste. Et ainsi de suite. \\ 
-Le PGCD de $a$ et de $b$ est alors le dernier reste non nul.\\ 
-On appelle ce procédé, la méthode par divisions successives.
+On divise alors $r_1$ par $r_2$ et on appelle $r_3$ le reste. Et ainsi de suite,
+jusqu'à obtenir un reste nul. 
+Le PGCD de $a$ et de $b$ est alors le dernier reste non nul (ou $b$
+si le premier reste est déjà nul).
+On appelle ce procédé « la méthode par divisions successives » ou
+« l'algorithme d'Euclide ». 
 
 \begin{enumerate}[leftmargin=*]
 
-\item Déterminer à l'aide de ce procédé le PGCD de $2 622$ et de $2 530$. \point{3}
+\item Déterminer à l'aide de ce procédé le PGCD de $912$ et de $\np{1104}$. \point{3}
 \item 
-\begin{enumerate}[leftmargin=*]
-\item Un tapissier achète $2 622$ clous tête plate et $2 530$ clous tête ronde pour la fabrication de fauteuils identiques. Après la fabrication, il ne lui reste plus aucun clous. Quel est le plus grand nombre de fauteuil que le tapissier peut réaliser ? 
- \point{3}
-\item Dans ce cas, quelle sera le nombre de chaque type de clou par fauteuil ? \point{2}
-\end{enumerate}
+%\begin{enumerate}[leftmargin=*]
+% \item Un tapissier achète $2 622$ clous tête plate et $2 530$ clous tête ronde pour la fabrication de fauteuils identiques : ch Après la fabrication, il ne lui reste plus aucun clous. Quel est le plus grand nombre de fauteuil que le tapissier peut réaliser ? 
+% \point{3}
+  %\item Dans ce cas, quelle sera le nombre de chaque type de clou par fauteuil ? \point{2}
+  Un carreleur doit carreler une pièce rectangulaire de $912$cm par
+  $\np{1104}$cm
+  en utilisant des carreaux carrés. Le travail sera grandement facilité
+  si :
+  \begin{itemize}
+  \item il n'a pas de découpe à faire : il disposera un nombre entier
+    de carreaux sur la longueur et sur la largeur de la pièce ;
+  \item il utilise le moins possible de carreaux, donc les carreaux
+    sont les plus grands possibles.
+    
+  \end{itemize}
+  \begin{enumerate}
+  \item Quel est le côté $c$ des carreaux qui répond à ces deux contraintes ?
+  \item Combien de carreaux seront disposés en longueur ? en largeur ?
+    Combien de carreaux seront utilisés au total ?
+  \end{enumerate}
 \end{enumerate}
 \end{ExoAutoN}
 
