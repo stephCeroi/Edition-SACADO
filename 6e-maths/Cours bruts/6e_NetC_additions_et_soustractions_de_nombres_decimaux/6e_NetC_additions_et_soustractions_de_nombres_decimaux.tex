@@ -1,0 +1,236 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\section{Calculer un complément}
+
+\begin{Def}
+Un \textbf{complément} est un nombre à \textbf{ajouter} pour atteindre un nombre donné.
+\end{Def}
+
+\begin{Ex}
+Le complément à $314$ pour atteindre $1000$ est $686$
+\[314+686=1000\]
+\end{Ex}
+
+\begin{ExOApp}[]
+Calculer les compléments suivants :
+\begin{enumerate}
+\item $79+...=1000$
+\item $7126+...=8000$
+\item $60,34+...=61$
+\end{enumerate}
+\end{ExOApp}
+
+\section{L'addition}
+
+\subsection{Vocabulaire et propriétés}
+
+\begin{Def}
+Lorsqu'on ajoute deux nombres :
+\begin{itemize}
+\item On appelle les \textbf{nombres} que l'on ajoute les \textbf{termes} de l'addition.
+\item On appelle le \textbf{résultat} d'une addition la \textbf{somme des termes}.
+\end{itemize}
+\end{Def}
+
+\begin{Prop}
+Dans une addition on peut regrouper les termes ou changer les termes de place. On dit que l'addition est une opération \textbf{commutative}.
+\end{Prop}
+
+\begin{Mt}
+Calculer astucieusement une somme :
+\[A=127+73+314\]
+On regroupe les termes $127$ et $73$ car leur somme vaut $200$ ainsi :
+\[A=127+73+314=200+314=514\]
+\end{Mt}
+
+\subsection{Poser l'addition de deux nombres entiers}
+
+\begin{Mt}
+Pour effectuer une addition avec des nombres entiers, il faut :
+\begin{itemize}
+    \item Aligner les chiffres des unités et disposer les chiffres de même rang les uns sous les autres
+    \item Commencer les calculs par la droite \textbf{sans oublier les retenues}.
+\end{itemize}
+\bigskip
+\[\opadd[carrystyle=\scriptsize\red,
+decimalsepsymbol={,},
+voperator=bottom]{3192}{345}\]
+\end{Mt} 
+
+\subsection{Poser l'addition de deux nombres décimaux}
+
+\begin{Mt}
+Pour effectuer une addition avec des nombres décimaux, il faut :
+\begin{itemize}
+    \item Aligner les virgules et disposer les chiffres de même rang les uns sous les autres
+    \item Commencer les calculs par la droite \textbf{sans oublier les retenues}.
+\end{itemize}
+\bigskip
+\[\opadd[carrystyle=\scriptsize\red,
+decimalsepsymbol={,},
+voperator=bottom]{45.05}{78.4}\]
+\end{Mt} 
+
+\begin{ExOApp}[]
+Effectuer les calculs suivants :
+\[A=45,06+12,2
+\hspace{1cm}
+B=3,455+23,73\]
+\end{ExOApp} 
+
+\section{La soustraction}
+
+\subsection{Vocabulaire et propriétés}
+
+\begin{Def}
+Lorsqu'on soustrait deux nombres :
+\begin{itemize}
+\item On appelle les \textbf{nombres} que l'on ajoute les \textbf{termes} de la soustraction.
+\item On appelle le \textbf{résultat} d'une addition la \textbf{différence des termes}.
+\end{itemize}
+\end{Def}
+
+\begin{Prop}
+Dans une soustraction on ne peut pas changer les termes de place. On dit que l'addition \textbf{n'est pas} une opération \textbf{commutative}.
+\end{Prop}
+
+\subsection{Poser la soustraction de deux nombres entiers}
+
+\begin{Mt}
+Pour effectuer une soustraction avec des nombres entiers on observe les mêmes règles que pour les additions.
+\[\opsub[carrystyle=\scriptsize\red,
+carrysub,
+lastcarry,
+columnwidth=2.5ex,
+offsetcarry=-0.4,
+decimalsepoffset=-3pt,
+deletezero=false,
+decimalsepsymbol={,},
+voperator=bottom]{8644}{2785}\]
+\end{Mt}
+
+\subsection{Poser la soustraction de deux nombres décimaux}
+
+\begin{Mt}
+Pour effectuer une soustraction avec des nombres décimaux on observe les mêmes règles que pour les additions.
+\[\opsub[carrystyle=\scriptsize\red,
+carrysub,
+lastcarry,
+columnwidth=2.5ex,
+offsetcarry=-0.4,
+decimalsepoffset=-3pt,
+deletezero=false,
+decimalsepsymbol={,},
+voperator=bottom]{60,77}{21,21}\]
+\end{Mt}
+
+\begin{ExOApp}[]
+Effectuer les calculs suivants :
+\[A=52,61-23,73
+\hspace{1cm}
+B=9,034-1,078\]
+\end{ExOApp} 
+
+\section{Ordre de grandeur d'une somme ou d'une différence}
+
+\begin{Def}
+Un ordre de grandeur d'un nombre est une valeur approchée simple de ce nombre
+\end{Def}
+
+\begin{Ex}
+On considère le nombre $a=41,82$. 
+
+Une valeur approchée de $a$ est $40$. On dit que $40$ est un ordre de grandeur de $a$. On note $40\approx41,82$.
+\end{Ex}
+
+\begin{Rqs}
+\begin{itemize}
+\item Calculer un ordre de grandeur permet de vérifier la cohérence du résultat d'un calcul.
+\item Un ordre de grandeur n'est pas unique.
+\end{itemize}
+\end{Rqs}
+
+\begin{Mt}
+Utiliser un ordre de grandeur pour retrouver une somme ou une différence :
+
+Lily a posé l'opération : $2619+1496$ mais ne se souvient plus de quel résultat elle a obtenu parmi les 4 suivants :
+\[411\;-\;6115\;-\;4115\;-\;41158\]
+
+Pour retrouver le résultaton peut estimer l'ordre de grandeur plutôt que de refaire le calcul. $2619\approx2600$ et $1496\approx1500$ donc un ordre de grandeur de $2619+1496$ est $2600+1500=4100$. Ainsi, $2619+1496=4115$.
+\end{Mt}
+
+\section{Résoudre un problème}
+
+\begin{Mt}
+\begin{itemize}
+\item \textbf{Ordre de grandeur} : Lorsque l'on veut résoudre un problème, il peut être utile de vérifier la cohérence de son résultat en utilisant un ordre de grandeur.
+\item Sens des opérations : Une addition est utilisée lorsque l'on veut ajouter des quantités. Une soustraction est utilisée lorsque l'on veut retirer une quantité d'une autre quantité.
+\end{itemize}
+\end{Mt}
+
+\begin{ExOApp}[]
+Manon achète $3$ baguettes de pain à $1,50$\euro chacune, une brioche à $5,50$\euro et un gâteau à $19,90$\euro. Manon a $40$\euro. Combien de croissants à $1,50$\euro pièce pourra-t-elle encore s'acheter ?
+\end{ExOApp}
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\begin{itemize}
+\item Savoir calculer des compléments.
+\item Savoir calculer astucieusement une somme.
+\item Savoir poser une addition avec des nombres entiers.
+\item Savoir poser une addition avec des nombres décimaux.
+\item Savoir poser une soustraction avec des nombres entiers.
+\item Savoir poser une soustraction avec des nombres décimaux.
+\item Savoir compléter une addition à trou.
+\item Savoir déterminer l'ordre de grandeur d'une somme ou d'une différence.
+\item Savoir résoudre un problème numérique.
+\end{itemize}
+\end{CpsCol}
+
+\end{document}

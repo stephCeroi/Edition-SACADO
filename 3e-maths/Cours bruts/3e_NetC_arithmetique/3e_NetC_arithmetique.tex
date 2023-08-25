@@ -1,0 +1,279 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+%\chapter{Arithmétique}
+%{https://sacado.xyz/qcm/parcours_show_course/0/129870}
+%
+% {
+% \begin{CpsCol}
+ % \textbf{Les savoir-faire du parcours}
+ % \begin{itemize}
+ % \item Savoir effectuer une division euclidienne.
+ % \item Savoir déterminer si des nombres sont des multiples ou diviseurs.
+ % \item Savoir utiliser les critères de divisibilités.
+ % \item Savoir déterminer le nombre de diviseurs d'un nombre donné.
+ % \item Savoir déterminer si un nombres est premier ou non.
+ % \item Savoir décomposer un nombre en produit de facteurs premiers
+ % \item Savoir simplifier une fraction par décomposition en produit de facteurs premiers.
+ % \item Savoir résoudre un problème de multiples ou de diviseurs.
+ % \item Savoir résoudre un problème d'arithmétique.
+ % \end{itemize}
+% \end{CpsCol}
+
+% \textbf{qrcode vers le parcours diagnostic}
+
+% }
+
+%\begin{pageCours}
+
+\section{Les savoir-faire du parcours}
+
+ \begin{CpsCol}
+  \textbf{Les savoir-faire du parcours}
+  \begin{itemize}
+  \item Savoir effectuer une division euclidienne.
+  \item Savoir déterminer si des nombres sont des multiples ou diviseurs.
+  \item Savoir utiliser les critères de divisibilités.
+  \item Savoir déterminer le nombre de diviseurs d'un nombre donné.
+  \item Savoir déterminer si un nombres est premier ou non.
+  \item Savoir décomposer un nombre en produit de facteurs premiers
+  \item Savoir simplifier une fraction par décomposition en produit de facteurs premiers.
+  \item Savoir résoudre un problème de multiples ou de diviseurs.
+  \item Savoir résoudre un problème d'arithmétique.
+  \end{itemize}
+ \end{CpsCol}
+
+\section{Multiples et diviseurs}
+
+\subsection{La division euclidienne}
+
+\mini{.45\linewidth}{
+\begin{Def}
+Soit $a$ et $b$ deux nombres entiers positifs.
+
+Effectuer la \textbf{division euclidienne} de $a$ par $b$, c'est déterminer deux nombres entiers $q$ et $r$ tels que $a=b\times q+r$ avec $0\leq r<b$.
+
+On dit que $q$ est le \textbf{quotient} et $r$ le \textbf{reste} dans la division euclidienne de $a$ par $b$.
+\end{Def}
+}{.45\linewidth}{
+\begin{Ex}
+On considère les nombres \textcolor{blue}{$83$} et \textcolor{red}{$12$}.
+
+\[\textcolor{blue}{83}=\textcolor{olive}{6}\times\textcolor{red}{12}+\textcolor{OliveGreen}{11}\]
+
+\textcolor{blue}{Dividende = $83$}\\
+\textcolor{red}{Diviseur = $12$}\\
+\textcolor{olive}{Quotient = $6$}\\
+\textcolor{OliveGreen}{Reste = $11$}
+\end{Ex}
+}
+
+\begin{Mt}
+\qr{•}{Déterminer si une égalité est une division euclidienne}
+\end{Mt}
+
+\subsection{Multiples et diviseurs}
+
+\begin{Def}
+Soit $a$ et $b$ deux nombres entiers positifs.
+
+Lorsque le \textbf{reste} dans la \textbf{division euclidienne} de $a$ par $b$ est égal à $0$, il existe alors un entier $q$ tel que $a=b\times q$.
+
+On dit que $a$ \textbf{divise} $b$, que $b$ est \textbf{un diviseur} de $a$ ou que $a$ est \textbf{un multiple} de $b$.
+\end{Def}
+
+\begin{Ex}
+\(42\div6=7\), autrement dit la division euclidienne de $42$ par $6$ a pour reste $0$ : \(42=6\times7+0\).\\
+
+\begin{itemize}
+    \item 42 est \textbf{divisible} par 6 et par 7.
+    \item 42 est un \textbf{multiple} de 6 et 7
+    \item 6 est un \textbf{diviseur} de 42.
+    \item 7 est un \textbf{diviseur} de 42.
+\end{itemize}
+\end{Ex}
+
+\begin{PpT}{Critères de divisibilités}
+Un nombre entier est divisible :
+\begin{itemize}
+\item par 2, si son chiffre des unités est pair,
+\item par 5, si son chiffre des unités est 0 ou 5,
+\item par 10, si son chiffre des unités est 0,
+\item par 3, si la somme de ses chiffres est divisible par 3,
+\item par 9, si la somme de ses chiffres est divisible par 9.
+\end{itemize}
+\end{PpT}
+
+\section{Nombres premiers}
+
+\subsection{Nombres premiers}
+
+\mini{.35\linewidth}{
+\begin{Def}
+On dit qu’un nombre entier naturel $p$ est \textbf{premier} s’il n’a que \textbf{deux diviseurs distincts} : $1$ et $p$.
+\end{Def}
+}{.55\linewidth}{
+\begin{Ex}
+\begin{itemize}
+\item On considère le nombre $n=48$.
+
+$48$ a $10$ diviseurs qui dont : $1,2,3,4,6,8,12,16,24,48$
+
+donc $48$ n'est pas un nombre premier.
+\item On considère le nombre $n=11$.
+
+$11$ a $2$ diviseurs qui sont : $1,11$
+
+donc $11$ est un nombre premier.
+\end{itemize}
+\end{Ex}
+}
+
+\begin{Rqs}
+\begin{itemize}
+\item Le nombre 1 n'est pas premier car il n'a qu'un seul diviseur.
+\item La liste des nombres premiers est infinie.
+\end{itemize}
+\end{Rqs}
+
+\subsection{Crible d'Érathostène}
+
+\begin{His}
+Erathostène (IIIe siècle av JC) parcourt la liste des nombres entiers. En supprimant les multiples des nombres rencontrés, les nombres restants sont les nombres premiers.
+\end{His}
+
+\begin{Mt}
+On considère la liste de tous les nombres entiers compris entre $2$ et $100$. On parcourt cette liste à partir du premier nombre : $2$. On barre tous les multiples de ce nombre. Lorsque cela est fait, on prend le prochain nombre qui n'est pas barré puis on barre tous ses multiples à lui et ainsi de suite.
+
+\begin{center}
+\begin{tabular}{cccccccccc}
+     & $2$ & $3$ & $\textcolor{red}{4}$ & $5$ & $\textcolor{red}{6}$ & $7$ & $\textcolor{red}{8}$ & $\textcolor{red}{9}$ & $\textcolor{red}{10}$ \\
+$11$ & $\textcolor{red}{12}$ & $13$ & $\textcolor{red}{14}$ & $\textcolor{red}{15}$ & $\textcolor{red}{16}$ & $17$ & $\textcolor{red}{18}$ & $19$ & $\textcolor{red}{20}$ \\
+$\textcolor{red}{21}$ & $\textcolor{red}{22}$ & $23$ & $\textcolor{red}{24}$ & $\textcolor{red}{25}$ & $\textcolor{red}{26}$ & $\textcolor{red}{27}$ & $\textcolor{red}{28}$ & $29$ & $\textcolor{red}{30}$ \\
+$31$ & $\textcolor{red}{32}$ & $\textcolor{red}{33}$ & $\textcolor{red}{34}$ & $\textcolor{red}{35}$ & $\textcolor{red}{36}$ & $37$ & $\textcolor{red}{38}$ & $\textcolor{red}{39}$ & $\textcolor{red}{40}$ \\
+$41$ & $\textcolor{red}{42}$ & $43$ & $\textcolor{red}{44}$ & $\textcolor{red}{45}$ & $\textcolor{red}{46}$ & $47$ & $\textcolor{red}{48}$ & $\textcolor{red}{49}$ & $\textcolor{red}{50}$ \\
+$\textcolor{red}{51}$ & $\textcolor{red}{52}$ & $53$ & $\textcolor{red}{54}$ & $\textcolor{red}{55}$ & $\textcolor{red}{56}$ & $\textcolor{red}{57}$ & $\textcolor{red}{58}$ & $59$ & $\textcolor{red}{60}$ \\
+$61$ & $\textcolor{red}{62}$ & $\textcolor{red}{63}$ & $\textcolor{red}{64}$ & $\textcolor{red}{65}$ & $\textcolor{red}{66}$ & $67$ & $\textcolor{red}{68}$ & $\textcolor{red}{69}$ & $\textcolor{red}{70}$ \\
+$71$ & $\textcolor{red}{72}$ & $73$ & $\textcolor{red}{74}$ & $\textcolor{red}{75}$ & $\textcolor{red}{76}$ & $\textcolor{red}{77}$ & $\textcolor{red}{78}$ & $79$ & $\textcolor{red}{80}$ \\
+$\textcolor{red}{81}$ & $\textcolor{red}{82}$ & $83$ & $\textcolor{red}{84}$ & $\textcolor{red}{85}$ & $\textcolor{red}{86}$ & $\textcolor{red}{87}$ & $\textcolor{red}{88}$ & $89$ & $\textcolor{red}{90}$ \\
+$\textcolor{red}{91}$ & $\textcolor{red}{92}$ & $\textcolor{red}{93}$ & $\textcolor{red}{94}$ & $\textcolor{red}{95}$ & $\textcolor{red}{96}$ & $97$ & $\textcolor{red}{98}$ & $\textcolor{red}{99}$ & $\textcolor{red}{100}$
+\end{tabular}
+\end{center}
+Grâce au crible nous pouvons déduire la liste des nombres premiers compris entre $1$ et $101$ :
+
+\[2\,;\, 3\,;\, 5\,;\, 7\,;\, 11\,;\, 13\,;\, 17\,;\, 19\,;\, 23\,;\, 29\,;\, 31\,;\, 37\,;\, 41\,;\, 43\,;\, 47\,;\, 53\,;\, 59\,;\, 61\,;\, 67\,;\, 71\,;\, 73\,;\, 79\,;\, 83\,;\, 89\,;\, 97\,;\, 101\]
+\end{Mt}
+
+\subsection{Décomposition d'un nombre en facteurs premiers}
+
+\begin{Pp}
+Tout nombre se \textbf{décompose} de \textbf{façon unique} comme \textbf{produit} de \textbf{facteurs premiers}.
+\end{Pp}
+
+\begin{Mt}
+\begin{enumerate}
+\item On construit un tableau à deux colonnes. La première colonne correspond au nombre à décomposer (\textit{p}) et ses divisions, la seconde colonne aux diviseurs (\textit{n}) du nombre à décomposer. L'algorithme consiste a trouver un premier diviseur (\(n_1\)) du nombre \textit{p} puis a le noter dans la seconde colonne en face de \textit{p}. En dessous de \textit{p} on écrit le résultat de la division \(p/n_1\) puis on recommence avec un nouveau diviseur \(n_2\) de \(p/n_1\) et ainsi de suite jusqu'à ce que le résultat de la division \(p/n_n\) soit 1. Le résultat de la décomposition sera le produit de tous les nombres de la deuxième colonne.\\
+
+En schéma :
+\begin{tabular}{c|c}
+    p & \(n_1\) \\
+    \(p/n_1\) & \(n_2\) \\
+    \(p/n_2\) & \(n_3\) \\
+    ... & ... \\
+    \(p/n_n\) & \(p/n_n\) \\
+    1 &
+\end{tabular} et \(p/n_n\) est donc un nombre premier.\\
+ 
+\begin{Ex}
+Décomposition du nombre 153 :
+\begin{center}
+\begin{tabular}{c|cc}
+    153 & 3 & car 153 est divisible par 3 et \(153=3\times51\)\\
+    51 & 3 & car 51 est divisible par 3 et \(51=3\times17\)\\
+    17 & 17 & car 17 n'est divisible que par 17 et \(17=17\times1\)\\
+    1 & 
+\end{tabular}
+\end{center}
+\end{Ex} 
+
+Ainsi \(153 = 3\times3\times17 = 3^2\times17\)\\
+
+\item On écrit d'abord un produit quelconque qui est égale au nombre \textit{p}. Puis on décompose les facteurs de ce produit.\\
+
+\begin{Ex}
+Décomposition du nombre 84 :
+\[84=4\times21=2\times2\times7\times3=2^2
+\times3\times7\]
+\end{Ex} 
+\end{enumerate}
+\end{Mt}
+
+\begin{Mt}
+\mini{.45\linewidth}{
+\qr{•}{Déterminer les diviseurs communs à deux nombres}
+}{.45\linewidth}{
+\qr{•}{Déterminer le plus grand diviseur commun de deux nombres décomposés}
+}
+\end{Mt}
+
+\subsection{Application : fractions irréductibles}
+
+\begin{Def}
+On dit qu’une fraction est \textbf{irréductible}, lorsque son \textbf{numérateur} et son \textbf{dénominateur} ont pour \textbf{seul diviseur commun 1}.
+\end{Def}
+
+\begin{Mt}
+\mini{.45\linewidth}{
+\qr{•}{Déterminer une fraction irréductible avec des nombres décomposés}
+}{.45\linewidth}{
+\qr{•}{Déterminer l'écriture d'une fraction sous forme irréductible}
+}
+\end{Mt}
+
+\end{document}
+
+%\end{pageCours}

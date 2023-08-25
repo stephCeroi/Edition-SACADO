@@ -1,0 +1,262 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\section{Nombres décimaux}
+
+\begin{His}
+En 1585, dans son ouvrage \textbf{La Disme}, Simon Stevin (1548 - 1620) ingénieur et mathématicien flamand, propose une écriture des nombres qui permet de simplifier les calculs (quelquefois très lourds en écriture fractionnaire).\\
+
+Il est considéré comme un précurseur de l'écriture décimale.
+\end{His}
+
+\begin{Def}
+\begin{itemize}
+\item Un \textbf{nombre décimal} est un nombre qui peut s'écrire sous la forme d'une \textbf{fraction décimale}.
+\item Un \textbf{nombre décimal} peut se noter en utilisant une virgule, c'est son \textbf{écriture décimale}.
+\end{itemize}
+
+Un nombre décimal se compose de la somme de sa \textbf{\textcolor{red}{partie entière}} et de sa \textbf{\textcolor{blue}{partie décimale}}.
+\end{Def}
+
+\begin{Ex}
+$5 \,687,445$ est un nombre décimal, sa partie entière est $5 \,687$, sa partie décimale est $0,445$.
+
+\[5 \,687,445 = \textcolor{red}{5\,687} + \textcolor{blue}{0,445}\]\\
+\end{Ex}
+
+\begin{Rqs}
+\begin{itemize}
+\item Tout \textbf{nombre entier} peut s'écrire sous forme de fraction décimale, c'est donc aussi un \textbf{nombre décimal}.
+\item Un \textbf{nombre décimal} peut s'écrire sous forme de fraction décimale, donc sa \textbf{partie décimale} est \textbf{finie} (on peut compter ses chiffres non nuls).
+\end{itemize}
+\end{Rqs}
+
+\begin{ExOApp}[]
+Écrire les nombres suivants sous forme décimale :
+\begin{enumerate}
+\item quatre-mille-un unité et six dixièmes
+\item $\frac{8619}{100}$
+\item $\frac{652}{10}$
+\end{enumerate}
+\end{ExOApp}
+
+\section{Position d'un chiffre dans un nombre décimal}
+
+\begin{Def}
+\begin{itemize}
+\item Notre système numérique est un \textbf{système décimal} (numération décimale).
+\item Chaque \textbf{chiffre} à une valeur en fonction de sa \textbf{position} dans le nombre (numération de position).
+\end{itemize}
+\end{Def}
+
+\begin{Voc}
+Chaque position (rang) possède un nom spécifique : unité, dizaine, centaines....
+    
+\begin{center}
+    \includegraphics[width=13cm]{tableau_position.png}
+\end{center}
+\end{Voc} 
+
+\begin{ExOApp}[]
+Indiquer le rang du chiffre souligné
+
+\[4\,5\underline{6}7 \hspace{.5cm} 674\underline{0},56 \hspace{.5cm} 41\,876,\underline{7} \hspace{.5cm} 67,53\underline{5}7 \hspace{.5cm} 87,9\underline{8}6 \hspace{.5cm} 6 \underline{4}39,78\]
+\end{ExOApp} 
+
+\section{Décomposer ou recomposer un nombre décimal}
+
+\begin{Prop}
+Un \textbf{nombre décimal} peut se \textbf{décomposer} de différentes façons.
+\end{Prop}
+
+\begin{Mt}
+Noé a décomposé le nombre décimal $998,48$ de manières différentes:
+\begin{itemize}
+\item $998,48=998\;unités\;et\;48\;centièmes$
+\item $998,48=998+\frac{48}{100}$
+\item $998,48=998+\frac{4}{10}+\frac{8}{100}$
+\item $998,48=9\;centaines+9\;dizaines+8\;unités
++4\;dixièmes+8\;centièmes$
+\item $998,48=900+90+8+0,4+0,08$
+\item $998,48=900+90+8+\frac{4}{10}+\frac{8}{100}$
+\item $998,48=(9\times100)+(9\times10)+(8\times1)
++(4\times0,1)+(8\times0,01)$
+\end{itemize}
+\end{Mt}
+
+\begin{ExOApp}[]
+Décomposer $877,58$ avec chacune des méthodes.
+\end{ExOApp}
+
+\section{Comparer des nombres décimaux}
+
+\begin{Def}
+\textbf{Comparer} deux nombres, c'est trouver le \textbf{plus grand} (ou le \textbf{plus petit}) ou dire s'ils sont \textbf{égaux}.
+
+On utilise les \textbf{symboles de comparaison} :
+\begin{center}
+est supérieur à ($>$) \hspace{1cm} est inférieur à ($<$) \hspace{1cm} est égal à ($=$)
+\end{center}
+\end{Def}
+
+\begin{Mt}
+Pour \textbf{comparer deux nombres décimaux}, on compare d'abord les \textbf{parties entières}.
+\begin{itemize}
+\item Si les \textbf{parties entières} sont égales alors on compare les \textbf{chiffres des dixièmes}.
+\item Si les \textbf{chiffres des dixièmes} sont égaux alors on compare les \textbf{chiffres des centièmes}.
+\item ...
+\item et ainsi de suite jusqu'à ce que les deux nombres aient des chiffres différents.
+\end{itemize}
+\end{Mt}
+
+\begin{ExOApp}[]
+Comparer les nombres suivants :
+\[821,291\;et\;978,261\hspace{1cm}307,5\;et\;81,686\hspace{1cm}20,008\;et\;20,08\]
+\end{ExOApp}
+
+\begin{Def}
+\begin{itemize}
+\item Ranger des nombres dans \textbf{l'ordre croissant} signifie les ranger \textbf{du plus petit au plus grand}.
+\item Ranger des nombres dans \textbf{l'ordre décroissant} signifie les ranger \textbf{du plus grand au plus petit}.
+\end{itemize}
+\end{Def}
+
+\begin{ExOApp}[]
+Ranger les nombres suivants dans l'ordre croissant :
+\[35,73\;-\;83,8\;-\;615,8\;-\;2,704\]
+\end{ExOApp}
+
+\section{Nombres décimaux et demi-droite graduée}
+
+\begin{Def}
+Une \textbf{demi-droite graduée} est une \textbf{demi-droite} sur laquelle on a reporté une \textbf{unité de longueur} régulièrement à partir de son \textbf{origine}.
+
+Sur une demi-droite graduée, \textbf{un point} est repéré par \textbf{un nombre}, son \textbf{abscisse}.
+
+Si un point $A$ a pour abscisse $6$, on note : $A(6)$.
+
+L'origine est repérée par le nombre $0$.
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+xmin=-0.1994343408245771,
+xmax=9.60761325487766,
+ymin=-0.4707007586686898,
+ymax=0.44760621908013903,
+xtick={-0.0,1.0,...,9.0},
+ytick={-0.0,1.0,...,0.0},]
+\clip(-0.1994343408245771,-0.4707007586686898) rectangle (9.60761325487766,0.44760621908013903);
+\draw [->,line width=2.pt] (0.,0.) -- (9.619386421259055,0.);
+\begin{scriptsize}
+\draw [fill=xdxdff] (6.,0.) circle (2.5pt);
+\draw[color=xdxdff] (6.087436506840482,0.21802947464293182) node {$A$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{Def}
+
+\begin{Ex}
+Le nombre indiqué par la flèche est : $1,4$
+\begin{center}
+\includegraphics[width=.8\linewidth]{nombre_decimaux_demi-droite.png}
+\end{center}
+\end{Ex}
+
+\begin{Mt}
+L'unité est partagée en 10 parties égales, une graduation correspond à un dixième. Le point \textcolor{sacado_blue}{bleu} correspond au nombre $\textcolor{sacado_blue}{4,4}$.
+
+Un dixième est partagé en 10 parties égales, une graduation correspond à un centième. Le point \textcolor{magenta}{violet} correspond au nombre $\textcolor{magenta}{4,46}$.
+
+Un centième est partagé en 10 parties égales, une graduation correspond à un millième. Le point \textcolor{sacado_green}{vert} correspond au nombre $\textcolor{sacado_green}{4,465}$.
+\begin{center}
+\includegraphics[width=\linewidth]{nombre_decimaux_demi-droite_zoom.PNG}
+\end{center}
+\end{Mt}
+
+\section{Encadrer un nombre décimal}
+
+\begin{Def}
+\textbf{Encadrer} un nombre, c'est trouver un nombre plus petit et un nombre plus grand. La \textbf{précision de l'encadrement} est la \textbf{différence} entre les deux nombres trouvés.
+\end{Def}
+
+\begin{Ex}
+Encadrement du nombre $5,65$ :
+ \begin{itemize}
+\item Encadrement à l'unité : \(5,0 < 5,65< 6,0\)
+
+\item Encadrement au dixième : \(5,6 < 5,65< 5,7\)
+ \end{itemize}
+\end{Ex}
+
+\begin{ExOApp}[]
+Encadrer le nombre $33,935$ à la \textbf{dizaine} près.
+\end{ExOApp}
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\begin{itemize}
+\item Savoir utiliser les fractions décimales.
+\item Savoir écrire un nombre décimal en lettres.
+\item Savoir écrire un nombre décimal en chiffres.
+\item Savoir déterminer la valeur d'un chiffre selon sa position.
+\item Savoir déterminer un nombre de ... dans un nombre décimal.
+\item Savoir décomposer un nombre décimal.
+\item Savoir recomposer un nombre décimal.
+\item Savoir comparer des nombres décimaux.
+\item Savoir encadrer un nombre décimal.
+\item Savoir repérer un nombre décimal sur une demi-droite graduée.
+\item Savoir placer un nombre décimal sur une demi-droite graduée.
+\end{itemize}
+\end{CpsCol}
+
+
+\end{document}

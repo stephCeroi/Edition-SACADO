@@ -1,0 +1,508 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+%\chapter{Calcul littéral}
+%{URL du cours}
+%
+
+% {
+% \begin{CpsCol}
+ % \textbf{Les savoir-faire du parcours}
+ % \begin{itemize}
+ % \item 
+ % \end{itemize}
+% \end{CpsCol}
+
+% \textbf{qrcode vers le parcours diagnostic}
+
+% }
+
+%\begin{pageCours}
+
+\section{Expressions littérales}
+
+\begin{Def}
+Une \textbf{expression littérale} est une expression mathématique qui comporte une ou plusieurs \textbf{lettres}.
+
+Ces lettres s'appellent les \textbf{variables}, elles ne représentent aucun nombre particulier et peuvent prendre plusieurs valeurs.
+\end{Def}
+
+\begin{Ex}
+\begin{itemize}
+\item Le périmètre d'un rectangle de longueur \textcolor{sacado_green}{$L$} et de largeur \textcolor{sacado_green}{$l$} est donné par l'expression littérale : $P=2\times\textcolor{sacado_green}{L}+2\times\textcolor{sacado_green}{l}$.
+\item L'aire d'un carré de côté \textcolor{sacado_green}{$c$} est donné par l'expression littérale : $A=\textcolor{sacado_green}{c}^2$
+\end{itemize}
+\end{Ex}
+
+\begin{Mt}
+\textit{Traduire une situation par une expression littérale}
+
+Pour un bouquet livré, un fleuriste facture 2€ par fleur et 26€ pour la livraison. Le prix a payer en fonction du nombre $y$ de fleurs est $2\times y+26$.
+\end{Mt}
+
+\section{Écriture simplifiée d'une expression littérale}
+
+\begin{His}
+François Viète (1540-1603) est un mathématicien français. En 1591, il publie \textit{In artem analyticem isagoge} qui représente une avancée considérable pour l'algèbre.
+
+Le calcul littéral trouve ses bases dans le but de résoudre tout problème.
+
+Les grandeurs cherchées sont désignées par des voyelles et les grandeurs connues par des consonnes.
+
+Les symboles d'opérations sont officialisés.
+\end{His}
+
+\begin{Pp}
+Pour marquer la \textbf{priorité de la multiplication},et ne pas le confondre avec la lettre "$x$",  le symbole « $\times$ » peut être omis dans certains cas. Cela permet également de simplifier l'écriture d'une expression.
+\end{Pp}
+
+\begin{Def}
+\begin{itemize}
+\item $a+a$ s'appelle le double du nombre $a$ et se note $2a$
+\item $a+a+a$ s'appelle le triple du nombre $a$ et se note $3a$
+\item $a\times a$ s'appelle le carré du nombre $a$ et se note $a^2$
+\item $a\times a\times a$ s'appelle le cube du nombre $a$ et se note $a^3$
+\end{itemize}
+\end{Def}
+
+\begin{Ex}
+L'expression $A(x)$ peut être simplifiée de la façon suivante :
+\[A(x)=6\times x\times 2+5\times2=\textcolor{sacado_green}{12x+10}\]
+\end{Ex}
+
+\section{Réduire et ordonner une expression littérale}
+
+\begin{DefT}{Réduire}
+\textbf{Réduire} une expression c'est \textbf{factoriser les coefficients} des termes \textbf{de même degré}.
+
+(compter les différentes quantités de cette expression)
+\end{DefT}
+
+\begin{Ex}
+On considère l'expression littérale $A(x)=-7x-9+12x+7$. Sa version réduite est :
+\[A(x)=5x-2\]
+\end{Ex}
+
+\begin{DefT}{Ordonner}
+\textbf{Ordonner} une expression c'est l'écrire avec ses \textbf{termes de degré décroissant}.
+\end{DefT}
+
+\begin{Ex}
+On considère l'expression littérale $A(x)=-5x+3+3x^2+6x-5$. Sa version réduite est :
+\[A(x)=x-2+3x^2\]
+Sa version réduite ET ordonnée est :
+\[A(x)=3x^2+x-2\]
+\end{Ex}
+
+\section{Substituer une valeur à une variable}
+
+\begin{Def}
+Lorsqu'on calcule une expression en donnant une une valeur à la lettre,  on dit qu'on \textbf{substitue} la lettre par la valeur.
+\end{Def}
+
+\begin{Rq}
+Lorsque dans une expression littérale on substitue la lettre par une valeur, il faut penser à réécrire les symboles « $\times$ » qui ont été simplifiés.
+\end{Rq}
+
+\begin{Ex}
+Soit l'expression $A=a(4b+7)$. Calculons pour $a=5$ et $b=9$ :
+\[A=5\times(4\times9+7)=215\]
+\end{Ex}
+
+\section{Forme développée ou factorisée d'une expression.}
+
+\begin{Def}
+\begin{itemize}
+\item On dit qu'une \textbf{expression littérale} est une \textbf{somme} lorsque la \textbf{dernière opération calculée} lorsqu'on substitue est \textbf{une addition} ou \textbf{une soustraction}.
+\item On dit qu'une \textbf{expression littérale} est un \textbf{produit} lorsque la \textbf{dernière opération calculée} lorsqu'on substitue est une \textbf{multiplication}.
+\end{itemize}
+\end{Def}
+
+\begin{Ex}
+\mini{.45\linewidth}{
+Dans l'expression :
+\[A(x)=(4x-7)^2\]
+La dernière opération calculé quand on substitue la variable $x$ est une \textbf{multiplication}, il s'agit donc d'un \textbf{produit}.
+}{.45\linewidth}{
+Dans l'expression :
+\[A(x)=(4x+2)+(6x-1)\]
+La dernière opération calculé quand on substitue la variable $x$ est une \textbf{addition}, il s'agit donc d'une \textbf{somme}.
+}
+\end{Ex}
+
+\begin{Def}
+\begin{itemize}
+\item \textbf{Développer} une expression signifie l'\textbf{écrire sous la forme d'une somme}.
+\item \textbf{Factoriser} une expression signifie l'\textbf{écrire sous la forme d'un produit}.
+\end{itemize}
+\end{Def}
+
+\begin{Ex}
+\begin{itemize}
+\item On considère l'expression : $A(x)=3x^2+2x-4-7x^2+4x+2$, la dernière opération effectuée lorsqu'on substitue est \textbf{une addition ou une soustraction}, il s'agit donc d'une \textbf{somme}, l'expression est donc \textbf{développée}.
+\item On considère l'expression : $A(x)=(-2x+8)(-x+4)$, la dernière opération effectuée lorsqu'on substitue est \textbf{une multiplication}, il s'agit donc d'un \textbf{produit}, l'expression est donc \textbf{factorisée}.
+\end{itemize}
+\end{Ex}
+
+\section{La distributivité}
+
+\subsection{La simple distributivité}
+
+%\begin{Ill}
+%\definecolor{ccwwff}{rgb}{0.8,0.4,1.}
+%\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+%\definecolor{ffzzqq}{rgb}{1.,0.6,0.}
+%\definecolor{ffqqff}{rgb}{1.,0.,1.}
+%\definecolor{qqzzff}{rgb}{0.,0.6,1.}
+%\definecolor{qqttzz}{rgb}{0.,0.2,0.6}
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.8cm,y=.8cm]
+%\clip(-1.8749087418124062,-3.213035065214023) rectangle (16.207967066451374,6.405515896628444);
+%\fill[line width=2.pt,color=qqzzff,fill=qqzzff,pattern=north east lines,pattern color=qqzzff] (0.86,3.34) -- (0.86,-0.66) -- (7.86,-0.66) -- (7.86,3.34) -- cycle;
+%\fill[line width=2.pt,color=ffqqff,fill=ffqqff,pattern=north east lines,pattern color=ffqqff] (7.86,3.34) -- (13.86,3.34) -- (13.86,-0.66) -- (7.86,-0.66) -- cycle;
+%\fill[line width=2.pt,color=ffzzqq,fill=ffzzqq,pattern=north east lines,pattern color=ffzzqq] (0.86,-0.66) -- (0.86,-0.66) -- (7.86,-0.66) -- (7.86,-0.66) -- cycle;
+%\fill[line width=2.pt,color=ffqqqq,fill=ffqqqq,pattern=north east lines,pattern color=ffqqqq] (7.86,-0.66) -- (7.86,-0.66) -- (13.86,-0.66) -- (13.86,-0.66) -- cycle;
+%\fill[line width=0.pt,color=qqzzff,fill=qqzzff,fill opacity=0.4000000059604645] (0.86,3.34) -- (0.86,-0.66) -- (7.86,-0.66) -- (7.86,3.34) -- cycle;
+%\draw [line width=2.pt,color=qqzzff] (0.86,3.34)-- (0.86,-0.66);
+%\draw [line width=2.pt,color=qqzzff] (0.86,-0.66)-- (7.86,-0.66);
+%\draw [line width=2.pt,color=qqzzff] (7.86,-0.66)-- (7.86,3.34);
+%\draw [line width=2.pt,color=qqzzff] (7.86,3.34)-- (0.86,3.34);
+%\draw [line width=2.pt,color=ffqqff] (7.86,3.34)-- (13.86,3.34);
+%\draw [line width=2.pt,color=ffqqff] (13.86,3.34)-- (13.86,-0.66);
+%\draw [line width=2.pt,color=ffqqff] (13.86,-0.66)-- (7.86,-0.66);
+%\draw [line width=2.pt,color=ffqqff] (7.86,-0.66)-- (7.86,3.34);
+%\draw [line width=2.pt,color=qqttzz] (0.56,-0.36)-- (0.56,3.04);
+%\draw [line width=2.pt,color=qqzzff] (1.16,3.64)-- (7.56,3.64);
+%\draw [line width=2.pt,color=ffqqff] (8.16,3.64)-- (13.56,3.64);
+%\draw [line width=2.pt,color=qqttzz] (1.16,-0.96)-- (13.56,-0.96);
+%\draw (4.109967412222888,4.251289781207348) node[anchor=north west] {$\mathbf{\textcolor{blue}{7}}$};
+%\draw (10.650582066275744,4.251289781207348) node[anchor=north west] {$\mathbf{\textcolor{magenta}{6}}$};
+%\draw (-0.2,2) node[anchor=north west] {$\mathbf{\textcolor{purple}{4}}$};
+%\draw [color=qqttzz](-1.4474175879527424,4.7) node[anchor=north west] {$\mathbf{A_{ABCD}=\textcolor{purple}{4}\times(\textcolor{blue}{7}+\textcolor{magenta}{6})= \underline{\textcolor{blue}{  \textcolor{purple}{4}\times\textcolor{blue}{7}}} +\textcolor{purple}{4}\times\textcolor{magenta}{6}   }$};
+%\draw [color=qqttzz](6.589416104608938,-0.990081065143764) node[anchor=north west] {$\mathbf{  \textcolor{blue}{7}+\textcolor{magenta}{6}}$};
+%\draw [fill=qqttzz] (0.86,3.34) circle (1.0pt);
+%\draw[color=qqttzz] (0.5,3.6) node {$\bold{A}$};
+%\draw [fill=qqttzz] (13.86,3.34) circle (1.0pt);
+%\draw[color=qqttzz] (14.3,3.6) node {$\bold{B}$};
+%\draw [fill=qqttzz] (0.86,-0.66) circle (1.0pt);
+%\draw[color=qqttzz] (0.5,-1.0114556228367473) node {$\bold{D}$};
+%\draw [fill=qqttzz] (13.86,-0.66) circle (1.0pt);
+%\draw[color=qqttzz] (14.3,-1.0114556228367473) node {$\bold{C}$};
+%\draw [fill=ccwwff,shift={(0.56,-0.36)},rotate=180] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=ccwwff,shift={(0.56,3.04)}] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=qqzzff,shift={(1.16,3.64)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=qqzzff,shift={(7.56,3.64)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=ffqqff,shift={(8.16,3.64)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=ffqqff,shift={(13.56,3.64)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=qqttzz,shift={(13.56,-0.96)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=qqttzz,shift={(1.16,-0.96)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\end{tikzpicture}
+%\end{Ill}
+
+\begin{PpT}{Simple distributivité de la multiplication par rapport à l'addition}
+\begin{itemize}
+\item Pour tous nombres $k$, $a$ et $b$ : $k\times(a+b)=k\times a+k\times b$
+\item Pour tous nombres $k$, $a$ et $b$ : $k\times(a-b)=k\times a-k\times b$
+\end{itemize}
+\end{PpT}
+
+\begin{Ex}
+Utilisons la distributivité pour transformer le calcul :
+\[6\times (5-4)=6\times5-6\times4=30-24=6\]
+\end{Ex}
+
+
+\subsection{La double distributivité}
+
+%\begin{Ill}
+%\definecolor{yqqqyq}{rgb}{0.5019607843137255,0.,0.5019607843137255}
+%\definecolor{ccwwff}{rgb}{0.8,0.4,1.}
+%\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+%\definecolor{ffzzqq}{rgb}{1.,0.6,0.}
+%\definecolor{qqccqq}{rgb}{0.,0.8,0.}
+%\definecolor{qqzzff}{rgb}{0.,0.6,1.}
+%\definecolor{qqttzz}{rgb}{0.,0.2,0.6}
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.8cm,y=.8cm]
+%\clip(-0.6351843956193828,-2.8516107260417605) rectangle (24.67229191287274,6.766940235800699);
+%\fill[line width=2.pt,color=qqzzff,fill=qqzzff,pattern=north east lines,pattern color=qqzzff] (0.86,3.34) -- (0.86,1.) -- (4.86,1.) -- (4.86,3.34) -- cycle;
+%\fill[line width=2.pt,color=qqccqq,fill=qqccqq,pattern=north east lines,pattern color=qqccqq] (4.86,3.34) -- (11.86,3.34) -- (11.86,1.) -- (4.86,1.) -- cycle;
+%\fill[line width=2.pt,color=ffzzqq,fill=ffzzqq,pattern=north east lines,pattern color=ffzzqq] (0.86,-1.) -- (0.86,1.) -- (4.86,1.) -- (4.86,-1.) -- cycle;
+%\fill[line width=2.pt,color=ffqqqq,fill=ffqqqq,pattern=north east lines,pattern color=ffqqqq] (4.86,-1.) -- (4.86,1.) -- (11.86,1.) -- (11.86,-1.) -- cycle;
+%\fill[line width=0.pt,color=qqzzff,fill=qqzzff,fill opacity=0.4000000059604645] (0.86,3.34) -- (0.86,1.) -- (4.86,1.) -- (4.86,3.34) -- cycle;
+%\draw [line width=2.pt,color=qqzzff] (0.86,3.34)-- (0.86,1.);
+%\draw [line width=2.pt,color=qqzzff] (0.86,1.)-- (4.86,1.);
+%\draw [line width=2.pt,color=qqzzff] (4.86,1.)-- (4.86,3.34);
+%\draw [line width=2.pt,color=qqzzff] (4.86,3.34)-- (0.86,3.34);
+%\draw [line width=2.pt,color=qqccqq] (4.86,3.34)-- (11.86,3.34);
+%\draw [line width=2.pt,color=qqccqq] (11.86,3.34)-- (11.86,1.);
+%\draw [line width=2.pt,color=qqccqq] (11.86,1.)-- (4.86,1.);
+%\draw [line width=2.pt,color=qqccqq] (4.86,1.)-- (4.86,3.34);
+%\draw [line width=2.pt,color=ffzzqq] (0.86,-1.)-- (0.86,1.);
+%\draw [line width=2.pt,color=ffzzqq] (0.86,1.)-- (4.86,1.);
+%\draw [line width=2.pt,color=ffzzqq] (4.86,1.)-- (4.86,-1.);
+%\draw [line width=2.pt,color=ffzzqq] (4.86,-1.)-- (0.86,-1.);
+%\draw [line width=2.pt,color=ffqqqq] (4.86,-1.)-- (4.86,1.);
+%\draw [line width=2.pt,color=ffqqqq] (4.86,1.)-- (11.86,1.);
+%\draw [line width=2.pt,color=ffqqqq] (11.86,1.)-- (11.86,-1.);
+%\draw [line width=2.pt,color=ffqqqq] (11.86,-1.)-- (4.86,-1.);
+%\draw [line width=2.pt,color=ccwwff] (0.36,1.5)-- (0.36,2.84);
+%\draw [line width=2.pt,color=ccwwff] (0.36,0.5)-- (0.36,-0.5);
+%\draw [line width=2.pt,color=qqzzff] (1.36,3.84)-- (4.36,3.84);
+%\draw [line width=2.pt,color=qqccqq] (5.36,3.84)-- (11.36,3.84);
+%\draw [line width=2.pt,color=qqttzz] (1.36,-1.5)-- (11.36,-1.5);
+%\draw [line width=2.pt,color=yqqqyq] (12.36,-0.5)-- (12.36,2.84);
+%\draw (0,0.2) node[anchor=north west] {$\mathbf{\textcolor{purple}{2}}$};
+%\draw (2.613748373714065,4.2) node[anchor=north west] {$\mathbf{\textcolor{blue}{4}}$};
+%\draw (8.128384258503734,4.2) node[anchor=north west] {$\mathbf{\textcolor{ForestGreen}{7}}$};
+%\draw (0,2.4) node[anchor=north west] {$\mathbf{\textcolor{magenta}{5}}$};
+%\draw [color=qqttzz](0.13429968132801287,5) node[anchor=north west] {$\mathbf{A_{ABCD}=(\textcolor{magenta}{5}+\textcolor{purple}{2})\times(\textcolor{blue}{4}+\textcolor{ForestGreen}{7})= \underline{\textcolor{magenta}{5}\times\textcolor{blue}{4}}} +\textcolor{magenta}{5}\times\textcolor{ForestGreen}{7}   +   \textcolor{purple}{2}\times\textcolor{blue}{4} +   \textcolor{purple}{2}\times\textcolor{ForestGreen}{7}$};
+%\draw [color=qqttzz](5.606186450731715,-1.5263881490767992) node[anchor=north west] {$\mathbf{   \textcolor{blue}{4}+\textcolor{ForestGreen}{7}}$};
+%\draw [color=qqttzz](12.4,1.3) node[anchor=north west] {$\mathbf{                  \textcolor{magenta}{5}+\textcolor{purple}{2}}$};
+%\draw [fill=qqttzz] (0.86,3.34) circle (1.0pt);
+%\draw[color=qqttzz] (.6,3.5) node {$\bold{A}$};
+%\draw [fill=qqttzz] (11.86,3.34) circle (1.0pt);
+%\draw[color=qqttzz] (12.2,3.5) node {$\bold{B}$};
+%\draw [fill=qqttzz] (0.86,-1.) circle (1.0pt);
+%\draw[color=qqttzz] (.6,-1.3) node {$\bold{D}$};
+%\draw [fill=qqttzz] (11.86,-1.) circle (1.0pt);
+%\draw[color=qqttzz] (12.2,-1.3) node {$\bold{C}$};
+%\draw [fill=ccwwff,shift={(0.36,1.5)},rotate=180] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=ccwwff,shift={(0.36,0.5)}] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=ccwwff,shift={(0.36,-0.5)},rotate=180] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=ccwwff,shift={(0.36,2.84)}] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=qqzzff,shift={(1.36,3.84)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=qqzzff,shift={(4.36,3.84)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=qqccqq,shift={(5.36,3.84)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=qqccqq,shift={(11.36,3.84)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=yqqqyq,shift={(12.36,2.84)}] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=yqqqyq,shift={(12.36,-0.5)},rotate=180] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=qqttzz,shift={(11.36,-1.5)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\draw [fill=qqttzz,shift={(1.36,-1.5)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+%\end{tikzpicture}
+%\end{Ill}
+
+\begin{PpT}{Double distributivité de la multiplication par rapport à l'addition}
+Pour tous nombres $a$, $b$, $c$ et $d$ : $(a+b)\times(c+d)=a\times c+a\times d+b\times c+b\times d$
+\end{PpT}
+
+\begin{Ex}
+Nous pouvons utiliser la double distributivité pour calculer mentalement :
+\[A=11\times15=(10+1)\times(10+5)=10\times10+10\times5+1\times10+1\times5\]
+donc :
+\[A=100+50+10+5=165\]
+\end{Ex}
+
+\begin{Ill}
+\mini{.45\linewidth}{
+\definecolor{ccwwff}{rgb}{0.8,0.4,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{ffzzqq}{rgb}{1.,0.6,0.}
+\definecolor{ffqqff}{rgb}{1.,0.,1.}
+\definecolor{qqzzff}{rgb}{0.,0.6,1.}
+\definecolor{qqttzz}{rgb}{0.,0.2,0.6}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.4cm,y=.4cm]
+\clip(-1.8749087418124062,-3.213035065214023) rectangle (16.207967066451374,6.405515896628444);
+\fill[line width=2.pt,color=qqzzff,fill=qqzzff,pattern=north east lines,pattern color=qqzzff] (0.86,3.34) -- (0.86,-0.66) -- (7.86,-0.66) -- (7.86,3.34) -- cycle;
+\fill[line width=2.pt,color=ffqqff,fill=ffqqff,pattern=north east lines,pattern color=ffqqff] (7.86,3.34) -- (13.86,3.34) -- (13.86,-0.66) -- (7.86,-0.66) -- cycle;
+\fill[line width=2.pt,color=ffzzqq,fill=ffzzqq,pattern=north east lines,pattern color=ffzzqq] (0.86,-0.66) -- (0.86,-0.66) -- (7.86,-0.66) -- (7.86,-0.66) -- cycle;
+\fill[line width=2.pt,color=ffqqqq,fill=ffqqqq,pattern=north east lines,pattern color=ffqqqq] (7.86,-0.66) -- (7.86,-0.66) -- (13.86,-0.66) -- (13.86,-0.66) -- cycle;
+\fill[line width=0.pt,color=qqzzff,fill=qqzzff,fill opacity=0.4000000059604645] (0.86,3.34) -- (0.86,-0.66) -- (7.86,-0.66) -- (7.86,3.34) -- cycle;
+\draw [line width=2.pt,color=qqzzff] (0.86,3.34)-- (0.86,-0.66);
+\draw [line width=2.pt,color=qqzzff] (0.86,-0.66)-- (7.86,-0.66);
+\draw [line width=2.pt,color=qqzzff] (7.86,-0.66)-- (7.86,3.34);
+\draw [line width=2.pt,color=qqzzff] (7.86,3.34)-- (0.86,3.34);
+\draw [line width=2.pt,color=ffqqff] (7.86,3.34)-- (13.86,3.34);
+\draw [line width=2.pt,color=ffqqff] (13.86,3.34)-- (13.86,-0.66);
+\draw [line width=2.pt,color=ffqqff] (13.86,-0.66)-- (7.86,-0.66);
+\draw [line width=2.pt,color=ffqqff] (7.86,-0.66)-- (7.86,3.34);
+\draw [line width=2.pt,color=qqttzz] (0.56,-0.36)-- (0.56,3.04);
+\draw [line width=2.pt,color=qqzzff] (1.16,3.64)-- (7.56,3.64);
+\draw [line width=2.pt,color=ffqqff] (8.16,3.64)-- (13.56,3.64);
+\draw [line width=2.pt,color=qqttzz] (1.16,-0.96)-- (13.56,-0.96);
+\draw (4.109967412222888,4.251289781207348) node[anchor=north west] {$\mathbf{\textcolor{blue}{7}}$};
+\draw (10.650582066275744,4.251289781207348) node[anchor=north west] {$\mathbf{\textcolor{magenta}{6}}$};
+\draw (-0.2,2) node[anchor=north west] {$\mathbf{\textcolor{purple}{4}}$};
+\draw [color=qqttzz](-1.4474175879527424,4.7) node[anchor=north west] {$\mathbf{A_{ABCD}=\textcolor{purple}{4}\times(\textcolor{blue}{7}+\textcolor{magenta}{6})= \underline{\textcolor{blue}{  \textcolor{purple}{4}\times\textcolor{blue}{7}}} +\textcolor{purple}{4}\times\textcolor{magenta}{6}   }$};
+\draw [color=qqttzz](6.589416104608938,-0.990081065143764) node[anchor=north west] {$\mathbf{  \textcolor{blue}{7}+\textcolor{magenta}{6}}$};
+\draw [fill=qqttzz] (0.86,3.34) circle (1.0pt);
+\draw[color=qqttzz] (0.5,3.6) node {$\bold{A}$};
+\draw [fill=qqttzz] (13.86,3.34) circle (1.0pt);
+\draw[color=qqttzz] (14.3,3.6) node {$\bold{B}$};
+\draw [fill=qqttzz] (0.86,-0.66) circle (1.0pt);
+\draw[color=qqttzz] (0.5,-1.0114556228367473) node {$\bold{D}$};
+\draw [fill=qqttzz] (13.86,-0.66) circle (1.0pt);
+\draw[color=qqttzz] (14.3,-1.0114556228367473) node {$\bold{C}$};
+\draw [fill=ccwwff,shift={(0.56,-0.36)},rotate=180] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=ccwwff,shift={(0.56,3.04)}] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=qqzzff,shift={(1.16,3.64)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=qqzzff,shift={(7.56,3.64)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=ffqqff,shift={(8.16,3.64)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=ffqqff,shift={(13.56,3.64)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=qqttzz,shift={(13.56,-0.96)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=qqttzz,shift={(1.16,-0.96)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\end{tikzpicture}
+}{.45\linewidth}{
+\definecolor{yqqqyq}{rgb}{0.5019607843137255,0.,0.5019607843137255}
+\definecolor{ccwwff}{rgb}{0.8,0.4,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{ffzzqq}{rgb}{1.,0.6,0.}
+\definecolor{qqccqq}{rgb}{0.,0.8,0.}
+\definecolor{qqzzff}{rgb}{0.,0.6,1.}
+\definecolor{qqttzz}{rgb}{0.,0.2,0.6}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.4cm,y=.4cm]
+\clip(-0.6351843956193828,-2.8516107260417605) rectangle (24.67229191287274,6.766940235800699);
+\fill[line width=2.pt,color=qqzzff,fill=qqzzff,pattern=north east lines,pattern color=qqzzff] (0.86,3.34) -- (0.86,1.) -- (4.86,1.) -- (4.86,3.34) -- cycle;
+\fill[line width=2.pt,color=qqccqq,fill=qqccqq,pattern=north east lines,pattern color=qqccqq] (4.86,3.34) -- (11.86,3.34) -- (11.86,1.) -- (4.86,1.) -- cycle;
+\fill[line width=2.pt,color=ffzzqq,fill=ffzzqq,pattern=north east lines,pattern color=ffzzqq] (0.86,-1.) -- (0.86,1.) -- (4.86,1.) -- (4.86,-1.) -- cycle;
+\fill[line width=2.pt,color=ffqqqq,fill=ffqqqq,pattern=north east lines,pattern color=ffqqqq] (4.86,-1.) -- (4.86,1.) -- (11.86,1.) -- (11.86,-1.) -- cycle;
+\fill[line width=0.pt,color=qqzzff,fill=qqzzff,fill opacity=0.4000000059604645] (0.86,3.34) -- (0.86,1.) -- (4.86,1.) -- (4.86,3.34) -- cycle;
+\draw [line width=2.pt,color=qqzzff] (0.86,3.34)-- (0.86,1.);
+\draw [line width=2.pt,color=qqzzff] (0.86,1.)-- (4.86,1.);
+\draw [line width=2.pt,color=qqzzff] (4.86,1.)-- (4.86,3.34);
+\draw [line width=2.pt,color=qqzzff] (4.86,3.34)-- (0.86,3.34);
+\draw [line width=2.pt,color=qqccqq] (4.86,3.34)-- (11.86,3.34);
+\draw [line width=2.pt,color=qqccqq] (11.86,3.34)-- (11.86,1.);
+\draw [line width=2.pt,color=qqccqq] (11.86,1.)-- (4.86,1.);
+\draw [line width=2.pt,color=qqccqq] (4.86,1.)-- (4.86,3.34);
+\draw [line width=2.pt,color=ffzzqq] (0.86,-1.)-- (0.86,1.);
+\draw [line width=2.pt,color=ffzzqq] (0.86,1.)-- (4.86,1.);
+\draw [line width=2.pt,color=ffzzqq] (4.86,1.)-- (4.86,-1.);
+\draw [line width=2.pt,color=ffzzqq] (4.86,-1.)-- (0.86,-1.);
+\draw [line width=2.pt,color=ffqqqq] (4.86,-1.)-- (4.86,1.);
+\draw [line width=2.pt,color=ffqqqq] (4.86,1.)-- (11.86,1.);
+\draw [line width=2.pt,color=ffqqqq] (11.86,1.)-- (11.86,-1.);
+\draw [line width=2.pt,color=ffqqqq] (11.86,-1.)-- (4.86,-1.);
+\draw [line width=2.pt,color=ccwwff] (0.36,1.5)-- (0.36,2.84);
+\draw [line width=2.pt,color=ccwwff] (0.36,0.5)-- (0.36,-0.5);
+\draw [line width=2.pt,color=qqzzff] (1.36,3.84)-- (4.36,3.84);
+\draw [line width=2.pt,color=qqccqq] (5.36,3.84)-- (11.36,3.84);
+\draw [line width=2.pt,color=qqttzz] (1.36,-1.5)-- (11.36,-1.5);
+\draw [line width=2.pt,color=yqqqyq] (12.36,-0.5)-- (12.36,2.84);
+\draw (0,0.2) node[anchor=north west] {$\mathbf{\textcolor{purple}{2}}$};
+\draw (2.613748373714065,4.2) node[anchor=north west] {$\mathbf{\textcolor{blue}{4}}$};
+\draw (8.128384258503734,4.2) node[anchor=north west] {$\mathbf{\textcolor{ForestGreen}{7}}$};
+\draw (0,2.4) node[anchor=north west] {$\mathbf{\textcolor{magenta}{5}}$};
+\draw [color=qqttzz](0.13429968132801287,5) node[anchor=north west] {$\mathbf{A_{ABCD}=(\textcolor{magenta}{5}+\textcolor{purple}{2})\times(\textcolor{blue}{4}+\textcolor{ForestGreen}{7})= \underline{\textcolor{magenta}{5}\times\textcolor{blue}{4}}} +\textcolor{magenta}{5}\times\textcolor{ForestGreen}{7}   +   \textcolor{purple}{2}\times\textcolor{blue}{4} +   \textcolor{purple}{2}\times\textcolor{ForestGreen}{7}$};
+\draw [color=qqttzz](5.606186450731715,-1.5263881490767992) node[anchor=north west] {$\mathbf{   \textcolor{blue}{4}+\textcolor{ForestGreen}{7}}$};
+\draw [color=qqttzz](12.4,1.3) node[anchor=north west] {$\mathbf{                  \textcolor{magenta}{5}+\textcolor{purple}{2}}$};
+\draw [fill=qqttzz] (0.86,3.34) circle (1.0pt);
+\draw[color=qqttzz] (.6,3.5) node {$\bold{A}$};
+\draw [fill=qqttzz] (11.86,3.34) circle (1.0pt);
+\draw[color=qqttzz] (12.2,3.5) node {$\bold{B}$};
+\draw [fill=qqttzz] (0.86,-1.) circle (1.0pt);
+\draw[color=qqttzz] (.6,-1.3) node {$\bold{D}$};
+\draw [fill=qqttzz] (11.86,-1.) circle (1.0pt);
+\draw[color=qqttzz] (12.2,-1.3) node {$\bold{C}$};
+\draw [fill=ccwwff,shift={(0.36,1.5)},rotate=180] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=ccwwff,shift={(0.36,0.5)}] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=ccwwff,shift={(0.36,-0.5)},rotate=180] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=ccwwff,shift={(0.36,2.84)}] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=qqzzff,shift={(1.36,3.84)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=qqzzff,shift={(4.36,3.84)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=qqccqq,shift={(5.36,3.84)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=qqccqq,shift={(11.36,3.84)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=yqqqyq,shift={(12.36,2.84)}] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=yqqqyq,shift={(12.36,-0.5)},rotate=180] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=qqttzz,shift={(11.36,-1.5)},rotate=270] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\draw [fill=qqttzz,shift={(1.36,-1.5)},rotate=90] (0,0) ++(0 pt,3.0pt) -- ++(2.598076211353316pt,-4.5pt)--++(-5.196152422706632pt,0 pt) -- ++(2.598076211353316pt,4.5pt);
+\end{tikzpicture}
+}
+\end{Ill}
+
+\section{Opposé d'une expression}
+
+\begin{Def}
+\textbf{Deux expressions} littérales sont dites \textbf{opposées} lorsque leur \textbf{somme est égale à 0}.
+\end{Def}
+
+\begin{Ex}
+Déterminons l'opposé de l'expression $A(x)=10x+7$.
+\[(10x+7)+(-10x-7)=0\]
+Donc l'opposé de l'expression $A(x)$ est $B(x)=-10x-7$.
+\end{Ex}
+
+\begin{Pp}
+L'opposée d'une expression $A(x)$ se note $-A(x)$ et vérifie : $-A(x)=(-1)\times A(x)$
+\end{Pp}
+
+\begin{Ex}
+Déterminons l'opposé de l'expression : $A(x)=7x+9$.
+\[-A(x)=-(7x+9)=(-1)\times(7x+9)\]
+donc $-A(x)=-7x-9$ donc l'opposé de $A(x)$ est $-A(x)=-7x-9$ 
+\end{Ex}
+
+\section{Développer une expression littérale avec la simple distributivité}
+
+\section{Développer une expression littérale avec la double distributivité}
+
+\section{Factoriser une expression littérale avec la simple distributivité}
+
+\section{$a^2-b^2=(a+b)(a-b)$}
+
+\section{Exercice bilan}
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\textbf{Les savoir-faire du parcours}
+\begin{itemize}
+\item Savoir exprimer en fonction de....
+\item Savoir traduire un programme de calcul par une expression littérale.
+\item Savoir traduire une situation par une expression littérale.
+\item Savoir substituer la variable par un nombre dans une expression littérale.  
+\item Savoir simplifier l'écriture d'une expression littérale.
+\item Savoir réduire et ordonner une expression littérale.      
+\item Savoir développer une expression avec la simple distributivité.
+\item Savoir développer une expression avec la double distributivité.     
+\item Savoir factoriser une expression avec la simple distributivité.
+\item Savoir développer une expression avec l'égalité $a^2-b^2=(a+b)(a-b)$.
+\item Savoir factoriser une expression avec l'égalité $a^2-b^2=(a+b)(a-b)$.   
+\end{itemize}
+\end{CpsCol}
+
+\end{document}
+
+%\end{pageCours}

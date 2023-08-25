@@ -1,0 +1,218 @@
+\documentclass[a4paper,dvipsnames]{article}
+
+\addtolength{\hoffset}{-2.25cm}
+\addtolength{\textwidth}{4.5cm}
+\addtolength{\voffset}{-3.25cm}
+\addtolength{\textheight}{5cm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0in}
+
+\input{MISC/preambule_SACADO}
+\input{MISC/styleCours_SACADO}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION
+%-------------------------------
+
+\fancyhead[C]{}
+\hrule\medskip % Upper rule
+\begin{minipage}{0.295\textwidth} 
+\raggedright
+Classe \myClasse \hfill\\
+\myDiscipline \hfill\\
+\myParcours \hfill\\
+\end{minipage}
+\begin{minipage}{0.4\textwidth} 
+\centering 
+\scshape\huge
+\textcolor{sacado_purple}{\myTitle} \\ 
+\normalsize 
+%\mySubTitle \\ 
+\end{minipage}
+\begin{minipage}{0.295\textwidth} 
+\raggedleft
+\href{https://sacado.xyz/}{\includegraphics[width=.2\linewidth]{sacadoA1.png}}
+%\myAnnee \hfill\\
+\end{minipage}
+\medskip \hrule
+\bigskip
+
+%-------------------------------
+%	CONTENTS
+%-------------------------------
+
+\begin{ExOApp}[]
+Pour son anniversaire, Alicia a trouvé une recette de gâteau. Pour 4 personnes il faut : $4$ oeufs, $20\,g$ de sucre, $100\,g$ de chocolat, $150\,g$ de farine.
+
+Quelle quantité de chaque ingrédient faudra-t-il à Alicia pour faire un gâteau pour 24 personnes ?
+\end{ExOApp}
+
+\section{Grandeurs proportionnelles}
+
+\begin{Def}
+Deux grandeurs sont \textbf{proportionnelles} si les valeurs de l'une s'obtiennent en \textbf{multipliant} les valeurs de l'autre par un \textbf{même nombre}.
+\end{Def}
+
+\begin{ExOApp}[]
+Reconnaître les situations de proportionnalité dans la liste suivante :
+\begin{itemize}
+\item Evan mesurait $1,20\,m$ l'année dernière, aujourd'hui sa taille est de $1,31\,m$.
+\item Louna achète $8\,m$ de corde à $3,40\,$\euro le mètre.
+\item Dans sa vitrine, un primeur a écrit : un melon - $1,65\,$\euro ; deux melons - $3,10\,$\euro.
+\item Un musée propose trois formules de visites accompagnées : $1\,h$ - $70\,$\euro ; $1\,h\,30$ - $105\,$\euro ; $2\,h$ - $140\,$\euro.
+\item Un commerçant a décidé de faire une journée promotion en baissant tous les prix de $25\,\%$.
+\item Mathéo marche à une allure régulière de $6\,km$ par heure.
+\item Un robinet a une fuite, il perd $0,6\,L$ par heure.
+\end{itemize}
+\end{ExOApp}
+
+\section{Tableau de proportionnalité}
+
+\begin{Def}
+Dans un tableau de nombre à deux lignes, on reconnait une \textbf{situation de proportionnalité} lorsque les nombres de la deuxième ligne s'obtiennent en \textbf{multipliant} ceux de la première par un \textbf{même nombre}.
+
+Ce nombre est appelé \textbf{coefficient de proportionnalité}.
+\end{Def}
+
+\begin{Ex}
+Prix des avocats :
+\begin{center}
+    \begin{tabular}{c||c|c|c}
+        Nombre de avocats & 6 & 10 & 15  \\
+        \hline Prix en \euro & 8,4 & 14 & 21 \\
+    \end{tabular}
+\end{center}
+    
+\[\frac{8,4}{6}=1,4\hspace{.5cm}\frac{14}{10}=1,4\hspace{.5cm}\frac{21}{15}=1,4\]
+
+Le coefficient de proportionnalité est 1,4. Cela signifie que \textbf{1 avocats} coûte \textbf{1,400 \euro}.\\
+
+Location de vélo :
+\begin{center}
+    \begin{tabular}{c||c|c}
+        Durée de location en h & 2 & 15  \\
+        \hline Prix en \euro & 17 & 38 \\ 
+    \end{tabular}
+\end{center}
+    
+\[\frac{17}{2}=8,5\hspace{.5cm}\frac{38}{5}=7,6\neq8,5\]
+
+Ce tableau n'est pas un tableau de proportionnalité.
+\end{Ex}
+
+\section{Compléter un tableau de proportionnalité}
+
+\begin{Def}
+Dans un \textbf{tableau de proportionnalité}, lorsqu'on connaît trois nombres non nuls (dont deux se correspondent), on peut calculer le \textbf{quatrième nombre manquant}.
+
+Ce nombre manquant est appelé une \textbf{quatrième proportionnelle}.
+\end{Def}
+
+\begin{Pp}
+Dans une situation de proportionnalité, on peut :
+\begin{itemize}
+\item Multiplier une colonne par un nombre pour passer à une autre colonne.
+\item Ajouter deux colonnes entre elles pour en obtenir une troisième.
+\end{itemize}
+\end{Pp} 
+
+\begin{Ex}
+Le débit d'un robinet est régulier, c'est-à-dire que le nombre de litres qui s'écoulent est proportionnel à la durée d'écoulement. En 5 min, il s'écoule $8 \,L$ d'eau. En combien de temps s'écoule-t-il $20 \,L$ ? $28\,L$ ?\\
+
+Pour passer de $8\,L$ à $20\,L$ je multiplie par $2,5$ : $8\,(L)\times2,5=20\,(L)$ donc $5\,(min)\times2,5=12,5\,(min)$. Il faudra 12 min 30 s pour que s'écoule $20\,L$.\\
+Je sais que $8\,(L)+20\,(L)=28\,(L)$ donc $5\,(min)+12,5\,(min)=17,5\,(min)$. Il faudra 17 min et 30 s pour que s'écoule $28\,L$.\\
+\begin{center}
+    \begin{tabular}{c||c|c|c}
+        Quantité d'eau (L) & $8$ & $20$ & $28$  \\
+        \hline Durée (min) & $5$ & $12,5$ & $17,5$ \\
+    \end{tabular}
+\end{center}
+\end{Ex}
+
+\begin{ExOApp}[]
+\begin{itemize}
+\item Mathilde souhaite préparer un cocktail et pour cela, elle a besoin de jus d’oranges.
+Avec 2 oranges, elle obtient 40 cL de jus d’oranges. Compléter alors le tableau en supposant que le volume de jus est proportionnel au nombre d’oranges.
+\begin{center}
+    \begin{tabular}{c||c|c|c|c}
+        Nombre d'oranges & 2 & 6 & 7 &  \\
+        \hline Volume de jus (cL) & 40 &  & & 180 \\
+    \end{tabular}
+\end{center}
+\item Un cycliste a parcouru 50 km en 3 heures. En supposant qu’il roule toujours à la
+même vitesse, compléter le tableau :
+\begin{center}
+    \begin{tabular}{c||c|c|c|c|c|c|c}
+        Distance (km) & \textcolor{white}{100} & 100 & 150 &  & 110 & 30 &  \\
+        \hline Temps (min) &  &   & & 270 & & & \textcolor{white}{1}72 \\
+    \end{tabular}
+\end{center}
+\item Pour faire des crêpes pour 5 personnes, on a besoin de 400 g de farine, 3 oeufs et
+1 litre de lait. Quelle quantité de farine sera nécessaire pour 4 personnes ?
+\end{itemize}
+\end{ExOApp}
+
+\section{Pourcentages}
+
+\begin{Def}
+Lorsqu'on partage une quantité en \textbf{100 parties égales}, on peut exprimer une proportion de cette quantité en \textbf{pourcentage}.
+\end{Def}
+
+\begin{Pp}
+Dire que $71\%$ des élèves aiment les mathématiques signifie que le nombre d'élève aimant les mathématiques est proportionnel au nombre d'élève total et que pour 100 élèves 71 aiment les mathématiques.
+
+\begin{center}
+\begin{tabular}{c|c|c}
+Nombre d'élèves & 100 & 275 \\\hline
+Nombre d'élèves aimant les maths & 71 & ... \\
+\end{tabular}
+\end{center}
+\end{Pp}
+
+\begin{Pp}
+Soit $t$ un nombre. Prendre $t\%$ d'une quantité, c'est multiplier cette quantité par $\frac{t}{100}$.
+\end{Pp}
+
+Quelques pourcentages à connaître
+\begin{center}
+\begin{tabular}{c||c|c|c|c|c|c|c}
+Pourcentage & $10\%$ & $25\%$ & $50\%$ & $75\%$ & $100\%$ & $200\%$ & $300\%$ \\\hline
+revient à prendre ... & Le dixième & Le quart & La moitié & Les trois-quarts & Le tout & Le double & Le triple \\\hline
+ou multiplier par ... & $0,1$ & $0,25$ & $0,5$ & $0,75$ & $1$ & $2$ & $3$ \\
+\end{tabular}
+\end{center}
+
+\begin{ExOApp}
+Au collège, $71\%$ des élèves adorent les mathématiques et $80\%$ aiment l'anglais.\\
+
+Pour $100$ élèves. 
+\begin{enumerate}
+\item Combien d'élèves aiment les maths ?
+\item Combien d'élèves aiment l'anglais ?
+\end{enumerate}
+
+Sachant qu'il y a $275$ élèves au collège.
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item Combien d'élèves aiment les maths ?
+\item Combien d'élèves aiment l'anglais ?
+\end{enumerate}
+\end{ExOApp}
+
+\section{Les savoir-faire du parcours}
+
+\begin{CpsCol}
+\begin{itemize}
+\item Savoir reconnaitre une situation de proportionnalité.
+\item Savoir reconnaitre un tableau de proportionnalité.
+\item Savoir compléter un tableau de proportionnalité.
+\item Savoir utiliser la proportionnalité.
+\item Savoir calculer un pourcentage.
+\end{itemize}
+\end{CpsCol}
+
+\end{document}

@@ -1,0 +1,451 @@
+\input{../MISC/preambule_sacado.tex}
+\input{../MISC/environnements_sacado.tex}
+\input{../MISC/macro_sacado.tex}
+
+\title{Mathématiques 2nde  : le livre sacado}
+\author{L'équipe SACADO}
+
+\begin{document}
+
+%\maketitle
+
+\chapter{Statistiques}{16}
+{https://sacado.xyz/qcm/parcours_show/31123/142948}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+ 		\item Savoir calculer des effectifs et des fréquences.
+ 		\item Savoir construire la représentation d'une série statistique.
+ 		\item Savoir calculer la moyenne d'une série statistique.
+ 		\item Savoir déterminer la médiane et les quartiles d'une série statistique.
+ 		\item Savoir déterminer les indicateurs de dispersions d'une série statistique (étendue, écart interquartile, écart-type).
+ 		\item Savoir décrire verbalement les différences entre deux séries statistiques, en s'appuyant sur des indicateurs ou sur des représentations graphiques données.
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+Gertrude Cox (1900-1978) était une éminente statisticienne américaine dont les travaux ont profondément influencé le domaine de la statistique et de la science des enquêtes. Elle a été pionnière dans le développement de méthodes statistiques et a promu l'utilisation de la statistique dans des domaines variés tels que l'agriculture et l'industrie. Cox a été la première femme à obtenir un doctorat en statistiques aux États-Unis, ce qui témoigne de son rôle de précurseur pour les femmes dans les sciences. Elle a été une force motrice dans la création de programmes d'études supérieures en statistique dans plusieurs universités américaines. Ses recherches sur la théorie de l'échantillonnage ont eu un impact durable, et elle a joué un rôle clé dans l'avancement des méthodes de sondage. Son héritage est marqué par son dévouement à la recherche statistique rigoureuse et son plaidoyer pour l'application de la statistique dans la prise de décision pratique.
+\end{His}
+
+\begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
+% Un exercice de découverte/d'accroche
+\end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Série statistique}
+
+\begin{DefT}{Vocabulaire}
+L'ensemble sur lequel porte l'étude d'une \textbf{série statistique} s'appelle la \textbf{population}.
+
+Un élément de la population est un \textbf{individu}. L'objet étudié s'appelle le \textbf{caractère} de la série.
+
+Si le caractère prend des valeurs numériques on dit qu'il est \textbf{quantitatif}, sinon il est \textbf{qualitatif}.
+\end{DefT}
+
+\begin{DefT}{Effectifs et fréquences}
+Lors d'une enquête, une liste de données a été relevée.
+\begin{itemize}
+\item L'\textbf{effectif total} est le nombre total des données de la liste.
+\item L'\textbf{effectif} d'une donnée est le nombre de fois où cette donnée apparait dans la liste.
+\item La \textbf{fréquence} d'une donnée est le \textbf{quotient} de son \textbf{effectif} par l'\textbf{effectif total}.
+\end{itemize}
+\end{DefT}
+
+\begin{Pp}
+\begin{itemize}
+\item Une \textbf{fréquence} peut être donnée sous forme de \textbf{fraction}, de \textbf{nombre décimal} ou de \textbf{pourcentage}.
+\item Une \textbf{fréquence} est un nombre compris \textbf{entre 0 et 1}.
+\item La \textbf{somme} de toutes les \textbf{fréquences} est égale à 1.
+\end{itemize}
+\end{Pp}
+
+\begin{DefT}{Représentation d'une série statistique}
+On peut représenter une série statistique par :
+\begin{itemize}
+\item Un \textbf{nuage de points} : un \textbf{graphique} où on place les points correspondants à chaque donnée.
+\item Un \textbf{diagramme en barres} : un \textbf{graphique} où les effectifs des données sont représentés par des \textbf{rectangles} dont les \textbf{hauteurs} sont \textbf{proportionnelles} à l'\textbf{effectif} de chaque donnée.
+\item Un \textbf{diagramme circulaire} : un \textbf{graphique} où les effectifs des données sont représentés par des \textbf{secteurs angulaires} dont les \textbf{mesures des angles} sont \textbf{proportionnelles} à l'\textbf{effectif} de chaque donnée.
+\end{itemize}
+\end{DefT}
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Indicateurs de position d'une série statistique}
+
+\begin{DefT}{Moyenne d'une série statistique}
+La \textbf{moyenne}, notée $\overline{x}$, d'une série statistique ayant $k$ valeurs $x_1,\,x_2,\ldots,\, x_k$ d'effectif respectif  $n_1,\,n_2,\ldots,\, n_k$ est égale à : 
+\[\overline{x}=\frac{n_1\times x_1+n_2\times x_2+\ldots+n_k\times x_k}{n_1+n_2+\ldots+n_k}\]
+\end{DefT}
+
+\mini{.48\linewidth}{
+\begin{Pp}
+La moyenne d'une série statistique ayant $k$ valeurs $x_1,\,x_2,\ldots,\, x_k$ de fréquences respectives  $f_1,\,f_2,\ldots,\, f_k$ est égale à : 
+\[\overline{x}=f_1\times x_1+f_2\times x_2+\ldots+f_k\times x_k\]
+\end{Pp}
+
+\begin{PpT}{Moyenne d'une série formée de deux groupes}
+Pour calculer la moyenne d'une série constituée de \textbf{deux groupes}, on calcule la moyenne des deux groupes en pondérant leurs moyennes respectives par leurs effectifs totaux.
+\end{PpT}
+
+\begin{PpT}{Linéarité de la moyenne}
+Lorsque toutes les valeurs d'une série de moyenne $\overline{x}$ sont transformées par une fonction affine $x\mapsto mx+p$ , la moyenne de la nouvelle série est  $m\times\overline{x}+p$
+\end{PpT}
+}{.48\linewidth}{
+\begin{Pv}
+\textbf{De la propriété 6.}
+
+On considère une série statistique ayant \textbf{$k$ valeurs} $x_1,\,x_2,\ldots,\, x_k$ d'effectif respectif  $n_1,\,n_2,\ldots,\, n_k$. La moyenne est : 
+
+\[\overline{x}=\frac{n_1\times x_1+n_2\times x_2+\ldots+n_k\times x_k}{n_1+n_2+\ldots+n_k}\]
+
+Soit $N$ l'effectif total, on a : $N=n_1+n_2+\ldots+n_k$.
+
+\[\overline{x}=\frac{n_1\times x_1+n_2\times x_2+\ldots+n_k\times x_k}{N}\]
+
+donc : 
+
+\[\overline{x}=\frac{n_1}{N}\times x_1+\frac{n_2}{N}\times x_2+\ldots+\frac{n_k}{N}\times x_k\]
+
+La fréquence de chaque valeur est : $f_i=\frac{n_i}{N}$ donc :
+
+\[\overline{x}=f_1\times x_1+f_2\times x_2+\ldots+f_k\times x_k\]
+\end{Pv}
+}
+
+\begin{DefT}{Médiane d'une série statistique}
+Dans une série \textbf{ordonnée}, on appelle \textbf{médiane} un nombre qui partage cette série en deux séries de \textbf{même effectifs}.
+\begin{itemize}
+\item Si l'effectif total est \textbf{impair}, la \textbf{médiane} est la \textbf{valeur centrale} de la série ordonnée.
+\item Si l'effectif total est \textbf{pair}, la \textbf{médiane} est la \textbf{valeur moyenne des deux valeurs centrales} de la série ordonnée.
+\end{itemize}
+\end{DefT}
+
+\begin{DefT}{Quartiles d'une série statistique}
+\begin{itemize}
+\item Le \textbf{premier quartile}, noté $Q_1$, est la plus petite valeur de la série telle qu'\textbf{au moins 25\%} des autres valeurs de la série sont \textbf{inférieures ou égales} à cette valeur.
+\item Le \textbf{troisième quartile}, noté $Q_3$,est la plus petite valeur de la série telle qu'\textbf{au moins 75\%} des autres valeurs de la série sont \textbf{inférieures ou égales} à cette valeur.
+\end{itemize}
+\end{DefT}
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 3
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Indicateurs de dispersion d'une série statistique}
+
+\begin{DefT}{Étendue d'une série statistique}
+L'\textbf{étendue} d'une série statistique est l'\textbf{écart} entre \textbf{la plus grande valeur} et \textbf{la plus petite valeur} de la série.
+\end{DefT}
+
+\begin{Rq}
+L'\textbf{étendue} permet de mesurer la \textbf{dispersion} des données d'une série statistique.
+
+Comme elle ne dépend que des valeurs extrèmes, l'étendue ne donne pas d'indication sur la répartition des autres données.
+\end{Rq}
+
+\begin{DefT}{Écart interquartile d'une série}
+L'\textbf{écart interquartile} d'une série statistique de premier quartile $Q_1$ et de troisième quartile $Q_3$ est égal à la différence $I=Q_3-Q_1$.
+\end{DefT}
+
+\begin{Rqs}
+\begin{itemize}
+\item L'écart interquartile d'une série mesure la \textbf{dispersion} des valeurs centrales (autour de la \textbf{médiane}).
+\item L'écart interquartile contient \textbf{au moins 50\%} des valeurs de la série.
+\item L'écart interquartile n'est \textbf{pas influencé} par les \textbf{valeurs extrêmes} de la série.
+\end{itemize}
+\end{Rqs}
+
+\begin{DefT}{Écart type d'une série statistique}
+\begin{itemize}
+\item La variance V d'une série statistique est la moyenne des carrés des écarts entre les valeurs et la moyenne. Pour une série de moyenne $\overline{x}$ dont les valeurs sont $x_1,\,x_2,\,\ldots,\,x_k$ et les effectifs correspondants sont $n_1,\,n_2,\,\ldots,\,n_k$ on a : 
+
+\[V=\frac{n_1\times (x_1-\overline{x})^2+n_2\times (x_2-\overline{x})^2+\ldots+n_k\times (x_k-\overline{x})^2}{n_1+n_2+\ldots+n_k}\]
+
+\item L'écart-type $\sigma$
+d'une série statistique de variance $V$ est égal à : $\sigma=\sqrt{V}$
+\end{itemize}
+
+\end{DefT}
+
+\begin{Rqs}
+\begin{itemize}
+\item L'écart-type exprime la dispersion des valeurs d'une série statistique autour de sa moyenne.
+\item Les valeurs extrêmes influencent l'écart-type.
+\item L'écart-type possède la même unité que les valeurs de la série.
+\end{itemize}
+\end{Rqs}
+
+\end{pageCours} % Fin page de cours 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 3
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
+  
+\end{ExoCu}
+
+%Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Quatrième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Cinquième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Sixième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+%Premier exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Deuxième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Troisième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Quatrième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Cinquième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Sixième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Sixième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Page algorithmique
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAlgo} % Début de la page d'exos d'algorithmique
+
+%Exercice d'algorithmique
+\begin{ExoAlgoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgoN}
+
+%Exercice d'algorithmique
+\begin{ExoAlgo}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgo}
+
+\end{pageAlgo} % Fin de la page d'exos d'algorithmique
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}

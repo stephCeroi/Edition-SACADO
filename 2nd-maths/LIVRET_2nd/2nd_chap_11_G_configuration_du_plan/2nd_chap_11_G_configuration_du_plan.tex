@@ -1,0 +1,498 @@
+\input{../MISC/preambule_sacado.tex}
+\input{../MISC/environnements_sacado.tex}
+\input{../MISC/macro_sacado.tex}
+
+\title{Mathématiques 2nde  : le livre sacado}
+\author{L'équipe SACADO}
+
+\begin{document}
+
+%\maketitle
+
+\chapter{Configuration du plan}{11}
+{https://sacado.xyz/qcm/parcours_show/0/142943}
+{
+ \begin{CpsCol}
+	\textbf{Les savoir-faire du parcours}
+ 	\begin{itemize}
+ 		\item Savoir utiliser le théorème de M. Pythagore et sa réciproque.
+		\item Savoir utiliser le théorème de M. Thalès et sa réciproque.
+		\item Savoir utiliser la trigonométrie.
+		\item Savoir calculer des périmètres.
+		\item Savoir calculer des aires.
+		\item Savoir calculer des volumes.
+ 	\end{itemize}
+ \end{CpsCol}
+
+\begin{His}
+	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
+\end{His}
+
+\begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
+% Un exercice de découverte/d'accroche
+\end{ExoDec}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Géométrie euclidienne}
+
+\begin{ThT}{Théorème de M. Pythagore}
+Dans un triangle rectangle, le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés.
+
+\underline{Traduction en langage mathématiques} : Si $ABC$ est un triangle rectangle en $A$ alors on a l'égalité : $BC^2=AB^2+AC^2$
+\end{ThT}
+
+\begin{ThT}{réciproque du Théorème de M. Pythagore}
+Si dans un triangle, le carré du plus grand côté est égal à la somme des carrés des deux autres côtés alors on peut affirmer que le triangle rectangle.
+
+\underline{Traduction en langage mathématiques} : Si $BC^2=AB^2+AC^2$ alors on peut affirmer que le triangle $ABC$ est rectangle en $A$.
+\end{ThT}
+
+\begin{ThT}{Théorème de M. Thalès}
+Si les points $A$, $B$, $C$, $M$ et $N$ forment une configuration de Thalès, alors les triangles $ABC$ et $AMN$ ont les longueurs de leurs côtés proportionnelles.
+
+\underline{Traduction en langage mathématiques} : Si les droites $(BM)$ et $(CN)$ sont sécantes en $A$ et les droites $(BC)$ et $(MN)$ sont parallèles alors :
+
+\[\frac{AB}{AM}=\frac{AC}{AN}=\frac{BC}{MN}\]
+\end{ThT}
+
+\begin{ThT}{Réciproque du Théorème de Thalès}
+Si les points  $A$, $M$, $B$ et $A$, $N$, $C$ sont alignés dans le même ordre et si $\frac{AB}{AM}=\frac{AC}{AN}$ alors on peut affirmer que les droites $(BC)$ et $(MN)$ sont parallèles. 
+\end{ThT}
+
+\begin{DefT}{Trigonométrie}
+Dans un triangle rectangle,
+\begin{itemize}
+\item le cosinus d'un angle aigu est le quotient :
+$\dfrac{\text{longueur du coté adjacent à cet angle}}{\text{longueur de l'hypoténuse}}$
+\item le sinus d'un angle aigu est le quotient : 
+$\dfrac{\text{longueur du coté opposé à cet angle}}{\text{longueur de l'hypoténuse}}$
+\item la tangente d'un angle aigu est le quotient : 
+$\dfrac{\text{longueur du coté opposé à cet angle}}{\text{longueur du coté adjacent à cet angle}}$
+\end{itemize}
+\end{DefT}
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Grandeurs et mesures}
+
+\begin{DefT}{Unités de longueur}
+Le \textbf{système métrique} est un \textbf{système décimal} :\\
+\[1\, m=10\, dm \hspace{1cm} 1\, dm=10\, cm \hspace{1cm}1\, cm=10\, mm\]
+\end{DefT}
+
+\begin{Mt}
+On peut se servir d'un tableau de conversion.
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c}
+    \textcolor{red}{kilo}mètre & \textcolor{red}{hecto}mètre & \textcolor{red}{déca}mètre & mètre & \textcolor{red}{déci}mètre & \textcolor{red}{centi}mètre & \textcolor{red}{milli}mètre  \\ \hline 
+    \textcolor{red}{k}m & \textcolor{red}{h}m & \textcolor{red}{da}m & m & \textcolor{red}{d}m & \textcolor{red}{c}m & \textcolor{red}{m}m \\ \hline
+    \(1 km = 1 000 m\) & \(1 hm = 100 m\) & \(1 dam = 10 m\) & \(1 m\) & \(1 dm = 0,1 m\) & \(1 cm = 0,01 m\) & \(1 mm = 0,001 m\)
+\end{tabular}
+\end{center}
+\end{Mt}
+
+\mini{.42\linewidth}{
+\begin{DefT}{Unités d'aires}
+L'unité de mesure des aires est le \textbf{mètre carré}, on le note $m^2$, c'est l'aire d'un carré de $1\,m$ de côté.
+\end{DefT}
+}{.54\linewidth}{
+\begin{Pp}
+Dans un carré de $1 \,cm$ de côté, on peut construire $10\times10=100$ carrés de $1\, mm$ de côté.
+Donc $1 \,cm^2 = 100 mm^2$.
+\end{Pp}
+}
+
+\begin{DefT}{Volume}
+Le \textbf{volume} est la mesure de l'\textbf{intérieur d'un solide}. L'unité de mesure des volumes est le \textbf{mètre cube}, on note $m^3$, c'est le volume d'un \textbf{cube} de $1\,m$ d'\textbf{arête}. On note :
+\begin{itemize}
+\item $1\,dm^3$ le volume d'un cube de $1\,dm$ d'arête.
+\item $1\,cm^3$ le volume d'un cube de $1\,cm$ d'arête.
+\item $1\,mm^3$ le volume d'un cube de $1\,mm$ d'arête.
+\end{itemize}
+\end{DefT}
+
+\begin{Pp}
+Dans un cube de $1\,cm=10\,mm$ de côté, on peut construire $10\times10\times10=1000$ cubes de $1\, mm$ de côté.
+Donc $1 \,cm^3 = 1000 mm^3$.
+\end{Pp}
+
+\begin{DefT}{Contenance}
+Quantité de ce qu'un récipient peut contenir. Son unité est le \textbf{litre ($L$)}.
+\[1\,L=1\,dm^3\]
+\end{DefT}
+
+\begin{Pp}
+$1\,L$ est la contenance d'un cube de $1\,dm$ d'arête,  donc $1\,L=1\,dm^3$.
+\end{Pp}
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 2 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 2
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 3
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Formulaire}
+
+\subsection{Aires des figures usuelles}
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+\clip(-2.436116889973625,0.5206962231885656) rectangle (23.12539135607057,14.353304969638609);
+\fill[line width=1.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,12.) -- (4.,12.) -- (4.,10.) -- (0.,10.) -- cycle;
+\fill[line width=1.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (9.10313587493488,12.001796801484533) -- (13.103135874934884,12.001796801484533) -- (11.10313587493488,10.001796801484533) -- (7.10313587493488,10.001796801484533) -- cycle;
+\fill[line width=1.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,6.) -- (0.,4.) -- (2.,4.) -- (2.,6.) -- cycle;
+\fill[line width=1.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (3.4,5.02) -- (5.9,6.02) -- (8.4,5.02) -- (5.9,4.02) -- cycle;
+\fill[line width=1.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (10.3,4.) -- (11.3,6.) -- (14.3,5.) -- cycle;
+\fill[line width=1.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (17.38,6.0263985686803245) -- (19.38,6.0263985686803245) -- (20.38,4.026398568680327) -- (15.38,4.026398568680327) -- cycle;
+\draw[line width=0.8pt,color=ffqqqq] (12.304832913093874,4.501208228273469) -- (12.156565861290995,5.094276435484988) -- (11.563497654079475,4.946009383682108) -- (11.711764705882354,4.352941176470589) -- cycle; 
+\draw[line width=0.8pt,color=ffqqqq] (17.991320715382198,4.026398568680326) -- (17.991320715382198,4.637719284062526) -- (17.38,4.637719284062526) -- (17.38,4.026398568680326) -- cycle; 
+\draw[line width=0.8pt,color=ffqqqq] (9.714456590317079,10.001796801484533) -- (9.714456590317079,10.613117516866732) -- (9.10313587493488,10.613117516866732) -- (9.10313587493488,10.001796801484533) -- cycle; 
+\draw [line width=1.pt,color=zzttqq,fill=zzttqq,fill opacity=0.17000000178813934] (17.837261872928323,10.923750905938006) circle (1.4cm);
+\draw [line width=1.pt,color=zzttqq] (0.,12.)-- (4.,12.);
+\draw [line width=1.pt,color=zzttqq] (4.,12.)-- (4.,10.);
+\draw [line width=1.pt,color=zzttqq] (4.,10.)-- (0.,10.);
+\draw [line width=1.pt,color=zzttqq] (0.,10.)-- (0.,12.);
+\draw [line width=1.pt,color=zzttqq] (9.10313587493488,12.001796801484533)-- (13.103135874934884,12.001796801484533);
+\draw [line width=1.pt,color=zzttqq] (13.103135874934884,12.001796801484533)-- (11.10313587493488,10.001796801484533);
+\draw [line width=1.pt,color=zzttqq] (11.10313587493488,10.001796801484533)-- (7.10313587493488,10.001796801484533);
+\draw [line width=1.pt,color=zzttqq] (7.10313587493488,10.001796801484533)-- (9.10313587493488,12.001796801484533);
+\draw [line width=1.pt,color=zzttqq] (0.,6.)-- (0.,4.);
+\draw [line width=1.pt,color=zzttqq] (0.,4.)-- (2.,4.);
+\draw [line width=1.pt,color=zzttqq] (2.,4.)-- (2.,6.);
+\draw [line width=1.pt,color=zzttqq] (2.,6.)-- (0.,6.);
+\draw [line width=1.pt,color=zzttqq] (3.4,5.02)-- (5.9,6.02);
+\draw [line width=1.pt,color=zzttqq] (5.9,6.02)-- (8.4,5.02);
+\draw [line width=1.pt,color=zzttqq] (8.4,5.02)-- (5.9,4.02);
+\draw [line width=1.pt,color=zzttqq] (5.9,4.02)-- (3.4,5.02);
+\draw [line width=1.pt,color=zzttqq] (10.3,4.)-- (11.3,6.);
+\draw [line width=1.pt,color=zzttqq] (11.3,6.)-- (14.3,5.);
+\draw [line width=1.pt,color=zzttqq] (14.3,5.)-- (10.3,4.);
+\draw [line width=1.pt,color=zzttqq] (17.38,6.0263985686803245)-- (19.38,6.0263985686803245);
+\draw [line width=1.pt,color=zzttqq] (19.38,6.0263985686803245)-- (20.38,4.026398568680327);
+\draw [line width=1.pt,color=zzttqq] (20.38,4.026398568680327)-- (15.38,4.026398568680327);
+\draw [line width=1.pt,color=zzttqq] (15.38,4.026398568680327)-- (17.38,6.0263985686803245);
+\draw [line width=0.8pt,dash pattern=on 4pt off 4pt] (7.10313587493488,10.001796801484533)-- (7.10313587493488,12.001796801484533);
+\draw [line width=0.8pt,dash pattern=on 4pt off 4pt] (7.10313587493488,12.001796801484533)-- (11.103135874934882,12.001796801484533);
+\draw [line width=0.8pt,dash pattern=on 4pt off 4pt] (11.103135874934882,12.001796801484533)-- (11.10313587493488,10.001796801484533);
+\draw [line width=0.8pt,dash pattern=on 4pt off 4pt] (3.4,6.)-- (3.4,4.);
+\draw [line width=0.8pt,dash pattern=on 4pt off 4pt] (3.4,4.)-- (8.4,4.);
+\draw [line width=0.8pt,dash pattern=on 4pt off 4pt] (8.4,4.)-- (8.4,6.);
+\draw [line width=0.8pt,dash pattern=on 4pt off 4pt] (8.4,6.)-- (3.4,6.);
+\draw [line width=0.8pt,dash pattern=on 4pt off 4pt] (17.38,6.0263985686803245)-- (20.38,4.026398568680327);
+\draw [line width=1.pt,color=ffqqqq] (9.10313587493488,12.001796801484533)-- (9.10313587493488,10.001796801484533);
+\draw [line width=1.pt,color=zzttqq] (5.9,4.02)-- (5.9,6.02);
+\draw [line width=1.pt,color=zzttqq] (3.4,5.02)-- (8.4,5.02);
+\draw [line width=1.pt,color=ffqqqq] (11.711764705882354,4.352941176470589)-- (11.3,6.);
+\draw [line width=1.pt,color=ffqqqq] (17.38,4.026398568680326)-- (17.38,6.0263985686803245);
+\draw [line width=1.pt,color=zzttqq] (17.837261872928323,10.923750905938006)-- (19.837261872928323,10.923750905938006);
+\draw [color=ffqqqq](0.7050380128660787,9.396620168827344) node[anchor=north west] {$\mathcal{A}=L\times l$};
+\draw [color=ffqqqq](8.082429344306117,9.483073973492656) node[anchor=north west] {$\mathcal{A}=b\times h$};
+\draw [color=ffqqqq](0.12867931509732566,4.036484279577952) node[anchor=north west] {$\mathcal{A}=c^2$};
+\draw [color=ffqqqq](4.739548897247349,3.4601255818091996) node[anchor=north west] {$\mathcal{A}=\frac{d\times D}{2}$};
+\draw [color=ffqqqq](11.10831250759207,3.8347587353588883) node[anchor=north west] {$\mathcal{A}=\frac{b\times h}{2}$};
+\draw [color=ffqqqq](15.892089699072718,3.661851126028263) node[anchor=north west] {$\mathcal{A}=\frac{h\times (b+B)}{2}$};
+\draw [color=ffqqqq](16.641356006172096,8.935533210612341) node[anchor=north west] {$\mathcal{A}=\pi r^2$};
+\draw (0.3592227942048269,14.09394355564267) node[anchor=north west] {Rectangle};
+\draw (7.390798906983614,14.151579425419547) node[anchor=north west] {Parallélogramme};
+\draw (0.09986138020888802,7.321728856859837) node[anchor=north west] {Carré};
+\draw (16.641356006172096,14.266851164973296) node[anchor=north west] {Disque};
+\draw (16.583720136395222,7.2929109219714) node[anchor=north west] {Trapèze};
+\draw (10.762497288930819,7.235275052194524) node[anchor=north west] {Triangle};
+\draw (4.624277157693599,7.177639182417649) node[anchor=north west] {Losange};
+\begin{scriptsize}
+%\draw[color=zzttqq] (2.1459347572879612,11.255376969131568) node {$q1$};
+\draw[color=zzttqq] (1.9442092130688975,9.583936745602188) node {$L$};
+\draw[color=zzttqq] (-0.6205869920020533,10.99601555513563) node {$l$};
+\draw[color=zzttqq] (9.177510870066747,9.641572615379063) node {$b$};
+\draw[color=zzttqq] (-0.4188614477829897,5.059520968117487) node {$c$};
+\draw[color=zzttqq] (12.174576098464263,4.022075312133733) node {$b$};
+\draw[color=zzttqq] (18.68742938325117,5.6935155356631135) node {$b$};
+\draw[color=zzttqq] (17.938163076151792,3.6474421585840444) node {$B$};
+\draw[color=ffqqqq] (9.537735056172219,11.010424522579848) node {$h$};
+\draw[color=zzttqq] (8.730832879295964,5.938467982214833) node {$d$};
+\draw[color=zzttqq] (5.877857325340637,3.6042152562513876) node {$D$};
+\draw[color=ffqqqq] (11.95844158680098,5.448563089111394) node {$h$};
+\draw[color=ffqqqq] (17.83730030404226,5.189201675115456) node {$h$};
+\draw [fill=black] (17.837261872928323,10.923750905938006) circle (1.0pt);
+\draw[color=zzttqq] (18.7882921553607,10.491701694587972) node {$r$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+\subsection{Volumes des solides usuels}
+
+\begin{center}
+\includegraphics[width=.8\linewidth]{FIG/formulaire_volumes.png} 
+\end{center}
+
+\end{pageCours} % Fin page de cours 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 3
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Premier SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Deuxième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+
+\Sf{Troisième SF}
+
+\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+
+\end{ExoCad}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours niveau 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursu} % Début du parcours niveau 1
+
+%Premier exo du parcours 1
+\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
+  
+\end{ExoCu}
+
+%Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Quatrième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Cinquième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+%Sixième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoCuN}
+
+
+\end{pageParcoursu} % Fin du parcours niveau 1
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Parcours Niveau 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcoursd} % Début du parcours niveau 2
+
+%Premier exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Deuxième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Troisième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Quatrième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Cinquième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+%Sixième exo du parcours 2
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+
+\end{ExoCdN}
+
+\end{pageParcoursd} % Fin du parcours niveau 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Parcours Niveau 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageParcourst} % Début du parcours niveau 3
+
+% Premier exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Deuxième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Troisième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Quatrième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+
+% Sixième exo du parcours 3
+\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+ 
+\end{ExoCtN}
+ 
+\end{pageParcourst} % Fin du parcours niveau 3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Autoevaluation/exos ouverts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAuto} % Début de la page d'exos ouverts
+
+%Premier exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%Deuxième exercice : "ce que je peux avoir en éval"
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Problème ouvert
+\begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAutoN}
+
+\end{pageAuto} % Fin de la page d'exos ouverts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Page algorithmique
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAlgo} % Début de la page d'exos d'algorithmique
+
+%Exercice d'algorithmique
+\begin{ExoAlgoN}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgoN}
+
+%Exercice d'algorithmique
+\begin{ExoAlgo}{Compétence.}{1}{0}{0}{0}{0}
+
+\end{ExoAlgo}
+
+\end{pageAlgo} % Fin de la page d'exos d'algorithmique
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  Page(s) blanche(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageBrouillon}
+
+\end{pageBrouillon}
+
+\end{document}
