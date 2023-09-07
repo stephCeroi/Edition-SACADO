@@ -23,7 +23,7 @@
   \begin{center}
 	  \fancyqr[
 	  %image={\includegraphics[scale=.2]{sacadoA1.png}},image padding=.5,
-  height=5cm]{#3}
+  height=3cm]{#3}
   \end{center}
   {\normalsize #4}}
 \renewcommand{\titreChap}{#1}
@@ -31,8 +31,11 @@
 %\ifthenelse{\equal{#2}{}}{}{\par
 %  \bigskip\bigskip
 %  #2}
-\newpage
+%\newpage
 }
+
+\newcommand{\bidon}[1]{}
+
 
 \renewenvironment{leftbar}[1][\hsize]
 {%
@@ -174,6 +177,33 @@
 title= \stepcounter{cpt} Définition \thecpt. ]}{%
 \end{tcolorbox}\par}
 
+\newenvironment{CadreGeneral}[5]{% les deux couleurs, le type, le titre, l'URL
+\medskip \begin{tcolorbox}[widget,colback=#1,colframe=#2,
+title= \stepcounter{cpt} #3 \thecpt
+\ifthenelse{\equal{#4}{}}{.}{ : #4.}]
+\ifthenelse{\equal{#5}{}}{}{\hspace{-2.1cm}\begin{minipage}{1.4cm}\qr{#5}\end{minipage}\hspace{2cm}}\begin{minipage}{7cm}}{%
+\end{minipage}\end{tcolorbox}\par}
+
+
+\newenvironment{DefTQ}[2]{
+\begin{CadreGeneral}{sacado_violet!15}{sacado_violet!75!black}{Définition}{#1}{#2}}{\end{CadreGeneral}}
+
+\newenvironment{DefTQQ}[2]{% titre,qrcode
+\medskip \begin{tcolorbox}[widget,colback=sacado_violet!15,colframe=sacado_violet!75!black,
+title= \stepcounter{cpt} Définition \thecpt
+\ifthenelse{\equal{#1}{}}{.}{ : #1.}]
+\ifthenelse{\equal{#2}{}}{}{\hspace{-2.1cm}\begin{minipage}{1.4cm}\qr{#2}\end{minipage}}\hspace{2cm}\begin{minipage}{8cm}}{%
+\end{minipage}\end{tcolorbox}\par}
+
+\newenvironment{DefLTQ}[2]{% titre,qrcode
+\medskip \begin{tcolorbox}[widget,colback=sacado_violet!15,colframe=sacado_violet!75!black,
+title= \stepcounter{cpt} Définition \thecpt
+\ifthenelse{\equal{#1}{}}{.}{ : #1.}]
+\ifthenelse{\equal{#2}{}}{}{\hspace{-0.7cm}\begin{minipage}{1.4cm}\qr{#2}\end{minipage}}\begin{minipage}{17cm}}{%
+\end{minipage}\end{tcolorbox}\par}
+
+
+
 
 \newenvironment{DefT}[1]{%
 \medskip \begin{tcolorbox}[widget,colback=sacado_violet!15,colframe=sacado_violet!75!black,
@@ -220,11 +250,28 @@ title= \stepcounter{cpt} Conséquence \thecpt.]}
 
 
 %%%%%%%%%%%%% Théorèmes
+
+\newenvironment{ThTQ}[2]{
+\begin{CadreGeneral}{white!100}{sacado_red!75!black}{Théorème}{#1}{#2}}{\end{CadreGeneral}}
+
+\newenvironment{ThTQQ}[2]{%
+\medskip \begin{tcolorbox}[widget,colback=white!100,colframe=sacado_red!75!black,
+title= \stepcounter{cpt} Théorème \thecpt
+\ifthenelse{\equal{#1}{}}{.}{ : #1.}]
+\ifthenelse{\equal{#2}{}}{}{\hspace{-0.7cm}\begin{minipage}{1.4cm}\qr{#2}\end{minipage}}\begin{minipage}{8cm}}{%
+\end{minipage}\end{tcolorbox}\par}
+
+
+
+
 \newenvironment{ThT}[1]{% théorème avec titre
 \medskip \begin{tcolorbox}[widget,colback=white!100,colframe=sacado_violet!75!black,
 title= \stepcounter{cpt} Théorème \thecpt : #1.]}
 {%
 \end{tcolorbox}\par}
+
+
+
 
 \newenvironment{Th}{%
 \medskip \begin{tcolorbox}[widget,colback=white!100,colframe=sacado_violet!75!black,
@@ -268,6 +315,19 @@ title= \stepcounter{cpt} Remarques \thecpt.]}
 title= \stepcounter{cpt} Exemple \thecpt.]}
 {%
 \end{tcolorbox}\par}
+
+\newenvironment{ExTQ}[2]{
+\begin{CadreGeneral}{white}{sacado_blue_light}{Exemple}{#1}{#2}}{\end{CadreGeneral}}
+
+
+\newenvironment{ExTQQ}[2]{%
+\medskip \begin{tcolorbox}[widget,colback=white,colframe=sacado_blue_light,
+title= \stepcounter{cpt} Exemple \thecpt
+\ifthenelse{\equal{#1}{}}{.}{: #1.}]
+\ifthenelse{\equal{#2}{}}{}{\hspace{-0.7cm}\begin{minipage}{1.4cm}\qr{#2}\end{minipage}}\begin{minipage}{8cm}}{%
+\end{minipage}\end{tcolorbox}\par}
+
+
 
 \newenvironment{Exs}{%
 \medskip \begin{tcolorbox}[widget,colback=white!15,colframe=sacado_blue_light,
