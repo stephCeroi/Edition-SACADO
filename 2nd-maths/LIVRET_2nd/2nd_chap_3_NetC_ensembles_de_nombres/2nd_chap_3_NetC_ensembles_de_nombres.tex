@@ -2,6 +2,9 @@
 \input{../MISC/environnements_sacado.tex}
 \input{../MISC/macro_sacado.tex}
 
+\usepackage{hieroglf}
+\usepackage{romanbar}
+
 \title{Mathématiques 2nde  : le livre sacado}
 \author{L'équipe SACADO}
 
@@ -21,6 +24,51 @@
  \end{CpsCol}
 
 \begin{His}
+
+ Pour représenter les nombres, nous utilisons de nos jours l'écriture
+ décimale, mais ça n'a pas toujours été ainsi !
+
+ Les égyptiens, par exemple, utilisaient des symboles pour un, dix,
+ cent, mille, etc. :
+
+\centerline{\Huge
+{\pmhgfamily\Hone},~
+{\pmhgfamily\Hten},~   
+{\pmhgfamily\Hhundred},~
+{\pmhgfamily\Hthousand},~
+{\pmhgfamily\HXthousand},~
+{\pmhgfamily\HCthousand},~
+{\pmhgfamily\Hmillion}
+}
+ et pour représenter par exemple cent-vingt-trois :
+
+\centerline{\Huge
+{\pmhgfamily\Hone\Hone\Hone}{\pmhgfamily\Hten}{\pmhgfamily\Hten}{\pmhgfamily\Hhundred}
+}
+
+ Nous utilisons encore parfois les nombres romains : les symboles
+ pour 1,5,10,50,100,500,1000 
+ sont \Romanbar{1},\Romanbar{5},\Romanbar{10},L,C,D,M,
+ et la valeur d'un symbole dépend un peu de sa position :
+ le \Romanbar{1} dans \Romanbar{6} vaut 1, mais dans \Romanbar{4} il vaut $-1$.
+ 
+\parbox[t]{0.6\textwidth}{ Les indiens dès le \Romanbar{5}\ieme siècle ont inventé un système très proche de
+ notre système actuel, et les arabes, à partir du \Romanbar{7}\ieme siècle,
+ ont développé des techniques de calcul et les ont diffusées en Europe,
+ avec peu de succès. Les nombres non entiers sont encore réprésentés par des fractions.
+
+Ce n'est qu'au \Romanbar{17}\ieme siècle, sous l'impulsion de Simon \textsc{Stévin},
+ que les européens adoptent le système
+ décimal pour représenter les nombres entiers mais aussi les nombres
+ décimaux sans utiliser de fraction.}
+\parbox[t]{0.39\textwidth}{
+\begin{center}
+\includegraphics[height=3cm]{FIG/stevin}
+
+Simon \textsc{Stévin}, 1548--1620
+\end{center}
+} 
+
 	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
 \end{His}
 
@@ -37,108 +85,78 @@
 
 \newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
 
-\section{L'ensemble des nombres entiers naturels $\mathbb{N}$}
+%% \section{L'ensemble des nombres entiers naturels $\mathbb{N}$}
 
-\begin{Def}
-Un nombre entier naturel est un nombre dont la partie décimale est nulle et qui est positif.
+%% \begin{DefTQ}{entier naturel}{}
+%% Un nombre entier naturel est un nombre dont la partie décimale est nulle et qui est positif.
 
-L'ensemble des nombres entiers naturels est noté $\mathbb{N}$.
-\end{Def}
+%% L'ensemble des nombres entiers naturels est noté $\N$.
+%% \end{DefTQ}
 
-\begin{Rq}
-L'ensemble des nombres entiers naturels a un plus petit élément, 0
+%% \begin{Rq}
+%% L'ensemble des nombres entiers naturels a un plus petit élément, 0
 
-mais n'a pas de plus grand élément.
+%% mais n'a pas de plus grand élément.
 
-\[\mathbb{N} = \{0;1;2;3;4;.........\}\]
-\end{Rq}
+%% \[\mathbb{N} = \{0;1;2;3;4;.........\}\]
+%% \end{Rq}
 
-\section{L'ensemble des nombres entiers relatifs $\mathbb{Z}$}
+%% \section{L'ensemble des nombres entiers relatifs $\Z$}
 
-\begin{Def}
-Un nombre entier relatif est un nombre entier positif ou négatif.
+%% \begin{DefTQ}{entier relatif}{}
+%% Un nombre entier relatif est un nombre entier positif ou négatif.
 
-L'ensemble des nombres entiers relatifs est noté $\mathbb{Z}$.
-\end{Def}
+%% L'ensemble des nombres entiers relatifs est noté $\Z$.
+%% \end{DefTQ}
 
-\begin{Rqs}
-\begin{itemize}
-\item L'ensemble des nombres entiers relatifs n'a ni plus petit, ni plus grand élément.
-\item Tout nombre entier naturel est aussi un nombre entier relatif, on dit que $\mathbb{N}$
-est inclus dans $\mathbb{Z}$ et on note : $\mathbb{N}\subset\mathbb{Z}$
-\end{itemize}
-\end{Rqs}
+%% \begin{Rqs}
+%% \begin{itemize}
+%% \item L'ensemble des nombres entiers relatifs n'a ni plus petit, ni plus grand élément.
+%% \item Tout nombre entier naturel est aussi un nombre entier relatif, on dit que $\mathbb{N}$
+%% est inclus dans $\mathbb{Z}$ et on note : $\mathbb{N}\subset\mathbb{Z}$
+%% \end{itemize}
+%% \end{Rqs}
 
 \section{L'ensemble des nombres décimaux $\mathbb{D}$}
 
-\mini{.48\linewidth}{
-\begin{Def}
+\noindent\mini{0.48\textwidth}{
+\begin{DefTQ}{Nombre décimal}{}
 Un nombre décimal est un nombre qui peut s'écrire avec une partie décimale finie. 
 
 L'ensemble des nombres décimaux est noté $\mathbb{D}$.
-\end{Def}
+\end{DefTQ}
+}{0.48\textwidth}{
+\begin{ExTQ}{Nombres décimaux}{}
+\[ 0~;~3~;~-5~;~7,33~;~\dfrac{3}{100}~;~\dfrac{21}{700} \]
+sont des décimaux. Par contre, on peut démontrer que
+$\dfrac 13$ ; $\sqrt 2$ ; $\pi$ ne sont pas des décimaux.
+\end{ExTQ}
+}
 
+\noindent
+\mini{0.70\textwidth}{
 \begin{Pp}
-Un nombre décimal est un nombre de la forme $\frac{a}{10^p}$ avec $a$ appartenant à $\mathbb{Z}$ et $p$ appartenant à $\mathbb{N}$.
+Les nombres décimaux sont les nombres de la forme $\dfrac{a}{10^p}$ avec $a$ appartenant à $\Z$ et $p$ appartenant à $\N$.
 \end{Pp}
-
+}{0.28\textwidth}{
 \begin{Rq}
 $\mathbb{N}\subset\mathbb{Z}\subset\mathbb{D}$
 \end{Rq}
-}{.48\linewidth}{
+}
 \begin{Pp}
 \textcolor{red}{Démonstration exigible}
 
-$\frac{1}{3}$ n'est pas un nombre décimal.
+$\dfrac{1}{3}$ n'est pas un nombre décimal.
 \end{Pp}
 
 \begin{Pv}
-\underline{Par l'absurde} :
+\underline{Par l'absurde}. On suppose que $\dfrac{1}{3}$ est un nombre décimal, alors par propriété :
+$\ds \exists a\in\Z\,\text{ et }\,p\in\N\text{ tels que }\dfrac{1}{3}
+=\dfrac{a}{10^p}$.
 
-On suppose que $\frac{1}{3}$ est un nombre décimal, alors par propriété :
-
-\[\exists a\in\mathbb{Z}\,et\,p\in\mathbb{N}\text{ tels que }\frac{1}{3}=\frac{a}{10^p}\]
-
-Donc $10^p=a\times3$ (produit en croix) donc $3$ est une diviseur de $10^p$ or $10^p=2^p\times5^p$ (décomposition en facteurs premiers). Donc $3$ ne peut pas diviser $10^p$ (l'hypothèse est donc absurde). Ainsi, on peut affirmer que $\frac{1}{3}$ n'est pas un nombre décimal.
+Donc $10^p=a\times3$ (produit en croix) donc $3$ est un diviseur de $10^p$ or $10^p=2^p\times5^p$ (décomposition en facteurs premiers). Donc $3$ ne peut pas diviser $10^p$ (l'hypothèse est donc absurde). Ainsi, on peut affirmer que $\dfrac{1}{3}$ n'est pas un nombre décimal.
 \end{Pv}
-}
 
-\end{pageCours} % Fin page de cours 1
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Application direct 1
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{pageAD}  % Début page d'exercice d'application direct 1
-\restoregeometry %Ne pas toucher cette ligne
-
-\Sf{Premier SF}
-
-\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
-
-\end{ExoCad}
-
-\Sf{Deuxième SF}
-
-\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
-
-\end{ExoCad}
-
-\Sf{Troisième SF}
-
-\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
-
-\end{ExoCad}
- 
-\end{pageAD} % Fin page d'exercice d'application direct 1
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Page de cours 2
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{pageCours} % Début page de cours 2
-
-\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
 
 \section{L'ensemble des nombres rationnels $\mathbb{Q}$}
 
@@ -164,13 +182,13 @@ $\sqrt{2}$ n'est pas rationnel.
 
 On suppose que $\sqrt{2}$ est un nombre rationnel, alors par définition : 
 
-\[\exists p\in\mathbb{Z}\,et\,q\in\mathbb{N}^{\ast}\text{ tels que }\sqrt{2}=\frac{p}{q}\]
+\[\exists p\in\Z \text{ et }q\in\N^{\ast}\text{ tels que }\sqrt{2}=\dfrac{p}{q}\]
 
-On suppose que $\frac{p}{q}$ est une fraction irréductible.
+On suppose que $\dfrac{p}{q}$ est une fraction irréductible.
 
-$\sqrt{2}=\frac{p}{q}$ donc $\sqrt{2}\times q=p$ donc $(\sqrt{2}\times q)^2=p^2$ donc $2\times q^2=p^2$ ($p^2$ est donc un nombre pair).
+$\sqrt{2}=\dfrac{p}{q}$ donc $\sqrt{2}\times q=p$ donc $(\sqrt{2}\times q)^2=p^2$ donc $2\times q^2=p^2$ et $p^2$ est donc un nombre pair.
 
-Si le carré d'un nombre est pair alors on peut affirmer que ce nombre est pair donc $p$ est un nombre pair : $\exists p_1\in\mathbb{N}\text{ tels que }p=2\times p_1$ donc $2\times q^2=p^2=(2\times p_1)^2=4\times p_1^2$. Donc $q^2=2p_1^2$ ($q^2$ est donc un nombre pair). Si le carré d'un nombre est pair alors on peut affirmer que ce nombre est pair donc $q$ est un nombre pair.
+Si le carré d'un nombre est pair alors on peut affirmer que ce nombre est pair donc $p$ est un nombre pair : $\exists p_1\in\mathbb{N}\text{ tels que }p=2\times p_1$ donc $2\times q^2=p^2=(2\times p_1)^2=4\times p_1^2$. Donc $q^2=2p_1^2$ et $q^2$ est donc un nombre pair. Si le carré d'un nombre est pair alors on peut affirmer que ce nombre est pair donc $q$ est un nombre pair.
 
 Si $p$ est un nombre pair et que $q$ est un nombre pair alors la fraction $\frac{p}{q}$ n'est pas irréductible, l'hypothèse est donc absurde.
 
@@ -178,12 +196,74 @@ Ainsi, on peut affirmer que $\sqrt{2}$ n'est pas un nombre rationnel.
 \end{Pv}
 }
 
+
+
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+
+
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+Parmi les nombres suivants, déterminer ceux qui sont dans
+$\mathbb D$, puis ceux qui sont dans $\Q$.
+
+\[-3~;~12,723~;~\frac 6{15}~;~\frac{2\sqrt 2}{3\sqrt 2}~;~3\sqrt 2~ \]
+\point{3}
+
+\end{ExoCad}
+
+\begin{ExoCad}{Calculer. Raisonner}{1234}{0}{0}{0}{0}{0}
+Utiliser une calculatrice pour donner une valeur approchée de
+$\left(\dfrac{665857}{470832}\right)^2$
+
+A-t-on $\ds \dfrac{665857}{470832}=\sqrt 2$ ?
+\end{ExoCad}
+
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+\begin{enumerate}
+\item Donner un exemple de nombre décimal égal à une fraction de deux entiers, dont le dénominateur est 7.
+\item Donner un exemple de nombre rationnel égal à une fraction dont le dénominateur est $\sqrt 2$
+\item Donner un exemple de nombre décimal égal à une fraction
+{\em irréductible} de deux entiers, dont le dénominateur n'est pas
+une puissance de 10.
+\end{enumerate}
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
+\begin{enumerate}
+\item Démontrer que le produit de deux décimaux est un décimal.
+\item Lorsqu'on divise un nombre décimal par un nombre décimal non nul,
+obtient-on toujours un nombre décimal ?
+\end{enumerate}
+\end{ExoCad}
+
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 2
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+
 \section{L'ensemble des nombres réels $\mathbb{R}$}
 
 \begin{Def}
 L'ensemble des nombres réels est l'ensemble de tous les nombres que vous connaissez en seconde.
 
-L'ensemble des nombres entiers réels est noté $\mathbb{R}$.
+L'ensemble des nombres réels est noté $\R$.
 \end{Def}
 
 \begin{Rq}
@@ -200,27 +280,11 @@ $\mathbb{N}\subset\mathbb{Z}\subset\mathbb{D}\subset\mathbb{Q}\subset\mathbb{R}$
 %%%% Application direct 2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{pageAD}  % Début page d'exercice d'application direct 2
+\begin{pageAD}  % Début page d'exercice d'applications directes 2
 \restoregeometry %Ne pas toucher cette ligne
 
-\Sf{Premier SF}
 
-\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
 
-\end{ExoCad}
-
-\Sf{Deuxième SF}
-
-\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
-
-\end{ExoCad}
-
-\Sf{Troisième SF}
-
-\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
-
-\end{ExoCad}
- 
 \end{pageAD} % Fin page d'exercice d'application direct 2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
