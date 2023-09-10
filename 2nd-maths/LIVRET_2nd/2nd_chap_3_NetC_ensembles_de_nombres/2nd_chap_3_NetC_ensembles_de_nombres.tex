@@ -68,12 +68,12 @@ Ce n'est qu'au \Romanbar{17}\ieme siècle, sous l'impulsion de Simon \textsc{St�
 Simon \textsc{Stévin}, 1548--1620
 \end{center}
 } 
-
-	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
 \end{His}
 
 \begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
-% Un exercice de découverte/d'accroche
+Si possible : introduire les nombres « normaux base 10 » et faire chercher aux eleves
+leur date de naissance dans les décimales de $\sqrt 5$ par exemple.
+
 \end{ExoDec}
 }
 
@@ -188,9 +188,9 @@ On suppose que $\dfrac{p}{q}$ est une fraction irréductible.
 
 $\sqrt{2}=\dfrac{p}{q}$ donc $\sqrt{2}\times q=p$ donc $(\sqrt{2}\times q)^2=p^2$ donc $2\times q^2=p^2$ et $p^2$ est donc un nombre pair.
 
-Si le carré d'un nombre est pair alors on peut affirmer que ce nombre est pair donc $p$ est un nombre pair : $\exists p_1\in\mathbb{N}\text{ tels que }p=2\times p_1$ donc $2\times q^2=p^2=(2\times p_1)^2=4\times p_1^2$. Donc $q^2=2p_1^2$ et $q^2$ est donc un nombre pair. Si le carré d'un nombre est pair alors on peut affirmer que ce nombre est pair donc $q$ est un nombre pair.
+Si le carré d'un nombre est pair alors on peut affirmer que ce nombre est pair donc $p$ est un nombre pair : $\exists p_1\in\mathbb{N}\text{ tels que }p=2\times p_1$ donc $2\times q^2=p^2=(2\times p_1)^2=4\times p_1^2$. Donc $q^2=2\times p_1^2$ et $q^2$ est donc un nombre pair. Si le carré d'un nombre est pair alors on peut affirmer que ce nombre est pair donc $q$ est un nombre pair.
 
-Si $p$ est un nombre pair et que $q$ est un nombre pair alors la fraction $\frac{p}{q}$ n'est pas irréductible, l'hypothèse est donc absurde.
+Les entiers $p$ et $q$ sont pairs donc la fraction $\dfrac{p}{q}$ n'est pas irréductible, l'hypothèse est donc absurde.
 
 Ainsi, on peut affirmer que $\sqrt{2}$ n'est pas un nombre rationnel.
 \end{Pv}
@@ -230,10 +230,10 @@ A-t-on $\ds \dfrac{665857}{470832}=\sqrt 2$ ?
 
 \begin{ExoCad}{Représenter.}{1234}{0}{0}{0}{0}{0}
 \begin{enumerate}
-\item Donner un exemple de nombre décimal égal à une fraction de deux entiers, dont le dénominateur est 7.
-\item Donner un exemple de nombre rationnel égal à une fraction dont le dénominateur est $\sqrt 2$
+\item Donner un exemple de nombre décimal égal à une fraction dont le dénominateur est 7.
+\item Donner un exemple de nombre rationnel qui admet une écriture fractionnaire dont le dénominateur est $\sqrt 2$.
 \item Donner un exemple de nombre décimal égal à une fraction
-{\em irréductible} de deux entiers, dont le dénominateur n'est pas
+{\em irréductible}, dont le dénominateur n'est pas
 une puissance de 10.
 \end{enumerate}
 \end{ExoCad}
@@ -243,6 +243,9 @@ une puissance de 10.
 \item Démontrer que le produit de deux décimaux est un décimal.
 \item Lorsqu'on divise un nombre décimal par un nombre décimal non nul,
 obtient-on toujours un nombre décimal ?
+\item Démontrer que le produit de deux rationnels est un rationnel.
+\item Lorsqu'on divise un nombre rationnel par un nombre rationnel non nul,
+obtient-on toujours un nombre rationnel ?
 \end{enumerate}
 \end{ExoCad}
 
@@ -334,12 +337,46 @@ $\mathbb{N}\subset\mathbb{Z}\subset\mathbb{D}\subset\mathbb{Q}\subset\mathbb{R}$
 
 %Premier exo du parcours 2
 \begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+On va démontrer dans cet exercice que $\sqrt 2$ n'est pas rationnel. On va procéder {\em
+par l'absurde}, c'est-à-dire que l'on va supposer le contraire (donc, que $\sqrt 2$ est
+rationnel) et aboutir à une contradiction.
 
+On suppose donc que $\sqrt{2}$ est un nombre rationnel, alors par définition : 
+
+\[\exists p\in\Z \text{ et }q\in\N^{\ast}\text{ tels que }\sqrt{2}=\dfrac{p}{q}\]
+
+On suppose que $\dfrac{p}{q}$ est une fraction irréductible.
+
+\begin{enumerate}
+\item En élevant l'égalité $\sqrt{2}=\dfrac{p}{q}$ au carré, démontrer que $2q^2=p^2$.
+\item Qu'en déduit-on concernant la parité de $p^2$ ?
+\item Justifier que le carré d'un entier impair est un entier impair. En déduire que
+$p$ est pair.
+
+Il existe donc un entier $p_1$ tel que $p=2\times p_1$.
+\item Démontrer que $q^2=2p_1^2$, et en déduire que $q$ est pair.
+\item Le numérateur et le dénominateur de la fraction $\dfrac pq$ sont tous les deux
+pairs, cette fraction est-elle irréductible ?
+\item Conclure.
+\end{enumerate}
 \end{ExoCdN}
 
-%Deuxième exo du parcours 2
-\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
 
+
+%Deuxième exo du parcours 2	
+\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+On sait que les nombres rationnels sont les nombres dont les décimales
+se répètent à partir d'un certain moment (on dit qu'elles sont {\em périodiques à partir
+d'une certain rang}) comme par exemple $12,1\,34\,34\,34\,34\ldots$ (le motif « 34 » se répétant
+à l'infini) ou $5,2$, qui s'écrit aussi $5,20000$ (le chiffre 0 se répétant à l'infini). La question
+est alors : étant donné un nombre rationnel $x$ donné par son écriture décimale, déterminer une fraction
+dont égale à $x$.
+\begin{enumerate}
+\item Prenons $x=12,1\,34\,34\,34\,34\ldots$ (le motif « 34 » se répétant
+à l'infini), le motif a donc 2 chiffres. Donner l'écriture décimale de $10^2x$, puis celle
+de $10^2x~-~x$, c'est-à-dire $99x$
+\item En Déduire que $x=\dfrac{1201,3}{99}$, puis donner une fraction égale à $x$ 
+\end{enumerate}
 \end{ExoCdN}
 
 %Troisième exo du parcours 2
